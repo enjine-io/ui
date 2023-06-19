@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../../favicon.ico">
+
+    <title lbl="title">EnjineIO ui - Popup</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body" style="background-color: #121212; color: #fff; margin-bottom: 100px;">
+
+    <main role="main" id="main" class="full-height"><div class="xcontainer full-height">
+            <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top">
+                <div>
+                    <button class="btn btn-link text-white" id="menu-button" onclick="openLeftPanel(event)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+                        </svg>
+                    </button>
+                    <a class="navbar-brand" href="#" id="doc-title"></a>
+                </div>
+            </nav>
+        <div class="row h-100 justify-content-end"><div class="col-lg-2 col-md-2 col-xl-2 left-panel" id="left-panel" style="width: 0px;">
+        <h5 class="left-panel-title" style="text-align:center;"><a href="./../ui.html" class="home-name">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"></path>
+            </svg>
+        UI Components</a></h5>
+        <div style="padding: 0px 12px;">
+            <input type="text" onkeyup="onMethodSearch( this )" class="form-control" placeholder="Search..." style="background-color:#212529;color:white;margin:48px 0px 20px 0px;">
+        </div>
+        <div id="result-links" class="nav-list"></div>
+        <nav class="nav flex-column" style="width:100%;" id="left-panel-nav">
+            <a class="nav-link active" id="nav-group-overview" href="#overview">Overview</a>
+        <a class="nav-link" id="nav-group-heading_132" href="#heading_132" data-open="heading_132-links"> Properties </a><div id="heading_132-links" class="nav-list"></div><a class="nav-link" id="nav-group-heading_138" href="#heading_138" data-open="heading_138-links"> Methods </a><div id="heading_138-links" class="nav-list"><a href="#setOnClose" class="nav-list-items " id="setonclose" data-parent="heading_138-links" data-group="nav-group-heading_138">setOnClose</a><a href="#setOnAction" class="nav-list-items " id="setonaction" data-parent="heading_138-links" data-group="nav-group-heading_138">setOnAction</a><a href="#show" class="nav-list-items " id="show" data-parent="heading_138-links" data-group="nav-group-heading_138">show</a><a href="#hide" class="nav-list-items " id="hide" data-parent="heading_138-links" data-group="nav-group-heading_138">hide</a><a href="#setPosition" class="nav-list-items " id="setposition" data-parent="heading_138-links" data-group="nav-group-heading_138">setPosition</a><a href="#getPosition" class="nav-list-items " id="getposition" data-parent="heading_138-links" data-group="nav-group-heading_138">getPosition</a></div><a class="nav-link" id="nav-group-heading_164" href="#heading_164" data-open="heading_164-links"> Examples </a><div id="heading_164-links" class="nav-list"><a href="#EXAMPLE---POPUPS" class="nav-list-items capitalize" id="example - popups" data-parent="heading_164-links" data-group="nav-group-heading_164">   popups</a><a href="#EXAMPLE---WITH-TRANSITION" class="nav-list-items capitalize" id="example - with transition" data-parent="heading_164-links" data-group="nav-group-heading_164">   with transition</a></div></nav></div><div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 main-content" onclick="closeLeftPanel(event)"><div style="overflow: hidden"><div id="cf"><div><div class="undefined"><h2 class="display-2  title sm-none" id="overview"> Popup </h2><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_124">Shows a popup into your app.</p><div style="display:block; margin-bottom: 20px;"><img src="./Popup/img/img1.png" style="border-radius:8px;" class="d-block mx-auto " alt="img_125"></div><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">pop = ui.<span style="color:white">showPopup</span>( msg, options, duration )</span></code></pre><table style="width: 100%;" class="table table-dark table-striped"><tbody><tr class="table-header" style="width: fit-content;"><td style="padding: 8px 20px; color: white;"><strong>Parameters</strong></td><td style="padding: 8px 20px; color: white;"><strong>Type</strong></td><td style="padding: 8px 20px; color: white;"><strong>Description</strong></td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">msg </td><td valign="top" style="font-weight:300; padding: 8px 20px;">String</td><td valign="top" style="font-weight:300; padding: 8px 20px;">The message to display on the pop-up. </td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">options </td><td valign="top" style="font-weight:300; padding: 8px 20px;">String</td><td valign="top" style="font-weight:300; padding: 8px 20px;">A comma separated options.<br>Duration: <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Short</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Long</span><br>Vertical Alignment: <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Top</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Bottom</span><br>Horizontal Alignment: <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Left</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Center</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Right</span><br>Action options: <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Icon</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">HideOnAction</span><br>Transition: <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Grow</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Fade</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Slide</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Collapse</span>, <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Zoom</span> </td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">duration </td><td valign="top" style="font-weight:300; padding: 8px 20px;">Number</td><td valign="top" style="font-weight:300; padding: 8px 20px;">Time in milliseconds. Pass this if you don't want the default auto hide duration. </td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">action </td><td valign="top" style="font-weight:300; padding: 8px 20px;">String</td><td valign="top" style="font-weight:300; padding: 8px 20px;">Action button text. </td></tr></tbody></table><p class="" style="font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4; text-align:justify;" id="text_131">Returns  Popup Component.</p><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h4 class=" title" id="heading_132"> Properties </h4><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_133">Here are the available setters and/or getters for the Popup Component.</p><table style="width: 100%;" class="table table-dark table-striped"><tbody><tr class="table-header" style="width: fit-content;"><td style="padding: 8px 20px; color: white;"><strong>Properties</strong></td><td style="padding: 8px 20px; color: white;"><strong>Type</strong></td><td style="padding: 8px 20px; color: white;"><strong>Description</strong></td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">duration </td><td valign="top" style="font-weight:300; padding: 8px 20px;">Number</td><td valign="top" style="font-weight:300; padding: 8px 20px;">Sets or returns the duration of the popup in milliseconds.</td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">text </td><td valign="top" style="font-weight:300; padding: 8px 20px;">String</td><td valign="top" style="font-weight:300; padding: 8px 20px;">Sets or returns the text of the popup.</td></tr></tbody></table><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h4 class=" title" id="heading_138"> Methods </h4><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_139">Here are the available methods for the Popup Component.</p><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h5 class=" method-name" id="setOnClose">setOnClose</h5><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_141">Adds an onClose callback to your popup.</p><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">popup.<span style="color:white">setOnClose</span>( callback )</span></code></pre><table style="width: 100%;" class="table table-dark table-striped"><tbody><tr class="table-header" style="width: fit-content;"><td style="padding: 8px 20px; color: white;"><strong>Parameters</strong></td><td style="padding: 8px 20px; color: white;"><strong>Type</strong></td><td style="padding: 8px 20px; color: white;"><strong>Description</strong></td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">callback </td><td valign="top" style="font-weight:300; padding: 8px 20px;">Function</td><td valign="top" style="font-weight:300; padding: 8px 20px;">The onclose callback. </td></tr></tbody></table><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h5 class=" method-name" id="setOnAction">setOnAction</h5><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_145">Adds an action callback when the user touches the action button. The <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">btnText</span> param must<br>be provided in order to create an action button.</p><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">popup.<span style="color:white">setOnAction</span>( callback )</span></code></pre><table style="width: 100%;" class="table table-dark table-striped"><tbody><tr class="table-header" style="width: fit-content;"><td style="padding: 8px 20px; color: white;"><strong>Parameters</strong></td><td style="padding: 8px 20px; color: white;"><strong>Type</strong></td><td style="padding: 8px 20px; color: white;"><strong>Description</strong></td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">callback </td><td valign="top" style="font-weight:300; padding: 8px 20px;">Function</td><td valign="top" style="font-weight:300; padding: 8px 20px;">The on action callback. </td></tr></tbody></table><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h5 class=" method-name" id="show">show</h5><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_150">Show the popup.</p><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">popup.<span style="color:white">show</span>()</span></code></pre><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h5 class=" method-name" id="hide">hide</h5><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_153">Hide the popup.</p><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">popup.<span style="color:white">hide</span>()</span></code></pre><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h5 class=" method-name" id="setPosition">setPosition</h5><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_156">Updates the position of the popup.</p><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">popup.<span style="color:white">setPosition</span>( vertical, horizontal )</span></code></pre><table style="width: 100%;" class="table table-dark table-striped"><tbody><tr class="table-header" style="width: fit-content;"><td style="padding: 8px 20px; color: white;"><strong>Parameters</strong></td><td style="padding: 8px 20px; color: white;"><strong>Type</strong></td><td style="padding: 8px 20px; color: white;"><strong>Description</strong></td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">vertical </td><td valign="top" style="font-weight:300; padding: 8px 20px;">String</td><td valign="top" style="font-weight:300; padding: 8px 20px;">Vertical alignment. Values can be <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Top</span> <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Bottom</span> </td></tr><tr class="table-row" style=""><td valign="top" style="font-weight:300; padding: 8px 20px;">horizontal </td><td valign="top" style="font-weight:300; padding: 8px 20px;">String</td><td valign="top" style="font-weight:300; padding: 8px 20px;">Horizontal alignment. Values can be <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Left</span> <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Center</span> and <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">Right</span> </td></tr></tbody></table><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h5 class=" method-name" id="getPosition">getPosition</h5><p class="" style="font-weight:300;font-size:100%; text-align:justify;" id="text_161">Returns the position of the popup. The returned object is of the form <span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">{ vertical, horizontal }</span></p><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">popup.<span style="color:white">getPosition</span>()</span></code></pre><p class="" style="font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4; text-align:justify;" id="text_163">Returns  Object</p><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><h4 class=" title" id="heading_164"> Examples </h4><div style="width:100%; margin: 45px 0px;border-bottom:1px solid #212121;"></div><div class="method-name overline" id="EXAMPLE---POPUPS">EXAMPLE - POPUPS</div><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">
+<span style="color:#00bcd4">class</span> Main <span style="color:#00bcd4">extends</span> App
+   {<span style="color:#00bcd4">
+</span>       onStart()<span style="color:#00bcd4">
+</span>       {<span style="color:#00bcd4">
+</span>           <span style="color:green">// Creates a fullscreen layout with objects vertically centered.
+</span>           <span style="color:#00bcd4">this</span>.<span style="color:white">main</span> = ui.<span style="color:white">addLayout</span>( <span style="color:#d4e157">"main"</span>, <span style="color:#d4e157">"Linear"</span>, <span style="color:#d4e157">"VCenter"</span>, <span style="color:#00bcd4">1</span>, <span style="color:#00bcd4">1</span> )<span style="color:#00bcd4">
+</span>           <span style="color:#00bcd4">this</span>.<span style="color:white">main</span>.<span style="color:white">setChildMargins</span>( <span style="color:#00bcd4">0</span>,<span style="color:#00bcd4">0</span>,<span style="color:#00bcd4">0</span>,<span style="color:#00bcd4">0.02</span>)<span style="color:#00bcd4">
+
+</span>           <span style="color:green">// Adds first button to the layout.
+</span>           <span style="color:#00bcd4">this</span>.<span style="color:white">btn1</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">main</span>, <span style="color:#d4e157">"Top &amp; Grow"</span>, <span style="color:#d4e157">"Primary"</span> )<span style="color:#00bcd4">
+</span>           <span style="color:#00bcd4">this</span>.<span style="color:white">btn1</span>.<span style="color:white">setOnTouch</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">onTouch1</span> )<span style="color:#00bcd4">
+
+</span>           <span style="color:green">// Adds second button to the layout.
+</span>           <span style="color:#00bcd4">this</span>.<span style="color:white">btn2</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">main</span>, <span style="color:#d4e157">"Bottom and Slide"</span>, <span style="color:#d4e157">"Secondary"</span> )<span style="color:#00bcd4">
+</span>           <span style="color:#00bcd4">this</span>.<span style="color:white">btn2</span>.<span style="color:white">setOnTouch</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">onTouch2</span> )<span style="color:#00bcd4">
+</span>       }<span style="color:#00bcd4">
+
+</span>       onTouch1()<span style="color:#00bcd4">
+</span>       {<span style="color:#00bcd4">
+</span>           <span style="color:green">// Display popup on the Top with transition Grow
+</span>           ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"Hello world."</span>, <span style="color:#d4e157">"Top,Grow"</span> )<span style="color:#00bcd4">
+</span>       }<span style="color:#00bcd4">
+
+</span>       onTouch2()<span style="color:#00bcd4">
+</span>       {<span style="color:#00bcd4">
+</span>           <span style="color:green">// Display popup on the Bottom with transition Slide in 1.5 seconds.
+</span>           ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"Hello world."</span>, <span style="color:#d4e157">"Bottom,Slide"</span>, <span style="color:#00bcd4">1500</span> )<span style="color:#00bcd4">
+</span>       }<span style="color:#00bcd4">
+</span>   }</span></code></pre><div class="method-name overline" id="EXAMPLE---WITH-TRANSITION">EXAMPLE - WITH TRANSITION</div><pre style="background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;"><code style="font-family: Tahoma, sans-serif;"><button class="copy-button"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"></path></svg></button><span style="color:white">
+<span style="color:#00bcd4">class</span> Main <span style="color:#00bcd4">extends</span> App {<span style="color:#00bcd4">
+	</span><span style="color:green">//Called when app starts.
+</span>	onStart() {<span style="color:#00bcd4">
+		</span><span style="color:green">//Add main layout and set default child margins.
+</span>		<span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span> = ui.<span style="color:white">addLayout</span>( <span style="color:#d4e157">"main"</span>, <span style="color:#d4e157">"linear"</span>, <span style="color:#d4e157">"VCenter"</span>, <span style="color:#00bcd4">1</span>, <span style="color:#00bcd4">1</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>.<span style="color:white">setChildMargins</span>(<span style="color:#00bcd4">0</span>, <span style="color:#00bcd4">0</span>, <span style="color:#00bcd4">0</span>, <span style="color:#00bcd4">0.05</span>)<span style="color:#00bcd4">
+		
+		</span><span style="color:green">// add buttons to show pop-ups
+</span><span style="color:#00bcd4">
+		</span><span style="color:green">// No Transition
+</span>		<span style="color:#00bcd4">this</span>.<span style="color:white">btn1</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Top,Center"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn1</span>.<span style="color:white">setOnTouch</span>( () =&gt; { ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"This is a message"</span> , <span style="color:#d4e157">"Top,Center"</span> ) } )<span style="color:#00bcd4">
+
+		</span><span style="color:green">// With Transitions
+</span>		<span style="color:#00bcd4">this</span>.<span style="color:white">btn1</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Top,Center,Grow"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn1</span>.<span style="color:white">setOnTouch</span>( () =&gt; { ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"This is a message"</span> , <span style="color:#d4e157">"Top,Center,Grow"</span> ) } )
+
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn2</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Top,Center,Zoom"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn2</span>.<span style="color:white">setOnTouch</span>( () =&gt; { ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"This is a message"</span> , <span style="color:#d4e157">"Top,Center,Zoom"</span> ) } )
+
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn3</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Top,Center,Collapse"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn3</span>.<span style="color:white">setOnTouch</span>( () =&gt; { ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"This is a message"</span> , <span style="color:#d4e157">"Top,Center,Collapse"</span> ) } )
+
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn4</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Top,Center,Slide"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn4</span>.<span style="color:white">setOnTouch</span>( () =&gt; { ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"This is a message"</span> , <span style="color:#d4e157">"Top,Center,Slide"</span> ) } )
+
+		ui.<span style="color:white">addText</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Positioning &amp; Customization"</span> )
+
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn5</span> = ui.<span style="color:white">addButton</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">layMain</span>, <span style="color:#d4e157">"Bottom with action"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">btn5</span>.<span style="color:white">setOnTouch</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">showLogin</span> )<span style="color:#00bcd4">
+	</span>}
+
+	showLogin() {
+		<span style="color:#00bcd4">this</span>.<span style="color:white">snackbar</span> = ui.<span style="color:white">showPopup</span>( <span style="color:#d4e157">"Please login to continue"</span>, <span style="color:#d4e157">"Bottom,Center"</span>, <span style="color:#d4e157">""</span>, <span style="color:#d4e157">"Login"</span> )
+		<span style="color:#00bcd4">this</span>.<span style="color:white">snackbar</span>.<span style="color:white">setOnAction</span>( <span style="color:#00bcd4">this</span>.<span style="color:white">onAction</span> )<span style="color:#00bcd4">
+	</span>}
+
+	onAction() {
+		<span style="color:#00bcd4">this</span>.<span style="color:white">snackbar</span>.<span style="color:white">hide</span>()
+		ui.<span style="color:white">showPopup</span>(<span style="color:#d4e157">"Login is click. Show login Page."</span>)<span style="color:#00bcd4">
+	</span>}<span style="color:#00bcd4">
+</span>}</span></code></pre></div></div></div><div><div><div><div></div></div></div></div></div></div></div></div></main>
+
+    <!-- Components List injected by js-dom -->
+    <script>
+        var components_lst = undefined
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../sys/js/codecolour.js"></script>
+    <script src="../../sys/js/globalTranslations.js"></script>
+    <script src="../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../sys/js/popper.min.js"></script>
+    <script src="../../sys/js/bootstrap.min.js"></script>
+    <script src="../../sys/js/holder.min.js"></script>
+
+    <script>
+        if( true ) {
+            setTimeout( function() {TransPage(1)}, 10 )
+            //highlightCode()
+            initLeftNavigation()
+        }
+        else { }
+
+        if( true ) { }
+        else {
+            document.getElementById( "method-links" ).style.height = "200px"
+        }
+
+        let docTitleNav = document.getElementById("doc-title");
+        if( docTitleNav ) {
+            let _docTitle = " Popup ";
+            docTitleNav.innerText = _docTitle;
+        }
+
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+    </script>
+</body>
+</html>
