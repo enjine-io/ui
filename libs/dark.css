@@ -1,0 +1,247 @@
+
+:root { 
+    --bright:1.2;
+    --back: #2e3134; --front: #3e4347; --front_i: #fff;
+    --default_b:#aaa; --primary_b: #aaa; --secondary_b: #aaa;
+    --default_i: #fff; --primary_i: #3e4347; --secondary_i: #3e4347;
+
+    /* theme colors */
+    --default:#3e4347; --primary: #fff; --secondary: #fff;
+
+    /* lighten background color */
+    --default-b: rgba(255, 255, 255, 0.04); --primary-b: rgba(33, 150, 243, 0.04); --secondary-b: rgba(245, 0, 87, 0.04);
+
+    /* outlined colors */
+    --default-o: rgba(255, 255, 255, 0.7); --primary-o: rgba(33, 150, 243, 0.5); --secondary-o: rgba(245, 0, 87, 0.5);
+
+    /* for date and time picker */
+    --back_d: #616161;  --text-clr: #fff;
+}
+
+body, .backColor { background-color: var(--back); }
+
+.MuiButton-contained { color: #fff; background-color: var(--default); }
+.MuiButton-contained:hover { background-color: var(--default); filter: brightness(var(--bright)); }
+/* .MuiButton-containedPrimary { background-color: var(--default); }
+.MuiButton-containedPrimary:hover { background-color: var(--default); filter: brightness(120%); }
+.MuiButton-containedSecondary { background-color: var(--default); }
+.MuiButton-containedSecondary:hover { background-color: var(--default); filter: brightness(120%); } */
+
+.MuiButton-text { color: #fff; }
+.MuiButton-text:hover { background-color: var(--default-b); filter: invert(5%) }
+/* .MuiButton-textPrimary { color: #fff; }
+.MuiButton-textPrimary:hover { background-color: var(--default-b); }
+.MuiButton-textSecondary { color: #fff; }
+.MuiButton-textSecondary:hover { background-color: var(--default-b); } */
+
+.MuiButton-outlined { color: #fff; border: 1px solid var(--default_b);}
+.MuiButton-outlined:hover { background-color: var(--default-b); filter: brightness(var(--bright)); border: 1px solid #fff; }
+/* .MuiButton-outlinedPrimary { color: var(--primary); border: 1px solid var(--primary-o); }
+.MuiButton-outlinedPrimary:hover { background-color: var(--primary-b); border: 1px solid var(--primary-o); }
+.MuiButton-outlinedSecondary { color: var(--secondary); border: 1px solid var(--secondary-o); }
+.MuiButton-outlinedSecondary:hover { background-color: var(--secondary-b); border: 1px solid var(--secondary-o); } */
+
+.MuiButtonGroup-root .MuiButton-root { overflow: hidden; white-space: wrap; }
+
+.MuiIconButton-root { color: #fff; }
+.MuiIconButton-root:hover { background-color: var(--default-b); filter: brightness(var(--bright)); }
+/* .MuiIconButton-colorPrimary { color: var(--primary); }
+.MuiIconButton-colorPrimary:hover { background-color: var(--primary-b); filter: invert(5%) }
+.MuiIconButton-colorSecondary { color: var(--secondary); }
+.MuiIconButton-colorSecondary:hover { background-color: var(--secondary-b); filter: invert(5%)  } */
+
+.MuiBox-root-1 { color: var(--default); }
+
+/*Popups*/
+.MuiSnackbarContent-message {  color: #fff; }
+
+/* Drawer */
+.MuiDrawer-paper { background-color: var(--back) }
+
+/* Typography */
+.MuiTypography-root { color: #fff; }
+/* .MuiTypography-colorPrimary { color: var(--primary); }
+.MuiTypography-colorSecondary { color: var(--secondary); } */
+
+/* AppBar */
+.MuiAppBar-colorDefault { background-color: var(--default); }
+.MuiAppBar-colorPrimary { background-color: var(--default); }
+.MuiAppBar-colorSecondary { background-color: var(--default); }
+.MuiAppBar-root .MuiToolbar-root .MuiTypography-root { color: #fff; }
+.MuiAppBar-root .MuiIconButton-root { color: #fff; }
+/* .MuiAppBar-colorDefault .MuiIconButton-root { color: rgba(0, 0, 0, 0.8); } */
+
+/* Badge */
+.MuiBadge-colorPrimary { background-color: var(--primary); }
+.MuiBadge-colorSecondary { background-color: var(--secondary); }
+
+/* FAB */
+.MuiFab-root { background-color: #fff; color: rgba(0, 0, 0, 0.87); }
+.MuiFab-root:hover { filter: brightness(1.1) }
+.MuiFab-primary { background-color: var(--primary); }
+.MuiFab-primary:hover { background-color: var(--primary); filter: brightness(1.1) }
+.MuiFab-secondary { background-color: var(--secondary); }
+.MuiFab-secondary:hover { background-color: var(--secondary); filter: brightness(1.1) }
+
+/*Select*/
+.MuiSelect-root { color: #fff; }
+.MuiSelect-icon { color: #fff; }
+.MuiListSubheader-root { color: rgba(255, 255, 255, 0.7); }
+
+/* Menu */
+.MuiMenuItem-root { color: #fff; }
+
+/*List*/
+.uiList .MuiListItem-root, .MuiListItemIcon-root { color: #fff; }
+.uiList .MuiListItem-root .MuiListItemText-primary { color: #fff; }
+.uiList .MuiListItem-root .MuiListItemText-secondary {  color: rgba(255, 255, 255, 0.7); }
+.uiList .MuiListItem-root .MuiListItemIcon-root { color: #fff; }
+.uiList .MuiListSubheader-root { color: rgba(255, 255, 255, 0.7); }
+
+/*Tabs*/
+.uiTabs .MuiAppBar-colorDefault { background-color: var(--default); }
+.uiTabs .MuiAppBar-colorPrimary { background-color: var(--default); }
+.uiTabs .MuiAppBar-colorSecondary { background-color: var(--default); }
+.uiTabs .MuiTab-root { color: rgba(255, 255, 255, 0.7); }
+.uiTabs .MuiTab-root.Mui-selected { color: #fff; }
+.uiTabs .MuiTabs-indicator { background-color: rgba(255, 255, 255, 0.7); }
+.uiTabs .tab-panels { background-color: var(--back); }
+.uiTabs .tab-title-horizontal { display: flex; flex-direction: row; align-items: center; }
+.uiTabs .tab-title-vertical { display: flex; flex-direction: column; align-items: center; }
+/* .uiTabs .tab-title-horizontal > :first-child { margin-right: 8px; } */
+
+/* Badge */
+.MuiBadge-badge { background-color: #fff; color: #000; }
+
+/*Slider*/
+.MuiSlider-markLabel { color: rgba(255, 255, 255, 0.7); }
+.MuiSlider-markLabelActive { color: #fff; }
+
+
+/* Forms */
+
+/*Label*/
+.MuiFormLabel-root { color: rgba(255, 255, 255, 0.7); }
+/* .MuiFormLabel-root.MuiInputLabel-root { color: rgba(255, 255, 255, 0.7); } */
+.MuiInputLabel-root.Mui-focused { color: #fff; }
+/* .MuiFormLabel-colorSecondary.MuiInputLabel-root.Mui-focused{ color: var(--secondary); } */
+
+/* InputBase */
+.MuiInputBase-input { color: #fff; }
+.MuiInputBase-input:focus { color: #fff;  }
+.MuiInputBase-root.Mui-focused .MuiSelect-icon { color: #fff; }
+
+/* Standard */
+.MuiInput-underline:before { border-bottom-color: rgba(255, 255, 255, 0.7); }
+.MuiInput-underline:hover::before { border-bottom-color: #fff; }
+.MuiInput-underline:after { border-bottom-color: #fff; }
+/* .MuiInput-root.MuiInput-underline:after { border-bottom-color: #fff; } */
+.MuiInput-colorSecondary.MuiInput-underline:after { border-bottom-color: #fff; }
+
+/* Filled */
+.MuiFilledInput-root.MuiFilledInput-underline:after { border-bottom-color: #fff; }
+.MuiFilledInput-colorSecondary.MuiFilledInput-underline:after { border-bottom-color: #fff; }
+.MuiFilledInput-root.Mui-focused { background-color: rgba(0, 0, 0, 0.1); }
+.MuiFilledInput-root:hover { background-color: rgba(0, 0, 0, 0.2); }
+.MuiFilledInput-underline:before { border-bottom: 1px solid rgba(255, 255, 255, 0.42); }
+.MuiFilledInput-underline:hover::before { border-bottom: 1px solid rgba(255, 255, 255, 1); }
+
+/* Outlined */
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: #fff; }
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: #fff; }
+.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: #fff; }
+.MuiOutlinedInput-colorSecondary:hover .MuiOutlinedInput-notchedOutline { border-color: #fff; }
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline { border-color: rgba(255, 255, 255, 0.7); }
+
+/*Checkbox*/
+.MuiCheckbox-root.MuiCheckbox-colorPrimary.Mui-checked { color: #fff; }
+.MuiCheckbox-root.MuiCheckbox-colorSecondary.Mui-checked { color: #fff; }
+
+/*InputAdornment*/
+.MuiInputAdornment-root { color: rgba(255, 255, 255, 0.7); }
+
+/*Dropdown*/
+.MuiMenu-paper, .MuiMenu-list, .MuiPaper-root { background-color: var(--front);  }
+
+/*BottomNavigation*/
+.MuiBottomNavigation-root { background-color: var(--front); }
+.MuiBottomNavigationAction-root { color: rgba(255, 255, 255, 0.7); }
+.MuiBottomNavigationAction-root.Mui-selected { color: #fff; }
+.MuiBottomNavigationAction-root.Mui-selected.MuiIconButton { color: #fff; }
+
+/*Dialogs*/
+.MuiDialogTitle-root { color: #fff; }
+.MuiDialogContentText-root, .DialogContent-root { color: rgba(255, 255, 255, 0.7); }
+
+/*Chips*/
+.MuiChip-root { background-color: var(--front); }
+.MuiChip-label, .MuiChip-icon, .MuiChip-avatar { color: #fff; }
+.MuiChip-clickableColorPrimary:hover { background-color: var(--default-b); }
+.MuiChip-clickableColorSecondary:hover { background-color: var(--default-b); }
+.MuiChip-colorPrimary.MuiChip-outlined { background-color: transparent; }
+.MuiChip-colorSecondary.MuiChip-outlined { background-color: transparent; }
+
+/* Accordion */
+.MuiExpansionPanelSummary-root .MuiTypography-root { color: #fff; }
+.MuiExpansionPanelSummary-root .MuiTypography-colorTextSecondary { color: rgba(255, 255, 255, 0.7); }
+.MuiExpansionPanelSummary-expandIcon { color: rgba(255, 255, 255, 0.7); }
+
+/* ButtonGroup */
+.MuiButtonGroup-groupedContained:not(:last-child) { border-color: var(--default-o); }
+/* .MuiButtonGroup-groupedContainedPrimary:not(:last-child) { border-color: rgba(0, 0, 0, 0.3); }
+.MuiButtonGroup-groupedContainedSecondary:not(:last-child) { border-color: rgba(0, 0, 0, 0.3); } */
+
+/* Divider */
+.MuiDivider-root {
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 1px;
+}
+
+/* TimePicker */
+.mddtp-picker__action button { color: #fff; }
+
+/* Select */
+/* .ui-Select .MuiFormLabel-root {} */
+/* .ui-Select .MuiFormLabel-root.Mui-focused {} */
+
+/*
+    All Form Control Label
+    - Checkbox
+    - RadioGroup
+    - CheckboxGroup
+*/
+.MuiFormControlLabel-root.MuiIconButton-root { color: rgba(255, 255, 255, 0.7); }
+.MuiFormControlLabel-root.MuiIconButton-root.Mui-checked { color: rgba(255, 255, 255, 0.7); }
+.MuiFormControlLabel-root.MuiIconButton-colorPrimary.Mui-checked { color: #fff; }
+.MuiFormControlLabel-root.MuiIconButton-colorSecondary.Mui-checked { color: #fff; }
+.MuiFormControlLabel-root .MuiFormControlLabel-label { color: #fff; }
+/* applied to other form control labels */
+.MuiFormControlLabel-root .MuiIconButton-root { color: rgba(255, 255, 255, 0.7); }
+.MuiFormControlLabel-root .MuiIconButton-root.Mui-checked { color: rgba(255, 255, 255, 0.7); }
+.MuiFormControlLabel-root .MuiIconButton-colorPrimary.Mui-checked { color: #fff; }
+.MuiFormControlLabel-root .MuiIconButton-colorSecondary.Mui-checked { color: #fff; }
+.MuiFormControlLabel-root .MuiFormControlLabel-label { color: #fff; }
+
+/* Switch */
+.MuiSwitch-track { background-color: #fff; }
+.MuiSwitch-root .MuiIconButton-root { color: #bdbdbd; }
+.MuiSwitch-root .Mui-checked { color: #fff; }
+.MuiSwitch-root .Mui-checked + .MuiSwitch-track{ background-color: #fff; }
+.MuiSwitch-root .MuiSwitch-colorPrimary.Mui-checked { color: #fff; }
+.MuiSwitch-root .MuiSwitch-colorSecondary.Mui-checked { color: #fff; }
+.MuiSwitch-root .MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track { background-color: #fff; }
+.MuiSwitch-root .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track { background-color: #fff; }
+
+/* Stepper */
+.MuiStepLabel-label { color: rgba(255, 255, 255, 0.7); }
+.MuiStepLabel-label.MuiStepLabel-active,
+    .MuiStepLabel-label.MuiStepLabel-completed { color: #fff; }
+.MuiStepIcon-root .MuiStepIcon-text { color: rgba(0, 0, 0, 0.87); }
+.MuiStepIcon-root { color: rgba(255, 255, 255, 0.12); }
+.MuiStepIcon-root.MuiStepIcon-active { color: #fff; }
+.MuiStepIcon-root.MuiStepIcon-active .MuiStepIcon-text{ fill: rgba(0, 0, 0, 0.87); }
+
+/* Form helper text */
+.MuiFormHelperText-root {
+    color: rgba(255, 255, 255, 0.54);
+}

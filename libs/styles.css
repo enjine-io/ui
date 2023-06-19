@@ -1,0 +1,49 @@
+
+/*--- BASIC LAYOUT ---------*/
+
+html, body, #root {
+	margin: 0 0 0 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	-webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    touch-action: manipulation;
+	font-family: 'Roboto', sans-serif;
+}
+
+.enj-vertical-child {
+	display : inline-block !important;
+	overflow: hidden;
+}
+
+.enj-horizontal-child {
+	display : inline-block !important;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.enj-horizontal-child-vcenter {
+	display : inline-block !important;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-scroll-bar::-webkit-scrollbar {
+	width: 0 !important;
+    height: 0 !important;
+}
+
+.color-picker-preset-btn:focus {
+    outline: none;
+}

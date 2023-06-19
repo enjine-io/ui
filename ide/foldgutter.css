@@ -1,0 +1,24 @@
+.CodeMirror-foldmarker {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(175, 175, 175, 1.0)' stroke='rgba(175, 175, 175, 1.0)' class='bi bi-three-dots' viewBox='0 0 16 16'><path d='M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z'/></svg>");
+  padding: 0px 4px;
+  background-color: rgba(255,255,255,0.2);
+  cursor: pointer;
+  margin-bottom: -4px;
+  border-radius: 2px;
+}
+.CodeMirror-foldgutter {
+  width: 1em;
+  background-color: #2e3134;
+  padding-right: 4px;
+}
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded {
+  cursor: pointer;
+  padding-top: 4px;
+}
+.CodeMirror-foldgutter-open:after {
+    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' stroke='rgba(175, 175, 175, 1.0)' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+}
+.CodeMirror-foldgutter-folded:after {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='currentColor' stroke='rgba(175, 175, 175, 1.0)' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}

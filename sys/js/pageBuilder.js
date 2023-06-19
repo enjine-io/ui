@@ -1,0 +1,929 @@
+/**************************************************
+ * Written for for SoftCogs Ltd.
+ * Copyright (C) SoftCogs Ltd. 2018
+ */
+
+let _running = false,
+    isSmallDevice = false,
+    componentList = [],
+    pageJson = {},
+    sampStr = "", methodsList = [],
+    leftPanelNavs = {}, samples = {},
+    docTitle = "", hasTitle = false, toggleLeftNav = false,
+    activeLink = null, navList = null;
+
+function createComponent(key, val) {
+    var str = "";
+    return str;
+}
+
+function createHeader(tutorial, header) {
+    if (header)
+    {
+        var str = "";
+        str += '<section class="jumbotron text-center bg-light"><div class="xcontainer">';
+        if (header.title) str += '<h1 class="jumbotron-heading">' + T(header.title) + '</h1>';
+        if (header.subtitle) str += '<p class="lead text-muted" lbl="introtext">' + T(header.subtitle) + '</p>';
+        //str += '<img src="./' + tutorial + '/' + lang + '/img/' + header.feature_img + '" class="rounded mx-auto d-block" alt="' + header.feature_alt + '">';
+        str += '</div></section>';
+        return str;
+    }
+    else return ""
+}
+
+function createPage( tutorial, step ) {
+    var str = "", curHeading = "";
+
+    //for (var z = 0; z < step.stepContent.length; z++) {
+    //    let stepContent = step.stepContent[z];
+
+    for (var z in step) 
+    {
+        var zz = z.split("_")
+        var anim = step[z].animation || ""
+        switch (zz[0]) 
+        {
+            case "title":
+                str += '<h2 class="display-2 '+anim+' title sm-none" id="overview">' + T(step[z].txt) + "</h2>";
+                docTitle = T(step[z].txt);
+                hasTitle = true;
+                break;
+            case "heading" :
+                str += '<h4 class="'+anim+' title" id="'+step[z].txt+'">' + T(step[z].txt) + '</h4>';
+                leftPanelNavs[step[z].txt] = { title: T(step[z].txt), navs: {} }; curHeading = step[z].txt;
+                break;
+            case "subtitle":
+                str += '<h5 class="'+anim+' method-name" id="' + T(step[z].txt).replace(/ /g,"-") + '">' + T(step[z].txt) + '</h5>';
+                if(curHeading) leftPanelNavs[curHeading].navs[step[z].txt] = T(step[z].txt)
+                break;
+            case "text":
+                str += '<p class="'+anim+'" style="'+ (step[z].css || "") +' text-align:justify;" id="'+z+'">' + _S( T(step[z].txt) ) + '</p>';
+                break;
+            case "tip":
+                str += '<div class="alert alert-success '+anim+'">' + T(step[z].txt) + '</div>';
+                break;
+            case "challenge":
+                str += '<span class="'+anim+'" style="'+step[z].css+' "id="'+z+'">';
+                str += _S( T( step[z].txt ) );
+                str += '</span>';
+                break;
+            case "ol":
+                str += '<ol "id="'+z+'">';
+                for (var x = 0; x < step[z].txt.length; x++) {
+                    str += '<li>'
+                    if( step[z].txt[x].includes("~") )
+                        str = Bullets(step[z].txt[x], str);
+                    else str += T(step[z].txt[x]);
+                    str += '</li>';
+                }
+                str += '</ol>';
+                break;
+            case "ul":
+                str += '<ul "id="'+z+'">';
+                for (var x = 0; x < step[z].txt.length; x++) {
+                    str += '<li>'
+                    if( step[z].txt[x].includes("~") ) 
+                        str = Bullets(step[z].txt[x], str);
+                    else str += _S( T(step[z].txt[x]) );
+                    str += '</li>';
+                }
+                str += '</ul>';
+                break;
+            case "table-header":
+                str += '<table style="width: 100%;" class="table table-dark table-striped"><tr class="table-header" style="width: fit-content;">';
+                var ss = step[z].content//.split("|")
+                for (var x = 0; x < ss.length; x++) {
+                    var txt = ss[x].replace( /\n/g, "<br>" )
+                    str += '<td style="padding: 8px 20px; color: white;"><strong>' + T(txt) + '</strong></td>';
+                }
+                str += '</tr>';
+                break;
+            case "table-row":
+                str += '<tr class="table-row" style="' + (step[ z ].css || "") + '">';
+                var ss = step[z].content//.split("|")
+                for ( var x = 0; x < ss.length; x++ )
+                {                    
+                    var txt = ss[x].replace(/\n/g,"<br>")
+                    str += '<td valign="top" style="font-weight:300; padding: 8px 20px;">'
+                    if( txt.includes("~") ) str = Bullets(txt, str);
+                    else str += _S( T(txt) );
+                    str += '</td>';
+                }
+                str += '</tr>';
+                break;
+            case "table-footer":
+                str += '</table>';
+                break;
+            case "img":
+                str += '<div style="display:block; margin-bottom: 20px;"><img src="./' + tutorial + '/img/' + step[z].src + '" style="border-radius:8px;" class="d-block mx-auto '+ anim+'" alt="' + step[z].alt + '" /></div>';
+                break;
+            case "iframe":
+                str += '<iframe class="'+anim+'" src="./' + tutorial + '/iframe/'+ step[z].src+'" width="'+ (step[z].width||"50%") +'" height="'+ (step[z].height||"50%") + '"></iframe>';
+                break;
+            case "overline":
+                let id = T(step[z].txt).replace(/ /g,"-");
+                str += '<div class="method-name overline" id="'+id+'">' + T( step[z].txt ) + '</div>';
+                if( (T( step[z].txt )).toLowerCase().includes( "example" ) );
+                {
+                    var l = T(step[z].txt).split(" ");
+                    var r = T(step[z].txt).replace( l[0]+" ", "" ).replace(/[^a-zA-Z0-9]/g, ' ').toLowerCase()
+                    //sampStr += '<a href="#'+ z +'" class="nav-list-items capitalize">' + r + '</a>'
+                    samples[z] = r;
+                    if(curHeading) leftPanelNavs[curHeading].navs[step[z].txt] = T(step[z].txt)
+                }
+                break;
+            case "code":
+                str += '<pre style="'+ (step[z].css||"") +'"><code>' + unescape(T(step[z].txt)) + '</code></pre>';
+                break;
+            case "hr":
+                str += '<div style="width:100%; '+ (step[z].css || "") +'"></div>';
+                break;
+            case "br":
+                str += '<br/>'
+            default:
+                break;
+        }
+    }
+    return str;
+}
+
+function Bullets(txt, str) 
+{
+    var bb = txt.split("~");
+    str += bb[0];
+    str += "<ul>";
+    for (var b = 1; b < bb.length; b++) {
+        if (txt.includes("^")) {
+            var cc = bb[b].split("^");
+            str += "<li>" + T(cc[0]);
+            str += "<ul>";
+            for (var c = 1; c < cc.length; c++) {
+                str += "<li>" + T(cc[c]) + "</li>";
+            }
+            str += "</ul>";
+            str += "</li>";
+        }
+        else
+            str += "<li>" + T(bb[b]) + "</li>";
+    }
+    str += "</ul>";
+    return str;
+}
+
+function createLastChapter() 
+{
+    return '<h2 class="display-2">' + (layouts.tutorialLastChapter.title[lang] || layouts.tutorialLastChapter.title['en']) 
+    + '</h2><p>' + (layouts.tutorialLastChapter.value[lang] || layouts.tutorialLastChapter.value['en']) + '</p>';
+}
+
+function buildHome( home )
+{
+    //lang = "en";//TEMP GLOBAL OVERRIDE *Remove*
+    var htmlStr = "";
+    home = home || "home"
+    getTranslation( home, function() {
+        getLayouts( home, function() {
+
+            var html = "";
+
+            html +='<section class="jumbotron text-center">'
+                html +='<div class="xcontainer" >'
+                html +='<h1 class="jumbotron-heading">'+ T(layouts.tutorial.header.title) +'</span></h1>'
+                html +='<p class="lead text-muted" lbl="introtext">'+ T(layouts.tutorial.header.subtitle) +'</p>'
+                html +='</div>'
+                html +='</section>'
+
+            html += '<div class="xcontainer">';
+            var array = layouts.tutorial.index
+            html += '<div class="album py-5 bg-light">'
+            html += '<div class="xcontainer">'
+            html += '<div class="row">'
+            for (let i = 0; i < array.length; i++) 
+            {
+                const element = array[i];
+
+                console.log( element )
+                var _x = element.card.isHome ? true : false
+                html += '<div class="col-md-4">'
+                    html += '<div class="card mb-4 box-shadow" onclick="document.location.href=\'./?id='+array[i].card.folder+'&page=0&home='+_x+'\'">'
+                        html += '<div class="card-img-top" style="background-color:white;background-image:url(\'./Home' +"/img/"+ array[i].card.img+ '\');background-size:contain;background-position:center"></div>'
+                        html += '<div class="card-body">'
+                        html += ' <h3 class="card-title">'+T(array[i].card.text)+'</h3>'
+                    html += ' </div>'
+                    html += '</div>'
+                html += '</div>'
+            }
+            html += '</div>'
+            html += '</div>'
+            html += '</div>'
+            html += '</div>';
+            document.getElementById("main").innerHTML = html;
+        }
+    )});
+}
+
+function buildMainPage( home )
+{
+    //console.log( home )
+
+    //lang = "en";//TEMP GLOBAL OVERRIDE *Remove*
+    var htmlStr = "", links = []
+    home = home || "home"
+    getTranslation( home, function() {
+        getLayouts( home, function() {
+
+            var html = "", docTitle = T(layouts.tutorial.header.title);
+
+            var renderAsList = layouts.tutorial.list;
+
+            if(home !== "home") {
+                html += `
+                <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top">
+                    <div>
+                        <a class="btn btn-link text-white" id="menu-button" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                            </svg>
+                        </a>
+                        <a class="navbar-brand" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
+                    </div>
+                </nav>
+                `;
+            }
+
+            html +='<section class="jumbotron text-center bg-dark main-page-header" style="background-image:url(\'./'+home+"/img/"+ layouts.tutorial.header.img+ '\');background-size:cover;background-position:left; '+layouts.tutorial.header.css+'">'    
+            html +='<div class="xcontainer" >'
+
+            if( home != "home" ) {
+                html += `
+                <a href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" class="btn btn-dark goback-btn" style="position:absolute;left:32px;top:16px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                    Home
+                </a>`
+            }
+
+            html +=`<h1 class="jumbotron-heading text-light ${home=="home" ? "":"sm-none"}"><strong>${T(layouts.tutorial.header.title)}</strong></h1>`;
+            html +='<p class="lead" lbl="introtext" style="color:#cfd8dc;">'+ T(layouts.tutorial.header.subtitle) +'</p>'
+            html +='</div>'
+            html +='</section>'
+
+            html += `
+            <div class="container search-container">
+                <div class="py-4 row ${renderAsList?"":"ml-3 mr-3"}">
+                    <div class="col-lg-5 col-md-8 col-sm-12">
+                        <h4 class="card-subtitle mb-3 text-light"><strong>Search</strong></h4>
+                        <input type="text" class="form-control bg-dark text-light" placeholder="Enter keyword" onkeyup="onComponentSearch(this, '${home}')">
+                        <small id="results-help" class="form-text text-muted mt-2" style="display:none;"></small>
+                    </div>
+                </div>
+            </div>`;
+            
+            html += '<div class="container">';
+            var array = layouts.tutorial.index
+            componentList = array
+            components_lst = false
+            html += '<div class="album py-5" style="background-color:#121212;">'
+            html += '<div class="container-fluid">'
+
+            if( renderAsList === true ) html += '<div class="list-group" id="components-list" datalist="true">'
+            else html += '<div class="row" id="components-list" datalist="false">'
+
+            var element, _x, _cmp
+
+            for (let i = 0; i < array.length; i++)
+            {
+                element = array[i]
+                _x = element.card.isHome
+                _cmp = element.card.cmp
+
+                links.push( './?id='+element.card.folder+'&page=0&home='+_x+'&cmp='+_cmp )
+                if( renderAsList === true ) {
+                    html += '<a href="./?id='+element.card.folder+'&page=0&home='+_x+'&cmp='+_cmp+'" class="list-group-item list-group-item-action bg-dark" style="background-color:#1d2124 !important;">';
+                    html += '<div class="d-flex w-100 justify-content-between">'
+                    html += '<h5 class="mb-1 text-light card-title">'+T(element.card.text)+'</h5>'
+                    html += '</div>'
+                    // html += '<p class="mb-1" style="color:#b0bec5;">'+T(element.card.desc)+'</p>'
+                    html += '</a>'
+                } else {
+                    html += '<div class="col-md-4 col-lg-3 col-sm-6">'
+                    html += '<div class="card mb-4 box-shadow bg-dark" onclick="document.location.href=\'./?id='+element.card.folder+'&page=0&home='+_x+'&cmp='+_cmp+'\'">'
+                    html += '<div class="card-img-top" style="background-image:url(\'./'+home+"/img/"+ element.card.img+ '\');background-size:cover;background-position:top-left;"></div>'
+                    html += '<div class="card-body">'
+                    html += '<h3 class="card-title text-light" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+T(element.card.text)+'</h3>'
+                    html += '<h6 class="card-subtitle mb-2" style="color:#b0bec5;">'+ T(element.card.desc) +'</h6>'
+                    html += '</div></div></div>'
+                }
+            }
+
+            html += '</div></div></div></div>';
+
+            document.getElementById("main").innerHTML = html;
+            document.getElementById("body").style = "background-color:#121212; margin-bottom: 100px;";
+
+            // if( onReady ) onReady()
+
+            componentList = componentList.map( m => {
+                m.card.text = T(m.card.text)
+                m.card.desc = T(m.card.desc)
+                return m
+            })
+
+            // use for jsdom
+            if( onLoaded ) {
+                onLoaded({
+                    main: document.getElementById("main").innerHTML,
+                    path: home,
+                    home: layouts.tutorial.homeLink,
+                    page: false,
+                    cmp: null,
+                    back: `./?id=${layouts.tutorial.homeLink}&page=0&home=true`,
+                    links: links,
+                    list: componentList
+                })
+            }
+        }
+    )})
+}
+
+function buildTutorial( tutorial, onReady, page, cmp ) 
+{
+    var htmlStr = "";
+    getTranslation( tutorial, function() { getLayouts( tutorial, function() 
+    {
+        htmlStr += createHeader(tutorial, layouts.tutorial.header);
+        htmlStr += '<div class="xcontainer full-height">';
+
+        htmlStr += `
+            <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top">
+                <div>
+                    <button class="btn btn-link text-white" id="menu-button" onclick="openLeftPanel(event)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </button>
+                    <a class="navbar-brand" href="#" id="doc-title"></a>
+                </div>
+            </nav>
+        `;
+
+        htmlStr += '<div class="row h-100 justify-content-end">';
+
+        // left panel ------------------
+        htmlStr += '<div class="col-lg-2 col-md-2 col-xl-2 left-panel" id="left-panel">'
+
+        htmlStr += `
+        <h5 class="left-panel-title" style="text-align:center;"><a href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" class="home-name">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+            </svg>
+        ` + ( layouts.tutorial.homeName || "" ) + `</a></h5>
+        <div style="padding: 0px 12px;">
+            <input type="text" onkeyup="onMethodSearch( this )" class="form-control" placeholder="Search..." style="background-color:#212529;color:white;margin:48px 0px 20px 0px;">
+        </div>
+        <div id="result-links" class="nav-list"></div>
+        <nav class="nav flex-column" style="width:100%;" id="left-panel-nav">
+            <a class="nav-link active" id="nav-group-overview" href="#overview">Overview</a>
+        `
+        htmlStr += '</div>'
+
+        // end left panel ------------------
+
+        htmlStr += '<div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 main-content" onclick="closeLeftPanel(event)">';
+        //htmlStr += createIntro(layouts.tutorial.intro);
+
+        if( layouts.tutorial.steps )
+        {
+            for (var z = 0; z < layouts.tutorial.steps.length; z++) {
+                //htmlStr += '<section class="chapter">';
+                htmlStr += createPage( tutorial, layouts.tutorial.steps[z] );
+                //htmlStr += '</section>';
+            }
+        }
+        else if( layouts.tutorial.pages )
+        {
+            var z = page;
+            var params = (new URL(document.location)).searchParams;
+            var tut = params.get("id");
+            htmlStr += '<div style="overflow: hidden">';
+            //htmlStr += '<button onclick="PrevPage()">Prev</button>';
+            //htmlStr += '<button onclick="NextPage()">Next</button>';
+            var nextPage = (parseInt(page) + 1).toString();
+            // console.log("Next page:"+nextPage)
+            // console.log("tutorial:"+tut) 
+
+            htmlStr += '<div id="cf" >';
+            htmlStr += '<div>';
+            var layout = layouts.tutorial.pages[z].layout
+            htmlStr = drawSlide( htmlStr, tutorial, z, layout );
+            htmlStr += '</div>';
+
+            htmlStr += '</div>';
+            StartPageTimer();
+
+            // Save the json layouts
+            pageJson = layouts.tutorial.pages[z]
+        }
+
+        htmlStr += '<div>';
+        htmlStr += '<div>';
+        htmlStr += '<div>';
+        htmlStr += '<div>';
+
+        //Apply page styles.
+        document.getElementById("main").innerHTML = htmlStr
+        document.getElementById("body").style.display = "block"
+        document.getElementById("body").style.cssText = layouts.tutorial.style;
+
+        // update doc-title for small and medium devices navigation bar title
+        document.getElementById("doc-title").innerText = docTitle;
+
+        // highlight code
+        highlightCode();
+
+        // add the left navigation panel here
+        renderLeftNavigation(leftPanelNavs)
+        //if( cmp ) renderLeftExamples( samples )
+        initLeftNavigation();
+
+        //Display first page.
+        setTimeout(function() {TransPage(1)}, 10);
+        if (onReady != null) onReady();
+
+        
+        // ***************************************
+        // use for jsdom in rendering static files
+        if( onLoaded != null && onLoaded != undefined ) {
+            onLoaded({
+                main: document.getElementById("main").innerHTML,
+                path: tutorial,
+                page: true,
+                home: layouts.tutorial.homeLink,
+                cmp: cmp,
+                back: `./?id=${layouts.tutorial.homeLink}&page=0&home=true`,
+                links: [],
+                docTitle: docTitle
+            })
+        }
+        // ***************************************
+    })})
+}
+
+function StartPageTimer()
+{
+    var time = layouts.tutorial.timer ? layouts.tutorial.timer.time : 100
+    pageTime = setTimeout(NextPage, time)
+    _running = true;
+}
+
+function TransPage( dir )
+{
+    if( document.getElementById('cf') ) 
+    {
+        if( !layouts.tutorial.animation ) layouts.tutorial.animation = { in:"fadeIn", out:"fadeOut" }
+        var transitionIn = layouts.tutorial.animation.in 
+        var transitionOut = layouts.tutorial.animation.out
+        if (dir) document.getElementById('cf').classList.add(transitionIn);
+        else 
+        {
+            document.getElementById('cf').classList.remove(transitionIn);
+            document.getElementById('cf').classList.add(transitionOut);
+        }
+    }
+}
+
+function NextPage()
+{
+    //Set defaults.
+    if( !layouts.tutorial.timer) 
+        layouts.tutorial.timer = { time: 5000, loop:false }
+
+    //Get options.
+    var loop = layouts.tutorial.timer.loop
+    var numPages = layouts.tutorial.pages.length
+    var params = (new URL(document.location)).searchParams;
+    var tutorial =  params.get("id") 
+    var page =  params.get("page")
+    var nextPage = (parseInt(page) + 1).toString();
+    if(nextPage<numPages)
+    {
+        TransPage( 0 );
+        setTimeout(function() {document.location.href="./?id=" + tutorial + "&page=" + nextPage;}, 500);
+    }
+    else if (loop)
+    {
+        TransPage( 0 );
+        setTimeout(function() {document.location.href="./?id=" + tutorial + "&page=0"}, 500);
+    }
+}
+
+function PrevPage()
+{
+    var params = (new URL(document.location)).searchParams;
+    var tutorial =  params.get("id") 
+    var page =  params.get("page")
+    var nextPage = (parseInt(page) - 1).toString();
+    if(nextPage>=0)
+    {
+        TransPage( 0 );
+        setTimeout(function() {document.location.href="./?id=" + tutorial + "&page=" + nextPage;}, 500);
+    }
+}
+
+function drawSlide( htmlStr, tutorial, z, split ) 
+{
+    //No page split
+    if( !split )
+    {
+        htmlStr += '<div class="'+layouts.tutorial.pages[z].animation+'">';
+        htmlStr += createPage(tutorial, layouts.tutorial.pages[z] );
+        htmlStr += '</div>';
+        return htmlStr;
+    }
+    //Vertical centre split
+    else if (split == "vcSplit")
+    {
+        htmlStr += '<div class="row h-100">';
+            htmlStr += '<div class="col my-auto">';
+                htmlStr += '<div class="'+layouts.tutorial.pages[z].left.animation+'">';
+                    htmlStr += createPage(tutorial, layouts.tutorial.pages[z].left);
+                htmlStr += '</div>';
+            htmlStr += '</div>';
+            if( layouts.tutorial.pages[z].right )
+            {
+                htmlStr += '<div class="col my-auto">';
+                    htmlStr += '<div class="'+layouts.tutorial.pages[z].right.animation+'">';
+                        htmlStr += createPage(tutorial, layouts.tutorial.pages[z].right);
+                    htmlStr += '</div>';
+                htmlStr += '</div>';
+            }
+        htmlStr += '</div>';
+        return htmlStr;
+    }
+    //Horizontal centre split
+    else if (split == "hcSplit")
+    {
+        htmlStr += '<div class="row h-50">';
+            htmlStr += '<div class="col my-auto">';
+                htmlStr += '<div>';
+                    htmlStr += createPage(tutorial, layouts.tutorial.pages[z].top);
+                htmlStr += '</div>';
+            htmlStr += '</div>';
+        htmlStr += '</div>';    
+        htmlStr += '<div class="row h-50">';
+            htmlStr += '<div class="col">';
+                htmlStr += '<div>';
+                    htmlStr += createPage(tutorial, layouts.tutorial.pages[z].bottom);
+                htmlStr += '</div>';
+            htmlStr += '</div>';
+        htmlStr += '</div>';   
+        return htmlStr;
+    }
+    //Vertical + horizontal centre split
+    else if (split == "vhcSplit")
+    {
+        htmlStr += '<div class="row h-100">';
+            htmlStr += '<div class="col my-auto">';
+                htmlStr += '<div>';
+                    htmlStr += createPage(tutorial, layouts.tutorial.pages[z].top);
+                htmlStr += '</div>';
+            htmlStr += '</div>';
+            htmlStr += '<div class="col my-auto">';
+                htmlStr += '<div>';
+                    htmlStr += createPage(tutorial, layouts.tutorial.pages[z].bottom);
+                htmlStr += '</div>';
+            htmlStr += '</div>';
+        htmlStr += '</div>';
+        return htmlStr;
+    }
+}
+
+function highlightCode()
+{
+    var codeToHighlight = document.getElementsByTagName("CODE");
+
+    for (var z = 0; z < codeToHighlight.length; z++) {
+        w3CodeColor( codeToHighlight[z], "js" );
+        attachCopyCodeButton( codeToHighlight[z] )
+    }
+}
+
+function renderLeftNavigation( navs ) {
+    var nav, navhtml = ''
+    for( var id in navs ) {
+        nav = navs[id]
+        navhtml += `<a class="nav-link" id="nav-group-${id}" href="#${id}" data-open="${id}-links">${nav.title}</a>`
+        navhtml += `<div id="${id}-links" class="nav-list">`
+        for( var t in nav.navs ) {
+            let isExample = nav.navs[t].toLowerCase().includes("example");
+            let text = nav.navs[t];
+            if( isExample ) {
+                text = text.toLowerCase().split("example")[1].replace(/[^a-zA-Z0-9]/g, " ");
+            }   
+            navhtml += `<a href="#${nav.navs[t].replace(/ /g,'-')}" class="nav-list-items ${isExample?"capitalize":""}" id="${nav.navs[t].toLowerCase().trim()}" data-parent="${id}-links" data-group="nav-group-${id}">${text}</a>`
+        }
+        navhtml += `</div>`
+    }
+    document.getElementById("left-panel-nav").innerHTML += navhtml
+}
+
+function renderLeftExamples( samples ) {
+    var samhtml = `<a class="nav-link" href="#examples" data-open="sample-links">Examples</a>`
+    samhtml += `<div id="sample-links" class="nav-list">`
+    for( var id in samples ) samhtml += `<a href="#${id}" class="nav-list-items capitalize">${samples[id]}</a>`
+    samhtml += `</div>`
+    document.getElementById("left-panel-nav").innerHTML += samhtml
+}
+
+function attachCopyCodeButton( elem )
+{
+    var button = document.createElement( "button" )
+    button.classList.add( "copy-button" )
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="currentColor"><path d="M9 18q-.825 0-1.412-.587Q7 16.825 7 16V4q0-.825.588-1.413Q8.175 2 9 2h9q.825 0 1.413.587Q20 3.175 20 4v12q0 .825-.587 1.413Q18.825 18 18 18Zm0-2h9V4H9v12Zm-4 6q-.825 0-1.413-.587Q3 20.825 3 20V7q0-.425.288-.713Q3.575 6 4 6t.713.287Q5 6.575 5 7v13h10q.425 0 .713.288.287.287.287.712t-.287.712Q15.425 22 15 22ZM9 4v12V4Z"/></svg>'
+    button.innerHTML = svg
+
+    button._code =  elem.innerText
+
+    button.addEventListener( "click", function() {
+        navigator.clipboard.writeText( this._code )
+        ShowPopup()
+    })
+
+    elem.prepend( button )
+}
+
+// Create a pop-up div
+function CreatePopup()
+{
+    var html = `
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="check-circle-fill" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+        <symbol id="info-fill" viewBox="0 0 16 16">
+            <path fill="currentcolor" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+        </symbol>
+        <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+        </symbol>
+    </svg>
+    <div class="alert alert-success d-flex align-items-center" style="height:50px;" role="alert">
+        <svg role="img" aria-label="Success:" style="width:24px;margin-right:12px;"><use xlink:href="#check-circle-fill"/></svg>
+        Code copied to clipboard successfully.
+    </div>
+    `
+    var div = document.createElement( "div" )
+    div.style.position = "fixed"
+    div.style.display = "none"
+    div.style.right = "20px"
+    div.style.bottom = "12px"
+    div.setAttribute( "id", "popup" )
+    div.innerHTML = html
+
+    document.body.appendChild( div )
+}
+CreatePopup()
+
+function ShowPopup()
+{
+    document.getElementById( "popup" ).style.display = "block"
+    setTimeout( function() {
+        document.getElementById( "popup" ).style.display = "none"
+    }, 1500 )
+}
+
+// Render style for quoted text.
+function _S( str )
+{
+    if( !str.includes( "`" ) ) return str
+    const beg = "`"
+    const matcher = new RegExp( `${beg}(.*?)${beg}`,'gm' );
+    const normalise = (str) => str.slice( beg.length, beg.length*-1 );
+    var s = str.match( matcher ).map( normalise )
+    for( var i=0; i<s.length; i++ )
+    {
+        str = str.replace( '`'+s[i]+'`', '<span style="padding:3px 4px;border-radius:2px;background-color:rgba(0,0,0,0.2);font:98% monospace;color:orange;">' + s[i] + '</span>' )
+    }
+    str = str.replace( /\\n/gi, "<br>" )
+    str = str.replace( /\n/gi, "<br>" )
+    return str
+}
+
+function initLeftNavigation()
+{
+    var navs = document.getElementsByClassName("nav-link");
+    activeLink = navs[0];
+    for( var i=0; i<navs.length; i++ )
+    {
+        navs[i].addEventListener( "click", function() {
+            if( !this.classList.contains("active") ) {
+                this.classList.add("active");
+                if(activeLink !== this) activeLink.classList.remove("active");
+                activeLink = this;
+
+                if( navList ) navList.style.height = 0
+                navList = document.getElementById( this.getAttribute("data-open") );
+                if( navList ) navList.style.height = (navList.childElementCount * 30) + "px";
+
+                if( this.innerText == "Methods" || this.innerText == "Examples" ) {
+                    //
+                }
+                else closeLeftPanel()
+            } else {
+                this.classList.remove( "active" )
+                activeLink = this
+                if( navList ) navList.style.height = 0
+            }
+        })
+    }
+
+    var navsLinks = document.getElementsByClassName( "nav-list-items" )
+    for( var i=0; i< navsLinks.length; i++ )
+    {
+        navsLinks[i].addEventListener( "click", function( e ) {
+            if( !this.classList.contains( "active" ) ) {
+                this.classList.add( "active" )
+                activeLink.classList.remove( "active" )
+                activeLink = this
+                closeLeftPanel()
+            }
+        })
+    }
+
+    // Create a condition that targets viewports at least 768px wide
+    var mediaQuery = window.matchMedia('(min-width: 992px)')
+
+    function _check( e )
+    {
+        if( e.matches )
+        {
+            isSmallDevice = false
+            openLeftPanel()
+        }
+        else {
+            isSmallDevice = true
+            closeLeftPanel()
+        }
+    }
+    mediaQuery.addListener( _check )
+    _check(mediaQuery)
+}
+
+function onComponentSearch( e, home )
+{
+    var cmps =  components_lst || componentList
+
+    var val = e.value.toLowerCase()
+    var array = cmps.filter( e => e.card.text.toLowerCase().includes( val ) )
+    var html = '', element, _x, _cmp, link
+    var container = document.getElementById( "components-list" )
+    var dataList = container.getAttribute("datalist")
+
+    for (let i = 0; i < array.length; i++) {
+        element = array[i]
+        _x = element.card.isHome
+        _cmp = element.card.cmp
+
+        link = components_lst ? `./${array[i].card.folder}.html` : `./?id=${array[i].card.folder}&page=0&home=${_x}&cmp=${_cmp}`
+        
+        if( dataList == "true" ) {
+            html += '<a href="'+link+'" class="list-group-item list-group-item-action bg-dark" style="background-color:#1d2124 !important;">';
+            html += '<div class="d-flex w-100 justify-content-between">'
+            html += '<h5 class="mb-1 text-light card-title">'+element.card.text +'</h5>'
+            html += '</div>'
+            html += '<p class="mb-1" style="color:#b0bec5;">'+element.card.desc+'</p>'
+            html += '</a>'
+        } else {
+            html += '<div class="col-md-4 col-lg-3 col-sm-6">'
+            html += '<div class="card mb-4 box-shadow bg-dark" onclick="document.location.href=\''+link+'\'">'
+            html += '<div class="card-img-top" style="background-image:url(\'./'+home+"/img/"+ element.card.img+ '\');background-size:cover;background-position:center"></div>'
+            html += '<div class="card-body">'
+            html += ' <h3 class="card-title text-light" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">'+ element.card.text +'</h3>'
+            html += ' <h6 class="card-subtitle mb-2" style="color:#b0bec5;">' + element.card.desc + '</h6>'
+            html += ' </div></div></div>'
+        }
+    }
+    container.innerHTML = html
+
+    var c = document.getElementById( "results-help" )
+    if( array.length && val ) {
+        c.style.display = "block"
+        c.innerText = array.length +  " results found"
+        if( array.length == 1 ) c.innerText = "1 result found"
+    } else c.style.display = "none"
+}
+
+function onMethodSearch( e )
+{
+    document.getElementById( "result-links" ).innerHTML = ""
+    document.getElementById( "result-links" ).style.height = 0 + "px"
+
+    var val = e.value.toLowerCase()
+
+    if( val == "" ) {
+        document.getElementById( "result-links" ).style.height = 0
+        document.getElementById( "result-links" ).style.marginBottom = "0px"
+        return
+    }
+
+    var nl = document.getElementsByClassName( "nav-list-items" ),
+        txt = "", l = 0, str = ""
+    for( var i=0; i < nl.length; i++ ) {
+        txt = nl[i].innerText.toLowerCase()
+        if( txt.includes(val) ) {
+            str += `<a href="${nl[i].href}" class="nav-list-items">${nl[i].innerText}</a>`
+            l++
+        }
+    }
+
+    document.getElementById( "result-links" ).innerHTML = str
+    document.getElementById( "result-links" ).style.height = ( l * 24 ) + "px"
+    document.getElementById( "result-links" ).style.marginBottom = "32px"
+}
+
+function openLeftPanel( e )
+{
+    var panel = document.getElementById( "left-panel" );
+    if( isSmallDevice && panel.style.width == "300px" ) {
+        closeLeftPanel();
+    } else {
+        panel.style.width = "300px"
+        // if( e && e.stopPropagation ) e.stopPropagation();
+        // let menuBtn = document.getElementById("menu-button");
+        // menuBtn.classList.remove("rotate-reverse-45");
+        // menuBtn.classList.add("rotate-45");
+        // menuBtn.addEventListener("animationend", function() {
+        //     menuBtn.innerHTML = `
+                // <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                //     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                // </svg>
+        //     `;
+        // });
+    }
+}
+
+function closeLeftPanel( e )
+{
+    var panel = document.getElementById( "left-panel" )
+    if( isSmallDevice && panel) {
+        panel.style.width = "0px"
+        // if( e && e.stopPropagation ) e.stopPropagation();
+        // let menuBtn = document.getElementById("menu-button");
+        // menuBtn.classList.remove("rotate-45");
+        // menuBtn.classList.add("rotate-reverse-45");
+        // menuBtn.addEventListener("animationend", function() {
+        //     menuBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        //         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        //     </svg>`;
+        // });
+    }
+}
+
+function hideMenu() {
+    document.getElementById("menu-button").style.display = "none"
+}
+
+window.addEventListener("scroll", function() {
+    const methodsTags = document.getElementsByClassName("method-name");
+    const navLinkTags = document.getElementsByClassName("title");
+    for( let i=methodsTags.length-1; i>=0; i-- ) {
+        let el = methodsTags[i];
+        const rect = el.getBoundingClientRect();
+        if( rect.top <= 100 && rect.top >= 25 ) {
+            // The element is 50px or less from the top of the screen
+            let activeEl = document.querySelector(".nav-list-items.active");
+            if( activeEl ) activeEl.classList.remove("active");
+            let navEl = document.getElementById(el.textContent.toLowerCase().trim());            
+            navEl.classList.add( "active" );
+
+            let activeNavLink = document.querySelector(".nav-link.active");
+            if( activeNavLink ) activeNavLink.classList.remove("active");
+
+            let navElGroup = document.getElementById( navEl.getAttribute("data-group") );
+            navElGroup.classList.add("active");
+
+            navEl.scrollIntoView({behavior: "smooth", block: "end"});
+
+            break;
+        }
+    }
+    for( let i=navLinkTags.length-1; i>=0; i-- ) {
+        let el = navLinkTags[i];
+        const rect = el.getBoundingClientRect();
+        if( rect.top <= 100 ) {
+            let activeNavLink = document.querySelector(".nav-link.active");
+            let navEl = document.getElementById("nav-group-"+el.id);
+            navList = null;
+            if( activeNavLink && activeNavLink !== navEl ) {
+                activeNavLink.classList.remove("active");
+                navList = document.getElementById( activeNavLink.getAttribute("data-open") );
+                if( navList ) navList.style.height = "0px";
+            }
+            navEl.classList.add( "active" );
+            navList = document.getElementById( navEl.getAttribute("data-open") );
+            if( navList ) navList.style.height = (navList.childElementCount * 30) + "px";
+            break;
+        }
+    }
+});

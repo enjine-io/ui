@@ -1,0 +1,262 @@
+:root {
+    --bright:0.95;
+    --back: #ffffff; --front: #ffffff; --front_i: #ffffff;
+    --primary_i: #eeeeee; --secondary_i: #eeeeee;
+
+    /* theme colors */
+    --default: #ffffff; --primary: #2196f3; --secondary: #f50057;
+
+    /* lighten background color */
+    --default-b: ; --primary-b: rgba(33, 150, 243, 0.04); --secondary-b: rgba(245, 0, 87, 0.04);
+
+    /* outlined colors */
+    --default-o: rgba(0,0,0,0.23); --primary-o: rgba(33, 150, 243, 0.5); --secondary-o: rgba(245, 0, 87, 0.5);
+
+    /* for date and time picker */
+    --back_d: #eeeeee; --text-clr: rgba(0, 0, 0, 0.87);
+}
+
+/* for comparison purposes only */
+:root_dark {
+    --bright:1.1;
+    --back: #2e3134; --front: #3e4347; --front_i: #fff;
+    --default:#fff; --primary: #fff; --secondary: #fff;
+    --default_b:#aaa; --primary_b: #aaa; --secondary_b: #aaa;
+    --primary_i: #3e4347; --secondary_i: #3e4347;
+
+    /* for date and time picker */
+    --back_d: #616161;  --text-clr: #fff;
+}
+
+body, .backColor { background-color: var(--back); }
+
+.MuiButton-contained { color: #222; background-color: var(--default); }
+.MuiButton-contained:hover { background-color: #e0e0e0; filter: brightness(0.95); }
+.MuiButton-containedPrimary { color: #fff; background-color: var(--primary); }
+.MuiButton-containedPrimary:hover { background-color: var(--primary); }
+.MuiButton-containedSecondary { color: #fff; background-color: var(--secondary); }
+.MuiButton-containedSecondary:hover { background-color: var(--secondary); }
+
+.MuiButton-text { color: #222; }
+.MuiButton-text:hover { text-decoration: none; background-color: rgba(0, 0, 0, 0.04); }
+.MuiButton-textPrimary { color: var(--primary); }
+.MuiButton-textPrimary:hover { background-color: var(--primary-b); }
+.MuiButton-textSecondary { color: var(--secondary); }
+.MuiButton-textSecondary:hover { background-color: var(--secondary-b); }
+
+.MuiButton-outlined { color: #222; border: 1px solid var(--default-o); }
+.MuiButton-outlined:hover { text-decoration: none; background-color: rgba(0, 0, 0, 0.04); }
+.MuiButton-outlinedPrimary { color: var(--primary); border: 1px solid var(--primary-o); }
+.MuiButton-outlinedPrimary:hover { border: 1px solid var(--primary); background-color: var(--primary-b); }
+.MuiButton-outlinedSecondary { color: var(--secondary);  border: 1px solid var(--secondary-o); }
+.MuiButton-outlinedSecondary:hover { border: 1px solid var(--secondary); background-color: var(--secondary-b); }
+
+.MuiButtonGroup-root .MuiButton-root { overflow: hidden; white-space: wrap; }
+
+/* .MuiIconButton-root { color: #222; }
+.MuiIconButton-root:hover {  background-color: var(--front); filter: invert(5%) } */
+/* IconButton */
+.MuiIconButton-root { color: rgba(0, 0, 0, 0.54); }
+.MuiIconButton-root:hover { background-color: rgba(0, 0, 0, 0.08); }
+.MuiIconButton-colorPrimary { color: var(--primary); }
+.MuiIconButton-colorPrimary:hover { background-color: var(--primary-b); filter: invert(5%) }
+.MuiIconButton-colorSecondary { color: var(--secondary); }
+.MuiIconButton-colorSecondary:hover { background-color: var(--secondary-b); filter: invert(5%)  }
+
+/* .MuiBox-root-1 {} */
+
+/*Popups*/
+/* .MuiSnackbarContent-root {} */
+
+/* Drawer */
+.MuiDrawer-paper { background-color: var(--back) }
+
+/* Typography */
+/* .MuiTypography-root {} */
+.MuiTypography-colorPrimary { color: var(--primary); }
+.MuiTypography-colorSecondary { color: var(--secondary); }
+
+/* AppBar */
+.MuiAppBar-colorDefault { color: #222; background-color: var(--default); }
+.MuiAppBar-colorPrimary { background-color: var(--primary); }
+.MuiAppBar-colorSecondary { background-color: var(--secondary); }
+/* .MuiAppBar-root .MuiToolbar-root .MuiTypography-root { color: #fff; } */
+.MuiAppBar-root .MuiIconButton-root { color: #fff; }
+.MuiAppBar-colorDefault .MuiIconButton-root,
+    .MuiAppBar-colorTransparent .MuiIconButton-root {
+        color: rgba(0, 0, 0, 1);
+    }
+
+/* Badge */
+.MuiBadge-colorPrimary { background-color: var(--primary); }
+.MuiBadge-colorSecondary { background-color: var(--secondary); }
+
+/* FAB */
+.MuiFab-primary { background-color: var(--primary); }
+.MuiFab-primary:hover { background-color: var(--primary); filter: brightness(1.1) }
+.MuiFab-secondary { background-color: var(--secondary); }
+.MuiFab-secondary:hover { background-color: var(--secondary); filter: brightness(1.1) }
+
+/*Select*/
+.MuiSelect-root { color: #222; }
+.MuiSelect-icon { color: #222; }
+/* .MuiListSubheader-root { color: rgba(0, 0, 0, 0.54); } */
+
+/* Menu */
+.MuiMenuItem-root { color: #222; }
+
+/*List*/
+/* .MuiListItem-root, .MuiListItemIcon-root { color: #222; } */
+/* .MuiListItem-root .MuiListItemText-primary { color: #222; } */
+/* .MuiListItem-root .MuiListItemText-secondary {  color: rgba(0, 0, 0, 0.54); } */
+/* .MuiListItem-root .MuiListItemIcon-root { color: rgba(0, 0, 0, 0.54); } */
+/* .MuiListSubheader-root { color: rgba(0, 0, 0, 0.54);} */
+
+/*Tabs*/
+.uiTabs .MuiAppBar-colorDefault { background-color: #fff; }
+.uiTabs .MuiAppBar-colorPrimary { background-color: var(--primary); }
+.uiTabs .MuiAppBar-colorSecondary { background-color: var(--secondary); }
+.uiTabs .MuiTab-root.MuiTab-textColorPrimary.Mui-selected { color: var(--primary);}
+.uiTabs .MuiTab-root.MuiTab-textColorSecondary.Mui-selected { color: var(--secondary);}
+
+.uiTabs .MuiAppBar-root .MuiTab-root { color: rgba(255, 255, 255, 0.7); }
+.uiTabs .MuiAppBar-root .MuiTab-root.Mui-selected { color: #fff; }
+.uiTabs .MuiAppBar-root .MuiTabs-indicator { background-color: #fff; }
+.uiTabs .MuiAppBar-colorDefault .MuiTab-root { color: rgba(0, 0, 0, 0.54); }
+.uiTabs .MuiAppBar-colorDefault .MuiTab-root.Mui-selected { color: var(--primary); }
+.uiTabs .PrivateTabIndicator-colorPrimary-2.MuiTabs-indicator { background-color: var(--primary); }
+.uiTabs .PrivateTabIndicator-colorSecondary-3.MuiTabs-indicator { background-color: var(--secondary); }
+.uiTabs .MuiAppBar-colorPrimary .MuiTabs-indicator { background-color: #fff; }
+.uiTabs .MuiAppBar-colorSecondary .MuiTabs-indicator { background-color: #fff; }
+.uiTabs .tab-panels { background-color: #fff; }
+.uiTabs .tab-title-horizontal { display: flex; flex-direction: row; align-items: center; }
+.uiTabs .tab-title-vertical { display: flex; flex-direction: column; align-items: center; }
+/* .uiTabs .tab-title-horizontal > :first-child { margin-right: 8px; } */
+
+/* Badge */
+/* .MuiBadge-badge {} */
+
+/*Slider*/
+.MuiSlider-markLabel { color: rgba(0, 0, 0, 0.54); }
+.MuiSlider-markLabelActive { color: rgba(0, 0, 0, 0.87); }
+
+/* Forms */
+
+/*Label*/
+/* .MuiTextField-root .MuiFormLabel-root { color: rgba(0, 0, 0, 0.54); } */
+/* .MuiFormLabel-root.MuiInputLabel-root { color: rgba(255, 255, 255, 0.7); } */
+.MuiFormLabel-root.MuiInputLabel-root.Mui-focused { color: var(--primary); }
+.MuiFormLabel-colorSecondary.MuiInputLabel-root.Mui-focused{ color: var(--secondary); }
+
+/* Standard */
+/* .MuiInput-underline:before { border-bottom-color: rgba(255, 255, 255, 0.7); } */
+/* .MuiInput-underline:after { border-bottom-color: #fff; } */
+.MuiInput-root.MuiInput-underline:after { border-bottom-color: var(--primary); }
+.MuiInput-colorSecondary.MuiInput-underline:after { border-bottom-color: var(--secondary); }
+
+/* Filled */
+.MuiFilledInput-root.MuiFilledInput-underline:after { border-bottom-color: var(--primary); }
+.MuiFilledInput-colorSecondary.MuiFilledInput-underline:after { border-bottom-color: var(--secondary); }
+/* .MuiFilledInput-root.Mui-focused { background-color: rgba(0, 0, 0, 0.1); } */
+/* .MuiFilledInput-root:hover { background-color: rgba(0, 0, 0, 0.2); } */
+
+/* Outlined */
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: var(--primary); }
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: var(--primary); }
+.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: var(--secondary); }
+.MuiOutlinedInput-colorSecondary:hover .MuiOutlinedInput-notchedOutline { border-color: var(--secondary); }
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline { border-color: rgba(0, 0, 0, 0.23); }
+
+/*Checkbox*/
+/* .MuiCheckbox-root .MuiIcon-root { color: rgba(0, 0, 0, 0.54); } */
+/* .MuiCheckbox-root .MuiIconButton-colorPrimary { color: var(--primary); } */
+/* .MuiCheckbox-root .MuiIconButton-colorSecondary { color: var(--secondary); } */
+/* .MuiFormControlLabel-root .MuiFormControlLabel-label { color: var(--primary); } */
+/* .MuiCheckbox-root.MuiCheckbox-colorPrimary.Mui-checked .MuiIcon-root { color: var(--primary); } */
+/* .MuiCheckbox-root.MuiCheckbox-colorSecondary.Mui-checked .MuiIcon-root { color: var(--secondary); } */
+
+/*InputAdornment*/
+.MuiInputAdornment-root { color: rgba(0, 0, 0, 0.54); }
+
+/*Dropdown*/
+/* .MuiMenu-paper, .MuiMenu-list, .MuiPaper-root { background-color: var(--front);  } */
+
+/*BottomNavigation*/
+/* .MuiBottomNavigation-root { background-color: var(--front); } */
+/* .MuiBottomNavigationAction-root { color: rgba(0, 0, 0, 0.54); } */
+.MuiBottomNavigationAction-root.Mui-selected { color: var(--primary); }
+.MuiBottomNavigationAction-root.Mui-selected.MuiIconButton { color: var(--primary); }
+
+/*Dialogs*/
+.MuiDialogTitle-root { color: var(--primary); }
+.MuiDialogContentText-root, .DialogContent-root { color: rgba(0, 0, 0, 0.54); }
+
+/*Chips*/
+/* .MuiChip-root { background-color: var(--front); } */
+/* .MuiChip-label, .MuiChip-icon, .MuiChip-avatar { color: #fff; } */
+.MuiChip-colorPrimary, .MuiChip-colorPrimary:hover { background-color: var(--primary); }
+.MuiChip-colorSecondary, .MuiChip-colorSecondary:hover { background-color: var(--secondary); }
+.MuiChip-colorPrimary.MuiChip-outlined { background-color: transparent; border: 1px solid var(--primary); color: var(--primary); }
+.MuiChip-colorSecondary.MuiChip-outlined { background-color: transparent; border: 1px solid var(--secondary); color: var(--secondary); }
+
+/* Accordion */
+/* .MuiExpansionPanelSummary-root .MuiTypography-root { color: var(--default); } */
+/* .MuiExpansionPanelSummary-root .MuiTypography-colorTextSecondary { color: var(--default_b); } */
+/* .MuiExpansionPanelSummary-expandIcon { color: var(--default_b); } */
+
+/* ButtonGroup */
+.MuiButtonGroup-groupedContained:not(:last-child) { border-color: var(--default-o); }
+.MuiButtonGroup-groupedContainedPrimary:not(:last-child) { border-color: rgba(0, 0, 0, 0.3); }
+.MuiButtonGroup-groupedContainedSecondary:not(:last-child) { border-color: rgba(0, 0, 0, 0.3); }
+
+/* Divider */
+.MuiDivider-root {
+    background-color: rgba(0, 0, 0, 0.12);
+    height: 1px;
+}
+
+/* TimePicker */
+.mddtp-picker__action button { color: var(--primary); }
+
+/* Select */
+/* .ui-Select .MuiFormLabel-root {}
+.ui-Select .MuiFormLabel-root.Mui-focused {} */
+
+/*
+    All Form Control Label
+    - Checkbox
+    - RadioGroup
+    - CheckboxGroup
+*/
+.MuiFormControlLabel-root.MuiIconButton-root { color: rgba(0, 0, 0, 0.54); }
+.MuiFormControlLabel-root.MuiIconButton-root.Mui-checked { color: rgba(0, 0, 0, 0.54); }
+.MuiFormControlLabel-root.MuiIconButton-colorPrimary.Mui-checked { color: var(--primary); }
+.MuiFormControlLabel-root.MuiIconButton-colorSecondary.Mui-checked { color: var(--secondary); }
+.MuiFormControlLabel-root .MuiFormControlLabel-label { color: rgba(0, 0, 0, 0.87); }
+/* applied to other form control labels */
+.MuiFormControlLabel-root .MuiIconButton-root { color: rgba(0, 0, 0, 0.54); }
+.MuiFormControlLabel-root .MuiIconButton-root.Mui-checked { color: rgba(0, 0, 0, 0.54); }
+.MuiFormControlLabel-root .MuiIconButton-colorPrimary.Mui-checked { color: var(--primary); }
+.MuiFormControlLabel-root .MuiIconButton-colorSecondary.Mui-checked { color: var(--secondary); }
+.MuiFormControlLabel-root .MuiFormControlLabel-label { color: rgba(0, 0, 0, 0.87); }
+
+/* Switch */
+.MuiSwitch-root .MuiIconButton-root { color: var(--default); }
+.MuiSwitch-root .Mui-checked { color: var(--default) !important; }
+.MuiSwitch-root .Mui-checked + .MuiSwitch-track{ background-color: #000; }
+.MuiSwitch-root .MuiSwitch-colorPrimary.Mui-checked { color: var(--primary) !important; }
+.MuiSwitch-root .MuiSwitch-colorSecondary.Mui-checked { color: var(--secondary) !important; }
+.MuiSwitch-root .MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track { background-color: var(--primary); }
+.MuiSwitch-root .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track { background-color: var(--secondary); }
+
+/* Stepper */
+/* .MuiStepLabel-label { color: rgba(0, 0, 0, 0.54); } */
+.MuiStepLabel-label.MuiStepLabel-active,
+    .MuiStepLabel-label.MuiStepLabel-completed { color: var(--primary); }
+/* .MuiStepIcon-root .MuiStepIcon-text { color: rgba(0, 0, 0, 0.54); } */
+/* .MuiStepIcon-root { color: rgba(255, 255, 255, 0.12); } */
+.MuiStepIcon-root.MuiStepIcon-active { color: var(--primary); }
+/* .MuiStepIcon-root.MuiStepIcon-active  .MuiStepIcon-text{ fill: rgba(0, 0, 0, 0.87); } */
+
+/* Form helper text */
+.MuiFormHelperText-root {}
