@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height">
+
+    </main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../sys/js/codecolour.js"></script>
+    <script src="../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../sys/js/popper.min.js"></script>
+    <script src="../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Enjine - UI",
+  "homeLink": "ui",
+  "pages": [
+    {
+      "title_125": {
+        "txt": "title_125"
+      },
+      "text_127": {
+        "txt": "text_127",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "img_128": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_128"
+      },
+      "code_129": {
+        "txt": "prd = ui.showProgressDialog(text, options)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_130": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_130": {
+        "content": [
+          "text ",
+          "String",
+          "The text message of the progress dialog. "
+        ]
+      },
+      "table-row_131": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options.\\n`AutoCancel` to close the dialog when backdrop is click. "
+        ]
+      },
+      "table-footer_131": {
+        "txt": ""
+      },
+      "text_132": {
+        "txt": "Returns  ProgressDialog Component",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_133": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_133": {
+        "txt": "heading_133"
+      },
+      "text_134": {
+        "txt": "text_134",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_135": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_136": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the ProgressDialog text."
+        ]
+      },
+      "table-footer_136": {
+        "txt": ""
+      },
+      "hr_137": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_137": {
+        "txt": "heading_137"
+      },
+      "text_138": {
+        "txt": "text_138",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_139": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_139": {
+        "txt": "subtitle_139"
+      },
+      "text_140": {
+        "txt": "text_140",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_141": {
+        "txt": "prd.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_142": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_142": {
+        "txt": "subtitle_142"
+      },
+      "text_143": {
+        "txt": "text_143",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_144": {
+        "txt": "prd.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_145": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_145": {
+        "txt": "subtitle_145"
+      },
+      "text_146": {
+        "txt": "text_146",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_147": {
+        "txt": "prd.setOnClose(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_148": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_148": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. "
+        ]
+      },
+      "table-footer_148": {
+        "txt": ""
+      },
+      "hr_149": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_149": {
+        "txt": "heading_149"
+      },
+      "hr_150": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_149": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Progress Dialog\", \"Outlined\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Show a progress dialog with `AutoCancel` the dismisses on backdrop click\n       ui.showProgressDialog(\"Loading...\", \"AutoCancel\")\n   }\n}",
+        "sample": "Progress Dialog"
+      },
+      "code_150": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Progress Dialog\", \"Outlined\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Show a progress dialog with `AutoCancel` the dismisses on backdrop click\n       this.pdlg = ui.showProgressDialog(\"Loading...\", \"NoCancel\")\n\n       // hide the progress dialog after 2 seconds\n       setTimeout( () => {\n           this.pdlg.hide()\n           ui.showPopup( \"Progress dialog is close!\" )\n       }, 2000)\n   }\n}",
+        "sample": "Nocancel progress dialog"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_125": {
+      "en": " ProgressDialog ",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "Shows a progress dialog component into your app.",
+      "de": "",
+      "es": ""
+    },
+    "heading_133": {
+      "en": " Properties ",
+      "de": "",
+      "es": ""
+    },
+    "text_134": {
+      "en": "Here are the available setters and getters for the ProgressDialog Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_137": {
+      "en": " Methods ",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "Here are the available methods for the ProgressDialog Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_139": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "Show the progress dialog component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_142": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_143": {
+      "en": "Hides the dialog component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_145": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "Adds a callback handler method on close event.",
+      "de": "",
+      "es": ""
+    },
+    "heading_149": {
+      "en": " Examples ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_29": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_33": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_34": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_38": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_43": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_44": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_46": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_47": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_49": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_50": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_52": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_53": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_55": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_56": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_60": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_61": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_65": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_66": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_73": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_74": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_87": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_88": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_96": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_97": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_108": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_109": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/ProgressDialog';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id");
+        var page =  params.get("page");
+        var isHome = params.get("home") || "";
+        var cmp = params.get("cmp") || "";
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

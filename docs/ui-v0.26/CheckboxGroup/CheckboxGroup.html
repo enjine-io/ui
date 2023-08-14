@@ -1,0 +1,2449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height">
+
+    </main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../sys/js/codecolour.js"></script>
+    <script src="../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../sys/js/popper.min.js"></script>
+    <script src="../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Enjine - UI",
+  "homeLink": "ui",
+  "pages": [
+    {
+      "title_125": {
+        "txt": "title_125"
+      },
+      "text_127": {
+        "txt": "text_127",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "img_128": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_128"
+      },
+      "img_129": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_129"
+      },
+      "code_130": {
+        "txt": "ckb = ui.addCheckboxGroup(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "parent ",
+          "Layout",
+          "The parent layout where to add the CheckboxGroup. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "list ",
+          "Array",
+          "The items to be displayed. "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options.\\nTheme Color: `Default`, `Primary`, `Secondary`\\nSizes: `Small`, `Medium`\\nIcon Position: `Left`, `Right`\\nContainer: `Elevated`, `Outlined`\\nCorners : `Square` "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_135": {
+        "txt": ""
+      },
+      "text_136": {
+        "txt": "Returns  CheckboxGroup Component",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_137": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_137": {
+        "txt": "heading_137"
+      },
+      "text_138": {
+        "txt": "text_138",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_152": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_153": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_154": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_155": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_156": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_157": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_158": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_159": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_160": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_161": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_162": {
+        "content": [
+          "checkIcon ",
+          "String",
+          "Sets or returns the material icon font for check stated."
+        ]
+      },
+      "table-row_163": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color use for the checkbox. Values can be `Default` `Primary` or `Secondary`."
+        ]
+      },
+      "table-row_164": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_165": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_166": {
+        "content": [
+          "elevation ",
+          "String",
+          "Sets or returns the depth of the container."
+        ]
+      },
+      "table-row_167": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_168": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_169": {
+        "content": [
+          "iconColor ",
+          "String",
+          "Sets or returns the color of the checkbox icon."
+        ]
+      },
+      "table-row_170": {
+        "content": [
+          "iconSize ",
+          "Number",
+          "Sets or returns the size of the checkbox icon."
+        ]
+      },
+      "table-row_171": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_172": {
+        "content": [
+          "itemPadding ",
+          "Array",
+          "Sets or returns the padding of each list item. See also `setItemPadding` method."
+        ]
+      },
+      "table-row_173": {
+        "content": [
+          "label ",
+          "String",
+          "Sets or returns the label text."
+        ]
+      },
+      "table-row_174": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_175": {
+        "content": [
+          "list ",
+          "Array",
+          "Sets or returns the list items."
+        ]
+      },
+      "table-row_176": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_177": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_178": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_179": {
+        "content": [
+          "outlined ",
+          "Boolean",
+          "Sets or returns whether the container is outlined or elevated."
+        ]
+      },
+      "table-row_180": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_181": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_182": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_183": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_184": {
+        "content": [
+          "sizeVariant ",
+          "String",
+          "Sets or returns the size variant of the Checkbox. Values can be `small` or `medium`."
+        ]
+      },
+      "table-row_185": {
+        "content": [
+          "spaceBetween ",
+          "Number",
+          "Sets or returns the space between the checkbox icon and the text."
+        ]
+      },
+      "table-row_186": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the text color in hexadecimal format."
+        ]
+      },
+      "table-row_187": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the checkbox icon. This will also affect the checkbox icon."
+        ]
+      },
+      "table-row_188": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_189": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_190": {
+        "content": [
+          "uncheckIcon ",
+          "String",
+          "Sets or returns the material icon font for uncheck state."
+        ]
+      },
+      "table-row_191": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_192": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-footer_192": {
+        "txt": ""
+      },
+      "hr_193": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_193": {
+        "txt": "heading_193"
+      },
+      "text_194": {
+        "txt": "text_194",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_195": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_195": {
+        "txt": "subtitle_195"
+      },
+      "text_196": {
+        "txt": "text_196",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_197": {
+        "txt": "ckb.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_198": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_198": {
+        "content": [
+          "callback ",
+          "Function",
+          "The function to be called. This will pass  `value <i class=\"arg-def\">Boolean</i>` The checked state of the checkbox item. `text <i class=\"arg-def\">String</i>` The checkbox label text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding checkbox. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_198": {
+        "txt": ""
+      },
+      "hr_199": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_199": {
+        "txt": "subtitle_199"
+      },
+      "text_200": {
+        "txt": "text_200",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_201": {
+        "txt": "ckb.setOnChange(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_202": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_202": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `values <i class=\"arg-def\">Array</i>` An array of indexes corresponding to the checked checkbox items."
+        ]
+      },
+      "table-footer_202": {
+        "txt": ""
+      },
+      "hr_203": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_203": {
+        "txt": "subtitle_203"
+      },
+      "text_204": {
+        "txt": "text_204",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_205": {
+        "txt": "ckb.setIcon( checked, unchecked )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_206": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_206": {
+        "content": [
+          "checked ",
+          "String",
+          "Material icon font "
+        ]
+      },
+      "table-row_207": {
+        "content": [
+          "unchecked ",
+          "String",
+          "Material icon font "
+        ]
+      },
+      "table-footer_207": {
+        "txt": ""
+      },
+      "hr_208": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_208": {
+        "txt": "subtitle_208"
+      },
+      "text_209": {
+        "txt": "text_209",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_210": {
+        "txt": "ckb.getIcon()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_211": {
+        "txt": "Returns  Object",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "challenge_212": {
+        "txt": "challenge_212",
+        "css": "color:white;background-color:#2979ff;padding:10px 12px;font-size:90%;display:inline-block;"
+      },
+      "hr_213": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_213": {
+        "txt": "subtitle_213"
+      },
+      "text_214": {
+        "txt": "text_214",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_215": {
+        "txt": "ckb.setCheckedByIndex( index, bool )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_216": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_216": {
+        "content": [
+          "item ",
+          "Number",
+          "The item or index of the item. "
+        ]
+      },
+      "table-row_217": {
+        "content": [
+          "bool ",
+          "Boolean",
+          "The item value. Can be `true` or `false`. "
+        ]
+      },
+      "table-footer_217": {
+        "txt": ""
+      },
+      "hr_218": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_218": {
+        "txt": "subtitle_218"
+      },
+      "text_219": {
+        "txt": "text_219",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_220": {
+        "txt": "ckb.setCheckedByName( name, bool )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_221": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_221": {
+        "content": [
+          "name ",
+          "String",
+          "The item or index of the item. "
+        ]
+      },
+      "table-row_222": {
+        "content": [
+          "bool ",
+          "Boolean",
+          "The item value. Can be `true` or `false`. "
+        ]
+      },
+      "table-footer_222": {
+        "txt": ""
+      },
+      "hr_223": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_223": {
+        "txt": "subtitle_223"
+      },
+      "text_224": {
+        "txt": "text_224",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_225": {
+        "txt": "ckb.getCheckedItems()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_226": {
+        "txt": "Returns  String",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_227": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_227": {
+        "txt": "subtitle_227"
+      },
+      "text_228": {
+        "txt": "text_228",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_229": {
+        "txt": "ckb.getCheckedByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_230": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_230": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item. "
+        ]
+      },
+      "table-footer_230": {
+        "txt": ""
+      },
+      "text_231": {
+        "txt": "Returns  Boolean",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_232": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_232": {
+        "txt": "subtitle_232"
+      },
+      "text_233": {
+        "txt": "text_233",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_234": {
+        "txt": "ckb.getCheckedByName( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_235": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_235": {
+        "content": [
+          "name ",
+          "String",
+          "The index of the corresponding item. "
+        ]
+      },
+      "table-footer_235": {
+        "txt": ""
+      },
+      "text_236": {
+        "txt": "Returns  Boolean",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_237": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_237": {
+        "txt": "subtitle_237"
+      },
+      "text_238": {
+        "txt": "text_238",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_239": {
+        "txt": "ckb.setTextByIndex( index, val )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_240": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_240": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item. "
+        ]
+      },
+      "table-row_241": {
+        "content": [
+          "val ",
+          "String",
+          "The new text to replace. "
+        ]
+      },
+      "table-footer_241": {
+        "txt": ""
+      },
+      "hr_242": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_242": {
+        "txt": "subtitle_242"
+      },
+      "text_243": {
+        "txt": "text_243",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_244": {
+        "txt": "ckb.v( name, val )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_245": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_245": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the item "
+        ]
+      },
+      "table-row_246": {
+        "content": [
+          "val ",
+          "String",
+          "The new text to replace "
+        ]
+      },
+      "table-footer_246": {
+        "txt": ""
+      },
+      "hr_247": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_247": {
+        "txt": "subtitle_247"
+      },
+      "text_248": {
+        "txt": "text_248",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_249": {
+        "txt": "ckb.getText( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_250": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_250": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the list "
+        ]
+      },
+      "table-footer_250": {
+        "txt": ""
+      },
+      "text_251": {
+        "txt": "Returns  String",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_252": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_252": {
+        "txt": "subtitle_252"
+      },
+      "text_253": {
+        "txt": "text_253",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_254": {
+        "txt": "ckb.setList( list, delim )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_255": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_255": {
+        "content": [
+          "list ",
+          "String|Array",
+          "The new list items for the checkbox group. "
+        ]
+      },
+      "table-footer_255": {
+        "txt": ""
+      },
+      "hr_256": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_256": {
+        "txt": "subtitle_256"
+      },
+      "text_257": {
+        "txt": "text_257",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_258": {
+        "txt": "ckb.setEnabled( index, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_259": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_259": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the checkbox item. "
+        ]
+      },
+      "table-row_260": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` or `false`. "
+        ]
+      },
+      "table-footer_260": {
+        "txt": ""
+      },
+      "hr_261": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_261": {
+        "txt": "subtitle_261"
+      },
+      "text_262": {
+        "txt": "text_262",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_263": {
+        "txt": "ckb.getEnabled( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_264": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_264": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the checkbox item. "
+        ]
+      },
+      "table-footer_264": {
+        "txt": ""
+      },
+      "text_265": {
+        "txt": "Returns  Boolean",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_266": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_266": {
+        "txt": "subtitle_266"
+      },
+      "text_267": {
+        "txt": "text_267",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_268": {
+        "txt": "ckb.setEnabledByName( name, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_269": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_269": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the checkbox item. "
+        ]
+      },
+      "table-row_270": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` or `false` "
+        ]
+      },
+      "table-footer_270": {
+        "txt": ""
+      },
+      "hr_271": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_271": {
+        "txt": "subtitle_271"
+      },
+      "text_272": {
+        "txt": "text_272",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_273": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_273": {
+        "content": [
+          "name ",
+          "String",
+          "The checkbox item. "
+        ]
+      },
+      "table-footer_273": {
+        "txt": ""
+      },
+      "text_274": {
+        "txt": "Returns  Boolean",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_275": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_275": {
+        "txt": "subtitle_275"
+      },
+      "text_276": {
+        "txt": "text_276",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_277": {
+        "txt": "ckb.addItem( text, index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_278": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_278": {
+        "content": [
+          "text ",
+          "String",
+          "The text label for the checkbox. "
+        ]
+      },
+      "table-row_279": {
+        "content": [
+          "index ",
+          "Number",
+          "The index in which to insert the item. "
+        ]
+      },
+      "table-footer_279": {
+        "txt": ""
+      },
+      "hr_280": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_280": {
+        "txt": "subtitle_280"
+      },
+      "text_281": {
+        "txt": "text_281",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_282": {
+        "txt": "ckb.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_283": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_283": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item to remove. "
+        ]
+      },
+      "table-footer_283": {
+        "txt": ""
+      },
+      "hr_284": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_284": {
+        "txt": "subtitle_284"
+      },
+      "text_285": {
+        "txt": "text_285",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_286": {
+        "txt": "ckb.removeItemByName( title )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_287": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_287": {
+        "content": [
+          "title ",
+          "String",
+          "The title text of the corresponding checkbox item. "
+        ]
+      },
+      "table-footer_287": {
+        "txt": ""
+      },
+      "hr_288": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_288": {
+        "txt": "subtitle_288"
+      },
+      "text_289": {
+        "txt": "text_289",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_290": {
+        "txt": "ckb.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_291": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_291": {
+        "txt": "subtitle_291"
+      },
+      "text_292": {
+        "txt": "text_292",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_293": {
+        "txt": "ckb.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_294": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_294": {
+        "txt": "subtitle_294"
+      },
+      "text_295": {
+        "txt": "text_295",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_296": {
+        "txt": "ckb.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_297": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_297": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `label <i class=\"arg-def\">String</i>` The checkbox item label text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_297": {
+        "txt": ""
+      },
+      "hr_298": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_298": {
+        "txt": "subtitle_298"
+      },
+      "text_299": {
+        "txt": "text_299",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_300": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_301": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_301": {
+        "content": [
+          "tl ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_302": {
+        "content": [
+          "tr ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_303": {
+        "content": [
+          "bl ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_304": {
+        "content": [
+          "br ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_305": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_305": {
+        "txt": ""
+      },
+      "hr_306": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_306": {
+        "txt": "subtitle_306"
+      },
+      "text_307": {
+        "txt": "text_307",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_308": {
+        "txt": "ckg.setItemPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_309": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_309": {
+        "content": [
+          "left ",
+          "Number",
+          "Left padding of the checkbox item. "
+        ]
+      },
+      "table-row_310": {
+        "content": [
+          "top ",
+          "Number",
+          "Top padding of the checkbox item. "
+        ]
+      },
+      "table-row_311": {
+        "content": [
+          "right ",
+          "Number",
+          "Right padding of the checkbox item. "
+        ]
+      },
+      "table-row_312": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom padding of the checkbox item. "
+        ]
+      },
+      "table-row_313": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement. Can be `rem`, `px`, `%`, or `v` for viewport. "
+        ]
+      },
+      "table-footer_313": {
+        "txt": ""
+      },
+      "hr_314": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "br_0": {
+        "txt": ""
+      },
+      "subtitle_33": {
+        "txt": "subtitle_33"
+      },
+      "text_34": {
+        "txt": "text_34",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_35": {
+        "txt": "ckb.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_36": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_36": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_37": {
+        "txt": ""
+      },
+      "hr_38": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_38": {
+        "txt": "subtitle_38"
+      },
+      "text_39": {
+        "txt": "text_39",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_40": {
+        "txt": "ckb.setSize( width, height )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_41": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_41": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-footer_42": {
+        "txt": ""
+      },
+      "hr_43": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_43": {
+        "txt": "subtitle_43"
+      },
+      "text_44": {
+        "txt": "text_44",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_45": {
+        "txt": "ckb.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_46": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_46": {
+        "txt": "subtitle_46"
+      },
+      "text_47": {
+        "txt": "text_47",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_48": {
+        "txt": "ckb.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_49": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_49": {
+        "txt": "subtitle_49"
+      },
+      "text_50": {
+        "txt": "text_50",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_51": {
+        "txt": "ckb.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_52": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_52": {
+        "txt": "subtitle_52"
+      },
+      "text_53": {
+        "txt": "text_53",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_54": {
+        "txt": "ckb.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_55": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_55": {
+        "txt": "subtitle_55"
+      },
+      "text_56": {
+        "txt": "text_56",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_57": {
+        "txt": "ckb.setScale( x, y )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_58": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_58": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_59": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_59": {
+        "txt": ""
+      },
+      "hr_60": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_60": {
+        "txt": "subtitle_60"
+      },
+      "text_61": {
+        "txt": "text_61",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_62": {
+        "txt": "ckb.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_63": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_63": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_63": {
+        "txt": ""
+      },
+      "text_64": {
+        "txt": "Returns  Object",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_65": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_65": {
+        "txt": "subtitle_65"
+      },
+      "text_66": {
+        "txt": "text_66",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_67": {
+        "txt": "ckb.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_68": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_68": {
+        "content": [
+          "left ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_69": {
+        "content": [
+          "top ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_70": {
+        "content": [
+          "right ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_71": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_72": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_72": {
+        "txt": ""
+      },
+      "hr_73": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_73": {
+        "txt": "subtitle_73"
+      },
+      "text_74": {
+        "txt": "text_74",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_75": {
+        "txt": "ckb.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_76": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_76": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_77": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_78": {
+        "content": [
+          "right ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_79": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_80": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_80": {
+        "txt": ""
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_82": {
+        "txt": "text_82",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_83": {
+        "txt": "ckb.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_84": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_84": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_85": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_86": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_86": {
+        "txt": ""
+      },
+      "hr_87": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_87": {
+        "txt": "subtitle_87"
+      },
+      "text_88": {
+        "txt": "text_88",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_89": {
+        "txt": "ckb.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_90": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_90": {
+        "content": [
+          "left ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_91": {
+        "content": [
+          "top ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_92": {
+        "content": [
+          "right ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_93": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_94": {
+        "content": [
+          "clr ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_95": {
+        "content": [
+          "style ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_95": {
+        "txt": ""
+      },
+      "hr_96": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_104": {
+        "txt": "subtitle_104"
+      },
+      "text_105": {
+        "txt": "text_105",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_106": {
+        "txt": "ckb.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_107": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_107": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like `sendBackward` method. "
+        ]
+      },
+      "table-footer_107": {
+        "txt": ""
+      },
+      "hr_108": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_108": {
+        "txt": "subtitle_108"
+      },
+      "text_109": {
+        "txt": "text_109",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_110": {
+        "txt": "ckb.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_111": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_111": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like `bringForward` method. "
+        ]
+      },
+      "table-footer_111": {
+        "txt": ""
+      },
+      "hr_112": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_314": {
+        "txt": "heading_314"
+      },
+      "hr_315": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_314": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize checkbox items\n       this.items = [\n           \"Checkbox item 1\",\n           \"Checkbox item 2\",\n           \"Checkbox item 3\"\n       ]\n\n       // Add a checkbox group to the main layout.\n       this.ckg = ui.addCheckboxGroup(this.main, this.items)\n\n       // Add a callback handler for `onTouch` event\n       this.ckg.setOnTouch( this.onTouch )\n   }\n\n   onTouch(value, item, index)\n   {\n       ui.showPopup( `Value of ${ item } is ${ value }` )\n   }\n}",
+        "sample": "Basic"
+      },
+      "code_315": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.childSpacing = \"evenly\"\n\n       // Initialize the checkbox items\n       var list = [\n           \"Checkbox item 1\",\n           \"Checkbox item 2\",\n           \"Checkbox item 3\"\n       ]\n\n       // Add a default CheckboxGroup to the main layout\n       this.ckg1 = ui.addCheckboxGroup(this.main, list)\n       this.ckg1.setOnTouch( this.onTouch )\n\n       // Add a primary CheckboxGroup to the main layout\n       this.ckg2 = ui.addCheckboxGroup(this.main, list, \"Primary\")\n       this.ckg2.setOnTouch( this.onTouch )\n\n       // Add a secondary CheckboxGroup to the main layout\n       this.ckg3 = ui.addCheckboxGroup(this.main, list, \"Secondary\")\n       this.ckg3.setOnTouch( this.onTouch )\n   }\n\n   onTouch(value, item, index)\n   {\n       ui.showPopup( `Value of ${ item } is ${ value }` )\n   }\n}",
+        "sample": "Colors"
+      },
+      "code_316": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize the checkbox list items\n       var list = [\n           \"Checkbox item 1\",\n           \"Checkbox item 2\",\n           \"Checkbox item 3\"\n       ]\n\n       // Add an elevated checkbox group to the main layout.\n       this.ckg = ui.addCheckboxGroup( this.main, list, \"Elevated,Secondary\", 0.6)\n\n       // Set the label of the CheckboxGroup\n       this.ckg.label = \"Select as many as you can\"\n\n       // Set the elevation of the CheckboxGroup container\n       this.ckg.elevation = 4\n\n       // Add a callback handler for `onTouch` event\n       this.ckg.setOnTouch( this.onTouch )\n   }\n\n   onTouch(value, item, index)\n   {\n       ui.showPopup( `Value of ${ item } is ${ value }` )\n   }\n}",
+        "sample": "Elevated"
+      },
+      "code_317": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize the checkbox items\n       var list = [\n           \"Checkbox item 1\",\n           \"Checkbox item 2\",\n           \"Checkbox item 3\"\n       ]\n\n       // Add an outlined checkbox group to the main layout.\n       this.ckg = ui.addCheckboxGroup( this.main, list, \"Outlined,Secondary\", 0.9 )\n       this.ckg.setOnTouch( this.onTouch )\n\n       // Set the label of the CheckboxGroup items\n       this.ckg.label = \"Select as many as you can\"\n\n       // Set the cornerRadius to `20`\n       this.ckg.cornerRadius = 20\n   }\n\n   onTouch(value, item, index)\n   {\n       ui.showPopup( `Value of ${ item } is ${ value }` )\n   }\n}",
+        "sample": "Outlined"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_125": {
+      "en": " CheckboxGroup ",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "Adds a CheckboxGroup to a given layout.",
+      "de": "",
+      "es": ""
+    },
+    "heading_137": {
+      "en": " Properties ",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "Here are the available setters and/or getters of the CheckboxGroup Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_193": {
+      "en": " Methods ",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "Here are the methods available for CheckboxGroup Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_195": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_196": {
+      "en": "Sets a callback function when the checkbox item is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_199": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_200": {
+      "en": "Adds a callback function to be called whent there is a change of value.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_203": {
+      "en": "setIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_204": {
+      "en": "Sets the checked icon and unchecked icon",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_208": {
+      "en": "getIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_209": {
+      "en": "Get the checked and unchecked icon of the checkbox group.",
+      "de": "",
+      "es": ""
+    },
+    "challenge_212": {
+      "en": " The returned object is of the form `{checked, unchecked}`.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_213": {
+      "en": "setCheckedByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_214": {
+      "en": "Checked or unchecked a given item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_218": {
+      "en": "setCheckedByName",
+      "de": "",
+      "es": ""
+    },
+    "text_219": {
+      "en": "Checked or unchecked a given item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_223": {
+      "en": "getCheckedItems",
+      "de": "",
+      "es": ""
+    },
+    "text_224": {
+      "en": "Get the list of all checked items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_227": {
+      "en": "getCheckedByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_228": {
+      "en": "Get the current value of the item in the list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_232": {
+      "en": "getCheckedByName",
+      "de": "",
+      "es": ""
+    },
+    "text_233": {
+      "en": "Get the current value of the item in the list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_237": {
+      "en": "setTextByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_238": {
+      "en": "Sets a new text to a given item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_242": {
+      "en": "setTextByName",
+      "de": "",
+      "es": ""
+    },
+    "text_243": {
+      "en": "Sets a new text to a given item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_247": {
+      "en": "getText",
+      "de": "",
+      "es": ""
+    },
+    "text_248": {
+      "en": "Get the text of the item in a given index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_252": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_253": {
+      "en": "Sets a new list of item in the checkbox group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_256": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_257": {
+      "en": "Enable or disable an item in the checkbox group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_261": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_262": {
+      "en": "Get the enabled state of a checkbox item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_266": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_267": {
+      "en": "Enable or disable a checkbox item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_271": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_272": {
+      "en": "Get the enabled state of a checkbox item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_275": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_276": {
+      "en": "Add or insert an item in the checkbox group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_280": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_281": {
+      "en": "Removes an item in the checkbox group by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_284": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_285": {
+      "en": "Removes an item in the checkbox group by its title name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_288": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_289": {
+      "en": "Removes the last item in the checkbox group. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_291": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_292": {
+      "en": "Removes the first item in the checkbox group. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_294": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_295": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_298": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_299": {
+      "en": "Sets the corner radius of the checkbox group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_306": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_307": {
+      "en": "Sets the padding of the checkbox item. See `itemPadding` property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "heading_314": {
+      "en": " Examples ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_29": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_33": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_34": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_38": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_43": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_44": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_46": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_47": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_49": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_50": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_52": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_53": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_55": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_56": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_60": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_61": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_65": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_66": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_73": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_74": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_87": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_88": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_96": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_97": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_108": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_109": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/CheckboxGroup';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id");
+        var page =  params.get("page");
+        var isHome = params.get("home") || "";
+        var cmp = params.get("cmp") || "";
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

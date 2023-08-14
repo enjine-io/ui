@@ -1,0 +1,2061 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height">
+
+    </main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../sys/js/codecolour.js"></script>
+    <script src="../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../sys/js/popper.min.js"></script>
+    <script src="../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Enjine - UI",
+  "homeLink": "ui",
+  "pages": [
+    {
+      "title_125": {
+        "txt": "title_125"
+      },
+      "text_127": {
+        "txt": "text_127",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "img_128": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_128"
+      },
+      "img_129": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_129"
+      },
+      "code_130": {
+        "txt": "dpd = ui.addDropdown(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "parent ",
+          "Layout",
+          "The layout where to add the dropdown. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "list ",
+          "Array",
+          "The list items to show. "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options.\\nTheme Colors: `Primary`, `Secondary`, `Default`\\nVariants: `Contained`, `Outlined`, `Text`\\nSizes: `Small`, `Medium`, `Large`\\nOrientation: `Horizontal`, `Vertical`\\nUtil: `NoElevation` "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_135": {
+        "txt": ""
+      },
+      "text_136": {
+        "txt": "Returns  Dropdown Component",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_137": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_137": {
+        "txt": "heading_137"
+      },
+      "text_138": {
+        "txt": "text_138",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_146": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_147": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_148": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_149": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_150": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_151": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_152": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_153": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_154": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_155": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_156": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color. Values can be `Default` `Primary` or `Secondary`"
+        ]
+      },
+      "table-row_157": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_158": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_159": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_160": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_161": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the dropdown material icon font."
+        ]
+      },
+      "table-row_162": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_163": {
+        "content": [
+          "label ",
+          "String",
+          "Sets or returns the default label of the dropdown."
+        ]
+      },
+      "table-row_164": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_165": {
+        "content": [
+          "list ",
+          "Array",
+          "Sets or returns the dropdown list. You can also passed a comma separated string."
+        ]
+      },
+      "table-row_166": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_167": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_168": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_169": {
+        "content": [
+          "orientation ",
+          "String",
+          "Sets or returns the orientation of the dropdown buttongroup. Values can be `horizontal` or `vertical`"
+        ]
+      },
+      "table-row_170": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_171": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_172": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_173": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_174": {
+        "content": [
+          "sizeVariant ",
+          "String",
+          "Sets or returns the size variant of the dropdown button. Values can be `Small` or `Medium` or `Large`"
+        ]
+      },
+      "table-row_175": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_176": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_177": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_178": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_179": {
+        "content": [
+          "value ",
+          "String",
+          "Sets or returns the value of the Dropdown. If you pass a number it will be treated as the index of the corresponding item in the choices."
+        ]
+      },
+      "table-row_180": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the variant of the dropdown button. Values can be `Contained` or `Outlined` or `Text`"
+        ]
+      },
+      "table-row_181": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_182": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-footer_182": {
+        "txt": ""
+      },
+      "hr_183": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_183": {
+        "txt": "heading_183"
+      },
+      "text_184": {
+        "txt": "text_184",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_185": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_185": {
+        "txt": "subtitle_185"
+      },
+      "text_186": {
+        "txt": "text_186",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_187": {
+        "txt": "cname.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_188": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_188": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `text <i class=\"arg-def\">String</i>` The text of the touched item. `index <i class=\"arg-def\">Number</i>` The index of the touched item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_188": {
+        "txt": ""
+      },
+      "hr_189": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_189": {
+        "txt": "subtitle_189"
+      },
+      "text_190": {
+        "txt": "text_190",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_191": {
+        "txt": "dpd.setOnChange(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_192": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_192": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. This will pass  `The <i class=\"arg-def\">text</i>` selected item text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding item."
+        ]
+      },
+      "table-footer_192": {
+        "txt": ""
+      },
+      "hr_193": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_193": {
+        "txt": "subtitle_193"
+      },
+      "text_194": {
+        "txt": "text_194",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_195": {
+        "txt": "dpd.setOnOpen(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_196": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_196": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. "
+        ]
+      },
+      "table-footer_196": {
+        "txt": ""
+      },
+      "hr_197": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_197": {
+        "txt": "subtitle_197"
+      },
+      "text_198": {
+        "txt": "text_198",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_199": {
+        "txt": "dpd.setOnClose(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_200": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_200": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. "
+        ]
+      },
+      "table-footer_200": {
+        "txt": ""
+      },
+      "hr_201": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_201": {
+        "txt": "subtitle_201"
+      },
+      "text_202": {
+        "txt": "text_202",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_203": {
+        "txt": "dpd.setList(val)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_204": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_204": {
+        "content": [
+          "val ",
+          "Array",
+          "The list of new items. "
+        ]
+      },
+      "table-footer_204": {
+        "txt": ""
+      },
+      "hr_205": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_205": {
+        "txt": "subtitle_205"
+      },
+      "text_206": {
+        "txt": "text_206",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_207": {
+        "txt": "dpd.setItemByIndex(item, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_208": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_208": {
+        "content": [
+          "item ",
+          "String",
+          "The new item text. "
+        ]
+      },
+      "table-row_209": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item to update. "
+        ]
+      },
+      "table-footer_209": {
+        "txt": ""
+      },
+      "hr_210": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_210": {
+        "txt": "subtitle_210"
+      },
+      "text_211": {
+        "txt": "text_211",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_212": {
+        "txt": "dpd.getItemByIndex(index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_213": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_213": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of corresponding item. "
+        ]
+      },
+      "table-footer_213": {
+        "txt": ""
+      },
+      "text_214": {
+        "txt": "Returns  String",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_215": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_215": {
+        "txt": "subtitle_215"
+      },
+      "text_216": {
+        "txt": "text_216",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_217": {
+        "txt": "dpd.setEnabled( index, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_218": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_218": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item. "
+        ]
+      },
+      "table-row_219": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` `false`. "
+        ]
+      },
+      "table-footer_219": {
+        "txt": ""
+      },
+      "hr_220": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_220": {
+        "txt": "subtitle_220"
+      },
+      "text_221": {
+        "txt": "text_221",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_222": {
+        "txt": "dpd.getEnabled( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_223": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_223": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item. "
+        ]
+      },
+      "table-footer_223": {
+        "txt": ""
+      },
+      "text_224": {
+        "txt": "Returns  Boolean",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_225": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_225": {
+        "txt": "subtitle_225"
+      },
+      "text_226": {
+        "txt": "text_226",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_227": {
+        "txt": "dpd.setEnabledByName( name, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_228": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_228": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the item. "
+        ]
+      },
+      "table-row_229": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` `false`. "
+        ]
+      },
+      "table-footer_229": {
+        "txt": ""
+      },
+      "hr_230": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_230": {
+        "txt": "subtitle_230"
+      },
+      "text_231": {
+        "txt": "text_231",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_232": {
+        "txt": "dpd.getEnabledByName( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_233": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_233": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the corresponding menu item. "
+        ]
+      },
+      "table-footer_233": {
+        "txt": ""
+      },
+      "text_234": {
+        "txt": "Returns  Boolean",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_235": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_235": {
+        "txt": "subtitle_235"
+      },
+      "text_236": {
+        "txt": "text_236",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_237": {
+        "txt": "dpd.addItem( name, index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_238": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_238": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the menu. "
+        ]
+      },
+      "table-row_239": {
+        "content": [
+          "index ",
+          "Number",
+          "The index in which to insert the menu item. "
+        ]
+      },
+      "table-footer_239": {
+        "txt": ""
+      },
+      "hr_240": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_240": {
+        "txt": "subtitle_240"
+      },
+      "text_241": {
+        "txt": "text_241",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_242": {
+        "txt": "dpd.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_243": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_243": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the menu item to remove. "
+        ]
+      },
+      "table-footer_243": {
+        "txt": ""
+      },
+      "hr_244": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_244": {
+        "txt": "subtitle_244"
+      },
+      "text_245": {
+        "txt": "text_245",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_246": {
+        "txt": "dpd.removeItemByName( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_247": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_247": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the menu item. "
+        ]
+      },
+      "table-footer_247": {
+        "txt": ""
+      },
+      "hr_248": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_248": {
+        "txt": "subtitle_248"
+      },
+      "text_249": {
+        "txt": "text_249",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_250": {
+        "txt": "dpd.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_251": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_251": {
+        "txt": "subtitle_251"
+      },
+      "text_252": {
+        "txt": "text_252",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_253": {
+        "txt": "dpd.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_254": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_254": {
+        "txt": "subtitle_254"
+      },
+      "text_255": {
+        "txt": "text_255",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_256": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_257": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_257": {
+        "content": [
+          "tl ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_258": {
+        "content": [
+          "tr ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_259": {
+        "content": [
+          "bl ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_260": {
+        "content": [
+          "br ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_261": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_261": {
+        "txt": ""
+      },
+      "hr_262": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "br_0": {
+        "txt": ""
+      },
+      "subtitle_29": {
+        "txt": "subtitle_29"
+      },
+      "text_30": {
+        "txt": "text_30",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_31": {
+        "txt": "setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_32": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_32": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_32": {
+        "txt": ""
+      },
+      "hr_33": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_33": {
+        "txt": "subtitle_33"
+      },
+      "text_34": {
+        "txt": "text_34",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_35": {
+        "txt": "dpd.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_36": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_36": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_37": {
+        "txt": ""
+      },
+      "hr_38": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_38": {
+        "txt": "subtitle_38"
+      },
+      "text_39": {
+        "txt": "text_39",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_40": {
+        "txt": "dpd.setSize( width, height )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_41": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_41": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-footer_42": {
+        "txt": ""
+      },
+      "hr_43": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_43": {
+        "txt": "subtitle_43"
+      },
+      "text_44": {
+        "txt": "text_44",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_45": {
+        "txt": "dpd.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_46": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_46": {
+        "txt": "subtitle_46"
+      },
+      "text_47": {
+        "txt": "text_47",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_48": {
+        "txt": "dpd.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_49": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_49": {
+        "txt": "subtitle_49"
+      },
+      "text_50": {
+        "txt": "text_50",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_51": {
+        "txt": "dpd.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_52": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_52": {
+        "txt": "subtitle_52"
+      },
+      "text_53": {
+        "txt": "text_53",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_54": {
+        "txt": "dpd.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_55": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_55": {
+        "txt": "subtitle_55"
+      },
+      "text_56": {
+        "txt": "text_56",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_57": {
+        "txt": "dpd.setScale( x, y )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_58": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_58": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_59": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_59": {
+        "txt": ""
+      },
+      "hr_60": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_60": {
+        "txt": "subtitle_60"
+      },
+      "text_61": {
+        "txt": "text_61",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_62": {
+        "txt": "dpd.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_63": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_63": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_63": {
+        "txt": ""
+      },
+      "text_64": {
+        "txt": "Returns  Object",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "hr_65": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_65": {
+        "txt": "subtitle_65"
+      },
+      "text_66": {
+        "txt": "text_66",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_67": {
+        "txt": "dpd.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_68": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_68": {
+        "content": [
+          "left ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_69": {
+        "content": [
+          "top ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_70": {
+        "content": [
+          "right ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_71": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_72": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_72": {
+        "txt": ""
+      },
+      "hr_73": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_73": {
+        "txt": "subtitle_73"
+      },
+      "text_74": {
+        "txt": "text_74",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_75": {
+        "txt": "dpd.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_76": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_76": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_77": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_78": {
+        "content": [
+          "right ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_79": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_80": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_80": {
+        "txt": ""
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_82": {
+        "txt": "text_82",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_83": {
+        "txt": "dpd.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_84": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_84": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_85": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_86": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_86": {
+        "txt": ""
+      },
+      "hr_87": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_87": {
+        "txt": "subtitle_87"
+      },
+      "text_88": {
+        "txt": "text_88",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_89": {
+        "txt": "dpd.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_90": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_90": {
+        "content": [
+          "left ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_91": {
+        "content": [
+          "top ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_92": {
+        "content": [
+          "right ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_93": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_94": {
+        "content": [
+          "clr ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_95": {
+        "content": [
+          "style ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_95": {
+        "txt": ""
+      },
+      "hr_96": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_104": {
+        "txt": "subtitle_104"
+      },
+      "text_105": {
+        "txt": "text_105",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_106": {
+        "txt": "dpd.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_107": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_107": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like `sendBackward` method. "
+        ]
+      },
+      "table-footer_107": {
+        "txt": ""
+      },
+      "hr_108": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_108": {
+        "txt": "subtitle_108"
+      },
+      "text_109": {
+        "txt": "text_109",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_110": {
+        "txt": "dpd.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_111": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_111": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like `bringForward` method. "
+        ]
+      },
+      "table-footer_111": {
+        "txt": ""
+      },
+      "hr_112": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_262": {
+        "txt": "heading_262"
+      },
+      "hr_263": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_262": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen linear layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize items to show in the dropdown\n       var items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n       // Add Dropdown control to the main layout.\n       this.dpd = ui.addDropdown(this.main, items)\n\n       // Add a callback handler for `onChange` event on the Dropdown control\n       this.dpd.setOnChange( this.onChange )\n   }\n\n   onChange(text, index)\n   {\n       ui.showPopup( \"Value is \" + text )\n   }\n}",
+        "sample": "Basic"
+      },
+      "code_263": {
+        "txt": "\nclass Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen linear layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize dropdown items\n       var items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n       // Add a Dropdown control to the main layout\n       // and pass `Outlined` and `Primary` options for styling\n       this.dpd = ui.addDropdown( this.main, items, \"Outlined,Primary\" )\n\n       // Set the label property of the Dropdown\n       this.dpd.label = \"Choose and item\"\n\n       // Set the corner radius to 16px\n       this.dpd.cornerRadius = 16\n\n       // Set the text size to 18\n       this.dpd.textSize = 18\n\n       // Add a callback handler for `onChange` event of the Dropdown control\n       this.dpd.setOnChange( this.onChange )\n   }\n\n   onChange(text, index)\n   {\n       ui.showPopup( \"Value is \" + text )\n   }\n}",
+        "sample": "Custom styles"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_125": {
+      "en": " Dropdown ",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "Adds a dropdown component into your layout.",
+      "de": "",
+      "es": ""
+    },
+    "heading_137": {
+      "en": " Properties ",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "Here are the available setters and/or getters of Dropdown Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_183": {
+      "en": " Methods ",
+      "de": "",
+      "es": ""
+    },
+    "text_184": {
+      "en": "Here are the available methods for Dropdown Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_185": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_186": {
+      "en": "Adds a callback handler when the component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_189": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_190": {
+      "en": "Adds a callback function on change event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_193": {
+      "en": "setOnOpen",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "Adds a callback function on close event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_197": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_198": {
+      "en": "Adds a callback function on close event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_201": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_202": {
+      "en": "Sets the list items on the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_205": {
+      "en": "setItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_206": {
+      "en": "Updates the text of the corresponding item in the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_210": {
+      "en": "getItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_211": {
+      "en": "Returns a dropdown item by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_215": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_216": {
+      "en": "Enable or disable an item in the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_220": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_221": {
+      "en": "Get the enabled state of an item in the dropdown menu.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_225": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_226": {
+      "en": "Enable or disable an item in the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_230": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_231": {
+      "en": "Get the enabled state of a menu item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_235": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_236": {
+      "en": "Add or insert a menu item in the dropdown list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_240": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_241": {
+      "en": "Removes a menu item in the dropdown by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_244": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_245": {
+      "en": "Removes a menu item in the dropdown by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_248": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_249": {
+      "en": "Removes the first item in the dropdown menu. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_251": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_252": {
+      "en": "Removes the last item in the dropdown menu. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_254": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_255": {
+      "en": "Sets the corner radius of the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "heading_262": {
+      "en": " Examples ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_29": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_33": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_34": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_38": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_43": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_44": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_46": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_47": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_49": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_50": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_52": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_53": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_55": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_56": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_60": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_61": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_65": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_66": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_73": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_74": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_87": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_88": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_96": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_97": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_108": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_109": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Dropdown';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id");
+        var page =  params.get("page");
+        var isHome = params.get("home") || "";
+        var cmp = params.get("cmp") || "";
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>
