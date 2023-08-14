@@ -9,6 +9,9 @@
     /* lighten background color */
     --default-b: ; --primary-b: rgba(33, 150, 243, 0.04); --secondary-b: rgba(245, 0, 87, 0.04);
 
+    /* lighten hover background */
+    --primary-h: rgba(33, 150, 243, 0.1); --secondary-h: rgba(245, 0, 87, 0.1);
+
     /* outlined colors */
     --default-o: rgba(0,0,0,0.23); --primary-o: rgba(33, 150, 243, 0.5); --secondary-o: rgba(245, 0, 87, 0.5);
 
@@ -137,8 +140,20 @@ body, .backColor { background-color: var(--back); }
 /* .MuiBadge-badge {} */
 
 /*Slider*/
+.MuiSlider-colorPrimary { color: var(--primary); }
+.MuiSlider-colorSecondary { color: var(--secondary); }
+.MuiSlider-colorPrimary.MuiSlider-track { background-color: var(--primary);}
+.MuiSlider-colorSecondary.MuiSlider-track { background-color: var(--secondary);}
 .MuiSlider-markLabel { color: rgba(0, 0, 0, 0.54); }
 .MuiSlider-markLabelActive { color: rgba(0, 0, 0, 0.87); }
+.MuiSlider-thumbColorPrimary.Mui-focusVisible, .MuiSlider-thumbColorPrimary:hover {
+    box-shadow: 0px 0px 0px 8px var(--primary-h);
+}
+.MuiSlider-thumbColorSecondary.Mui-focusVisible, .MuiSlider-thumbColorSecondary:hover {
+    box-shadow: 0px 0px 0px 8px var(--secondary-h);
+}
+.MuiSlider-thumbColorPrimary.MuiSlider-active { box-shadow: 0px 0px 0px 14px var(--primary-h); }
+.MuiSlider-thumbColorSecondary.MuiSlider-active { box-shadow: 0px 0px 0px 14px var(--secondary-h); }
 
 /* Forms */
 
@@ -239,6 +254,10 @@ body, .backColor { background-color: var(--back); }
 .MuiFormControlLabel-root .MuiIconButton-colorPrimary.Mui-checked { color: var(--primary); }
 .MuiFormControlLabel-root .MuiIconButton-colorSecondary.Mui-checked { color: var(--secondary); }
 .MuiFormControlLabel-root .MuiFormControlLabel-label { color: rgba(0, 0, 0, 0.87); }
+/* radiogroup[ */
+.uiRadioGroup .MuiFormLabel-root.Mui-focused { color: rgba(0, 0, 0, 0.54); }
+
+/* .MuiButtonBase-root.MuiRadio-root.Mui-checked { color: #fff; } */
 
 /* Switch */
 .MuiSwitch-root .MuiIconButton-root { color: var(--default); }
@@ -257,6 +276,8 @@ body, .backColor { background-color: var(--back); }
 /* .MuiStepIcon-root { color: rgba(255, 255, 255, 0.12); } */
 .MuiStepIcon-root.MuiStepIcon-active { color: var(--primary); }
 /* .MuiStepIcon-root.MuiStepIcon-active  .MuiStepIcon-text{ fill: rgba(0, 0, 0, 0.87); } */
+
+.MuiStepIcon-root.MuiStepIcon-completed { color: var(--primary); }
 
 /* Form helper text */
 .MuiFormHelperText-root {}
