@@ -1,0 +1,158 @@
+/*
+  Name:       ds-md-html
+  Author:     Jumar Hamac (http://github.com/hamacjumar)
+  Copyright:  droidscript.org
+  Contact: 	  info@enjine.io
+*/
+
+.cm-s-ds-md-html.CodeMirror {
+  background-color: #212121;
+  color: #EEFFFF;
+}
+
+.cm-s-ds-md-html .CodeMirror-gutters {
+  background: #212121;
+  color: #afafaf;
+  border: none;
+}
+
+.cm-s-ds-md-html .CodeMirror-guttermarker,
+.cm-s-ds-md-html .CodeMirror-guttermarker-subtle,
+.cm-s-ds-md-html .CodeMirror-linenumber {
+  color: #afafaf;
+}
+
+.cm-s-ds-md-html .CodeMirror-cursor {
+  border-left: 2px solid #bdbdbd;
+}
+
+.cm-s-ds-md-html div.CodeMirror-selected {
+  background: rgba(130, 177, 255, 0.3);
+}
+
+.cm-s-ds-md-html.CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(130, 177, 255, 0.3);
+}
+
+.cm-s-ds-md-html .CodeMirror-line::selection,
+.cm-s-ds-md-html .CodeMirror-line>span::selection,
+.cm-s-ds-md-html .CodeMirror-line>span>span::selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-ds-md-html .CodeMirror-line::-moz-selection,
+.cm-s-ds-md-html .CodeMirror-line>span::-moz-selection,
+.cm-s-ds-md-html .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(128, 203, 196, 0.2);
+}
+
+.cm-s-ds-md-html .CodeMirror-activeline-background {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cm-s-ds-md-html .cm-keyword {
+  color: #82AAFF;
+}
+
+.cm-s-ds-md-html .cm-operator {
+  color: #FFFFFF;
+}
+
+.cm-s-ds-md-html .cm-variable-2 {
+  color: #EEFFFF;
+}
+
+.cm-s-ds-md-html .cm-variable-3,
+.cm-s-ds-md-html .cm-type {
+  color: #f07178;
+}
+
+.cm-s-ds-md-html .cm-builtin {
+  color: #FFCB6B;
+}
+
+.cm-s-ds-md-html .cm-atom {
+  color: #F78C6C;
+}
+
+.cm-s-ds-md-html .cm-number {
+  color: #F78C6C;
+}
+
+.cm-s-ds-md-html .cm-def {
+  color: #FFFFFF;
+}
+
+.cm-s-ds-md-html .cm-string {
+  color: #ffcc80;
+}
+
+.cm-s-ds-md-html .cm-string-2 {
+  color: #ffcc80;
+}
+
+.cm-s-ds-md-html .cm-string.cm-property {
+    color: #ffcc80;
+}
+
+.cm-s-ds-md-html .cm-comment {
+  color: #757575;
+}
+
+.cm-s-ds-md-html .cm-variable {
+  color: #FFFFFF;
+}
+
+.cm-s-ds-md-html .cm-tag {
+  /* color: #FF5370; */
+  color: #82AAFF;
+}
+
+.cm-s-ds-md-html .cm-meta {
+  color: #FF69B4;
+}
+
+.cm-s-ds-md-html .cm-attribute {
+  color: #89DDFF;
+}
+
+.cm-s-ds-md-html .cm-property {
+  color: #FFFFFF;
+}
+
+.cm-s-ds-md-html .cm-qualifier {
+  color: #DECB6B;
+}
+
+.cm-s-ds-md-html .cm-variable-3,
+.cm-s-ds-md-html .cm-type {
+  color: #DECB6B;
+}
+
+.cm-s-ds-md-html .cm-error {
+  	color: rgba(255, 255, 255, 1.0);
+  	background-color: #FF5370;
+}
+
+/* matching tag highlighting */
+.cm-s-ds-md-html .CodeMirror-matchingtag {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* matching bracket highlighting */
+.cm-s-ds-md-html .CodeMirror-matchingbracket {
+    background-color: rgba(255, 255, 255, 0.1);
+    outline:1px solid rgba(255, 255, 255, 0.2);
+    color: #f07178 !important;
+}
+
+/* active line highlighting */
+.cm-s-ds-md-html .CodeMirror-activeline {}
+.cm-s-ds-md-html .CodeMirror-activeline-background {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+.cm-s-ds-md-html .CodeMirror-activeline-gutter {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+

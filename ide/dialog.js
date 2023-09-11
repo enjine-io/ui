@@ -15,7 +15,6 @@
     var wrap = cm.getWrapperElement();
     var dialog;
     dialog = wrap.appendChild(document.createElement("div"));
-    dialog.style.zIndex = 1000000001;
     if (bottom)
       dialog.className = "CodeMirror-dialog CodeMirror-dialog-bottom";
     else
