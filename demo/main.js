@@ -6,7 +6,7 @@ class Main extends App
            ui.setThemeColor(  ui.theme.primary, "#999999" )
 
            // Create a full screen layout.
-           this.main = ui.addLayout( "main", "Linear", "VCenter,FillXY" )
+           this.main = ui.addLayout( "main", "Linear", "FillXY" )
 
            this.apb = ui.addAppBar( this.main, "My App", "Menu,Primary" )
            this.apb.setOnMenu( this.showDrawer )
