@@ -1,9 +1,46 @@
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-	<br>
-	<h2> <a href="docs/index.html"> Documentation </a> </h2>
-	<h2> <a href="demo/index.html"> Demo </a> </h2>
-</body>
+  <head>
+    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+    <meta charset="UTF-8">
+    <title>EnjineIO App</title>
+
+    <script>_hybrid=false</script>
+    
+    <script src="libs/react.development.js"></script>
+    <script src="libs/react-dom.development.js"></script>
+    <script src="libs/material-ui.development.js"></script>
+    <script src="libs/material-ui-lab.production.min.js"></script>
+    <script src="libs/swipeable-views.js"></script>
+    <link rel="stylesheet" href="libs/material-icons.css">
+    <link rel="stylesheet" href="libs/fonts.css">
+    <link rel="stylesheet" href="libs/styles.css">
+    <link rel="stylesheet" href="libs/animate.min.css">
+    <script src="libs/moment.js"></script>
+    <script src="libs/rome.standalone.js"></script>
+    <script src="libs/material-datetime-picker.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="libs/material-datetime-picker.css">
+    <script src="libs/date-time-picker/js/draggabilly.pkgd.min.js"></script>
+    <script src="libs/date-time-picker/js/datetimepicker.js"></script>
+
+    <script src="libs/ui.js"></script>
+    <script src="libs/obj.js"></script>
+    <script src="libs/enjine-ui.js"></script>
+    
+    <script src="main.js"></script>
+  </head>
+
+ 
+  <body onload="if( typeof onStart=='function' ) onStart(); else main = new Main()">
+    
+    <link id="_id_theme" rel="stylesheet" href="libs/light.css">
+    <link rel="stylesheet" id="_id_picker_theme" href="libs/date-time-picker/css/light.css">
+    <link rel="stylesheet" id="_id_dtpicker_theme" href="libs/material-datetime-picker-light.css">
+    
+    <div id="root"> </div>
+    <div id="popups"> </div>
+    <div id="drawer"> </div>
+       
+  </body>
+  
 </html>

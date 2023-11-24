@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../sys/js/codecolour.js"></script>
+    <script src="../../sys/js/globalTranslations.js"></script>
+    <script src="../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../sys/js/popper.min.js"></script>
+    <script src="../../sys/js/bootstrap.min.js"></script>
+    <script src="../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "homeLink": "",
+  "home": "EnjineIO",
+  "header": {
+    "title": "mainTitle",
+    "version": "Version 0.27",
+    "versions": [
+      "v0.26"
+    ],
+    "subtitle": "mainSubtitle",
+    "img": "header-cover.png"
+  },
+  "index": [
+    {
+      "card": {
+        "folder": "ui/Introduction",
+        "text": "Introduction_text",
+        "img": "introduction.png",
+        "alt": "Introduction Card",
+        "isHome": true,
+        "desc": "Introduction_desc",
+        "back": "ui"
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls",
+        "text": "Controls_text",
+        "img": "controls.png",
+        "alt": "Controls Card",
+        "isHome": true,
+        "desc": "Controls_desc",
+        "back": "ui"
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Dialogs",
+        "text": "Dialogs_text",
+        "img": "dialogs.png",
+        "alt": "Dialogs Card",
+        "isHome": true,
+        "desc": "Dialogs_desc",
+        "back": "ui"
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Components",
+        "text": "Components_text",
+        "img": "components.png",
+        "alt": "Components Card",
+        "isHome": true,
+        "desc": "Components_desc",
+        "back": "ui"
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Pickers",
+        "text": "Pickers_text",
+        "img": "pickers.png",
+        "alt": "Pickers Card",
+        "isHome": true,
+        "desc": "Pickers_desc",
+        "back": "ui"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "mainTitle": {
+      "en": "Enjine - UI",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "mainSubtitle": {
+      "en": "Dynamic UI components built using Google's Material Design, featuring full programatic control",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Components_text": {
+      "en": "Components",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Components_desc": {
+      "en": "",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Controls_text": {
+      "en": "Controls",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Controls_desc": {
+      "en": "",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Dialogs_text": {
+      "en": "Dialogs",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Dialogs_desc": {
+      "en": "",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Introduction_text": {
+      "en": "Introduction",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Introduction_desc": {
+      "en": "",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Pickers_text": {
+      "en": "Pickers",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "Pickers_desc": {
+      "en": "",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id") || "_";
+        var page =  params.get("page") || "0";
+        var isHome = params.get("home");
+        var cmp = params.get("cmp");
+
+        if(typeof LAYOUTDATA.index == "object") {
+            if( !cmp ) cmp = "false";
+            if( !isHome ) isHome = "true";
+        }
+        else if(typeof LAYOUTDATA.pages == "object") {
+            if( !cmp ) cmp = "true";
+            if( !isHome ) isHome = "false";
+        }
+
+        // id=&home=false&cmp=true&page=0
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

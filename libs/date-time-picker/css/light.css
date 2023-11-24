@@ -13,7 +13,7 @@
   display: inline-block;
   padding: 0 8px;
   margin-right: 8px;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif !important;
+  /* font-family: "Roboto", "Helvetica", "Arial", sans-serif !important; */
   font-size: 15px;
   text-transform: uppercase;
   outline: none;
@@ -175,7 +175,7 @@
 }
 .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid span.mddtp-picker__cell--selected, .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__tr span.mddtp-picker__cell:hover {
   background-color: var(--primary);
-  color: #fff;
+  color: #fff !important;
 }
 .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid span.mddtp-picker__cell--disabled {
   color: rgba(0, 0, 0, 0.26);
@@ -189,7 +189,7 @@
   cursor: pointer;
 }
 .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__th span {
-  color: var(--back_a);
+  color: rgba(0, 0, 0, 0.54);
 }
 .mddtp-picker__years {
   position: absolute;
@@ -206,11 +206,11 @@
 .mddtp-picker__years li {
   font-size: 16px;
   padding: 8px 0;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.78);
   cursor: pointer;
 }
 .mddtp-picker__years .mddtp-picker__li--current {
-  font-size: 21px;
+  font-size: 1.4rem;
   color: var(--primary);
 }
 .mddtp-picker__years--invisible {
@@ -273,6 +273,7 @@
   line-height: 36px;
   text-align: center;
   margin-right: 8px;
+  font-weight: 800 !important;
 }
 .mddtp-picker__circularView .mddtp-picker__cell--selected span, .mddtp-picker__circularView .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__tr .mddtp-picker__cell:hover span, .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__tr .mddtp-picker__circularView .mddtp-picker__cell:hover span {
   color: #fff;
@@ -329,7 +330,7 @@
 }
 .mddtp-picker__cell {
   color: var(--text-clr) !important;
-  font-size: 13px;
+  font-size: 1rem !important;
 }
 .mddtp-picker__cell--rotate24 {
   width: 40% !important;
@@ -1642,6 +1643,8 @@
   .mddtp-picker.mddtp-picker-time .mddtp-picker__header {
       text-align: center;
       width: calc(100% - 48px);
+      display: flex;
+      justify-content: space-evenly;
   }
   .mddtp-picker.mddtp-picker-time .mddtp-picker__header .mddtp-picker__title {
       display: inline-block;

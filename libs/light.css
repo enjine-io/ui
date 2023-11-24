@@ -177,9 +177,9 @@ body, .backColor { background-color: var(--back); }
 
 /* Outlined */
 .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: var(--primary); }
-.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline { border-color: var(--primary); }
+.MuiOutlinedInput-root:not(.Mui-disabled):hover .MuiOutlinedInput-notchedOutline { border-color: var(--primary); }
 .MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: var(--secondary); }
-.MuiOutlinedInput-colorSecondary:hover .MuiOutlinedInput-notchedOutline { border-color: var(--secondary); }
+.MuiOutlinedInput-colorSecondary:not(.Mui-disabled):hover .MuiOutlinedInput-notchedOutline { border-color: var(--secondary); }
 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline { border-color: rgba(0, 0, 0, 0.23); }
 
 /*Checkbox*/
@@ -281,3 +281,107 @@ body, .backColor { background-color: var(--back); }
 
 /* Form helper text */
 .MuiFormHelperText-root {}
+
+
+/* Button Toggle */
+.uiToggle { overflow: hidden; }
+.uiToggle.uiToggle-active .MuiButton-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's above the content */
+}
+.MuiButton-containedPrimary.uiToggle.uiToggle-active .MuiButton-label::before,
+    .MuiButton-containedSecondary.uiToggle.uiToggle-active .MuiButton-label::before {
+        background-color: rgba(0, 0, 0, 0.175); /* Semi-transparent black overlay */
+}
+.uiToggle.uiToggle-active .MuiButton-label { z-index: 1; }
+.MuiButton-containedPrimary.uiToggle.uiToggle-active .MuiButton-label,
+    .MuiButton-containedSecondary.uiToggle.uiToggle-active .MuiButton-label {
+        color: #fff;
+}
+.uiToggle.uiToggle-active::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    bottom: 4px;
+    left: 32%;
+    height: 2px;
+    width: 36%;
+    z-index: 1; /* Ensure it's above the content */
+}
+.MuiButton-containedPrimary.uiToggle.uiToggle-active::after,
+    .MuiButton-containedSecondary.uiToggle.uiToggle-active::after {
+        background-color: #fff;
+}
+.MuiButton-outlinedPrimary.uiToggle.uiToggle-active::after,
+    .MuiButton-textPrimary.uiToggle.uiToggle-active::after {
+        background-color: var(--primary);
+}
+.MuiButton-outlinedSecondary.uiToggle.uiToggle-active::after,
+    .MuiButton-textSecondary.uiToggle.uiToggle-active::after {
+        background-color: var(--secondary);
+}
+
+/* Actionsheet, BottomSheet */
+.uiActionSheet-root, .uiBottomSheet-root {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+.uiActionSheet-title {
+    padding: 0.9rem 1.1rem;
+    font-size: 1.1rem;
+}
+
+.uiActionSheet-description {
+    padding: 0rem 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.uiActionSheet-root .material-icons {
+    color: #000;
+}
+
+/* BottomSheet */
+.uiBottomSheet-root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 95vh;
+}
+
+.uiBottomSheet-notch {
+    height: 4px;
+    width: 3rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: 0.6rem 0rem;
+}
+
+.uiBottomSheet-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.uiBottomSheet-header-details {
+    flex: 1;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-self: stretch;
+}
+
+.uiBottomSheet-content {
+    flex: 1;
+    width: 100%;
+}

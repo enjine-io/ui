@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+
+<body style="padding:5rem;">
+    <textarea id="ta1" name="ta1"></textarea>
+    <div id="output" style="max-width:800px;word-wrap:break-word;"></div>
+    <button id="btn">Escape text</button>
+    <script>
+        document.getElementById("btn").onclick = function() {
+            document.getElementById("output").innerHTML = escape(document.getElementById("ta1").value);
+        }
+    </script>
+</body>
+
+</html>

@@ -20,12 +20,11 @@ function createComponent(key, val) {
 }
 
 function createHeader(tutorial, header) {
-    if (header)
-    {
+    if (header) {
         var str = "";
         str += '<section class="jumbotron text-center bg-light"><div class="xcontainer">';
-        if (header.title) str += '<h1 class="jumbotron-heading">' + T(header.title) + '</h1>';
-        if (header.subtitle) str += '<p class="lead text-muted" lbl="introtext">' + T(header.subtitle) + '</p>';
+        if ( header.title ) str += '<h1 class="jumbotron-heading">' + T(header.title) + '</h1>';
+        if ( header.subtitle ) str += '<p class="lead text-muted" lbl="introtext">' + T(header.subtitle) + '</p>';
         //str += '<img src="./' + tutorial + '/' + lang + '/img/' + header.feature_img + '" class="rounded mx-auto d-block" alt="' + header.feature_alt + '">';
         str += '</div></section>';
         return str;
@@ -39,41 +38,32 @@ function createPage( tutorial, step ) {
     //for (var z = 0; z < step.stepContent.length; z++) {
     //    let stepContent = step.stepContent[z];
 
-    for (var z in step) 
-    {
-        var zz = z.split("_")
-        var anim = step[z].animation || ""
-        switch (zz[0]) 
-        {
+    for (var z in step) {
+        var zz = z.split("_");
+        var anim = step[z].animation || "";
+        var css = step[z].css || "";
+        switch (zz[0]) {
             case "title":
-                str += `\n<h2 class="display-2 ${ anim } title sm-none" id="overview">${ T(step[z].txt) }</h2>\n`;
-                // str += '\n<h2 class="display-2 '+anim+' title sm-none" id="overview">' + T(step[z].txt) + "</h2>\n";
+                str += `\n<h2 class="jdocs-title bold display-2 ${anim} sm-none" id="overview" style="${css}">${T(step[z].txt)}</h2>\n`;
                 docTitle = T(step[z].txt);
                 hasTitle = true;
                 break;
             case "heading" :
-                str += `\n<h4 class="${ anim } title" id="${ step[z].txt }">${ T(step[z].txt) }</h4>\n`;
-                //str += '<h4 class="'+anim+' title" id="'+step[z].txt+'">' + T(step[z].txt) + '</h4>';
+                str += `\n<h4 class="jdocs-heading ${anim}" style="${css}" id="${step[z].txt}">${T(step[z].txt)}</h4>\n`;
                 leftPanelNavs[step[z].txt] = { title: T(step[z].txt), navs: {} }; curHeading = step[z].txt;
                 break;
             case "subtitle":
-                str += `\n<h5 class="method-name ${ anim }" id="${ T(step[z].txt).replace(/ /g,"-") }">${ T(step[z].txt) }</h5>\n`;
-                // str += '<h5 class="'+anim+' method-name" id="' + T(step[z].txt).replace(/ /g,"-") + '">' + T(step[z].txt) + '</h5>';
+                str += `\n<h5 class="jdocs-subtitle method-name ${anim}" style="${css}" id="${T(step[z].txt).replace(/ /g,"-")}">${T(step[z].txt)}</h5>\n`;
                 if( curHeading ) leftPanelNavs[curHeading].navs[step[z].txt] = T(step[z].txt)
                 break;
             case "text":
-                str += `\n<p class="${ anim }" style="${ (step[z].css || "") } text-align:justify;" id="${ z }">${ _S( T(step[z].txt) ) }</p>\n`;
-                // str += '<p class="'+anim+'" style="'+ (step[z].css || "") +' text-align:justify;" id="'+z+'">' + _S( T(step[z].txt) ) + '</p>';
+                str += `\n<p class="jdocs-text ${anim}" style="${css}" id="${z}">${_S(T(step[z].txt))}</p>\n`;
                 break;
             case "tip":
-                str += `\n<div class="alert alert-success ${ anim }">${ T(step[z].txt) }</div>\n`;
-                // str += '<div class="alert alert-success '+anim+'">' + T(step[z].txt) + '</div>';
+                str += `\n<div class="jdocs-tip ${anim}">${T(step[z].txt)}</div>\n`;
                 break;
             case "challenge":
-                str += `\n<span class="${ anim }" style="${ step[z].css }" id="${ z }">${ _S(T(step[z].txt)) }</span>\n`;
-                // str += '<span class="'+anim+'" style="'+step[z].css+' "id="'+z+'">';
-                // str += _S( T( step[z].txt ) );
-                // str += '</span>';
+                str += `\n<span class="jdocs-challenge ${anim}" style="${css}" id="${z}">${ _S(T(step[z].txt)) }</span>\n`;
                 break;
             case "ol":
                 str += '<ol "id="'+z+'">';
@@ -99,27 +89,25 @@ function createPage( tutorial, step ) {
                 break;
             case "table-header":
                 str += `
-                                <table style="width: 100%;" class="table table-dark table-striped">
-                                    <tr class="table-header" style="width: fit-content;">`;
+                                <table class="table table-dark table-striped jdocs-table">
+                                    <tr class="jdocs-table-header">`;
                 var ss = step[z].content//.split("|")
                 for (var x = 0; x < ss.length; x++) {
                     var txt = ss[x].replace( /\n/g, "<br>" )
                     str += `
-                                        <td style="padding: 8px 20px; color: white;"><strong>${ T(txt) }</strong></td>`;
-                    // str += '<td style="padding: 8px 20px; color: white;"><strong>' + T(txt) + '</strong></td>';
+                                        <td class="jdocs-table-header-item bold" style="${css}">${T(txt)}</td>`;
                 }
                 str += `
                                     </tr>`;
                 break;
             case "table-row":
                 str += `
-                                    <tr class="table-row" style="${ (step[z].css || "") }">`;
+                                    <tr class="jdocs-table-row" style="${css}">`;
                 var ss = step[z].content//.split("|")
-                for ( var x = 0; x < ss.length; x++ )
-                {                    
+                for ( var x = 0; x < ss.length; x++ ) {
                     var txt = ss[x].replace(/\n/g,"<br>")
                     str += `
-                                        <td valign="top" style="font-weight:300; padding: 8px 20px;">`
+                                        <td class="jdocs-table-row-item" style="${css}" valign="top">`
                     if( txt.includes("~") ) str = Bullets(txt, str);
                     else str += _S( T(txt) );
                     str += `</td>`;
@@ -133,15 +121,13 @@ function createPage( tutorial, step ) {
                 break;
             case "img":
                 str += `
-                                <div style="display:block; margin-bottom: 20px;">
-                                    <img src="./img/${ step[z].src }" style="border-radius:8px;" class="d-block mx-auto ${anim}" alt="${ step[z].alt }" />
+                                <div class="jdocs-img-container">
+                                    <img src="./img/${step[z].src}" style="${css}" class="jdocs-img ${anim}" alt="${ step[z].alt }" />
                                 </div>
                 `;
-                // str += '<div style="display:block; margin-bottom: 20px;"><img src="./' + tutorial + '/img/' + step[z].src + '" style="border-radius:8px;" class="d-block mx-auto '+ anim+'" alt="' + step[z].alt + '" /></div>';
                 break;
             case "iframe":
-                str += `\n<iframe class="${ anim }" src="./${ tutorial }/iframe/${step[z].src}" width="${ (step[z].width||"50%") }" height="${ (step[z].height||"50%") }"></iframe>\n`;
-                // str += '<iframe class="'+anim+'" src="./' + tutorial + '/iframe/'+ step[z].src+'" width="'+ (step[z].width||"50%") +'" height="'+ (step[z].height||"50%") + '"></iframe>';
+                str += `\n<iframe class="${anim}" src="./${tutorial}/iframe/${step[z].src}" width="${ (step[z].width||"50%") }" height="${ (step[z].height||"50%") }"></iframe>\n`;
                 break;
             case "overline":
                 let id = T(step[z].txt).replace(/ /g,"-");
@@ -160,17 +146,17 @@ function createPage( tutorial, step ) {
                 const json = step[z];
                 if( json.sample ) {
                     str +=`
-            <div class="sample-code">
-                <div class="sample-code-header">${ T(json.sample) }</div>
-                <textarea id="${ z }" class="actual-code" data-id="${ z }">${ json.txt }
+            <div class="sample-code" style="${css}">
+                <div class="sample-code-header">${T(json.sample)}</div>
+                <textarea id="${z}" class="actual-code" data-id="${z}">${json.txt}
                 </textarea>
                 <div class="sample-code-footer">
-                    <button class="btn btn-dark sample-code-actions" onclick="runSampleCode('${ z }')" title="Run [Ctrl+S]">
+                    <button class="btn btn-dark sample-code-actions" onclick="runSampleCode('${z}')" title="Run [Ctrl+S]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
                             <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
                         </svg>
                     </button>
-                    <button class="btn btn-dark sample-code-actions" onclick="copySampleCode('${ z }')" title="Copy">
+                    <button class="btn btn-dark sample-code-actions" onclick="copySampleCode('${z}')" title="Copy">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
                             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
                             <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
@@ -184,17 +170,21 @@ function createPage( tutorial, step ) {
                     </button>
                 </div>
             </div>
-            
+    
             `;
                 }
                 else
-                    str += `\n<pre style="${ (step[z].css||"") }"><code>${ unescape(T(step[z].txt)) }</code></pre>\n`;
+                    str += `\n<pre class="jdocs-sample-code" style="${css}"><code>${ unescape(T(step[z].txt)) }</code></pre>\n`;
                 break;
             case "hr":
-                str += `\n<div style="width:100%; ${ (step[z].css || "") }"></div>\n`;
+                str += `\n<div class="jdocs-hr"><div class="jdocs-hr-line" style="${css}"></div></div>\n`;
                 break;
             case "br":
-                str += `<br/>`
+                str += "<br/>";
+                break;
+            case "button": 
+                str += `<button type="button" class="btn jdocs-button btn-dark" href="${step[z].url}" target="${step[z].target}" style="${css}">${step[z].txt}</button>`;
+                break;
             default:
                 break;
         }
@@ -231,8 +221,7 @@ function createLastChapter()
     + '</h2><p>' + (layouts.tutorialLastChapter.value[lang] || layouts.tutorialLastChapter.value['en']) + '</p>';
 }
 
-function buildHome( home )
-{
+function buildHome( home ) {
     //lang = "en";//TEMP GLOBAL OVERRIDE *Remove*
     var htmlStr = "";
     home = home || "home"
@@ -275,8 +264,7 @@ function buildHome( home )
     )});
 }
 
-function buildMainPage( home )
-{
+function buildMainPage( home ) {
     //console.log( home )
 
     //lang = "en";//TEMP GLOBAL OVERRIDE *Remove*
@@ -287,17 +275,18 @@ function buildMainPage( home )
 
             // var docTitle = T(layouts.tutorial.header.title);
 
-            var renderAsList = layouts.tutorial.list;
+            var renderAsList = !layouts.tutorial.card;
 
             if(home !== "home") {
                 htmlStr += `
-                <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top">
-                    <div>
-                        <a class="btn btn-link text-white" id="menu-button" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button">
+                <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top d-flex justify-content-center">
+                    <div class="">
+                        <!-- <a class="btn btn-link text-white" id="menu-button" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
                             </svg>
                         </a>
+                        -->
                         <a class="navbar-brand" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
                     </div>
                 </nav>
@@ -311,17 +300,17 @@ function buildMainPage( home )
 
             if( home != "home" ) {
                 htmlStr += `
-                        <a href="../${layouts.tutorial.homeLink}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" class="btn btn-dark goback-btn" style="position:absolute;left:32px;top:16px;">
+                        <a href="../${layouts.tutorial.homeLink.split("/").pop()||"index"}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" class="btn btn-dark goback-btn" style="position:absolute;left:32px;top:16px;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
                             </svg>
-                            Home
+                            ${layouts.tutorial.home || "Home"}
                         </a>
                 `;
             }
 
             htmlStr +=`
-                        <h1 class="jumbotron-heading text-light ${home=="home" ? "":"sm-none"}"><strong>${T(layouts.tutorial.header.title)}</strong></h1>
+                        <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}">${T(layouts.tutorial.header.title)}</h1>
             `;
 
             if( layouts.tutorial.header.version ) {
@@ -395,6 +384,7 @@ function buildMainPage( home )
                                     <div class="d-flex w-100 justify-content-between">
                                         <h5 class="mb-1 text-light card-title">${ T(element.card.text) }</h5>
                                     </div>
+                                    ${element.card.desc ? "<p class=\"mb-1\">"+T(element.card.desc)+"</p>" : ""}
                                 </a>
                     `;
                 } else {
@@ -425,13 +415,13 @@ function buildMainPage( home )
     )})
 }
 
-function buildTutorial( tutorial, onReady, page, cmp ) 
-{
+function buildTutorial( tutorial, onReady, page, cmp ) {
     var htmlStr = "";
 
-    getTranslation( tutorial, function() { getLayouts( tutorial, function()
-    {
+    getTranslation( tutorial, function() { getLayouts( tutorial, function() {
         htmlStr += createHeader(tutorial, layouts.tutorial.header);
+
+        let hmeDir = layouts.tutorial.homeLink ? layouts.tutorial.homeLink.split("/").pop() : "";
 
         htmlStr += `
         <div class="xcontainer full-height">
@@ -442,20 +432,26 @@ function buildTutorial( tutorial, onReady, page, cmp )
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                         </svg>
                     </button>
-                    <a class="navbar-brand" href="#" id="doc-title"></a>
+                    <a class="navbar-brand bold" href="#" id="doc-title"></a>
                 </div>
             </nav>
             <div id="main-page" class="h-100">
-                <div class="left-panel" id="left-panel" style="width: 16rem;">
+                <div class="left-panel" id="left-panel">`;
+        
+        if( layouts.tutorial.homeName ) {
+            htmlStr += `
                     <h5 class="left-panel-title" style="text-align:center;">
-                        <a href="../${layouts.tutorial.homeLink}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" class="home-name">
+                        <a href="../${hmeDir}.html?page=0&home=true" class="home-name">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
                                 <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
                             </svg>
-                            ${ (layouts.tutorial.homeName || "") }
+                            ${layouts.tutorial.homeName}
                         </a>
                     </h5>
-                    <div style="padding: 0px 12px;">
+            `;
+        }
+                    
+        htmlStr += `<div style="padding: 0px 12px;">
                         <input type="text" onkeyup="onMethodSearch( this )" class="form-control" placeholder="Search..." style="background-color:#212529;color:white;margin:48px 0px 20px 0px;">
                     </div>
                     <div id="result-links" class="nav-list"></div>

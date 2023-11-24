@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Introduction",
+  "homeLink": "ui/Introduction",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_1": {
+        "txt": "text_1",
+        "css": ""
+      },
+      "text_3": {
+        "txt": "text_3",
+        "css": ""
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_7": {
+        "txt": "class Main extends App\n{\n    onStart()\n    {\n        this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n        this.apb = ui.addAppBar(this.main, \"MyApp\", \"Menu,Fixed\")\n\n        this.btn = ui.addButton(this.main, \"Button\", \"Default\")\n\n        this.fab = ui.addFAB(this.main, \"add\", \"Secondary\")\n    }\n}",
+        "css": "",
+        "sample": "Complex layout made simple"
+      },
+      "heading_8": {
+        "txt": "heading_8"
+      },
+      "text_9": {
+        "txt": "text_9",
+        "css": ""
+      },
+      "heading_10": {
+        "txt": "heading_10"
+      },
+      "text_11": {
+        "txt": "text_11",
+        "css": ""
+      },
+      "heading_12": {
+        "txt": "heading_12"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": "Introduction",
+      "de": "",
+      "es": ""
+    },
+    "text_1": {
+      "en": "UI Components is a set of components from Material UI (V4). Material UI is the most popuplar UI library for React applications. In fact, UI Components uses React under the hood to render components.",
+      "de": "",
+      "es": ""
+    },
+    "text_3": {
+      "en": "UI components is an encapsulation of the Material UI components. It speeds up user-interface development by up to 10x faster. This is achieved by passing brief and concise arguments on component initialization. The result is a highly optimized UI component that makes your app's user interface looks great and professional.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "Run the example below to see UI components in action",
+      "de": "",
+      "es": ""
+    },
+    "heading_8": {
+      "en": "Samples",
+      "de": "",
+      "es": ""
+    },
+    "text_9": {
+      "en": "UI Components comes with many samples within the docs that can be edited and run on the fly. It's a good idea to edit, run and copy the script in one of these samples as a starting point for your app's layout. Try to find the one which best matches your requirements.",
+      "de": "",
+      "es": ""
+    },
+    "heading_10": {
+      "en": "Measurements",
+      "de": "",
+      "es": ""
+    },
+    "text_11": {
+      "en": "In order to maintain the scale of graphical components (i.e. using `UI Components`) in devices with different screen resolutions and orientations, all positioning and sizing values are given as a `decimal fraction` of the parent component's width and height.\nFor example, creating a button with a width of 0.5 would make the button half the width of its parent layout and using a height of 0.1 would make the button one tenth of the height of the parent layout. You can however specify `-1` or `null` or just leave out the width and height parameters completely on many controls if you want the control to size according to its default values which is recommended when using UI Components.",
+      "de": "",
+      "es": ""
+    },
+    "heading_12": {
+      "en": "Getting Started",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "Before starting to write your own apps with user interfaces, it's a good idea to read the documentation explaining `Layout` as this is the fundamental control of every app that uses UI Components. Check it on `Controls > Layout`.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Introduction/Overview';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id") || "_";
+        var page =  params.get("page") || "0";
+        var isHome = params.get("home");
+        var cmp = params.get("cmp");
+
+        if(typeof LAYOUTDATA.index == "object") {
+            if( !cmp ) cmp = "false";
+            if( !isHome ) isHome = "true";
+        }
+        else if(typeof LAYOUTDATA.pages == "object") {
+            if( !cmp ) cmp = "true";
+            if( !isHome ) isHome = "false";
+        }
+
+        // id=&home=false&cmp=true&page=0
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "UI Dialogs",
+  "homeLink": "ui/Dialogs",
+  "pages": [
+    {
+      "title_124": {
+        "txt": "title_124"
+      },
+      "text_126": {
+        "txt": "text_126",
+        "css": ""
+      },
+      "img_127": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_127"
+      },
+      "img_128": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_128"
+      },
+      "img_129": {
+        "src": "img3.png",
+        "style": "",
+        "alt": "img_129"
+      },
+      "img_130": {
+        "src": "img4.png",
+        "style": "",
+        "alt": "img_130"
+      },
+      "text_131": {
+        "txt": "text_131",
+        "css": ""
+      },
+      "code_132": {
+        "txt": "dlg = ui.addDialog( title, body, actions, options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_133": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_133": {
+        "content": [
+          "title ",
+          "String",
+          "The dialog title text. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "body ",
+          "String",
+          "The dialog message to be shown. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "actions ",
+          "Array",
+          "A string of action button text. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options.\\nTheme Colors: `Primary`, `Secondary`\\nUtil: `NoCancel` prevents the dialog from closing on action. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the screen width `[0-1]`. "
+        ]
+      },
+      "table-footer_137": {
+        "txt": ""
+      },
+      "text_138": {
+        "txt": "This will return a <span class=\"bold jdocs-return-type\"> Dialog Component</span>"
+      },
+      "hr_139": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_139": {
+        "txt": "heading_139"
+      },
+      "text_140": {
+        "txt": "text_140",
+        "css": ""
+      },
+      "table-header_144": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_145": {
+        "content": [
+          "layout ",
+          "Layout",
+          "Returns the layout of the dialog where you can add custom controls."
+        ]
+      },
+      "table-row_146": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the dialog text."
+        ]
+      },
+      "table-row_147": {
+        "content": [
+          "titleColor ",
+          "String",
+          "Sets or returns the title text color in hexadecimal format."
+        ]
+      },
+      "table-row_148": {
+        "content": [
+          "titleText ",
+          "String",
+          "Sets or returns the dialog title text."
+        ]
+      },
+      "table-footer_148": {
+        "txt": ""
+      },
+      "hr_149": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_149": {
+        "txt": "heading_149"
+      },
+      "text_150": {
+        "txt": "text_150",
+        "css": ""
+      },
+      "hr_151": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_151": {
+        "txt": "subtitle_151"
+      },
+      "text_152": {
+        "txt": "text_152",
+        "css": ""
+      },
+      "code_153": {
+        "txt": "dlg.setOnAction( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_154": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_154": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. This will pass  `text <i class=\"arg-def\">String</i>` The dialog action text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding dialog action."
+        ]
+      },
+      "table-footer_154": {
+        "txt": ""
+      },
+      "hr_155": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_155": {
+        "txt": "subtitle_155"
+      },
+      "text_156": {
+        "txt": "text_156",
+        "css": ""
+      },
+      "code_157": {
+        "txt": "dlg.setOnClose(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_158": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_158": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function "
+        ]
+      },
+      "table-footer_158": {
+        "txt": ""
+      },
+      "hr_159": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_159": {
+        "txt": "subtitle_159"
+      },
+      "text_160": {
+        "txt": "text_160",
+        "css": ""
+      },
+      "code_161": {
+        "txt": "dlg.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_162": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_162": {
+        "txt": "subtitle_162"
+      },
+      "text_163": {
+        "txt": "text_163",
+        "css": ""
+      },
+      "code_164": {
+        "txt": "dlg.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "tip_165": {
+        "txt": "tip_165",
+        "css": ""
+      },
+      "hr_166": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_166": {
+        "txt": "heading_166"
+      },
+      "hr_167": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_166": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add button to the main layout to show the dialog when clicked.\n       this.btn = ui.addButton(this.main, \"Show Dialog\", \"Contained,Primary\")\n       this.btn.setOnTouch( this.showDialog )\n\n       // Message to be displayed in the Dialog component\n       var bodyText = \"Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.\"\n       \n       // Initialize the Dialog component with `Agree` and `Disagree` action buttons\n       this.dlg = ui.addDialog(\"Use Google's location service?\", bodyText, \"Disagree,Agree\")\n   }\n\n   showDialog()\n   {\n       // Show the Dialog component when the button is click.\n       this.dlg.show()\n   }\n}",
+        "sample": "Basic"
+      },
+      "code_167": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout.\n       this.btn = ui.addButton( this.main, \"Show Dialog\", \"Contained,Primary\" )\n\n       // Add a callback handler for `onTouch` event on the button.\n       this.btn.setOnTouch( this.showDialog )\n\n       // Message to display\n       var bodyText = \"Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.\"\n       \n       // Initialize the Dialog component and pass a `NoCancel` option.\n       this.dlg = ui.addDialog( \"Use Google's location service?\", bodyText, \"Close,Agree\", \"NoCancel\" )\n\n       // Add a callback handler for `onAction` event on the Dialog component\n       this.dlg.setOnAction( this.onAction );\n   }\n\n   showDialog()\n   {\n       // Show the Dialog component when button is click\n       this.dlg.show();\n   }\n\n   onAction( action )\n   {\n       if(action == \"Close\")\n       {\n           ui.showPopup(\"There you go.\");\n           this.dlg.hide();\n       }\n       else\n       {\n           ui.showPopup(\"Oops! You can't close me here.\");\n       }\n   }\n}",
+        "sample": "NoCancel"
+      },
+      "code_168": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n       // Adds a text control to the main layout.\n       this.txt = ui.addText(this.main, \"Email: \", \"\", 0.7)\n\n       // Adds a button to show the dialog.\n       this.btn = ui.addButton(this.main, \"Show Dialog\", \"Contained,Primary\")\n\n       // Add a callback handler for `ontouch` event on the button control\n       // to show the Dialog component\n       this.btn.setOnTouch( this.showDialog )\n\n       var bodyText = \"To subscribe to this website, please enter your email address here. We will send updates occasionally.\"\n       \n       // Initialize the dialog.\n       this.dlg = ui.addDialog(\"Subscribe\", bodyText, \"Cancel,Subscribe\")\n\n       // Add a callback handler for `onaction` event on the Dialog componenti\n       this.dlg.setOnAction( this.onAction )\n\n       // Adding textfield to the main layout\n       this.tfd = ui.addTextField(this.dlg.layout, \"\", \"Filled\")\n       this.tfd.label = \"Email Address\"\n   }\n\n   showDialog()\n   {\n       this.dlg.show()\n   }\n\n   onAction( action )\n   {\n       // Check the button that is click.\n       if( action == \"Subscribe\" )\n       {\n           // Change the text of the text control.\n           this.txt.text = \"Email : \" + this.tfd.text\n       }\n   }\n}",
+        "sample": "Adding controls to the dialog"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " Dialog ",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "A Dialog in mobile UI design is a pop-up window that appears on top of the current screen to prompt the user for input or to convey information. In Material Design, Dialogs follow guidelines for clarity, actions, and consistent styling. They serve to enhance user interaction and provide a focused way to handle specific tasks or gather input within a mobile application.",
+      "de": "",
+      "es": ""
+    },
+    "text_131": {
+      "en": "Add a dialog into your app using the `addDialog` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_139": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "Here are the available setters and/or getter of the Dialog Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_149": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_150": {
+      "en": "Here are the available methods of the Dialog Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_151": {
+      "en": "setOnAction",
+      "de": "",
+      "es": ""
+    },
+    "text_152": {
+      "en": "Adds a callback function when the action buttons are click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_155": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_156": {
+      "en": "Adds a callback function when the dialog is close.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_159": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "Show the dialog.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_162": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "Hide the dialog.",
+      "de": "",
+      "es": ""
+    },
+    "tip_165": {
+      "en": " When you add an `onClose` callback, it will be fired after this event.",
+      "de": "",
+      "es": ""
+    },
+    "heading_166": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Dialogs/Dialog';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id") || "_";
+        var page =  params.get("page") || "0";
+        var isHome = params.get("home");
+        var cmp = params.get("cmp");
+
+        if(typeof LAYOUTDATA.index == "object") {
+            if( !cmp ) cmp = "false";
+            if( !isHome ) isHome = "true";
+        }
+        else if(typeof LAYOUTDATA.pages == "object") {
+            if( !cmp ) cmp = "true";
+            if( !isHome ) isHome = "false";
+        }
+
+        // id=&home=false&cmp=true&page=0
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

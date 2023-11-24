@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Enjine - UI",
+  "homeLink": "ui",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "code_4": {
+        "txt": "chp = ui.addChip(parent, text, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_5": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_5": {
+        "content": [
+          "parent ",
+          "Layout",
+          "The parent layout where to add the Chip. "
+        ]
+      },
+      "table-row_6": {
+        "content": [
+          "text ",
+          "String",
+          "The text on the chip. "
+        ]
+      },
+      "table-row_7": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated option.\\nTheme Color: `Primary`, `Secondary`, `Default`\\nSize: `Small`, `Medium`\\nVariant: `Outlined`, `Default`\\nUtil: `Touchable` "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width `[0-1]` "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height `[0-1]` "
+        ]
+      },
+      "table-footer_9": {
+        "txt": ""
+      },
+      "text_10": {
+        "txt": "Returns  Chip Component",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "text_11": {
+        "txt": "text_11",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_12": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_12": {
+        "txt": "heading_12"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_23": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_24": {
+        "content": [
+          "avatar ",
+          "String",
+          "Sets or returns the avatar. Can be image or a single character."
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the chip. Values can be `Default` `Primary` `Secondary`"
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "deleteIcon ",
+          "String",
+          "Sets or returns the delete icon."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "Returns whether the chip is enabled or disabled."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the material icon font if icon is provided."
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "iconColor ",
+          "String",
+          "Sets or returns the icon color in hexadecimal format."
+        ]
+      },
+      "table-row_30": {
+        "content": [
+          "iconSize ",
+          "Number",
+          "Sets or returns the font-size of the icon in css font-size format. You can pass string values to be more specific such as `12px` `1.5rem`."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "sizeVariant ",
+          "String",
+          "Sets or returns the size variant. Values can be `small` or `medium`"
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the text of the chip."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the variant of the chip. Vaues can be `Default` or `Outlined`"
+        ]
+      },
+      "table-footer_33": {
+        "txt": ""
+      },
+      "hr_34": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_34": {
+        "txt": "heading_34"
+      },
+      "text_35": {
+        "txt": "text_35",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_36": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_36": {
+        "txt": "subtitle_36"
+      },
+      "text_37": {
+        "txt": "text_37",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_38": {
+        "txt": "chp.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_39": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_39": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_39": {
+        "txt": ""
+      },
+      "hr_40": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_40": {
+        "txt": "subtitle_40"
+      },
+      "text_41": {
+        "txt": "text_41",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_42": {
+        "txt": "chp.setTouchable( touchable )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_43": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_43": {
+        "content": [
+          "touchable ",
+          "Boolean",
+          "Can be `true` or `false` "
+        ]
+      },
+      "table-footer_43": {
+        "txt": ""
+      },
+      "hr_44": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_44": {
+        "txt": "subtitle_44"
+      },
+      "text_45": {
+        "txt": "text_45",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_46": {
+        "txt": "chp.setOnDelete( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_47": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_47": {
+        "content": [
+          "callback ",
+          "Function",
+          "On delete callback function. "
+        ]
+      },
+      "table-footer_47": {
+        "txt": ""
+      },
+      "hr_48": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_48": {
+        "txt": "subtitle_48"
+      },
+      "text_49": {
+        "txt": "text_49",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_50": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_51": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_51": {
+        "content": [
+          "tl ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_52": {
+        "content": [
+          "tr ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_53": {
+        "content": [
+          "bl ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_54": {
+        "content": [
+          "br ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_55": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_55": {
+        "txt": ""
+      },
+      "hr_56": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_56": {
+        "txt": "heading_56"
+      },
+      "hr_57": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_56": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.025, 0, 0.025)\n\n       // Add a default chip to the main layout\n       this.chip1 = ui.addChip(this.main, \"Basic Chip\")\n\n       // Add a callback handler for `onTouch` event.\n       this.chip1.setOnTouch( this.onTouch )\n\n       // Add a small primary chip\n       this.chip2 = ui.addChip(this.main, \"Small Primary Chip\", \"Primary,Small\")\n       this.chip2.setOnTouch( this.onTouch )\n\n       // Add a touchable secondary chip\n       this.chip3 = ui.addChip(this.main, \"Secondary Chip\", \"Secondary,Touchable\")\n       this.chip2.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touched the chip!\" )\n   }\n}",
+        "sample": "Chips"
+      },
+      "code_57": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a touchable and deletable chip\n       this.chip = ui.addChip(this.main, 'Deletable', 'Secondary,Touchable')\n\n       // Add callback hanlder for `onDelete` event.\n       // This will also add a delete icon to the chip.\n       this.chip.setOnDelete( this.onDelete )\n   }\n\n   onDelete()\n   {\n       ui.showPopup( \"Chip is deleted!\" )\n   }\n}",
+        "sample": "Deletable chip"
+      },
+      "code_58": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a chip control to the main layout\n       this.chip = ui.addChip(this.main, \"Shopping Cart\")\n\n       // Add a leading icon to the chip control\n       this.chip.icon = \"shopping_cart\"\n\n       // Sets the icon color of the chip control\n       this.chip.iconColor = \"#673ab7\"\n\n       // Sets the text size of the chip control\n       this.chip.textSize = 14\n   }\n}",
+        "sample": "Custom styles"
+      },
+      "code_59": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a chip control to the main layout\n       this.chip = ui.addChip(this.main, \"Character Avatar\")\n\n       // Set the avatar property of the main layout\n       this.chip.avatar = \"https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Hapus_Mango.jpg/220px-Hapus_Mango.jpg\"\n   }\n}",
+        "sample": "Avatar"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Chip ",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Adds a chip into your app.",
+      "de": "",
+      "es": ""
+    },
+    "text_11": {
+      "en": "If you want to change the height of the Chip later on after initializing, pass the `height` argument.",
+      "de": "",
+      "es": ""
+    },
+    "heading_12": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "Here are the available setters and/or getters of the Chip Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_34": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_35": {
+      "en": "Here are the methods available for Chips Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_36": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_37": {
+      "en": "Adds a callback handler when the chip is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setTouchable",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the chip to clickable. This will add a pointer cursor into the chip when hovered.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_44": {
+      "en": "setOnDelete",
+      "de": "",
+      "es": ""
+    },
+    "text_45": {
+      "en": "Sets a callback function when the chip is deleted. This will automatically add a delete icon to the chip.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Sets the corner radius of the chip.",
+      "de": "",
+      "es": ""
+    },
+    "heading_56": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Components/Chip';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id") || "_";
+        var page =  params.get("page") || "0";
+        var isHome = params.get("home");
+        var cmp = params.get("cmp");
+
+        if(typeof LAYOUTDATA.index == "object") {
+            if( !cmp ) cmp = "false";
+            if( !isHome ) isHome = "true";
+        }
+        else if(typeof LAYOUTDATA.pages == "object") {
+            if( !cmp ) cmp = "true";
+            if( !isHome ) isHome = "false";
+        }
+
+        // id=&home=false&cmp=true&page=0
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

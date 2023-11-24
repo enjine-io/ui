@@ -9,7 +9,7 @@ _ids = 0
 //     else return w>=0 ? (w*100)+"%" : null
 // }
 function _W(w) {
-    if(isFinite(w) && w) return parseFloat(w) * 100 + "%";
+    if(isFinite(w) && typeof w == "number") return parseFloat(w) * 100 + "%";
     else return w;
 }
 // function _H(h) {
@@ -18,7 +18,7 @@ function _W(w) {
 //     else return h>=0 ? (h*100)+"%" : null
 // }
 function _H(h) {
-    if(isFinite(h) && h) return parseFloat(h) * 100 + "%";
+    if(isFinite(h) && typeof h == "number") return parseFloat(h) * 100 + "%";
     else return h;
 }
 
@@ -29,6 +29,20 @@ function _el(id) { return document.getElementById(id) }
 function _color(ops="") { if( ops.includes("primary")) return "primary"; else if( ops.includes("secondary")) return "secondary"; else return "default" }
 function _variant(ops="") { if( ops.includes("outline")) return "outlined"; else if( ops.includes("text")) return "text"; else return "contained" }
 function _size(ops="") { if( ops.includes("small")) return "small"; else if( ops.includes("large")) return "large"; else return "medium" }
+function _padding(el, obj, left, top, right, bottom, mode="") {
+    mode = mode.toLowerCase();
+    obj._padding.left=left, obj._padding.top=top, obj._padding.right=right, obj._padding.bottom=bottom, obj._padding.mode = mode;
+    if(mode == "v") {
+        left = isFinite(left) ? left*100 : left;
+        top = isFinite(top) ? top*100 : top;
+        right = isFinite(right) ? right*100 : right;
+        bottom = isFinite(bottom) ? bottom*100 : bottom;
+    }
+    el.style.paddingLeft = _W(mode ? (mode=="v"? left+"vw" : left+mode) : left);
+    el.style.paddingTop = _H(mode ? (mode=="v"? top+"vh" : top+mode) : top);
+    el.style.paddingRight = _W(mode ? (mode=="v"? right+"vw" : right+mode) : right);
+    el.style.paddingBottom = _H(mode ? (mode=="v"? bottom+"vh" : bottom+mode) : bottom);
+}
 // Create a new ResizeObserver
 const _res_obs_ = new ResizeObserver( () => { glob._abs_lay.map( l => { if( l ) l._resize(); }); });
 
@@ -76,9 +90,9 @@ function UI()
 
     this.setTheme = function( theme ) {
         self.theme.dark = (theme && theme.toLowerCase()=="dark");
-        document.getElementById("_id_theme").href = self.libs+(self.theme.dark?"/dark.css" :"/light.css")
+        document.getElementById("_id_theme").href = self.libs + (self.theme.dark?"/dark.css" :"/light.css")
         document.getElementById("_id_picker_theme").href = self.libs + "/date-time-picker/css" + (self.theme.dark?"/dark.css" :"/light.css")
-        
+        document.getElementById("_id_dtpicker_theme").href = self.libs +"/material-datetime-picker-"+ (self.theme.dark?"dark.css" :"light.css")
         self.setThemeColor( self.theme.primary, self.theme.secondary )
     }
 

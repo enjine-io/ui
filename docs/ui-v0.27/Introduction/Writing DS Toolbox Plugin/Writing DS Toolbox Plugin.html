@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Introduction",
+  "homeLink": "ui/Introduction",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "hr_3": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_3": {
+        "txt": "heading_3"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "hr_6": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_5": {
+        "txt": "- MyPlugin.inc\n   - MyPlugin.html\n   - MyPlugin.js\n   - tools.json",
+        "sample": "Plugin Directory"
+      },
+      "heading_8": {
+        "txt": "heading_8"
+      },
+      "text_10": {
+        "txt": "text_10",
+        "css": ""
+      },
+      "hr_11": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_10": {
+        "txt": "var MyPlugin = {}\n\n   MyPlugin.addButton = function(parent, text, options, width, height) {\n       return new MyPlugin.MyButton( parent, text, options, width, height )\n   }\n\n   MyPlugin.MyButton = class extends ui.Control\n   {\n       constructor(parent, text, options, width, height)\n       {\n           super(parent, width, height, options, \"MyPluginButton\")\n           this._onTouch = null\n           this._el = document.createElement(\"button\")\n           this._el.innerText = text || \"My Button\"\n           this._el.style.width = \"100%\"\n           this._el.style.height = \"100%\"\n           this._el.onclick = this._touch.bind(this)\n           this._div.appendChild( this._el )\n       }\n       \n       _touch() {\n           if(this._onTouch) this._onTouch()\n       }\n       \n       // sample setter property\n       set text( text ) { this._el.innerText = text }\n       \n       // sample setter method\n       setSize(size)\n       {\n           size = size ? size.toLowerCase().trim() : \"medium\"\n           if(size == \"small\") this._div.style.transform = \"scale(0.8,0.8)\"\n           else if(size == \"medium\") this._div.style.transform = \"scale(1,1)\"\n           else this._div.style.transform = \"scale(1.5,1.5)\"\n       }\n       \n       // sample event\n       setOnTouch(callback) { this._onTouch = callback }\n   }",
+        "sample": "MyPlugin.inc"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "subtitle_15": {
+        "txt": "subtitle_15"
+      },
+      "text_16": {
+        "txt": "text_16",
+        "css": ""
+      },
+      "text_18": {
+        "txt": "text_18",
+        "css": ""
+      },
+      "text_20": {
+        "txt": "text_20",
+        "css": ""
+      },
+      "text_22": {
+        "txt": "text_22",
+        "css": ""
+      },
+      "text_24": {
+        "txt": "text_24",
+        "css": ""
+      },
+      "text_25": {
+        "txt": "text_25",
+        "css": ""
+      },
+      "text_26": {
+        "txt": "text_26",
+        "css": ""
+      },
+      "text_27": {
+        "txt": "text_27",
+        "css": ""
+      },
+      "text_28": {
+        "txt": "text_28",
+        "css": ""
+      },
+      "text_29": {
+        "txt": "text_29",
+        "css": ""
+      },
+      "text_30": {
+        "txt": "text_30",
+        "css": ""
+      },
+      "text_31": {
+        "txt": "text_31",
+        "css": ""
+      },
+      "text_32": {
+        "txt": "text_32",
+        "css": ""
+      },
+      "text_33": {
+        "txt": "text_33",
+        "css": ""
+      },
+      "text_34": {
+        "txt": "text_34",
+        "css": ""
+      },
+      "text_35": {
+        "txt": "text_35",
+        "css": ""
+      },
+      "text_36": {
+        "txt": "text_36",
+        "css": ""
+      },
+      "text_37": {
+        "txt": "text_37",
+        "css": ""
+      },
+      "text_38": {
+        "txt": "text_38",
+        "css": ""
+      },
+      "text_39": {
+        "txt": "text_39",
+        "css": ""
+      },
+      "text_40": {
+        "txt": "text_40",
+        "css": ""
+      },
+      "text_41": {
+        "txt": "text_41",
+        "css": ""
+      },
+      "text_42": {
+        "txt": "text_42",
+        "css": ""
+      },
+      "text_43": {
+        "txt": "text_43",
+        "css": ""
+      },
+      "text_44": {
+        "txt": "text_44",
+        "css": ""
+      },
+      "text_45": {
+        "txt": "text_45",
+        "css": ""
+      },
+      "text_46": {
+        "txt": "text_46",
+        "css": ""
+      },
+      "text_47": {
+        "txt": "text_47",
+        "css": ""
+      },
+      "text_49": {
+        "txt": "text_49",
+        "css": ""
+      },
+      "text_51": {
+        "txt": "text_51",
+        "css": ""
+      },
+      "text_52": {
+        "txt": "text_52",
+        "css": ""
+      },
+      "text_53": {
+        "txt": "text_53",
+        "css": ""
+      },
+      "text_54": {
+        "txt": "text_54",
+        "css": ""
+      },
+      "text_55": {
+        "txt": "text_55",
+        "css": ""
+      },
+      "text_57": {
+        "txt": "text_57",
+        "css": ""
+      },
+      "text_58": {
+        "txt": "text_58",
+        "css": ""
+      },
+      "text_59": {
+        "txt": "text_59",
+        "css": ""
+      },
+      "text_60": {
+        "txt": "text_60",
+        "css": ""
+      },
+      "text_61": {
+        "txt": "text_61",
+        "css": ""
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "text_63": {
+        "txt": "text_63",
+        "css": ""
+      },
+      "text_64": {
+        "txt": "text_64",
+        "css": ""
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "subtitle_67": {
+        "txt": "subtitle_67"
+      },
+      "text_69": {
+        "txt": "text_69",
+        "css": ""
+      },
+      "text_71": {
+        "txt": "text_71",
+        "css": ""
+      },
+      "table-header_72": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_72": {
+        "content": [
+          "parent ",
+          "Layout",
+          "`ui.Layout` component. "
+        ]
+      },
+      "table-row_73": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. Value ranges from 0 to 1 "
+        ]
+      },
+      "table-row_74": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. Value ranges from 0 to 1 "
+        ]
+      },
+      "table-row_75": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated string of options Pass null if you don't have it. "
+        ]
+      },
+      "table-row_76": {
+        "content": [
+          "type ",
+          "String",
+          "Your control custom type. Should be single word. e.g. Button, Mapview, Card, Radio and so on. "
+        ]
+      },
+      "table-footer_76": {
+        "txt": ""
+      },
+      "hr_77": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_77": {
+        "txt": "heading_77"
+      },
+      "text_79": {
+        "txt": "text_79",
+        "css": ""
+      },
+      "hr_80": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_80": {
+        "txt": "heading_80"
+      },
+      "text_82": {
+        "txt": "text_82",
+        "css": ""
+      },
+      "hr_83": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_82": {
+        "txt": "var MyPlugin = {}\n\n   MyPlugin.addButton = function(parent, text, options, width, height) {\n       return new MyPlugin.MyButton( parent, text, options, width, height )\n   }\n\n   MyPlugin.MyButton = class extends ui.Control\n   {\n       constructor(parent, text, options, width, height)\n       {\n           super(parent, width, height, options, \"MyPluginButton\")\n           this._onTouch = null\n           this._el = document.createElement(\"button\")\n           this._el.innerText = text || \"My Button\"\n           this._el.style.width = \"100%\"\n           this._el.style.height = \"100%\"\n           this._el.onclick = this._touch.bind(this)\n           this._div.appendChild( this._el )\n       }\n       \n       _touch() {\n           if(this._onTouch) this._onTouch()\n       }\n       \n       // sample setter property\n       set text( text ) { this._el.innerText = text }\n       \n       // sample setter method\n       setSize(size)\n       {\n           size = size ? size.toLowerCase().trim() : \"medium\"\n           if(size == \"small\") this._div.style.transform = \"scale(0.8,0.8)\"\n           else if(size == \"medium\") this._div.style.transform = \"scale(1,1)\"\n           else this._div.style.transform = \"scale(1.5,1.5)\"\n       }\n       \n       // sample event\n       setOnTouch(callback) { this._onTouch = callback }\n   }",
+        "sample": "MyPlugin.js"
+      },
+      "heading_84": {
+        "txt": "heading_84"
+      },
+      "text_86": {
+        "txt": "text_86",
+        "css": ""
+      },
+      "text_87": {
+        "txt": "text_87",
+        "css": ""
+      },
+      "hr_88": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_87": {
+        "txt": "{\n       \"global\": \"MyPlugin\",\n       \"name\": \"MyPlugin\",\n       \"version\": \"1.0.0\",\n       \"author\": \"John Doe\",\n       \"components\": {\n           \"Button\": {\n               \"icon\": \"favorite\",\n               \"methodName\": \"addButton\",\n               \"params\": [\"My Button\", \"\", 0.5, 0.1],\n               \"events\": {\n                   \"setOnTouch\": [ \"text\" ]\n               },\n               \"setters\": [\n                   [\"text\", \"\", true, \"\", \"p2\", \"Sets the button text\"],\n                   [\"setSize\", \"Small,Medium,Large\", false, \"method\", \"p3\", \"Sets the button size\"]\n               ]\n           }\n       }\n   }",
+        "sample": "tools.json"
+      },
+      "subtitle_89": {
+        "txt": "subtitle_89"
+      },
+      "table-header_91": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_91": {
+        "content": [
+          "global ",
+          "String",
+          "This is the name of your plugin object that is accessible globally. If your control can be called using `MyPlugin.addButton()`, your `global` namespace is `MyPlugin`. In some instances where your control is a method of `ui` namespace e.g. `ui.addCustomButton` your `global` namespace will be `ui`. If you don't pass a name, it will be default to your plugin name. "
+        ]
+      },
+      "table-row_92": {
+        "content": [
+          "name ",
+          "String",
+          "The name of your plugin. "
+        ]
+      },
+      "table-row_93": {
+        "content": [
+          "version ",
+          "String",
+          "The current version of your plugin. "
+        ]
+      },
+      "table-row_94": {
+        "content": [
+          "author ",
+          "String",
+          "Though not required, if not provided it will be default to `Unknown` "
+        ]
+      },
+      "table-row_95": {
+        "content": [
+          "components ",
+          "Object",
+          "This object is composed of components you want to add into the WYSIWYG Editor. "
+        ]
+      },
+      "table-footer_95": {
+        "txt": ""
+      },
+      "hr_96": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_96": {
+        "txt": "subtitle_96"
+      },
+      "text_98": {
+        "txt": "text_98",
+        "css": ""
+      },
+      "table-header_99": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_99": {
+        "content": [
+          "icon ",
+          "String",
+          "The custom material icon of the component. Default is `add` icon. "
+        ]
+      },
+      "table-row_100": {
+        "content": [
+          "methodName ",
+          "String",
+          "The callname of the method. e.g. `addButton` or `addLayout` "
+        ]
+      },
+      "table-row_101": {
+        "content": [
+          "params ",
+          "Array",
+          "An array of the default values of the method arguments. See the `Param Array` below for more details. "
+        ]
+      },
+      "table-row_102": {
+        "content": [
+          "setters ",
+          "Array",
+          "An array of methods and available values which will be displayed in the `Properties` tab in the right panel. See `Setters Array` below for more details. "
+        ]
+      },
+      "table-row_103": {
+        "content": [
+          "events ",
+          "Object",
+          "An object container the supported events and their returned values. See `Event Object` below for more details. "
+        ]
+      },
+      "table-footer_103": {
+        "txt": ""
+      },
+      "hr_104": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_104": {
+        "txt": "subtitle_104"
+      },
+      "text_106": {
+        "txt": "text_106",
+        "css": ""
+      },
+      "text_107": {
+        "txt": "text_107",
+        "css": ""
+      },
+      "code_108": {
+        "txt": "[arg2, arg3, arg4, arg5, ...]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_109": {
+        "txt": "text_109",
+        "css": ""
+      },
+      "text_110": {
+        "txt": "text_110",
+        "css": ""
+      },
+      "text_111": {
+        "txt": "text_111",
+        "css": ""
+      },
+      "text_113": {
+        "txt": "text_113",
+        "css": ""
+      },
+      "code_114": {
+        "txt": "MyPlugin.addButton(parent, text, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_115": {
+        "txt": "text_115",
+        "css": ""
+      },
+      "code_116": {
+        "txt": "[\"My Button\", null, 0.5, 0.1 ]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_118": {
+        "txt": "text_118",
+        "css": ""
+      },
+      "text_119": {
+        "txt": "text_119",
+        "css": ""
+      },
+      "text_120": {
+        "txt": "text_120",
+        "css": ""
+      },
+      "text_121": {
+        "txt": "text_121",
+        "css": ""
+      },
+      "text_122": {
+        "txt": "text_122",
+        "css": ""
+      },
+      "hr_123": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_123": {
+        "txt": "subtitle_123"
+      },
+      "text_125": {
+        "txt": "text_125",
+        "css": ""
+      },
+      "text_127": {
+        "txt": "text_127",
+        "css": ""
+      },
+      "code_128": {
+        "txt": "[name, defaultValue, editable, options, param, hint]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_129": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-header_129": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_129": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the property or method. e.g. `text` or `setSize`. For method pass `method` in the `options` argument. "
+        ]
+      },
+      "table-row_130": {
+        "content": [
+          "defaultValue ",
+          "String",
+          "The default value of the TextField or Select. For select, pass a comma separated choices. You can follow the format on adding list items on Select Component. See the UI Select documentation. "
+        ]
+      },
+      "table-row_131": {
+        "content": [
+          "editable ",
+          "Boolean",
+          "If `true` it will render a TextField component where you can type and edit the value. If `false` it will render a Select component where you must provide a comma separated choices as the `defaultValue` stated above. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options for the TextField or Select component. With additional options. If you have a setter method that accepts more than one arguments (e.g. `setMargins(left,top,right,bottom)`) pass a `list` options so that a comma separated values will be pass as arguments for `left` `top` `right` and `bottom`. If you have a setter method that accepts color, you can pass a `color` option to add color picker as an end adornment. If you have a setter method that accepts a file path, pass a `path` option. Pass a `method` option if this is a method. By defaut it will be treated as property. "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "param ",
+          "String",
+          "Though not required, this will tell the Editor to save the entered value as the value of the corresponding argument on control initialization. Example, if a control is created using `MyPlugin.addButton(lay, text, width, height)` and you have a `text` setter property, your setter array should be `[\"text\", \"\", true, \"\", \"p2\"]`. This means that the value of `text` TextField when edited will be use as the 2nd parameter `text` when the control is created. This will reduce the time of rendering because it will not set the `text` property to have the same text displayed. Please note that values should start at `p2` as the `p1` is the parent layout, then `p3` and so on. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "hint ",
+          "String",
+          "This will be displayed when the name of the property or method is click to provide some hint. "
+        ]
+      },
+      "table-footer_134": {
+        "txt": ""
+      },
+      "text_135": {
+        "txt": "text_135",
+        "css": ""
+      },
+      "code_136": {
+        "txt": "[\"text\", \"\", true, \"Text\", \"p2\", \"Sets the text.\"]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_137": {
+        "txt": "text_137",
+        "css": ""
+      },
+      "text_138": {
+        "txt": "text_138",
+        "css": ""
+      },
+      "text_139": {
+        "txt": "text_139",
+        "css": ""
+      },
+      "text_140": {
+        "txt": "text_140",
+        "css": ""
+      },
+      "text_141": {
+        "txt": "text_141",
+        "css": ""
+      },
+      "text_142": {
+        "txt": "text_142",
+        "css": ""
+      },
+      "text_144": {
+        "txt": "text_144",
+        "css": ""
+      },
+      "code_145": {
+        "txt": "[\"backColor\", \"\", true, \"Color\", \"\", \"Sets the background-color.\"]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_146": {
+        "txt": "text_146",
+        "css": ""
+      },
+      "text_147": {
+        "txt": "text_147",
+        "css": ""
+      },
+      "text_148": {
+        "txt": "text_148",
+        "css": ""
+      },
+      "text_149": {
+        "txt": "text_149",
+        "css": ""
+      },
+      "text_150": {
+        "txt": "text_150",
+        "css": ""
+      },
+      "text_151": {
+        "txt": "text_151",
+        "css": ""
+      },
+      "text_153": {
+        "txt": "text_153",
+        "css": ""
+      },
+      "code_154": {
+        "txt": "[\"setSize\", \"Small,Medium,Large\", false, \"Method\", \"\", \"Sets the size\"]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_155": {
+        "txt": "text_155",
+        "css": ""
+      },
+      "text_156": {
+        "txt": "text_156",
+        "css": ""
+      },
+      "text_157": {
+        "txt": "text_157",
+        "css": ""
+      },
+      "text_158": {
+        "txt": "text_158",
+        "css": ""
+      },
+      "text_159": {
+        "txt": "text_159",
+        "css": ""
+      },
+      "text_160": {
+        "txt": "text_160",
+        "css": ""
+      },
+      "hr_161": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_161": {
+        "txt": "subtitle_161"
+      },
+      "text_163": {
+        "txt": "text_163",
+        "css": ""
+      },
+      "text_164": {
+        "txt": "text_164",
+        "css": ""
+      },
+      "text_166": {
+        "txt": "text_166",
+        "css": ""
+      },
+      "text_168": {
+        "txt": "text_168",
+        "css": ""
+      },
+      "hr_169": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Toolbox Plugin",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Toolbox Plugin is just a DroidScript Hybrid plugin with additional files to support the Layout Extension drag and drop feature.",
+      "de": "",
+      "es": ""
+    },
+    "heading_3": {
+      "en": "Plugin Directory",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "These are the files needed in order to add your custom component or Hybrid plugin into the Layout Extension or WYSIWYG Editor.",
+      "de": "",
+      "es": ""
+    },
+    "heading_8": {
+      "en": "MyPlugin.inc",
+      "de": "",
+      "es": ""
+    },
+    "text_10": {
+      "en": "This file is your main plugin file where you are going to write your code for your custom controls. This will be save in DroidScript Plugins folder.",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "Looking at the example above, your custom control should inherit the `ui.Control` class.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_15": {
+      "en": "1. Why inherit my control from ui.Control class?",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
+      "en": "By making your custom control as a class inherited from `ui.Control` class, your component has the following properties and methods",
+      "de": "",
+      "es": ""
+    },
+    "text_18": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_20": {
+      "en": "`_div` : This is an html div element which contain your custom control.",
+      "de": "",
+      "es": ""
+    },
+    "text_22": {
+      "en": "Other properties you can access are",
+      "de": "",
+      "es": ""
+    },
+    "text_24": {
+      "en": "`width`",
+      "de": "",
+      "es": ""
+    },
+    "text_25": {
+      "en": "`height`",
+      "de": "",
+      "es": ""
+    },
+    "text_26": {
+      "en": "`opacity`",
+      "de": "",
+      "es": ""
+    },
+    "text_27": {
+      "en": "`fontFile`",
+      "de": "",
+      "es": ""
+    },
+    "text_28": {
+      "en": "`textSize`",
+      "de": "",
+      "es": ""
+    },
+    "text_29": {
+      "en": "`textColor`",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "`rotation`",
+      "de": "",
+      "es": ""
+    },
+    "text_31": {
+      "en": "`visibility`",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "`type`",
+      "de": "",
+      "es": ""
+    },
+    "text_33": {
+      "en": "`absWidth`",
+      "de": "",
+      "es": ""
+    },
+    "text_34": {
+      "en": "`backColor`",
+      "de": "",
+      "es": ""
+    },
+    "text_35": {
+      "en": "`backImage`",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "`isVisible`",
+      "de": "",
+      "es": ""
+    },
+    "text_37": {
+      "en": "`top`",
+      "de": "",
+      "es": ""
+    },
+    "text_38": {
+      "en": "`left`",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "`absTop`",
+      "de": "",
+      "es": ""
+    },
+    "text_40": {
+      "en": "`absLeft`",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "`parent`",
+      "de": "",
+      "es": ""
+    },
+    "text_42": {
+      "en": "`margins`",
+      "de": "",
+      "es": ""
+    },
+    "text_43": {
+      "en": "`padding`",
+      "de": "",
+      "es": ""
+    },
+    "text_44": {
+      "en": "`options`",
+      "de": "",
+      "es": ""
+    },
+    "text_45": {
+      "en": "`borderColor`",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "`cornerRadius`",
+      "de": "",
+      "es": ""
+    },
+    "text_47": {
+      "en": "`enabled`",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_51": {
+      "en": "A. Required methods in WYSIWYG Editor",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "`show()`",
+      "de": "",
+      "es": ""
+    },
+    "text_53": {
+      "en": "`hide()`",
+      "de": "",
+      "es": ""
+    },
+    "text_54": {
+      "en": "`destroy()`",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "`setOnTouch`",
+      "de": "",
+      "es": ""
+    },
+    "text_57": {
+      "en": "B. Some notable methods of the `ui.Control` class. You can override them in your class if you need to.",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "`setSize`",
+      "de": "",
+      "es": ""
+    },
+    "text_59": {
+      "en": "`setScale`",
+      "de": "",
+      "es": ""
+    },
+    "text_60": {
+      "en": "`setPosition`",
+      "de": "",
+      "es": ""
+    },
+    "text_61": {
+      "en": "`getPosition`",
+      "de": "",
+      "es": ""
+    },
+    "text_62": {
+      "en": "`setBorder`",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "`bringForward`",
+      "de": "",
+      "es": ""
+    },
+    "text_64": {
+      "en": "`sendBackward`",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "`onContextMenu`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "2. Control class",
+      "de": "",
+      "es": ""
+    },
+    "text_69": {
+      "en": "It doesn't matter what is the order of your parameters `text`, `width`, `height`, `options` and so on, as long as the first parameter is a `ui.Layout` component which is the parent layout where to add your custom control.",
+      "de": "",
+      "es": ""
+    },
+    "text_71": {
+      "en": "The `super` method should have the correct order and exact type of arguments.",
+      "de": "",
+      "es": ""
+    },
+    "heading_77": {
+      "en": "MyPlugin.html",
+      "de": "",
+      "es": ""
+    },
+    "text_79": {
+      "en": "This `html` file holds your plugin documentation.",
+      "de": "",
+      "es": ""
+    },
+    "heading_80": {
+      "en": "MyPlugin.js",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "This file is the same as `MyPlugin.inc`. This is the script file needed by the Layout Extension in order to render your plugin controls into the WYSIWYG Editor.",
+      "de": "",
+      "es": ""
+    },
+    "heading_84": {
+      "en": "tools.json",
+      "de": "",
+      "es": ""
+    },
+    "text_86": {
+      "en": "This file holds the json for adding your controls in the component list and their corresponding properties and events.",
+      "de": "",
+      "es": ""
+    },
+    "text_87": {
+      "en": "Your `tools.json` file should look like this",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "1. General informations",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_96": {
+      "en": "2. Component Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_98": {
+      "en": "Below are the description of the properties you need to provide in each component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "2.1 Params Array",
+      "de": "",
+      "es": ""
+    },
+    "text_106": {
+      "en": "The `params` is an array of all the method parameters excluding the first parameter which is the `parent`. These will be use as the default values for the method arguments when the component is selected on the left panel of the Layout Extension Editor.",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "This array is of the form",
+      "de": "",
+      "es": ""
+    },
+    "text_109": {
+      "en": "`arg2` : The value of the second parameter",
+      "de": "",
+      "es": ""
+    },
+    "text_110": {
+      "en": "`arg3` : The value of the third parameter",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "`arg4`, `arg5` and so on.",
+      "de": "",
+      "es": ""
+    },
+    "text_113": {
+      "en": "Example",
+      "de": "",
+      "es": ""
+    },
+    "text_115": {
+      "en": "The `params` should be like these",
+      "de": "",
+      "es": ""
+    },
+    "text_118": {
+      "en": "Where",
+      "de": "",
+      "es": ""
+    },
+    "text_119": {
+      "en": "`My Button` is the default value of `button`.",
+      "de": "",
+      "es": ""
+    },
+    "text_120": {
+      "en": "`null` options value is default ot `null`.",
+      "de": "",
+      "es": ""
+    },
+    "text_121": {
+      "en": "`0.5` is the default `width`.",
+      "de": "",
+      "es": ""
+    },
+    "text_122": {
+      "en": "`0.1` is the default `height`.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_123": {
+      "en": "2.2 Setters Array",
+      "de": "",
+      "es": ""
+    },
+    "text_125": {
+      "en": "These properties and methods will be displayed at the right panel in the Properties tab.",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "The `setter` is an array where each element is an array of the form",
+      "de": "",
+      "es": ""
+    },
+    "text_135": {
+      "en": "Example 1",
+      "de": "",
+      "es": ""
+    },
+    "text_137": {
+      "en": "`text` : This means that the property name is `text`.",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "`\"\"` : There is no default value.",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "`true` : This is a textfield and should be editable.",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "`\"Text\"` : The textfield should be of input type `Text`. See TextField `inputType` property for available values.",
+      "de": "",
+      "es": ""
+    },
+    "text_141": {
+      "en": "`p2` : The entered value should be the value of `param2` say MyPlugin.addButton(lay, `text`, options, width, height)",
+      "de": "",
+      "es": ""
+    },
+    "text_142": {
+      "en": "`\"Sets the text.\"` : Hint text.",
+      "de": "",
+      "es": ""
+    },
+    "text_144": {
+      "en": "Example 2",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "`backColor` : This means that the property name is `backColor`.",
+      "de": "",
+      "es": ""
+    },
+    "text_147": {
+      "en": "`\"\"` : There is no default value.",
+      "de": "",
+      "es": ""
+    },
+    "text_148": {
+      "en": "`true` : This is a textfield and should be editable.",
+      "de": "",
+      "es": ""
+    },
+    "text_149": {
+      "en": "`Color` : The textfield shall have an additional color palette icon where to choose color.",
+      "de": "",
+      "es": ""
+    },
+    "text_150": {
+      "en": "`\"\"` : No param is associated with it.",
+      "de": "",
+      "es": ""
+    },
+    "text_151": {
+      "en": "`--hint--` : Hint text",
+      "de": "",
+      "es": ""
+    },
+    "text_153": {
+      "en": "Example 3",
+      "de": "",
+      "es": ""
+    },
+    "text_155": {
+      "en": "`setSize` : This means that the method name is `setSize`.",
+      "de": "",
+      "es": ""
+    },
+    "text_156": {
+      "en": "`Small,Medium,Large` : Available values where to choose from.",
+      "de": "",
+      "es": ""
+    },
+    "text_157": {
+      "en": "`false` : This is a select component.",
+      "de": "",
+      "es": ""
+    },
+    "text_158": {
+      "en": "`Method` : This is a method and not a setter property.",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "`\"\"` : No param is associated with it.",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "`--hint--` : Hint text",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_161": {
+      "en": "2.3 Event Object",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "These `events` object will be displayed as the options when you defined a callback in the `Events` tab at the right panel.",
+      "de": "",
+      "es": ""
+    },
+    "text_164": {
+      "en": "The property name or `key` is the name of the callback and the `value` of each property is an array of values that will be passed to the callback if any.",
+      "de": "",
+      "es": ""
+    },
+    "text_166": {
+      "en": "Example `setOnTouch: [\"text\", \"index\"]`",
+      "de": "",
+      "es": ""
+    },
+    "text_168": {
+      "en": "This means that the `callback` will receive a `text` and `index` as arguments. Pass empty array `[]` if you have none to pass to the callback.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Introduction/Writing DS Toolbox Plugin';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id") || "_";
+        var page =  params.get("page") || "0";
+        var isHome = params.get("home");
+        var cmp = params.get("cmp");
+
+        if(typeof LAYOUTDATA.index == "object") {
+            if( !cmp ) cmp = "false";
+            if( !isHome ) isHome = "true";
+        }
+        else if(typeof LAYOUTDATA.pages == "object") {
+            if( !cmp ) cmp = "true";
+            if( !isHome ) isHome = "false";
+        }
+
+        // id=&home=false&cmp=true&page=0
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

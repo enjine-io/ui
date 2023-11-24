@@ -89,6 +89,8 @@ var page =  params.get("page")
 var isHome = params.get("home") || ""
 var cmp = params.get("cmp") || ""
 
+console.log( tutorial );
+
 //console.log( typeof( isHome ) + " : " + isHome )
 
 if ( tutorial && isHome == "false" )

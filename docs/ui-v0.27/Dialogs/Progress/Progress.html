@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+   
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "Enjine - UI",
+  "homeLink": "ui",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "code_4": {
+        "txt": "prg = ui.addProgress(parent, value, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_5": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_5": {
+        "content": [
+          "parent ",
+          "Layout",
+          "The parent layout where to add the prgress component. "
+        ]
+      },
+      "table-row_6": {
+        "content": [
+          "value ",
+          "Number",
+          "the initial value of the progress component. "
+        ]
+      },
+      "table-row_7": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options.\\nTheme Color: `Primary`, `Secondary`\\nType: `Circular`, `Linear`\\nVariant: `Determinate`, `Indeterminate` "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction fo the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_9": {
+        "txt": ""
+      },
+      "text_10": {
+        "txt": "Returns  Progress Component",
+        "css": "font-weight:400;font-size:100%;margin: 8px 0px 32px 12px; color:#00bcd4;"
+      },
+      "text_11": {
+        "txt": "text_11",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_20": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_21": {
+        "content": [
+          "circleSize ",
+          "Number",
+          "Sets or returns the size of the circular progress control. This will assume a pixel unit."
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color. Values can be `Default` `Primary` or `Secondary`"
+        ]
+      },
+      "table-row_23": {
+        "content": [
+          "thickness ",
+          "Number",
+          "Sets or returns the thickness of the circular stroke."
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "type ",
+          "String",
+          "Sets or returns the type of the Progress Component. Values can be `Linear` or `Circular`"
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "value ",
+          "Number",
+          "Sets or returns the value of the progress control."
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the variant of the progress component. Values can be `Determinate` or `Indeterminate`."
+        ]
+      },
+      "table-footer_26": {
+        "txt": ""
+      },
+      "hr_27": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_27": {
+        "txt": "heading_27"
+      },
+      "text_28": {
+        "txt": "text_28",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_29": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_29": {
+        "txt": "heading_29"
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_29": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.childSpacing = \"Even\"\n\n       // Indeterminate Linear\n       this.prog1 = ui.addProgress(this.main, 40, \"linear\", 0.7)\n\n       // Determinate Linear\n       this.prog2 = ui.addProgress(this.main, null, \"Linear,Secondary,indeterminate\", 0.7)\n\n       // Determinate Circular\n       this.prog3 = ui.addProgress(this.main, 50, \"Circular\")\n\n       // Indeterminate Circular, enlarge and secondary\n       this.prog4 = ui.addProgress(this.main, null, \"Circular,Secondary,indeterminate\")\n       this.prog4.circleSize = 100\n   }\n}",
+        "sample": "Progress control implementation"
+      },
+      "code_30": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.childSpacing = \"Even\"\n\n       // Add an indeterminate linear progress control to the main layout\n       this.prog = ui.addProgress(this.main, 0, \"Linear\", 0.7)\n\n       // Add a button control to the main layout\n       this.btn = ui.addButton(this.main, \"Increment\")\n\n       // Add a callback handler when the button is touched\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Increment the value of the progress control by 10\n       if( this.prog.value < 100 )\n       {\n           this.prog.value += 10\n       }\n       else\n       {\n           ui.showPopup( \"Progress is complete!\" )\n       }\n   }\n}",
+        "sample": "Setting progress value"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Progress ",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Adds a progress component into your app.",
+      "de": "",
+      "es": ""
+    },
+    "text_11": {
+      "en": "If you pass a null value on initialization and you won't passed a variant option, the default variant will be `indeterminate`.<br/>Otherwise if there's no variant option and the value is not null, it will automatically be a `determinate` variant.",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available setters and getters for the Progress Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_27": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_28": {
+      "en": "Here are the available methods for the Progress Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_29": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Dialogs/Progress';
+        function initializeCodes() {
+            let codes = document.getElementsByTagName("CODE"),
+                button;
+            for(let z = 0; z < codes.length; z++) {
+                button = codes[z].children[0];
+                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
+                    button._code =  codes[z].innerText;
+                    button.addEventListener( "click", function() {
+                        navigator.clipboard.writeText( this._code );
+                        ShowPopup();
+                    })
+                }
+            }
+        }
+        initializeCodes();
+
+        /****************************************
+        * Written for SoftCogs Ltd
+        * Copyright (C) SoftCogs Ltd. 2018
+        */
+
+        _languages = null; _curLang = "en";
+
+        function T( id, lang )
+        {
+            var tr = _languages ? _languages.trans[id] : null;
+            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
+            return (tr ? tr : _languages.trans[id]["en"]); 
+        }
+
+        function getLanguage() 
+        {
+            var params = (new URL(document.location)).searchParams;
+            if( params.get("lang") ) {
+                _curLang = params.get("lang")
+                setLanguage( _curLang )
+            }
+            else 
+            {   
+                if (window.localStorage.getItem("language") )
+                    _curLang = window.localStorage.getItem("language");            
+                else 
+                    _curLang =  "en";
+            }
+        }
+
+        function setLanguage(newLang)
+        {
+            if (newLang != null) {
+                window.localStorage.setItem("language", newLang);
+                _curLang = newLang;
+            }
+        }
+
+        function getLayouts(folder, onReady) {
+            layouts.tutorial = LAYOUTDATA;
+            if (onReady != null) onReady();
+        }
+
+        function getTranslation(folder, onReady) {
+            _languages = LANGDATA;
+            if (onReady != null) onReady();
+        }
+
+        getLanguage();
+        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
+
+        var params = (new URL(document.location)).searchParams;
+        var tutorial =  params.get("id") || "_";
+        var page =  params.get("page") || "0";
+        var isHome = params.get("home");
+        var cmp = params.get("cmp");
+
+        if(typeof LAYOUTDATA.index == "object") {
+            if( !cmp ) cmp = "false";
+            if( !isHome ) isHome = "true";
+        }
+        else if(typeof LAYOUTDATA.pages == "object") {
+            if( !cmp ) cmp = "true";
+            if( !isHome ) isHome = "false";
+        }
+
+        // id=&home=false&cmp=true&page=0
+
+        if ( tutorial && isHome == "false" )
+        {
+            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
+        }
+        else 
+        {
+            buildMainPage( tutorial );
+            document.getElementById("body").style.display = "block";
+        }
+    </script>
+</body>
+</html>

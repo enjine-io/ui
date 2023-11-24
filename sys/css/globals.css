@@ -1,5 +1,6 @@
 :root {
     --jumbotron-padding-y: 3rem;
+    --primary-color: #1976d2;
 }
 
 body {
@@ -89,7 +90,9 @@ body {
 	to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 }
 
-
+a, a:active {
+    color: var(--primary-color);
+}
 
 .jumbotron p:last-child {
     margin-bottom: 0;
@@ -155,7 +158,6 @@ footer p {
 
 .display-2 {
     font-size: 2.75rem;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
     margin: 2.5rem 0 1rem 0;
 }
 
@@ -309,7 +311,7 @@ pre {
     /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
 }
 .nav-link:hover, .nav-list-items:hover { color: white; background-color: #343a40; }
-.nav-link.active { color: white; background-color: #1976d2; }
+.nav-link.active { color: white; background-color: var(--primary-color) }
 .nav-list-items.active { color: white; background-color: #343a40; }
 
 .nav-list-items {
@@ -412,6 +414,7 @@ pre {
     padding: 0;
     height: 100vh;
     width: 16rem;
+    /* width: 0; */
     overflow-x: hidden;
     overflow-y: hidden;
     position: fixed;
@@ -435,7 +438,7 @@ pre {
 
 /* 768px */
 @media (max-width: 992px) {
-    .title { margin-top: 48px; margin-bottom: 32px; }
+    .jdocs-title { margin-top: 48px; margin-bottom: 32px; }
     .goback-btn { display: none; }
     /* .sm-none { visibility: hidden; height: 0px; } */
     /* .left-panel-title { margin-top: 100px;} */
@@ -493,13 +496,11 @@ table, tr, td {
     border: 0px !important;
 }
 
-tr.table-row, tr td { color: #bdbdbd; margin: 0 !important; }
-
 .overline { color:#9e9e9e; font-size:70%; margin-top: 24px; }
 
 .arg-def { color: #9e9e9e; font-size: smaller;}
 
-:target { scroll-margin-top: 72px; }
+/* :target { scroll-margin-top: 72px; } */
 
 /* scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
@@ -511,6 +512,11 @@ tr.table-row, tr td { color: #bdbdbd; margin: 0 !important; }
 
 /* Sample Code and CodeMirror */
 
+@font-face {
+    font-family: 'Roboto-Mono';
+    src: url('/.edit/codemirror/RobotoMono.ttf');
+}
+
 .sample-code {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 4px;
@@ -519,7 +525,7 @@ tr.table-row, tr td { color: #bdbdbd; margin: 0 !important; }
     margin-bottom: 2rem;
 }
 .CodeMirror {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto-Mono', monospace;
     font-size: 0.88rem;
     background-color: black;
 }
@@ -623,7 +629,8 @@ tr.table-row, tr td { color: #bdbdbd; margin: 0 !important; }
     /*width: 360px;*/
     /*height: 640px;*/
     margin: auto;
-    border: 16px solid #37474f;
+    /* border: 16px solid #37474f; */
+    border: 16px solid #212529;
     border-top-width: 50px;
     border-bottom-width: 70px;
     border-radius: 24px;
@@ -689,6 +696,116 @@ tr.table-row, tr td { color: #bdbdbd; margin: 0 !important; }
 @keyframes rotate {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.jdocs-title {
+    margin: 2.5rem 0rem;
+}
+
+.jdocs-heading {
+    margin: 2.5rem 0rem;
+}
+
+.jdocs-subtitle {
+    margin: 2rem 0rem;
+}
+
+.jdocs-text {
+    text-align: justify;
+    margin: 2rem 0rem;
+    font-weight: 300;
+    font-size: 105%;
+}
+
+.jdocs-return-type {
+    color: var(--primary-color);
+}
+
+.jdocs-tip {
+    box-sizing: border-box;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 300;
+    font-size: 100%;
+    margin: 2rem 0rem;
+
+    /* background-color:#2979ff;
+    padding: 10px 12px;
+    font-size: 90%;
+    display: inline-block; */
+}
+
+.jdocs-img-container {
+    width: 100%;
+    display: flex;
+    margin: 2rem 0rem;
+}
+
+.jdocs-img {
+    border-radius: 4px;
+    margin: 0 auto 0 auto;
+}
+
+.jdocs-sample-code {
+    width: 100%;
+}
+
+.jdocs-table-header {
+    width: fit-content;
+}
+
+.jdocs-table-header-item {
+    padding: 8px 20px;
+    color: white;
+}
+
+.jdocs-table-row {
+    color: #bdbdbd;
+    margin: 0 !important;
+}
+
+.jdocs-table-row-item {
+    font-weight: 300; 
+    padding: 8px 20px;
+}
+
+.jdocs-hr {
+    margin: 2rem 0rem;
+    width: 100%;
+    height: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    /* margin: 45px 0px;border-bottom:1px solid #212121; */
+}
+
+.jdocs-hr-line {
+    border-bottom: 1px solid #212121;
+    height: 1px;
+    width: 100%;
+}
+
+.jdocs-button {
+    margin: 1rem 4px;
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    min-width: 5rem;
+}
+
+.jdocs-table {
+    margin: 2rem 0rem;
+    width: 100%;
+}
+
+tr.table-row, tr td {
+    color: #bdbdbd;
+    margin: 0 !important;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* Code Mirror DroidScript theme */
@@ -847,4 +964,3 @@ color: #FFFFFF;
 }
 
 .CodeMirror-scrollbar-filler { background-color: #000; }
-  

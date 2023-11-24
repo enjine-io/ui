@@ -152,8 +152,7 @@
 				this._selectDialog();
 				this._hideDialog();
 			}
-		}, {
-			key: 'show',
+		}, { key: 'show',
 			value: function show() {
 				this._selectDialog();
 				if (this._type === 'date') {
@@ -163,8 +162,7 @@
 				}
 				this._showDialog();
 			}
-		}, {
-			key: 'toggle',
+		}, { key: 'toggle',
 			value: function toggle() {
 				this._selectDialog();
 				// work according to the current state of the dialog
@@ -174,8 +172,7 @@
 					this.show();
 				}
 			}
-		}, {
-			key: '_selectDialog',
+		}, { key: '_selectDialog',
 			value: function _selectDialog() {
 				// now do what you normally would do
 				this._sDialog.picker = document.getElementById('mddtp-picker__' + [this._type]);
@@ -194,8 +191,7 @@
 				this._sDialog.tDate = this._init.clone();
 				this._sDialog.sDate = this._init.clone();
 			}
-		}, {
-			key: '_showDialog',
+		}, { key: '_showDialog',
 			value: function _showDialog() {
 				var me = this,
 				    zoomIn = 'zoomIn';
@@ -211,8 +207,7 @@
 					me._sDialog.picker.classList.remove(zoomIn);
 				}, 300);
 			}
-		}, {
-			key: '_hideDialog',
+		}, { key: '_hideDialog',
 			value: function _hideDialog() {
 				var me = this,
 				    years = this._sDialog.years,
@@ -267,8 +262,7 @@
 					picker.parentNode.replaceChild(pickerClone, picker);
 				}, 300);
 			}
-		}, {
-			key: '_buildDialog',
+		}, { key: '_buildDialog',
 			value: function _buildDialog() {
 				var type = this._type,
 				    docfrag = document.createDocumentFragment(),
@@ -465,8 +459,7 @@
 				// add the container to the end of body
 				document.getElementsByTagName('body').item(0).appendChild(docfrag);
 			}
-		}, {
-			key: '_initTimeDialog',
+		}, { key: '_initTimeDialog',
 			value: function _initTimeDialog(m) {
 				var hour = this._sDialog.hour,
 				    minute = this._sDialog.minute,
@@ -480,13 +473,15 @@
 					if (text === 0) {
 						text = '00';
 					}
+
 					this._fillText(hour, text);
 					// add the configurable colon in this mode issue #56
 					if (this._colon) {
 						dotSpan.removeAttribute('style');
 					}
 				} else {
-					this._fillText(hour, m.format('h'));
+					this._fillText(hour, m.format('hh'));
+
 					//this._sDialog[m.format('A')].classList.add('mddtp-picker__color--active')
 					// Using isPM function for Find PM
 					if (m._locale.isPM(m.format('A'))) {
@@ -508,8 +503,7 @@
 				this._addClockEvent();
 				this._setButtonText();
 			}
-		}, {
-			key: '_initHour',
+		}, { key: '_initHour',
 			value: function _initHour() {
 				var hourView = this._sDialog.hourView,
 				    needle = this._sDialog.needle,
@@ -582,8 +576,7 @@
 				// set inner html accordingly
 				hourView.appendChild(docfrag);
 			}
-		}, {
-			key: '_initMinute',
+		}, { key: '_initMinute',
 			value: function _initMinute() {
 				var minuteView = this._sDialog.minuteView,
 				    minuteNow = parseInt(this._sDialog.tDate.format('m'), 10),
@@ -622,8 +615,7 @@
 				// set inner html accordingly
 				minuteView.appendChild(docfrag);
 			}
-		}, {
-			key: '_initDateDialog',
+		}, { key: '_initDateDialog',
 			value: function _initDateDialog(m) {
 				var subtitle = this._sDialog.subtitle,
 				    title = this._sDialog.title,
@@ -641,8 +633,7 @@
 				this._switchToView(title);
 				this._setButtonText();
 			}
-		}, {
-			key: '_initViewHolder',
+		}, { key: '_initViewHolder',
 			value: function _initViewHolder() {
 				var m = this._sDialog.tDate,
 				    current = this._sDialog.current,
@@ -663,8 +654,7 @@
 				this._initMonth(previous, (0, _moment2.default)(this._getMonth(m, -1)));
 				this._toMoveMonth();
 			}
-		}, {
-			key: '_initMonth',
+		}, { key: '_initMonth',
 			value: function _initMonth(view, m) {
 				var displayMonth = m.format('MMMM YYYY'),
 				    innerDivs = view.getElementsByTagName('div');
@@ -732,8 +722,7 @@
 				tr.appendChild(docfrag);
 				this._addCellClickEvent(tr);
 			}
-		}, {
-			key: '_initYear',
+		}, { key: '_initYear',
 			value: function _initYear() {
 				var years = this._sDialog.years,
 				    currentYear = this._sDialog.tDate.year(),
@@ -759,8 +748,7 @@
 				// attach event handler to the ul to get the benefit of event delegation
 				this._changeYear(years);
 			}
-		}, {
-			key: '_pointNeedle',
+		}, { key: '_pointNeedle',
 			value: function _pointNeedle(me) {
 				var spoke = 60,
 				    value = void 0,
@@ -804,8 +792,7 @@
 					needle.classList.add(rotationClass);
 				}
 			}
-		}, {
-			key: '_switchToView',
+		}, { key: '_switchToView',
 			value: function _switchToView(el) {
 				var me = this;
 				// attach the view change button
@@ -827,8 +814,7 @@
 					};
 				}
 			}
-		}, {
-			key: '_switchToTimeView',
+		}, { key: '_switchToTimeView',
 			value: function _switchToTimeView(me) {
 				var hourView = me._sDialog.hourView,
 				    minuteView = me._sDialog.minuteView,
@@ -848,8 +834,7 @@
 				mdDateTimePicker.dialog.view = !mdDateTimePicker.dialog.view;
 				me._pointNeedle(me);
 			}
-		}, {
-			key: '_switchToDateView',
+		}, { key: '_switchToDateView',
 			value: function _switchToDateView(el, me) {
 				el.setAttribute('disabled', '');
 				var viewHolder = me._sDialog.viewHolder,
@@ -881,8 +866,7 @@
 					el.removeAttribute('disabled');
 				}, 300);
 			}
-		}, {
-			key: '_addClockEvent',
+		}, { key: '_addClockEvent',
 			value: function _addClockEvent() {
 				var me = this,
 				    hourView = this._sDialog.hourView,
@@ -912,8 +896,13 @@
 							}
 						}
 						me._sDialog.sDate.hour(setHour);
+
 						// set the display hour
-						me._sDialog.hour.textContent = e.target.textContent;
+                        let hh = parseInt( e.target.textContent );
+                        if(hh < 10) hh = "0" + hh;
+                        me._sDialog.hour.textContent = hh;
+						// me._sDialog.hour.textContent = e.target.textContent;
+
 						// switch the view
 						me._pointNeedle(me);
 						setTimeout(function () {
@@ -948,8 +937,7 @@
 					}
 				};
 			}
-		}, {
-			key: '_addCellClickEvent',
+		}, { key: '_addCellClickEvent',
 			value: function _addCellClickEvent(el) {
 				var me = this;
 				el.onclick = function (e) {
@@ -983,8 +971,7 @@
 					}
 				};
 			}
-		}, {
-			key: '_toMoveMonth',
+		}, { key: '_toMoveMonth',
 			value: function _toMoveMonth() {
 				var m = this._sDialog.tDate,
 				    left = this._sDialog.left,
@@ -1005,8 +992,7 @@
 					right.classList.add('mddtp-button--disabled');
 				}
 			}
-		}, {
-			key: '_changeMonth',
+		}, { key: '_changeMonth',
 			value: function _changeMonth() {
 				var me = this,
 				    left = this._sDialog.left,
@@ -1097,8 +1083,7 @@
 					}, 400);
 				}
 			}
-		}, {
-			key: '_changeYear',
+		}, { key: '_changeYear',
 			value: function _changeYear(el) {
 				var me = this;
 				el.onclick = function (e) {
@@ -1119,8 +1104,7 @@
 					}
 				};
 			}
-		}, {
-			key: '_changeM',
+		}, { key: '_changeM',
 			value: function _changeM() {
 				var me = this,
 				    AM = this._sDialog.AM,
@@ -1153,8 +1137,7 @@
 					}
 				};
 			}
-		}, {
-			key: '_dragDial',
+		}, { key: '_dragDial',
 			value: function _dragDial() {
 				var me = this,
 				    needle = this._sDialog.needle,
@@ -1267,8 +1250,7 @@
 				fakeNeedleDraggabilly.on('pointerUp', onDragEnd);
 				fakeNeedleDraggabilly.on('dragEnd', onDragEnd);
 			}
-		}, {
-			key: '_attachEventHandlers',
+		}, { key: '_attachEventHandlers',
 			value: function _attachEventHandlers() {
 				var me = this,
 				    ok = this._sDialog.ok,
@@ -1291,14 +1273,12 @@
 					}
 				};
 			}
-		}, {
-			key: '_setButtonText',
+		}, { key: '_setButtonText',
 			value: function _setButtonText() {
 				this._sDialog.cancel.textContent = this._cancel;
 				this._sDialog.ok.textContent = this._ok;
 			}
-		}, {
-			key: '_getMonth',
+		}, { key: '_getMonth',
 			value: function _getMonth(moment, count) {
 				var m = void 0;
 				m = moment.clone();
@@ -1308,8 +1288,7 @@
 					return m.subtract(Math.abs(count), 'M');
 				}
 			}
-		}, {
-			key: '_nearestDivisor',
+		}, { key: '_nearestDivisor',
 			value: function _nearestDivisor(number, divided) {
 				if (number % divided === 0) {
 					return number;
@@ -1320,13 +1299,11 @@
 				}
 				return -1;
 			}
-		}, {
-			key: '_numWithZero',
+		}, { key: '_numWithZero',
 			value: function _numWithZero(n) {
 				return n > 9 ? '' + n : '0' + n;
 			}
-		}, {
-			key: '_fillText',
+		}, { key: '_fillText',
 			value: function _fillText(el, text) {
 				if (el.firstChild) {
 					el.firstChild.nodeValue = text;
@@ -1334,13 +1311,11 @@
 					el.appendChild(document.createTextNode(text));
 				}
 			}
-		}, {
-			key: '_addId',
+		}, { key: '_addId',
 			value: function _addId(el, id) {
 				el.id = 'mddtp-' + this._type + '__' + id;
 			}
-		}, {
-			key: '_addClass',
+		}, { key: '_addClass',
 			value: function _addClass(el, aClass, more) {
 				el.classList.add('mddtp-picker__' + aClass);
 				var i = 0;
@@ -1352,8 +1327,7 @@
 					el.classList.add(more[i]);
 				}
 			}
-		}, {
-			key: '_addView',
+		}, { key: '_addView',
 			value: function _addView(view) {
 				var month = document.createElement('div'),
 				    grid = document.createElement('div'),
@@ -1381,8 +1355,7 @@
 				grid.appendChild(th);
 				grid.appendChild(tr);
 			}
-		}, {
-			key: '_calcRotation',
+		}, { key: '_calcRotation',
 			value: function _calcRotation(spoke, value) {
 				// set clocks top and right side value
 				if (spoke === 12) {
@@ -1398,8 +1371,7 @@
 				}
 				return 'mddtp-picker__cell--rotate-' + value;
 			}
-		}, {
-			key: 'time',
+		}, { key: 'time',
 			get: function get() {
 				return this._init;
 			},
@@ -1408,8 +1380,7 @@
 					this._init = m;
 				}
 			}
-		}, {
-			key: 'trigger',
+		}, { key: 'trigger',
 			get: function get() {
 				return this._trigger;
 			},
