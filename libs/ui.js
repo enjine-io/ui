@@ -81,7 +81,7 @@ function UI()
     //--- VISIBLE PROPERTIES ---
     this.theme = { dark:false, primary: "", secondary: "" }
     this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
-    this.version = 0.26
+    this.version = 0.27
 
     //--- VISIBLE METHODS ------
     this.getVersion = function() { return this.version }

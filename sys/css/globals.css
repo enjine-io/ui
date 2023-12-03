@@ -16,19 +16,6 @@ body {
     background-color: #fff;
 }
 
-@media (min-width: 768px) {
-    .jumbotron {
-        padding-top: calc(var(--jumbotron-padding-y) * 2);
-        padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-    }
-}
-
-@media (max-width: 800px) {
-    img {
-        width: 80% !important;
-    }
-}
-
 .slideLeft{
     position: relative;
     animation: slideLeft 1s linear 0s 1 alternate;
@@ -355,7 +342,7 @@ pre {
     height: 1rem;
 }
 
-.nav-link.active span {
+.nav-link.active svg {
     transform: rotate(180deg);
 }
 
@@ -385,6 +372,9 @@ pre {
 /* Home navigation link */
 .home-name {
     color: #b0bec5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-name:hover {
@@ -414,7 +404,7 @@ pre {
     padding: 0;
     height: 100vh;
     width: 16rem;
-    /* width: 0; */
+    /* width: 0;  */
     overflow-x: hidden;
     overflow-y: hidden;
     position: fixed;
@@ -433,15 +423,15 @@ pre {
 }
 
 .left-panel-title {
-    margin-top: 30px; 
+    margin-top: 30px;
 }
 
-/* 768px */
+/* 992px */
 @media (max-width: 992px) {
     .jdocs-title { margin-top: 48px; margin-bottom: 32px; }
     .goback-btn { display: none; }
     /* .sm-none { visibility: hidden; height: 0px; } */
-    /* .left-panel-title { margin-top: 100px;} */
+    /* .left-panel-title { margin-top: 7rem; } */
     .main-page-header {
         background-image: none !important;
         background-color: transparent !important;
@@ -450,18 +440,28 @@ pre {
     }
 }
 
-/* 768px */
+/* 774px */
 @media (max-width: 774px) {
     .sm-none { visibility: hidden; height: 0px; }
-    .left-panel-title { visibility: hidden; }
+    .left-panel-title { margin-top: 7rem; }
     .main-content { padding: 0px 2rem; }
+    .jdocs-img { width: 80% !important; }
+    .navbar { display: block; }
+}
+
+@media (min-width: 775px) {
+    .jumbotron {
+        padding-top: calc(var(--jumbotron-padding-y) * 2);
+        padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+    }
+    .navbar { display: none !important; }
 }
 
 /* 540 */
 @media (max-width: 540px) {
     .main-content, #main-content { padding: 0px 1rem; }
     .copy-button { right: 24px; }
-    .goback-btn { display: none; }
+    /* .goback-btn { display: none; } */
 }
 
 #result-links .nav-list-items {
@@ -514,7 +514,7 @@ table, tr, td {
 
 @font-face {
     font-family: 'Roboto-Mono';
-    src: url('/.edit/codemirror/RobotoMono.ttf');
+    src: url('../codemirror-libs/RobotoMono.ttf');
 }
 
 .sample-code {
@@ -629,8 +629,7 @@ table, tr, td {
     /*width: 360px;*/
     /*height: 640px;*/
     margin: auto;
-    /* border: 16px solid #37474f; */
-    border: 16px solid #212529;
+    border: 16px solid #37474f;
     border-top-width: 50px;
     border-bottom-width: 70px;
     border-radius: 24px;
@@ -713,12 +712,6 @@ table, tr, td {
 .jdocs-text {
     text-align: justify;
     margin: 2rem 0rem;
-    font-weight: 300;
-    font-size: 105%;
-}
-
-.jdocs-return-type {
-    color: var(--primary-color);
 }
 
 .jdocs-tip {
@@ -726,14 +719,8 @@ table, tr, td {
     padding: 1rem;
     background-color: var(--primary-color);
     color: #fff;
-    font-weight: 300;
-    font-size: 100%;
+    font-size: 1.05rem;
     margin: 2rem 0rem;
-
-    /* background-color:#2979ff;
-    padding: 10px 12px;
-    font-size: 90%;
-    display: inline-block; */
 }
 
 .jdocs-img-container {
@@ -777,8 +764,6 @@ table, tr, td {
     margin-top: 1rem;
     display: flex;
     align-items: center;
-
-    /* margin: 45px 0px;border-bottom:1px solid #212121; */
 }
 
 .jdocs-hr-line {
@@ -804,6 +789,11 @@ tr.table-row, tr td {
     margin: 0 !important;
 }
 
+.jdocs-list-item-ol, .jdocs-list-item-ul {
+    font-size: 1rem;
+    padding: 0.5rem 0rem;
+}
+
 .bold {
     font-weight: bold;
 }
@@ -823,7 +813,7 @@ tr.table-row, tr td {
 }
 
 .cm-s-ds-md-javascript .CodeMirror-gutters {
-    background: #212121;
+    background: #212121; 
     color: #afafaf;
     border: none;
 }
@@ -964,3 +954,60 @@ color: #FFFFFF;
 }
 
 .CodeMirror-scrollbar-filler { background-color: #000; }
+
+
+
+/* css styles added by jdocs-editor */
+.jdocs-element {
+    box-sizing: border-box;
+    border: 1px dotted transparent;
+}
+
+.jdocs-element:focus, .jdocs-element:hover {
+    outline: none;
+    border: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.jdocs-active {
+    outline: none;
+    border: 1px dotted rgba(255, 255, 255, 0.5);
+}
+
+.delete-icon {
+    /* display: none; */
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1.75rem;
+    height: 1.75rem;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.delete-icon:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.remove-pointer-events {
+    pointer-events: none;
+}
+
+.goback-btn {
+    position: absolute;
+    left: 32px;
+    top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.goback-btn svg, .home-name svg {
+    margin-right: 0.5rem;
+}

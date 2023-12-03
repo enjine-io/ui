@@ -47,3 +47,8 @@ html, body, #root {
 .color-picker-preset-btn:focus {
     outline: none;
 }
+
+.uiActionSheet-root, .uiBottomSheet-root {
+    border-top-left-radius: 24px !important;
+    border-top-right-radius: 24px !important;
+}

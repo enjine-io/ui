@@ -13,6 +13,7 @@ let _running = false,
     activeLink, activeNavLink, navList, navIsClick = false,
     // demoUrl = "http://localhost:3000";
     demoUrl = "https://enjine-jdocs-3a9b16e42b4b.herokuapp.com";
+    let isDSExt = false;
 
 function createComponent(key, val) {
     var str = "";
@@ -67,22 +68,20 @@ function createPage( tutorial, step ) {
                 break;
             case "ol":
                 str += '<ol "id="'+z+'">';
-                for (var x = 0; x < step[z].txt.length; x++) {
-                    str += '<li>'
-                    if( step[z].txt[x].includes("~") )
-                        str = Bullets(step[z].txt[x], str);
-                    else str += T(step[z].txt[x]);
+                for (var x = 0; x < step[z].content.length; x++) {
+                    str += '<li class="jdocs-list-item-ol">'
+                    if( step[z].content[x].includes("~") ) str = Bullets(step[z].content[x], str);
+                    else str += T(step[z].content[x]);
                     str += '</li>';
                 }
                 str += '</ol>';
                 break;
             case "ul":
                 str += '<ul "id="'+z+'">';
-                for (var x = 0; x < step[z].txt.length; x++) {
-                    str += '<li>'
-                    if( step[z].txt[x].includes("~") ) 
-                        str = Bullets(step[z].txt[x], str);
-                    else str += _S( T(step[z].txt[x]) );
+                for (var x = 0; x < step[z].content.length; x++) {
+                    str += '<li class="jdocs-list-item-ul">'
+                    if( step[z].content[x].includes("~") ) str = Bullets(step[z].content[x], str);
+                    else str += _S( T(step[z].content[x]) );
                     str += '</li>';
                 }
                 str += '</ul>';
@@ -277,17 +276,22 @@ function buildMainPage( home ) {
 
             var renderAsList = !layouts.tutorial.card;
 
+            let goBackBtnNav = "";
+
+            if(layouts.tutorial.homeLink !== null) {
+                goBackBtnNav = `
+                <a class="btn btn-link text-white float-left" id="menu-button" href="../${layouts.tutorial.homeLink}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                </a>
+                `;
+            }
+
             if(home !== "home") {
                 htmlStr += `
-                <nav class="navbar navbar-dark bg-dark d-lg-none fixed-top d-flex justify-content-center">
+                <nav class="navbar navbar-dark bg-dark fixed-top d-flex ${goBackBtnNav?"":"justify-content-center"}">
                     <div class="">
-                        <!-- <a class="btn btn-link text-white" id="menu-button" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                            </svg>
-                        </a>
-                        -->
-                        <a class="navbar-brand" href="./?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
+                        ${goBackBtnNav}
+                        <a class="navbar-brand bold" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
                     </div>
                 </nav>
                 `;
@@ -298,12 +302,10 @@ function buildMainPage( home ) {
                     <div class="xcontainer">
             `;
 
-            if( home != "home" ) {
+            if(home != "home" && layouts.tutorial.homeLink !== null) {
                 htmlStr += `
-                        <a href="../${layouts.tutorial.homeLink.split("/").pop()||"index"}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" class="btn btn-dark goback-btn" style="position:absolute;left:32px;top:16px;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                            </svg>
+                        <a href="../${layouts.tutorial.homeLink.split("/").pop()||"index"}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button" class="btn btn-dark goback-btn bold">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
                             ${layouts.tutorial.home || "Home"}
                         </a>
                 `;
@@ -341,6 +343,10 @@ function buildMainPage( home ) {
                         <p class="lead" lbl="introtext" style="color:#cfd8dc;">${ T(layouts.tutorial.header.subtitle) }</p>
                     </div>
                 </section>
+            `;
+
+            if(layouts.tutorial.search !== false) {
+                htmlStr += `
                 <div class="container search-container">
                     <div class="py-4 row ${renderAsList?"":"ml-3 mr-3"}">
                         <div class="col-lg-5 col-md-8 col-sm-12">
@@ -350,8 +356,10 @@ function buildMainPage( home ) {
                         </div>
                     </div>
                 </div>
-                <div class="container">
-            `;
+                `;
+            }
+
+            htmlStr += `<div class="container">`;
 
             var array = layouts.tutorial.index;
             componentList = array;
@@ -440,12 +448,10 @@ function buildTutorial( tutorial, onReady, page, cmp ) {
         
         if( layouts.tutorial.homeName ) {
             htmlStr += `
-                    <h5 class="left-panel-title" style="text-align:center;">
+                    <h5 class="left-panel-title" style="text-align: center;">
                         <a href="../${hmeDir}.html?page=0&home=true" class="home-name">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                            </svg>
-                            ${layouts.tutorial.homeName}
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                            <span class="bold">${layouts.tutorial.homeName}</span>
                         </a>
                     </h5>
             `;
@@ -694,13 +700,7 @@ function renderLeftNavigation( navs ) {
         navhtml += `
                 <a class="nav-link" id="nav-group-${id}" href="#${id}" data-open="${id}-links">${nav.title}`;
         if( Object.keys(nav.navs).length > 0 ) {
-            navhtml += `
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                    </span>
-            `;
+            navhtml += ` <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-360 280-560h400L480-360Z"/></svg>`;
         }
         
         navhtml += `
@@ -774,7 +774,7 @@ function CreatePopup()
     </svg>
     <div class="alert alert-info d-flex align-items-center" style="height:50px;" role="alert">
         <svg role="img" aria-label="Success:" style="width:24px;margin-right:12px;"><use xlink:href="#info-fill"/></svg>
-        Code copied to clipboard successfully.
+        <span id="popup-message">Code copied to clipboard successfully.</span>
     </div>
     `
     var div = document.createElement( "div" )
@@ -789,8 +789,11 @@ function CreatePopup()
 }
 CreatePopup()
 
-function ShowPopup()
+function ShowPopup( txt )
 {
+    if( txt ) {
+        document.getElementById("popup-message").textContent = txt;
+    }
     document.getElementById( "popup" ).style.display = "block"
     setTimeout( function() {
         document.getElementById( "popup" ).style.display = "none"
@@ -1044,6 +1047,8 @@ function showMobileOutput( show ) {
 
 function runSampleCode(id, value) {
 
+    if(isDSExt === true) return runDSSample(id, value);
+
     showMobileOutput( true );
     showDemoLoader( true );
 
@@ -1072,6 +1077,13 @@ function runSampleCode(id, value) {
         console.error('Error:', error);
         showDemoLoader( false );
     });
+}
+
+function runDSSample(id, value) {
+    if( ext ) {
+        ext.Execute("app", value || _CodeMirrorInstances[id].getValue());
+        ShowPopup( "App is running on your phone!" );
+    }
 }
 
 function copySampleCode( id ) {

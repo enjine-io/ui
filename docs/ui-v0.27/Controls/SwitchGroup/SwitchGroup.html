@@ -74,13 +74,13 @@
         "style": "",
         "alt": "img_128"
       },
-      "code_129": {
-        "txt": "apb = ui.addAppBar(parent, title, options, width, height)",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "text_130": {
-        "txt": "text_130",
+      "text_129": {
+        "txt": "text_129",
         "css": ""
+      },
+      "code_130": {
+        "txt": "swg = ui.addSwitchGroup(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_131": {
         "content": [
@@ -94,42 +94,42 @@
         "content": [
           "parent ",
           "Layout",
-          "The parent layout where to add the AppBar "
+          "The parent layout where to add the SwitchGroup Component. "
         ]
       },
       "table-row_132": {
         "content": [
-          "title ",
-          "String",
-          "The title text of the appbar "
+          "list ",
+          "Array",
+          "The list items array whose elements can be `String` if items is text only, or `Array` of the form `[ \"icon\", \"label\" ]` if items is icon and text. "
         ]
       },
       "table-row_133": {
         "content": [
           "options ",
           "String",
-          "A comma separated options.\\nMenu icon: `Menu` \\nTheme Color: `Primary`, `Secondary`, `Transparent`, `Inherit`, `Default`\\nPosition: `Absolute`, `Static`, `Fixed`, `Relative` "
+          "A comma separated options.\\nIcon: `Icon`\\nColor: `Primary`, `Secondary`\\nContainer: `Elevated`, `Outlined`\\nCorner: `Square`\\nList divider: `Divider` "
         ]
       },
       "table-row_134": {
         "content": [
           "width ",
           "Number",
-          "Fraction of the parent width `[0-1]` "
+          "Fraction of the parent width `[0-1]`. "
         ]
       },
       "table-row_135": {
         "content": [
           "height ",
           "Number",
-          "Fraction of the parent height `[0-1]` "
+          "Fraction of the parent height `[0-1]`. "
         ]
       },
       "table-footer_135": {
         "txt": ""
       },
       "text_136": {
-        "txt": "This will return an <span class=\"bold jdocs-return-type\"> AppBar Component</span>"
+        "txt": "This will return a <span class=\"bold jdocs-return-type\"> SwitchGroup Component</span>"
       },
       "hr_137": {
         "txt": "",
@@ -142,7 +142,7 @@
         "txt": "text_138",
         "css": ""
       },
-      "table-header_147": {
+      "table-header_150": {
         "content": [
           "Properties",
           "Type",
@@ -150,337 +150,306 @@
         ],
         "css": ""
       },
-      "table-row_148": {
+      "table-row_151": {
         "content": [
           "absHeight ",
           "Number",
           "Returns the absolute height of the control in pixels."
         ]
       },
-      "table-row_149": {
+      "table-row_152": {
         "content": [
           "absLeft ",
           "Number",
           "Returns the absolute distance of the control from the left in pixels."
         ]
       },
-      "table-row_150": {
+      "table-row_153": {
         "content": [
           "absTop ",
           "Number",
           "Returns the absolute distance of the control from the top in pixels."
         ]
       },
-      "table-row_151": {
+      "table-row_154": {
         "content": [
           "absWidth ",
           "Number",
           "Returns the absolute width of the control in pixels."
         ]
       },
-      "table-row_152": {
+      "table-row_155": {
         "content": [
           "backColor ",
           "String",
           "A hexadecimal color of the form `#rrggbb`"
         ]
       },
-      "table-row_153": {
+      "table-row_156": {
         "content": [
           "backImage ",
           "String",
           "The path to your image file."
         ]
       },
-      "table-row_154": {
+      "table-row_157": {
         "content": [
           "border ",
           "Number",
           "Sets or returns the border thickness in pixels."
         ]
       },
-      "table-row_155": {
+      "table-row_158": {
         "content": [
           "borderColor ",
           "String",
           "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
         ]
       },
-      "table-row_156": {
+      "table-row_159": {
         "content": [
           "borderStyle ",
           "String",
           "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
         ]
       },
-      "table-row_157": {
+      "table-row_160": {
         "content": [
           "color ",
           "String",
-          "Sets or returns the theme color of the AppBar. Values can be `Default` `Primary` `Secondary` `Transparent` `Inherit`"
+          "Sets or returns the theme color. Values can be `Default` `Primary` or `Secondary`"
         ]
       },
-      "table-row_158": {
+      "table-row_161": {
         "content": [
           "cornerRadius ",
           "Number",
-          "Sets or returns the corner radius of the accordion panel. You can also pass an array of the form `[tl, tr, bl, br]`. See `setCornerRadius` for customization."
+          "Sets or returns the corner radius in pixels."
         ]
       },
-      "table-row_159": {
+      "table-row_162": {
         "content": [
           "disabled ",
           "Boolean",
           "Sets or returns the `disabled` state of the control."
         ]
       },
-      "table-row_160": {
+      "table-row_163": {
+        "content": [
+          "edge ",
+          "String",
+          "Sets or returns the edge position of the toggle. Values can be `Start` `End` or `False`"
+        ]
+      },
+      "table-row_164": {
         "content": [
           "el ",
           "Object",
           "Returns the html container element for the control."
         ]
       },
-      "table-row_161": {
+      "table-row_165": {
         "content": [
           "elStyle ",
           "String",
           "Sets the style of the html container element."
         ]
       },
-      "table-row_162": {
+      "table-row_166": {
+        "content": [
+          "elevation ",
+          "Number",
+          "Sets or returns the depth of the control container. Value ranges from 0 to 24."
+        ]
+      },
+      "table-row_167": {
         "content": [
           "fontFile ",
           "String",
           "Sets or returns the `relative` path to the font-family use."
         ]
       },
-      "table-row_163": {
+      "table-row_168": {
         "content": [
           "height ",
           "Number",
           "Sets or returns the height of the control as a fraction of the parent control."
         ]
       },
-      "table-row_164": {
+      "table-row_169": {
         "content": [
-          "icon ",
+          "iconColor ",
           "String",
-          "Sets or returns the icon of the menu button."
+          "Sets or returns the theme color `Primary` `Secondary` or `Default`. You can also pass a hexadecimal color of the form `#rrggbb`"
         ]
       },
-      "table-row_165": {
+      "table-row_170": {
+        "content": [
+          "iconSize ",
+          "Number",
+          "Sets or returns the size of the icon."
+        ]
+      },
+      "table-row_171": {
         "content": [
           "isVisible ",
           "Boolean",
           "Returns whether the control is visible or not."
         ]
       },
-      "table-row_166": {
+      "table-row_172": {
         "content": [
-          "layout ",
-          "Layout",
-          "Returns the right layout of the appbar where you can add controls."
+          "itemPadding ",
+          "Array",
+          "Sets or returns the padding of each switch item. See also `setItemPadding` method."
         ]
       },
-      "table-row_167": {
+      "table-row_173": {
+        "content": [
+          "label ",
+          "String",
+          "Sets or returns the label text."
+        ]
+      },
+      "table-row_174": {
+        "content": [
+          "labelColor ",
+          "String",
+          "Sets or returns the color of the label text in hexadecimal format."
+        ]
+      },
+      "table-row_175": {
+        "content": [
+          "labelSize ",
+          "Number",
+          "Sets or returns the size of the label text."
+        ]
+      },
+      "table-row_176": {
         "content": [
           "left ",
           "Number",
           "Returns the distance of the control from the left."
         ]
       },
-      "table-row_168": {
+      "table-row_177": {
+        "content": [
+          "list ",
+          "array",
+          "Sets or returns the list items. You can also pass a comma separated string of items."
+        ]
+      },
+      "table-row_178": {
         "content": [
           "margins ",
           "Array",
           "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
         ]
       },
-      "table-row_169": {
-        "content": [
-          "menu ",
-          "Boolean",
-          "Sets or returns whether the appbar has menu button."
-        ]
-      },
-      "table-row_170": {
+      "table-row_179": {
         "content": [
           "opacity ",
           "Number",
           "Sets or returns the opacity of the control."
         ]
       },
-      "table-row_171": {
+      "table-row_180": {
         "content": [
           "options ",
           "String",
           "Sets or returns the `options` of the control."
         ]
       },
-      "table-row_172": {
+      "table-row_181": {
+        "content": [
+          "outlined ",
+          "Boolean",
+          "Sets or returns whether the container is outlined or elevated."
+        ]
+      },
+      "table-row_182": {
         "content": [
           "padding ",
           "Array",
           "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
         ]
       },
-      "table-row_173": {
+      "table-row_183": {
         "content": [
           "parent ",
           "Object",
           "Returns the parent layout control."
         ]
       },
-      "table-row_174": {
+      "table-row_184": {
         "content": [
           "position ",
           "Object",
           "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
         ]
       },
-      "table-row_175": {
+      "table-row_185": {
         "content": [
           "rotation ",
           "Number",
           "Sets or returns the angle of rotation in degrees."
         ]
       },
-      "table-row_176": {
-        "content": [
-          "text ",
-          "String",
-          "Sets or return the AppBar title text"
-        ]
-      },
-      "table-row_177": {
+      "table-row_186": {
         "content": [
           "textColor ",
           "String",
-          "Sets or returns the hexadecimal color of the appbar title."
+          "Sets or returns the theme color `primary` or `secondary`. You can also pass a hexadecimal color of the form `#rrggbb`"
         ]
       },
-      "table-row_178": {
+      "table-row_187": {
         "content": [
           "textSize ",
           "Number",
-          "Sets or returns the font size of the title text."
+          "Sets or returns the size of the text within the control."
         ]
       },
-      "table-row_179": {
-        "content": [
-          "textVariant ",
-          "String",
-          "Sets or returns the variant of the title text. Values can be `h1` `h2` `h3` `h4` `h5` or `h6`"
-        ]
-      },
-      "table-row_180": {
+      "table-row_188": {
         "content": [
           "top ",
           "Number",
           "Returns the distance of the control from the top."
         ]
       },
-      "table-row_181": {
+      "table-row_189": {
         "content": [
           "type ",
           "String",
           "Returns the type of the control."
         ]
       },
-      "table-row_182": {
+      "table-row_190": {
         "content": [
           "visibility ",
           "String",
           "Sets or returns the visibility of the control."
         ]
       },
-      "table-row_183": {
+      "table-row_191": {
         "content": [
           "width ",
           "Number",
           "Sets or returns the width of the control as a fraction of the parent control."
         ]
       },
-      "table-footer_183": {
+      "table-footer_191": {
         "txt": ""
       },
-      "hr_184": {
+      "hr_192": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_184": {
-        "txt": "heading_184"
+      "heading_192": {
+        "txt": "heading_192"
       },
-      "text_185": {
-        "txt": "text_185",
+      "text_193": {
+        "txt": "text_193",
         "css": ""
-      },
-      "hr_186": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_186": {
-        "txt": "subtitle_186"
-      },
-      "text_187": {
-        "txt": "text_187",
-        "css": ""
-      },
-      "code_188": {
-        "txt": "cname.setOnTouch( callback )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_189": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_189": {
-        "content": [
-          "callback ",
-          "Function",
-          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
-        ]
-      },
-      "table-footer_189": {
-        "txt": ""
-      },
-      "hr_190": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_190": {
-        "txt": "subtitle_190"
-      },
-      "text_191": {
-        "txt": "text_191",
-        "css": ""
-      },
-      "code_192": {
-        "txt": "apb.setOnMenu( callback )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_193": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_193": {
-        "content": [
-          "callback ",
-          "Function",
-          "The function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
-        ]
-      },
-      "table-footer_193": {
-        "txt": ""
       },
       "hr_194": {
         "txt": "",
@@ -494,7 +463,7 @@
         "css": ""
       },
       "code_196": {
-        "txt": "apb.addLayout( lay )",
+        "txt": "swt.setOnTouch( callback )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_197": {
@@ -507,9 +476,9 @@
       },
       "table-row_197": {
         "content": [
-          "lay ",
-          "Layout",
-          "The layout where to add controls "
+          "callback ",
+          "Function",
+          "The function to be called. This will pass  `text <i class=\"arg-def\">String</i>` The switch item label text. `value <i class=\"arg-def\">Boolean</i>` The checked state of the switch item. `index <i class=\"arg-def\">Number</i>` The index of the corresponding switch item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
         ]
       },
       "table-footer_197": {
@@ -527,7 +496,7 @@
         "css": ""
       },
       "code_200": {
-        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "txt": "swt.setOnChange(callback)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_201": {
@@ -540,58 +509,30 @@
       },
       "table-row_201": {
         "content": [
-          "tl ",
-          "Number",
-          "Top-left corner radius. "
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `indexes <i class=\"arg-def\">Array</i>` An array of indexes corresponding to the checked switch items. `items <i class=\"arg-def\">Array</i>` An array of switchgroup items corresponding to the checked switch items."
         ]
       },
-      "table-row_202": {
-        "content": [
-          "tr ",
-          "Number",
-          "Top-right corner radius. "
-        ]
-      },
-      "table-row_203": {
-        "content": [
-          "bl ",
-          "Number",
-          "Bottom-left corner radius. "
-        ]
-      },
-      "table-row_204": {
-        "content": [
-          "br ",
-          "Number",
-          "Bottom-right corner radius. "
-        ]
-      },
-      "table-row_205": {
-        "content": [
-          "mode ",
-          "String",
-          "Unit. Values are `px` `rem` or `%`. "
-        ]
-      },
-      "table-footer_205": {
+      "table-footer_201": {
         "txt": ""
       },
-      "hr_206": {
+      "hr_202": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_31": {
-        "txt": "subtitle_31"
+      "subtitle_202": {
+        "txt": "subtitle_202"
       },
-      "text_32": {
-        "txt": "text_32",
+      "text_203": {
+        "txt": "text_203",
         "css": ""
       },
-      "code_33": {
-        "txt": "setOnContextMenu( callback )",
+      "code_204": {
+        "txt": "swg.setValueByIndex(index, val)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_34": {
+      "table-header_205": {
         "content": [
           "Parameters",
           "Type",
@@ -599,17 +540,474 @@
         ],
         "css": ""
       },
-      "table-row_34": {
+      "table-row_205": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item. "
+        ]
+      },
+      "table-row_206": {
+        "content": [
+          "val ",
+          "Boolean",
+          "A Values can be `true` or `false` "
+        ]
+      },
+      "table-footer_206": {
+        "txt": ""
+      },
+      "hr_207": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_207": {
+        "txt": "subtitle_207"
+      },
+      "text_208": {
+        "txt": "text_208",
+        "css": ""
+      },
+      "code_209": {
+        "txt": "swg.getValueByIndex(index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_210": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_210": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item. "
+        ]
+      },
+      "table-footer_210": {
+        "txt": ""
+      },
+      "text_211": {
+        "txt": "This will return a <span class=\"bold jdocs-return-type\"> Boolean</span>"
+      },
+      "hr_212": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_212": {
+        "txt": "subtitle_212"
+      },
+      "text_213": {
+        "txt": "text_213",
+        "css": ""
+      },
+      "code_214": {
+        "txt": "swg.setList( lst )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_215": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_215": {
+        "content": [
+          "lst ",
+          "Array|String",
+          "The list array or a comma separated list. "
+        ]
+      },
+      "table-footer_215": {
+        "txt": ""
+      },
+      "hr_216": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_216": {
+        "txt": "subtitle_216"
+      },
+      "text_217": {
+        "txt": "text_217",
+        "css": ""
+      },
+      "code_218": {
+        "txt": "swg.addItem( title, icon, value, index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_219": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_219": {
+        "content": [
+          "title ",
+          "String",
+          "The title text. "
+        ]
+      },
+      "table-row_220": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon font. "
+        ]
+      },
+      "table-row_221": {
+        "content": [
+          "value ",
+          "Boolean",
+          "The value of the item. "
+        ]
+      },
+      "table-row_222": {
+        "content": [
+          "index ",
+          "Number",
+          "The index in which to insert the item. Default is at the bottom of the list. "
+        ]
+      },
+      "table-footer_222": {
+        "txt": ""
+      },
+      "hr_223": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_223": {
+        "txt": "subtitle_223"
+      },
+      "text_224": {
+        "txt": "text_224",
+        "css": ""
+      },
+      "code_225": {
+        "txt": "swg.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_226": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_226": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item to remove. "
+        ]
+      },
+      "table-footer_226": {
+        "txt": ""
+      },
+      "hr_227": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_227": {
+        "txt": "subtitle_227"
+      },
+      "text_228": {
+        "txt": "text_228",
+        "css": ""
+      },
+      "code_229": {
+        "txt": "swg.removeItemByName( title )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_230": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_230": {
+        "content": [
+          "title ",
+          "String",
+          "The title text of the SwitchGroup item. "
+        ]
+      },
+      "table-footer_230": {
+        "txt": ""
+      },
+      "hr_231": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_231": {
+        "txt": "subtitle_231"
+      },
+      "text_232": {
+        "txt": "text_232",
+        "css": ""
+      },
+      "code_233": {
+        "txt": "swg.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_234": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_234": {
+        "txt": "subtitle_234"
+      },
+      "text_235": {
+        "txt": "text_235",
+        "css": ""
+      },
+      "code_236": {
+        "txt": "swg.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_237": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_237": {
+        "txt": "subtitle_237"
+      },
+      "text_238": {
+        "txt": "text_238",
+        "css": ""
+      },
+      "code_239": {
+        "txt": "swt.setEnabled( index, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_240": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_240": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item in the list. You can also pass `Boolean` to enable or disable the switchgroup component. "
+        ]
+      },
+      "table-row_241": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` or `false`. "
+        ]
+      },
+      "table-footer_241": {
+        "txt": ""
+      },
+      "hr_242": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_242": {
+        "txt": "subtitle_242"
+      },
+      "text_243": {
+        "txt": "text_243",
+        "css": ""
+      },
+      "code_244": {
+        "txt": "swt.getEnabled( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_245": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_245": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding item in the switch group. "
+        ]
+      },
+      "table-footer_245": {
+        "txt": ""
+      },
+      "text_246": {
+        "txt": "This will return a <span class=\"bold jdocs-return-type\"> Boolean</span>"
+      },
+      "hr_247": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_247": {
+        "txt": "subtitle_247"
+      },
+      "text_248": {
+        "txt": "text_248",
+        "css": ""
+      },
+      "code_249": {
+        "txt": "swt.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_250": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_250": {
         "content": [
           "callback ",
           "Function",
-          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+          "The callback function to be called on context menu event or right click event. This will pass  `text <i class=\"arg-def\">String</i>` The label text of the switchgroup item. `index <i class=\"arg-def\">Number</i>` The index of the corresponding switchgroup item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
         ]
       },
-      "table-footer_34": {
+      "table-footer_250": {
         "txt": ""
       },
-      "hr_35": {
+      "hr_251": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_251": {
+        "txt": "subtitle_251"
+      },
+      "text_252": {
+        "txt": "text_252",
+        "css": ""
+      },
+      "code_253": {
+        "txt": "swt.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_254": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_254": {
+        "content": [
+          "tl ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_255": {
+        "content": [
+          "tr ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_256": {
+        "content": [
+          "bl ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_257": {
+        "content": [
+          "br ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_258": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_258": {
+        "txt": ""
+      },
+      "hr_259": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_259": {
+        "txt": "subtitle_259"
+      },
+      "text_260": {
+        "txt": "text_260",
+        "css": ""
+      },
+      "code_261": {
+        "txt": "swt.setItemPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_262": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_262": {
+        "content": [
+          "left ",
+          "Number",
+          "Left padding of the radio item. "
+        ]
+      },
+      "table-row_263": {
+        "content": [
+          "top ",
+          "Number",
+          "Top padding of the radio item. "
+        ]
+      },
+      "table-row_264": {
+        "content": [
+          "right ",
+          "Number",
+          "Right padding of the radio item. "
+        ]
+      },
+      "table-row_265": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom padding of the radio item. "
+        ]
+      },
+      "table-row_266": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement. Can be `rem`, `px`, `%`, or `v` for viewport. "
+        ]
+      },
+      "table-footer_266": {
+        "txt": ""
+      },
+      "hr_267": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
@@ -621,7 +1019,7 @@
         "css": ""
       },
       "code_37": {
-        "txt": "apb.animate(anim, duration)",
+        "txt": "swg.animate(anim, duration)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_38": {
@@ -661,7 +1059,7 @@
         "css": ""
       },
       "code_42": {
-        "txt": "apb.setSize( width, height )",
+        "txt": "swg.setSize( width, height )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_43": {
@@ -701,7 +1099,7 @@
         "css": ""
       },
       "code_47": {
-        "txt": "apb.show()",
+        "txt": "swg.show()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "hr_48": {
@@ -716,7 +1114,7 @@
         "css": ""
       },
       "code_50": {
-        "txt": "apb.hide()",
+        "txt": "swg.hide()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "hr_51": {
@@ -731,7 +1129,7 @@
         "css": ""
       },
       "code_53": {
-        "txt": "apb.gone()",
+        "txt": "swg.gone()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "hr_54": {
@@ -746,7 +1144,7 @@
         "css": ""
       },
       "code_56": {
-        "txt": "apb.destroy()",
+        "txt": "swg.destroy()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "hr_57": {
@@ -761,7 +1159,7 @@
         "css": ""
       },
       "code_59": {
-        "txt": "apb.setScale( x, y )",
+        "txt": "swg.setScale( x, y )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_60": {
@@ -801,7 +1199,7 @@
         "css": ""
       },
       "code_64": {
-        "txt": "apb.getPosition( options )",
+        "txt": "swg.getPosition( options )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_65": {
@@ -837,7 +1235,7 @@
         "css": ""
       },
       "code_69": {
-        "txt": "apb.setMargins( left, top, right, bottom, mode )",
+        "txt": "swg.setMargins( left, top, right, bottom, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_70": {
@@ -898,7 +1296,7 @@
         "css": ""
       },
       "code_77": {
-        "txt": "apb.setPadding(left, top, right, bottom, mode)",
+        "txt": "swg.setPadding(left, top, right, bottom, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_78": {
@@ -959,7 +1357,7 @@
         "css": ""
       },
       "code_85": {
-        "txt": "apb.setPosition( left, top, mode )",
+        "txt": "swg.setPosition( left, top, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_86": {
@@ -1006,7 +1404,7 @@
         "css": ""
       },
       "code_91": {
-        "txt": "apb.setBorder(left, top, right, bottom, clr, style)",
+        "txt": "swg.setBorder(left, top, right, bottom, clr, style)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_92": {
@@ -1074,7 +1472,7 @@
         "css": ""
       },
       "code_108": {
-        "txt": "apb.bringForward( zIndex )",
+        "txt": "swg.bringForward( zIndex )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_109": {
@@ -1107,7 +1505,7 @@
         "css": ""
       },
       "code_112": {
-        "txt": "apb.bringForward( zIndex )",
+        "txt": "swg.bringForward( zIndex )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_113": {
@@ -1132,28 +1530,32 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_206": {
-        "txt": "heading_206"
+      "heading_267": {
+        "txt": "heading_267"
       },
-      "hr_207": {
+      "hr_268": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_206": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen linear layout with objects align Top and Center\n       this.main = ui.addLayout(\"main\", \"Linear\", \"Top,Center\", 1, 1)\n\n       // Adds an appbar to the layout\n       this.apb = ui.addAppBar(this.main, \"My App\", \"\", 1)\n\n       // Adds a button control with margins 1/10 of the parent width.\n       this.btn = ui.addButton(this.main, \"Button\")\n       this.btn.margins = 0.1\n   }\n}",
-        "sample": "Basic AppBar"
+      "code_267": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var items = [\"This is item 1\", \"This is item 2\", \"This is item 3\"]\n\n       // Add a switchgroup control to the main layout.\n       this.swg = ui.addSwitchGroup(this.main, items, \"Secondary\", 0.9)\n\n       // Add a callback handler when the switchgroup item is touch\n       this.swg.setOnTouch( this.onTouch )\n   }\n\n   onTouch(item, value)\n   {\n       ui.showPopup(item + \" : \"  + value)\n   }\n}",
+        "sample": "Basic"
       },
-      "code_207": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen linear layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n       // Add an appbar to the layout\n       this.apb = ui.addAppBar(this.main, \"My app\", \"Menu,Fixed\", 1)\n\n       // Add a callback handler to show the drawer onMenu event\n       this.apb.setOnMenu( this.showDrawer )\n\n       // Add a drawer layout\n       this.drawLay = ui.addLayout(null, \"Linear\", \"Top\")\n\n       // Add a drawer to the app and pass the drawer layout\n       this.drawer = ui.addDrawer(this.drawLay, \"left\", 0.7)\n\n       // Add a list to the drawer layout. See `List` component for customization.\n       let lst = [\n           [\"folder\", \"Folders\"],\n           [\"music_note\", \"Audios\"],\n           [\"photo\", \"Photos\"]\n       ]\n       this.lstMenu = ui.addList(this.drawLay, lst, \"Icon\", 1 )\n       this.lstMenu.label = \"Main navigation\"\n\n       // Add a callback handler to the list onTouch event\n       this.lstMenu.setOnTouch( this.onTouch )\n   }\n\n   showDrawer()\n   {\n       this.drawer.show()\n   }\n\n   onTouch( title )\n   {\n       // Set the appbar text with the selected list item\n       this.apb.text = title\n\n       // Close the drawer\n       this.drawer.hide()\n   }\n}",
-        "sample": "Fixed appbar with drawer"
+      "code_268": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize switchgroup items with leading icon\n       var items = [ \n           [\"music_note\", \"Enable Sound\"],\n           [\"bluetooth\", \"Enable Bluetooth\"],\n           [\"wifi\", \"Enable Wifi\"]\n       ]\n\n       // Add a switchgroup control to the main layout.\n       this.swg = ui.addSwitchGroup(this.main, items, \"Secondary,Icon\", 0.9)\n\n       // Set the label text of the switchgroup control\n       this.swg.label = \"Settings\"\n\n       // Add a callback handler when the switchgroup item is touch\n       this.swg.setOnTouch( this.onTouch )\n   }\n\n   onTouch(item, value)\n   {\n       ui.showPopup(item + \" : \"  + value)\n   }\n}",
+        "sample": "SwitchGroup with leading icons"
       },
-      "code_208": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"Top,Center\", 1, 1)\n\n       this.apb = ui.addAppBar(this.main, \"My App\", \"Menu,Primary\")\n       this.apb.setOnMenu( this.showDrawer )\n   \n       // Add an icon buttons to the appbar with onTouch callbacks\n       this.btn1 = ui.addButton(this.apb.layout, \"mail\", \"icon\")\n       this.btn1.setOnTouch(() => { ui.showPopup(\"Messages\", \"Bottom\") })\n\n       this.btn2 = ui.addButton(this.apb.layout, \"person\", \"icon\")\n       this.btn2.setOnTouch(() => { ui.showPopup(\"Account\", \"Bottom\") })\n\n       this.btn3 = ui.addButton(this.apb.layout, \"more_vert\", \"icon\")\n       this.btn3.setOnTouch(() => { ui.showPopup(\"More options\", \"Bottom\") })\n   \n       // Adds a drawer layout\n       this.drawLay = ui.addLayout(null, \"Linear\", \"Top\")\n\n       // Adds a drawer to the app and pass the drawer layout\n       this.drawer = ui.addDrawer(this.drawLay, \"left\", 0.7)\n\n       // Adds a list to the drawer layout. See `List` component for customization.\n       let lst = [\n           [\"folder\", \"Folders\"],\n           [\"music_note\", \"Audios\"],\n           [\"photo\", \"Photos\"]\n       ]\n       this.lstMenu = ui.addList(this.drawLay, lst, \"Icon\", 1 )\n       this.lstMenu.label = \"Main navigation\"\n\n       // Add a callback handler to the list onTouch event\n       this.lstMenu.setOnTouch( this.onTouch )\n   }\n\n   showDrawer()\n   {\n       this.drawer.show()\n   }\n\n   onTouch( title )\n   {\n       // Set the appbar text with the selected list item\n       this.apb.text = title\n\n       // Close the drawer\n       this.drawer.hide()\n   }\n}",
-        "sample": "Appbar with actions"
+      "code_269": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize switchgroup items with leading icon\n       var items = [ \n           [\"music_note\", \"Enable Sound\"],\n           [\"bluetooth\", \"Enable Bluetooth\"],\n           [\"wifi\", \"Enable Wifi\"]\n       ]\n\n       // Adds a switchgroup control to the main layout\n       this.swg = ui.addSwitchGroup(this.main, items, \"Secondary,Icon\", 0.9)\n       this.swg.setOnTouch( this.onTouch )\n\n       // Set the text color to deep-purple\n       this.swg.textColor = \"#673ab7\"\n\n       // Set the icon color to teal\n       this.swg.iconColor = \"#009688\"\n\n       // Set the corner radius\n       this.swg.cornerRadius = 4\n\n       // Set the background color using rgba\n       this.swg.backColor = \"rgba(255, 255, 100, 255)\"\n   }\n\n   onTouch( item, value )\n   {\n       ui.showPopup( item + \" : \"  + value )\n   }\n}",
+        "sample": "With custom styles"
       },
-      "code_209": {
-        "txt": "class Main extends App\n{\n  onStart()\n  {\n      // Creates a fullscreen layout with objects vertically centered.\n      this.main = ui.addLayout(\"main\", \"Linear\", \"Top,FillXY\")\n\n      // Add an appbar to the main layout with menu icon\n      this.apb = ui.addAppBar(this.main, \"My app\", \"Default,Menu\")\n\n      // Add a callback handler when the menu icon is click\n  \t   this.apb.setOnMenu( this.onMenu )\n      \n      // Adds a textfield to the appbar\n      this.tfd = ui.addTextField(this.apb.layout, \"\", \"Search,Small\", 0.9)\n      this.tfd.placeholder = \"Search\"\n      this.tfd.hide()\n\n      // Add a search icon button to the appbar\n      this.searchBtn = ui.addButton(this.apb.layout, \"search\", \"icon\")\n\n      // Add a callback handler when the search button is click\n      this.searchBtn.setOnTouch( this.showSearchField )\n  }\n   \n   onMenu()\n   {\n       // Close the textfield if it is shown\n       if( this.show )\n       {\n\t\tthis.closeSearchField()\n       }\n   }\n\n   showSearchField()\n   {\n       // Display textfield if not shown\n       if( !this.show )\n       {\n           this.tfd.show()\n           this.apb.text = \"\"\n           this.apb.icon = \"arrow_back\"\n           this.show = true;\n       }\n       else\n       {\n           ui.showPopup(\"Search for \"+this.tfd.text)\n       }\n   }\n   \n   closeSearchField()\n   {\n       this.tfd.hide()\n       this.apb.text = \"My app\"\n       this.apb.icon = \"menu\"\n       this.show = false\n   }\n}",
-        "sample": "Appbar with search field"
+      "code_270": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize switchgroup items to be displayed\n       var items = [\"This is item 1\", \"This is item 2\", \"This is item 3\"]\n\n       // Adds a switchgroup control to the main layout\n       this.swg = ui.addSwitchGroup( this.main, items, \"Secondary,Elevated\", 0.9 )\n       this.swg.label = \"My label\"\n       this.swg.elevation = 4\n\n       // Add a callback handler when the value of switchgroup changes\n       this.swg.setOnChange( this.onChange )\n   }\n\n   onChange(items, indexes)\n   {\n       ui.showPopup( items.join(\", \") )\n   }\n}",
+        "sample": "Elevated switchgroup with onChange callback"
+      },
+      "code_271": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Initialize switchgroup items to be displayed\n       var items = [\"This is item 1\", \"This is item 2\", \"This is item 3\"]\n\n       // Adds a switchgroup control to the main layout\n       this.swg = ui.addSwitchGroup( this.main, items, \"Primary,Outlined\", 0.9)\n       this.swg.label = \"My label\"\n       this.swg.cornerRadius = 8\n\n       // Add a callback handler when the value of switchgroup changes\n       this.swg.setOnChange( this.onChange )\n   }\n\n   onChange(items, indexes)\n   {\n       ui.showPopup( items.join(\", \") )\n   }\n}",
+        "sample": "Outlined switchgroup"
       }
     }
   ]
@@ -1179,17 +1581,17 @@
   },
   "trans": {
     "title_124": {
-      "en": " AppBar",
+      "en": " SwitchGroup",
       "de": "",
       "es": ""
     },
     "text_126": {
-      "en": "In UI development, an AppBar is a common user interface element found at the top of the screen in mobile applications. It typically contains the app's title, navigation icons, and other actions. In Material Design, an AppBar follows guidelines such as elevation, color, and typography for consistency.",
+      "en": "In UI development, a SwitchGroup refers to a collection or grouping of individual switches. Such a grouping is used to represent related settings or options that can be toggle on or off.",
       "de": "",
       "es": ""
     },
-    "text_130": {
-      "en": "Add an AppBar into your app using the `addAppBar` method like this:",
+    "text_129": {
+      "en": "Add a switchgroup into your app using the `addSwitchGroup` method like this:",
       "de": "",
       "es": ""
     },
@@ -1199,61 +1601,171 @@
       "es": ""
     },
     "text_138": {
-      "en": "Here are the available setters and getters of the AppBar Component.",
+      "en": "Here are the available setter and getter properties of the SwitchGroup Component.",
       "de": "",
       "es": ""
     },
-    "heading_184": {
+    "heading_192": {
       "en": "Methods",
       "de": "",
       "es": ""
     },
-    "text_185": {
-      "en": "Here are the methods available for AppBar Component",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_186": {
-      "en": "setOnTouch",
-      "de": "",
-      "es": ""
-    },
-    "text_187": {
-      "en": "Adds a callback handler when the component is touch.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_190": {
-      "en": "setOnMenu",
-      "de": "",
-      "es": ""
-    },
-    "text_191": {
-      "en": "Sets a function to be called when the user clicks the menu",
+    "text_193": {
+      "en": "Here the methods available for the SwitchGroup Component.",
       "de": "",
       "es": ""
     },
     "subtitle_194": {
-      "en": "addLayout",
+      "en": "setOnTouch",
       "de": "",
       "es": ""
     },
     "text_195": {
-      "en": "Adds a layout for additional controls at the right of the appbar",
+      "en": "Sets a callback function when the switch item is touch.",
       "de": "",
       "es": ""
     },
     "subtitle_198": {
-      "en": "setCornerRadius",
+      "en": "setOnChange",
       "de": "",
       "es": ""
     },
     "text_199": {
-      "en": "Sets the corner radius of the appbar.",
+      "en": "Adds a callback function to be called whent there is a change of value.",
       "de": "",
       "es": ""
     },
-    "heading_206": {
+    "subtitle_202": {
+      "en": "setValueByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_203": {
+      "en": "Sets the value of the corresponding item in the list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_207": {
+      "en": "getValueByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_208": {
+      "en": "Returns whether an item is check or unchecked.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_212": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_213": {
+      "en": "Updates the list on the switchgroup component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_216": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_217": {
+      "en": "Adds or insert an item in the SwitchGroup list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_223": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_224": {
+      "en": "Removes an item in the SwitchGroup by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_227": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_228": {
+      "en": "Removes an item in the SwitchGroup component by its title name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_231": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_232": {
+      "en": "Removes the last item in the SwitchGroup list. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_234": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_235": {
+      "en": "Removes the first item in SwitchGroup list. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_237": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_238": {
+      "en": "Enable or disable an item in the switchgroup component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_242": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_243": {
+      "en": "Get the enabled state of an item in the switch group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_247": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_248": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_251": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_252": {
+      "en": "Sets the corner radius of the switchgroup container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_259": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_260": {
+      "en": "Sets the padding of the switch item. See `itemPadding` property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "heading_267": {
       "en": "Examples",
       "de": "",
       "es": ""
@@ -1420,7 +1932,7 @@
     }
   }
 };
-        const ASSETPATH = 'ui/Controls/AppBar';
+        const ASSETPATH = 'ui/Controls/SwitchGroup';
         function initializeCodes() {
             let codes = document.getElementsByTagName("CODE"),
                 button;
