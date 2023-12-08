@@ -313,7 +313,7 @@ function buildMainPage( home ) {
 
             if(home !== "home") {
                 htmlStr += `
-                <nav class="navbar navbar-dark bg-dark fixed-top d-flex ${goBackBtnNav?"":"justify-content-center"}">
+                <nav class="navbar navbar-dark bg-dark fixed-top d-flex ${(goBackBtnNav || vsDpd)?"":"justify-content-center"}">
                     <div class="">
                         ${goBackBtnNav}
                         <a class="navbar-brand bold" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
