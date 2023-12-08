@@ -277,6 +277,7 @@ function buildMainPage( home ) {
             var renderAsList = !layouts.tutorial.card;
 
             let goBackBtnNav = "";
+            let vsDpd = ""; // version dropdown
 
             if(layouts.tutorial.homeLink !== null) {
                 goBackBtnNav = `
@@ -286,6 +287,30 @@ function buildMainPage( home ) {
                 `;
             }
 
+            if( layouts.tutorial.header.version ) {
+                vsDpd = `
+                        <div class="btn-group version-dropdown">
+                            <button type="button" class="btn bg-dark text-light">${layouts.tutorial.header.version}</button>
+                            <button type="button" class="btn bg-dark text-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                                <span class="sr-only">UI Version</span>
+                            </button>
+                            <div class="dropdown-menu bg-dark">`;
+                if(layouts.tutorial.header.versions && layouts.tutorial.header.versions.length) {
+                    
+                    layouts.tutorial.header.versions.forEach(m => {
+                        const v = `../ui-${m.trim()}/ui.html`;
+                        vsDpd += 
+                                `<a class="dropdown-item text-light" href="${v}">${m}</a>`;
+                    });
+                    
+                } else {
+                    vsDpd += `<a class="dropdown-item text-light" href="#">No other version available</a>`;
+                }
+                vsDpd += `
+                            </div>
+                        </div>`;
+            }
+
             if(home !== "home") {
                 htmlStr += `
                 <nav class="navbar navbar-dark bg-dark fixed-top d-flex ${goBackBtnNav?"":"justify-content-center"}">
@@ -293,12 +318,14 @@ function buildMainPage( home ) {
                         ${goBackBtnNav}
                         <a class="navbar-brand bold" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
                     </div>
+                    ${vsDpd}
                 </nav>
                 `;
             }
 
             htmlStr +=`
-                <section class="jumbotron text-center bg-dark main-page-header" style="background-image:url('./img/${ layouts.tutorial.header.img }'); background-size:cover;background-position:left; ${ (layouts.tutorial.header.css|| "") }">  
+                <section class="jumbotron text-center bg-dark main-page-header" style="background-image:url('./img/${ layouts.tutorial.header.img }'); background-size:cover;background-position:top; ${ (layouts.tutorial.header.css|| "") }">  
+                    <img class="header-cover-sm" src="./img/${layouts.tutorial.header.img}"/>
                     <div class="xcontainer">
             `;
 
@@ -312,52 +339,31 @@ function buildMainPage( home ) {
             }
 
             htmlStr +=`
-                        <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}">${T(layouts.tutorial.header.title)}</h1>
+                        <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}" style="${(layouts.tutorial.header.titleStyle || "")}">${T(layouts.tutorial.header.title)}</h1>
             `;
 
-            if( layouts.tutorial.header.version ) {
-                htmlStr += `
-                        <div class="btn-group">
-                            <button type="button" class="btn bg-dark text-light">${layouts.tutorial.header.version}</button>
-                            <button type="button" class="btn bg-dark text-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
-                                <span class="sr-only">UI Version</span>
-                            </button>
-                            <div class="dropdown-menu bg-dark">`;
-                if(layouts.tutorial.header.versions && layouts.tutorial.header.versions.length) {
-                    
-                    layouts.tutorial.header.versions.forEach(m => {
-                        const v = `../ui-${m.trim()}/ui.html`;
-                        htmlStr += 
-                                `<a class="dropdown-item text-light" href="${v}">${m}</a>`;
-                    });
-                    
-                } else {
-                    htmlStr += `<a class="dropdown-item text-light" href="#">No other version available</a>`;
-                }
-                htmlStr += `
-                            </div>
-                        </div>`;
-            }
+            if( layouts.tutorial.header.version ) htmlStr += vsDpd;
 
             htmlStr += `
-                        <p class="lead" lbl="introtext" style="color:#cfd8dc;">${ T(layouts.tutorial.header.subtitle) }</p>
+                        <p class="lead" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "color: #cfd8dc;")}">${ T(layouts.tutorial.header.subtitle || "") }</p>
                     </div>
                 </section>
             `;
 
             if(layouts.tutorial.search !== false) {
                 htmlStr += `
-                <div class="container search-container">
-                    <div class="py-4 row ${renderAsList?"":"ml-3 mr-3"}">
-                        <div class="col-lg-5 col-md-8 col-sm-12">
-                            <h4 class="card-subtitle mb-3 text-light"><strong>Search</strong></h4>
-                            <input type="text" class="form-control bg-dark text-light" placeholder="Enter keyword" onkeyup="onComponentSearch(this, '${home}')">
-                            <small id="results-help" class="form-text text-muted mt-2" style="display:none;"></small>
+                    <div class="container search-container">
+                        <div class="container-fluid">
+                            <div class="search-box-div">
+                                <h4 class="card-subtitle mb-3 text-light"><strong>Search</strong></h4>
+                                <input type="text" class="form-control bg-dark text-light" placeholder="Enter keyword" onkeyup="onComponentSearch(this, '${home}')">
+                                <small id="results-help" class="form-text text-muted mt-2" style="display:none;"></small>
+                            </div>
                         </div>
                     </div>
-                </div>
                 `;
             }
+            else htmlStr += `<hr class="hair-line">`;
 
             htmlStr += `<div class="container">`;
 
@@ -366,7 +372,7 @@ function buildMainPage( home ) {
             components_lst = false;
 
             htmlStr += `
-                    <div class="album py-5" style="background-color:#121212;">
+                    <div class="album py-3" style="background-color:#121212;">
                         <div class="container-fluid">
             `;
 
@@ -392,9 +398,9 @@ function buildMainPage( home ) {
                                     <div class="d-flex w-100 justify-content-between">
                                         <h5 class="mb-1 text-light card-title">${ T(element.card.text) }</h5>
                                     </div>
-                                    ${element.card.desc ? "<p class=\"mb-1\">"+T(element.card.desc)+"</p>" : ""}
                                 </a>
                     `;
+                    // ${element.card.desc ? "<p class=\"mb-1\">"+T(element.card.desc)+"</p>" : ""}
                 } else {
                     htmlStr += `
                                 <div class="col-md-4 col-lg-3 col-sm-6">
@@ -451,7 +457,7 @@ function buildTutorial( tutorial, onReady, page, cmp ) {
                     <h5 class="left-panel-title" style="text-align: center;">
                         <a href="../${hmeDir}.html?page=0&home=true" class="home-name">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
-                            <span class="bold">${layouts.tutorial.homeName}</span>
+                            <span class="bold">${layouts.tutorial.homeName || "Go Back"}</span>
                         </a>
                     </h5>
             `;
