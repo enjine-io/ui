@@ -69,7 +69,7 @@ function createPage( tutorial, step ) {
             case "ol":
                 str += '<ol "id="'+z+'">';
                 for (var x = 0; x < step[z].content.length; x++) {
-                    str += '<li class="jdocs-list-item-ol">'
+                    str += '<li class="jdocs-list-item-ol">';
                     if( step[z].content[x].includes("~") ) str = Bullets(step[z].content[x], str);
                     else str += T(step[z].content[x]);
                     str += '</li>';
@@ -79,7 +79,7 @@ function createPage( tutorial, step ) {
             case "ul":
                 str += '<ul "id="'+z+'">';
                 for (var x = 0; x < step[z].content.length; x++) {
-                    str += '<li class="jdocs-list-item-ul">'
+                    str += '<li class="jdocs-list-item-ul">';
                     if( step[z].content[x].includes("~") ) str = Bullets(step[z].content[x], str);
                     else str += _S( T(step[z].content[x]) );
                     str += '</li>';

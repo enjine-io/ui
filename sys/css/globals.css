@@ -350,7 +350,7 @@ pre {
     padding:3px 4px;
     border-radius:2px;
     background-color:rgba(0,0,0,0.2);
-    font:98% monospace;
+    font: 0.9rem monospace;
     color:orange;
 }
 
@@ -746,8 +746,10 @@ table, tr, td {
 }
 
 .jdocs-text {
-    text-align: justify;
     margin: 2rem 0rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #cfd8dc;
 }
 
 .jdocs-tip {
@@ -755,7 +757,7 @@ table, tr, td {
     padding: 1rem;
     background-color: var(--primary-color);
     color: #fff;
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     margin: 2rem 0rem;
 }
 
@@ -811,7 +813,6 @@ table, tr, td {
 .jdocs-button {
     margin: 1rem 4px;
     padding: 0.5rem 2rem;
-    text-transform: uppercase;
     min-width: 5rem;
 }
 
