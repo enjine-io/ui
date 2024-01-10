@@ -109,9 +109,8 @@ function onTutorialLoaded() {
     for(let i=0; i<runBtns.length; i++) {
         let type = runBtns[i].getAttribute("code-type");
 
-        // hijack type and platform since this project is ui
+        // hijack the type is it is hybrid app
         type = "hybrid";
-
         // if(isDSExt && (type == "ds" || type == "hybrid")) runBtns[i].classList.remove("display-none");
         if(ptf == "web" && type == "hybrid") runBtns[i].classList.remove("display-none");
     }
@@ -124,17 +123,16 @@ function onPageLoaded() {
 
 
 /* UTILITIES */
-function togglePageTheme( e ) {
-    if(e  && e.preventDefault ) e.preventDefault();
+function togglePageTheme() {
     let theme = localStorage.getItem("jdocs_theme");
     if( !theme ) theme = "dark";
     theme = theme == "light" ? "dark" : "light";
     localStorage.setItem("jdocs_theme", theme);
-    document.getElementById("theme_css").href =  "/sys/css/" + theme + ".css";
+    document.getElementById("theme_css").href =  SYSPATH + "/sys/css/" + theme + ".css";
 }
 
 function setTheme( thm ) {
     let theme = localStorage.getItem("jdocs_theme");
     theme = thm || theme || "dark";
-    document.getElementById("theme_css").href =  "/sys/css/" + theme + ".css";
+    document.getElementById("theme_css").href =  SYSPATH + "/sys/css/" + theme + ".css";
 }
