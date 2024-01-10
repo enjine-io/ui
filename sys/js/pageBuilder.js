@@ -13,7 +13,6 @@ let _running = false,
     activeLink, activeNavLink, navList, navIsClick = false,
     // demoUrl = "http://localhost:3000";
     demoUrl = "https://enjine-jdocs-3a9b16e42b4b.herokuapp.com";
-    let isDSExt = false;
 
 function createComponent(key, val) {
     var str = "";
@@ -88,7 +87,7 @@ function createPage( tutorial, step ) {
                 break;
             case "table-header":
                 str += `
-                                <table class="table table-dark table-striped jdocs-table">
+                                <table class="table table-striped jdocs-table">
                                     <tr class="jdocs-table-header">`;
                 var ss = step[z].content//.split("|")
                 for (var x = 0; x < ss.length; x++) {
@@ -141,7 +140,6 @@ function createPage( tutorial, step ) {
                 }
                 break;
             case "code":
-
                 const json = step[z];
                 if( json.sample ) {
                     str +=`
@@ -150,7 +148,7 @@ function createPage( tutorial, step ) {
                 <textarea id="${z}" class="actual-code" data-id="${z}">${json.txt}
                 </textarea>
                 <div class="sample-code-footer">
-                    <button class="btn btn-dark sample-code-actions" onclick="runSampleCode('${z}')" title="Run [Ctrl+S]">
+                    <button class="btn btn-dark sample-code-actions run-code-btn display-none" code-type="${step[z].type}" onclick="runSampleCode('${z}')" title="Run [Ctrl+S]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
                             <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
                         </svg>
@@ -173,10 +171,10 @@ function createPage( tutorial, step ) {
             `;
                 }
                 else
-                    str += `\n<pre class="jdocs-sample-code" style="${css}"><code>${ unescape(T(step[z].txt)) }</code></pre>\n`;
+                    str += `\n<pre class="jdocs-sample-code"><code>${ unescape(T(step[z].txt)) }</code></pre>\n`;
                 break;
             case "hr":
-                str += `\n<div class="jdocs-hr"><div class="jdocs-hr-line" style="${css}"></div></div>\n`;
+                str += `\n<div class="jdocs-hr"><div class="jdocs-hr-line"></div></div>\n`;
                 break;
             case "br":
                 str += "<br/>";
@@ -263,7 +261,7 @@ function buildHome( home ) {
     )});
 }
 
-function buildMainPage( home ) {
+function buildMainPage(home, onLoad) {
     //console.log( home )
 
     //lang = "en";//TEMP GLOBAL OVERRIDE *Remove*
@@ -279,9 +277,15 @@ function buildMainPage( home ) {
             let goBackBtnNav = "";
             let vsDpd = ""; // version dropdown
 
+            const thmBtn = `
+                <a class="btn theme-btn" id="theme-button" href="" role="button" onclick="togglePageTheme(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M480.067-100.001q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.21-51.314-51.291-81.247-120.629-29.933-69.337-29.933-148.173t29.92-148.204q29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t148.204 29.92q69.369 29.92 120.682 81.21 51.314 51.291 81.247 120.629 29.933 69.337 29.933 148.173t-29.92 148.204q-29.92 69.369-81.21 120.682-51.291 51.314-120.629 81.247-69.337 29.933-148.173 29.933Zm29.932-61.845q121.308-11.538 205.655-101.423Q800-353.154 800-480q0-126.846-83.962-216.346T509.999-798.154v636.308Z"/></svg>
+                </a>
+            `;
+
             if(layouts.tutorial.homeLink !== null) {
                 goBackBtnNav = `
-                <a class="btn btn-link text-white float-left" id="menu-button" href="../${layouts.tutorial.homeLink}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button">
+                <a class="btn btn-link navbar-btn-back" id="menu-button" href="../${layouts.tutorial.homeLink}.html?id=${layouts.tutorial.homeLink}&page=0&home=true" role="button">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
                 </a>
                 `;
@@ -290,41 +294,45 @@ function buildMainPage( home ) {
             if( layouts.tutorial.header.version ) {
                 vsDpd = `
                         <div class="btn-group version-dropdown">
-                            <button type="button" class="btn bg-dark text-light">${layouts.tutorial.header.version}</button>
-                            <button type="button" class="btn bg-dark text-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
+                            <button type="button" class="btn btn-dropdown">${layouts.tutorial.header.version}</button>
+                            <button type="button" class="btn btn-dropdown dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
                                 <span class="sr-only">UI Version</span>
                             </button>
-                            <div class="dropdown-menu bg-dark">`;
+                            <div class="dropdown-menu btn-dropdown">`;
                 if(layouts.tutorial.header.versions && layouts.tutorial.header.versions.length) {
                     
                     layouts.tutorial.header.versions.forEach(m => {
                         const v = `../ui-${m.trim()}/ui.html`;
                         vsDpd += 
-                                `<a class="dropdown-item text-light" href="${v}">${m}</a>`;
+                                `<a class="dropdown-item" href="${v}">${m}</a>`;
                     });
                     
                 } else {
-                    vsDpd += `<a class="dropdown-item text-light" href="#">No other version available</a>`;
+                    vsDpd += `<a class="dropdown-item" href="#">No other version available</a>`;
                 }
                 vsDpd += `
                             </div>
                         </div>`;
             }
 
+            let rightCtrls = '<div class="right-controls">'+vsDpd+thmBtn+'</div>'
+
+            htmlStr += rightCtrls;
+
             if(home !== "home") {
                 htmlStr += `
-                <nav class="navbar navbar-dark bg-dark fixed-top d-flex ${(goBackBtnNav || vsDpd)?"":"justify-content-center"}">
+                <nav class="navbar navbar-dark fixed-top d-flex ${(goBackBtnNav || vsDpd)?"":"justify-content-center"}">
                     <div class="">
                         ${goBackBtnNav}
                         <a class="navbar-brand bold" role="button" id="doc-title">${T(layouts.tutorial.header.title)}</a>
                     </div>
-                    ${vsDpd}
+                    <div class="right-nav-div">${rightCtrls}</div>
                 </nav>
                 `;
             }
 
             htmlStr +=`
-                <section class="jumbotron text-center bg-dark main-page-header" style="background-image:url('./img/${ layouts.tutorial.header.img }'); background-size:cover;background-position:top; ${ (layouts.tutorial.header.css|| "") }">  
+                <section class="jumbotron text-center main-page-header" style="background-image:url('./img/${ layouts.tutorial.header.img }'); background-size:cover;background-position:top; ${ (layouts.tutorial.header.css|| "") }">  
                     <img class="header-cover-sm" src="./img/${layouts.tutorial.header.img}"/>
                     <div class="xcontainer">
             `;
@@ -342,10 +350,8 @@ function buildMainPage( home ) {
                         <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}" style="${(layouts.tutorial.header.titleStyle || "")}">${T(layouts.tutorial.header.title)}</h1>
             `;
 
-            if( layouts.tutorial.header.version ) htmlStr += vsDpd;
-
             htmlStr += `
-                        <p class="lead" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "color: #cfd8dc;")}">${ T(layouts.tutorial.header.subtitle || "") }</p>
+                        <p class="lead tagline" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "")}">${ T(layouts.tutorial.header.subtitle || "") }</p>
                     </div>
                 </section>
             `;
@@ -355,8 +361,8 @@ function buildMainPage( home ) {
                     <div class="container search-container">
                         <div class="container-fluid">
                             <div class="search-box-div">
-                                <h4 class="card-subtitle mb-3 text-light"><strong>Search</strong></h4>
-                                <input type="text" class="form-control bg-dark text-light" placeholder="Enter keyword" onkeyup="onComponentSearch(this, '${home}')">
+                                <h4 class="card-subtitle mb-3"><strong>Search</strong></h4>
+                                <input type="text" class="form-control" placeholder="Enter keyword" onkeyup="onComponentSearch(this, '${home}')">
                                 <small id="results-help" class="form-text text-muted mt-2" style="display:none;"></small>
                             </div>
                         </div>
@@ -372,7 +378,7 @@ function buildMainPage( home ) {
             components_lst = false;
 
             htmlStr += `
-                    <div class="album py-3" style="background-color:#121212;">
+                    <div class="album py-3">
                         <div class="container-fluid">
             `;
 
@@ -394,9 +400,9 @@ function buildMainPage( home ) {
                 links.push( './?id='+element.card.folder+'&page=0&home='+_x+'&cmp='+_cmp )
                 if( renderAsList === true ) {
                     htmlStr += `
-                                <a href="./${(element.card.folder.split("/").pop())}/${(element.card.folder.split("/").pop())}.html?id=${element.card.folder}&page=0&home=${element.card.isHome}&cmp=${element.card.cmp}" class="list-group-item list-group-item-action bg-dark" style="background-color:#1d2124 !important;">
+                                <a href="./${(element.card.folder.split("/").pop())}/${(element.card.folder.split("/").pop())}.html?id=${element.card.folder}&page=0&home=${element.card.isHome}&cmp=${element.card.cmp}&p=${ptf}" class="list-group-item list-group-item-action">
                                     <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1 text-light card-title">${ T(element.card.text) }</h5>
+                                        <h5 class="mb-1 card-title">${ T(element.card.text) }</h5>
                                     </div>
                                 </a>
                     `;
@@ -404,10 +410,10 @@ function buildMainPage( home ) {
                 } else {
                     htmlStr += `
                                 <div class="col-md-4 col-lg-3 col-sm-6">
-                                    <div class="card mb-4 box-shadow bg-dark" onclick="document.location.href='./${(element.card.folder.split("/").pop())}/${(element.card.folder.split("/").pop())}.html?id=${element.card.folder}&page=0&home=${element.card.isHome}&cmp=${element.card.cmp}'">
+                                    <div class="card mb-4 box-shadow" onclick="document.location.href='./${(element.card.folder.split("/").pop())}/${(element.card.folder.split("/").pop())}.html?id=${element.card.folder}&page=0&home=${element.card.isHome}&cmp=${element.card.cmp}&p=${ptf}'">
                                         <div class="card-img-top" style="background-image:url('./img/${element.card.img}');"></div>
                                         <div class="card-body">
-                                        <h3 class="card-title text-light">${ T(element.card.text) }</h3>
+                                        <h3 class="card-title">${ T(element.card.text) }</h3>
                                         <h6 class="card-subtitle mb-2">${ T(element.card.desc) }</h6>
                                         </div>
                                     </div>
@@ -424,12 +430,14 @@ function buildMainPage( home ) {
             `;
 
             document.getElementById("main").innerHTML = htmlStr;
-            document.getElementById("body").style = "background-color:#121212; margin-bottom: 100px;";
+            // document.getElementById("body").style = "background-color:#121212; ";
+
+            if(typeof onLoad == "function") onLoad();
         }
     )})
 }
 
-function buildTutorial( tutorial, onReady, page, cmp ) {
+function buildTutorial(tutorial, onLoad, page, cmp) {
     var htmlStr = "";
 
     getTranslation( tutorial, function() { getLayouts( tutorial, function() {
@@ -437,34 +445,47 @@ function buildTutorial( tutorial, onReady, page, cmp ) {
 
         let hmeDir = layouts.tutorial.homeLink ? layouts.tutorial.homeLink.split("/").pop() : "";
 
+        const thmBtn = `
+            <a class="btn theme-btn" id="theme-button" href="#" role="button" onclick="togglePageTheme(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M480.067-100.001q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.21-51.314-51.291-81.247-120.629-29.933-69.337-29.933-148.173t29.92-148.204q29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t148.204 29.92q69.369 29.92 120.682 81.21 51.314 51.291 81.247 120.629 29.933 69.337 29.933 148.173t-29.92 148.204q-29.92 69.369-81.21 120.682-51.291 51.314-120.629 81.247-69.337 29.933-148.173 29.933Zm29.932-61.845q121.308-11.538 205.655-101.423Q800-353.154 800-480q0-126.846-83.962-216.346T509.999-798.154v636.308Z"/></svg>
+            </a>
+        `;
+
         htmlStr += `
         <div class="xcontainer full-height">
-            <nav id="navbar" class="navbar navbar-dark bg-dark fixed-top" style="display: none;">
-                <div>
-                    <button class="btn btn-link text-white" id="menu-button" onclick="openLeftPanel(event)">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                        </svg>
-                    </button>
-                    <a class="navbar-brand bold" href="#" id="doc-title"></a>
+            <nav id="navbar" class="navbar navbar-dark fixed-top" style="display: none;">
+                <div style = "display:flex;justify-content:space-between;">
+                    <div>
+                        <a href="../${hmeDir}.html?page=0&home=true&p=${ptf}" class="btn btn-link" role="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                        </a>
+                        <button class="btn btn-link" id="menu-button" onclick="openLeftPanel(event)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>
+                        <a class="navbar-brand bold" href="#" id="doc-title"></a>
+                    </div>
+                    ${thmBtn}
                 </div>
             </nav>
             <div id="main-page" class="h-100">
+                ${thmBtn}
                 <div class="left-panel" id="left-panel">`;
         
         if( layouts.tutorial.homeName ) {
             htmlStr += `
                     <h5 class="left-panel-title" style="text-align: center;">
-                        <a href="../${hmeDir}.html?page=0&home=true" class="home-name">
+                        <a href="../${hmeDir}.html?page=0&home=true&p=${ptf}" class="home-name">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
                             <span class="bold">${layouts.tutorial.homeName || "Go Back"}</span>
                         </a>
                     </h5>
             `;
         }
-                    
+        
         htmlStr += `<div style="padding: 0px 12px;">
-                        <input type="text" onkeyup="onMethodSearch( this )" class="form-control" placeholder="Search..." style="background-color:#212529;color:white;margin:48px 0px 20px 0px;">
+                        <input type="text" onkeyup="onMethodSearch( this )" class="form-control tutorial-search-box" placeholder="Search...">
                     </div>
                     <div id="result-links" class="nav-list"></div>
                     <nav class="nav flex-column" style="width:100%;text-align:left;" id="left-panel-nav">
@@ -514,16 +535,16 @@ function buildTutorial( tutorial, onReady, page, cmp ) {
         </div>
         <div id="mobile-view" class="right-panel">
             <div class="right-panel-content smartphone">
-                <iframe src="${ demoUrl }/index" id="demo-frame" onload="onIframeLoaded()"></iframe>
+                <iframe src="${demoUrl}/index" id="demo-frame" onload="onIframeLoaded()"></iframe>
                 <div id="demo-loader" class="smartphone-loading"><div class="loader"></div></div>
             </div>
             <div class="mobile-actions">
-                <button class="btn btn-dark btn-icon" onclick="showMobileOutput(false)">
+                <button class="btn" onclick="showMobileOutput(false)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                     </svg>
                 </button>
-                <button class="btn btn-dark" onclick="toggleTheme()">
+                <button class="btn" onclick="toggleTheme()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                         <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
                     </svg>
@@ -537,7 +558,7 @@ function buildTutorial( tutorial, onReady, page, cmp ) {
         //Apply page styles.
         document.getElementById("main").innerHTML = htmlStr;
         document.getElementById("body").style.display = "block";
-        document.getElementById("body").style.cssText = layouts.tutorial.style;
+        // document.getElementById("body").style.cssText = layouts.tutorial.style;
 
         // update doc-title for small and medium devices navigation bar title
         document.getElementById("doc-title").innerText = docTitle;
@@ -553,7 +574,7 @@ function buildTutorial( tutorial, onReady, page, cmp ) {
 
         //Display first page.
         setTimeout(function() { TransPage(1) }, 10);
-        if (onReady != null) onReady();
+        if(typeof onLoad == "function") onLoad();
     })})
 }
 
@@ -716,24 +737,11 @@ function renderLeftNavigation( navs ) {
         navhtml += `
                 <div id="${id}-links" class="nav-list">`
         for( var t in nav.navs ) {
-            // let isExample = nav.navs[t].toLowerCase().includes("example");
-            // let text = nav.navs[t];
-            // if( isExample ) {
-            //     text = text.toLowerCase().split("example")[1].replace(/[^a-zA-Z0-9]/g, " ");
-            // }   
-            // navhtml += `
-            //         <a href="#${nav.navs[t].replace(/ /g,'-')}" class="nav-list-items ${isExample?"capitalize":""}" id="${nav.navs[t].toLowerCase().trim()}" data-parent="${id}-links" data-group="nav-group-${id}">${text}</a>`
-        
-            //let isExample = nav.navs[t].toLowerCase().includes("example");
             let text = nav.navs[t];
-            // if( isExample ) {
-            //     text = text.toLowerCase().split("example")[1].replace(/[^a-zA-Z0-9]/g, " ");
-            // }   
             navhtml += `
-                    <a href="#${nav.navs[t].replace(/ /g,'-')}" class="nav-list-items" id="${nav.navs[t].toLowerCase().trim()}" data-parent="${id}-links" data-group="nav-group-${id}">${text}</a>`
+                    <a href="#${nav.navs[t].replace(/ /g,'-')}" class="nav-list-items" id="nav-link-${nav.navs[t].toLowerCase().trim()}" data-parent="${id}-links" data-group="nav-group-${id}">${text}</a>`
         }
-        navhtml += `
-                </div>`
+        navhtml += `</div>`
     }
     document.getElementById("left-panel-nav").innerHTML += navhtml
 }
@@ -818,7 +826,8 @@ function initLeftNavigation() {
     var navs = document.getElementsByClassName("nav-link");
     activeLink = navs[0];
     for(let i=0; i<navs.length; i++) {
-        navs[i].addEventListener( "click", function() {
+        navs[i].addEventListener( "click", function( e ) {
+            e.preventDefault();
             if( !this.classList.contains("active") ) {
                 this.classList.add("active");
                 if(activeLink && activeLink !== this) activeLink.classList.remove("active");
@@ -832,7 +841,11 @@ function initLeftNavigation() {
                 if( this.innerText == "Methods" || this.innerText == "Examples" ) {
                     //
                 }
-                else closeLeftPanel()
+                else closeLeftPanel();
+
+                // scroll to element
+                scrollIntoElement( this.getAttribute('href').substring(1) );
+
             } else {
                 this.classList.remove( "active" );
                 activeLink = null;
@@ -844,6 +857,8 @@ function initLeftNavigation() {
     var navsLinks = document.getElementsByClassName( "nav-list-items" );
     for(let i=0; i< navsLinks.length; i++) {
         navsLinks[i].addEventListener( "click", function( e ) {
+
+            e.preventDefault();
             
             navIsClick = true;
             setTimeout(() => {
@@ -857,28 +872,29 @@ function initLeftNavigation() {
                 }
                 activeNavLink = this;
                 closeLeftPanel();
+
+                // scroll to element
+                scrollIntoElement( this.getAttribute('href').substring(1) );
             }
         })
     }
 
     // observe the size of the main panel
-    if ('ResizeObserver' in window) {
+    if('ResizeObserver' in window) {
         // ResizeObserver is supported
-  
         const resizeObserver = new ResizeObserver((entries) => {
             // Handle resize events here
-
             entries.forEach((entry) => {
                 const {target, contentRect} = entry;
                 const mainPanel = document.getElementById("main-content");
                 const navbar = document.getElementById("navbar");
-                if(contentRect.width <= 768 && !isSmallDevice) {
+                if(contentRect.width <= 775 && !isSmallDevice) {
                     isSmallDevice = true;
                     mainPanel.style.width = "100%";
                     closeLeftPanel();
                     navbar.style.display = "block";
                 }
-                else if(contentRect.width > 768 && isSmallDevice) {
+                else if(contentRect.width > 774 && isSmallDevice) {
                     isSmallDevice = false;
                     mainPanel.style.width = "calc(100% - 16rem)";
                     openLeftPanel();
@@ -886,34 +902,19 @@ function initLeftNavigation() {
                 }
             });
         });
-  
         const targetElement = document.getElementById('main-page');
         resizeObserver.observe(targetElement);
     } else {
         // ResizeObserver is not supported
         console.log('ResizeObserver is not supported in this browser.');
     }
+}
 
-    return;
-
-    // Create a condition that targets viewports at least 768px wide
-    var mediaQuery = window.matchMedia('(min-width: 992px)')
-
-    function _check( e )
-    {
-        if( e.matches )
-        {
-            isSmallDevice = false
-            openLeftPanel()
-        }
-        else {
-            isSmallDevice = true
-            closeLeftPanel()
-        }
-    }
-    mediaQuery.addListener( _check )
-
-    _check(mediaQuery)
+function scrollIntoElement( el ) {
+    if(typeof el == "string") el = document.getElementById( el );
+    let d = 0;
+    while( el ) { d += el.offsetTop; el = el.offsetParent; }
+    window.scrollTo({ top: d-100, behavior: "smooth" });
 }
 
 function onComponentSearch( e, home )
@@ -1053,7 +1054,7 @@ function showMobileOutput( show ) {
 
 function runSampleCode(id, value) {
 
-    if(isDSExt === true) return runDSSample(id, value);
+    // if(isDSExt === true) return runDSSample(id, value);
 
     showMobileOutput( true );
     showDemoLoader( true );

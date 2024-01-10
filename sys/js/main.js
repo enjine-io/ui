@@ -84,7 +84,7 @@ document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
 //populateLabels(lang);
 
 var params = (new URL(document.location)).searchParams;
-var tutorial =  params.get("id") 
+var tutorial =  params.get("id")
 var page =  params.get("page")
 var isHome = params.get("home") || ""
 var cmp = params.get("cmp") || ""

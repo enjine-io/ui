@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
-    <link rel="icon" href="../../../../sys/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/sys/img/favicon.ico" />
+    <link rel="icon" href="/sys/img/favicon.ico">
 
     <!-- Bootstrap core CSS -->
-    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sys/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,28 +27,15 @@
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="../../../../sys/css/globals.css" rel="stylesheet">
-    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+    <link href="/sys/css/globals.css" rel="stylesheet">
+    <link href="/sys/css/animations.css" rel="stylesheet">
 </head>
 
 <body id="body">
 
+    <link rel="stylesheet" id="theme_css" href="/sys/css/dark.css">
+
     <main role="main" id="main" class="full-height"></main>
-
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../../../sys/js/codecolour.js"></script>
-    <script src="../../../../sys/js/globalTranslations.js"></script>
-    <script src="../../../../sys/js/pageBuilder.js"></script>
-
-    <!-- <script src="../sys/js/main.js"></script> -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
-    </script>
-    <script src="../../../../sys/js/popper.min.js"></script>
-    <script src="../../../../sys/js/bootstrap.min.js"></script>
-    <script src="../../../../sys/js/holder.min.js"></script>
 
     <script>
         const LAYOUTDATA = {
@@ -431,99 +418,23 @@
   }
 };
         const ASSETPATH = 'ui/Controls/BottomSheet';
-        function initializeCodes() {
-            let codes = document.getElementsByTagName("CODE"),
-                button;
-            for(let z = 0; z < codes.length; z++) {
-                button = codes[z].children[0];
-                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
-                    button._code =  codes[z].innerText;
-                    button.addEventListener( "click", function() {
-                        navigator.clipboard.writeText( this._code );
-                        ShowPopup();
-                    })
-                }
-            }
-        }
-        initializeCodes();
-
-        /****************************************
-        * Written for SoftCogs Ltd
-        * Copyright (C) SoftCogs Ltd. 2018
-        */
-
-        _languages = null; _curLang = "en";
-
-        function T( id, lang )
-        {
-            var tr = _languages ? _languages.trans[id] : null;
-            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
-            return (tr ? tr : _languages.trans[id]["en"]); 
-        }
-
-        function getLanguage() 
-        {
-            var params = (new URL(document.location)).searchParams;
-            if( params.get("lang") ) {
-                _curLang = params.get("lang")
-                setLanguage( _curLang )
-            }
-            else 
-            {   
-                if (window.localStorage.getItem("language") )
-                    _curLang = window.localStorage.getItem("language");            
-                else 
-                    _curLang =  "en";
-            }
-        }
-
-        function setLanguage(newLang)
-        {
-            if (newLang != null) {
-                window.localStorage.setItem("language", newLang);
-                _curLang = newLang;
-            }
-        }
-
-        function getLayouts(folder, onReady) {
-            layouts.tutorial = LAYOUTDATA;
-            if (onReady != null) onReady();
-        }
-
-        function getTranslation(folder, onReady) {
-            _languages = LANGDATA;
-            if (onReady != null) onReady();
-        }
-
-        getLanguage();
-        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
-
-        var params = (new URL(document.location)).searchParams;
-        var tutorial =  params.get("id") || "_";
-        var page =  params.get("page") || "0";
-        var isHome = params.get("home");
-        var cmp = params.get("cmp");
-
-        if(typeof LAYOUTDATA.index == "object") {
-            if( !cmp ) cmp = "false";
-            if( !isHome ) isHome = "true";
-        }
-        else if(typeof LAYOUTDATA.pages == "object") {
-            if( !cmp ) cmp = "true";
-            if( !isHome ) isHome = "false";
-        }
-
-        // id=&home=false&cmp=true&page=0
-
-        if ( tutorial && isHome == "false" )
-        {
-            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
-        }
-        else 
-        {
-            buildMainPage( tutorial );
-            document.getElementById("body").style.display = "block";
-        }
     </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/sys/js/codecolour.js"></script>
+    <script src="/sys/js/globalTranslations.js"></script>
+    <script src="/sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="/sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="/sys/js/popper.min.js"></script>
+    <script src="/sys/js/bootstrap.min.js"></script>
+    <script src="/sys/js/holder.min.js"></script>
+
+    <script src="/sys/js/index.js"></script>
 </body>
 </html>

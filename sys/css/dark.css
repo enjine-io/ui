@@ -1,0 +1,55 @@
+body { background-color: #121212; }
+.theme-btn { color: #f8f9fa; }
+.theme-btn:active, .theme-btn:hover { color: #fff; }
+
+/* main page */
+.cards-container-album { background-color:#121212; }
+
+.list-group-item.list-group-item-action { background-color: #1d2124; }
+
+.card { background-color: #343a40; }
+
+.card-title, .search-box-div .card-subtitle { color: #f8f9fa; }
+
+.card-subtitle { color: rgba(255, 255, 255, 0.54); }
+
+.search-box-div .form-control { background-color: #343a40; }
+.tagline { color: #cfd8dc; }
+.main-page-header { background-color: #343a40; }
+.navbar { background-color: #343a40; }
+.navbar-btn-back, .navbar-btn-back:hover, .btn-link, .btn-link:hover { color: #fff; }
+.btn-dropdown { background-color: #343a40; color:rgba(255, 255, 255, 0.78); }
+.dropdown-item { color: rgba(255, 255, 255, 0.78); }
+.dropdown-item:focus, .dropdown-item:hover { color: #fff; background-color: #212121; }
+
+
+/* tutorial page */
+#left-panel { background-color:#212529; }
+
+.backtick-enclosed { background-color:rgba(0,0,0,0.2); color:orange; }
+
+.jdocs-hr-line { border-bottom:1px solid #212121; }
+
+table, tr, td { background-color: #1E2224; }
+
+/* .jdocs-sample-code { background-color: black; } */
+
+
+/* left-navigation */
+.nav-link { color: #b0bec5; }
+.nav-link:hover, .nav-list-items:hover { color: white; background-color: #343a40; }
+.nav-link.active { color: white; background-color: var(--primary-color) }
+.nav-list-items.active { color: white; background-color: #343a40; }
+.nav-list-items { color: #b0bec5; }
+.tutorial-search-box { background-color:#212529; color:white; }
+.home-name { color: #b0bec5; }
+.home-name:hover { color: #fff; }
+
+/* right panel and mobile view */
+.right-panel {
+    background-color:#121212;
+}
+.mobile-actions button {
+    background-color: #1E2224;
+    color: rgba(255, 255, 255, 0.7);
+}

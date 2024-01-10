@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
-    <link rel="icon" href="../../../../sys/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/sys/img/favicon.ico" />
+    <link rel="icon" href="/sys/img/favicon.ico">
 
     <!-- Bootstrap core CSS -->
-    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sys/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,28 +27,15 @@
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
-    <link href="../../../../sys/css/globals.css" rel="stylesheet">
-    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+    <link href="/sys/css/globals.css" rel="stylesheet">
+    <link href="/sys/css/animations.css" rel="stylesheet">
 </head>
 
 <body id="body">
 
+    <link rel="stylesheet" id="theme_css" href="/sys/css/dark.css">
+
     <main role="main" id="main" class="full-height"></main>
-
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../../../../sys/js/codecolour.js"></script>
-    <script src="../../../../sys/js/globalTranslations.js"></script>
-    <script src="../../../../sys/js/pageBuilder.js"></script>
-
-    <!-- <script src="../sys/js/main.js"></script> -->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
-    </script>
-    <script src="../../../../sys/js/popper.min.js"></script>
-    <script src="../../../../sys/js/bootstrap.min.js"></script>
-    <script src="../../../../sys/js/holder.min.js"></script>
 
     <script>
         const LAYOUTDATA = {
@@ -74,33 +61,23 @@
         "style": "",
         "alt": "img_128"
       },
-      "img_129": {
-        "src": "img3.png",
-        "style": "",
-        "alt": "img_129"
-      },
-      "img_130": {
-        "src": "img4.png",
-        "style": "",
-        "alt": "img_130"
-      },
-      "text_131": {
-        "txt": "text_131",
+      "text_129": {
+        "txt": "text_129",
         "css": ""
       },
-      "code_132": {
+      "code_130": {
         "txt": "dtp = ui.showDatePicker(date, options, onSelect)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "code_133": {
+      "code_131": {
         "txt": "dtp = ui.showDatePicker(date, onSelect)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "code_134": {
+      "code_132": {
         "txt": "dtp = ui.showDatePicker( onSelect )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_135": {
+      "table-header_133": {
         "content": [
           "Parameters",
           "Type",
@@ -108,68 +85,50 @@
         ],
         "css": ""
       },
-      "table-row_135": {
+      "table-row_133": {
         "content": [
           "date ",
           "String",
-          "A default date value to which the datepicker begins. Format `YYYY-MM-DD` "
+          "A default date value. Format is `YYYY-MM-DD` "
         ]
       },
-      "table-row_136": {
+      "table-row_134": {
         "content": [
           "options ",
-          "String",
-          "A comma separated options.\\nOrientation: `Portrait`, `Landscape` "
+          "Object",
+          "Date picker options object.See `options` properties below for customization. Note: `options` param is an object to support for more customization than the usual comma separated string. "
         ]
       },
-      "table-row_137": {
+      "table-row_135": {
         "content": [
           "onSelect ",
           "Function",
-          "The callback function to be called when date is selected. "
+          "The callback function to be called when date is selected. The selected date will be passed into the callback. "
         ]
       },
-      "table-footer_137": {
+      "table-footer_135": {
         "txt": ""
       },
-      "text_138": {
-        "txt": "This will return a <span class=\"bold jdocs-return-type\"> DatePicker Component</span>"
+      "text_136": {
+        "txt": "This will return a <span class=\"bold jdocs-return-type\"> DatePickerDialog</span>"
       },
-      "hr_139": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      "subtitle_138": {
+        "txt": "subtitle_138"
       },
-      "heading_139": {
-        "txt": "heading_139"
-      },
-      "text_140": {
-        "txt": "text_140",
+      "text_139": {
+        "txt": "text_139",
         "css": ""
       },
-      "table-header_141": {
-        "content": [
-          "Properties",
-          "Type",
-          "Description"
-        ],
+      "subtitle_141": {
+        "txt": "subtitle_141"
+      },
+      "text_142": {
+        "txt": "text_142",
         "css": ""
       },
-      "table-row_142": {
-        "content": [
-          "format ",
-          "String",
-          "Sets or returns the format of the selected date. Values are `YYYY-MM-DD` `MM-DD-YYYY` or `DD-MM-YYYY`"
-        ]
-      },
-      "table-footer_142": {
-        "txt": ""
-      },
-      "hr_143": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "heading_143": {
-        "txt": "heading_143"
+      "text_143": {
+        "txt": "text_143",
+        "css": ""
       },
       "text_144": {
         "txt": "text_144",
@@ -179,178 +138,24 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_145": {
-        "txt": "subtitle_145"
+      "heading_145": {
+        "txt": "heading_145"
       },
-      "text_146": {
-        "txt": "text_146",
-        "css": ""
-      },
-      "code_147": {
-        "txt": "dtp.show()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "hr_148": {
+      "hr_146": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_148": {
-        "txt": "subtitle_148"
-      },
-      "text_149": {
-        "txt": "text_149",
-        "css": ""
-      },
-      "code_150": {
-        "txt": "dtp.hide()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "hr_151": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_151": {
-        "txt": "subtitle_151"
-      },
-      "text_152": {
-        "txt": "text_152",
-        "css": ""
-      },
-      "code_153": {
-        "txt": "dtp.setLimits( future, past )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_154": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_154": {
-        "content": [
-          "past ",
-          "String",
-          "Date in the past of the form `YYYY-MM-DD` "
-        ]
-      },
-      "table-row_155": {
-        "content": [
-          "future ",
-          "String",
-          "Date in the future of the form `YYYY-MM-DD` "
-        ]
-      },
-      "table-footer_155": {
-        "txt": ""
-      },
-      "hr_156": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_156": {
-        "txt": "subtitle_156"
-      },
-      "text_157": {
-        "txt": "text_157",
-        "css": ""
-      },
-      "code_158": {
-        "txt": "dtp.setOnSelect( callback )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_159": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_159": {
-        "content": [
-          "callback ",
-          "Function",
-          "Function to be called on submit. This will pass  `date <i class=\"arg-def\">String</i>` The selected date in the following format `YYYY-MM-DD`. You change format by setting `format` property."
-        ]
-      },
-      "table-footer_159": {
-        "txt": ""
-      },
-      "hr_160": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_160": {
-        "txt": "subtitle_160"
-      },
-      "text_161": {
-        "txt": "text_161",
-        "css": ""
-      },
-      "code_162": {
-        "txt": "dtp.setFormat( format )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_163": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_163": {
-        "content": [
-          "format ",
-          "String",
-          "A date format. Can be `YYYY-MM-DD` `MM-DD-YYYY` `DD-MM-YYYY` "
-        ]
-      },
-      "table-footer_163": {
-        "txt": ""
-      },
-      "hr_164": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_164": {
-        "txt": "subtitle_164"
-      },
-      "text_165": {
-        "txt": "text_165",
-        "css": ""
-      },
-      "code_166": {
-        "txt": "dtp.isVisible()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "text_167": {
-        "txt": "This will return a <span class=\"bold jdocs-return-type\"> Boolean</span>"
-      },
-      "hr_168": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "heading_168": {
-        "txt": "heading_168"
-      },
-      "hr_169": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "code_168": {
+      "code_145": {
         "txt": "class Main extends App \n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show date picker when click\n       this.btn = ui.addButton(this.main, \"Show Date Picker\")\n       this.btn.setOnTouch( this.showDatePicker )\n   }\n\n   showDatePicker()\n   {\n       // Display the date picker dialog\n       ui.showDatePicker( this.onSelect )\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value )\n   }\n}",
         "sample": "Default"
       },
-      "code_169": {
-        "txt": "class Main extends App \n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show date picker when click\n       this.btn = ui.addButton(this.main, \"Show Date Picker\")\n       this.btn.setOnTouch( this.showDatePicker )\n   }\n\n   showDatePicker()\n   {\n       // Display the date picker dialog\n       ui.showDatePicker(\"2022-12-25\", \"Portrait\", this.onSelect);\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value );\n   }\n}",
-        "sample": "With initial value and portrait"
+      "code_146": {
+        "txt": "class Main extends App \n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show date picker when click\n       this.btn = ui.addButton(this.main, \"Show Date Picker\")\n       this.btn.setOnTouch( this.showDatePicker )\n   }\n\n   showDatePicker()\n   {\n       // Display the date picker dialog\n       var opt = {\n           portrait: true,\n           format: \"YYYY Do MMM\"\n       }\n       ui.showDatePicker(\"2022-12-25\", opt, this.onSelect);\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value );\n   }\n}",
+        "sample": "With initial value and options object"
       },
-      "code_170": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       ui.setTheme( \"dark\" )\n\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show date picker when click\n       this.btn = ui.addButton(this.main, \"Show Date Picker\")\n       this.btn.setOnTouch( this.showDatePicker )\n   }\n\n   showDatePicker()\n   {\n       // Display the date picker dialog\n       ui.showDatePicker( this.onSelect )\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value )\n   }\n}",
-        "sample": "Dark mode"
+      "code_147": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       ui.setTheme( \"dark\" )\n\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show date picker when click\n       this.btn = ui.addButton(this.main, \"Show Date Picker\")\n       this.btn.setOnTouch( this.showDatePicker )\n   }\n\n   showDatePicker()\n   {\n       // Display the date picker dialog\n       var opt = {\n           past: \"2023-12-05\",\n           future: \"2023-12-25\"\n       }\n       ui.showDatePicker(\"2023-12-15\", opt, this.onSelect)\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value )\n   }\n}",
+        "sample": "Dark mode with date limits"
       }
     }
   ]
@@ -385,92 +190,42 @@
       "de": "",
       "es": ""
     },
-    "text_131": {
+    "text_129": {
       "en": "Show a date picker using the `showDatePicker` method like this:",
       "de": "",
       "es": ""
     },
-    "heading_139": {
-      "en": "Properties",
+    "subtitle_138": {
+      "en": "options Props",
       "de": "",
       "es": ""
     },
-    "text_140": {
-      "en": "These are the properties you can set/get in the DatePicker component.",
+    "text_139": {
+      "en": "`format`: String. Moment date format. Default is `\"YYYY-MM-DD\"`<br>`portrait`: Boolean. Display the date picker in portrait view. Default is detective in the size of the screen.<br>`future`: String. The future value until which the dialog will render dates in the following format `\"YYYY-MM-DD\"`<br>`past`: String. The past until which the dialog will render dates in the following format `\"YYYY-MM-DD\"`.",
       "de": "",
       "es": ""
     },
-    "heading_143": {
-      "en": "Methods",
+    "subtitle_141": {
+      "en": "Date formatting",
+      "de": "",
+      "es": ""
+    },
+    "text_142": {
+      "en": "DatePicker dialog uses moment js library, see <a href=\"https://momentjs.com/docs/\" target=\"_blank\">https://momentjs.com/docs/</a> for more date formatting values.",
+      "de": "",
+      "es": ""
+    },
+    "text_143": {
+      "en": "Sample values are:",
       "de": "",
       "es": ""
     },
     "text_144": {
-      "en": "Here are the methods available for DatePicker Component",
+      "en": "`\"MMMM Do YYYY\"` :  December 13th 2023<br>`\"dddd\"` : Wednesday<br>`\"MMM Do YY\"`: Dec 13th 23",
       "de": "",
       "es": ""
     },
-    "subtitle_145": {
-      "en": "show",
-      "de": "",
-      "es": ""
-    },
-    "text_146": {
-      "en": "Show the date picker the dialog.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_148": {
-      "en": "hide",
-      "de": "",
-      "es": ""
-    },
-    "text_149": {
-      "en": "Hide the date picker dialog.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_151": {
-      "en": "setLimits",
-      "de": "",
-      "es": ""
-    },
-    "text_152": {
-      "en": "Set a limit to which the date picker dialog can render a date.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_156": {
-      "en": "setOnSelect",
-      "de": "",
-      "es": ""
-    },
-    "text_157": {
-      "en": "Sets a callback function to execute when date picker dialog is submitted.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_160": {
-      "en": "setFormat",
-      "de": "",
-      "es": ""
-    },
-    "text_161": {
-      "en": "Sets the format of the date to be passed into the onSelect callback.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_164": {
-      "en": "isVisible",
-      "de": "",
-      "es": ""
-    },
-    "text_165": {
-      "en": "Get the current visibility of the date picker.",
-      "de": "",
-      "es": ""
-    },
-    "heading_168": {
+    "heading_145": {
       "en": "Examples",
       "de": "",
       "es": ""
@@ -638,99 +393,23 @@
   }
 };
         const ASSETPATH = 'ui/Pickers/DatePicker';
-        function initializeCodes() {
-            let codes = document.getElementsByTagName("CODE"),
-                button;
-            for(let z = 0; z < codes.length; z++) {
-                button = codes[z].children[0];
-                if(button.tagName == "BUTTON" && button.classList.contains("copy-button")) {
-                    button._code =  codes[z].innerText;
-                    button.addEventListener( "click", function() {
-                        navigator.clipboard.writeText( this._code );
-                        ShowPopup();
-                    })
-                }
-            }
-        }
-        initializeCodes();
-
-        /****************************************
-        * Written for SoftCogs Ltd
-        * Copyright (C) SoftCogs Ltd. 2018
-        */
-
-        _languages = null; _curLang = "en";
-
-        function T( id, lang )
-        {
-            var tr = _languages ? _languages.trans[id] : null;
-            if( tr ) tr = tr[lang?lang:_curLang]; else return id;
-            return (tr ? tr : _languages.trans[id]["en"]); 
-        }
-
-        function getLanguage() 
-        {
-            var params = (new URL(document.location)).searchParams;
-            if( params.get("lang") ) {
-                _curLang = params.get("lang")
-                setLanguage( _curLang )
-            }
-            else 
-            {   
-                if (window.localStorage.getItem("language") )
-                    _curLang = window.localStorage.getItem("language");            
-                else 
-                    _curLang =  "en";
-            }
-        }
-
-        function setLanguage(newLang)
-        {
-            if (newLang != null) {
-                window.localStorage.setItem("language", newLang);
-                _curLang = newLang;
-            }
-        }
-
-        function getLayouts(folder, onReady) {
-            layouts.tutorial = LAYOUTDATA;
-            if (onReady != null) onReady();
-        }
-
-        function getTranslation(folder, onReady) {
-            _languages = LANGDATA;
-            if (onReady != null) onReady();
-        }
-
-        getLanguage();
-        document.getElementsByTagName("HTML")[0].setAttribute("lang", _curLang);
-
-        var params = (new URL(document.location)).searchParams;
-        var tutorial =  params.get("id") || "_";
-        var page =  params.get("page") || "0";
-        var isHome = params.get("home");
-        var cmp = params.get("cmp");
-
-        if(typeof LAYOUTDATA.index == "object") {
-            if( !cmp ) cmp = "false";
-            if( !isHome ) isHome = "true";
-        }
-        else if(typeof LAYOUTDATA.pages == "object") {
-            if( !cmp ) cmp = "true";
-            if( !isHome ) isHome = "false";
-        }
-
-        // id=&home=false&cmp=true&page=0
-
-        if ( tutorial && isHome == "false" )
-        {
-            buildTutorial(tutorial, null, page, cmp=="true" ? true : false );
-        }
-        else 
-        {
-            buildMainPage( tutorial );
-            document.getElementById("body").style.display = "block";
-        }
     </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/sys/js/codecolour.js"></script>
+    <script src="/sys/js/globalTranslations.js"></script>
+    <script src="/sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="/sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="/sys/js/popper.min.js"></script>
+    <script src="/sys/js/bootstrap.min.js"></script>
+    <script src="/sys/js/holder.min.js"></script>
+
+    <script src="/sys/js/index.js"></script>
 </body>
 </html>
