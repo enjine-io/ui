@@ -195,6 +195,7 @@ body, .backColor { background-color: var(--back); }
 
 /*Dropdown*/
 /* .MuiMenu-paper, .MuiMenu-list, .MuiPaper-root { background-color: var(--front);  } */
+.uiDropdown .MuiButtonGroup-root .MuiButton-root { overflow: hidden; white-space: nowrap; }
 
 /*BottomNavigation*/
 /* .MuiBottomNavigation-root { background-color: var(--front); } */
@@ -326,6 +327,10 @@ body, .backColor { background-color: var(--back); }
         background-color: var(--secondary);
 }
 
+/* Icon */
+.MuiIcon-root.MuiIcon-colorPrimary { color: var(--primary); }
+.MuiIcon-root.MuiIcon-colorSecondary { color: var(--secondary); }
+
 /* Actionsheet, BottomSheet */
 .uiActionSheet-root, .uiBottomSheet-root {
     position: fixed;
@@ -385,3 +390,5 @@ body, .backColor { background-color: var(--back); }
     flex: 1;
     width: 100%;
 }
+
+/* TreeView */

@@ -1,24 +1,22 @@
 
-//control/element id counter.
+//control/element id counter
 _ids = 0
 
-//Width/height conversion funcs.
-// function _W(w) {
-//     if( typeof( w ) == "string" ) return w
-//     if( isNaN(parseInt(w)) ) return ( w ? w.replace("%","vw") : null);
-//     else return w>=0 ? (w*100)+"%" : null
-// }
-function _W(w) {
-    if(isFinite(w) && typeof w == "number") return parseFloat(w) * 100 + "%";
+//Width/height conversion funcs
+function _W(w, m) {
+    if(isFinite(w) && typeof w == "number") {
+        if( !m ) return parseFloat(w) * 100 + "%";
+        if(m == "v") return parseFloat(w) * 100 + "vw";
+        return w + m;
+    }
     else return w;
 }
-// function _H(h) {
-//     if( typeof( h ) == "string" ) return h
-//     if( isNaN(parseInt(h)) ) return ( h ? h.replace("%","vh") : null);
-//     else return h>=0 ? (h*100)+"%" : null
-// }
-function _H(h) {
-    if(isFinite(h) && typeof h == "number") return parseFloat(h) * 100 + "%";
+function _H(h, m) {
+    if(isFinite(h) && typeof h == "number") {
+        if( !m ) return parseFloat(h) * 100 + "%";
+        if(m == "v") return parseFloat(h) * 100 + "vh";
+        return h + m;
+    }
     else return h;
 }
 
@@ -68,8 +66,6 @@ global = window
 glob = {}
 glob._abs_lay = []
 
-// document.addEventListener("touchstart", handlePointerDown, {passive: false} )
-
 //Main UI object
 function UI()
 {
@@ -81,7 +77,7 @@ function UI()
     //--- VISIBLE PROPERTIES ---
     this.theme = { dark:false, primary: "", secondary: "" }
     this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
-    this.version = 0.27
+    this.version = 0.28
 
     //--- VISIBLE METHODS ------
     this.getVersion = function() { return this.version }
@@ -96,7 +92,7 @@ function UI()
         self.setThemeColor( self.theme.primary, self.theme.secondary )
     }
 
-    /** ## setThemeColor ##
+    /** ## setThemeColor
      * Sets the theme color of the app.
      * $$ ui.setThemeColor( primary, secondary ) $$
      * @param {String} primary A hexadecimal color of the form `#rrggbb`
@@ -143,24 +139,32 @@ function UI()
 
     this.script = function( file )
     {
-        var scr = document.createElement( "script" )
-        scr.setAttribute( "src", file )
-        document.getElementsByTagName( "head" )[ 0 ].append( scr )
+        var scr = document.createElement("script")
+        scr.setAttribute("src", file)
+        document.getElementsByTagName("head")[0].append(scr)
+    }
+
+    this.css = function( file ) {
+        const fileref = document.createElement("link")
+        fileref.rel = "stylesheet"
+        fileref.type = "text/css"
+        fileref.href = file
+        document.getElementsByTagName("head")[0].appendChild(fileref)
     }
 
     this.setFontFile = function( file ) {
-        if( typeof(file) != "string" || !file.includes(".") ) return;
-        self._fontFile = file;
+        if(typeof file != "string" || !file.includes(".")) return
+        self._fontFile = file
         const n = file.split('/')[file.split('/').length-1]
-        const name = n.substr(0, n.lastIndexOf("."));
+        const name = n.substring(0, n.lastIndexOf("."));
         const css = '@font-face {' +
             'font-family: \''+name+'\'; ' +
             'src: url(\''+file+'\'); '+
-        '}';
-        const style = document.createElement('style');
-        style.innerText = css;
-        document.head.appendChild(style);
-        self._fontName = name;
+        '}'
+        const style = document.createElement('style')
+        style.innerText = css
+        document.head.appendChild(style)
+        self._fontName = name
     }
 
     this.func = function(func, args) {
@@ -188,19 +192,6 @@ function UI()
             console.log( "JS: ERROR:" + msg + " "+ file + " line:" + line )
         };
     }
-
-    // Add an event listener to receive messages from the iframe
-    // window.addEventListener("message", async event => {
-    //     try {
-    //         const data = await JSON.parse( event.data );
-    //         if( !data ) return;
-    //         if( data.type == "callFnc" && typeof window[data.data.name] == "function") {
-    //             window[data.data.name] (...data.data.args);
-    //         }
-    //     } catch ( error ) {
-    //         console.log( error );
-    //     }
-    // });
 }
 
 function colorHelpers() {

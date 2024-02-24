@@ -37,6 +37,7 @@
 }
 
 .c-datepicker__header-day {
+    background-color: rgba(0, 0, 0, 0.15);
   height: 32px;
   color: white;
   line-height: 32px;
