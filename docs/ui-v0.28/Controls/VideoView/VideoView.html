@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_1": {
+        "txt": "text_1",
+        "css": ""
+      },
+      "table-header_2": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_2": {
+        "content": [
+          "parent ",
+          "Object",
+          "The layout where to add the video view. "
+        ]
+      },
+      "table-row_3": {
+        "content": [
+          "url ",
+          "string",
+          "The video source url. Supported video formats are `\"mp4\", \"ogg\", \"webm\"` "
+        ]
+      },
+      "table-row_4": {
+        "content": [
+          "options ",
+          "string",
+          "Comma separated options. Values can be one or a combination of the following: `autoplay`, `loop`, `controls`, `muted`, `fill` or `stretch`. If you pass \"controls\", you can optionally remove some controls such as \"nodownload\", \"nofullscreen\" and \"noremoteplayback\". "
+        ]
+      },
+      "table-row_5": {
+        "content": [
+          "width ",
+          "number",
+          "Fraction of the parent width. Values can be [0-1]. "
+        ]
+      },
+      "table-row_6": {
+        "content": [
+          "height ",
+          "number",
+          "Fraction of the parent height. Values can be [0-1]. "
+        ]
+      },
+      "table-footer_6": {
+        "txt": ""
+      },
+      "text_7": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "text_9": {
+        "txt": "text_9",
+        "css": ""
+      },
+      "hr_10": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_10": {
+        "txt": "heading_10"
+      },
+      "text_11": {
+        "txt": "text_11",
+        "css": ""
+      },
+      "hr_12": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-header_12": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_13": {
+        "content": [
+          "url ",
+          "string",
+          "Sets or returns the video source url."
+        ]
+      },
+      "table-row_14": {
+        "content": [
+          "volume ",
+          "number",
+          "Sets or returns the video volume. Values can be [0-1]."
+        ]
+      },
+      "table-row_15": {
+        "content": [
+          "duration ",
+          "number",
+          "Returns the time duration of the video in seconds."
+        ]
+      },
+      "table-row_16": {
+        "content": [
+          "played ",
+          "boolean",
+          "Returns a boolean whether the video is currently playing."
+        ]
+      },
+      "table-row_17": {
+        "content": [
+          "paused ",
+          "boolean",
+          "Returns a boolean whether the video is paused."
+        ]
+      },
+      "table-row_18": {
+        "content": [
+          "completed ",
+          "boolean",
+          "Returns a boolean whether the video playback is completed."
+        ]
+      },
+      "table-row_19": {
+        "content": [
+          "muted ",
+          "boolean",
+          "Returns a boolean whether the video audio is muted."
+        ]
+      },
+      "table-row_20": {
+        "content": [
+          "seeking ",
+          "boolean",
+          "Returns a boolean whether the user is currently seeking in the video playback seekbar."
+        ]
+      },
+      "table-row_21": {
+        "content": [
+          "speed ",
+          "number",
+          "Sets or returns the playback speed."
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "loop ",
+          "boolean",
+          "Sets or returns a boolean whether the video should start over again when completed."
+        ]
+      },
+      "table-footer_23": {
+        "txt": ""
+      },
+      "heading_24": {
+        "txt": "heading_24"
+      },
+      "text_25": {
+        "txt": "text_25",
+        "css": ""
+      },
+      "hr_26": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_26": {
+        "txt": "subtitle_26"
+      },
+      "text_27": {
+        "txt": "text_27",
+        "css": ""
+      },
+      "code_28": {
+        "txt": "vid.enterFullscreen()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_29": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_29": {
+        "txt": "subtitle_29"
+      },
+      "text_30": {
+        "txt": "text_30",
+        "css": ""
+      },
+      "code_31": {
+        "txt": "vid.exitFullscreen()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_32": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_32": {
+        "txt": "subtitle_32"
+      },
+      "text_33": {
+        "txt": "text_33",
+        "css": ""
+      },
+      "code_34": {
+        "txt": "vid.play()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_35": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_35": {
+        "txt": "subtitle_35"
+      },
+      "text_36": {
+        "txt": "text_36",
+        "css": ""
+      },
+      "code_37": {
+        "txt": "vid.stop()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_38": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_38": {
+        "txt": "subtitle_38"
+      },
+      "text_39": {
+        "txt": "text_39",
+        "css": ""
+      },
+      "code_40": {
+        "txt": "vid.setOnReady( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_41": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_41": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. This will pass  `info <i class=\"arg-def\">object</i>` Basic information of the video such as duration and dimensions."
+        ]
+      },
+      "table-footer_41": {
+        "txt": ""
+      },
+      "hr_42": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_42": {
+        "txt": "subtitle_42"
+      },
+      "text_43": {
+        "txt": "text_43",
+        "css": ""
+      },
+      "code_44": {
+        "txt": "vid.setOnPlay( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_45": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_45": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_45": {
+        "txt": ""
+      },
+      "hr_46": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_46": {
+        "txt": "subtitle_46"
+      },
+      "text_47": {
+        "txt": "text_47",
+        "css": ""
+      },
+      "code_48": {
+        "txt": "vid.setOnPause( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_49": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_49": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_49": {
+        "txt": ""
+      },
+      "hr_50": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_50": {
+        "txt": "subtitle_50"
+      },
+      "text_51": {
+        "txt": "text_51",
+        "css": ""
+      },
+      "code_52": {
+        "txt": "vid.setOnComplete( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_53": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_53": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_53": {
+        "txt": ""
+      },
+      "hr_54": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_54": {
+        "txt": "subtitle_54"
+      },
+      "text_55": {
+        "txt": "text_55",
+        "css": ""
+      },
+      "code_56": {
+        "txt": "vid.setOnError( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_57": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_57": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_57": {
+        "txt": ""
+      },
+      "hr_58": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_58": {
+        "txt": "subtitle_58"
+      },
+      "text_59": {
+        "txt": "text_59",
+        "css": ""
+      },
+      "code_60": {
+        "txt": "vid.setOnSeek( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_61": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_61": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">number</i>` The playback position in seconds."
+        ]
+      },
+      "table-footer_61": {
+        "txt": ""
+      },
+      "hr_62": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_62": {
+        "txt": "subtitle_62"
+      },
+      "text_63": {
+        "txt": "text_63",
+        "css": ""
+      },
+      "code_64": {
+        "txt": "vid.setOnSeeking( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_65": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_65": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">number</i>` The playback position in seconds."
+        ]
+      },
+      "table-footer_65": {
+        "txt": ""
+      },
+      "hr_66": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_66": {
+        "txt": "subtitle_66"
+      },
+      "text_67": {
+        "txt": "text_67",
+        "css": ""
+      },
+      "code_68": {
+        "txt": "vid.setOnVolume( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_69": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_69": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function. This will pass  `volume <i class=\"arg-def\">number</i>` The audio volume of the video."
+        ]
+      },
+      "table-footer_69": {
+        "txt": ""
+      },
+      "hr_70": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_70": {
+        "txt": "subtitle_70"
+      },
+      "text_71": {
+        "txt": "text_71",
+        "css": ""
+      },
+      "code_72": {
+        "txt": "vid.setOnProgress( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_73": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_73": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function. This will pass  `time <i class=\"arg-def\">number</i>` The elapsed playback time in seconds."
+        ]
+      },
+      "table-footer_73": {
+        "txt": ""
+      },
+      "hr_74": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_74": {
+        "txt": "subtitle_74"
+      },
+      "text_75": {
+        "txt": "text_75",
+        "css": ""
+      },
+      "code_76": {
+        "txt": "vid.load()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_77": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_77": {
+        "txt": "subtitle_77"
+      },
+      "text_78": {
+        "txt": "text_78",
+        "css": ""
+      },
+      "code_79": {
+        "txt": "vid.seekTo( time )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_80": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_80": {
+        "content": [
+          "time ",
+          "number",
+          "The playback position in seconds. "
+        ]
+      },
+      "table-footer_80": {
+        "txt": ""
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_82": {
+        "txt": "text_82",
+        "css": ""
+      },
+      "code_83": {
+        "txt": "vid.capture(type, format)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_84": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_84": {
+        "content": [
+          "type ",
+          "string",
+          "The image type. Values are \"jpg\", \"png\", \"webp\", \"gif\". Default is \"jpg\". "
+        ]
+      },
+      "table-row_85": {
+        "content": [
+          "format ",
+          "string",
+          "The returned data format. Can be \"base64\", \"bytes\"(regular array), \"uint8array\"(typed array) or \"arraybuffer\". "
+        ]
+      },
+      "table-footer_85": {
+        "txt": ""
+      },
+      "text_86": {
+        "txt": "text_86",
+        "css": ""
+      },
+      "hr_87": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_87": {
+        "txt": "class Main extends App\n{\n  onStart()\n  {\n       //Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       //Create a video view and pass the video url\n       let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n       this.vid = ui.addVideoView(this.main, src, \"AutoPlay\", 0.8, 0.8)\n\n       //Create a horizontal layout where to add video controls\n       this.lay = ui.addLayout(this.main, \"Linear\", \"Horizontal,VCenter\", 0.8, 0.15)\n       this.lay.setChildMargins(0.01, 0, 0.01, 0)\n\n       //Create the play button\n       this.playBtn = ui.addButton(this.lay, \"Play\", \"\", 0.2)\n       this.playBtn.setOnTouch( this.play )\n\n       //Create the pause/stop button\n       this.pauseBtn = ui.addButton(this.lay, \"Pause\", \"\", 0.2)\n       this.pauseBtn.setOnTouch( this.pause )\n\n       //Create the mute toggle button\n       this.muteBtn = ui.addButton(this.lay, \"Mute\", \"Toggle\", 0.2)\n       this.muteBtn.setOnTouch( this.toggleMute )\n   }\n\n   //Handle play button\n   play() { this.vid.play() }\n\n   //Handle pause/stop button\n   pause() { this.vid.stop() }\n\n   //Handle mute toggle button\n   toggleMute( val ) { this.vid.muted = val }\n}",
+        "sample": "Simple video view"
+      },
+      "code_88": {
+        "txt": "class Main extends App\n{\n  onStart()\n  {\n       //Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       //Create a video view with default Controls and Fill options\n       let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n       this.vid = ui.addVideoView(this.main, src, \"Controls,Fill\", 0.8, 0.8)\n\n       //Add video event listeners\n       this.vid.setOnComplete( this.onComplete )\n       this.vid.setOnPlay( this.onPlay )\n       this.vid.setOnPause( this.onPause )\n       this.vid.setOnSeek( this.onSeek )\n       this.vid.setOnSeeking( this.onSeeking )\n       this.vid.setOnVolume( this.onVolume )\n       this.vid.setOnProgress( this.onProgress )\n   }\n\n   //Handle on complete event\n   onComplete() { ui.showPopup( \"Video completed\" ) }\n\n   //Handle on play event\n   onPlay() { ui.showPopup( \"Video is playing\" ) }\n\n   //Handle on pause/stop event\n   onPause() { ui.showPopup( \"Video has been paused\" ) }\n\n   //Handle seek event completed\n   onSeek( val ) { console.log(\"On seek : \" + val) }\n\n   //Handle on active seeking event\n   onSeeking( val ) { console.log(\"Seeking : \" + val) }\n\n   //Handle volume change event\n   onVolume( val ) { ui.showPopup( val ) }\n\n   //Handle playing progress event\n   onProgress( time ) { console.log(\"Playback time : \" + time) }\n}",
+        "sample": "Video view callbacks"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " VideoView",
+      "de": "",
+      "es": ""
+    },
+    "text_1": {
+      "en": "Adds a video view into your app layout.",
+      "de": "",
+      "es": ""
+    },
+    "text_9": {
+      "en": "By default, the video will be resize relative to its dimensions. If you want the video to cover the entire width and height, pass `\"fill\"` in the options argument.",
+      "de": "",
+      "es": ""
+    },
+    "heading_10": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_11": {
+      "en": "Here are the setter and getter properties for the VideoView component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_24": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_25": {
+      "en": "Here are the methods for the VideoView component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_26": {
+      "en": "enterFullscreen",
+      "de": "",
+      "es": ""
+    },
+    "text_27": {
+      "en": "Play video in fullscreen if supported.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_29": {
+      "en": "exitFullscreen",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Exit fullscreen if video is playing fullscreen.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_32": {
+      "en": "play",
+      "de": "",
+      "es": ""
+    },
+    "text_33": {
+      "en": "Play the video.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "stop",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Stop the playing video.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_38": {
+      "en": "setOnReady",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "Sets a callback handler when the video has buffered enough to begin playing. Video might not completely loaded for this event to be fired.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_42": {
+      "en": "setOnPlay",
+      "de": "",
+      "es": ""
+    },
+    "text_43": {
+      "en": "Sets a callback handler when the video is played by the user or programmatically.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_46": {
+      "en": "setOnPause",
+      "de": "",
+      "es": ""
+    },
+    "text_47": {
+      "en": "Sets a callback handler when the video is pause by the user or programmatically.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_50": {
+      "en": "setOnComplete",
+      "de": "",
+      "es": ""
+    },
+    "text_51": {
+      "en": "Sets a callback handler when the video playback is completed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "setOnError",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Sets a callback function when an error occurs while the video source is being loaded.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_58": {
+      "en": "setOnSeek",
+      "de": "",
+      "es": ""
+    },
+    "text_59": {
+      "en": "Sets a callback handler when seeking event is completed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "setOnSeeking",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Sets a callback handler when seeking event is active. Called when the user touches or slides the seekbar track.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_66": {
+      "en": "setOnVolume",
+      "de": "",
+      "es": ""
+    },
+    "text_67": {
+      "en": "Sets a callback function when the volume of the video changes.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_70": {
+      "en": "setOnProgress",
+      "de": "",
+      "es": ""
+    },
+    "text_71": {
+      "en": "Sets a callback handler to be be called while the video is playing. This is usefull when you have a custom progress bar where to constantly update the playback time.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_74": {
+      "en": "load",
+      "de": "",
+      "es": ""
+    },
+    "text_75": {
+      "en": "Reloads the video source.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_77": {
+      "en": "seekTo",
+      "de": "",
+      "es": ""
+    },
+    "text_78": {
+      "en": "Sets the playback position.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "capture",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Capture an image in the playback. This will return an image data which you can save or manipulate.",
+      "de": "",
+      "es": ""
+    },
+    "text_86": {
+      "en": "@return object",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/VideoView';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

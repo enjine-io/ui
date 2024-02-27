@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_1": {
+        "txt": "text_1",
+        "css": ""
+      },
+      "code_2": {
+        "txt": "cam = ui.addCameraView(parent, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_3": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_3": {
+        "content": [
+          "parent ",
+          "Object",
+          "The parent layout where to add the camera view. "
+        ]
+      },
+      "table-row_4": {
+        "content": [
+          "options ",
+          "String",
+          "Comma separated options for the camera view. Available values are \"Front\", \"Back\", \"Video\", \"Fill\" and \"Stretch\". \"Video\" option includes audio. "
+        ]
+      },
+      "table-row_5": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width [0-1]. "
+        ]
+      },
+      "table-row_6": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height [0-1]. "
+        ]
+      },
+      "table-footer_6": {
+        "txt": ""
+      },
+      "text_7": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : CameraView</span>"
+      },
+      "hr_8": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_8": {
+        "txt": "heading_8"
+      },
+      "text_9": {
+        "txt": "text_9",
+        "css": ""
+      },
+      "hr_10": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-header_10": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_11": {
+        "content": [
+          "imageHeight ",
+          "number",
+          "Sets or returns the image height in pixels."
+        ]
+      },
+      "table-row_12": {
+        "content": [
+          "width ",
+          "number",
+          "Sets or returns the image width in pixels."
+        ]
+      },
+      "table-row_13": {
+        "content": [
+          "capabilities ",
+          "object",
+          "Returns the capabilities of the camera. You can inspect this object to set camera constraints."
+        ]
+      },
+      "table-row_14": {
+        "content": [
+          "frameRate ",
+          "number",
+          "Sets or returns the video frame rate. See `capabilites` for min and max values."
+        ]
+      },
+      "table-row_15": {
+        "content": [
+          "focusMode ",
+          "string",
+          "Sets or returns the camera focus mode. Available values are `\"manual\"`, `\"single-shot\"`, `\"continuous\"`"
+        ]
+      },
+      "table-row_16": {
+        "content": [
+          "focusDistance ",
+          "number",
+          "Sets or returns the focus distance. See `capabilities` for min and max values."
+        ]
+      },
+      "table-row_17": {
+        "content": [
+          "img ",
+          "object",
+          "Sets the preview image taken on capture. Must be a UI image component."
+        ]
+      },
+      "table-row_18": {
+        "content": [
+          "sound ",
+          "boolean",
+          "Sets or returns a boolean value whether the sound is enabled or disabled"
+        ]
+      },
+      "table-row_19": {
+        "content": [
+          "source ",
+          "string",
+          "The camera source to be use. Values can be `\"front\"` or `\"back\"`."
+        ]
+      },
+      "table-row_20": {
+        "content": [
+          "iso ",
+          "number",
+          "Sets or returns the camera iso. See `capabilities` for max and min values."
+        ]
+      },
+      "table-footer_21": {
+        "txt": ""
+      },
+      "subtitle_22": {
+        "txt": "subtitle_22"
+      },
+      "text_23": {
+        "txt": "text_23",
+        "css": ""
+      },
+      "code_24": {
+        "txt": "cam.getPixelData(format, left, top, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_25": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_25": {
+        "content": [
+          "format ",
+          "string",
+          "Values are \"rgba\" array, or \"pngbase64\" or \"jpgbase64\". "
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "left ",
+          "number",
+          "Starting pixel from the left. "
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "top ",
+          "number",
+          "Starting pixel from the top. "
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "width ",
+          "number",
+          "The width of the image portion in pixels. "
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "height ",
+          "number",
+          "The height of the image portion in pixels. "
+        ]
+      },
+      "table-footer_29": {
+        "txt": ""
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_30": {
+        "txt": "subtitle_30"
+      },
+      "text_31": {
+        "txt": "text_31",
+        "css": ""
+      },
+      "code_32": {
+        "txt": "cam.capture(type, format)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_33": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_33": {
+        "content": [
+          "type ",
+          "string",
+          "The image type. Values are \"jpg\" or \"jpeg\"\", \"png\", \"webp\", \"gif\". Default is \"jpg\". "
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "format ",
+          "string",
+          "The returned data format. Can be \"base64\", \"bytes\"(regular array), \"uint8array\"(typed array) or \"arraybuffer\". Default is \"base64\" "
+        ]
+      },
+      "table-footer_34": {
+        "txt": ""
+      },
+      "text_35": {
+        "txt": "text_35",
+        "css": ""
+      },
+      "hr_36": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_36": {
+        "txt": "subtitle_36"
+      },
+      "text_37": {
+        "txt": "text_37",
+        "css": ""
+      },
+      "code_38": {
+        "txt": "cam.record(type, format, cb)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_39": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_39": {
+        "content": [
+          "type ",
+          "string",
+          "Video output encoding format. Values can be \"mp4\", \"ogg\" and \"webm\".Default is \"mp4\" "
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "format ",
+          "string",
+          "Return video data format. Values can be \"blob\", \"base64\", \"bytes\" (regular array), \"objecturl\", \"arraybuffer\", \"uint8array\" (typed array). Default is \"base64\" "
+        ]
+      },
+      "table-row_41": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called passing the video data. "
+        ]
+      },
+      "table-footer_41": {
+        "txt": ""
+      },
+      "hr_42": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_42": {
+        "txt": "subtitle_42"
+      },
+      "text_43": {
+        "txt": "text_43",
+        "css": ""
+      },
+      "code_44": {
+        "txt": "cam.setPictureSize(width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_45": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_45": {
+        "content": [
+          "width ",
+          "number",
+          "The image width in pixels. See `capabilities` for minimum and maximum values. "
+        ]
+      },
+      "table-row_46": {
+        "content": [
+          "height ",
+          "number",
+          "The image height in pixels. See `capabilities` for minimum and maximum values. "
+        ]
+      },
+      "table-footer_46": {
+        "txt": ""
+      },
+      "hr_47": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_47": {
+        "txt": "subtitle_47"
+      },
+      "text_48": {
+        "txt": "text_48",
+        "css": ""
+      },
+      "code_49": {
+        "txt": "cam.startPreview()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_50": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_50": {
+        "txt": "subtitle_50"
+      },
+      "text_51": {
+        "txt": "text_51",
+        "css": ""
+      },
+      "code_52": {
+        "txt": "cam.updatePreview()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_53": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_53": {
+        "txt": "subtitle_53"
+      },
+      "text_54": {
+        "txt": "text_54",
+        "css": ""
+      },
+      "code_55": {
+        "txt": "cam.stop()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_56": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_56": {
+        "txt": "subtitle_56"
+      },
+      "text_57": {
+        "txt": "text_57",
+        "css": ""
+      },
+      "code_58": {
+        "txt": "cam.stop()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_59": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_59": {
+        "txt": "subtitle_59"
+      },
+      "text_60": {
+        "txt": "text_60",
+        "css": ""
+      },
+      "code_61": {
+        "txt": "cam.setOnReady( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_62": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_62": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_62": {
+        "txt": ""
+      },
+      "hr_63": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_63": {
+        "txt": "subtitle_63"
+      },
+      "text_64": {
+        "txt": "text_64",
+        "css": ""
+      },
+      "table-header_65": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_65": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. This will pass  `error <i class=\"arg-def\">string</i>` The error message."
+        ]
+      },
+      "table-footer_65": {
+        "txt": ""
+      },
+      "hr_66": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_66": {
+        "txt": "//Force this app to portrait mode\ncfg.Portrait\n\n//Make sure to add Camera permission\n_AddPermissions(\"Camera\")\n\n//Main class for the app\nclass Main extends App\n{\n   //Called when app starts\n   onStart()\n   {\n       //Create a main layout of type Frame\n       this.main = ui.addLayout(\"main\", \"Frame\", \"FillXY\")\n\n\t//Add a camera view that fills the parent width and height\n\t//The Fill option makes the image preview fills the entire camera view, otherwise the actual resolution will be viewed.\n       this.cam = ui.addCameraView(this.main, \"Fill\", 1, 1)\n\n\t//Create a horizontal layout that will be displayed in the bottom of the screen\n       this.layBtm = ui.addLayout(this.main, \"Linear\", \"Horizontal,Vcenter\", 1, 0.1)\n       this.layBtm.childSpacing = \"Between\"\n       this.layBtm.setPosition(0, 0.9)\n       this.layBtm.padding = [1, null, 1, null, \"rem\"]\n\n\t//Create a camera switch toggle icon at the left\n       this.toggleCam = ui.addButton(this.layBtm, \"flip_camera_android\", \"icon\")\n       this.toggleCam.textColor = \"#fff\"\n       this.toggleCam.setOnTouch( this.onSwitchCam )\n       \n       //Create a snap button which is a bit larger\n       this.snapBtn = ui.addButton(this.layBtm, \"camera\", \"icon\")\n       this.snapBtn.textColor = \"#fff\"\n       this.snapBtn.iconSize = \"2.5rem\"\n       this.snapBtn.setOnTouch( this.captureImg )\n       \n       //Create a preview image and pass it to the previewImage prop of the camera view\n       this.prevImg = ui.addImage(this.layBtm, \"\", \"avatar,initial\", null)\n       this.cam.previewImage = this.prevImg\n       this.prevImg.setSize(2.5, 2.5, \"rem\")\n       this.prevImg.cornerRadius = \"50%\"\n       this.prevImg.backColor = \"black\"\n\n\t//Start the camera preview\n       this.cam.startPreview()\n   }\n   \n   //Handle switching of camera source\n   onSwitchCam() {\n       let src = this.cam.source == \"front\" ? \"back\" : \"front\"\n       this.cam.source = src\n       this.cam.updatePreview()\n   }\n   \n   //Handle capture and save the image\n   captureImg() {\n       const img = this.cam.capture(\"jpg\", \"base64\")\n       \n       //Create unique filename\n       const name = \"img-\" + new Date().getTime() + \".jpg\"\n       const path = \"/Internal/DCIM/\" + name\n       \n       //Save the image data\n       app.WriteFile(path, img, \"base64\")\n       \n       ui.showPopup( \"Image has been saved!\" )\n   }\n}",
+        "sample": "Camera app in DroidScript"
+      },
+      "code_67": {
+        "txt": "//Force this app to portrait mode.\ncfg.Portrait\n\n//Make sure to add Camera permission\n_AddPermissions(\"Camera\")\n\n//Main class for the app\nclass Main extends App\n{\n   //Called when app starts\n   onStart()\n   {\n       this.time = 0\n\n       //Create a main layout of type Frame\n       this.main = ui.addLayout(\"main\", \"Absolute\", \"FillXY\")\n\n\t//Add a camera view that fills the parent width and height\n\t//The Fill option makes the image preview fills the entire camera view, otherwise the actual resolution will be viewed.\n       this.cam = ui.addCameraView(this.main, \"Fill,Video\", 1, 1)\n       \n       this.timer = ui.addText(this.main, \"\", \"Center,Caption\", 1)\n       this.timer.textColor = \"#fff\"\n       this.timer.setPosition(0, 0.025)\n\n\t//Create a horizontal layout that will be displayed in the bottom of the screen\n       this.layBtm = ui.addLayout(this.main, \"Linear\", \"Horizontal\", 1, 0.1)\n       this.layBtm.setPosition(0, 0.9)\n       \n       //Create a snap button which is a bit larger\n       this.vidBtn = ui.addButton(this.layBtm, \"videocam\", \"icon\")\n       this.vidBtn.textColor = \"#fff\"\n       this.vidBtn.iconSize = \"2.5rem\"\n       this.vidBtn.setOnTouch( this.handleRecord )\n\n\t//Start the camera preview\n       this.cam.startPreview()\n   }\n   \n   //Handle switching of camera source\n   handleRecord() {\n       //Start recording if icon is videocam\n       if(this.vidBtn.icon == \"videocam\") {\n           this.cam.record(\"mp4\", \"base64\", this.onRecord)\n           this.interval = setInterval(() => {\n               this.timer.text = (++ this.time) + \" sec\"\n           }, 1000)\n       }\n       // otherwise stop the recording\n       else this.cam.stop()\n       \n       //Switch button icon\n       this.vidBtn.icon = this.cam.recording ? \"stop\" : \"videocam\"\n   }\n   \n   //Handle on record and save the video data\n   onRecord( data ) {\n       \n       // Clear interval\n       clearInterval( this.interval )\n       this.interval = null\n       this.timer.text = \"\"\n       this.time = 0\n       \n       //Create unique filename\n       const name = \"vid-\" + new Date().getTime() + \".mp4\"\n       const path = \"/Internal/DCIM/\" + name\n       \n       //Save the video data\n       app.WriteFile(path, data, \"base64\")\n\n       ui.showPopup( \"Video has been saved!\" )\n   }\n}",
+        "sample": "Video recorder in DroidScript"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " CameraView",
+      "de": "",
+      "es": ""
+    },
+    "text_1": {
+      "en": "Adds a camera view into your app to take pictures and record videos.",
+      "de": "",
+      "es": ""
+    },
+    "heading_8": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_9": {
+      "en": "These are the setter and getter properties for CameraView component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_22": {
+      "en": "getPixelData",
+      "de": "",
+      "es": ""
+    },
+    "text_23": {
+      "en": "Returns the pixel data of the image preview or a given portion of it.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_30": {
+      "en": "capture",
+      "de": "",
+      "es": ""
+    },
+    "text_31": {
+      "en": "Capture an image. This will return an image data which you can save or manipulate.",
+      "de": "",
+      "es": ""
+    },
+    "text_35": {
+      "en": "@return object",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_36": {
+      "en": "record",
+      "de": "",
+      "es": ""
+    },
+    "text_37": {
+      "en": "Record a video.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_42": {
+      "en": "setPictureSize",
+      "de": "",
+      "es": ""
+    },
+    "text_43": {
+      "en": "Sets the size of the image.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_47": {
+      "en": "startPreview",
+      "de": "",
+      "es": ""
+    },
+    "text_48": {
+      "en": "Start streaming the camera.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_50": {
+      "en": "updatePreview",
+      "de": "",
+      "es": ""
+    },
+    "text_51": {
+      "en": "Update the camera preview. Call it when you have updated the constraints of the camera such as setting the source from back to front, or setting zoom level etc.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_53": {
+      "en": "stop",
+      "de": "",
+      "es": ""
+    },
+    "text_54": {
+      "en": "Stops the camera from streaming.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_56": {
+      "en": "stop",
+      "de": "",
+      "es": ""
+    },
+    "text_57": {
+      "en": "Stop recording a video.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_59": {
+      "en": "setOnReady",
+      "de": "",
+      "es": ""
+    },
+    "text_60": {
+      "en": "Add a callback handler when the camera is ready.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_63": {
+      "en": "setOnError",
+      "de": "",
+      "es": ""
+    },
+    "text_64": {
+      "en": "Add a callback handler when an error occured.",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/CameraView';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

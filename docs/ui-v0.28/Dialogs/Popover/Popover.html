@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "Dialogs",
+  "homeLink": "ui/Dialogs",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "ui.showPopover(parent, text, position, height, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "Object",
+          "UI component. Can be a `Layout` `Button` `Image` `Text` or any UI component except dialogs. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "[text] ",
+          "String",
+          "The text to de displayed. For displaying more data, pass a `Layout` "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[position] ",
+          "String",
+          "A comma separated values representing the\\n`\"anchorOrigin,transformOrigin\"`\\n`anchorOrigin` Position of the popover on its parent.\\n`transformOrigin` Origin on the popover itself.\\nAvailable values for both `anchorOrigin` and `transformOrigin`  are\\n`tl` for top-left, `tc` for top-center, `tr` `cl` `cc` `cr` `bl` `bc` and `br` for bottom-right. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the screen width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the screen height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Popover</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "table-header_15": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_16": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the font file use for the Popover."
+        ]
+      },
+      "table-row_17": {
+        "content": [
+          "backImage ",
+          "String",
+          "Sets or returns the path to the background image."
+        ]
+      },
+      "hr_18": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-footer_18": {
+        "txt": ""
+      },
+      "heading_19": {
+        "txt": "heading_19"
+      },
+      "text_20": {
+        "txt": "text_20",
+        "css": ""
+      },
+      "hr_21": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_21": {
+        "txt": "subtitle_21"
+      },
+      "text_22": {
+        "txt": "text_22",
+        "css": ""
+      },
+      "code_23": {
+        "txt": "pop.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_24": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_24": {
+        "txt": "subtitle_24"
+      },
+      "text_25": {
+        "txt": "text_25",
+        "css": ""
+      },
+      "code_26": {
+        "txt": "pop.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_27": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_27": {
+        "txt": "heading_27"
+      },
+      "hr_28": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_28": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Creates a button control where to attached the popover\n       this.btn = ui.addButton(this.main, \"Show Popover\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch() {\n       // Display a popover when the button is click\n       ui.showPopover(this.btn, \"This is a text to be displayed.\")\n   }\n}",
+        "sample": "Basic"
+      },
+      "code_29": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       this.aorigin = \"tl\"\n       this.torigin = \"tl\"\n\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(null, 2, null, 2, \"rem\")\n\n       var lay = ui.addLayout(this.main, \"Linear\", \"Horizontal\", 1)\n       lay.childSpacing = \"around\"\n\n       var sels = \"Top-Left,Top-Center,Top-Right,Center-Left,Center-Center,Center-Right,Bottom-Left,Bottom-Center,Bottom-Right\"\n       \n       // Selection of anchor origin or position on parent control\n       this.selAOrigin = ui.addSelect(lay, sels.split(\",\"), \"Filled\", 0.4)\n       this.selAOrigin.label = \"anchorOrigin\"\n       this.selAOrigin.setOnTouch(m => {\n           m = m.toLowerCase()\n           var c = m.split(\"-\")\n           this.aorigin = c[0][0]+c[1][0] // get the initials only\n           this.update()\n       })\n\n       // Selection of transform origin or position on popover itself\n       this.selTOrigin = ui.addSelect(lay, sels.split(\",\"), \"Filled\", 0.4)\n       this.selTOrigin.label = \"transformOrigin\"\n       this.selTOrigin.setOnTouch(m => {\n           m = m.toLowerCase()\n           var c = m.split(\"-\")\n           this.torigin = c[0][0]+c[1][0] // get the initials only\n           this.update()\n       })\n\n       this.posTxt = ui.addText(this.main, \"Position: tl,tl\")\n\n       this.btn = ui.addButton(this.main, \"Show here\")\n   }\n\n   update() {\n       var pos = this.aorigin+\",\"+this.torigin\n       this.posTxt.text = \"Position: \"+pos\n\n       // Show the popover message with the current position setting\n       this.pop = ui.showPopover(this.btn, \"This is a popover message\", pos)\n\n       // Hide the popover after a second\n       setTimeout(() => {\n           this.pop.hide()\n       }, 1000)\n   }\n}",
+        "sample": "Positioning"
+      },
+      "code_30": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n       // Creates a button where to attached the popover.\n       this.btn = ui.addButton( this.main, \"Show Popover\" )\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch() {\n       // Display a custom popover when the button is click.\n\n       // Create a layout with `null` parent to be pass into the popover\n       var lay = ui.addLayout(null, \"Linear\", \"VCenter,Left\")\n       lay.setChildMargins(0.1, 0.05, 0.1, 0.05)\n\n       // you can add text\n       ui.addText(lay, \"Header\", \"h5\")\n\n       // you can add as many text as you can\n       ui.addText(lay, \"This is a very long text to display in this popover\", \"Left\")\n\n       // you can also add button\n       this.popBtn = ui.addButton(lay, \"Close\", \"Outlined\", \"Secondary\")\n       this.popBtn.setOnTouch( this.closePopover )\n\n       // pass the layout into the `ui.showPopover` method\n       this.pop = ui.showPopover( this.btn, lay, \"bl,tr\")\n   }\n\n   closePopover() {\n       this.pop.hide()\n   }\n}",
+        "sample": "Advanced"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Popover",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Popover is very useful on showing additional info or displaying instructions especially when the control is click or hovered.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "It is like a small, temporary window that appears above other content, showing additional options or details. It's a brief and focused way to present information or choices to the user.",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "These are the setter/getter properties available for the Popover Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_19": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_20": {
+      "en": "These are the methods available for the Popover Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_21": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_22": {
+      "en": "Show the popup dialog.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_24": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_25": {
+      "en": "Hide the popup dialog.",
+      "de": "",
+      "es": ""
+    },
+    "heading_27": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Dialogs/Popover';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

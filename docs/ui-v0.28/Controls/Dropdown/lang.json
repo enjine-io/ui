@@ -1,0 +1,392 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " Dropdown",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "A dropdown, also known as a spinner or picker, is a user interface element that presents a list of options in a drop-down menu. Users can select one option from the list. In Material Design, Dropdowns typically provide a clear visual representation, ensuring a consistent and intuitive way for users to make selections within mobile applications.",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Add a dropdown into your app using the `addDropdown` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_137": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "Here are the available setters and/or getters of Dropdown Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_185": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_186": {
+      "en": "Here are the available methods for Dropdown Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_187": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_188": {
+      "en": "Adds a callback handler when the component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_191": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_192": {
+      "en": "Adds a callback function on change event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_195": {
+      "en": "setOnOpen",
+      "de": "",
+      "es": ""
+    },
+    "text_196": {
+      "en": "Adds a callback function on close event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_199": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_200": {
+      "en": "Adds a callback function on close event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_203": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_204": {
+      "en": "Sets the list items on the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_207": {
+      "en": "setItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_208": {
+      "en": "Updates the text of the corresponding item in the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_212": {
+      "en": "getItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_213": {
+      "en": "Returns a dropdown item by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_217": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_218": {
+      "en": "Enable or disable an item in the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_222": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_223": {
+      "en": "Get the enabled state of an item in the dropdown menu.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_227": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_228": {
+      "en": "Enable or disable an item in the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_232": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_233": {
+      "en": "Get the enabled state of a menu item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_237": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_238": {
+      "en": "Add or insert a menu item in the dropdown list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_242": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_243": {
+      "en": "Removes a menu item in the dropdown by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_246": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_247": {
+      "en": "Removes a menu item in the dropdown by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_250": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_251": {
+      "en": "Removes the first item in the dropdown menu. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_253": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_254": {
+      "en": "Removes the last item in the dropdown menu. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_256": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_257": {
+      "en": "Sets the corner radius of the dropdown.",
+      "de": "",
+      "es": ""
+    },
+    "heading_264": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+}

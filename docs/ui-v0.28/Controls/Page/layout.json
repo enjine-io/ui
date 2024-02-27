@@ -1,0 +1,219 @@
+{
+  "style": "background-color: #121212; color: #fff; margin-bottom: 100px;",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_1": {
+        "txt": "text_1",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_2": {
+        "txt": "ui.load()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_3": {
+        "txt": "text_3",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_5": {
+        "txt": "{ page1: lay1, page2: lay2 }",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_6": {
+        "txt": "text_6",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parents ",
+          "Object",
+          "A key value pair where the key is the name of the page and the value is a `Layout` component. "
+        ]
+      },
+      "table-footer_7": {
+        "txt": ""
+      },
+      "hr_8": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "br_8": {
+        "txt": ""
+      },
+      "text_9": {
+        "txt": "text_9",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_11": {
+        "txt": "page1 = ui.pages[ \"page1\" ]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_12": {
+        "txt": "text_12",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_13": {
+        "txt": "secondPage = ui.pages[ \"page2\" ]",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_14": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_14": {
+        "txt": "heading_14"
+      },
+      "text_15": {
+        "txt": "text_15",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_16": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_16": {
+        "txt": "subtitle_16"
+      },
+      "text_17": {
+        "txt": "text_17",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_18": {
+        "txt": "page.load()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_19": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_19": {
+        "content": [
+          "parent ",
+          "Layout",
+          "The layout where to render the page. "
+        ]
+      },
+      "table-footer_19": {
+        "txt": ""
+      },
+      "text_20": {
+        "txt": "text_20",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_22": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_22": {
+        "txt": "subtitle_22"
+      },
+      "text_23": {
+        "txt": "text_23",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_24": {
+        "txt": "page.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_25": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_25": {
+        "txt": "subtitle_25"
+      },
+      "text_26": {
+        "txt": "text_26",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_27": {
+        "txt": "page.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_28": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "text_28": {
+        "txt": "text_28",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "hr_29": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_29": {
+        "txt": "subtitle_29"
+      },
+      "text_30": {
+        "txt": "text_30",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_31": {
+        "txt": "ui.goBack()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_32": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_32": {
+        "txt": "subtitle_32"
+      },
+      "text_33": {
+        "txt": "text_33",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_34": {
+        "txt": "ui.showPage(pageName)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_35": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_35": {
+        "content": [
+          "pageName ",
+          "String",
+          "The name of the page. "
+        ]
+      },
+      "table-footer_35": {
+        "txt": ""
+      },
+      "text_36": {
+        "txt": "text_36",
+        "css": "font-weight:300;font-size:100%;"
+      },
+      "code_37": {
+        "txt": "ui.pages[pageName].show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_38": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " ActionSheet",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "An Action Sheet is a list dialog implementation of bottom sheet displaying contextual actions or options, used to streamline user interactions in mobile apps.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "It offers a concise list of choices with icons and labels, making it easy for users to select relevant actions in response to specific interactions. Show an actionsheet like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_12": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "These are the available setter and getter properties for the ActionSheet component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_18": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_19": {
+      "en": "These are the available methods for the ActionSheet component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_20": {
+      "en": "setColor",
+      "de": "",
+      "es": ""
+    },
+    "text_21": {
+      "en": "Sets the color of the list item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_25": {
+      "en": "setColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_26": {
+      "en": "Sets the color of the list item by its corresponding index. If you want to set the color of the list using its name, see `setColor` method.",
+      "de": "",
+      "es": ""
+    },
+    "heading_30": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+}

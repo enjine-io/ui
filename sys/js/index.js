@@ -107,10 +107,8 @@ function onTutorialLoaded() {
 
     const runBtns = document.querySelectorAll(".run-code-btn");
     for(let i=0; i<runBtns.length; i++) {
-        let type = runBtns[i].getAttribute("code-type");
-
-        // hijack the type is it is hybrid app
-        type = "hybrid";
+        let type = runBtns[i].getAttribute("code-type")
+        type = "hybrid"
         // if(isDSExt && (type == "ds" || type == "hybrid")) runBtns[i].classList.remove("display-none");
         if(ptf == "web" && type == "hybrid") runBtns[i].classList.remove("display-none");
     }

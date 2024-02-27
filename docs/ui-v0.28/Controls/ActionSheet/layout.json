@@ -1,0 +1,194 @@
+{
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "ui.showActionSheet(title, list, options, onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "title ",
+          "String",
+          "The custom actionsheet title. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "list ",
+          "Array",
+          "The list items to show. If `\"icon\"` option is passed, each element in this list array is of the form `[icon, name]`. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated actionsheet options. Values are \\n`\"Icon\"` render a leading icon.\\n`\"NoCancel\"` remove the default `\"Cancel\"` option. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "onSelect ",
+          "Function",
+          "The callback handler for `\"select\"` event. "
+        ]
+      },
+      "table-footer_10": {
+        "txt": ""
+      },
+      "text_11": {
+        "txt": "This will return an <span class=\"bold jdocs-return-type\"> uio-ActionSheet</span>"
+      },
+      "heading_12": {
+        "txt": "heading_12"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "table-header_14": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_15": {
+        "content": [
+          "title ",
+          "String",
+          "Sets or returns the title text of the action sheet."
+        ]
+      },
+      "table-row_16": {
+        "content": [
+          "description ",
+          "String",
+          "Sets or returns the description text for the action sheet."
+        ]
+      },
+      "table-footer_17": {
+        "txt": ""
+      },
+      "heading_18": {
+        "txt": "heading_18"
+      },
+      "text_19": {
+        "txt": "text_19",
+        "css": ""
+      },
+      "subtitle_20": {
+        "txt": "subtitle_20"
+      },
+      "text_21": {
+        "txt": "text_21",
+        "css": ""
+      },
+      "code_22": {
+        "txt": "acs.setColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_23": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_23": {
+        "content": [
+          "name ",
+          "String",
+          "The list item text. "
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "color ",
+          "String",
+          "A css supported color. Available format are: `hexadecimal`, `color-names`, `rgb`, `rgba` ... "
+        ]
+      },
+      "table-footer_24": {
+        "txt": ""
+      },
+      "subtitle_25": {
+        "txt": "subtitle_25"
+      },
+      "text_26": {
+        "txt": "text_26",
+        "css": ""
+      },
+      "code_27": {
+        "txt": "acs.setColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_28": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_28": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of list item. "
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "color ",
+          "String",
+          "A css supported color. Available format are: `hexadecimal`, `color-names`, `rgb`, `rgba` ... "
+        ]
+      },
+      "table-footer_29": {
+        "txt": ""
+      },
+      "heading_30": {
+        "txt": "heading_30"
+      },
+      "code_31": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show actionsheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n   }\n\n   btn_onTouch()\n   {\n       var choices = [\n           [\"person\", \"Account\"],\n           [\"share\", \"Send to email\"],\n           [\"delete\", \"Remove\"],\n       ];\n       this.act = ui.showActionSheet(\"\", choices, \"Icon\", this.onSelect);\n       this.act.description = \"This is the text\";\n       this.act.setColor(\"Remove\", \"orange\");\n   }\n\n   onSelect( name, icon ) {\n       ui.showPopup( icon );\n   }\n}",
+        "sample": "Complete example of actionsheet"
+      }
+    }
+  ]
+}

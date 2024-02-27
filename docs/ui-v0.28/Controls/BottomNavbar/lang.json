@@ -1,0 +1,727 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " BottomNavbar",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "The Bottom Navigation Bar (BottomNavBar) is a key element in mobile user interface design, typically placed at the bottom of the screen. In Material Design, it features navigation icons or labels for quick access to app sections. It enhances user navigation, maintaining a consistent and ergonomic design across mobile applications. The Bottom Navigation Bar provides a visually clear and accessible way for users to switch between primary destinations or views.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "Add a bottom navigation bar into your app using the `addBottomNavbar` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "title_13": {
+      "en": "Example - Sample navs array.",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "var navs = [",
+      "de": "",
+      "es": ""
+    },
+    "text_15": {
+      "en": "[ \"Favorites\", \"favorites\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
+      "en": "[ \"Groups\", \"person\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_17": {
+      "en": "[ \"Folder\", \"folder\" ]",
+      "de": "",
+      "es": ""
+    },
+    "text_18": {
+      "en": "]",
+      "de": "",
+      "es": ""
+    },
+    "heading_19": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_20": {
+      "en": "Here are the available setter and/or getter properties of the BottomNavbar Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_29": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Here are the methods available for BottomNavbar Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback handler when the BottomNavbar item is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_39": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_40": {
+      "en": "Sets the navigation actions list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_43": {
+      "en": "getList",
+      "de": "",
+      "es": ""
+    },
+    "text_44": {
+      "en": "Returns the navigation actions list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_46": {
+      "en": "selectItem",
+      "de": "",
+      "es": ""
+    },
+    "text_47": {
+      "en": "Sets navigation action to active by its name. If you are providing a wrong name, no action will be active.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_50": {
+      "en": "selectItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_51": {
+      "en": "Sets a botttom navigation action to active by its index",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "clearSelection",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Clears the selected navigation action.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Updates a navigation action by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_63": {
+      "en": "setIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_64": {
+      "en": "Updates the icon of the given index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_68": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_69": {
+      "en": "Adds a navigation action",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_74": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_75": {
+      "en": "Removes a navigation action by its given index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_78": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_79": {
+      "en": "Removes a navigation action by its given name.",
+      "de": "",
+      "es": ""
+    },
+    "tip_82": {
+      "en": " This will work only on the latest browsers.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Removes the first navigation action. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_86": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_87": {
+      "en": "Removes the last navigation action. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets a callback function to execute when bottom navbar value changes.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_93": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_94": {
+      "en": "Enable or disable a bottom navigation action. If you want to disable the component, use the `disable` property instead.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Get the enabled state of a navigation action.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_102": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_103": {
+      "en": "Enabled or disable a bottom navigation action by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_107": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_108": {
+      "en": "Get the enabled state of the bottom navigation action by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_112": {
+      "en": "showLabels",
+      "de": "",
+      "es": ""
+    },
+    "text_113": {
+      "en": "Shows the text label of the bottom navigation action.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_115": {
+      "en": "hideLabels",
+      "de": "",
+      "es": ""
+    },
+    "text_116": {
+      "en": "Hides the text label of the bottom navigation action.",
+      "de": "",
+      "es": ""
+    },
+    "text_118": {
+      "en": "--- parent_methods here -----",
+      "de": "",
+      "es": ""
+    },
+    "heading_119": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "title_120": {
+      "en": "Example - Basic",
+      "de": "",
+      "es": ""
+    },
+    "text_121": {
+      "en": "class Main extends App",
+      "de": "",
+      "es": ""
+    },
+    "text_122": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_123": {
+      "en": "onStart()",
+      "de": "",
+      "es": ""
+    },
+    "text_124": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_125": {
+      "en": "// Creates a layout with objects verticaly centered.",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "this.main.setChildMargins( 0.01, 0.01, 0.01, 0.01 )",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "var navs = [",
+      "de": "",
+      "es": ""
+    },
+    "text_130": {
+      "en": "[ \"Favorites\", \"favorites\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_131": {
+      "en": "[ \"Groups\", \"person\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_132": {
+      "en": "[ \"Folder\", \"folder\" ]",
+      "de": "",
+      "es": ""
+    },
+    "text_133": {
+      "en": "]",
+      "de": "",
+      "es": ""
+    },
+    "text_135": {
+      "en": "// Creates a BottomNavbar control",
+      "de": "",
+      "es": ""
+    },
+    "text_136": {
+      "en": "this.bmn = ui.addBottomNavbar(this.main, navs, \"\", 1)",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "// Add a callback handler for `onChange` event",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "this.bmn.setOnChange( this.onChange )",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_142": {
+      "en": "onChange(text, index)",
+      "de": "",
+      "es": ""
+    },
+    "text_143": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_144": {
+      "en": "ui.showPopup( text )",
+      "de": "",
+      "es": ""
+    },
+    "text_145": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "title_147": {
+      "en": "Example - Hide or show labels",
+      "de": "",
+      "es": ""
+    },
+    "text_148": {
+      "en": "class Main extends App",
+      "de": "",
+      "es": ""
+    },
+    "text_149": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_150": {
+      "en": "onStart()",
+      "de": "",
+      "es": ""
+    },
+    "text_151": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_152": {
+      "en": "// Creates a layout with objects verticaly centered.",
+      "de": "",
+      "es": ""
+    },
+    "text_153": {
+      "en": "this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )",
+      "de": "",
+      "es": ""
+    },
+    "text_154": {
+      "en": "this.main.setChildMargins( 0.01, 0.01, 0.01, 0.01 )",
+      "de": "",
+      "es": ""
+    },
+    "text_156": {
+      "en": "var navs = [",
+      "de": "",
+      "es": ""
+    },
+    "text_157": {
+      "en": "[ \"Favorites\", \"favorites\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_158": {
+      "en": "[ \"Groups\", \"person\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "[ \"Folder\", \"folder\" ]",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "]",
+      "de": "",
+      "es": ""
+    },
+    "text_162": {
+      "en": "// Creates a BottomNavbar control",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "this.bmn = ui.addBottomNavbar(this.main, navs, \"\", 1)",
+      "de": "",
+      "es": ""
+    },
+    "text_165": {
+      "en": "// Add a callback handler for `onChange` event",
+      "de": "",
+      "es": ""
+    },
+    "text_166": {
+      "en": "this.bmn.setOnChange( this.onChange )",
+      "de": "",
+      "es": ""
+    },
+    "text_168": {
+      "en": "// Button to show the labels",
+      "de": "",
+      "es": ""
+    },
+    "text_169": {
+      "en": "this.btn = ui.addButton(this.main, \"Show Labels\")",
+      "de": "",
+      "es": ""
+    },
+    "text_170": {
+      "en": "this.btn.setOnTouch( this.showLabels )",
+      "de": "",
+      "es": ""
+    },
+    "text_172": {
+      "en": "// Button to hide the labels",
+      "de": "",
+      "es": ""
+    },
+    "text_173": {
+      "en": "this.btn1 = ui.addButton(this.main, \"Hide Labels\")",
+      "de": "",
+      "es": ""
+    },
+    "text_174": {
+      "en": "this.btn1.setOnTouch( this.hideLabels )",
+      "de": "",
+      "es": ""
+    },
+    "text_175": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_177": {
+      "en": "showLabels( )",
+      "de": "",
+      "es": ""
+    },
+    "text_178": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_179": {
+      "en": "this.bmn.showLabels()",
+      "de": "",
+      "es": ""
+    },
+    "text_180": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "hideLabels()",
+      "de": "",
+      "es": ""
+    },
+    "text_183": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_184": {
+      "en": "this.bmn.hideLabels()",
+      "de": "",
+      "es": ""
+    },
+    "text_185": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_187": {
+      "en": "onChange(text, index)",
+      "de": "",
+      "es": ""
+    },
+    "text_188": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_189": {
+      "en": "ui.showPopup( text )",
+      "de": "",
+      "es": ""
+    },
+    "text_190": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_191": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "title_192": {
+      "en": "Example - Custom styles",
+      "de": "",
+      "es": ""
+    },
+    "text_193": {
+      "en": "class Main extends App",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_195": {
+      "en": "onStart()",
+      "de": "",
+      "es": ""
+    },
+    "text_196": {
+      "en": "{",
+      "de": "",
+      "es": ""
+    },
+    "text_197": {
+      "en": "// Creates a layout with objects verticaly centered.",
+      "de": "",
+      "es": ""
+    },
+    "text_198": {
+      "en": "this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)",
+      "de": "",
+      "es": ""
+    },
+    "text_200": {
+      "en": "var navs = [",
+      "de": "",
+      "es": ""
+    },
+    "text_201": {
+      "en": "[ \"Favorites\", \"favorites\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_202": {
+      "en": "[ \"Groups\", \"person\" ],",
+      "de": "",
+      "es": ""
+    },
+    "text_203": {
+      "en": "[ \"Folder\", \"folder\" ]",
+      "de": "",
+      "es": ""
+    },
+    "text_204": {
+      "en": "]",
+      "de": "",
+      "es": ""
+    },
+    "text_206": {
+      "en": "// Creates a BottomNavbar control",
+      "de": "",
+      "es": ""
+    },
+    "text_207": {
+      "en": "this.bmn = ui.addBottomNavbar(this.main, navs, \"\", 1)",
+      "de": "",
+      "es": ""
+    },
+    "text_209": {
+      "en": "// Hide the labels when not active",
+      "de": "",
+      "es": ""
+    },
+    "text_210": {
+      "en": "this.bmn.labels = false",
+      "de": "",
+      "es": ""
+    },
+    "text_212": {
+      "en": "// Set the color of the text and icons",
+      "de": "",
+      "es": ""
+    },
+    "text_213": {
+      "en": "this.bmn.textColor = \"#673ab7\"",
+      "de": "",
+      "es": ""
+    },
+    "text_214": {
+      "en": "this.bmn.iconColor = \"#673ab7\"",
+      "de": "",
+      "es": ""
+    },
+    "text_216": {
+      "en": "// Set the icon size",
+      "de": "",
+      "es": ""
+    },
+    "text_217": {
+      "en": "this.bmn.iconSize = \"2rem\"",
+      "de": "",
+      "es": ""
+    },
+    "text_218": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    },
+    "text_219": {
+      "en": "}",
+      "de": "",
+      "es": ""
+    }
+  }
+}

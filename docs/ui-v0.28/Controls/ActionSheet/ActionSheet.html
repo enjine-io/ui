@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "ui.showActionSheet(title, list, options, onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "title ",
+          "String",
+          "The custom actionsheet title. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "list ",
+          "Array",
+          "The list items to show. If `\"icon\"` option is passed, each element in this list array is of the form `[icon, name]`. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated actionsheet options. Values are \\n`\"Icon\"` render a leading icon.\\n`\"NoCancel\"` remove the default `\"Cancel\"` option. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "onSelect ",
+          "Function",
+          "The callback handler for `\"select\"` event. "
+        ]
+      },
+      "table-footer_10": {
+        "txt": ""
+      },
+      "text_11": {
+        "txt": "This will return an <span class=\"bold jdocs-return-type\"> uio-ActionSheet</span>"
+      },
+      "hr_12": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_12": {
+        "txt": "heading_12"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "table-header_14": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_15": {
+        "content": [
+          "title ",
+          "String",
+          "Sets or returns the title text of the action sheet."
+        ]
+      },
+      "table-row_16": {
+        "content": [
+          "description ",
+          "String",
+          "Sets or returns the description text for the action sheet."
+        ]
+      },
+      "hr_17": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-footer_17": {
+        "txt": ""
+      },
+      "heading_18": {
+        "txt": "heading_18"
+      },
+      "text_19": {
+        "txt": "text_19",
+        "css": ""
+      },
+      "hr_20": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_20": {
+        "txt": "subtitle_20"
+      },
+      "text_21": {
+        "txt": "text_21",
+        "css": ""
+      },
+      "code_22": {
+        "txt": "acs.setColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_23": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_23": {
+        "content": [
+          "name ",
+          "String",
+          "The list item text. "
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "color ",
+          "String",
+          "A css supported color. Available format are: `hexadecimal`, `color-names`, `rgb`, `rgba` ... "
+        ]
+      },
+      "table-footer_24": {
+        "txt": ""
+      },
+      "hr_25": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_25": {
+        "txt": "subtitle_25"
+      },
+      "text_26": {
+        "txt": "text_26",
+        "css": ""
+      },
+      "code_27": {
+        "txt": "acs.setColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_28": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_28": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of list item. "
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "color ",
+          "String",
+          "A css supported color. Available format are: `hexadecimal`, `color-names`, `rgb`, `rgba` ... "
+        ]
+      },
+      "table-footer_29": {
+        "txt": ""
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_30": {
+        "txt": "heading_30"
+      },
+      "hr_31": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_31": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show actionsheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n   }\n\n   btn_onTouch()\n   {\n       var choices = [\n           [\"person\", \"Account\"],\n           [\"share\", \"Send to email\"],\n           [\"delete\", \"Remove\"],\n       ];\n       this.act = ui.showActionSheet(\"\", choices, \"Icon\", this.onSelect);\n       this.act.description = \"This is the text\";\n       this.act.setColor(\"Remove\", \"orange\");\n   }\n\n   onSelect( name, icon ) {\n       ui.showPopup( icon );\n   }\n}",
+        "sample": "Complete example of actionsheet"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " ActionSheet",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "An Action Sheet is a list dialog implementation of bottom sheet displaying contextual actions or options, used to streamline user interactions in mobile apps.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "It offers a concise list of choices with icons and labels, making it easy for users to select relevant actions in response to specific interactions. Show an actionsheet like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_12": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "These are the available setter and getter properties for the ActionSheet component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_18": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_19": {
+      "en": "These are the available methods for the ActionSheet component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_20": {
+      "en": "setColor",
+      "de": "",
+      "es": ""
+    },
+    "text_21": {
+      "en": "Sets the color of the list item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_25": {
+      "en": "setColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_26": {
+      "en": "Sets the color of the list item by its corresponding index. If you want to set the color of the list using its name, see `setColor` method.",
+      "de": "",
+      "es": ""
+    },
+    "heading_30": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/ActionSheet';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

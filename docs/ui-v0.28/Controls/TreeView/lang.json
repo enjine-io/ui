@@ -1,0 +1,277 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " TreeView",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "A TreeView is a hierarchical representation of data, often used to display nested categories or organized information. A tree view is best use in file system navigation.",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Add a treeview into your app using the `addTreeView` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "The properties of the list object will be the name of the item or the group.",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "If you add a string value to the list object properties, it will be treated as an icon.",
+      "de": "",
+      "es": ""
+    },
+    "text_141": {
+      "en": "See example below",
+      "de": "",
+      "es": ""
+    },
+    "heading_143": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_144": {
+      "en": "Here are the available setter and getter properties of the TreeView Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_179": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_180": {
+      "en": "Here are the available methods of the TreeView Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_181": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "Add a on touch handler to the TreeView item when click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_185": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_186": {
+      "en": "Updates the list items of the TreeView component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_189": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_190": {
+      "en": "Add a tree items to the tree view.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_194": {
+      "en": "getItem",
+      "de": "",
+      "es": ""
+    },
+    "text_195": {
+      "en": "Returns the list items object of a given parent tree item name.",
+      "de": "",
+      "es": ""
+    },
+    "heading_199": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+}

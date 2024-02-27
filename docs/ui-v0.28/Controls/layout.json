@@ -1,0 +1,69 @@
+{
+  "homeLink": "ui",
+  "home": "UI",
+  "card": true,
+  "header": {
+    "title": "mainTitle",
+    "version": "",
+    "versions": [],
+    "subtitle": "mainSubtitle",
+    "img": "header-cover.png"
+  },
+  "index": [
+    {
+      "card": {
+        "folder": "ui/Controls/Accordion",
+        "text": "Accordion",
+        "img": "accordion.png",
+        "alt": "Accordion Card",
+        "isHome": false,
+        "desc": "Adds an accordion or expansion panel in...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/ActionSheet",
+        "text": "ActionSheet",
+        "img": "actionsheet.png",
+        "alt": "ActionSheet Card",
+        "isHome": false,
+        "desc": "An Action Sheet is a list dialog implem...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/AppBar",
+        "text": "AppBar",
+        "img": "appbar.png",
+        "alt": "AppBar Card",
+        "isHome": false,
+        "desc": "Adds an appbar to your app.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/BottomNavbar",
+        "text": "BottomNavbar",
+        "img": "bottomnavbar.png",
+        "alt": "BottomNavbar Card",
+        "isHome": false,
+        "desc": "The Bottom Navigation Bar (BottomNavBar...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Button",
+        "text": "Button",
+        "img": "button.png",
+        "alt": "Button Card",
+        "isHome": false,
+        "desc": "A button component in mobile UI develop...",
+        "cmp": true
+      }
+    }
+  ]
+}

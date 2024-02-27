@@ -1,0 +1,1108 @@
+{
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "apb = ui.addAppBar(parent, title, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "Object",
+          "The parent layout where to add the AppBar "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "title ",
+          "String",
+          "The title text of the appbar "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "options ",
+          "String",
+          "A comma separated options.\\nMenu icon: `Menu` \\nTheme Color: `Primary`, `Secondary`, `Transparent`, `Inherit`, `Default`\\nPosition: `Absolute`, `Static`, `Fixed`, `Relative` "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width `[0-1]` "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height `[0-1]` "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "This will return an <span class=\"bold jdocs-return-type\"> uio-AppBar</span>"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "table-header_15": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_16": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or return the AppBar title “text”"
+        ]
+      },
+      "table-row_17": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the AppBar. Values can be `Default` `Primary` `Secondary` `Transparent` `Inherit`"
+        ]
+      },
+      "table-row_18": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the hexadecimal color of the appbar title."
+        ]
+      },
+      "table-row_19": {
+        "content": [
+          "textVariant ",
+          "String",
+          "Sets or returns the variant of the title text. Values can be `h1` `h2` `h3` `h4` `h5` or `h6`"
+        ]
+      },
+      "table-row_20": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the font size of the title text."
+        ]
+      },
+      "table-row_21": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the icon of the menu button."
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "layout ",
+          "Object",
+          "Returns the right layout of the appbar where you can add controls."
+        ]
+      },
+      "table-row_23": {
+        "content": [
+          "menu ",
+          "Boolean",
+          "Sets or returns whether the appbar has menu button."
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius of the accordion panel. You can also pass an array of the form `[tl, tr, bl, br]`. See `setCornerRadius` for customization."
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_30": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_35": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_36": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_38": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_39": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_41": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_45": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_46": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_47": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_48": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_49": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_50": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_51": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_52": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_53": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ]
+      },
+      "table-row_54": {
+        "content": [
+          "elStyle ",
+          "String",
+          "Sets the style of the html container element."
+        ]
+      },
+      "table-footer_55": {
+        "txt": ""
+      },
+      "heading_56": {
+        "txt": "heading_56"
+      },
+      "text_57": {
+        "txt": "text_57",
+        "css": ""
+      },
+      "subtitle_58": {
+        "txt": "subtitle_58"
+      },
+      "text_60": {
+        "txt": "text_60",
+        "css": ""
+      },
+      "code_61": {
+        "txt": "setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_62": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_62": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_62": {
+        "txt": ""
+      },
+      "subtitle_63": {
+        "txt": "subtitle_63"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "apb.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_67": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_67": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_68": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_68": {
+        "txt": ""
+      },
+      "subtitle_69": {
+        "txt": "subtitle_69"
+      },
+      "text_71": {
+        "txt": "text_71",
+        "css": ""
+      },
+      "code_72": {
+        "txt": "apb.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_73": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_73": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_74": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_75": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_75": {
+        "txt": ""
+      },
+      "subtitle_76": {
+        "txt": "subtitle_76"
+      },
+      "text_78": {
+        "txt": "text_78",
+        "css": ""
+      },
+      "code_79": {
+        "txt": "apb.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "subtitle_80": {
+        "txt": "subtitle_80"
+      },
+      "text_82": {
+        "txt": "text_82",
+        "css": ""
+      },
+      "code_83": {
+        "txt": "apb.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "subtitle_84": {
+        "txt": "subtitle_84"
+      },
+      "text_86": {
+        "txt": "text_86",
+        "css": ""
+      },
+      "code_87": {
+        "txt": "apb.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "subtitle_88": {
+        "txt": "subtitle_88"
+      },
+      "text_90": {
+        "txt": "text_90",
+        "css": ""
+      },
+      "code_91": {
+        "txt": "apb.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "subtitle_92": {
+        "txt": "subtitle_92"
+      },
+      "text_94": {
+        "txt": "text_94",
+        "css": ""
+      },
+      "code_95": {
+        "txt": "apb.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_96": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_96": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_97": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_97": {
+        "txt": ""
+      },
+      "subtitle_98": {
+        "txt": "subtitle_98"
+      },
+      "text_100": {
+        "txt": "text_100",
+        "css": ""
+      },
+      "code_101": {
+        "txt": "apb.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_102": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_102": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_102": {
+        "txt": ""
+      },
+      "text_103": {
+        "txt": "This will return an <span class=\"bold jdocs-return-type\"> Object</span>"
+      },
+      "subtitle_104": {
+        "txt": "subtitle_104"
+      },
+      "text_106": {
+        "txt": "text_106",
+        "css": ""
+      },
+      "code_107": {
+        "txt": "apb.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_108": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_108": {
+        "content": [
+          "left ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_109": {
+        "content": [
+          "top ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_110": {
+        "content": [
+          "right ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_111": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_112": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_112": {
+        "txt": ""
+      },
+      "subtitle_113": {
+        "txt": "subtitle_113"
+      },
+      "text_115": {
+        "txt": "text_115",
+        "css": ""
+      },
+      "code_116": {
+        "txt": "apb.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_117": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_117": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_118": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_119": {
+        "content": [
+          "right ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_120": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_121": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_121": {
+        "txt": ""
+      },
+      "subtitle_122": {
+        "txt": "subtitle_122"
+      },
+      "text_124": {
+        "txt": "text_124",
+        "css": ""
+      },
+      "code_125": {
+        "txt": "apb.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_126": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_126": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_127": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_128": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_128": {
+        "txt": ""
+      },
+      "subtitle_129": {
+        "txt": "subtitle_129"
+      },
+      "text_131": {
+        "txt": "text_131",
+        "css": ""
+      },
+      "code_132": {
+        "txt": "apb.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_133": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_133": {
+        "content": [
+          "left ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "top ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "right ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "clr ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_138": {
+        "content": [
+          "style ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_138": {
+        "txt": ""
+      },
+      "subtitle_139": {
+        "txt": "subtitle_139"
+      },
+      "text_141": {
+        "txt": "text_141",
+        "css": ""
+      },
+      "code_142": {
+        "txt": "apb.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_143": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_143": {
+        "content": [
+          "tl ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_144": {
+        "content": [
+          "tr ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_145": {
+        "content": [
+          "br ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_146": {
+        "content": [
+          "bl ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_147": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_147": {
+        "txt": ""
+      },
+      "subtitle_148": {
+        "txt": "subtitle_148"
+      },
+      "text_149": {
+        "txt": "text_149",
+        "css": ""
+      },
+      "text_150": {
+        "txt": "text_150",
+        "css": ""
+      },
+      "code_151": {
+        "txt": "apb.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_152": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_152": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like `sendBackward` method. "
+        ]
+      },
+      "table-footer_152": {
+        "txt": ""
+      },
+      "subtitle_153": {
+        "txt": "subtitle_153"
+      },
+      "text_155": {
+        "txt": "text_155",
+        "css": ""
+      },
+      "code_156": {
+        "txt": "apb.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_157": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_157": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like `bringForward` method. "
+        ]
+      },
+      "table-footer_157": {
+        "txt": ""
+      },
+      "subtitle_158": {
+        "txt": "subtitle_158"
+      },
+      "text_159": {
+        "txt": "text_159",
+        "css": ""
+      },
+      "code_160": {
+        "txt": "apb.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_161": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_161": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_161": {
+        "txt": ""
+      },
+      "subtitle_162": {
+        "txt": "subtitle_162"
+      },
+      "text_163": {
+        "txt": "text_163",
+        "css": ""
+      },
+      "code_164": {
+        "txt": "apb.setOnMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_165": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_165": {
+        "content": [
+          "callback ",
+          "Function",
+          "The function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_165": {
+        "txt": ""
+      },
+      "subtitle_166": {
+        "txt": "subtitle_166"
+      },
+      "text_167": {
+        "txt": "text_167",
+        "css": ""
+      },
+      "code_168": {
+        "txt": "apb.addLayout( lay )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_169": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_169": {
+        "content": [
+          "lay ",
+          "Object",
+          "The layout where to add controls "
+        ]
+      },
+      "table-footer_169": {
+        "txt": ""
+      },
+      "subtitle_170": {
+        "txt": "subtitle_170"
+      },
+      "text_171": {
+        "txt": "text_171",
+        "css": ""
+      },
+      "code_172": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_173": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_173": {
+        "content": [
+          "tl ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_174": {
+        "content": [
+          "tr ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_175": {
+        "content": [
+          "bl ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_176": {
+        "content": [
+          "br ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_177": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_177": {
+        "txt": ""
+      },
+      "text_178": {
+        "txt": "text_178",
+        "css": ""
+      },
+      "heading_179": {
+        "txt": "heading_179"
+      },
+      "code_180": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen linear layout with objects align Top and Center\n       this.main = ui.addLayout(\"main\", \"Linear\", \"Top,Center\", 1, 1)\n\n       // Adds an appbar to the layout\n       this.apb = ui.addAppBar(this.main, \"My App\", \"\", 1)\n\n       // Adds a button control with margins 1/10 of the parent width.\n       this.btn = ui.addButton(this.main, \"Button\")\n       this.btn.margins = 0.1\n   }\n}",
+        "sample": "Basic AppBar"
+      },
+      "code_181": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen linear layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n       // Add an appbar to the layout\n       this.apb = ui.addAppBar(this.main, \"My app\", \"Menu,Fixed\", 1)\n\n       // Add a callback handler to show the drawer onMenu event\n       this.apb.setOnMenu( this.showDrawer )\n\n       // Add a drawer layout\n       this.drawLay = ui.addLayout(null, \"Linear\", \"Top\")\n\n       // Add a drawer to the app and pass the drawer layout\n       this.drawer = ui.addDrawer(this.drawLay, \"left\", 0.7)\n\n       // Add a list to the drawer layout. See `List` component for customization.\n       let lst = [\n           [\"folder\", \"Folders\"],\n           [\"music_note\", \"Audios\"],\n           [\"photo\", \"Photos\"]\n       ]\n       this.lstMenu = ui.addList(this.drawLay, lst, \"Icon\", 1 )\n       this.lstMenu.label = \"Main navigation\"\n\n       // Add a callback handler to the list onTouch event\n       this.lstMenu.setOnTouch( this.onTouch )\n   }\n\n   showDrawer()\n   {\n       this.drawer.show()\n   }\n\n   onTouch( title )\n   {\n       // Set the appbar text with the selected list item\n       this.apb.text = title\n\n       // Close the drawer\n       this.drawer.hide()\n   }\n}",
+        "sample": "Fixed appbar with drawer"
+      },
+      "code_182": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"Top,Center\", 1, 1)\n\n       this.apb = ui.addAppBar(this.main, \"My App\", \"Menu,Primary\")\n       this.apb.setOnMenu( this.showDrawer )\n   \n       // Add an icon buttons to the appbar with onTouch callbacks\n       this.btn1 = ui.addButton(this.apb.layout, \"mail\", \"icon\")\n       this.btn1.setOnTouch(() => { ui.showPopup(\"Messages\", \"Bottom\") })\n\n       this.btn2 = ui.addButton(this.apb.layout, \"person\", \"icon\")\n       this.btn2.setOnTouch(() => { ui.showPopup(\"Account\", \"Bottom\") })\n\n       this.btn3 = ui.addButton(this.apb.layout, \"more_vert\", \"icon\")\n       this.btn3.setOnTouch(() => { ui.showPopup(\"More options\", \"Bottom\") })\n   \n       // Adds a drawer layout\n       this.drawLay = ui.addLayout(null, \"Linear\", \"Top\")\n\n       // Adds a drawer to the app and pass the drawer layout\n       this.drawer = ui.addDrawer(this.drawLay, \"left\", 0.7)\n\n       // Adds a list to the drawer layout. See `List` component for customization.\n       let lst = [\n           [\"folder\", \"Folders\"],\n           [\"music_note\", \"Audios\"],\n           [\"photo\", \"Photos\"]\n       ]\n       this.lstMenu = ui.addList(this.drawLay, lst, \"Icon\", 1 )\n       this.lstMenu.label = \"Main navigation\"\n\n       // Add a callback handler to the list onTouch event\n       this.lstMenu.setOnTouch( this.onTouch )\n   }\n\n   showDrawer()\n   {\n       this.drawer.show()\n   }\n\n   onTouch( title )\n   {\n       // Set the appbar text with the selected list item\n       this.apb.text = title\n\n       // Close the drawer\n       this.drawer.hide()\n   }\n}",
+        "sample": "Appbar with actions"
+      },
+      "code_183": {
+        "txt": "class Main extends App\n{\n  onStart()\n  {\n      // Creates a fullscreen layout with objects vertically centered.\n      this.main = ui.addLayout(\"main\", \"Linear\", \"Top,FillXY\")\n\n      // Add an appbar to the main layout with menu icon\n      this.apb = ui.addAppBar(this.main, \"My app\", \"Default,Menu\")\n\n      // Add a callback handler when the menu icon is click\n  \t   this.apb.setOnMenu( this.onMenu )\n      \n      // Adds a textfield to the appbar\n      this.tfd = ui.addTextField(this.apb.layout, \"\", \"Search,Small\", 0.9)\n      this.tfd.placeholder = \"Search\"\n      this.tfd.hide()\n\n      // Add a search icon button to the appbar\n      this.searchBtn = ui.addButton(this.apb.layout, \"search\", \"icon\")\n\n      // Add a callback handler when the search button is click\n      this.searchBtn.setOnTouch( this.showSearchField )\n  }\n   \n   onMenu()\n   {\n       // Close the textfield if it is shown\n       if( this.show )\n       {\n\t\tthis.closeSearchField()\n       }\n   }\n\n   showSearchField()\n   {\n       // Display textfield if not shown\n       if( !this.show )\n       {\n           this.tfd.show()\n           this.apb.text = \"\"\n           this.apb.icon = \"arrow_back\"\n           this.show = true;\n       }\n       else\n       {\n           ui.showPopup(\"Search for \"+this.tfd.text)\n       }\n   }\n   \n   closeSearchField()\n   {\n       this.tfd.hide()\n       this.apb.text = \"My app\"\n       this.apb.icon = \"menu\"\n       this.show = false\n   }\n}",
+        "sample": "Appbar with search field"
+      }
+    }
+  ]
+}

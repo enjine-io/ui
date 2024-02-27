@@ -278,7 +278,7 @@ function buildMainPage(home, onLoad) {
             let vsDpd = ""; // version dropdown
 
             const thmBtn = `
-                <a class="btn theme-btn" id="theme-button" href="" role="button" onclick="togglePageTheme(this)">
+                <a class="btn theme-btn" id="theme-button" href="#" role="button" onclick="togglePageTheme()">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M480.067-100.001q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.21-51.314-51.291-81.247-120.629-29.933-69.337-29.933-148.173t29.92-148.204q29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t148.204 29.92q69.369 29.92 120.682 81.21 51.314 51.291 81.247 120.629 29.933 69.337 29.933 148.173t-29.92 148.204q-29.92 69.369-81.21 120.682-51.291 51.314-120.629 81.247-69.337 29.933-148.173 29.933Zm29.932-61.845q121.308-11.538 205.655-101.423Q800-353.154 800-480q0-126.846-83.962-216.346T509.999-798.154v636.308Z"/></svg>
                 </a>
             `;
@@ -446,7 +446,7 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
         let hmeDir = layouts.tutorial.homeLink ? layouts.tutorial.homeLink.split("/").pop() : "";
 
         const thmBtn = `
-            <a class="btn theme-btn" id="theme-button" href="#" role="button" onclick="togglePageTheme(this)">
+            <a class="btn theme-btn" id="theme-button" href="#" role="button" onclick="togglePageTheme()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 -960 960 960" width="24"><path d="M480.067-100.001q-78.836 0-148.204-29.92-69.369-29.92-120.682-81.21-51.314-51.291-81.247-120.629-29.933-69.337-29.933-148.173t29.92-148.204q29.92-69.369 81.21-120.682 51.291-51.314 120.629-81.247 69.337-29.933 148.173-29.933t148.204 29.92q69.369 29.92 120.682 81.21 51.314 51.291 81.247 120.629 29.933 69.337 29.933 148.173t-29.92 148.204q-29.92 69.369-81.21 120.682-51.291 51.314-120.629 81.247-69.337 29.933-148.173 29.933Zm29.932-61.845q121.308-11.538 205.655-101.423Q800-353.154 800-480q0-126.846-83.962-216.346T509.999-798.154v636.308Z"/></svg>
             </a>
         `;
@@ -484,7 +484,7 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
             `;
         }
         
-        htmlStr += `<div style="padding: 0px 12px;">
+        htmlStr += `<div style="padding: 0px 12px; margin-top: 5rem;">
                         <input type="text" onkeyup="onMethodSearch( this )" class="form-control tutorial-search-box" placeholder="Search...">
                     </div>
                     <div id="result-links" class="nav-list"></div>
@@ -539,12 +539,12 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
                 <div id="demo-loader" class="smartphone-loading"><div class="loader"></div></div>
             </div>
             <div class="mobile-actions">
-                <button class="btn" onclick="showMobileOutput(false)">
+                <button class="btn btn-dark btn-icon" onclick="showMobileOutput(false)">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
                     </svg>
                 </button>
-                <button class="btn" onclick="toggleTheme()">
+                <button class="btn btn-dark" onclick="toggleTheme()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                         <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
                     </svg>
@@ -917,6 +917,7 @@ function scrollIntoElement( el ) {
     window.scrollTo({ top: d-100, behavior: "smooth" });
 }
 
+
 function onComponentSearch( e, home )
 {
     var cmps =  componentList
@@ -1054,7 +1055,7 @@ function showMobileOutput( show ) {
 
 function runSampleCode(id, value) {
 
-    // if(isDSExt === true) return runDSSample(id, value);
+    if(isDSExt === true) return runDSSample(id, value);
 
     showMobileOutput( true );
     showDemoLoader( true );

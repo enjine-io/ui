@@ -1,0 +1,107 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " BottomSheet",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "It's a good practice to avoid adding a notch when your bottomsheet has a `title`, or `leftAction` or `rightAction`",
+      "de": "",
+      "es": ""
+    },
+    "heading_6": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_7": {
+      "en": "These are the setter and getter properties available for the BottomSheet component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_18": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_19": {
+      "en": "These are the methods available for the BottomSheet component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_20": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_22": {
+      "en": "Show the bottom sheet.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_23": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_25": {
+      "en": "Hide the bottom sheet.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_26": {
+      "en": "setOnAction",
+      "de": "",
+      "es": ""
+    },
+    "text_27": {
+      "en": "Add a callback handler when the left and right action is click when they are provided.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_30": {
+      "en": "setOnOpen",
+      "de": "",
+      "es": ""
+    },
+    "text_31": {
+      "en": "Add a callback handler on `open` event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_34": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_35": {
+      "en": "Add a callback handler on `close` event.",
+      "de": "",
+      "es": ""
+    },
+    "heading_39": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Accordion",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Adds an accordion or expansion panel into your app.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "This is very useful to display controls that are grouped together. Add an accordion using the `addAccordion` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the properties you can set or get from the Accordion Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_60": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_61": {
+      "en": "Here are the methods available for Accordion Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_64": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_69": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_73": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_75": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_80": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_84": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_86": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_88": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_92": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_94": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_96": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_98": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_102": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_104": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_108": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_110": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_117": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_119": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_126": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_128": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_133": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_135": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_143": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_145": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_152": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_153": {
+      "en": "@aname bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_154": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_157": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_162": {
+      "en": "getLayout",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "Get the layout of the corresponding accordion item. This is very useful when you add a control or component that will be displayed when the accordion collapse.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_167": {
+      "en": "setTitleText",
+      "de": "",
+      "es": ""
+    },
+    "text_168": {
+      "en": "Update the accordion title by passing its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_172": {
+      "en": "setSecondaryText",
+      "de": "",
+      "es": ""
+    },
+    "text_173": {
+      "en": "Adds a secondary text on the accordion.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_177": {
+      "en": "setExpandIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_178": {
+      "en": "Sets the expand icon at the right of the accordion.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_181": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "Adds an item to the accordion.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_187": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_188": {
+      "en": "Removes accordion item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_191": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_192": {
+      "en": "Removes accordion item by its title name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_195": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_196": {
+      "en": "Removes the first accordion item. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_198": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_199": {
+      "en": "Removes the last accordion item. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_201": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_202": {
+      "en": "Enable or disable the accordion component or an item in the accordion component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_206": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_207": {
+      "en": "Get the enabled state of an accordion item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_210": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_211": {
+      "en": "Enable or disable an accordion item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_215": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_216": {
+      "en": "Get the enabled state of an accordion item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_220": {
+      "en": "getLayoutIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_221": {
+      "en": "Get the index of the corresponding layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_224": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_225": {
+      "en": "Sets a callback function when the accordion is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_228": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_229": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_232": {
+      "en": "setTextColor",
+      "de": "",
+      "es": ""
+    },
+    "text_233": {
+      "en": "Sets the color of the title and the secondary text respectively.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_237": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_238": {
+      "en": "Sets the corner radius of the top and bottom accordion panels.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_245": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_246": {
+      "en": "Sets the padding of the accordion item. See `itemPadding` property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "text_253": {
+      "en": "--- parent_methods here -----",
+      "de": "",
+      "es": ""
+    },
+    "heading_254": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " TextField",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "A TextField in mobile UI design is an input field where users can enter text or numeric data. In Material Design, it features a clear outline, label, and optional helper text, ensuring a consistent and user-friendly interface for data input. TextFields are fundamental components used for various forms and interactive elements in mobile applications. Inputs can be a number, text, emails, passwords and more.",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Add a textfield into your app using the `addTextField` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_137": {
+      "en": "If you want a materialize date and time pickers, see `DatePicker`, `TimePicker` or `DateTimePicker` components.",
+      "de": "",
+      "es": ""
+    },
+    "heading_138": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "Here are the available getter and setter properties for TextField Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_208": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_209": {
+      "en": "Here are the methods available for the TextField Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_210": {
+      "en": "setOnEnter",
+      "de": "",
+      "es": ""
+    },
+    "text_211": {
+      "en": "Sets a callback function on `enter` or `submit` event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_214": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_215": {
+      "en": "Sets a callback function on `values changes` event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_218": {
+      "en": "focus",
+      "de": "",
+      "es": ""
+    },
+    "text_219": {
+      "en": "Sets focus on the textField component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_221": {
+      "en": "setOnFocus",
+      "de": "",
+      "es": ""
+    },
+    "text_222": {
+      "en": "Adds a callback function when the textfield is focus or blur.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_224": {
+      "en": "setRows",
+      "de": "",
+      "es": ""
+    },
+    "text_225": {
+      "en": "Sets the minimum and maximum number of rows on a multiline type TextField.",
+      "de": "",
+      "es": ""
+    },
+    "tip_229": {
+      "en": " TextField Component must be `Multiline`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_230": {
+      "en": "setStartAdornment",
+      "de": "",
+      "es": ""
+    },
+    "text_231": {
+      "en": "Set a start adornment control into the TextField Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_235": {
+      "en": "setStartAdornmentOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_236": {
+      "en": "Add a callback handler when the start adornment control is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_239": {
+      "en": "getStartAdornment",
+      "de": "",
+      "es": ""
+    },
+    "text_240": {
+      "en": "Returns the start adornment text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_243": {
+      "en": "setEndAdornment",
+      "de": "",
+      "es": ""
+    },
+    "text_244": {
+      "en": "Add an end adornment control into the TextField Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_248": {
+      "en": "setEndAdornmentOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_249": {
+      "en": "Add a callback handler when the end adornment control is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_252": {
+      "en": "getEndAdornment",
+      "de": "",
+      "es": ""
+    },
+    "text_253": {
+      "en": "Returns the end adornment text.",
+      "de": "",
+      "es": ""
+    },
+    "heading_256": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+}

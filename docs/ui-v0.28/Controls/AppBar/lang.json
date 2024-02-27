@@ -1,0 +1,272 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " AppBar",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Adds an appbar to your app.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "In UI development, an AppBar is a common user interface element found at the top of the screen in mobile applications. It typically contains the app's title, navigation icons, and other actions. In Material Design, an AppBar follows guidelines such as elevation, color, and typography for consistency. Add an AppBar into your app using the `addAppBar` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available setters and getters of the AppBar Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_56": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_57": {
+      "en": "Here are the methods available for AppBar Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_58": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_60": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_63": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_69": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_71": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_76": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_78": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_80": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_84": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_86": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_88": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_92": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_94": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_100": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_106": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_113": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_115": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_122": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_124": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_129": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_131": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_139": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_141": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_148": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_149": {
+      "en": "@aname bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_150": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_153": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_155": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_158": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "Adds a callback handler when the component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_162": {
+      "en": "setOnMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "Sets a function to be called when the user clicks the menu.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_166": {
+      "en": "addLayout",
+      "de": "",
+      "es": ""
+    },
+    "text_167": {
+      "en": "Adds a layout for additional controls at the right of the appbar.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_170": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_171": {
+      "en": "Sets the corner radius of the appbar.",
+      "de": "",
+      "es": ""
+    },
+    "text_178": {
+      "en": "--- parent_methods here -----",
+      "de": "",
+      "es": ""
+    },
+    "heading_179": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+}

@@ -1,0 +1,527 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " Image",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "Adds an image into your layout. Images serve to visually enhance applications, displaying graphics or photos.",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "Add an image into your app using the `addImage` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_135": {
+      "en": "Please note that a `canvas` image cannot switch to Button or Avatar in `setOptions` method.",
+      "de": "",
+      "es": ""
+    },
+    "heading_136": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_137": {
+      "en": "Here are the available setters and getters for the Image Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_191": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_192": {
+      "en": "Here are the available methods of the Image Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_193": {
+      "en": "enableContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "Enable or disbale the context menu or the right click menus.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_197": {
+      "en": "setImage",
+      "de": "",
+      "es": ""
+    },
+    "text_198": {
+      "en": "Update the image file.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_201": {
+      "en": "getPixelColor",
+      "de": "",
+      "es": ""
+    },
+    "text_202": {
+      "en": "Get the color of a single pixel in the image. The returned array is of the form `[red, green, blue, alpha]`.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_208": {
+      "en": "setPixelColor",
+      "de": "",
+      "es": ""
+    },
+    "text_209": {
+      "en": "Sets the color of a specific pixel in the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_213": {
+      "en": "getPixelData",
+      "de": "",
+      "es": ""
+    },
+    "text_214": {
+      "en": "Returns the pixel data of the image.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_221": {
+      "en": "setPixelData",
+      "de": "",
+      "es": ""
+    },
+    "text_222": {
+      "en": "Set the pixel data of the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_228": {
+      "en": "setFont",
+      "de": "",
+      "es": ""
+    },
+    "text_229": {
+      "en": "Sets a single line font styling for rendering text on canvas.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_234": {
+      "en": "drawLine",
+      "de": "",
+      "es": ""
+    },
+    "text_235": {
+      "en": "Draws a line between two points in the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "tip_243": {
+      "en": " This works only when a `canvas` option is pass.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_244": {
+      "en": "drawCircle",
+      "de": "",
+      "es": ""
+    },
+    "text_245": {
+      "en": "Draws a circle in the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "tip_253": {
+      "en": " This works only when a `canvas` option is pass. ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_254": {
+      "en": "drawSquare",
+      "de": "",
+      "es": ""
+    },
+    "text_255": {
+      "en": "Draws a square into the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "tip_263": {
+      "en": " This works only when a `canvas` option is pass. ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_264": {
+      "en": "drawRectangle",
+      "de": "",
+      "es": ""
+    },
+    "text_265": {
+      "en": "Draws a rectangle into the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "tip_274": {
+      "en": " This works only when a `canvas` option is pass. ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_275": {
+      "en": "drawArc",
+      "de": "",
+      "es": ""
+    },
+    "text_276": {
+      "en": "Draws an arc in the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "tip_287": {
+      "en": " This works only when a `canvas` option is pass. ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_288": {
+      "en": "drawPolyline",
+      "de": "",
+      "es": ""
+    },
+    "text_289": {
+      "en": "Draws a polyline on the canvas by passing an array of points.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_293": {
+      "en": "drawPolygon",
+      "de": "",
+      "es": ""
+    },
+    "text_294": {
+      "en": "Draws a polygon on the canvas by passing an array of points.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_299": {
+      "en": "drawPoint",
+      "de": "",
+      "es": ""
+    },
+    "text_300": {
+      "en": "Draws a single pixel point in a specified coordinate.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_306": {
+      "en": "drawText",
+      "de": "",
+      "es": ""
+    },
+    "text_307": {
+      "en": "Add a text in the canvas image.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_315": {
+      "en": "drawImage",
+      "de": "",
+      "es": ""
+    },
+    "text_316": {
+      "en": "Draws an image to the canvas.",
+      "de": "",
+      "es": ""
+    },
+    "tip_323": {
+      "en": " This works only when a `canvas` option is pass. ",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_324": {
+      "en": "clear",
+      "de": "",
+      "es": ""
+    },
+    "text_325": {
+      "en": "Clears the drawings by filling the whole canvas with white background color.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_327": {
+      "en": "translateOrigin",
+      "de": "",
+      "es": ""
+    },
+    "text_328": {
+      "en": "Translate the origin of the canvas at a new coordinate with the given angle of rotation.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_333": {
+      "en": "rotate",
+      "de": "",
+      "es": ""
+    },
+    "text_334": {
+      "en": "Rotate the canvas at a given angle and pivot point.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_339": {
+      "en": "measureText",
+      "de": "",
+      "es": ""
+    },
+    "text_340": {
+      "en": "Measure the text metrics with the current settings of the canvas context.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_344": {
+      "en": "setOnTouchDown",
+      "de": "",
+      "es": ""
+    },
+    "text_345": {
+      "en": "Add a callback function on touch down event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_348": {
+      "en": "setOnTouchUp",
+      "de": "",
+      "es": ""
+    },
+    "text_349": {
+      "en": "Add a callback function on touch up event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_352": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_353": {
+      "en": "Sets a callback function when the image component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_356": {
+      "en": "setOnLoad",
+      "de": "",
+      "es": ""
+    },
+    "text_357": {
+      "en": "Sets a callback function on load event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_360": {
+      "en": "setOnTouchMove",
+      "de": "",
+      "es": ""
+    },
+    "text_361": {
+      "en": "Sets a callback function when the a mouse move event is triggered.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_364": {
+      "en": "setOnLongTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_365": {
+      "en": "Adds a callback handler for a long touch event. The touch timer is about 500 milliseconds.",
+      "de": "",
+      "es": ""
+    },
+    "heading_368": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+}

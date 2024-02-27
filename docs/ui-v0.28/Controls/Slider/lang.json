@@ -1,0 +1,297 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " Slider",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "A Slider in mobile UI design is a user interface element that allows users to select a value from a range by dragging a thumb along a track. In Material Design, sliders have a consistent appearance with a thumb and track, offering a visually intuitive way to input and adjust numerical values within a specified range.",
+      "de": "",
+      "es": ""
+    },
+    "text_127": {
+      "en": "The default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, steps and even marks.",
+      "de": "",
+      "es": ""
+    },
+    "text_130": {
+      "en": "Add a slider into your app using the `addSlider` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_138": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "Here are the available setters and getter of the Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_188": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_189": {
+      "en": "Here are the methods available for Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_190": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_191": {
+      "en": "Adds an event handler when the Slider component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_194": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_195": {
+      "en": "Sets a callback function when the value of the Slider Component changes.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_198": {
+      "en": "setOnSelect",
+      "de": "",
+      "es": ""
+    },
+    "text_199": {
+      "en": "Sets a callback function when a final value is selected. This is equal to submit value event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_202": {
+      "en": "setRange",
+      "de": "",
+      "es": ""
+    },
+    "text_203": {
+      "en": "Sets a range value for the Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_207": {
+      "en": "setMarks",
+      "de": "",
+      "es": ""
+    },
+    "text_208": {
+      "en": "Sets the marks of the Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "text_211": {
+      "en": "If value is `Boolean` the marks is base on the step.",
+      "de": "",
+      "es": ""
+    },
+    "text_212": {
+      "en": "If the value is `Array`, the elements must be an object of the form `{ label, value }` where `label` is a string and `value` is a number within the range.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_214": {
+      "en": "getMarks",
+      "de": "",
+      "es": ""
+    },
+    "text_215": {
+      "en": "Returns the step marks of the Slider Component. See `setMarks` methods for possible values.",
+      "de": "",
+      "es": ""
+    },
+    "heading_218": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+}

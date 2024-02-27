@@ -1,0 +1,397 @@
+{
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_124": {
+      "en": " RadioGroup",
+      "de": "",
+      "es": ""
+    },
+    "text_126": {
+      "en": "Adds a radiogroup component into your app. A RadioGroup in mobile UI design is a grouping of radio buttons that allows users to select a single option from a set. In Material Design, RadioGroups help organize and present related choices with a consistent appearance, providing an intuitive and visually cohesive way for users to make selections within a mobile application.",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Add a radigroup into your app using the `addRadioGroup` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_137": {
+      "en": "Pass `required` as option to have atleast one value selected.",
+      "de": "",
+      "es": ""
+    },
+    "heading_138": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "Here are the available setters and getter of the RadioGroup Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_196": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_197": {
+      "en": "Here are the available methods available to RadioGroup Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_198": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_199": {
+      "en": "Call a function when the value of the radio group has changed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_202": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_203": {
+      "en": "Adds a callback function when an item is click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_206": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_207": {
+      "en": "Sets the the radiogroup list items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_210": {
+      "en": "setItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_211": {
+      "en": "Sets an item in the radiogroup component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_215": {
+      "en": "setItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_216": {
+      "en": "Updates an item in the list by its corresponding name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_220": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_221": {
+      "en": "Adds an item in the radio group list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_225": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_226": {
+      "en": "Removes an item in the radiogroup items list by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_229": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_230": {
+      "en": "Removes an item in the radiogroup items list by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_233": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_234": {
+      "en": "Removes the last item in the radiogroup. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_236": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_237": {
+      "en": "Removes the first item in the radiogroup. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_239": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_240": {
+      "en": "Enable or disable the radiogroup or an item in the radiogroup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_244": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_245": {
+      "en": "Get the enabled state of an item in the radio group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_249": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_250": {
+      "en": "Enable or disable a radiogroup item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_254": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_255": {
+      "en": "Get the enabled state of a radiogroup item by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_259": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_260": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_263": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_264": {
+      "en": "Sets the corner radius of the radiogroup container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_271": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_272": {
+      "en": "Sets the padding of the radio item. See `itemPadding` property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "heading_279": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_31": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_32": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_35": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_36": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_48": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_51": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Sets the x and y scaling of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_106": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    }
+  }
+}
