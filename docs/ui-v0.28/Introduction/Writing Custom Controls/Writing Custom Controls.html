@@ -18,6 +18,9 @@
 
     <!-- Code mirror mode -->
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
 
     <!-- Code Mirror close bracket addon -->
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
@@ -57,7 +60,8 @@
       "code_6": {
         "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create() {\n        // create your control here\n    }\n}",
         "css": "",
-        "sample": "Class format"
+        "sample": "Class format",
+        "lang": "js"
       },
       "text_8": {
         "txt": "text_8",
@@ -66,7 +70,8 @@
       "code_9": {
         "txt": "super(parent, width, height, options, type)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
-        "sample": null
+        "sample": "",
+        "lang": ""
       },
       "text_10": {
         "txt": "text_10",
@@ -90,7 +95,8 @@
       "code_19": {
         "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create() {\n        this._ctl = document.createElement( \"video\" )\n\n        //Make sure it will occupy the container's width and height\n        this._ctl.style.width = \"100%\"\n        this._ctl.style.height = \"100%\"\n\n        //Check if there is an \"autoplay\" option\n        if( this._options.includes(\"autoplay\") ) this._ctl.autoplay = true\n\n        //Check if video is loop\n        if( this._options.includes(\"loop\") ) this._ctl.loop = true\n\n        //Add the video element into the _div container\n        this._div.appendChild( this._ctl )\n    }\n}",
         "css": "",
-        "sample": "Creating actual control"
+        "sample": "Creating actual control",
+        "lang": "js"
       },
       "text_21": {
         "txt": "text_21",
@@ -106,7 +112,8 @@
       "code_25": {
         "txt": "set url( url ) {\n    this._ctl.src = url\n}\n\nget url() {\n    return this._ctl.src\n}\n\nset muted( muted ) {\n    this._ctl.muted = muted\n}\n\nget muted() {\n    return this._ctl.muted\n}",
         "css": "",
-        "sample": "Defining setter/getter properties"
+        "sample": "Defining setter/getter properties",
+        "lang": "js"
       },
       "subtitle_27": {
         "txt": "subtitle_27"
@@ -118,7 +125,8 @@
       "code_29": {
         "txt": "play() {\n    this._ctl.play()\n}\n\nstop() {\n    this._ctl.pause()\n}\n\nsetBackColor( color ) {\n    this._ctl.style.backgroundColor = color\n}",
         "css": "",
-        "sample": "Adding methods"
+        "sample": "Adding methods",
+        "lang": "js"
       },
       "text_31": {
         "txt": "text_31",
@@ -127,7 +135,8 @@
       "code_33": {
         "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create()\n    {\n        this._ctl = document.createElement( \"video\" )\n\n        // Make sure it will occupy the container's width and height\n        this._ctl.style.width = \"100%\"\n        this._ctl.style.height = \"100%\"\n\n        // Check if there is an \"autoplay\" option\n        if( this._options.includes(\"autoplay\") ) this._ctl.autoplay = true\n\n        // Check if video is loop\n        if( this._options.includes(\"loop\") ) this._ctl.loop = true\n\n        // Add the video element into the _div container\n        this._div.appendChild( this._ctl )\n    }\n\n    // Properties\n    set url( url ) {\n        this._ctl.src = url\n    }\n\n    get url() {\n        return this._ctl.src\n    }\n\n    set muted( muted ) {\n        this._ctl.muted = muted\n    }\n\n    get muted() {\n        return this._ctl.muted\n    }\n\n    // Methods\n    play() {\n        this._ctl.play()\n    }\n\n    stop() {\n        this._ctl.pause()\n    }\n\n    setBackColor( color ) {\n        this._ctl.style.backgroundColor = color\n    }\n}",
         "css": "",
-        "sample": "Working code"
+        "sample": "Working code",
+        "lang": "js"
       },
       "text_35": {
         "txt": "text_35",
@@ -136,7 +145,8 @@
       "code_37": {
         "txt": "ui.addMyVideo = function(parent, url, options, width, height)\n{\n    return new MyVideo(parent, url, options, width, height)\n}",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
-        "sample": null
+        "sample": "",
+        "lang": ""
       },
       "text_39": {
         "txt": "text_39",
@@ -145,7 +155,8 @@
       "code_41": {
         "txt": "ui.addMyVideo = function(parent, url, options, width, height)\n{\n    return new MyVideo(parent, url, options, width, height)\n}\n\nconst MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create()\n    {\n        this._ctl = document.createElement( \"video\" )\n\n        // Make sure it will occupy the container's width and height\n        this._ctl.style.width = \"100%\"\n        this._ctl.style.height = \"100%\"\n\n        // Check if there is an \"autoplay\" option\n        if( this._options.includes(\"autoplay\") ) this._ctl.autoplay = true\n\n        // Check if video is loop\n        if( this._options.includes(\"loop\") ) this._ctl.loop = true\n\n        // Add the video element into the _div container\n        this._div.appendChild( this._ctl )\n    }\n\n    // Properties\n    set url( url ) {\n        this._ctl.src = url\n    }\n\n    get url() {\n        return this._ctl.src\n    }\n\n    set muted( muted ) {\n        this._ctl.muted = muted\n    }\n\n    get muted() {\n        return this._ctl.muted\n    }\n\n    // Methods\n    play() {\n        this._ctl.play()\n    }\n\n    stop() {\n        this._ctl.pause()\n    }\n\n    setBackColor( color ) {\n        this._ctl.style.backgroundColor = color\n    }\n}",
         "css": "",
-        "sample": "Complete code"
+        "sample": "Complete code",
+        "lang": "js"
       },
       "heading_43": {
         "txt": "heading_43"
@@ -157,7 +168,8 @@
       "code_46": {
         "txt": "class Main extends App\n{\n    onStart() {\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0.01, 0, 0.01)\n\n        this.txt = ui.addText(this.main, \"Using custom control\", \"Center\", 0.9)\n\n        let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n        this.vid = ui.addMyVideo(this.main, src, \"autoplay\", 0.8, 0.5)\n\n        this.layBtm = ui.addLayout(this.main, \"Linear\", \"Horizontal,Center\", 1, 0.1)\n        this.layBtm.childSpacing = \"Even\"\n\n        this.play = ui.addButton(this.layBtm, \"Play\", \"\", 0.25)\n        this.play.setOnTouch( this.play )\n\n        this.stop = ui.addButton(this.layBtm, \"Pause\", \"\", 0.25)\n        this.stop.setOnTouch( this.stop )\n\n        this.muted = ui.addButton(this.layBtm, \"Mute\", \"Toggle\", 0.25)\n        this.muted.setOnTouch( this.mute )\n    }\n\n    play() { this.vid.play() }\n\n    stop() { this.vid.stop() }\n\n    mute( val ) { this.vid.muted = val }\n}",
         "css": "",
-        "sample": "Using custom control"
+        "sample": "Using custom control",
+        "lang": "js"
       },
       "text_48": {
         "txt": "text_48",
@@ -356,10 +368,11 @@
 
     <!-- <script src="../sys/js/main.js"></script> -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>
-        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
-    </script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
     <script src="../../../../sys/js/popper.min.js"></script>
     <script src="../../../../sys/js/bootstrap.min.js"></script>
     <script src="../../../../sys/js/holder.min.js"></script>

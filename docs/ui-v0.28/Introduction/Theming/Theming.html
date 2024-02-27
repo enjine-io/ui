@@ -18,6 +18,9 @@
 
     <!-- Code mirror mode -->
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
 
     <!-- Code Mirror close bracket addon -->
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
@@ -57,7 +60,8 @@
       "code_6": {
         "txt": "ui.setTheme( mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
-        "sample": null
+        "sample": "",
+        "lang": ""
       },
       "text_8": {
         "txt": "text_8",
@@ -66,7 +70,8 @@
       "code_10": {
         "txt": "class Main extends App\n{\n    onStart()\n    {\n        this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n        this.apb = ui.addAppBar(this.main, \"My app\", \"Fixed,Menu\")\n\n        this.tgl = ui.addButton(this.main, \"Toggle Dark Theme\", \"Toggle,Secondary\")\n        this.tgl.setOnTouch( this.onTouch )\n    }\n\n    onTouch( val )\n    {\n        ui.setTheme(val ? \"dark\" : \"light\")\n    }\n}",
         "css": "",
-        "sample": "Toggle dark mode"
+        "sample": "Toggle dark mode",
+        "lang": "js"
       },
       "heading_12": {
         "txt": "heading_12"
@@ -78,7 +83,8 @@
       "code_15": {
         "txt": "ui.setThemeColor(primary, secondary)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
-        "sample": null
+        "sample": "",
+        "lang": ""
       },
       "text_17": {
         "txt": "text_17",
@@ -91,7 +97,8 @@
       "code_21": {
         "txt": "class Main extends App\n{\n    onStart()\n    {\n        // Create a full screen layout.\n        this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\" )\n        this.main.setChildMargins(0, \"20px\", 0, \"20px\")\n\n        // add an appbar\n        this.apb = ui.addAppBar( this.main, \"My App\", \"menu\" )\n\n        // some appbar icons\n        this.search = ui.addButton(this.apb.layout, \"search\", \"icon\")\n        this.more = ui.addButton(this.apb.layout, \"more_vert\", \"icon\")\n\n        // some text control\n        ui.addText(this.main, \"This is a text control.\")\n\n        // toggle dark and light theme\n        this.btn = ui.addButton(this.main, \"Toggle Theme\", \"\", 0.7)\n        this.btn.setOnTouch( this.changeTheme )\n\n        // change primary color\n        this.btn = ui.addButton(this.main, \"Set Primary\", \"Primary\", 0.7)\n        this.btn.setOnTouch( this.changePrimary )\n\n        // change secondary color\n        this.btn = ui.addButton(this.main, \"Set Secondary\", \"Secondary\", 0.7)\n        this.btn.setOnTouch( this.changeSecondary )\n\n        // some floating action button\n        this.fab = ui.addFAB(this.main, \"add\", \"secondary\")\n    }\n\n    changeTheme() {\n        ui.setTheme( ui.theme.dark ? \"light\" : \"dark\")\n    }\n\n    changePrimary() {\n        ui.showColorPicker(null, null, function(value) {\n            ui.setThemeColor(value)\n        })\n    }\n\n    changeSecondary() {\n        ui.showColorPicker(null, null, function(value) {\n            ui.setThemeColor(null, value)\n        })\n    }\n}",
         "css": "",
-        "sample": "Complete UI setting example"
+        "sample": "Complete UI setting example",
+        "lang": "js"
       }
     }
   ]
@@ -174,10 +181,11 @@
 
     <!-- <script src="../sys/js/main.js"></script> -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>
-        window.jQuery || document.write('<script src="../../../../sys/js/jquery-slim.min.js"><\/script>')
-    </script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
     <script src="../../../../sys/js/popper.min.js"></script>
     <script src="../../../../sys/js/bootstrap.min.js"></script>
     <script src="../../../../sys/js/holder.min.js"></script>
