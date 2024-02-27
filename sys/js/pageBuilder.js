@@ -49,11 +49,11 @@ function createPage( tutorial, step ) {
                 hasTitle = true;
                 break;
             case "heading" :
-                str += `\n<h4 class="jdocs-heading ${anim}" style="${css}" id="${step[z].txt}">${T(step[z].txt)}</h4>\n`;
+                str += `\n<h4 class="jdocs-heading ${anim}" style="${css}" id="${step[z].txt}">${_S(T(step[z].txt))}</h4>\n`;
                 leftPanelNavs[step[z].txt] = { title: T(step[z].txt), navs: {} }; curHeading = step[z].txt;
                 break;
             case "subtitle":
-                str += `\n<h5 class="jdocs-subtitle method-name ${anim}" style="${css}" id="${T(step[z].txt).replace(/ /g,"-")}">${T(step[z].txt)}</h5>\n`;
+                str += `\n<h5 class="jdocs-subtitle method-name ${anim}" style="${css}" id="${T(step[z].txt).replace(/ /g,"-")}">${_S(T(step[z].txt))}</h5>\n`;
                 if( curHeading ) leftPanelNavs[curHeading].navs[step[z].txt] = T(step[z].txt)
                 break;
             case "text":
@@ -145,7 +145,7 @@ function createPage( tutorial, step ) {
                     str +=`
             <div class="sample-code" style="${css}">
                 <div class="sample-code-header">${T(json.sample)}</div>
-                <textarea id="${z}" class="actual-code" data-id="${z}">${json.txt}
+                <textarea id="${z}" class="actual-code" data-id="${z}" data-lang="${json.lang}">${unescape(json.txt)}
                 </textarea>
                 <div class="sample-code-footer">
                     <button class="btn btn-dark sample-code-actions run-code-btn display-none" code-type="${step[z].type}" onclick="runSampleCode('${z}')" title="Run [Ctrl+S]">
@@ -1150,14 +1150,28 @@ const _CodeMirrorOptions = {
         "Ctrl-S": function( cm ) { runSampleCode(null, cm.getValue()) },
         "Cmd-S": function( cm ) { runSampleCode(null, cm.getValue()) }
     }
-};
-const _CodeMirrorInstances = [];
+}
+const _CodeMirrorInstances = []
 
 function initSampleCodes() {
     const codes = document.getElementsByClassName("actual-code");
     for(var i=0; i<codes.length; i++) {
-        var id = codes[i].getAttribute("data-id");
-        _CodeMirrorInstances[id] = CodeMirror.fromTextArea(document.getElementById(id), _CodeMirrorOptions);
+        var id = codes[i].getAttribute("data-id")
+        var lang = codes[i].getAttribute("data-lang")
+        var mode = "", theme = ""
+        switch (lang) {
+            case "html": mode = "htmlmixed"; theme = "ds-md-html"; break;
+            case "css": mode = "css"; break;
+            case "md": mode = "md"; break;
+            case "py": mode = "python"; break;
+            default: mode = "javascript"; theme = "ds-md-javascript";
+        }
+        var opt = {
+            ..._CodeMirrorOptions,
+            theme,
+            mode
+        }
+        _CodeMirrorInstances[id] = CodeMirror.fromTextArea(document.getElementById(id), _CodeMirrorOptions)
     }
 }
 
