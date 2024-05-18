@@ -174,11 +174,11 @@
     font-weight: 600;
   }
   .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid span.mddtp-picker__cell--selected, .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__tr span.mddtp-picker__cell:hover {
-    background-color: var(--primary);
+    background-color: #fff;
     color: #000 !important;
   }
   .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid span.mddtp-picker__cell--disabled {
-    color: rgba(0, 0, 0, 0.26);
+    color: rgba(255, 255, 255, 0.26);
     cursor: not-allowed;
   }
   .mddtp-picker__body .mddtp-picker__viewHolder .mddtp-picker__grid .mddtp-picker__tr {
@@ -265,6 +265,7 @@
     -ms-transform-origin: left center;
     transform-origin: left center;
   }
+
   .mddtp-picker__circularView .mddtp-picker__cell span {
     display: inline-block;
     cursor: pointer;
@@ -310,7 +311,7 @@
   }
   .mddtp-picker__selection span {
     display: inline-block;
-    background-color: var(--primary);
+    background-color: #fff;
     height: 2px;
     vertical-align: middle;
   }

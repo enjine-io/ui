@@ -45,6 +45,9 @@ body, .backColor { background-color: var(--back); }
 .MuiButton-outlinedSecondary:hover { background-color: var(--secondary-b); border: 1px solid var(--secondary-o); } */
 
 .MuiButtonGroup-root .MuiButton-root { overflow: hidden; white-space: wrap; }
+.MuiButtonGroup-groupedContainedHorizontal:not(:last-child) {
+    border-right: 1px solid #222;
+}
 
 .MuiIconButton-root { color: #fff; }
 .MuiIconButton-root:hover { background-color: var(--default-b); filter: brightness(var(--bright)); }
@@ -203,7 +206,7 @@ body, .backColor { background-color: var(--back); }
 .MuiExpansionPanelSummary-expandIcon { color: rgba(255, 255, 255, 0.7); }
 
 /* ButtonGroup */
-.MuiButtonGroup-groupedContained:not(:last-child) { border-color: var(--default-o); }
+/* .MuiButtonGroup-groupedContained:not(:last-child) { border-color: var(--default-o); } */
 /* .MuiButtonGroup-groupedContainedPrimary:not(:last-child) { border-color: rgba(0, 0, 0, 0.3); }
 .MuiButtonGroup-groupedContainedSecondary:not(:last-child) { border-color: rgba(0, 0, 0, 0.3); } */
 
