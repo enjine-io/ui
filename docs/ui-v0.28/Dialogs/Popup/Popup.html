@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Dialogs",
+  "homeName": "UI Dialogs",
   "homeLink": "ui/Dialogs",
   "pages": [
     {
@@ -332,6 +332,18 @@
       "code_46": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.layMain = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button control to the main layout\n       this.btn = ui.addButton(this.layMain, \"Show Popup\")\n\n       // Add a callback handler when the button is touched\n       this.btn.setOnTouch( this.showMessage )\n   }\n\n   showMessage()\n   {\n       // Show a popup with additional action\n       this.snackbar = ui.showPopup(\"Please login to continue\", \"Bottom,Center\", \"\", \"Login\")\n       \n       // Add a callback handler when the action is touched\n       this.snackbar.setOnAction( this.onAction )\n   }\n\n   onAction()\n   {\n       // Hide the popup when the action button is click\n       this.snackbar.hide()\n       ui.showPopup(\"Login is click. Show login Page.\")\n   }\n}",
         "sample": "With action"
+      },
+      "code_47": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn1 = ui.addButton(main, \"Show Popup\")\n   btn1.setOnTouch(onTouch)\n\ndef onTouch(event):\n   ui.showPopup(\"Hello from popup!\")",
+        "sample": "Python Basic"
+      },
+      "code_48": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0, 0, 0, 0.02)\n   btn1 = ui.addButton(main, \"Top & Grow\", \"Primary\")\n   btn1.setOnTouch(onTouch1)\n   btn2 = ui.addButton(main, \"Bottom and Slide\", \"Secondary\")\n   btn2.setOnTouch(onTouch2)\n\ndef onTouch1(event):\n   ui.showPopup(\"Hello world.\", \"Top,Grow\")\n\ndef onTouch2(event):\n   ui.showPopup(\"Hello world.\", \"Bottom,Slide\", 1500)",
+        "sample": "Python Popups with transitions"
+      },
+      "code_49": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   layMain = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(layMain, \"Show Popup\")\n   btn.setOnTouch(showMessage)\n\ndef showMessage(event):\n   global snackbar\n   snackbar = ui.showPopup(\"Please login to continue\", \"Bottom,Center\", \"\", \"Login\")\n   snackbar.setOnAction(onAction)\n\ndef onAction():\n   snackbar.hide()\n   ui.showPopup(\"Login is click. Show login Page.\")",
+        "sample": "Python With Transition"
       }
     }
   ]

@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Dialogs",
+  "homeName": "UI Dialogs",
   "homeLink": "ui/Dialogs",
   "pages": [
     {
@@ -241,16 +241,268 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_30": {
-        "txt": "heading_30"
+      "subtitle_30": {
+        "txt": "subtitle_30"
       },
-      "hr_31": {
+      "text_31": {
+        "txt": "text_31",
+        "css": ""
+      },
+      "code_32": {
+        "txt": "acs.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_33": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_34": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_31": {
+      "subtitle_34": {
+        "txt": "subtitle_34"
+      },
+      "text_35": {
+        "txt": "text_35",
+        "css": ""
+      },
+      "code_36": {
+        "txt": "acs.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_37": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_38": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_38": {
+        "txt": "subtitle_38"
+      },
+      "text_39": {
+        "txt": "text_39",
+        "css": ""
+      },
+      "code_40": {
+        "txt": "acs.addItem(name, icon, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_41": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_41": {
+        "content": [
+          "name ",
+          "String",
+          "List item text. "
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "icon ",
+          "String",
+          "List item material icon. \"options\" argument must include \"icon\". "
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "index ",
+          "Number",
+          "The index at which the item will be inserted. Will push the item into the list when not given. "
+        ]
+      },
+      "table-footer_43": {
+        "txt": ""
+      },
+      "text_44": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_45": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_45": {
+        "txt": "subtitle_45"
+      },
+      "text_46": {
+        "txt": "text_46",
+        "css": ""
+      },
+      "code_47": {
+        "txt": "acs.removeItem( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_48": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_48": {
+        "content": [
+          "name ",
+          "String",
+          "The list item text. "
+        ]
+      },
+      "table-footer_48": {
+        "txt": ""
+      },
+      "hr_49": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_49": {
+        "txt": "subtitle_49"
+      },
+      "text_50": {
+        "txt": "text_50",
+        "css": ""
+      },
+      "code_51": {
+        "txt": "acs.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_52": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_52": {
+        "content": [
+          "name ",
+          "Number",
+          "The list item index. "
+        ]
+      },
+      "table-footer_52": {
+        "txt": ""
+      },
+      "hr_53": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_53": {
+        "txt": "subtitle_53"
+      },
+      "text_54": {
+        "txt": "text_54",
+        "css": ""
+      },
+      "code_55": {
+        "txt": "acs.setOnOpen( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_56": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_56": {
+        "content": [
+          "callback ",
+          "Function",
+          "The function to be called. "
+        ]
+      },
+      "table-footer_56": {
+        "txt": ""
+      },
+      "hr_57": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_57": {
+        "txt": "subtitle_57"
+      },
+      "text_58": {
+        "txt": "text_58",
+        "css": ""
+      },
+      "code_59": {
+        "txt": "acs.setOnClose( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_60": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_60": {
+        "content": [
+          "callback ",
+          "Function",
+          "The function to be called. "
+        ]
+      },
+      "table-footer_60": {
+        "txt": ""
+      },
+      "hr_61": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_61": {
+        "txt": "subtitle_61"
+      },
+      "code_62": {
+        "txt": "acs.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_63": {
+        "txt": "text_63",
+        "css": ""
+      },
+      "hr_64": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_64": {
+        "txt": "subtitle_64"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "acs.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_67": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_67": {
+        "txt": "heading_67"
+      },
+      "hr_68": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_68": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show actionsheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n   }\n\n   btn_onTouch()\n   {\n       var choices = [\n           [\"person\", \"Account\"],\n           [\"share\", \"Send to email\"],\n           [\"delete\", \"Remove\"],\n       ];\n       this.act = ui.showActionSheet(\"\", choices, \"Icon\", this.onSelect);\n       this.act.description = \"This is the text\";\n       this.act.setColor(\"Remove\", \"orange\");\n   }\n\n   onSelect( name, icon ) {\n       ui.showPopup( icon );\n   }\n}",
         "sample": "Complete example of actionsheet"
+      },
+      "code_69": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when click\n   btn = ui.addButton(main, \"Show actionsheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\ndef btn_onTouch():\n   choices = [\n       [\"person\", \"Account\"],\n       [\"share\", \"Send to email\"],\n       [\"delete\", \"Remove\"],\n   ]\n   act = ui.showActionSheet(\"\", choices, \"Icon\", onSelect)\n   act.description = \"This is the text\"\n   act.setColor(\"Remove\", \"orange\")\n\ndef onSelect(name, icon):\n   ui.showPopup(icon)",
+        "sample": "Python Complete example of actionsheet"
       }
     }
   ]
@@ -330,7 +582,97 @@
       "de": "",
       "es": ""
     },
-    "heading_30": {
+    "subtitle_30": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_31": {
+      "en": "Removes and returns the last item in the actionsheet list items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_34": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_35": {
+      "en": "Removes and returns the first item in the actionsheet list items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_38": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "Add an item into the actionsheet.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "removeItem",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Removes an item in the list by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_49": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_50": {
+      "en": "Removes an item in the list by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_53": {
+      "en": "setOnOpen",
+      "de": "",
+      "es": ""
+    },
+    "text_54": {
+      "en": "Add a callback handler when the actionsheet is open.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_58": {
+      "en": "Add a callback handler when the actionsheet is close.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_61": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Show the actionsheet.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_64": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "Hide the actionsheet.",
+      "de": "",
+      "es": ""
+    },
+    "heading_67": {
       "en": "Examples",
       "de": "",
       "es": ""

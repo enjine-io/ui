@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Controls",
+  "homeName": "UI Controls",
   "homeLink": "ui/Controls",
   "pages": [
     {
@@ -79,7 +79,7 @@
       "table-row_7": {
         "content": [
           "layout ",
-          "Object",
+          "uio-Layout",
           "The drawer layout where to add controls. "
         ]
       },
@@ -424,6 +424,14 @@
       "code_53": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Adds a select control to the main layout.\n       this.sel = ui.addSelect(this.main, [\"Left\", \"Top\", \"Right\", \"Bottom\"], \"Radio,Outlined\", 0.7)\n       this.sel.label = \"Select anchor position\"\n\n       // Add a callback handler for `onChange` event of the select control.\n       this.sel.setOnChange(this.onSelect)\n\n       // Creates a linear layout for the drawer.\n       this.drawerLay = ui.addLayout( null, \"Linear\" )\n\n       // Initialize the drawer by passing the drawer layout.\n       this.drawer = ui.addDrawer( this.drawerLay, \"left\" )\n\n       var lst1 = [\n           [ \"music_note\", \"Audios\" ],\n           [ \"movie\", \"Videos\" ],\n           [ \"insert_drive_file\", \"Documents\" ]\n       ]\n\n       // Adds a list to the drawer layout.\n       this.lstMenu1 = ui.addList( this.drawerLay, lst1, \"Icon\", 1 )\n       this.lstMenu1.setOnTouch( this.closeDrawer )\n       this.lstMenu1.label = \"Main navigation\"\n\n       // Adds a divider into the drawer layout.\n       ui.addDivider( this.drawerLay, 1 )\n\n       var lst2 = [\n           [ \"mail\", \"All Mail\" ],\n           [ \"inbox\", \"Inbox\" ],\n           [ \"drafts\", \"Outbox\" ],\n           [ \"send\", \"Sent\" ]\n       ]\n\n       // Adds another list to the drawer layout.\n       this.lstMenu2 = ui.addList( this.drawerLay, lst2, \"Icon\", 1 )\n       this.lstMenu2.label = \"Secondary navigation\"\n       this.lstMenu2.setOnTouch( this.closeDrawer )\n   }\n\n   openDrawer()\n   {\n       this.drawer.show()\n   }\n\n   closeDrawer( title )\n   {\n       ui.showPopup( title )\n       this.drawer.hide()\n   }\n\n   onSelect( value )\n   {\n       // Set the drawer anchor first\n       this.drawer.anchor = value\n\n       // Set the drawer width depending on anchor position\n       if(value == \"Top\" || value == \"Bottom\") {\n           this.drawer.width = 0.5\n       } else {\n           this.drawer.width = 0.7\n       }\n       \n       // Open the drawer\n       this.drawer.show()\n   }\n}",
         "sample": "Drawer Anchor Positions"
+      },
+      "code_54": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n           main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n           apb = ui.addAppBar(main, \"My App\", \"Menu,Fixed\")\n           apb.setOnMenu(openDrawer)\n\n           ui.addText(main, \"<---- Swipe left ----->\", \"Center\")\n\n           drawerLay = ui.addLayout(None, \"Linear\")\n           drawer = ui.addDrawer(drawerLay, \"left\", 0.7)\n           drawer.setOnClose(onClose)\n\n           lst1 = [\n               [\"music_note\", \"Audios\"],\n               [\"movie\", \"Videos\"],\n               [\"insert_drive_file\", \"Documents\"]\n           ]\n           lstMenu1 = ui.addList(drawerLay, lst1, \"Icon\", 1)\n           lstMenu1.label = \"Main navigation\"\n           lstMenu1.setOnTouch(onSelect)\n\n           ui.addDivider(drawerLay, 1)\n\n           lst2 = [\n               [\"mail\", \"All Mail\"],\n               [\"inbox\", \"Inbox\"],\n               [\"drafts\", \"Outbox\"],\n               [\"send\", \"Sent\"]\n           ]\n           lstMenu2 = ui.addList(drawerLay, lst2, \"Icon\", 1)\n           lstMenu2.label = \"Secondary navigation\"\n           lstMenu2.setOnTouch(onSelect)\n\n       def openDrawer():\n           drawer.show()\n\n       def onSelect( title ):\n           ui.showPopup( title )",
+        "sample": "Python Drawer Implementation"
+      },
+      "code_55": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Adds a select control to the main layout.\n   sel = ui.addSelect(main, [\"Left\", \"Top\", \"Right\", \"Bottom\"], \"Radio,Outlined\", 0.7)\n   sel.label = \"Select anchor position\"\n\n   # Add a callback handler for `onChange` event of the select control.\n   sel.setOnChange(onSelect)\n\n   # Creates a linear layout for the drawer.\n   drawerLay = ui.addLayout(None, \"Linear\")\n\n   # Initialize the drawer by passing the drawer layout.\n   drawer = ui.addDrawer(drawerLay, \"left\")\n\n   lst1 = [\n       [\"music_note\", \"Audios\"],\n       [\"movie\", \"Videos\"],\n       [\"insert_drive_file\", \"Documents\"]\n   ]\n\n   # Adds a list to the drawer layout.\n   lstMenu1 = ui.addList(drawerLay, lst1, \"Icon\", 1)\n   lstMenu1.setOnTouch(closeDrawer)\n   lstMenu1.label = \"Main navigation\"\n\n   # Adds a divider into the drawer layout.\n   ui.addDivider(drawerLay, 1)\n\n   lst2 = [\n       [\"mail\", \"All Mail\"],\n       [\"inbox\", \"Inbox\"],\n       [\"drafts\", \"Outbox\"],\n       [\"send\", \"Sent\"]\n   ]\n\n   # Adds another list to the drawer layout.\n   lstMenu2 = ui.addList(drawerLay, lst2, \"Icon\", 1)\n   lstMenu2.label = \"Secondary navigation\"\n   lstMenu2.setOnTouch(closeDrawer)\n\ndef openDrawer():\n   drawer.show()\n\ndef closeDrawer(, title):\n   ui.showPopup(title)\n   drawer.hide()\n\ndef onSelect(, value):\n   # Set the drawer anchor first\n   drawer.anchor = value\n\n   # Set the drawer width depending on anchor position\n   if value == \"Top\" or value == \"Bottom\":\n       drawer.width = 0.5\n   else:\n       drawer.width = 0.7\n\n   # Open the drawer\n   drawer.show()",
+        "sample": "Python Drawer Anchor Positions"
       }
     }
   ]

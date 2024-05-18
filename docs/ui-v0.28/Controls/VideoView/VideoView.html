@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Controls",
+  "homeName": "UI Controls",
   "homeLink": "ui/Controls",
   "pages": [
     {
@@ -61,7 +61,7 @@
       "table-row_2": {
         "content": [
           "parent ",
-          "Object",
+          "uio-Layout",
           "The layout where to add the video view. "
         ]
       },
@@ -97,7 +97,7 @@
         "txt": ""
       },
       "text_7": {
-        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : VideoView</span>"
       },
       "text_9": {
         "txt": "text_9",
@@ -196,240 +196,233 @@
           "Sets or returns a boolean whether the video should start over again when completed."
         ]
       },
-      "table-footer_23": {
-        "txt": ""
-      },
-      "heading_24": {
-        "txt": "heading_24"
-      },
-      "text_25": {
-        "txt": "text_25",
-        "css": ""
-      },
-      "hr_26": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_26": {
-        "txt": "subtitle_26"
-      },
-      "text_27": {
-        "txt": "text_27",
-        "css": ""
-      },
-      "code_28": {
-        "txt": "vid.enterFullscreen()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "hr_29": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_29": {
-        "txt": "subtitle_29"
-      },
-      "text_30": {
-        "txt": "text_30",
-        "css": ""
-      },
-      "code_31": {
-        "txt": "vid.exitFullscreen()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "hr_32": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_32": {
-        "txt": "subtitle_32"
-      },
-      "text_33": {
-        "txt": "text_33",
-        "css": ""
-      },
-      "code_34": {
-        "txt": "vid.play()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "hr_35": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_35": {
-        "txt": "subtitle_35"
-      },
-      "text_36": {
-        "txt": "text_36",
-        "css": ""
-      },
-      "code_37": {
-        "txt": "vid.stop()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "hr_38": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_38": {
-        "txt": "subtitle_38"
-      },
-      "text_39": {
-        "txt": "text_39",
-        "css": ""
-      },
-      "code_40": {
-        "txt": "vid.setOnReady( cb )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_41": {
+      "table-row_23": {
         "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_30": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_35": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_36": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_38": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_39": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
       },
       "table-row_41": {
         "content": [
-          "cb ",
-          "function",
-          "The callback function to be called. This will pass  `info <i class=\"arg-def\">object</i>` Basic information of the video such as duration and dimensions."
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
         ]
       },
-      "table-footer_41": {
-        "txt": ""
-      },
-      "hr_42": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_42": {
-        "txt": "subtitle_42"
-      },
-      "text_43": {
-        "txt": "text_43",
-        "css": ""
-      },
-      "code_44": {
-        "txt": "vid.setOnPlay( cb )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_45": {
+      "table-row_42": {
         "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
       },
       "table-row_45": {
         "content": [
-          "cb ",
-          "function",
-          "The callback function to be called. "
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
         ]
       },
-      "table-footer_45": {
-        "txt": ""
-      },
-      "hr_46": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_46": {
-        "txt": "subtitle_46"
-      },
-      "text_47": {
-        "txt": "text_47",
-        "css": ""
-      },
-      "code_48": {
-        "txt": "vid.setOnPause( cb )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_49": {
+      "table-row_46": {
         "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_47": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_48": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
       },
       "table-row_49": {
         "content": [
-          "cb ",
-          "function",
-          "The callback function to be called. "
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
         ]
       },
-      "table-footer_49": {
+      "table-row_50": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_51": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ]
+      },
+      "table-footer_52": {
         "txt": ""
       },
-      "hr_50": {
+      "heading_53": {
+        "txt": "heading_53"
+      },
+      "text_54": {
+        "txt": "text_54",
+        "css": ""
+      },
+      "hr_55": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_50": {
-        "txt": "subtitle_50"
+      "subtitle_55": {
+        "txt": "subtitle_55"
       },
-      "text_51": {
-        "txt": "text_51",
+      "text_56": {
+        "txt": "text_56",
         "css": ""
       },
-      "code_52": {
-        "txt": "vid.setOnComplete( cb )",
+      "code_57": {
+        "txt": "vid.enterFullscreen()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_53": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_53": {
-        "content": [
-          "cb ",
-          "function",
-          "The callback function to be called. "
-        ]
-      },
-      "table-footer_53": {
-        "txt": ""
-      },
-      "hr_54": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_54": {
-        "txt": "subtitle_54"
-      },
-      "text_55": {
-        "txt": "text_55",
-        "css": ""
-      },
-      "code_56": {
-        "txt": "vid.setOnError( cb )",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_57": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_57": {
-        "content": [
-          "cb ",
-          "function",
-          "The callback function to be called. "
-        ]
-      },
-      "table-footer_57": {
-        "txt": ""
       },
       "hr_58": {
         "txt": "",
@@ -443,10 +436,220 @@
         "css": ""
       },
       "code_60": {
+        "txt": "vid.exitFullscreen()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_61": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_61": {
+        "txt": "subtitle_61"
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "code_63": {
+        "txt": "vid.play()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_64": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_64": {
+        "txt": "subtitle_64"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "vid.stop()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_67": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_67": {
+        "txt": "subtitle_67"
+      },
+      "text_68": {
+        "txt": "text_68",
+        "css": ""
+      },
+      "code_69": {
+        "txt": "vid.setOnReady( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_70": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_70": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. This will pass  `info <i class=\"arg-def\">object</i>` Basic information of the video such as duration and dimensions."
+        ]
+      },
+      "table-footer_70": {
+        "txt": ""
+      },
+      "hr_71": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_71": {
+        "txt": "subtitle_71"
+      },
+      "text_72": {
+        "txt": "text_72",
+        "css": ""
+      },
+      "code_73": {
+        "txt": "vid.setOnPlay( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_74": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_74": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_74": {
+        "txt": ""
+      },
+      "hr_75": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_75": {
+        "txt": "subtitle_75"
+      },
+      "text_76": {
+        "txt": "text_76",
+        "css": ""
+      },
+      "code_77": {
+        "txt": "vid.setOnPause( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_78": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_78": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_78": {
+        "txt": ""
+      },
+      "hr_79": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_79": {
+        "txt": "subtitle_79"
+      },
+      "text_80": {
+        "txt": "text_80",
+        "css": ""
+      },
+      "code_81": {
+        "txt": "vid.setOnComplete( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_82": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_82": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_82": {
+        "txt": ""
+      },
+      "hr_83": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_83": {
+        "txt": "subtitle_83"
+      },
+      "text_84": {
+        "txt": "text_84",
+        "css": ""
+      },
+      "code_85": {
+        "txt": "vid.setOnError( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_86": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_86": {
+        "content": [
+          "cb ",
+          "function",
+          "The callback function to be called. "
+        ]
+      },
+      "table-footer_86": {
+        "txt": ""
+      },
+      "hr_87": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_87": {
+        "txt": "subtitle_87"
+      },
+      "text_88": {
+        "txt": "text_88",
+        "css": ""
+      },
+      "code_89": {
         "txt": "vid.setOnSeek( cb )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_61": {
+      "table-header_90": {
         "content": [
           "Parameters",
           "Type",
@@ -454,32 +657,32 @@
         ],
         "css": ""
       },
-      "table-row_61": {
+      "table-row_90": {
         "content": [
           "cb ",
           "function",
           "The callback function to be called. This will pass  `pos <i class=\"arg-def\">number</i>` The playback position in seconds."
         ]
       },
-      "table-footer_61": {
+      "table-footer_90": {
         "txt": ""
       },
-      "hr_62": {
+      "hr_91": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_62": {
-        "txt": "subtitle_62"
+      "subtitle_91": {
+        "txt": "subtitle_91"
       },
-      "text_63": {
-        "txt": "text_63",
+      "text_92": {
+        "txt": "text_92",
         "css": ""
       },
-      "code_64": {
+      "code_93": {
         "txt": "vid.setOnSeeking( cb )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_65": {
+      "table-header_94": {
         "content": [
           "Parameters",
           "Type",
@@ -487,32 +690,32 @@
         ],
         "css": ""
       },
-      "table-row_65": {
+      "table-row_94": {
         "content": [
           "cb ",
           "function",
           "The callback function to be called. This will pass  `pos <i class=\"arg-def\">number</i>` The playback position in seconds."
         ]
       },
-      "table-footer_65": {
+      "table-footer_94": {
         "txt": ""
       },
-      "hr_66": {
+      "hr_95": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_66": {
-        "txt": "subtitle_66"
+      "subtitle_95": {
+        "txt": "subtitle_95"
       },
-      "text_67": {
-        "txt": "text_67",
+      "text_96": {
+        "txt": "text_96",
         "css": ""
       },
-      "code_68": {
+      "code_97": {
         "txt": "vid.setOnVolume( cb )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_69": {
+      "table-header_98": {
         "content": [
           "Parameters",
           "Type",
@@ -520,32 +723,32 @@
         ],
         "css": ""
       },
-      "table-row_69": {
+      "table-row_98": {
         "content": [
           "cb ",
           "function",
           "The callback function. This will pass  `volume <i class=\"arg-def\">number</i>` The audio volume of the video."
         ]
       },
-      "table-footer_69": {
+      "table-footer_98": {
         "txt": ""
       },
-      "hr_70": {
+      "hr_99": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_70": {
-        "txt": "subtitle_70"
+      "subtitle_99": {
+        "txt": "subtitle_99"
       },
-      "text_71": {
-        "txt": "text_71",
+      "text_100": {
+        "txt": "text_100",
         "css": ""
       },
-      "code_72": {
+      "code_101": {
         "txt": "vid.setOnProgress( cb )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_73": {
+      "table-header_102": {
         "content": [
           "Parameters",
           "Type",
@@ -553,47 +756,47 @@
         ],
         "css": ""
       },
-      "table-row_73": {
+      "table-row_102": {
         "content": [
           "cb ",
           "function",
           "The callback function. This will pass  `time <i class=\"arg-def\">number</i>` The elapsed playback time in seconds."
         ]
       },
-      "table-footer_73": {
+      "table-footer_102": {
         "txt": ""
       },
-      "hr_74": {
+      "hr_103": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_74": {
-        "txt": "subtitle_74"
+      "subtitle_103": {
+        "txt": "subtitle_103"
       },
-      "text_75": {
-        "txt": "text_75",
+      "text_104": {
+        "txt": "text_104",
         "css": ""
       },
-      "code_76": {
+      "code_105": {
         "txt": "vid.load()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_77": {
+      "hr_106": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_77": {
-        "txt": "subtitle_77"
+      "subtitle_106": {
+        "txt": "subtitle_106"
       },
-      "text_78": {
-        "txt": "text_78",
+      "text_107": {
+        "txt": "text_107",
         "css": ""
       },
-      "code_79": {
+      "code_108": {
         "txt": "vid.seekTo( time )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_80": {
+      "table-header_109": {
         "content": [
           "Parameters",
           "Type",
@@ -601,32 +804,32 @@
         ],
         "css": ""
       },
-      "table-row_80": {
+      "table-row_109": {
         "content": [
           "time ",
           "number",
           "The playback position in seconds. "
         ]
       },
-      "table-footer_80": {
+      "table-footer_109": {
         "txt": ""
       },
-      "hr_81": {
+      "hr_110": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_81": {
-        "txt": "subtitle_81"
+      "subtitle_110": {
+        "txt": "subtitle_110"
       },
-      "text_82": {
-        "txt": "text_82",
+      "text_111": {
+        "txt": "text_111",
         "css": ""
       },
-      "code_83": {
+      "code_112": {
         "txt": "vid.capture(type, format)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_84": {
+      "table-header_113": {
         "content": [
           "Parameters",
           "Type",
@@ -634,38 +837,685 @@
         ],
         "css": ""
       },
-      "table-row_84": {
+      "table-row_113": {
         "content": [
           "type ",
           "string",
           "The image type. Values are \"jpg\", \"png\", \"webp\", \"gif\". Default is \"jpg\". "
         ]
       },
-      "table-row_85": {
+      "table-row_114": {
         "content": [
           "format ",
           "string",
           "The returned data format. Can be \"base64\", \"bytes\"(regular array), \"uint8array\"(typed array) or \"arraybuffer\". "
         ]
       },
-      "table-footer_85": {
+      "table-footer_114": {
         "txt": ""
       },
-      "text_86": {
-        "txt": "text_86",
+      "text_115": {
+        "txt": "text_115",
         "css": ""
       },
-      "hr_87": {
+      "hr_116": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_87": {
+      "subtitle_116": {
+        "txt": "subtitle_116"
+      },
+      "text_118": {
+        "txt": "text_118",
+        "css": ""
+      },
+      "code_119": {
+        "txt": "setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_120": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_120": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_120": {
+        "txt": ""
+      },
+      "hr_121": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_121": {
+        "txt": "subtitle_121"
+      },
+      "text_123": {
+        "txt": "text_123",
+        "css": ""
+      },
+      "code_124": {
+        "txt": "cname.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_125": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_125": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_126": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_126": {
+        "txt": ""
+      },
+      "hr_127": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_127": {
+        "txt": "subtitle_127"
+      },
+      "text_129": {
+        "txt": "text_129",
+        "css": ""
+      },
+      "code_130": {
+        "txt": "cname.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_133": {
+        "txt": ""
+      },
+      "hr_134": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_134": {
+        "txt": "subtitle_134"
+      },
+      "text_136": {
+        "txt": "text_136",
+        "css": ""
+      },
+      "code_137": {
+        "txt": "cname.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_138": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_138": {
+        "txt": "subtitle_138"
+      },
+      "text_140": {
+        "txt": "text_140",
+        "css": ""
+      },
+      "code_141": {
+        "txt": "cname.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_142": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_142": {
+        "txt": "subtitle_142"
+      },
+      "text_144": {
+        "txt": "text_144",
+        "css": ""
+      },
+      "code_145": {
+        "txt": "cname.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_146": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_146": {
+        "txt": "subtitle_146"
+      },
+      "text_148": {
+        "txt": "text_148",
+        "css": ""
+      },
+      "code_149": {
+        "txt": "cname.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_150": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_150": {
+        "txt": "subtitle_150"
+      },
+      "text_152": {
+        "txt": "text_152",
+        "css": ""
+      },
+      "code_153": {
+        "txt": "cname.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_154": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_154": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_155": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_155": {
+        "txt": ""
+      },
+      "hr_156": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_156": {
+        "txt": "subtitle_156"
+      },
+      "text_158": {
+        "txt": "text_158",
+        "css": ""
+      },
+      "code_159": {
+        "txt": "cname.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_160": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_160": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_160": {
+        "txt": ""
+      },
+      "text_161": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_162": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_162": {
+        "txt": "subtitle_162"
+      },
+      "text_164": {
+        "txt": "text_164",
+        "css": ""
+      },
+      "code_165": {
+        "txt": "cname.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_166": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_166": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_167": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_168": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_169": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_170": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_170": {
+        "txt": ""
+      },
+      "hr_171": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_171": {
+        "txt": "subtitle_171"
+      },
+      "text_173": {
+        "txt": "text_173",
+        "css": ""
+      },
+      "code_174": {
+        "txt": "cname.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_175": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_175": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_176": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_177": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_178": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_179": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_179": {
+        "txt": ""
+      },
+      "hr_180": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_180": {
+        "txt": "subtitle_180"
+      },
+      "text_182": {
+        "txt": "text_182",
+        "css": ""
+      },
+      "code_183": {
+        "txt": "cname.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_184": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_184": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_185": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_186": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_186": {
+        "txt": ""
+      },
+      "hr_187": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_187": {
+        "txt": "subtitle_187"
+      },
+      "text_189": {
+        "txt": "text_189",
+        "css": ""
+      },
+      "code_190": {
+        "txt": "cname.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_191": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_191": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_192": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_193": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_194": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_195": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_196": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_196": {
+        "txt": ""
+      },
+      "hr_197": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_197": {
+        "txt": "subtitle_197"
+      },
+      "text_199": {
+        "txt": "text_199",
+        "css": ""
+      },
+      "code_200": {
+        "txt": "cname.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_201": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_201": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_202": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_203": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_204": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_205": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_205": {
+        "txt": ""
+      },
+      "hr_206": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_206": {
+        "txt": "subtitle_206"
+      },
+      "text_207": {
+        "txt": "text_207",
+        "css": ""
+      },
+      "text_208": {
+        "txt": "text_208",
+        "css": ""
+      },
+      "code_209": {
+        "txt": "cname.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_210": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_210": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like `sendBackward` method. "
+        ]
+      },
+      "table-footer_210": {
+        "txt": ""
+      },
+      "hr_211": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_211": {
+        "txt": "subtitle_211"
+      },
+      "text_213": {
+        "txt": "text_213",
+        "css": ""
+      },
+      "code_214": {
+        "txt": "cname.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_215": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_215": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like `bringForward` method. "
+        ]
+      },
+      "table-footer_215": {
+        "txt": ""
+      },
+      "hr_216": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_217": {
+        "txt": "heading_217"
+      },
+      "text_218": {
+        "txt": "text_218",
+        "css": ""
+      },
+      "text_219": {
+        "txt": "text_219",
+        "css": ""
+      },
+      "hr_220": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_220": {
         "txt": "class Main extends App\n{\n  onStart()\n  {\n       //Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       //Create a video view and pass the video url\n       let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n       this.vid = ui.addVideoView(this.main, src, \"AutoPlay\", 0.8, 0.8)\n\n       //Create a horizontal layout where to add video controls\n       this.lay = ui.addLayout(this.main, \"Linear\", \"Horizontal,VCenter\", 0.8, 0.15)\n       this.lay.setChildMargins(0.01, 0, 0.01, 0)\n\n       //Create the play button\n       this.playBtn = ui.addButton(this.lay, \"Play\", \"\", 0.2)\n       this.playBtn.setOnTouch( this.play )\n\n       //Create the pause/stop button\n       this.pauseBtn = ui.addButton(this.lay, \"Pause\", \"\", 0.2)\n       this.pauseBtn.setOnTouch( this.pause )\n\n       //Create the mute toggle button\n       this.muteBtn = ui.addButton(this.lay, \"Mute\", \"Toggle\", 0.2)\n       this.muteBtn.setOnTouch( this.toggleMute )\n   }\n\n   //Handle play button\n   play() { this.vid.play() }\n\n   //Handle pause/stop button\n   pause() { this.vid.stop() }\n\n   //Handle mute toggle button\n   toggleMute( val ) { this.vid.muted = val }\n}",
         "sample": "Simple video view"
       },
-      "code_88": {
+      "code_221": {
         "txt": "class Main extends App\n{\n  onStart()\n  {\n       //Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       //Create a video view with default Controls and Fill options\n       let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n       this.vid = ui.addVideoView(this.main, src, \"Controls,Fill\", 0.8, 0.8)\n\n       //Add video event listeners\n       this.vid.setOnComplete( this.onComplete )\n       this.vid.setOnPlay( this.onPlay )\n       this.vid.setOnPause( this.onPause )\n       this.vid.setOnSeek( this.onSeek )\n       this.vid.setOnSeeking( this.onSeeking )\n       this.vid.setOnVolume( this.onVolume )\n       this.vid.setOnProgress( this.onProgress )\n   }\n\n   //Handle on complete event\n   onComplete() { ui.showPopup( \"Video completed\" ) }\n\n   //Handle on play event\n   onPlay() { ui.showPopup( \"Video is playing\" ) }\n\n   //Handle on pause/stop event\n   onPause() { ui.showPopup( \"Video has been paused\" ) }\n\n   //Handle seek event completed\n   onSeek( val ) { console.log(\"On seek : \" + val) }\n\n   //Handle on active seeking event\n   onSeeking( val ) { console.log(\"Seeking : \" + val) }\n\n   //Handle volume change event\n   onVolume( val ) { ui.showPopup( val ) }\n\n   //Handle playing progress event\n   onProgress( time ) { console.log(\"Playback time : \" + time) }\n}",
         "sample": "Video view callbacks"
+      },
+      "code_222": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Create a video view and pass the video URL\n   src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n   vid = ui.addVideoView(main, src, \"AutoPlay\", 0.8, 0.8)\n\n   # Create a horizontal layout where to add video controls\n   lay = ui.addLayout(main, \"Linear\", \"Horizontal,VCenter\", 0.8, 0.15)\n   lay.setChildMargins(0.01, 0, 0.01, 0)\n\n   # Create the play button\n   playBtn = ui.addButton(lay, \"Play\", \"\", 0.2)\n   playBtn.setOnTouch(play)\n\n   # Create the pause/stop button\n   pauseBtn = ui.addButton(lay, \"Pause\", \"\", 0.2)\n   pauseBtn.setOnTouch(pause)\n\n   # Create the mute toggle button\n   muteBtn = ui.addButton(lay, \"Mute\", \"Toggle\", 0.2)\n   muteBtn.setOnTouch(toggleMute)\n\n# Handle play button\ndef play(): vid.play()\n\n# Handle pause/stop button\ndef pause(): vid.stop()\n\n# Handle mute toggle button\ndef toggleMute(val): vid.muted = val",
+        "sample": "Python Simple video view"
+      },
+      "code_223": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Create a video view with default Controls and Fill options\n   src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n   vid = ui.addVideoView(main, src, \"Controls,Fill\", 0.8, 0.8)\n\n   # Add video event listeners\n   vid.setOnComplete(onComplete)\n   vid.setOnPlay(onPlay)\n   vid.setOnPause(onPause)\n   vid.setOnSeek(onSeek)\n   vid.setOnSeeking(onSeeking)\n   vid.setOnVolume(onVolume)\n   vid.setOnProgress(onProgress)\n\n# Handle on complete event\ndef onComplete(): ui.showPopup(\"Video completed\")\n\n# Handle on play event\ndef onPlay(): ui.showPopup(\"Video is playing\")\n\n# Handle on pause/stop event\ndef onPause(): ui.showPopup(\"Video has been paused\")\n\n# Handle seek event completed\ndef onSeek(val): print(\"On seek : \" + str(val))\n\n# Handle on active seeking event\ndef onSeeking(val): print(\"Seeking : \" + str(val))\n\n# Handle volume change event\ndef onVolume(val): ui.showPopup(str(val))\n\n# Handle playing progress event\ndef onProgress(time): print(\"Playback time : \" + str(time))",
+        "sample": "Python Video view callbacks"
       }
     }
   ]
@@ -715,178 +1565,358 @@
       "de": "",
       "es": ""
     },
-    "heading_24": {
+    "heading_53": {
       "en": "Methods",
       "de": "",
       "es": ""
     },
-    "text_25": {
+    "text_54": {
       "en": "Here are the methods for the VideoView component.",
       "de": "",
       "es": ""
     },
-    "subtitle_26": {
+    "subtitle_55": {
       "en": "enterFullscreen",
       "de": "",
       "es": ""
     },
-    "text_27": {
+    "text_56": {
       "en": "Play video in fullscreen if supported.",
       "de": "",
       "es": ""
     },
-    "subtitle_29": {
+    "subtitle_58": {
       "en": "exitFullscreen",
       "de": "",
       "es": ""
     },
-    "text_30": {
+    "text_59": {
       "en": "Exit fullscreen if video is playing fullscreen.",
       "de": "",
       "es": ""
     },
-    "subtitle_32": {
+    "subtitle_61": {
       "en": "play",
       "de": "",
       "es": ""
     },
-    "text_33": {
+    "text_62": {
       "en": "Play the video.",
       "de": "",
       "es": ""
     },
-    "subtitle_35": {
+    "subtitle_64": {
       "en": "stop",
       "de": "",
       "es": ""
     },
-    "text_36": {
+    "text_65": {
       "en": "Stop the playing video.",
       "de": "",
       "es": ""
     },
-    "subtitle_38": {
+    "subtitle_67": {
       "en": "setOnReady",
       "de": "",
       "es": ""
     },
-    "text_39": {
+    "text_68": {
       "en": "Sets a callback handler when the video has buffered enough to begin playing. Video might not completely loaded for this event to be fired.",
       "de": "",
       "es": ""
     },
-    "subtitle_42": {
+    "subtitle_71": {
       "en": "setOnPlay",
       "de": "",
       "es": ""
     },
-    "text_43": {
+    "text_72": {
       "en": "Sets a callback handler when the video is played by the user or programmatically.",
       "de": "",
       "es": ""
     },
-    "subtitle_46": {
+    "subtitle_75": {
       "en": "setOnPause",
       "de": "",
       "es": ""
     },
-    "text_47": {
+    "text_76": {
       "en": "Sets a callback handler when the video is pause by the user or programmatically.",
       "de": "",
       "es": ""
     },
-    "subtitle_50": {
+    "subtitle_79": {
       "en": "setOnComplete",
       "de": "",
       "es": ""
     },
-    "text_51": {
+    "text_80": {
       "en": "Sets a callback handler when the video playback is completed.",
       "de": "",
       "es": ""
     },
-    "subtitle_54": {
+    "subtitle_83": {
       "en": "setOnError",
       "de": "",
       "es": ""
     },
-    "text_55": {
+    "text_84": {
       "en": "Sets a callback function when an error occurs while the video source is being loaded.",
       "de": "",
       "es": ""
     },
-    "subtitle_58": {
+    "subtitle_87": {
       "en": "setOnSeek",
       "de": "",
       "es": ""
     },
-    "text_59": {
+    "text_88": {
       "en": "Sets a callback handler when seeking event is completed.",
       "de": "",
       "es": ""
     },
-    "subtitle_62": {
+    "subtitle_91": {
       "en": "setOnSeeking",
       "de": "",
       "es": ""
     },
-    "text_63": {
+    "text_92": {
       "en": "Sets a callback handler when seeking event is active. Called when the user touches or slides the seekbar track.",
       "de": "",
       "es": ""
     },
-    "subtitle_66": {
+    "subtitle_95": {
       "en": "setOnVolume",
       "de": "",
       "es": ""
     },
-    "text_67": {
+    "text_96": {
       "en": "Sets a callback function when the volume of the video changes.",
       "de": "",
       "es": ""
     },
-    "subtitle_70": {
+    "subtitle_99": {
       "en": "setOnProgress",
       "de": "",
       "es": ""
     },
-    "text_71": {
+    "text_100": {
       "en": "Sets a callback handler to be be called while the video is playing. This is usefull when you have a custom progress bar where to constantly update the playback time.",
       "de": "",
       "es": ""
     },
-    "subtitle_74": {
+    "subtitle_103": {
       "en": "load",
       "de": "",
       "es": ""
     },
-    "text_75": {
+    "text_104": {
       "en": "Reloads the video source.",
       "de": "",
       "es": ""
     },
-    "subtitle_77": {
+    "subtitle_106": {
       "en": "seekTo",
       "de": "",
       "es": ""
     },
-    "text_78": {
+    "text_107": {
       "en": "Sets the playback position.",
       "de": "",
       "es": ""
     },
-    "subtitle_81": {
+    "subtitle_110": {
       "en": "capture",
       "de": "",
       "es": ""
     },
-    "text_82": {
+    "text_111": {
       "en": "Capture an image in the playback. This will return an image data which you can save or manipulate.",
       "de": "",
       "es": ""
     },
-    "text_86": {
+    "text_115": {
       "en": "@return object",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_116": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_118": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_121": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_123": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_127": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_134": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_136": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_138": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_142": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_144": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_146": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_148": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_150": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_152": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_156": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_158": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_162": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_164": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_171": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_173": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_180": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_187": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_189": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_197": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_199": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_206": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_207": {
+      "en": "@aname bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_208": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_211": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_213": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "heading_217": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    },
+    "text_218": {
+      "en": "Try these samples for `VideoView` control.",
+      "de": "",
+      "es": ""
+    },
+    "text_219": {
+      "en": "You can edit the code, save it and run. See your app in real time.",
       "de": "",
       "es": ""
     }

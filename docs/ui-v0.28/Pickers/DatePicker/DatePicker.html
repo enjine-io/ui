@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Pickers",
+  "homeName": "UI Pickers",
   "homeLink": "ui/Pickers",
   "pages": [
     {
@@ -159,6 +159,18 @@
       "code_23": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       ui.setTheme( \"dark\" )\n\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show date picker when click\n       this.btn = ui.addButton(this.main, \"Show Date Picker\")\n       this.btn.setOnTouch( this.showDatePicker )\n   }\n\n   showDatePicker()\n   {\n       // Display the date picker dialog\n       var opt = {\n           past: \"2023-12-05\",\n           future: \"2023-12-25\"\n       }\n       ui.showDatePicker(\"2023-12-15\", opt, this.onSelect)\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value )\n   }\n}",
         "sample": "Dark mode with date limits"
+      },
+      "code_24": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global dtp\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"Top,Vcenter\", 1, 1)\n   main.setMargins(0.01, 0.01, 0.01, 0.01)\n\n   # Add a button to the main layout\n   btn = ui.addButton(main, \"Show Date Picker\", \"Secondary\")\n   btn.setOnTouch(showDatePicker)\n\n   # Initialize date picker\n   dtp = ui.addDatePicker()\n\ndef showDatePicker(event):\n   # Display the date picker dialog\n   dtp.show()",
+        "sample": "Python Default"
+      },
+      "code_25": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global dtp\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"Top,Vcenter\", 1, 1)\n   main.setMargins(0.01, 0.01, 0.01, 0.01)\n\n   # Add a button to the main layout\n   btn = ui.addButton(main, \"Show Date Picker\", \"Secondary\")\n   btn.setOnTouch(showDatePicker)\n\n   # With initial value. Date must be of the form \"YYYY-MM-DD\"\n   dtp = ui.addDatePicker(\"2022-12-25\", \"Portrait\")\n\ndef showDatePicker(event):\n   # Display the date picker dialog\n   dtp.show()",
+        "sample": "Python With initial value & portrait"
+      },
+      "code_26": {
+        "txt": "from hybrid import ui\nfrom native import app\n\ndef OnStart():\n   global dtp\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"Top,Vcenter\", 1, 1)\n   main.setMargins(0.01, 0.01, 0.01, 0.01)\n\n   # Add a button to the main layout\n   btn = ui.addButton(main, \"Show Date Picker\", \"Secondary\")\n   btn.setOnTouch(showDatePicker)\n\n   # With initial value. Date must be of the form \"YYYY-MM-DD\"\n   dtp = ui.addDatePicker(\"2022-12-25\", \"Portrait\")\n   dtp.setOnSelect(onSelect)\n\ndef showDatePicker(event):\n   # Display the date picker dialog\n   dtp.show()\n\ndef onSelect(value):\n   app.ShowPopup(value)",
+        "sample": "Python With limits & callback"
       }
     }
   ]

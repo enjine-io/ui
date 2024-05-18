@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Dialogs",
+  "homeName": "UI Dialogs",
   "homeLink": "ui/Dialogs",
   "pages": [
     {
@@ -111,7 +111,7 @@
         "content": [
           "[options] ",
           "String",
-          "A comma separated options.\\nTheme Colors: `Primary`, `Secondary`\\nUtil: `NoCancel` prevents the dialog from closing on action. "
+          "A comma separated options.\\nTheme Colors: `Primary`, `Secondary`\\nUtil: `NoCancel` prevents the dialog from closing on action.\\nSizes: \"fullscreen\" "
         ]
       },
       "table-row_13": {
@@ -310,6 +310,18 @@
       "code_43": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n       // Adds a text control to the main layout.\n       this.txt = ui.addText(this.main, \"Email: \", \"\", 0.7)\n\n       // Adds a button to show the dialog.\n       this.btn = ui.addButton(this.main, \"Show Dialog\", \"Contained,Primary\")\n\n       // Add a callback handler for `ontouch` event on the button control\n       // to show the Dialog component\n       this.btn.setOnTouch( this.showDialog )\n\n       var bodyText = \"To subscribe to this website, please enter your email address here. We will send updates occasionally.\"\n       \n       // Initialize the dialog.\n       this.dlg = ui.addDialog(\"Subscribe\", bodyText, \"Cancel,Subscribe\")\n\n       // Add a callback handler for `onaction` event on the Dialog componenti\n       this.dlg.setOnAction( this.onAction )\n\n       // Adding textfield to the main layout\n       this.tfd = ui.addTextField(this.dlg.layout, \"\", \"Filled\")\n       this.tfd.label = \"Email Address\"\n   }\n\n   showDialog()\n   {\n       this.dlg.show()\n   }\n\n   onAction( action )\n   {\n       // Check the button that is click.\n       if( action == \"Subscribe\" )\n       {\n           // Change the text of the text control.\n           this.txt.text = \"Email : \" + this.tfd.text\n       }\n   }\n}",
         "sample": "Adding controls to the dialog"
+      },
+      "code_44": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global dlg\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add button to the main layout to show the dialog when clicked.\n   btn = ui.addButton(main, \"Show Dialog\", \"Contained,Primary\")\n   btn.setOnTouch(showDialog)\n\n   # Message to be displayed in the Dialog component\n   bodyText = \"Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.\"\n\n   # Initialize the Dialog component with `Agree` and `Disagree` action buttons\n   dlg = ui.addDialog(\"Use Google's location service?\", bodyText, \"Disagree,Agree\")\n\ndef showDialog(event):\n   # Show the Dialog component when the button is clicked.\n   dlg.show()",
+        "sample": "Python Basic"
+      },
+      "code_45": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global dlg\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout.\n   btn = ui.addButton(main, \"Show Dialog\", \"Contained,Primary\")\n\n   # Add a callback handler for `onTouch` event on the button.\n   btn.setOnTouch(showDialog)\n\n   # Message to display\n   bodyText = \"Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.\"\n\n   # Initialize the Dialog component and pass a `NoCancel` option.\n   dlg = ui.addDialog(\"Use Google's location service?\", bodyText, \"Close,Agree\", \"NoCancel\")\n\n   # Add a callback handler for `onAction` event on the Dialog component\n   dlg.setOnAction(onAction)\n\ndef showDialog(event):\n   # Show the Dialog component when button is clicked\n   dlg.show()\n\ndef onAction(action, index):\n   if action == \"Close\":\n       ui.showPopup(\"There you go.\")\n       dlg.hide()\n   else:\n       ui.showPopup(\"Oops! You can't close me here.\")",
+        "sample": "Python NoCancel"
+      },
+      "code_46": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global dlg, txt, tfd\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   # Adds a text control to the main layout.\n   txt = ui.addText(main, \"Email: \", \"\", 0.7)\n\n   # Adds a button to show the dialog.\n   btn = ui.addButton(main, \"Show Dialog\", \"Contained,Primary\")\n\n   # Add a callback handler for `ontouch` event on the button control\n   # to show the Dialog component\n   btn.setOnTouch(showDialog)\n\n   bodyText = \"To subscribe to this website, please enter your email address here. We will send updates occasionally.\"\n\n   # Initialize the dialog.\n   dlg = ui.addDialog(\"Subscribe\", bodyText, \"Cancel,Subscribe\")\n\n   # Add a callback handler for `onaction` event on the Dialog componenti\n   dlg.setOnAction(onAction)\n\n   # Adding textfield to the main layout\n   tfd = ui.addTextField(dlg.layout, \"\", \"Filled\")\n   tfd.label = \"Email Address\"\n\ndef showDialog(event):\n   dlg.show()\n\ndef onAction(action, index):\n   # Check the button that is clicked.\n   if action == \"Subscribe\":\n       # Change the text of the text control.\n       txt.text = \"Email: \" + tfd.text",
+        "sample": "Python Adding controls to the dialog"
       }
     }
   ]

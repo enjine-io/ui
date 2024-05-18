@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Dialogs",
+  "homeName": "UI Dialogs",
   "homeLink": "ui/Dialogs",
   "pages": [
     {
@@ -79,7 +79,7 @@
       "table-row_7": {
         "content": [
           "parent ",
-          "Object",
+          "uio",
           "The component where to anchor the Menu. "
         ]
       },
@@ -251,7 +251,7 @@
       "table-row_35": {
         "content": [
           "parent ",
-          "Object",
+          "uio",
           "The component where to anchor the menu. It can be a `Button` or an `Image`. "
         ]
       },
@@ -758,6 +758,22 @@
       "code_104": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setOnContextMenu( this.onMenu )\n\n       // Add a text control to the layout\n       this.txt = ui.addText(this.main, \"Right click anywhere on the screen.\\n(Long press if your on mobile phone)\", \"Multiline\")\n\n       // List items with icons\n       var items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n       // Add menu passing the btn as anchor component\n       this.menu = ui.addMenu(null, items, \"Icons,Dense\")\n\n       // Add a callback handler when a menu is touched\n       this.menu.setOnTouch( this.menuTouch )\n   }\n\n   onMenu( pos )\n   {\n       // show the menu on the position of the mouse\n       this.menu.show(pos.x, pos.y)\n   }\n\n   menuTouch( item )\n   {\n       // display the selected item\n       ui.showPopup( item )\n   }\n}",
         "sample": "Anchor position on mouse / touch"
+      },
+      "code_105": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Adds a button control to the layout\n   btn = ui.addButton(main, \"Show Menu\", \"Primary\")\n   btn.setOnTouch(onTouch)\n\n   # Menu items to display in the popup\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Adds a menu passing the button control as anchor\n   menu = ui.addMenu(btn, items)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch(event):\n   # show the menu\n   menu.show()\n\ndef menuTouch(item, icon, index):\n   ui.showPopup(item)",
+        "sample": "Python Basic menu"
+      },
+      "code_106": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global btn1, menu, btn2\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildSpacing(\"Evenly\")\n\n   # Add a first button control to the layout\n   btn1 = ui.addButton(main, \"Button 1\", \"Primary\")\n   btn1.setOnTouch(onTouch1)\n\n   # Add a second button control to the layout\n   btn2 = ui.addButton(main, \"Button 2\", \"Secondary\")\n   btn2.setOnTouch(onTouch2)\n\n   # Menu items to display the menu popup\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Adds a menu without anchor component\n   menu = ui.addMenu(None, items)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch1(event):\n   # Show the menu on button 1\n   menu.show(btn1)\n\ndef onTouch2(event):\n   # Show the menu on button 2\n   menu.show(btn2)\n\ndef menuTouch(item, icon, index):\n   ui.showPopup(item)",
+        "sample": "Python Changing anchor component"
+      },
+      "code_107": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button control to the main layout\n   btn = ui.addButton(main, \"Show Menu\", \"Primary\")\n   btn.setOnTouch(onTouch)\n\n   # List items with icons\n   items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n   # Add a menu passing the btn as anchor component\n   menu = ui.addMenu(btn, items, \"Icons,Primary,Dense\")\n\n   # Disable the second menu item\n   menu.setEnabled(1, False)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch(event):\n   # show the menu\n   menu.show()\n\ndef menuTouch(item, icon, index):\n   # display the selected item\n   ui.showPopup(item)",
+        "sample": "Python With icons and disabled items"
+      },
+      "code_108": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setOnContextMenu(onMenu)\n\n   # Add a text control to the layout\n   txt = ui.addText(main, \"Right click anywhere on the screen.\")\n\n   # List items with icons\n   items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n   # Add menu passing the btn as anchor component\n   menu = ui.addMenu(None, items, \"Icons,Dense\")\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onMenu(pos):\n   # show the menu on the position of the mouse\n   menu.show(pos.x, pos.y)\n\ndef menuTouch(item, icon, index):\n   # display the selected item\n   ui.showPopup(item)",
+        "sample": "Python Anchor position on mouse"
       }
     }
   ]

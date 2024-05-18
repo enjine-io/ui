@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Dialogs",
+  "homeName": "UI Dialogs",
   "homeLink": "ui/Dialogs",
   "pages": [
     {
@@ -212,6 +212,14 @@
       "code_28": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Progress Dialog\", \"Outlined\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Show a progress dialog with `AutoCancel` the dismisses on backdrop click\n       this.pdlg = ui.showProgressDialog(\"Loading...\", \"NoCancel\")\n\n       // hide the progress dialog after 2 seconds\n       setTimeout( () => {\n           this.pdlg.hide()\n           ui.showPopup( \"Progress dialog is close!\" )\n       }, 2000)\n   }\n}",
         "sample": "Nocancel progress dialog"
+      },
+      "code_29": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(main, \"Show Progress Dialog\", \"Outlined\")\n   btn.setOnTouch(onTouch)\n\ndef onTouch(event):\n   ui.showProgressDialog(\"Loading...\", \"AutoCancel\")",
+        "sample": "Python Progress Dialog"
+      },
+      "code_30": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(main, \"Show Progress Dialog\", \"Outlined\")\n   btn.setOnTouch(onTouch)\n\ndef onTouch(event):\n   pdlg = ui.showProgressDialog(\"Loading...\", \"NoCancel\")\n\n   def hideProgressDialog():\n       pdlg.hide()\n       ui.showPopup(\"Progress dialog is close!\")\n\n   app.SetTimeout(hideProgressDialog, 2000)",
+        "sample": "Python Nocancel progress dialog"
       }
     }
   ]

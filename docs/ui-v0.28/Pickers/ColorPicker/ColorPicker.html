@@ -39,7 +39,7 @@
     <script>
         const LAYOUTDATA = {
   "style": "",
-  "homeName": "Pickers",
+  "homeName": "UI Pickers",
   "homeLink": "ui/Pickers",
   "pages": [
     {
@@ -111,69 +111,33 @@
         "txt": "text_12",
         "css": ""
       },
-      "table-header_13": {
-        "content": [
-          "Properties",
-          "Type",
-          "Description"
-        ],
-        "css": ""
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "table-row_14": {
-        "content": [
-          "value ",
-          "String",
-          "Returns the value of the chosen color."
-        ]
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
       },
       "hr_15": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "table-footer_15": {
-        "txt": ""
+      "heading_15": {
+        "txt": "heading_15"
       },
-      "heading_16": {
-        "txt": "heading_16"
-      },
-      "text_17": {
-        "txt": "text_17",
-        "css": ""
-      },
-      "hr_18": {
+      "hr_16": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_18": {
-        "txt": "subtitle_18"
-      },
-      "text_19": {
-        "txt": "text_19",
-        "css": ""
-      },
-      "code_20": {
-        "txt": "cpk.getValue()",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "text_21": {
-        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
-      },
-      "hr_22": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "heading_22": {
-        "txt": "heading_22"
-      },
-      "hr_23": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "code_23": {
+      "code_16": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Popup\", \"Primary\")\n\n       // Add callback handler for `onTouch` event\n       this.btn.setOnTouch( this.showColorPicker )\n   }\n\n   showColorPicker()\n   {\n       // Show color picker dialog\n       ui.showColorPicker( this.onSelect )\n   }\n\n   onSelect( clr )\n   {\n       ui.showPopup( clr )\n   }\n}",
         "sample": "Basic"
       },
-      "code_24": {
+      "code_17": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Popup\", \"Primary\")\n\n       // Add callback handler for `onTouch` event\n       this.btn.setOnTouch( this.showColorPicker )\n   }\n\n   showColorPicker()\n   {\n       // Show color picker dialog with default color\n       ui.showColorPicker(\"#009688\", this.onSelect)\n   }\n\n   onSelect( clr )\n   {\n       ui.showPopup( clr )\n   }\n}",
         "sample": "Default value"
       }
@@ -225,27 +189,17 @@
       "de": "",
       "es": ""
     },
-    "heading_16": {
+    "heading_13": {
       "en": "Methods",
       "de": "",
       "es": ""
     },
-    "text_17": {
-      "en": "Here are the available methods of the ColorPicker Component.",
+    "text_14": {
+      "en": "Here are the available methods of the ColorPicker dialog.",
       "de": "",
       "es": ""
     },
-    "subtitle_18": {
-      "en": "getValue",
-      "de": "",
-      "es": ""
-    },
-    "text_19": {
-      "en": "Returns the hexadecimal string color value of the color picker.",
-      "de": "",
-      "es": ""
-    },
-    "heading_22": {
+    "heading_15": {
       "en": "Examples",
       "de": "",
       "es": ""
