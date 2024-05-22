@@ -80,7 +80,7 @@ function UI()
     this.version = 0.28
     this.theme = {dark:false, primary: "", secondary: ""}
     // this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
-    this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : _cdn ? "https://cdn.jsdelivr.net/gh/enjine-io/ui@main" : "libs"
+    this.libs = window._hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : window._cdn ? "https://cdn.jsdelivr.net/gh/enjine-io/ui@main" : "libs"
 
     //--- VISIBLE METHODS ------
     this.getVersion = function() { return this.version }
