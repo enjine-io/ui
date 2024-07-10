@@ -214,6 +214,47 @@ body, .backColor { background-color: var(--back); }
 .MuiChip-colorSecondary, .MuiChip-colorSecondary:hover { background-color: var(--secondary); }
 .MuiChip-colorPrimary.MuiChip-outlined { background-color: transparent; border: 1px solid var(--primary); color: var(--primary); }
 .MuiChip-colorSecondary.MuiChip-outlined { background-color: transparent; border: 1px solid var(--secondary); color: var(--secondary); }
+.MuiChip-clickableColorPrimary:hover, .MuiChip-clickableColorPrimary:focus {
+    background-color: var(--primary);
+}
+.MuiChip-clickableColorSecondary:hover, .MuiChip-clickableColorSecondary:focus {
+    background-color: var(--secondary);
+}
+
+.uiChipToggle { overflow: hidden; }
+.uiChipToggle.uiChipToggle-active::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure it's above the content */
+    pointer-events: none;
+    border-radius: inherit;
+    box-sizing: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.54)
+}
+.uiChipToggle-primary.uiChipToggle.uiChipToggle-active,
+.uiChipToggle-secondary.uiChipToggle.uiChipToggle-active {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+.uiChipToggle-primary.uiChipToggle.uiChipToggle-active::before {
+    background-color: var(--primary-h);
+    border: 1px solid var(--primary);
+}
+.uiChipToggle-secondary.uiChipToggle.uiChipToggle-active::before {
+    background-color: var(--secondary-h);
+    border: 1px solid var(--secondary);
+}
+.uiChipToggle-primary.uiChipToggle.uiChipToggle-active .MuiChip-label {
+    color: var(--primary);
+    font-weight: 600;
+}
+.uiChipToggle-secondary.uiChipToggle.uiChipToggle-active .MuiChip-label {
+    color: var(--secondary);
+    font-weight: 600;
+}
 
 /* Accordion */
 /* .MuiExpansionPanelSummary-root .MuiTypography-root { color: var(--default); } */
@@ -285,8 +326,8 @@ body, .backColor { background-color: var(--back); }
 
 
 /* Button Toggle */
-.uiToggle { overflow: hidden; }
-.uiToggle.uiToggle-active .MuiButton-label::before {
+.uiButtonToggle { overflow: hidden; }
+.uiButtonToggle.uiButtonToggle-active .MuiButton-label::before {
     content: "";
     position: absolute;
     top: 0;
@@ -295,16 +336,16 @@ body, .backColor { background-color: var(--back); }
     height: 100%;
     z-index: -1; /* Ensure it's above the content */
 }
-.MuiButton-containedPrimary.uiToggle.uiToggle-active .MuiButton-label::before,
-    .MuiButton-containedSecondary.uiToggle.uiToggle-active .MuiButton-label::before {
+.MuiButton-containedPrimary.uiButtonToggle.uiButtonToggle-active .MuiButton-label::before,
+    .MuiButton-containedSecondary.uiButtonToggle.uiButtonToggle-active .MuiButton-label::before {
         background-color: rgba(0, 0, 0, 0.175); /* Semi-transparent black overlay */
 }
-.uiToggle.uiToggle-active .MuiButton-label { z-index: 1; }
-.MuiButton-containedPrimary.uiToggle.uiToggle-active .MuiButton-label,
-    .MuiButton-containedSecondary.uiToggle.uiToggle-active .MuiButton-label {
+.uiButtonToggle.uiButtonToggle-active .MuiButton-label { z-index: 1; }
+.MuiButton-containedPrimary.uiButtonToggle.uiButtonToggle-active .MuiButton-label,
+    .MuiButton-containedSecondary.uiButtonToggle.uiButtonToggle-active .MuiButton-label {
         color: #fff;
 }
-.uiToggle.uiToggle-active::after {
+.uiButtonToggle.uiButtonToggle-active::after {
     content: "";
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
@@ -314,16 +355,16 @@ body, .backColor { background-color: var(--back); }
     width: 36%;
     z-index: 1; /* Ensure it's above the content */
 }
-.MuiButton-containedPrimary.uiToggle.uiToggle-active::after,
-    .MuiButton-containedSecondary.uiToggle.uiToggle-active::after {
+.MuiButton-containedPrimary.uiButtonToggle.uiButtonToggle-active::after,
+    .MuiButton-containedSecondary.uiButtonToggle.uiButtonToggle-active::after {
         background-color: #fff;
 }
-.MuiButton-outlinedPrimary.uiToggle.uiToggle-active::after,
-    .MuiButton-textPrimary.uiToggle.uiToggle-active::after {
+.MuiButton-outlinedPrimary.uiButtonToggle.uiButtonToggle-active::after,
+    .MuiButton-textPrimary.uiButtonToggle.uiButtonToggle-active::after {
         background-color: var(--primary);
 }
-.MuiButton-outlinedSecondary.uiToggle.uiToggle-active::after,
-    .MuiButton-textSecondary.uiToggle.uiToggle-active::after {
+.MuiButton-outlinedSecondary.uiButtonToggle.uiButtonToggle-active::after,
+    .MuiButton-textSecondary.uiButtonToggle.uiButtonToggle-active::after {
         background-color: var(--secondary);
 }
 

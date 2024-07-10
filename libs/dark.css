@@ -88,6 +88,8 @@ body, .backColor { background-color: var(--back); }
 .MuiFab-primary:hover { background-color: var(--primary); filter: brightness(1.1) }
 .MuiFab-secondary { background-color: var(--secondary); }
 .MuiFab-secondary:hover { background-color: var(--secondary); filter: brightness(1.1) }
+.MuiFab-root { color: #fff; background-color: var(--default); }
+.MuiFab-root:hover { background-color: var(--default); filter: brightness(var(--bright)); }
 
 /*Select*/
 .MuiSelect-root { color: #fff; }
@@ -273,8 +275,8 @@ body, .backColor { background-color: var(--back); }
 }
 
 /* Button Toggle */
-.uiToggle { overflow: hidden; }
-.uiToggle.uiToggle-active .MuiButton-label::before {
+.uiButtonToggle { overflow: hidden; }
+.uiButtonToggle.uiButtonToggle-active .MuiButton-label::before {
     content: "";
     position: absolute;
     top: 0;
@@ -283,8 +285,8 @@ body, .backColor { background-color: var(--back); }
     height: 100%;
     z-index: -1; /* Ensure it's above the content */
 }
-.uiToggle.uiToggle-active .MuiButton-label { z-index: 1; color: #fff; }
-.uiToggle.uiToggle-active::after {
+.uiButtonToggle.uiButtonToggle-active .MuiButton-label { z-index: 1; color: #fff; }
+.uiButtonToggle.uiButtonToggle-active::after {
     content: "";
     background-color: rgba(0, 0, 0, 0.65);
     position: absolute;
