@@ -74,13 +74,14 @@ function UI()
     //--- HIDDEN PROPERTIES ----
     var self = this
     this._fontFile = ""
-    this._clrh = new _colorHelpers();
+    this._clrh = new _colorHelpers()
+    this._rgb = {primary: [33, 150, 243], secondary: [245, 0, 87], defaultBlack: [0,0,0], defaultWhite: [255,255,255]}
 
     //--- VISIBLE PROPERTIES ---
     this.version = 0.28
     this.theme = {dark:false, primary: "", secondary: ""}
     // this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
-    this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : _cdn ? "https://cdn.jsdelivr.net/gh/enjine-io/ui@main" : "libs"
+    this.libs = window._hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : window._cdn ? "https://cdn.jsdelivr.net/gh/enjine-io/ui@main" : "libs"
 
     //--- VISIBLE METHODS ------
     this.getVersion = function() { return this.version }
@@ -105,16 +106,18 @@ function UI()
     {
         if( primary ) {
             self.theme.primary = primary
-            document.documentElement.style.setProperty( "--primary", primary );
-            var rgb = this._clrh.getHexColor( primary );
+            document.documentElement.style.setProperty( "--primary", primary )
+            var rgb = this._clrh.getHexColor( primary )
+            this._rgb.primary = rgb
             document.documentElement.style.setProperty( "--primary-o", `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.5)` )
             document.documentElement.style.setProperty( "--primary-b", `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.04)` )
             document.documentElement.style.setProperty( "--primary-h", `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.1)` )
         }
         if( secondary ) {
             self.theme.secondary = secondary
-            document.documentElement.style.setProperty( "--secondary", secondary );
-            var rgb = this._clrh.getHexColor( secondary );
+            document.documentElement.style.setProperty( "--secondary", secondary )
+            var rgb = this._clrh.getHexColor( secondary )
+            this._rgb.secondary = rgb
             document.documentElement.style.setProperty( "--secondary-o", `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.5)` )
             document.documentElement.style.setProperty( "--secondary-b", `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.04)` )
             document.documentElement.style.setProperty( "--secondary-h", `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, 0.1)` )
