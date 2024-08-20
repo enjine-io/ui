@@ -13,7 +13,7 @@ let _running = false,
     activeLink, activeNavLink, navList, navIsClick = false,
     // demoUrl = "http://localhost:3000";
     // demoUrl = "https://enjine-jdocs-3a9b16e42b4b.herokuapp.com";
-    demoUrl = "https://ide.droidscript.cloud/ui/"
+    demoUrl = "https://jumar.droidscript.cloud/api/"
 
 function createComponent(key, val) {
     var str = "";
@@ -302,10 +302,13 @@ function buildMainPage(home, onLoad) {
                             <div class="dropdown-menu btn-dropdown">`;
                 if(layouts.tutorial.header.versions && layouts.tutorial.header.versions.length) {
                     
-                    layouts.tutorial.header.versions.forEach(m => {
-                        const v = `../ui-${m.trim()}/ui.html`;
+                    layouts.tutorial.header.versions.forEach((m, i) => {
+                        var v = `../ui-${m.trim()}/ui.html`;
+                        if(layouts.tutorial.header.version_urls[i]) {
+                            v = layouts.tutorial.header.version_urls[i]
+                        }
                         vsDpd += 
-                                `<a class="dropdown-item" href="${v}">${m}</a>`;
+                                `<a class="dropdown-item" href="${v}" target="_blank">${m}</a>`;
                     });
                     
                 } else {

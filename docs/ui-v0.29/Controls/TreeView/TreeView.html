@@ -1,0 +1,1490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "trv = ui.addTreeView(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The parent layout where to add the TreeView component. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "[list] ",
+          "Object",
+          "An object of the treeview items. See example below. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options. Values can be `MultiSelect`. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : TreeView</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code13": {
+        "txt": "\nvar items = {\n   \"Group 1\": {\n       \"Item 1\": \"\",\n       \"Item 2\": \"\",\n       \"Item 3\": \"\"\n   },\n   \"Group 2\": {\n       \"Item 1\": \"\",\n       \"Item 2\": \"\",\n       \"Item 3\": \"\"\n   },\n   \"Applications\": {\n       \"Editor\": \"\",\n       \"Productivity\": \"\",\n       \"Social Media\": {\n           \"TikTok\": \"\",\n           \"YouTube\": \"\",\n           \"Meta\": {\n               \"Facebook\": \"\",\n               \"Instagram\": \"\",\n               \"Whatsapp\": \"\",\n               \"Messenger\": \"\"\n           }\n       }\n   }\n}\n",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "text_15": {
+        "txt": "text_15",
+        "css": ""
+      },
+      "text_16": {
+        "txt": "text_16",
+        "css": ""
+      },
+      "code_17": {
+        "txt": "var items = {\n   \"Folders\": {\n       \"Music\": \"music_note\",\n       \"Photos\": \"photo\",\n       \"Favorites\": \"favorite\"\n   }\n}",
+        "sample": "Items with icons"
+      },
+      "heading_18": {
+        "txt": "heading_18"
+      },
+      "text_19": {
+        "txt": "text_19",
+        "css": ""
+      },
+      "table-header_20": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_21": {
+        "content": [
+          "list ",
+          "Object",
+          "Sets or returns the list object."
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "value ",
+          "String",
+          "Returns the selected item of the TreeView."
+        ]
+      },
+      "hr_23": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_23": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_30": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_35": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_36": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_38": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_39": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_41": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_45": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_46": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_47": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_48": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_49": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_50": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_51": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ]
+      },
+      "table-footer_52": {
+        "txt": ""
+      },
+      "heading_53": {
+        "txt": "heading_53"
+      },
+      "text_54": {
+        "txt": "text_54",
+        "css": ""
+      },
+      "hr_55": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_55": {
+        "txt": "subtitle_55"
+      },
+      "text_57": {
+        "txt": "text_57",
+        "css": ""
+      },
+      "code_58": {
+        "txt": "setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_59": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_59": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_59": {
+        "txt": ""
+      },
+      "hr_60": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_60": {
+        "txt": "subtitle_60"
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "code_63": {
+        "txt": "trv.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_64": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_64": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_65": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_65": {
+        "txt": ""
+      },
+      "hr_66": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_66": {
+        "txt": "subtitle_66"
+      },
+      "text_68": {
+        "txt": "text_68",
+        "css": ""
+      },
+      "code_69": {
+        "txt": "trv.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_70": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_70": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_71": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_72": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_72": {
+        "txt": ""
+      },
+      "hr_73": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_73": {
+        "txt": "subtitle_73"
+      },
+      "text_75": {
+        "txt": "text_75",
+        "css": ""
+      },
+      "code_76": {
+        "txt": "trv.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_77": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_77": {
+        "txt": "subtitle_77"
+      },
+      "text_79": {
+        "txt": "text_79",
+        "css": ""
+      },
+      "code_80": {
+        "txt": "trv.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_83": {
+        "txt": "text_83",
+        "css": ""
+      },
+      "code_84": {
+        "txt": "trv.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_85": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_85": {
+        "txt": "subtitle_85"
+      },
+      "text_87": {
+        "txt": "text_87",
+        "css": ""
+      },
+      "code_88": {
+        "txt": "trv.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_89": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_89": {
+        "txt": "subtitle_89"
+      },
+      "text_91": {
+        "txt": "text_91",
+        "css": ""
+      },
+      "code_92": {
+        "txt": "trv.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_93": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_93": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_94": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_94": {
+        "txt": ""
+      },
+      "hr_95": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_95": {
+        "txt": "subtitle_95"
+      },
+      "text_97": {
+        "txt": "text_97",
+        "css": ""
+      },
+      "code_98": {
+        "txt": "trv.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_99": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_99": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_99": {
+        "txt": ""
+      },
+      "text_100": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_101": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_101": {
+        "txt": "subtitle_101"
+      },
+      "text_103": {
+        "txt": "text_103",
+        "css": ""
+      },
+      "code_104": {
+        "txt": "trv.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_105": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_105": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_106": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_107": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_108": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_109": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_109": {
+        "txt": ""
+      },
+      "hr_110": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_110": {
+        "txt": "subtitle_110"
+      },
+      "text_112": {
+        "txt": "text_112",
+        "css": ""
+      },
+      "code_113": {
+        "txt": "trv.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_114": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_114": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_115": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_116": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_117": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_118": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_118": {
+        "txt": ""
+      },
+      "hr_119": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_119": {
+        "txt": "subtitle_119"
+      },
+      "text_121": {
+        "txt": "text_121",
+        "css": ""
+      },
+      "code_122": {
+        "txt": "trv.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_123": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_123": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_124": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_125": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_125": {
+        "txt": ""
+      },
+      "hr_126": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_126": {
+        "txt": "subtitle_126"
+      },
+      "text_128": {
+        "txt": "text_128",
+        "css": ""
+      },
+      "code_129": {
+        "txt": "trv.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_130": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_130": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_131": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_135": {
+        "txt": ""
+      },
+      "hr_136": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_136": {
+        "txt": "subtitle_136"
+      },
+      "text_138": {
+        "txt": "text_138",
+        "css": ""
+      },
+      "code_139": {
+        "txt": "trv.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_140": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_140": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_141": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_142": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_143": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_144": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_144": {
+        "txt": ""
+      },
+      "hr_145": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_145": {
+        "txt": "subtitle_145"
+      },
+      "text_146": {
+        "txt": "text_146",
+        "css": ""
+      },
+      "text_147": {
+        "txt": "text_147",
+        "css": ""
+      },
+      "code_148": {
+        "txt": "trv.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_149": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_149": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like `sendBackward` method. "
+        ]
+      },
+      "table-footer_149": {
+        "txt": ""
+      },
+      "hr_150": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_150": {
+        "txt": "subtitle_150"
+      },
+      "text_152": {
+        "txt": "text_152",
+        "css": ""
+      },
+      "code_153": {
+        "txt": "trv.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_154": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_154": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like `bringForward` method. "
+        ]
+      },
+      "table-footer_154": {
+        "txt": ""
+      },
+      "hr_155": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_156": {
+        "txt": "subtitle_156"
+      },
+      "text_157": {
+        "txt": "text_157",
+        "css": ""
+      },
+      "code_158": {
+        "txt": "trv.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_159": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_159": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `value <i class=\"arg-def\">String</i>` The selected tree item. `path <i class=\"arg-def\">String</i>` The complete path of the tree item."
+        ]
+      },
+      "table-footer_159": {
+        "txt": ""
+      },
+      "hr_160": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_160": {
+        "txt": "subtitle_160"
+      },
+      "text_161": {
+        "txt": "text_161",
+        "css": ""
+      },
+      "code_162": {
+        "txt": "trv.setList( obj )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_163": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_163": {
+        "content": [
+          "obj ",
+          "Object",
+          "The list object of the treeview items. See example above. "
+        ]
+      },
+      "table-footer_163": {
+        "txt": ""
+      },
+      "hr_164": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_164": {
+        "txt": "subtitle_164"
+      },
+      "text_165": {
+        "txt": "text_165",
+        "css": ""
+      },
+      "code_166": {
+        "txt": "trv.addItem( name, obj )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_167": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_167": {
+        "content": [
+          "name ",
+          "String",
+          "The label text for the new item. "
+        ]
+      },
+      "table-row_168": {
+        "content": [
+          "obj ",
+          "Object",
+          "See list object for more info. "
+        ]
+      },
+      "table-footer_168": {
+        "txt": ""
+      },
+      "hr_169": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_169": {
+        "txt": "subtitle_169"
+      },
+      "text_170": {
+        "txt": "text_170",
+        "css": ""
+      },
+      "code_171": {
+        "txt": "trv.getItem( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_172": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_172": {
+        "content": [
+          "name ",
+          "String",
+          "The parent name of the tree items. "
+        ]
+      },
+      "table-footer_172": {
+        "txt": ""
+      },
+      "text_173": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_174": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_174": {
+        "txt": "heading_174"
+      },
+      "hr_175": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_175": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"Center,ScrollY,FillXY\")\n\n       // Initialize json object for the treeview items\n       var items = {\n           \"Group 1\": {\n               \"Item 1\": \"\",\n               \"Item 2\": \"\",\n               \"Item 3\": \"\"\n           },\n           \"Group 2\": {\n               \"Item 1\": \"\",\n               \"Item 2\": \"\",\n               \"Item 3\": \"\"\n           },\n           \"Applications\": {\n               \"Editor\": \"\",\n               \"Productivity\": \"\",\n               \"Social Media\": {\n                   \"TikTok\": \"\",\n                   \"YouTube\": \"\",\n                   \"Meta\": {\n                       \"Facebook\": \"\",\n                       \"Instagram\": \"\",\n                       \"Whatsapp\": \"\",\n                       \"Messenger\": \"\"\n                   }\n               }\n           }\n       }\n\n       // Add a treeview component to the main layout\n       this.trv = ui.addTreeView(this.main, items, \"Primary\")\n       this.trv.setMargins(0, 5, 0, 0, \"rem\")\n\n       // Add a callback handler when the treeview item is touched\n       this.trv.setOnTouch( this.onTouch )\n   }\n\n   onTouch(value, path)\n   {\n       ui.showPopup(\"Value: \"+value + \" Path: \"+path)\n   }\n}",
+        "sample": "Basic TreeView"
+      },
+      "code_176": {
+        "txt": "items = {\n   \"Group 1\": {\n       \"Item 1\": \"\",\n       \"Item 2\": \"\",\n       \"Item 3\": \"\"\n   },\n   \"Group 2\": {\n       \"Item 1\": \"\",\n       \"Item 2\": \"\",\n       \"Item 3\": \"\"\n   },\n   \"Applications\": {\n       \"Editor\": \"\",\n       \"Productivity\": \"\",\n       \"Social Media\": {\n           \"TikTok\": \"\",\n           \"YouTube\": \"\",\n           \"Meta\": {\n               \"Facebook\": \"\",\n               \"Instagram\": \"\",\n               \"Whatsapp\": \"\",\n               \"Messenger\": \"\"\n           }\n       }\n   }\n}",
+        "sample": "Python Items"
+      },
+      "code_177": {
+        "txt": "items = {\n   \"Folders\": {\n       \"Music\": \"music_note\",\n       \"Photos\": \"photo\",\n       \"Favorites\": \"favorite\"\n   }\n}",
+        "sample": "Python Items with icons"
+      },
+      "code_178": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"Center,ScrollY,FillXY\")\n\n   items = {\n       \"Group 1\": {\n           \"Item 1\": \"\",\n           \"Item 2\": \"\",\n           \"Item 3\": \"\"\n       },\n       \"Group 2\": {\n           \"Item 1\": \"\",\n           \"Item 2\": \"\",\n           \"Item 3\": \"\"\n       },\n       \"Applications\": {\n           \"Editor\": \"\",\n           \"Productivity\": \"\",\n           \"Social Media\": {\n               \"TikTok\": \"\",\n               \"YouTube\": \"\",\n               \"Meta\": {\n                   \"Facebook\": \"\",\n                   \"Instagram\": \"\",\n                   \"Whatsapp\": \"\",\n                   \"Messenger\": \"\"\n               }\n           }\n       }\n   }\n\n   trv = ui.addTreeView(main, items, \"Primary\")\n   trv.setMargins(0, 5, 0, 0, \"rem\")\n   trv.setOnTouch(onTouch)\n\ndef onTouch(value, path, event):\n   ui.showPopup(\"Value: \" + value + \" Path: \" + path)",
+        "sample": "Python Basic TreeView"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " TreeView",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A TreeView is a hierarchical representation of data, often used to display nested categories or organized information.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "A tree view is best use in file system navigation. Add a treeview into your app using the `addTreeView` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "The properties of the list object will be the name of the item or the group.",
+      "de": "",
+      "es": ""
+    },
+    "text_15": {
+      "en": "If you add a string value to the list object properties, it will be treated as an icon.",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
+      "en": "See example below",
+      "de": "",
+      "es": ""
+    },
+    "heading_18": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_19": {
+      "en": "Here are the available setter and getter properties of the TreeView Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_53": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_54": {
+      "en": "Here are the available methods of the TreeView Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_55": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_57": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_60": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_62": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_66": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_68": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_73": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_75": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_77": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_79": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_83": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_85": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_87": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_91": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_95": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_97": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_101": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_103": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_110": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_112": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_119": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_121": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_126": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_128": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_136": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_138": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_145": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "@aname bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_147": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_150": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_152": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_156": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_157": {
+      "en": "Add a on touch handler to the TreeView item when click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_160": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_161": {
+      "en": "Updates the list items of the TreeView component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_164": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_165": {
+      "en": "Add a tree items to the tree view.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_169": {
+      "en": "getItem",
+      "de": "",
+      "es": ""
+    },
+    "text_170": {
+      "en": "Returns the list items object of a given parent tree item name.",
+      "de": "",
+      "es": ""
+    },
+    "heading_174": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/TreeView';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

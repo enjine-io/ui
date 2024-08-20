@@ -1,0 +1,141 @@
+.CodeMirror-Tern-completion {
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.5;
+}
+.CodeMirror-Tern-completion:before {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  font-size: 12px;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #616161;
+  background: rgba(255,255,255,0.7);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.CodeMirror-Tern-completion-unknown:before {
+  content: "?";
+  /*background: #4bb;*/
+}
+.CodeMirror-Tern-completion-object:before {
+  content: "O";
+  /*background: #77c;*/
+}
+.CodeMirror-Tern-completion-fn:before {
+  content: "F";
+  /*background: #7c7;*/
+}
+.CodeMirror-Tern-completion-array:before {
+  content: "A";
+  /*background: #c66;*/
+}
+.CodeMirror-Tern-completion-number:before {
+  content: "1";
+  /*background: #999;*/
+}
+.CodeMirror-Tern-completion-string:before {
+  content: "S";
+  /*background: #999;*/
+}
+.CodeMirror-Tern-completion-bool:before {
+  content: "B";
+  /*background: #999;*/
+}
+.CodeMirror-Tern-completion-dskeywords:before {
+  content: "D";
+  /*background: #999;*/
+}
+
+
+.CodeMirror-Tern-completion-guess {
+  color: #999;
+}
+
+.CodeMirror-Tern-tooltip {
+  border: 1px solid #3e4347;
+  border-radius: 2px;
+  color: rgba(255,255,255,0.74);
+  padding: 2px 5px;
+  font-size: 0.85rem;
+  background: #2e3134;
+  white-space: pre-wrap;
+  font-family: 'Roboto Mono', monospace !important;
+  max-width: 40em;
+  position: absolute;
+  z-index: 10;
+  -webkit-box-shadow: 2px 3px 5px rgba(0,0,0,.2);
+  -moz-box-shadow: 2px 3px 5px rgba(0,0,0,.2);
+  box-shadow: 2px 3px 5px rgba(0,0,0,.2);
+  transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+  -ms-transition: opacity 2s;
+}
+
+.CodeMirror-Tern-hint-doc {
+  max-width: 25em;
+  /*margin-top: -3px;*/
+  margin-left: 1px;
+}
+
+.CodeMirror-Tern-fname { color: rgba(255,255,255,0.74); }
+.CodeMirror-Tern-farg { color: rgba(255,255,255,0.74); }
+.CodeMirror-Tern-farg-current { color: #66bb6a; }
+.CodeMirror-Tern-type { color: rgba(255,255,255,0.5); }
+.CodeMirror-Tern-fhint-guess { opacity: 0.7; }
+
+.fdef-container { display: flex; flex-direction: column; margin-bottom: 2px; }
+.fdef-container * { margin-bottom: 2px; }
+.fdef-hr { height: 1px; border: 0; background-color: rgba(255,255,255,0.1); }
+.fdef-name {}
+.fdef-type { color: #66bb6a; }
+.fdef-desc { color: rgba(255,255,255,0.54); }
+.fdef-wrap { display: flex; flex-wrap: wrap; align-items: center; }
+.fdef-options, .fdef-default-value { background-color: rgba(0,0,0,0.15); color: rgba(255, 204, 128, 0.7); margin: 0 0.25rem; border-radius: 2px; padding: 0px 2px; }
+.fdef-optional, .fdef-default-text, .fdef-values-text { color: rgba(255,255,255,0.54); font-style: italic; font-size: 85%; }
+.fdef-default {}
+.fdef-link { color: #3498db; text-decoration: none; }
+.fdef-link:hover { text-decoration: underline; }
+
+.sel-completion-hint.name { font-size: 0.8rem; color: #9e9e9e; }
+.sel-completion-hint.type, .context-info-hint.type {
+    padding: 0px 3px;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.25);
+    font-family: monospace;
+    color: #66bb6a;
+}
+.context-info-hint { font-size: 0.85rem; }
+.backticks-enclosed, .fdef-inline-code {
+    font-size: 0.8rem;
+    padding: 2px 3px;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.25);
+    font-family: monospace;
+}
+.data-type {color: #66bb6a;}
+
+.argument-hint-tooltip {
+/*     max-height: 25rem !important; */
+    overflow-y: scroll !important;
+}
+
+.arg-type-error {
+    border-bottom: 1px dashed red;
+}
+
+
+
+
+
+
+
+

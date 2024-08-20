@@ -20,6 +20,8 @@ html, body, #root {
     -webkit-user-select: none !important;
     touch-action: manipulation;
 	font-family: 'Roboto', sans-serif;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .enj-vertical-child {
@@ -50,6 +52,32 @@ html, body, #root {
 
 .color-picker-preset-btn:focus {
     outline: none;
+}
+
+.ui-root-layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ui-control {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-control-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ui-route {
+    display: none;
 }
 
 .frame-child-wrapper {

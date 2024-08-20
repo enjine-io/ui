@@ -5,6 +5,8 @@ function _DSCode_() {
     this.hintNames = [];
     this.hints = {};
     this.keywords = [];
+    this.conf = {};
+    this.defFiles = []; // {fileName, filePath, type:"scope"|"project"|"plugin"}
     
     /**    
      * Adds a hints into the CodeEditor.
@@ -83,7 +85,7 @@ function loadAllTips() {
 
 // addFiles to the TernServer
 // called in index.js in loadAllFiles function.
-const loadFileToTernServer = async function(name, url) {
+const loadFileToTernServer = async function(name, url, type) {
     let content = "", doc, TS;
     try {
         content = await __dsHelperMakeRequest("get", url);
@@ -91,6 +93,11 @@ const loadFileToTernServer = async function(name, url) {
         doc = CodeMirror.Doc(content, "javascript");
         TS = TERNSERVER.addDoc(name, doc);
         main.TernServer.docs[name] = TS;
+        DSCode.defFiles.push({
+            fileName: name,
+            filePath: url,
+            type
+        })
     } catch( err ) {
         console.log(err);
     }
@@ -113,11 +120,16 @@ const loadPlugins = async function( folder ) {
                     let i = files.list.findIndex(m => (m.toLowerCase() == plg+".js" || m.toLowerCase() == plg+".inc"));
                     if(i >= 0) {
                         try {
-                            content = await __dsHelperMakeRequest("get", path+files.list[i]);
-                            doc = CodeMirror.Doc(content, "javascript");
-                            TERNSERVER.addDoc(plg, doc);
+                            content = await __dsHelperMakeRequest("get", path+files.list[i])
+                            doc = CodeMirror.Doc(content, "javascript")
+                            TERNSERVER.addDoc(plg, doc)
+                            DSCode.defFiles.push({
+                                fileName: files.list[i],
+                                filePath: folder+"/"+plg+"/"+files.list[i],
+                                type: "plugin"
+                            })
                         } catch(err) {
-                            console.log(err);
+                            console.log(err)
                         }
                     }
                 } catch(err) {

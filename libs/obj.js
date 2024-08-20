@@ -53,6 +53,7 @@ class App extends AppObject
         const Core = global.Core;
         if (this.onStart) this.onStart();
         if (typeof Core != 'undefined') Core._load();
+        if(typeof ui._onLoadMain == "function") ui._onLoadMain();
     }
 
     setOnLoad(cb) { this._onLoad = this._onLoad; }

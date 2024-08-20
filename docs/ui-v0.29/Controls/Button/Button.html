@@ -1,0 +1,1795 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Code Mirror libs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
+
+    <!-- Code mirror mode -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "btn = ui.addButton(parent, text, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The layout where to add the button. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "text ",
+          "String",
+          "The button text or the material icon text. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nVariant: `Contained`, `Outlined`, `Text`, `Default`\\nTheme Color: `Primary`, `Secondary`, `Default`\\nSizes: `Small`, `Medium`, `Large`\\nToggleable: `Toggle`, `Active`\\nUtils: `Icon`, `NoRipple`, `Upload`, `Multiple`, `Link`, `NewTab` "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Button</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "heading_14": {
+        "txt": "heading_14"
+      },
+      "text_15": {
+        "txt": "text_15",
+        "css": ""
+      },
+      "table-header_16": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_17": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the button text."
+        ]
+      },
+      "table-row_18": {
+        "content": [
+          "badge ",
+          "Number",
+          "Sets or returns the badge content. You can pass a `string`"
+        ]
+      },
+      "table-row_19": {
+        "content": [
+          "badgeColor ",
+          "String",
+          "Sets or returns the color of the badge. Values can be `Primary` or `Secondary`"
+        ]
+      },
+      "table-row_20": {
+        "content": [
+          "toolTip ",
+          "String",
+          "Sets or returns the tooltip text."
+        ]
+      },
+      "table-row_21": {
+        "content": [
+          "toolTipPosition ",
+          "String",
+          "Sets or returns the tooltip position. Values can be `left` `top` `right` or `bottom`"
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the variant of the button. Values can be `Contained` `Outlined` or `Text`"
+        ]
+      },
+      "table-row_23": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the button. Values can be `Default` `Primary` `Secondary` `Inherit`"
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the text color in hexadecimal format."
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "sizeVariant ",
+          "String",
+          "Sets or returns the size variant of the button. Values can be `small` `medium` or `large`"
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius of the button."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the material icon font use for the leading icon."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "acceptedFiles ",
+          "String",
+          "Sets or returns the accepted files for an upload button."
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "active ",
+          "Boolean",
+          "Sets or returns the active state if button is `toggleable`."
+        ]
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_30": {
+        "content": [
+          "url ",
+          "String",
+          "Sets or returns the link url, if the button is of type link."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_35": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_36": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_38": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_39": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_41": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_45": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_46": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_47": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_48": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_49": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_50": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_51": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_52": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_53": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_54": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_55": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_56": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_57": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_58": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_59": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ]
+      },
+      "table-footer_60": {
+        "txt": ""
+      },
+      "heading_61": {
+        "txt": "heading_61"
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "hr_63": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_63": {
+        "txt": "subtitle_63"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_67": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_67": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_67": {
+        "txt": ""
+      },
+      "hr_68": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_68": {
+        "txt": "subtitle_68"
+      },
+      "text_70": {
+        "txt": "text_70",
+        "css": ""
+      },
+      "code_71": {
+        "txt": "btn.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_72": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_72": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_73": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_73": {
+        "txt": ""
+      },
+      "hr_74": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_74": {
+        "txt": "subtitle_74"
+      },
+      "text_76": {
+        "txt": "text_76",
+        "css": ""
+      },
+      "code_77": {
+        "txt": "btn.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_78": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_78": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_79": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_80": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_80": {
+        "txt": ""
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_83": {
+        "txt": "text_83",
+        "css": ""
+      },
+      "code_84": {
+        "txt": "btn.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_85": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_85": {
+        "txt": "subtitle_85"
+      },
+      "text_87": {
+        "txt": "text_87",
+        "css": ""
+      },
+      "code_88": {
+        "txt": "btn.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_89": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_89": {
+        "txt": "subtitle_89"
+      },
+      "text_91": {
+        "txt": "text_91",
+        "css": ""
+      },
+      "code_92": {
+        "txt": "btn.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_93": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_93": {
+        "txt": "subtitle_93"
+      },
+      "text_95": {
+        "txt": "text_95",
+        "css": ""
+      },
+      "code_96": {
+        "txt": "btn.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_97": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_97": {
+        "txt": "subtitle_97"
+      },
+      "text_99": {
+        "txt": "text_99",
+        "css": ""
+      },
+      "code_100": {
+        "txt": "btn.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_101": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_101": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_102": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_102": {
+        "txt": ""
+      },
+      "hr_103": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_103": {
+        "txt": "subtitle_103"
+      },
+      "text_105": {
+        "txt": "text_105",
+        "css": ""
+      },
+      "code_106": {
+        "txt": "btn.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_107": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_107": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_107": {
+        "txt": ""
+      },
+      "text_108": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_109": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_109": {
+        "txt": "subtitle_109"
+      },
+      "text_111": {
+        "txt": "text_111",
+        "css": ""
+      },
+      "code_112": {
+        "txt": "btn.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_113": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_113": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_114": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_115": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_116": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_117": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_117": {
+        "txt": ""
+      },
+      "hr_118": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_118": {
+        "txt": "subtitle_118"
+      },
+      "text_120": {
+        "txt": "text_120",
+        "css": ""
+      },
+      "code_121": {
+        "txt": "btn.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_122": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_122": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_123": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_124": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_125": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_126": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_126": {
+        "txt": ""
+      },
+      "hr_127": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_127": {
+        "txt": "subtitle_127"
+      },
+      "text_129": {
+        "txt": "text_129",
+        "css": ""
+      },
+      "code_130": {
+        "txt": "btn.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_133": {
+        "txt": ""
+      },
+      "hr_134": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_134": {
+        "txt": "subtitle_134"
+      },
+      "text_136": {
+        "txt": "text_136",
+        "css": ""
+      },
+      "code_137": {
+        "txt": "btn.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_138": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_138": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_139": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_140": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_141": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_142": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_143": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_143": {
+        "txt": ""
+      },
+      "hr_144": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_144": {
+        "txt": "subtitle_144"
+      },
+      "text_146": {
+        "txt": "text_146",
+        "css": ""
+      },
+      "code_147": {
+        "txt": "btn.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_148": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_148": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_149": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_150": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_151": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_152": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_152": {
+        "txt": ""
+      },
+      "hr_153": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_153": {
+        "txt": "subtitle_153"
+      },
+      "text_154": {
+        "txt": "text_154",
+        "css": ""
+      },
+      "text_155": {
+        "txt": "text_155",
+        "css": ""
+      },
+      "code_156": {
+        "txt": "btn.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_157": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_157": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like `sendBackward` method. "
+        ]
+      },
+      "table-footer_157": {
+        "txt": ""
+      },
+      "hr_158": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_158": {
+        "txt": "subtitle_158"
+      },
+      "text_160": {
+        "txt": "text_160",
+        "css": ""
+      },
+      "code_161": {
+        "txt": "btn.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_162": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_162": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like `bringForward` method. "
+        ]
+      },
+      "table-footer_162": {
+        "txt": ""
+      },
+      "hr_163": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_164": {
+        "txt": "subtitle_164"
+      },
+      "text_165": {
+        "txt": "text_165",
+        "css": ""
+      },
+      "code_166": {
+        "txt": "btn.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_167": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_167": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event. If the button is `toggleable` the first argument pass into the callback function is a `Boolean` value which is the active state of the button toggle."
+        ]
+      },
+      "table-footer_167": {
+        "txt": ""
+      },
+      "hr_168": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_168": {
+        "txt": "subtitle_168"
+      },
+      "text_169": {
+        "txt": "text_169",
+        "css": ""
+      },
+      "code_170": {
+        "txt": "btn.setOnLongTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_171": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_171": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_171": {
+        "txt": ""
+      },
+      "hr_172": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_172": {
+        "txt": "subtitle_172"
+      },
+      "text_173": {
+        "txt": "text_173",
+        "css": ""
+      },
+      "code_174": {
+        "txt": "btn.setOnFileSelect( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_175": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_175": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. This will pass  `files <i class=\"arg-def\">Array</i>` An array of file objects selected."
+        ]
+      },
+      "table-footer_175": {
+        "txt": ""
+      },
+      "hr_176": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_176": {
+        "txt": "subtitle_176"
+      },
+      "text_177": {
+        "txt": "text_177",
+        "css": ""
+      },
+      "code_178": {
+        "txt": "btn.setToolTip( title, pos )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_179": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_179": {
+        "content": [
+          "title ",
+          "String",
+          "The text of the tooltip "
+        ]
+      },
+      "table-row_180": {
+        "content": [
+          "[pos='top'] ",
+          "String",
+          "Position of the tooltip. \\n Positions : `top` `left` `right` `bottom` `bottom-end` `bottom-start` `left-end` `left-start` `right-end` `right-start` `top-end` `top-start` "
+        ]
+      },
+      "table-footer_180": {
+        "txt": ""
+      },
+      "hr_181": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_181": {
+        "txt": "subtitle_181"
+      },
+      "text_182": {
+        "txt": "text_182",
+        "css": ""
+      },
+      "code_183": {
+        "txt": "btn.setTextShadow( radius, dx, dy, color )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_184": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_184": {
+        "content": [
+          "radius ",
+          "Number",
+          "The radius in pixels "
+        ]
+      },
+      "table-row_185": {
+        "content": [
+          "dx ",
+          "Number",
+          "The x-offset in pixels "
+        ]
+      },
+      "table-row_186": {
+        "content": [
+          "dy ",
+          "Number",
+          "The y-offset in pixels "
+        ]
+      },
+      "table-row_187": {
+        "content": [
+          "color ",
+          "String",
+          "The color in hexadecimal `#rrggbb` "
+        ]
+      },
+      "table-footer_187": {
+        "txt": ""
+      },
+      "hr_188": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_188": {
+        "txt": "subtitle_188"
+      },
+      "text_189": {
+        "txt": "text_189",
+        "css": ""
+      },
+      "code_190": {
+        "txt": "btn.setPadding( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_191": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_191": {
+        "content": [
+          "[left] ",
+          "Number",
+          "The left padding in pixel. "
+        ]
+      },
+      "table-row_192": {
+        "content": [
+          "[top] ",
+          "Number",
+          "The top padding in pixels, "
+        ]
+      },
+      "table-row_193": {
+        "content": [
+          "[right] ",
+          "Number",
+          "The right padding in pixels. "
+        ]
+      },
+      "table-row_194": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "The bottom padding in pixels. "
+        ]
+      },
+      "table-row_195": {
+        "content": [
+          "[mode='px'] ",
+          "String",
+          "Can be `px` `%` "
+        ]
+      },
+      "table-footer_195": {
+        "txt": ""
+      },
+      "hr_196": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_196": {
+        "txt": "subtitle_196"
+      },
+      "text_197": {
+        "txt": "text_197",
+        "css": ""
+      },
+      "code_198": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_199": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_199": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_200": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_201": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_202": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_203": {
+        "content": [
+          "[mode='px'] ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_203": {
+        "txt": ""
+      },
+      "hr_204": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_204": {
+        "txt": "heading_204"
+      },
+      "hr_205": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_205": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n       this.main.setChildMargins( 0.01, 0.01, 0.01, 0.01 )\n\n       // Contained\n       this.btn1 = ui.addButton( this.main, \"Button\", \"Contained\" )\n\n       // Add a callback handler for onTouch event\n       this.btn1.setOnTouch( this.onTouch )\n\n       // Outlined\n       this.btn2 = ui.addButton( this.main, \"Button\", \"Outlined\" )\n       this.btn2.setOnTouch( this.onTouch )\n\n       // Text\n       this.btn3 = ui.addButton( this.main, \"Button\", \"Text\" )\n       this.btn3.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"Button is touch!\" )\n   }\n}",
+        "sample": "Button variants"
+      },
+      "code_206": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n       this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n       // Add primary button to the main layout\n       this.btn1 = ui.addButton(this.main, \"Primary\", \"Contained,Primary\")\n\n       // Add a callback handler for onTouch event\n       this.btn1.setOnTouch( this.onTouch )\n\n       // Add secondary button to the main layout\n       this.btn2 = ui.addButton(this.main, \"Secondary\", \"Outlined,Secondary\")\n       this.btn2.setOnTouch( this.onTouch )\n\n       // Add default button to the main layout\n       this.btn3 = ui.addButton(this.main, \"Default\", \"Text,Default\")\n       this.btn3.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"Button is touch!\" )\n   }\n}",
+        "sample": "Button theme colors"
+      },
+      "code_207": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n       this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n       // Add a small size button to the main layout\n       this.btn1 = ui.addButton(this.main, \"Small\", \"Contained,Primary,Small\")\n\n       // Add a callback handler for onTouch event\n       this.btn1.setOnTouch( this.onTouch )\n\n       // Add a medium/default size button to the main layout\n       this.btn2 = ui.addButton(this.main, \"Medium\", \"Contained,Primary,Medium\")\n\n       // Add a large size button to the main layout\n       this.btn3 = ui.addButton(this.main, \"Large\", \"Contained,Primary,Large\")\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"Button is touch!\" )\n   }\n}",
+        "sample": "Button sizes"
+      },
+      "code_208": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n       this.main.setChildMargins(0, 0.05, 0, 0.05)\n\n       // Add a button to the main layout\n       // and add a tooltip to the left of the button\n       this.btn1 = ui.addButton(this.main, \"Left\", \"Contained,Primary\")\n       this.btn1.setToolTip(\"Tooltip on the left\", \"left\")\n\n       // Add a button to the main layout\n       // and add a tooltip to the top of the button\n       this.btn2 = ui.addButton(this.main, \"Top\", \"Contained,Primary\")\n       this.btn2.setToolTip(\"Tooltip on the top\", \"top\")\n\n       // // Add a button to the main layout\n       // and add a tooltip to the right of the button\n       this.btn3 = ui.addButton(this.main, \"Right\", \"Contained,Primary\")\n       this.btn3.setToolTip(\"Tooltip on the right\", \"right\")\n\n       // // Add a button to the main layout\n       // and add a tooltip to the bottom of the button\n       this.btn4 = ui.addButton(this.main, \"Bottom\", \"Contained,Primary\")\n       this.btn4.setToolTip(\"Tooltip on the bottom\", \"bottom\")\n   }\n}",
+        "sample": "Button tooltips"
+      },
+      "code_209": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n       this.main.setChildMargins(\"12px\", \"12px\", \"12px\", \"12px\")\n\n       // Add a primary contained button and\n       // set its leading icon to `send`\n       this.btn1 = ui.addButton(this.main, \"Send\", \"Primary\")\n       this.btn1.icon = \"send\"\n\n       // Add a secondary contained button and\n       // set its leading icon to `shopping_cart`\n       this.btn2 = ui.addButton(this.main, \"Add to cart\", \"Secondary\")\n       this.btn2.icon = \"shopping_cart\"\n\n       // Add an `android` primary icon button to the main layout\n       this.btn3 = ui.addButton(this.main, \"android\", \"Primary,Icon\")\n\n       // Add a `settings` secondary icon button to the main layout\n       this.btn4 = ui.addButton(this.main, \"settings\", \"Secondary,Icon\")\n   }\n}",
+        "sample": "Button with icons"
+      },
+      "code_210": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n       this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n       // Add an android icon button to the main layout\n       this.btn1 = ui.addButton(this.main, \"android\", \"Primary,Icon\")\n\n       // Add a setting icon button to the main layout and\n       // set the badge to `5`\n       this.btn2 = ui.addButton(this.main, \"settings\", \"Primary,Icon\")\n       this.btn2.setBadge( 5 )\n\n       // Add a contained button to the main layout and\n       // set the badge to `New` with a `Primary` background color\n       this.btn3 = ui.addButton(this.main, \"With Badge\", \"Secondary,Outlined\")\n       this.btn3.setBadge(\"New\", \"Primary\")\n   }\n}",
+        "sample": "Buttons with badges"
+      },
+      "code_211": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n       // Add a primary upload button with upload icon\n       this.btn = ui.addButton(this.main, \"Upload File\", \"Primary,Upload\")\n       this.btn.icon = \"backup\"\n\n       // Add a callback handler for `onFileSelect` event\n       this.btn.setOnFileSelect( this.onFileSelect )\n   }\n\n   onFileSelect( files )\n   {\n       // Get the first file and display its file name\n       const file = files[ 0 ]\n       ui.showPopup( `${file.name} is selected.` )\n   }\n}",
+        "sample": "Upload button"
+      },
+      "code_212": {
+        "txt": "class Main extends App {\n   onStart() {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n       // Add margins to children\n       this.main.childMargins = \"0.5rem\";\n\n       // Add contained buttons with theme color and  \"Toggle\" option\n       this.btn = ui.addButton(this.main, \"Button\", \"Toggle,Active\");\n       this.btn = ui.addButton(this.main, \"Button\", \"Primary,Toggle,Active\");\n       this.btn = ui.addButton(this.main, \"Button\", \"Secondary,Toggle,Active\");\n\n       // Add outlined buttons with theme color and  \"Toggle\" option\n       this.btn = ui.addButton(this.main, \"Button\", \"Outlined,Toggle,Active\");\n       this.btn = ui.addButton(this.main, \"Button\", \"Outlined,Primary,Toggle,Active\");\n       this.btn = ui.addButton(this.main, \"Button\", \"Outlined,Secondary,Toggle,Active\");\n\n       // Add text buttons with theme color and  \"Toggle\" option\n       this.btn = ui.addButton(this.main, \"Button\", \"Text,Toggle,Active\");\n       this.btn = ui.addButton(this.main, \"Button\", \"Text,Primary,Toggle,Active\");\n       this.btn = ui.addButton(this.main, \"Button\", \"Text,Secondary,Toggle,Active\");\n       \n       // Add a callback handler when all the buttons are click\n       this.main.children.map(m => m.setOnTouch( this.onTouch ));\n   }\n\n   onTouch( value ) {\n       ui.showPopup( \"\"+value );\n   }\n}",
+        "sample": "Toggleable Buttons"
+      },
+      "code_213": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n   main.setChildMargins( 0.01, 0.01, 0.01, 0.01 )\n\n   btn1 = ui.addButton( main, \"Button\", \"Contained\" )\n   btn1.setOnTouch( onTouch )\n\n   btn2 = ui.addButton( main, \"Button\", \"Outlined\" )\n   btn2.setOnTouch( onTouch )\n\n   btn3 = ui.addButton( main, \"Button\", \"Text\" )\n   btn3.setOnTouch( onTouch )\n\ndef onTouch(event):\n   ui.showPopup( \"Button is touch!\" )",
+        "sample": "Python Button variants"
+      },
+      "code_214": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   btn1 = ui.addButton(main, \"Primary\", \"Contained,Primary\")\n   btn1.setOnTouch( onTouch )\n\n   btn2 = ui.addButton(main, \"Secondary\", \"Outlined,Secondary\")\n   btn2.setOnTouch( onTouch )\n\n   btn3 = ui.addButton(main, \"Default\", \"Text,Default\")\n   btn3.setOnTouch( onTouch )\n\ndef onTouch(event):\n   ui.showPopup( \"Button is touch!\" )",
+        "sample": "Python Button theme colors"
+      },
+      "code_215": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   btn1 = ui.addButton(main, \"Small\", \"Contained,Primary,Small\")\n   btn1.setOnTouch( onTouch )\n\n   btn2 = ui.addButton(main, \"Medium\", \"Contained,Primary,Medium\")\n\n   btn3 = ui.addButton(main, \"Large\", \"Contained,Primary,Large\")\n\ndef onTouch(event):\n   ui.showPopup( \"Button is touch!\" )",
+        "sample": "Python Button sizes"
+      },
+      "code_216": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.05, 0, 0.05)\n\n   btn1 = ui.addButton(main, \"Left\", \"Contained,Primary\")\n   btn1.setToolTip(\"Tooltip on the left\", \"left\")\n\n   btn2 = ui.addButton(main, \"Top\", \"Contained,Primary\")\n   btn2.setToolTip(\"Tooltip on the top\", \"top\")\n\n   btn3 = ui.addButton(main, \"Right\", \"Contained,Primary\")\n   btn3.setToolTip(\"Tooltip on the right\", \"right\")\n\n   btn4 = ui.addButton(main, \"Bottom\", \"Contained,Primary\")\n   btn4.setToolTip(\"Tooltip on the bottom\", \"bottom\")",
+        "sample": "Python Button tooltips"
+      },
+      "code_217": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n   main.setChildMargins(\"12px\", \"12px\", \"12px\", \"12px\")\n\n   btn1 = ui.addButton(main, \"Send\", \"Primary\")\n   btn1.icon = \"send\"\n\n   btn2 = ui.addButton(main, \"Add to cart\", \"Secondary\")\n   btn2.icon = \"shopping_cart\"\n\n   btn3 = ui.addButton(main, \"android\", \"Primary,Icon\")\n\n   btn4 = ui.addButton(main, \"settings\", \"Secondary,Icon\")",
+        "sample": "Python Button with icons"
+      },
+      "code_218": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   btn1 = ui.addButton(main, \"android\", \"Primary,Icon\")\n\n   btn2 = ui.addButton(main, \"settings\", \"Primary,Icon\")\n   btn2.setBadge( 5 )\n\n   btn3 = ui.addButton(main, \"With Badge\", \"Secondary,Outlined\")\n   btn3.setBadge(\"New\", \"Primary\")",
+        "sample": "Python Buttons with badges"
+      },
+      "code_219": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n   btn = ui.addButton(main, \"Upload File\", \"Primary,Upload\")\n   btn.icon = \"backup\"\n   \n   # Add a callback handler for `onFileSelect` event\n   btn.setOnFileSelect( onFileSelect )\n\ndef onFileSelect(files):\n   file = files[0]\n   ui.showPopup( f\"{file.name} is selected.\" )",
+        "sample": "Python Upload button"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Button",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A button component in mobile UI development is an element that triggers an action when pressed.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "A button typically adheres to guidelines such as elevation, shape, and color to convey interactivity. It serves as a touchable surface with discernible feedback, promoting a consistent and intuitive user experience across mobile applications. Add a button using the `addButton` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "In case of `Upload`, you can specify `Multiple` to accept multiple files.",
+      "de": "",
+      "es": ""
+    },
+    "heading_14": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_15": {
+      "en": "Here are the available setter and/or getter properties of the Button Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_61": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_62": {
+      "en": "Here are the methods available for Button Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_63": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_68": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_70": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_74": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_83": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_85": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_87": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_91": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_93": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_95": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_97": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_103": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_109": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_118": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_120": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_127": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_134": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_136": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_144": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_153": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_154": {
+      "en": "@aname bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_155": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_158": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_164": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_165": {
+      "en": "Adds a callback handler when the button is touch. If the button is `toggleable` the first argument pass into the callback function is a `Boolean` value which is the active state of the button toggle.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_168": {
+      "en": "setOnLongTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_169": {
+      "en": "Adds a callback handler when the button is long touch. The touch timer is about 500 milliseconds.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_172": {
+      "en": "setOnFileSelect",
+      "de": "",
+      "es": ""
+    },
+    "text_173": {
+      "en": "Sets a callback on file select.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_176": {
+      "en": "setToolTip",
+      "de": "",
+      "es": ""
+    },
+    "text_177": {
+      "en": "Sets a tooltip when the button is hovered.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_181": {
+      "en": "setTextShadow",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "Sets a text-shadow to the button text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_188": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_189": {
+      "en": "Sets the padding of the button.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_196": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_197": {
+      "en": "Sets the corner radius of the button.",
+      "de": "",
+      "es": ""
+    },
+    "heading_204": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/Button';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

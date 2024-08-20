@@ -22,6 +22,7 @@
   min-width: 100px;
   overflow-y: auto;
   box-sizing: border-box;
+  
 }
 
 .CodeMirror-hint {
