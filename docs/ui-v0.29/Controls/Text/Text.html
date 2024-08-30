@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -456,7 +461,7 @@
         "css": ""
       },
       "code_64": {
-        "txt": "setOnContextMenu( callback )",
+        "txt": "txt.animate(anim, duration)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_65": {
@@ -469,70 +474,37 @@
       },
       "table-row_65": {
         "content": [
-          "callback ",
-          "Function",
-          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
-        ]
-      },
-      "table-footer_65": {
-        "txt": ""
-      },
-      "hr_66": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_66": {
-        "txt": "subtitle_66"
-      },
-      "text_68": {
-        "txt": "text_68",
-        "css": ""
-      },
-      "code_69": {
-        "txt": "txt.animate(anim, duration)",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_70": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_70": {
-        "content": [
           "anim ",
           "String",
           "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
         ]
       },
-      "table-row_71": {
+      "table-row_66": {
         "content": [
           "duration ",
           "Number",
           "The time in milliseconds. "
         ]
       },
-      "table-footer_71": {
+      "table-footer_66": {
         "txt": ""
       },
-      "hr_72": {
+      "hr_67": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_72": {
-        "txt": "subtitle_72"
+      "subtitle_67": {
+        "txt": "subtitle_67"
       },
-      "text_74": {
-        "txt": "text_74",
+      "text_69": {
+        "txt": "text_69",
         "css": ""
       },
-      "code_75": {
+      "code_70": {
         "txt": "txt.setSize(width, height, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_76": {
+      "table-header_71": {
         "content": [
           "Parameters",
           "Type",
@@ -540,106 +512,106 @@
         ],
         "css": ""
       },
-      "table-row_76": {
+      "table-row_71": {
         "content": [
           "width ",
           "Number",
           "Fraction of the parent width. [0-1] "
         ]
       },
-      "table-row_77": {
+      "table-row_72": {
         "content": [
           "height ",
           "Number",
           "Fraction of the parent height. [0-1] "
         ]
       },
-      "table-row_78": {
+      "table-row_73": {
         "content": [
           "mode ",
           "String",
           "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
         ]
       },
-      "table-footer_78": {
+      "table-footer_73": {
         "txt": ""
       },
-      "hr_79": {
+      "hr_74": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_79": {
-        "txt": "subtitle_79"
+      "subtitle_74": {
+        "txt": "subtitle_74"
       },
-      "text_81": {
-        "txt": "text_81",
+      "text_76": {
+        "txt": "text_76",
         "css": ""
       },
-      "code_82": {
+      "code_77": {
         "txt": "txt.show()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_83": {
+      "hr_78": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_83": {
-        "txt": "subtitle_83"
+      "subtitle_78": {
+        "txt": "subtitle_78"
       },
-      "text_85": {
-        "txt": "text_85",
+      "text_80": {
+        "txt": "text_80",
         "css": ""
       },
-      "code_86": {
+      "code_81": {
         "txt": "txt.hide()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_87": {
+      "hr_82": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_87": {
-        "txt": "subtitle_87"
+      "subtitle_82": {
+        "txt": "subtitle_82"
       },
-      "text_89": {
-        "txt": "text_89",
+      "text_84": {
+        "txt": "text_84",
         "css": ""
       },
-      "code_90": {
+      "code_85": {
         "txt": "txt.gone()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_91": {
+      "hr_86": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_91": {
-        "txt": "subtitle_91"
+      "subtitle_86": {
+        "txt": "subtitle_86"
       },
-      "text_93": {
-        "txt": "text_93",
+      "text_88": {
+        "txt": "text_88",
         "css": ""
       },
-      "code_94": {
+      "code_89": {
         "txt": "txt.destroy()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_95": {
+      "hr_90": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_95": {
-        "txt": "subtitle_95"
+      "subtitle_90": {
+        "txt": "subtitle_90"
       },
-      "text_97": {
-        "txt": "text_97",
+      "text_92": {
+        "txt": "text_92",
         "css": ""
       },
-      "code_98": {
+      "code_93": {
         "txt": "txt.setScale(x, y)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_99": {
+      "table-header_94": {
         "content": [
           "Parameters",
           "Type",
@@ -647,39 +619,39 @@
         ],
         "css": ""
       },
-      "table-row_99": {
+      "table-row_94": {
         "content": [
           "x ",
           "Number",
           "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
         ]
       },
-      "table-row_100": {
+      "table-row_95": {
         "content": [
           "y ",
           "Number",
           "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
         ]
       },
-      "table-footer_100": {
+      "table-footer_95": {
         "txt": ""
       },
-      "hr_101": {
+      "hr_96": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_101": {
-        "txt": "subtitle_101"
+      "subtitle_96": {
+        "txt": "subtitle_96"
       },
-      "text_103": {
-        "txt": "text_103",
+      "text_98": {
+        "txt": "text_98",
         "css": ""
       },
-      "code_104": {
+      "code_99": {
         "txt": "txt.getPosition( options )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_105": {
+      "table-header_100": {
         "content": [
           "Parameters",
           "Type",
@@ -687,35 +659,35 @@
         ],
         "css": ""
       },
-      "table-row_105": {
+      "table-row_100": {
         "content": [
           "options ",
           "String",
           "The mode of the measurements. Values can be `px` or `%` "
         ]
       },
-      "table-footer_105": {
+      "table-footer_100": {
         "txt": ""
       },
-      "text_106": {
+      "text_101": {
         "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
       },
-      "hr_107": {
+      "hr_102": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_107": {
-        "txt": "subtitle_107"
+      "subtitle_102": {
+        "txt": "subtitle_102"
       },
-      "text_109": {
-        "txt": "text_109",
+      "text_104": {
+        "txt": "text_104",
         "css": ""
       },
-      "code_110": {
+      "code_105": {
         "txt": "txt.setMargins( left, top, right, bottom, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_111": {
+      "table-header_106": {
         "content": [
           "Parameters",
           "Type",
@@ -723,60 +695,60 @@
         ],
         "css": ""
       },
-      "table-row_111": {
+      "table-row_106": {
         "content": [
           "[left] ",
           "Number",
           "Left margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_112": {
+      "table-row_107": {
         "content": [
           "[top] ",
           "Number",
           "Top margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_113": {
+      "table-row_108": {
         "content": [
           "[right] ",
           "Number",
           "Right margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_114": {
+      "table-row_109": {
         "content": [
           "[bottom] ",
           "Number",
           "Bottom margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_115": {
+      "table-row_110": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
         ]
       },
-      "table-footer_115": {
+      "table-footer_110": {
         "txt": ""
       },
-      "hr_116": {
+      "hr_111": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_116": {
-        "txt": "subtitle_116"
+      "subtitle_111": {
+        "txt": "subtitle_111"
       },
-      "text_118": {
-        "txt": "text_118",
+      "text_113": {
+        "txt": "text_113",
         "css": ""
       },
-      "code_119": {
+      "code_114": {
         "txt": "txt.setPadding(left, top, right, bottom, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_120": {
+      "table-header_115": {
         "content": [
           "Parameters",
           "Type",
@@ -784,60 +756,60 @@
         ],
         "css": ""
       },
-      "table-row_120": {
+      "table-row_115": {
         "content": [
           "[left] ",
           "Number",
           "Fraction of the component width. "
         ]
       },
-      "table-row_121": {
+      "table-row_116": {
         "content": [
           "[top] ",
           "Number",
           "Fraction of the component height. [0-1] "
         ]
       },
-      "table-row_122": {
+      "table-row_117": {
         "content": [
           "[right] ",
           "Number",
           "Fraction of the component width. [0-1] "
         ]
       },
-      "table-row_123": {
+      "table-row_118": {
         "content": [
           "[bottom] ",
           "Number",
           "Fraction of the component height. [0-1] "
         ]
       },
-      "table-row_124": {
+      "table-row_119": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
         ]
       },
-      "table-footer_124": {
+      "table-footer_119": {
         "txt": ""
       },
-      "hr_125": {
+      "hr_120": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_125": {
-        "txt": "subtitle_125"
+      "subtitle_120": {
+        "txt": "subtitle_120"
       },
-      "text_127": {
-        "txt": "text_127",
+      "text_122": {
+        "txt": "text_122",
         "css": ""
       },
-      "code_128": {
+      "code_123": {
         "txt": "txt.setPosition( left, top, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_129": {
+      "table-header_124": {
         "content": [
           "Parameters",
           "Type",
@@ -845,46 +817,46 @@
         ],
         "css": ""
       },
-      "table-row_129": {
+      "table-row_124": {
         "content": [
           "left ",
           "Number",
           "Fraction of the parent width. [0-1] "
         ]
       },
-      "table-row_130": {
+      "table-row_125": {
         "content": [
           "top ",
           "Number",
           "Fraction of the parent height. [0-1] "
         ]
       },
-      "table-row_131": {
+      "table-row_126": {
         "content": [
           "mode ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
         ]
       },
-      "table-footer_131": {
+      "table-footer_126": {
         "txt": ""
       },
-      "hr_132": {
+      "hr_127": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_132": {
-        "txt": "subtitle_132"
+      "subtitle_127": {
+        "txt": "subtitle_127"
       },
-      "text_134": {
-        "txt": "text_134",
+      "text_129": {
+        "txt": "text_129",
         "css": ""
       },
-      "code_135": {
+      "code_130": {
         "txt": "txt.setBorder(left, top, right, bottom, clr, style)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_136": {
+      "table-header_131": {
         "content": [
           "Parameters",
           "Type",
@@ -892,67 +864,67 @@
         ],
         "css": ""
       },
-      "table-row_136": {
+      "table-row_131": {
         "content": [
           "[left] ",
           "Number",
           "Border-left thickness in pixels. "
         ]
       },
-      "table-row_137": {
+      "table-row_132": {
         "content": [
           "[top] ",
           "Number",
           "Border-top thickness in pixels. "
         ]
       },
-      "table-row_138": {
+      "table-row_133": {
         "content": [
           "[right] ",
           "Number",
           "Border-right thickness in pixels. "
         ]
       },
-      "table-row_139": {
+      "table-row_134": {
         "content": [
           "[bottom] ",
           "Number",
           "Border-bottom thickness in pixels. "
         ]
       },
-      "table-row_140": {
+      "table-row_135": {
         "content": [
           "[clr] ",
           "String",
           "Border color in hexadecimal format `#rrggbb`. "
         ]
       },
-      "table-row_141": {
+      "table-row_136": {
         "content": [
           "[style] ",
           "String",
           "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
         ]
       },
-      "table-footer_141": {
+      "table-footer_136": {
         "txt": ""
       },
-      "hr_142": {
+      "hr_137": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_142": {
-        "txt": "subtitle_142"
+      "subtitle_137": {
+        "txt": "subtitle_137"
       },
-      "text_144": {
-        "txt": "text_144",
+      "text_139": {
+        "txt": "text_139",
         "css": ""
       },
-      "code_145": {
+      "code_140": {
         "txt": "txt.setCornerRadius(tl, tr, bl, br, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_146": {
+      "table-header_141": {
         "content": [
           "Parameters",
           "Type",
@@ -960,39 +932,72 @@
         ],
         "css": ""
       },
-      "table-row_146": {
+      "table-row_141": {
         "content": [
           "[tl] ",
           "Number",
           "Top-Left border radius. "
         ]
       },
-      "table-row_147": {
+      "table-row_142": {
         "content": [
           "[tr] ",
           "Number",
           "Top-Right border radius. "
         ]
       },
-      "table-row_148": {
+      "table-row_143": {
         "content": [
           "[br] ",
           "Number",
           "Bottom-Right border radius. "
         ]
       },
-      "table-row_149": {
+      "table-row_144": {
         "content": [
           "[bl] ",
           "Number",
           "Bottom-Left border radius. "
         ]
       },
-      "table-row_150": {
+      "table-row_145": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_145": {
+        "txt": ""
+      },
+      "hr_146": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_146": {
+        "txt": "subtitle_146"
+      },
+      "text_148": {
+        "txt": "text_148",
+        "css": ""
+      },
+      "code_149": {
+        "txt": "txt.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_150": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_150": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
         ]
       },
       "table-footer_150": {
@@ -1004,10 +1009,6 @@
       },
       "subtitle_151": {
         "txt": "subtitle_151"
-      },
-      "text_152": {
-        "txt": "text_152",
-        "css": ""
       },
       "text_153": {
         "txt": "text_153",
@@ -1029,7 +1030,7 @@
         "content": [
           "zIndex ",
           "Number",
-          "The z-index. A negative value behaves like `sendBackward` method. "
+          "The z-index. A positve value behaves like \"bringForward\" method. "
         ]
       },
       "table-footer_155": {
@@ -1047,7 +1048,7 @@
         "css": ""
       },
       "code_159": {
-        "txt": "txt.bringForward( zIndex )",
+        "txt": "txt.addClass( \"my-button my-button-large\" )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_160": {
@@ -1060,9 +1061,9 @@
       },
       "table-row_160": {
         "content": [
-          "zIndex ",
-          "Number",
-          "The z-index. A positve value behaves like `bringForward` method. "
+          "cls ",
+          "String",
+          "Class name. For multiple classes just separate them with a space. "
         ]
       },
       "table-footer_160": {
@@ -1072,15 +1073,15 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_162": {
-        "txt": "subtitle_162"
+      "subtitle_161": {
+        "txt": "subtitle_161"
       },
       "text_163": {
         "txt": "text_163",
         "css": ""
       },
       "code_164": {
-        "txt": "txt.setOnTouch( callback )",
+        "txt": "txt.setOnContextMenu( callback )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_165": {
@@ -1095,7 +1096,7 @@
         "content": [
           "callback ",
           "Function",
-          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
         ]
       },
       "table-footer_165": {
@@ -1113,7 +1114,7 @@
         "css": ""
       },
       "code_168": {
-        "txt": "txt.setOnLongTouch( callback )",
+        "txt": "txt.setOnTouch( callback )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_169": {
@@ -1146,7 +1147,7 @@
         "css": ""
       },
       "code_172": {
-        "txt": "txt.setHtml( html )",
+        "txt": "txt.setOnLongTouch( callback )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_173": {
@@ -1159,35 +1160,50 @@
       },
       "table-row_173": {
         "content": [
-          "html ",
-          "String",
-          "An html string "
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
         ]
       },
       "table-footer_173": {
         "txt": ""
       },
-      "tip_174": {
-        "txt": "tip_174",
-        "css": ""
-      },
-      "hr_175": {
+      "hr_174": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_175": {
-        "txt": "subtitle_175"
+      "subtitle_174": {
+        "txt": "subtitle_174"
       },
-      "text_176": {
-        "txt": "text_176",
+      "text_175": {
+        "txt": "text_175",
         "css": ""
       },
-      "code_177": {
-        "txt": "txt.getHtml()",
+      "code_176": {
+        "txt": "txt.setHtml( html )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "text_178": {
-        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      "table-header_177": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_177": {
+        "content": [
+          "html ",
+          "String",
+          "An html string "
+        ]
+      },
+      "table-footer_177": {
+        "txt": ""
+      },
+      "tip_178": {
+        "txt": "tip_178",
+        "css": ""
       },
       "hr_179": {
         "txt": "",
@@ -1201,10 +1217,28 @@
         "css": ""
       },
       "code_181": {
+        "txt": "txt.getHtml()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_182": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_183": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_183": {
+        "txt": "subtitle_183"
+      },
+      "text_184": {
+        "txt": "text_184",
+        "css": ""
+      },
+      "code_185": {
         "txt": "txt.setTextShadow( radius, dx, dy, color )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_182": {
+      "table-header_186": {
         "content": [
           "Parameters",
           "Type",
@@ -1212,95 +1246,119 @@
         ],
         "css": ""
       },
-      "table-row_182": {
+      "table-row_186": {
         "content": [
           "radius ",
           "Number",
           "The radius in pixels "
         ]
       },
-      "table-row_183": {
+      "table-row_187": {
         "content": [
           "dx ",
           "Number",
           "X-offset of the shadow "
         ]
       },
-      "table-row_184": {
+      "table-row_188": {
         "content": [
           "dy ",
           "Number",
           "Y-offset of the shadow "
         ]
       },
-      "table-row_185": {
+      "table-row_189": {
         "content": [
           "color ",
           "String",
           "A hexadecimal color of the form `#rrggbb` "
         ]
       },
-      "table-footer_185": {
+      "table-footer_189": {
         "txt": ""
       },
-      "hr_186": {
+      "hr_190": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_186": {
-        "txt": "heading_186"
+      "heading_190": {
+        "txt": "heading_190"
       },
-      "hr_187": {
+      "hr_191": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "code_187": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var t = \"This is the sample text to be displayed.\"\n\n       // Add a text control to the main layout\n       this.txt = ui.addText(this.main, t)\n\n       // You can also add a callback handler when the text control is touch\n       this.txt.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touched the text!\" )\n   }\n}",
-        "sample": "Basic text control"
-      },
-      "code_188": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n       // Heading ranges from H1 to H6\n\n       this.h1 = ui.addText( this.main, \"Heading 1\", \"H1\" )\n\n       this.h2 = ui.addText( this.main, \"Heading 2\", \"H2\" )\n\n       this.h3 = ui.addText( this.main, \"Heading 3\", \"H3\" )\n\n       this.h4 = ui.addText( this.main, \"Heading 4\", \"H4\" )\n\n       this.h5 = ui.addText( this.main, \"Heading 5\", \"H5\" )\n\n       this.h6 = ui.addText( this.main, \"Heading 6\", \"H6\" )\n   }\n}",
-        "sample": "Heading variants"
-      },
-      "code_189": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n       this.text = ui.addText( this.main, t, \"body1\" )\n\n       this.text = ui.addText( this.main, t, \"body2\" )\n\n       this.text = ui.addText( this.main, t, \"subtitle1\" )\n\n       this.text = ui.addText( this.main, t, \"subtitle2\" )\n\n       this.text = ui.addText( this.main, t, \"overline\" )\n\n       this.text = ui.addText( this.main, t, \"button\" )\n\n       this.text = ui.addText( this.main, t, \"caption\" )\n   }\n}",
-        "sample": "Other variants"
-      },
-      "code_190": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.05)\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"\n           \n       // Default is left\n       this.txt1 = ui.addText( this.main, t, \"body1,Left\", 0.9 )\n       this.txt1.backColor = \"#e0e0e0\"\n\n       // Center and color primary\n       this.txt2 = ui.addText( this.main, t, \"body1,Center,Primary\", 0.9 )\n       this.txt2.backColor = \"#e0e0e0\"\n\n       // Right and color secondary\n       this.txt3 = ui.addText( this.main, t, \"body1,Right,Secondary\", 0.9)\n       this.txt3.backColor = \"#e0e0e0\"\n\n       // Bottom, Center with a textSecondary color\n       this.txt4 = ui.addText( this.main, t, \"body1,Center,Bottom,TextSecondary\", 0.9, 0.1)\n       this.txt4.backColor = \"#e0e0e0\"\n   }\n}",
-        "sample": "Alignments and colors"
       },
       "code_191": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.05)\n       \n       // Add a settings icon\n       this.txt1 = ui.addText(this.main, \"settings\", \"Icon\")\n       this.txt1.setOnTouch( this.onTouch )\n\n       // Add a camera icon\n       ui.addText(this.main, \"add_a_photo\", \"Icon,TextSecondary\")\n\n       // Add a heart icon\n       ui.addText(this.main, \"favorite\", \"Icon,Secondary\")\n\n       // Add an android icon\n       ui.addText(this.main, \"android\", \"Icon,Primary\")\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touch the icon!\" )\n   }\n}",
-        "sample": "Icons"
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var t = \"This is the sample text to be displayed.\"\n\n       // Add a text control to the main layout\n       this.txt = ui.addText(this.main, t)\n\n       // You can also add a callback handler when the text control is touch\n       this.txt.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touched the text!\" )\n   }\n}",
+        "sample": "Basic text control",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_192": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       \n       // Html formatted string\n       var t = 'This text is formatted as html. <h3 style=\"color:green;\">This is a heading with color.</h3>'\n       t += 'You can also add <i>italize text</i> as well as <span style=\"background-color:yellow;\">text with styles</span>.'\n\n       // Add text control to the main layout by passing `Html` option\n       this.txt = ui.addText(this.main, t, \"html\")\n   }\n}",
-        "sample": "Html formatted text"
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n       // Heading ranges from H1 to H6\n\n       this.h1 = ui.addText( this.main, \"Heading 1\", \"H1\" )\n\n       this.h2 = ui.addText( this.main, \"Heading 2\", \"H2\" )\n\n       this.h3 = ui.addText( this.main, \"Heading 3\", \"H3\" )\n\n       this.h4 = ui.addText( this.main, \"Heading 4\", \"H4\" )\n\n       this.h5 = ui.addText( this.main, \"Heading 5\", \"H5\" )\n\n       this.h6 = ui.addText( this.main, \"Heading 6\", \"H6\" )\n   }\n}",
+        "sample": "Heading variants",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_193": {
-        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   t = \"This is the sample text to be displayed.\"\n\n   #  Add a text control to the main layout\n   txt = ui.addText(main, t)\n\n   #  You can also add a callback handler when the text control is touch\n   txt.setOnTouch( onTouch )\n\ndef onTouch():\n   ui.showPopup( \"You touched the text!\" )",
-        "sample": "Python Basic text control"
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n       this.text = ui.addText( this.main, t, \"body1\" )\n\n       this.text = ui.addText( this.main, t, \"body2\" )\n\n       this.text = ui.addText( this.main, t, \"subtitle1\" )\n\n       this.text = ui.addText( this.main, t, \"subtitle2\" )\n\n       this.text = ui.addText( this.main, t, \"overline\" )\n\n       this.text = ui.addText( this.main, t, \"button\" )\n\n       this.text = ui.addText( this.main, t, \"caption\" )\n   }\n}",
+        "sample": "Other variants",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_194": {
-        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Heading ranges from H1 to H6\n   h1 = ui.addText(main, \"Heading\", \"H1\")\n   h2 = ui.addText(main, \"Heading 2\", \"H2\")\n   h3 = ui.addText(main, \"Heading 3\", \"H3\")\n   h4 = ui.addText(main, \"Heading 4\", \"H4\")\n   h5 = ui.addText(main, \"Heading 5\", \"H5\")\n   h6 = ui.addText(main, \"Heading 6\", \"H6\")",
-        "sample": "Python Heading variants"
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.05)\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"\n           \n       // Default is left\n       this.txt1 = ui.addText( this.main, t, \"body1,Left\", 0.9 )\n       this.txt1.backColor = \"#e0e0e0\"\n\n       // Center and color primary\n       this.txt2 = ui.addText( this.main, t, \"body1,Center,Primary\", 0.9 )\n       this.txt2.backColor = \"#e0e0e0\"\n\n       // Right and color secondary\n       this.txt3 = ui.addText( this.main, t, \"body1,Right,Secondary\", 0.9)\n       this.txt3.backColor = \"#e0e0e0\"\n\n       // Bottom, Center with a textSecondary color\n       this.txt4 = ui.addText( this.main, t, \"body1,Center,Bottom,TextSecondary\", 0.9, 0.1)\n       this.txt4.backColor = \"#e0e0e0\"\n   }\n}",
+        "sample": "Alignments and colors",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_195": {
-        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout.\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n   t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n   ui.addText(main, t, \"body1\")\n   ui.addText(main, t, \"body2\")\n   ui.addText(main, t, \"subtitle1\")\n   ui.addText(main, t, \"subtitle2\")\n   ui.addText(main, t, \"overline\")\n   ui.addText(main, t, \"button\")\n   ui.addText(main, t, \"caption\")",
-        "sample": "Python Other variants"
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.05)\n       \n       // Add a settings icon\n       this.txt1 = ui.addText(this.main, \"settings\", \"Icon\")\n       this.txt1.setOnTouch( this.onTouch )\n\n       // Add a camera icon\n       ui.addText(this.main, \"add_a_photo\", \"Icon,TextSecondary\")\n\n       // Add a heart icon\n       ui.addText(this.main, \"favorite\", \"Icon,Secondary\")\n\n       // Add an android icon\n       ui.addText(this.main, \"android\", \"Icon,Primary\")\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touch the icon!\" )\n   }\n}",
+        "sample": "Icons",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_196": {
-        "txt": "from hybrid import ui\n\ndef OnStart():\n   ui.setTheme(\"light\")\n   #  Create a full screen layout.\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n   t = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"\n       \n   #  Default is left\n   txt1 = ui.addText(main, t, \"body1,Left\", 0.9)\n\n   #  Center and color primary\n   txt2 = ui.addText(main, t, \"body1,Center,Primary\", 0.9)\n\n   #  Right and color secondary\n   txt3 = ui.addText(main, t, \"body1,Right,Secondary\", 0.9)\n\n   #  Bottom, Center with a textSecondary color\n   txt4 = ui.addText(main, t, \"body1,Center,Bottom,TextSecondary\", 0.9, 0.1)",
-        "sample": "Python Alignments and colors"
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       \n       // Html formatted string\n       var t = 'This text is formatted as html. <h3 style=\"color:green;\">This is a heading with color.</h3>'\n       t += 'You can also add <i>italize text</i> as well as <span style=\"background-color:yellow;\">text with styles</span>.'\n\n       // Add text control to the main layout by passing `Html` option\n       this.txt = ui.addText(this.main, t, \"html\")\n   }\n}",
+        "sample": "Html formatted text",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_197": {
-        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0, 0.05)\n   \n   #  Add a settings icon\n   txt1 = ui.addText(main, \"settings\", \"Icon\")\n   txt1.setOnTouch( onTouch )\n\n   #  Add a camera icon\n   ui.addText(main, \"add_a_photo\", \"Icon,TextSecondary\")\n\n   #  Add a heart icon\n   ui.addText(main, \"favorite\", \"Icon,Secondary\")\n\n   #  Add an android icon\n   ui.addText(main, \"android\", \"Icon,Primary\")\n\ndef onTouch( event ):\n   ui.showPopup( \"You touch the icon!\" )",
-        "sample": "Python Icons"
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   t = \"This is the sample text to be displayed.\"\n\n   #  Add a text control to the main layout\n   txt = ui.addText(main, t)\n\n   #  You can also add a callback handler when the text control is touch\n   txt.setOnTouch( onTouch )\n\ndef onTouch():\n   ui.showPopup( \"You touched the text!\" )",
+        "sample": "Basic text control",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_198": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Heading ranges from H1 to H6\n   h1 = ui.addText(main, \"Heading\", \"H1\")\n   h2 = ui.addText(main, \"Heading 2\", \"H2\")\n   h3 = ui.addText(main, \"Heading 3\", \"H3\")\n   h4 = ui.addText(main, \"Heading 4\", \"H4\")\n   h5 = ui.addText(main, \"Heading 5\", \"H5\")\n   h6 = ui.addText(main, \"Heading 6\", \"H6\")",
+        "sample": "Heading variants",
+        "disabledActions": "run",
+        "lang": "py"
+      },
+      "code_199": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout.\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n   t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n   ui.addText(main, t, \"body1\")\n   ui.addText(main, t, \"body2\")\n   ui.addText(main, t, \"subtitle1\")\n   ui.addText(main, t, \"subtitle2\")\n   ui.addText(main, t, \"overline\")\n   ui.addText(main, t, \"button\")\n   ui.addText(main, t, \"caption\")",
+        "sample": "Other variants",
+        "disabledActions": "run",
+        "lang": "py"
+      },
+      "code_200": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   ui.setTheme(\"light\")\n   #  Create a full screen layout.\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n   t = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"\n       \n   #  Default is left\n   txt1 = ui.addText(main, t, \"body1,Left\", 0.9)\n\n   #  Center and color primary\n   txt2 = ui.addText(main, t, \"body1,Center,Primary\", 0.9)\n\n   #  Right and color secondary\n   txt3 = ui.addText(main, t, \"body1,Right,Secondary\", 0.9)\n\n   #  Bottom, Center with a textSecondary color\n   txt4 = ui.addText(main, t, \"body1,Center,Bottom,TextSecondary\", 0.9, 0.1)",
+        "sample": "Alignments and colors",
+        "disabledActions": "run",
+        "lang": "py"
+      },
+      "code_201": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0, 0.05)\n   \n   #  Add a settings icon\n   txt1 = ui.addText(main, \"settings\", \"Icon\")\n   txt1.setOnTouch( onTouch )\n\n   #  Add a camera icon\n   ui.addText(main, \"add_a_photo\", \"Icon,TextSecondary\")\n\n   #  Add a heart icon\n   ui.addText(main, \"favorite\", \"Icon,Secondary\")\n\n   #  Add an android icon\n   ui.addText(main, \"android\", \"Icon,Primary\")\n\ndef onTouch( event ):\n   ui.showPopup( \"You touch the icon!\" )",
+        "sample": "Icons",
+        "disabledActions": "run",
+        "lang": "py"
+      },
+      "code_202": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   \n   #  Html formatted string\n   t = 'This text is formatted as html. <h3 style=\"color:green;\">This is a heading with color.</h3>'\n   t += 'You can also add <i>italize text</i> as well as <span style=\"background-color:yellow;\">text with styles</span>.'\n\n   #  Add text control to the main layout by passing `Html` option\n   txt = ui.addText(main, t, \"html\")",
-        "sample": "Python Html formatted text"
+        "sample": "Html formatted text",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]
@@ -1361,226 +1419,231 @@
       "es": ""
     },
     "subtitle_61": {
-      "en": "setOnContextMenu",
-      "de": "",
-      "es": ""
-    },
-    "text_63": {
-      "en": "Adds a callback function on right click.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_66": {
       "en": "animate",
       "de": "",
       "es": ""
     },
-    "text_68": {
+    "text_63": {
       "en": "Animate the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_72": {
+    "subtitle_67": {
       "en": "setSize",
       "de": "",
       "es": ""
     },
-    "text_74": {
+    "text_69": {
       "en": "Sets the size of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_79": {
+    "subtitle_74": {
       "en": "show",
       "de": "",
       "es": ""
     },
-    "text_81": {
+    "text_76": {
       "en": "Show the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_83": {
+    "subtitle_78": {
       "en": "hide",
       "de": "",
       "es": ""
     },
-    "text_85": {
+    "text_80": {
       "en": "Hide the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_87": {
+    "subtitle_82": {
       "en": "gone",
       "de": "",
       "es": ""
     },
-    "text_89": {
+    "text_84": {
       "en": "Destroy the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_91": {
+    "subtitle_86": {
       "en": "destroy",
       "de": "",
       "es": ""
     },
-    "text_93": {
+    "text_88": {
       "en": "Destroy the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_95": {
+    "subtitle_90": {
       "en": "setScale",
       "de": "",
       "es": ""
     },
-    "text_97": {
+    "text_92": {
       "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
       "de": "",
       "es": ""
     },
-    "subtitle_101": {
+    "subtitle_96": {
       "en": "getPosition",
       "de": "",
       "es": ""
     },
-    "text_103": {
+    "text_98": {
       "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
       "de": "",
       "es": ""
     },
-    "subtitle_107": {
+    "subtitle_102": {
       "en": "setMargins",
       "de": "",
       "es": ""
     },
-    "text_109": {
+    "text_104": {
       "en": "Sets the margin of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_116": {
+    "subtitle_111": {
       "en": "setPadding",
       "de": "",
       "es": ""
     },
-    "text_118": {
+    "text_113": {
       "en": "Sets the padding of the component's container.",
       "de": "",
       "es": ""
     },
-    "subtitle_125": {
+    "subtitle_120": {
       "en": "setPosition",
       "de": "",
       "es": ""
     },
-    "text_127": {
+    "text_122": {
       "en": "Sets the position of the component relative to its parent dimensions.",
       "de": "",
       "es": ""
     },
-    "subtitle_132": {
+    "subtitle_127": {
       "en": "setBorder",
       "de": "",
       "es": ""
     },
-    "text_134": {
+    "text_129": {
       "en": "Sets the border line for the component container.",
       "de": "",
       "es": ""
     },
-    "subtitle_142": {
+    "subtitle_137": {
       "en": "setCornerRadius",
       "de": "",
       "es": ""
     },
-    "text_144": {
+    "text_139": {
       "en": "Sets the corner radius of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_151": {
+    "subtitle_146": {
       "en": "bringForward",
       "de": "",
       "es": ""
     },
-    "text_152": {
-      "en": "@aname bringForward",
-      "de": "",
-      "es": ""
-    },
-    "text_153": {
+    "text_148": {
       "en": "Bring this component forward by a given z-index.",
       "de": "",
       "es": ""
     },
-    "subtitle_156": {
+    "subtitle_151": {
       "en": "sendBackward",
       "de": "",
       "es": ""
     },
-    "text_158": {
+    "text_153": {
       "en": "Bring this component backward by a given z-index.",
       "de": "",
       "es": ""
     },
-    "subtitle_162": {
-      "en": "setOnTouch",
+    "subtitle_156": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_158": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_161": {
+      "en": "setOnContextMenu",
       "de": "",
       "es": ""
     },
     "text_163": {
-      "en": "Adds an event handler when the text component is touch.",
+      "en": "Adds a callback function on right click.",
       "de": "",
       "es": ""
     },
     "subtitle_166": {
-      "en": "setOnLongTouch",
+      "en": "setOnTouch",
       "de": "",
       "es": ""
     },
     "text_167": {
-      "en": "Adds a callback handler for a long touch event. The touch timer is about 500 milliseconds.",
+      "en": "Adds an event handler when the text component is touch.",
       "de": "",
       "es": ""
     },
     "subtitle_170": {
-      "en": "setHtml",
+      "en": "setOnLongTouch",
       "de": "",
       "es": ""
     },
     "text_171": {
+      "en": "Adds a callback handler for a long touch event. The touch timer is about 500 milliseconds.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_174": {
+      "en": "setHtml",
+      "de": "",
+      "es": ""
+    },
+    "text_175": {
       "en": "Sets an html on the text control.",
       "de": "",
       "es": ""
     },
-    "tip_174": {
+    "tip_178": {
       "en": " Options should include an `html` option.",
       "de": "",
       "es": ""
     },
-    "subtitle_175": {
+    "subtitle_179": {
       "en": "getHtml",
       "de": "",
       "es": ""
     },
-    "text_176": {
+    "text_180": {
       "en": "Returns the html text.",
       "de": "",
       "es": ""
     },
-    "subtitle_179": {
+    "subtitle_183": {
       "en": "setTextShadow",
       "de": "",
       "es": ""
     },
-    "text_180": {
+    "text_184": {
       "en": "Sets a shadow on the text in a text control.",
       "de": "",
       "es": ""
     },
-    "heading_186": {
+    "heading_190": {
       "en": "Examples",
       "de": "",
       "es": ""

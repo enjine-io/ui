@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -54,10 +59,15 @@
         "txt": "subtitle_3"
       },
       "code_4": {
-        "txt": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;meta name=\"viewport\" content=\"minimum-scale=1, initial-scale=1, width=device-width\" /&gt;\n    &lt;meta charset=\"UTF-8\"&gt;\n    &lt;title&gt;My App&lt;/title&gt;\n\n    &lt;script&gt;_hybrid=false&lt;/script&gt;\n    \n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/react.development.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/react-dom.development.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-ui.development.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-ui-lab.production.min.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/swipeable-views.js\"&gt;&lt;/script&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-icons.css\"&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/fonts.css\"&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/styles.css\"&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/animate.min.css\"&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/moment.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/rome.standalone.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker.js\" charset=\"utf-8\"&gt;&lt;/script&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker.css\"&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/js/draggabilly.pkgd.min.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/js/datetimepicker.js\"&gt;&lt;/script&gt;\n\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/ui.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/obj.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/enjine-ui.js\"&gt;&lt;/script&gt;\n    \n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n\n \n  &lt;body onload=\"if( typeof onStart=='function' ) onStart(); else main = new Main()\"&gt;\n    \n    &lt;link id=\"_id_theme\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/light.css\"&gt;\n    &lt;link rel=\"stylesheet\" id=\"_id_picker_theme\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/css/light.css\"&gt;\n    &lt;link rel=\"stylesheet\" id=\"_id_dtpicker_theme\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker-light.css\"&gt;\n\n    &lt;div id=\"root\"&gt; &lt;/div&gt;\n    &lt;div id=\"popups\"&gt; &lt;/div&gt;\n    &lt;div id=\"drawer\"&gt; &lt;/div&gt;\n       \n  &lt;/body&gt;\n  \n&lt;/html&gt;",
+        "txt": "&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;meta name=\"viewport\" content=\"minimum-scale=1, initial-scale=1, width=device-width\" /&gt;\n    &lt;meta charset=\"UTF-8\"&gt;\n    &lt;title&gt;My App&lt;/title&gt;\n\n    &lt;script&gt;_hybrid=false&lt;/script&gt;\n    \n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/react.development.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/react-dom.development.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-ui.development.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-ui-lab.production.min.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/swipeable-views.js\"&gt;&lt;/script&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-icons.css\"&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/fonts.css\"&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/styles.css\"&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/animate.min.css\"&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/moment.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/rome.standalone.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker.js\" charset=\"utf-8\"&gt;&lt;/script&gt;\n    &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker.css\"&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/js/draggabilly.pkgd.min.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/js/datetimepicker.js\"&gt;&lt;/script&gt;\n\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/ui.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/obj.js\"&gt;&lt;/script&gt;\n    &lt;script src=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/enjine-ui.js\"&gt;&lt;/script&gt;\n    \n    &lt;script src=\"main.js\"&gt;&lt;/script&gt;\n  &lt;/head&gt;\n  &lt;body onload=\"if( typeof onStart=='function' ) onStart(); else main = new Main()\"&gt;\n    \n    &lt;link id=\"_id_theme\" rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/light.css\"&gt;\n    &lt;link rel=\"stylesheet\" id=\"_id_picker_theme\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/date-time-picker/css/light.css\"&gt;\n    &lt;link rel=\"stylesheet\" id=\"_id_dtpicker_theme\" href=\"https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs/material-datetime-picker-light.css\"&gt;\n\n    &lt;div id=\"root\"&gt; &lt;/div&gt;\n    &lt;div id=\"popups\"&gt; &lt;/div&gt;\n    &lt;div id=\"drawer\"&gt; &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;",
         "css": "",
-        "sample": "index.html",
-        "lang": "html"
+        "sample": "index.html ",
+        "lang": "html",
+        "disabledActions": "run,copy,download"
+      },
+      "challenge_6": {
+        "txt": "challenge_6",
+        "css": "color:white;background-color:#2979ff;padding:10px 12px;font-size:90%;display:inline-block;"
       },
       "subtitle_7": {
         "txt": "subtitle_7"
@@ -65,8 +75,9 @@
       "code_8": {
         "txt": "class Main extends App\n{\n    onStart()\n    {\n        // your code goes here\n    }\n}",
         "css": "",
-        "sample": "main.js",
-        "lang": "js"
+        "sample": "main.js ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
       "text_10": {
         "txt": "text_10",
@@ -118,6 +129,11 @@
       "de": "",
       "es": ""
     },
+    "challenge_6": {
+      "en": "You can also download the individual files and host them in your machine so that you can work offline. Just make sure to add the correct reference to the paths.\n",
+      "de": "",
+      "es": ""
+    },
     "subtitle_7": {
       "en": "Create a `main.js` file and paste the code below.",
       "de": "",
@@ -134,7 +150,7 @@
       "es": ""
     },
     "text_14": {
-      "en": "You can now read about `Layout` in the `Controls > Layout` section to add your first layout control.",
+      "en": "Read the [Overview](../Overview/Overview.html) for more details about UI controls.",
       "de": "",
       "es": ""
     }

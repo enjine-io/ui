@@ -98,65 +98,75 @@ function UI()
     this._fontFile = ""
     this._clrh = new _colorHelpers()
     this._rgb = {primary: [33, 150, 243], secondary: [245, 0, 87], defaultBlack: [0,0,0], defaultWhite: [255,255,255]}
-    this._routes = [] // {path: "#main", view: mainLay, config: {restricted: false}}
+    this._routes = [] // {path: "#main", view: mainLay, config: {restricted: false}, detroyable: true}
+    this._routesObj = []
 
     // local functions
     function router( event ) {
-        // previous route
-        var prevHash = event.oldURL.split('#')[1]
-        var hash = self._getRoute()
+        // var oldHash = event.oldURL.split("#")[1]
+        var newHash = self._getRoute()
+        var prevRoute, currRoute, newRoute, n, o
 
-        if( prevHash ) {
-            // for page dialogs and routable controls
-            if( prevHash.includes("___") ) {
-                var path = prevHash.split("___").pop()
-                hideRoute("#"+path)
-                
-                if( !hash.includes("___") ) return
-            }
-            // for page layout route
-            else if( !hash.includes("___") ) {
-                var route = self._routes.find(m => m.path == ("#"+prevHash))
-                if(route && route.view) hideRoute( route.path )
-                else {
-                    route = self._routes.find(m => m.path == "#404")
-                    if( route ) hideRoute( route.path )
-                }
-            }
+        if(self._routes.length >= 2) {
+            n = self._routes.length - 2
+            prevRoute = self._routes[n]
         }
 
-        // new route
-        // for page dialogs and routable controls
-        if( hash.includes("___") ) {
-            var path = hash.split("___").pop()
+        if(prevRoute && newHash == prevRoute.path) {
+            // go back
+            currRoute = self._routes.pop()
+
+            if(currRoute.view.type == "Dropdown") currRoute.view._onClose()
+            else currRoute.view.hide()
+            
+            // destroyable routes. examples are controls that starts with "show"
+            // such as "showActionSheet", "showColorPicker"
+            if( currRoute.destroyable ) {
+                o = self._routesObj.findIndex(m => m.path == currRoute.path)
+                if(o >= 0) self._routesObj.splice(o, 1)
+            }
         }
-        // for page layout route
         else {
-            showRoute( hash )
+            currRoute = self._routes[self._routes.length - 1]
+            
+            if(currRoute && currRoute.path == newHash) {
+                if(currRoute.view._route && currRoute.view.visibility == "hide") {
+                    currRoute.view.show()
+                }
+                return
+            }
+
+            // push route
+            newRoute = self._routesObj.find(m => m.path == newHash)
+
+            if( !newRoute ) return
+
+            self._routes.push( newRoute )
+
+            newRoute.view.show()
+            
+            // remove same route previously added
+            o = self._routes.findIndex(m => m.path == newHash)
+            if(o >= 0 && o != (self._routes.length-1)) {
+                self._routes.splice(o, 1)
+            }
         }
     }
     
     function showRoute( path ) {
-        var route = self._routes.find(m => m.path == path)
+        var route = self._routesObj.find(m => m.path == path)
         if(route && route.view) {
-            if(route.view.type == "Layout") route.view.show()
+            if(route.view.type == "Layout") {
+                route.view.show()
+                self._routes.push( route )
+            }
         }
         else {
-            route = self._routes.find(m => m.path == "#404")
-            if( route ) route.view.show()
-            // else console.log("404 - Page not found")
-        }
-    }
-    
-    function hideRoute( path ) {
-        var route = self._routes.find(m => m.path == path)
-        if(route && route.view) {
-            if(route.view.type == "Dropdown") route.view._onClose({}, true)
-            else if(typeof route.view.hide == "function") route.view.hide()
-        }
-        else {
-            route = self._routes.find(m => m.path == "#404")
-            if(route && route.view) route.view.hide()
+            route = self._routesObj.find(m => m.path == "#404")
+            if( route ) {
+                route.view.show()
+                self._routes.push( route )
+            }
         }
     }
     
@@ -173,21 +183,12 @@ function UI()
             return false
         }
     }
-    this._getRoute = function() {
-        return window.location.hash || "#main"
-    }
-    this._appendRoute = function( path ) {
-        var curPath = this._getRoute()
-        var newPath = path
-        if(curPath != "#main") {
-            newPath = curPath.substring(1) + "___" + path
-        }
-        location.hash = newPath
-    }
+    this._getRoute = function() { return window.location.hash || "#main"; }
+    this._appendRoute = function( path ) { window.location.hash = path; }
 
     this._onLoadMain = function() {
         var hash = self._getRoute()
-        var route = self._routes.find(m => m.path == hash)
+        var route = self._routesObj.find(m => m.path == hash)
         if(route && route.config && route.config.restricted === true) {
             var err403 = self._routes.find(m => m.path == "#403")
             if( err403 ) {
@@ -279,14 +280,17 @@ function UI()
         self._fontName = name
     }
 
-    // {path: "#main", view: mainLay, config: {restricted: false}}
-    this.addRoute = function( route ) {
-        this._routes.push( route )
-    }
+    // {path: "#main", view: mainLay, config: {restricted: false}, destroyable: bin}
+    this.addRoute = function( route ) { this._routesObj.push(route); }
 
     this.goBack = function() { history.back() }
 
     this.goForward = function() { history.forward() }
+
+    this.show = function(route = "") {
+        if( !route.startsWith("#") ) route = "#"+route
+        this._appendRoute( route )
+    }
 
     //--- INITIALISATION ---
 

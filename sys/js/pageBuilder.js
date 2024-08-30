@@ -13,7 +13,8 @@ let _running = false,
     activeLink, activeNavLink, navList, navIsClick = false,
     // demoUrl = "http://localhost:3000";
     // demoUrl = "https://enjine-jdocs-3a9b16e42b4b.herokuapp.com";
-    demoUrl = "https://jumar.droidscript.cloud/api/"
+    demoUrl = "https://jumar.droidscript.cloud/api/",
+    isLangJS = true
 
 function createComponent(key, val) {
     var str = "";
@@ -135,7 +136,6 @@ function createPage( tutorial, step ) {
                 {
                     var l = T(step[z].txt).split(" ");
                     var r = T(step[z].txt).replace( l[0]+" ", "" ).replace(/[^a-zA-Z0-9]/g, ' ').toLowerCase()
-                    //sampStr += '<a href="#'+ z +'" class="nav-list-items capitalize">' + r + '</a>'
                     samples[z] = r;
                     if( curHeading ) leftPanelNavs[curHeading].navs[step[z].txt] = T(step[z].txt)
                 }
@@ -144,23 +144,26 @@ function createPage( tutorial, step ) {
                 const json = step[z];
                 if( json.sample ) {
                     str +=`
-            <div class="sample-code" style="${css}">
-                <div class="sample-code-header">${T(json.sample)}</div>
-                <textarea id="${z}" class="actual-code" data-id="${z}" data-lang="${json.lang}">${unescape(json.txt)}
+            <div class="sample-code${(json.lang? (" lang-"+json.lang): "")}" style="${css};">
+                <div class="sample-code-header">
+                    <span>${T(json.sample)}</span>
+                    ${((json.lang != "html" && !json.disabledActions.includes("lang-toggle")) ? '<div class="btn-group btn-lang"><button class="btn btn-dark" onClick="toggleLanguage(true)">JS</button><button class="btn btn-dark" onClick="toggleLanguage(false)">PY</button></div>' : "")}
+                </div>
+                <textarea id="${z}" class="actual-code" data-id="${z}" data-lang="${json.lang}">${json.txt}
                 </textarea>
                 <div class="sample-code-footer">
-                    <button class="btn btn-dark sample-code-actions run-code-btn display-none" code-type="${step[z].type}" onclick="runSampleCode('${z}')" title="Run [Ctrl+S]">
+                    <button class="btn btn-dark sample-code-actions run-code-btn display-none" ${(step[z].disabledActions.includes("run") ? "disabled" : "")} code-type="${step[z].type}" onclick="runSampleCode('${z}')" title="Run [Ctrl+S]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
                             <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
                         </svg>
                     </button>
-                    <button class="btn btn-dark sample-code-actions" onclick="copySampleCode('${z}')" title="Copy">
+                    <button class="btn btn-dark sample-code-actions" ${(step[z].disabledActions.includes("copy") ? "disabled" : "")} onclick="copySampleCode('${z}')" title="Copy">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
                             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
                             <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
                         </svg>
                     </button>
-                    <button class="btn btn-dark sample-code-actions" onclick="saveSampleCode('${ z }')" title="Save">
+                    <button class="btn btn-dark sample-code-actions" ${(step[z].disabledActions.includes("download") ? "disabled" : "")} onclick="saveSampleCode('${ z }')" title="Save">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
                             <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
@@ -168,7 +171,6 @@ function createPage( tutorial, step ) {
                     </button>
                 </div>
             </div>
-    
             `;
                 }
                 else
@@ -568,7 +570,7 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
         document.getElementById("doc-title").innerText = docTitle;
 
         // highlight code
-        highlightCode();
+        // highlightCode()
         initSampleCodes();
 
         // add the left navigation panel here
@@ -805,6 +807,7 @@ function CreatePopup()
 
     document.body.appendChild( div )
 }
+
 CreatePopup()
 
 function ShowPopup( txt )
@@ -820,10 +823,12 @@ function ShowPopup( txt )
 
 // Render style for text within backticks
 function _S( str ) {
-    str = str.replace(/`([^`]+)`/g, '<span class="backtick-enclosed">$1</span>');
-    str = str.replace( /\\n/g, "<br>" )
-    str = str.replace( /\n/g, "<br>" )
-    return str;
+    const regex = /\[([^\]]+)\]\(([^)]+)\)/g
+    str = str.replace(regex, '<a href="$2">$1</a>')
+    str = str.replace(/`([^`]+)`/g, '<span class="backtick-enclosed">$1</span>')
+    str = str.replace(/\\n/g, "<br>")
+    str = str.replace(/\n/g, "<br>")
+    return str
 }
 
 function initLeftNavigation() {
@@ -920,7 +925,6 @@ function scrollIntoElement( el ) {
     while( el ) { d += el.offsetTop; el = el.offsetParent; }
     window.scrollTo({ top: d-100, behavior: "smooth" });
 }
-
 
 function onComponentSearch( e, home )
 {
@@ -1035,10 +1039,10 @@ function hideMenu() {
 function getDeviceJDocsID() {
     let jdocsId = localStorage.getItem("jdocs_id");
     if( !jdocsId ) {
-        jdocsId = "jdocs-" + new Date().getTime() + "-" + [ Math.floor( Math.random() * 99999) + 10000];
-        localStorage.setItem("jdocs_id", jdocsId);
+        jdocsId = "jdocs-" + new Date().getTime() + "-" + [ Math.floor( Math.random() * 99999) + 10000]
+        localStorage.setItem("jdocs_id", jdocsId)
     }
-    return jdocsId;
+    return jdocsId
 }
 
 function showMobileOutput( show ) {
@@ -1155,6 +1159,7 @@ const _CodeMirrorOptions = {
         "Cmd-S": function( cm ) { runSampleCode(null, cm.getValue()) }
     }
 }
+
 const _CodeMirrorInstances = []
 
 function initSampleCodes() {
@@ -1162,21 +1167,49 @@ function initSampleCodes() {
     for(var i=0; i<codes.length; i++) {
         var id = codes[i].getAttribute("data-id")
         var lang = codes[i].getAttribute("data-lang")
-        var mode = "", theme = ""
-        switch (lang) {
-            case "html": mode = "htmlmixed"; theme = "ds-md-html"; break;
-            case "css": mode = "css"; break;
-            case "md": mode = "md"; break;
-            case "py": mode = "python"; break;
-            default: mode = "javascript"; theme = "ds-md-javascript";
-        }
-        var opt = {
-            ..._CodeMirrorOptions,
-            theme,
-            mode
+        switch ( lang ) {
+            case "html": _CodeMirrorOptions.mode = "htmlmixed"; _CodeMirrorOptions.theme = "ds-md-html"; break;
+            case "css": _CodeMirrorOptions.mode = "css"; _CodeMirrorOptions.theme = "ds-md-css"; break;
+            case "py": _CodeMirrorOptions.mode = "python"; _CodeMirrorOptions.theme = "ds-md-py"; break;
+            default: _CodeMirrorOptions.mode = "javascript"; _CodeMirrorOptions.theme = "ds-md-javascript";
         }
         _CodeMirrorInstances[id] = CodeMirror.fromTextArea(document.getElementById(id), _CodeMirrorOptions)
     }
+
+    // hide python samples
+    var els = document.querySelectorAll("div.sample-code")
+    els.forEach(el => {
+        if(el.classList.contains("lang-py") && isLangJS) {
+            el.style.display = "none"
+        }
+    })
+
+    // render inline sample codes
+    const preCodeElements = document.querySelectorAll('pre.jdocs-sample-code code')
+    preCodeElements.forEach(codeEl => {
+        CodeMirror(codeEl.parentElement, {
+            value: codeEl.textContent,
+            readOnly: true,
+            mode: "javascript",
+            theme: "ds-md-javascript"
+        })
+        codeEl.style.display = "none"
+    })
+}
+
+function toggleLanguage( val ) {
+    isLangJS = val
+    var els = document.querySelectorAll("div.sample-code")
+    els.forEach(el => {
+        if(el.classList.contains("lang-html")) return
+        if(el.classList.contains("lang-js") && isLangJS) {
+            el.style.display = "block"
+        }
+        else if(el.classList.contains("lang-py") && !isLangJS) {
+            el.style.display = "block"
+        }
+        else el.style.display = "none"
+    })
 }
 
 window.addEventListener("scroll", function() {
@@ -1224,4 +1257,4 @@ window.addEventListener("scroll", function() {
             break;
         }
     }
-});
+})

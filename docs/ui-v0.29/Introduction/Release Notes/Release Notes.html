@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -54,6 +59,53 @@
         "txt": "heading_3"
       },
       "ul_4": {
+        "content": [
+          "Fixed setOnTouch method in Chip control not calling when click event is at the center.",
+          "Added \"titleOffset\" setter property to List to add a distance from the left icon to the title.",
+          "Added setSelection and getSelection method in TextField control.",
+          "Fixed \"focus\" method in TextField not rendering for multiline inputs.",
+          "Fixed _cdn=false error in the latest hybrid app.",
+          "Update FAB textColor and backColor in dark mode.",
+          "Prioritize width and height param as dimension for all controls.",
+          "Fixed FillXY, FillX and FillY options for all controls.",
+          "Fixed list sample.",
+          "Fixed animate method.",
+          "Added props: animateIn, animateOut, animateDuration.",
+          "Fixed show and hide method for all controls (added animation)",
+          "Added routing to Hybrid UI with configs for restricted pages.",
+          "Added Link and NewTab option to Button to render as link.",
+          "Added Link and NewTab option to ButtonGroup to render as link.",
+          "Added Link and NewTab option to Chip to render as link.",
+          "Added support for links on Menus and Dropdown controls.",
+          "Added support for routing on Dialogs, ColorPicker and DatePicker.",
+          "Added support for routing on DateTimePicker, TimePicker, Menu, Popup and Popover.",
+          "Added support for routing on Drawer.",
+          "Fixed and export all js samples to python samples.",
+          "Completed documentation for Routing in UI",
+          "Completed documentation for HTMLElement component.",
+          "Fixes and converts js samples into python samples for Dropdown, FAB, HTMLElement, Image, Layout, List, Menu, Popover, Popup",
+          "Added python samples for progress control.",
+          "Fixes python samples for RadioGroup control.",
+          "Fixes python samples for Select control.",
+          "Added python samples for Slider control.",
+          "Fixes and updates python samples for Stepper control.",
+          "Fixes and updates python samples for Switch control.",
+          "Fixes and updates python samples for SwitchGroup control.",
+          "Fixes and updates python samples for Tabs control.",
+          "Fixes and updates python samples for Text control.",
+          "Fixes and updates python samples for TextField control.",
+          "Fixes and updates python samples for TreeView control.",
+          "Fixes and updates python samples for WebView control.",
+          "Fixes path to cdn hosted libs when _cdn is true.",
+          "Add support for routing on ActionSheet and BottomSheet.",
+          "Fixes z-index on routable layouts.",
+          "Added ui.show() method to show layout routes."
+        ]
+      },
+      "heading_6": {
+        "txt": "heading_6"
+      },
+      "ul_7": {
         "content": [
           "Added VideoView component.",
           "Added CameraView component.",
@@ -98,10 +150,10 @@
           "Updated build docs."
         ]
       },
-      "heading_6": {
-        "txt": "heading_6"
+      "heading_9": {
+        "txt": "heading_9"
       },
-      "ul_7": {
+      "ul_10": {
         "content": [
           "Fixed `fillAxis` option on Layout by removing `fit-content` for axis dimension.",
           "Added `el` getter property to get the html container element for all controls.",
@@ -164,14 +216,14 @@
           "Updated Docs for Popup, Layout and Popover."
         ]
       },
-      "heading_9": {
-        "txt": "heading_9"
+      "heading_12": {
+        "txt": "heading_12"
       },
-      "text_10": {
-        "txt": "text_10",
+      "text_13": {
+        "txt": "text_13",
         "css": ""
       },
-      "ul_11": {
+      "ul_14": {
         "content": [
           "Fixed `setPadding` method and `padding` property.",
           "Fixed `setPosition` method and `position` property.",
@@ -300,14 +352,14 @@
           "Fixed drawer sample."
         ]
       },
-      "heading_13": {
-        "txt": "heading_13"
+      "heading_16": {
+        "txt": "heading_16"
       },
-      "text_14": {
-        "txt": "text_14",
+      "text_17": {
+        "txt": "text_17",
         "css": ""
       },
-      "ul_15": {
+      "ul_18": {
         "content": [
           "Added `newAction` parameter into the `setItemByIndex` method of List component.",
           "Fixed `outlined` option in Select component to work even if option is `outline`.",
@@ -337,14 +389,14 @@
           "Fixed `drawText` method in Image component to make the textbox start at the top-left corner."
         ]
       },
-      "heading_17": {
-        "txt": "heading_17"
+      "heading_20": {
+        "txt": "heading_20"
       },
-      "text_18": {
-        "txt": "text_18",
+      "text_21": {
+        "txt": "text_21",
         "css": ""
       },
-      "ul_19": {
+      "ul_22": {
         "content": [
           "Fixed setOnTouch method to Select component.",
           "Update setOnTouch method documentation to all components.",
@@ -377,14 +429,14 @@
           "Fixed `onDelete` event on Chip component."
         ]
       },
-      "heading_21": {
-        "txt": "heading_21"
+      "heading_24": {
+        "txt": "heading_24"
       },
-      "text_22": {
-        "txt": "text_22",
+      "text_25": {
+        "txt": "text_25",
         "css": ""
       },
-      "ul_23": {
+      "ul_26": {
         "content": [
           "Implement fontFile setter/getter property to Image Component.",
           "Implement drawText method in Image Component.",
@@ -444,51 +496,56 @@
       "es": ""
     },
     "heading_3": {
-      "en": "Version 0.28",
+      "en": "Version 0.29",
       "de": "",
       "es": ""
     },
     "heading_6": {
-      "en": "Version 0.27",
+      "en": "Version 0.28",
       "de": "",
       "es": ""
     },
     "heading_9": {
+      "en": "Version 0.27",
+      "de": "",
+      "es": ""
+    },
+    "heading_12": {
       "en": "Version 0.26",
       "de": "",
       "es": ""
     },
-    "text_10": {
+    "text_13": {
       "en": "August 14, 2023",
       "de": "",
       "es": ""
     },
-    "heading_13": {
+    "heading_16": {
       "en": "Version 0.25",
       "de": "",
       "es": ""
     },
-    "text_14": {
+    "text_17": {
       "en": "July 02, 2023",
       "de": "",
       "es": ""
     },
-    "heading_17": {
+    "heading_20": {
       "en": "Version 0.24",
       "de": "",
       "es": ""
     },
-    "text_18": {
+    "text_21": {
       "en": "June 3, 2023",
       "de": "",
       "es": ""
     },
-    "heading_21": {
+    "heading_24": {
       "en": "Version 0.23",
       "de": "",
       "es": ""
     },
-    "text_22": {
+    "text_25": {
       "en": "Initial unstable release...",
       "de": "",
       "es": ""

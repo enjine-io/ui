@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -240,23 +245,33 @@
       },
       "code_32": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Creates a button control where to attached the popover\n       this.btn = ui.addButton(this.main, \"Show Popover\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch() {\n       // Display a popover when the button is click\n       ui.showPopover(this.btn, \"This is a text to be displayed.\")\n   }\n}",
-        "sample": "Basic"
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_33": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       this.aorigin = \"tl\"\n       this.torigin = \"tl\"\n\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(null, 2, null, 2, \"rem\")\n\n       var lay = ui.addLayout(this.main, \"Linear\", \"Horizontal\", 1)\n       lay.childSpacing = \"around\"\n\n       var sels = \"Top-Left,Top-Center,Top-Right,Center-Left,Center-Center,Center-Right,Bottom-Left,Bottom-Center,Bottom-Right\"\n       \n       // Selection of anchor origin or position on parent control\n       this.selAOrigin = ui.addSelect(lay, sels.split(\",\"), \"Filled\", 0.4)\n       this.selAOrigin.label = \"anchorOrigin\"\n       this.selAOrigin.setOnTouch(m => {\n           m = m.toLowerCase()\n           var c = m.split(\"-\")\n           this.aorigin = c[0][0]+c[1][0] // get the initials only\n           this.update()\n       })\n\n       // Selection of transform origin or position on popover itself\n       this.selTOrigin = ui.addSelect(lay, sels.split(\",\"), \"Filled\", 0.4)\n       this.selTOrigin.label = \"transformOrigin\"\n       this.selTOrigin.setOnTouch(m => {\n           m = m.toLowerCase()\n           var c = m.split(\"-\")\n           this.torigin = c[0][0]+c[1][0] // get the initials only\n           this.update()\n       })\n\n       this.posTxt = ui.addText(this.main, \"Position: tl,tl\")\n\n       this.btn = ui.addButton(this.main, \"Show here\")\n   }\n\n   update() {\n       var pos = this.aorigin+\",\"+this.torigin\n       this.posTxt.text = \"Position: \"+pos\n\n       // Show the popover message with the current position setting\n       this.pop = ui.showPopover(this.btn, \"This is a popover message\", pos)\n\n       // Hide the popover after a second\n       setTimeout(() => {\n           this.pop.hide()\n       }, 1000)\n   }\n}",
-        "sample": "Positioning"
+        "sample": "Positioning",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_34": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n       // Creates a button where to attached the popover.\n       this.btn = ui.addButton( this.main, \"Show Popover\" )\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch() {\n       // Display a custom popover when the button is click.\n\n       // Create a layout with `null` parent to be pass into the popover\n       var lay = ui.addLayout(null, \"Linear\", \"VCenter,Left\")\n       lay.setChildMargins(0.1, 0.05, 0.1, 0.05)\n\n       // you can add text\n       ui.addText(lay, \"Header\", \"h5\")\n\n       // you can add as many text as you can\n       ui.addText(lay, \"This is a very long text to display in this popover\", \"Left\")\n\n       // you can also add button\n       this.popBtn = ui.addButton(lay, \"Close\", \"Outlined\", \"Secondary\")\n       this.popBtn.setOnTouch( this.closePopover )\n\n       // pass the layout into the `ui.showPopover` method\n       this.pop = ui.showPopover( this.btn, lay, \"bl,tr\")\n   }\n\n   closePopover() {\n       this.pop.hide()\n   }\n}",
-        "sample": "Advanced"
+        "sample": "Advanced",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_35": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global btn\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Creates a button control where to attach the popover\n   btn = ui.addButton(main, \"Show Popover\")\n\n   # Add a callback handler when the button is clicked\n   btn.setOnTouch(onTouch)\n\ndef onTouch(event):\n   # Display a popover when the button is clicked\n   ui.showPopover(btn, \"This is a text to be displayed.\")",
-        "sample": "Python Basic"
+        "sample": "Basic",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_36": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global btn\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n   # Creates a button where to attach the popover.\n   btn = ui.addButton(main, \"Show Popover\")\n   btn.setOnTouch(onTouch)\n\ndef onTouch(event):\n   # Display a custom popover when the button is clicked.\n\n   # Create a layout with `null` parent to be passed into the popover\n   lay = ui.addLayout(None, \"Linear\", \"VCenter,Left\")\n   lay.setChildMargins(0.1, 0.05, 0.1, 0.05)\n\n   # you can add text\n   ui.addText(lay, \"Header\", \"h5\")\n\n   # you can add as many texts as you can\n   ui.addText(lay, \"This is a very long text to display in this popover\", \"Left\")\n\n   # you can also add a button\n   ui.addButton(lay, \"Outlined Button\", \"Outlined\", \"Secondary\")\n\n   # pass the layout into the `ui.showPopover` method\n   ui.showPopover(btn, lay, \"bl,tr\")",
-        "sample": "Python Advanced"
+        "sample": "Advanced",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]

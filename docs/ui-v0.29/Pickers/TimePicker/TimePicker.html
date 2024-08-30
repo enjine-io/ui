@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -134,19 +139,27 @@
       },
       "code_16": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a layout with objects verticaly centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // button to show time picker\n       this.btn = ui.addButton( this.main, \"Show Time Picker\")\n       this.btn.setOnTouch( this.showTimePicker )\n   }\n\n   showTimePicker()\n   {\n       // show time picker\n       ui.showTimePicker( this.onSelect )\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value );\n   }\n}",
-        "sample": "Default"
+        "sample": "Default",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_17": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       ui.setThemeColor( \"#673ab7\" )\n\n       // Creates a layout with objects verticaly centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show time picker when click\n       this.btn = ui.addButton(this.main, \"Show Time Picker\")\n       this.btn.setOnTouch( this.showTimePicker )\n   }\n\n   showTimePicker()\n   {\n       // show time picker dialog with initial value\n       ui.showTimePicker(\"08:24\", \"Portrait\", this.onSelect)\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value );\n   }\n}",
-        "sample": "With initial value, options and theme color"
+        "sample": "With initial value, options and theme color",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_18": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       ui.setTheme( \"dark\" )\n\n       // Creates a layout with objects verticaly centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show time picker when click\n       this.btn = ui.addButton(this.main, \"Show Time Picker\")\n       this.btn.setOnTouch( this.showTimePicker )\n   }\n\n   showTimePicker()\n   {\n       // show time picker dialog with initial value\n       ui.showTimePicker(\"08:24\", \"Portrait\", this.onSelect)\n   }\n\n   onSelect( value )\n   {\n       ui.showPopup( value );\n   }\n}",
-        "sample": "Dark mode"
+        "sample": "Dark mode",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_19": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global tpk\n\n   ui.setTheme(\"light\")\n\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,ScrollY\", 1, 1)\n   btn = ui.addButton(main, \"Show Time Picker\", \"Outlined,Secondary\", 0.2)\n   btn.setOnTouch(showTimePicker)\n   tpk = ui.addTimePicker()\n   tpk.setOnSelect(onSelect)\n\ndef showTimePicker(event):\n   tpk.show()\n\ndef onSelect(value):\n   ui.showPopup(value)",
-        "sample": "Python Basic"
+        "sample": "Basic",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]

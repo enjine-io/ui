@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -889,35 +894,51 @@
       },
       "code_122": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Adds a button control to the layout\n       this.btn = ui.addButton(this.main, \"Show Menu\", \"Primary\")\n       this.btn.setOnTouch( this.onTouch )\n\n       // Menu items to display in the popup\n       var items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n       // Adds a menu passing the button control as anchor\n       this.menu = ui.addMenu(this.btn, items)\n\n       // Add a callback handler when a menu is touched\n       this.menu.setOnTouch( this.menuTouch )\n   }\n\n   onTouch()\n   {\n       // show the menu\n       this.menu.show()\n   }\n\n   menuTouch( item )\n   {\n       ui.showPopup( item )\n   }\n}",
-        "sample": "Basic menu"
+        "sample": "Basic menu",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_123": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.childSpacing = \"Even\";\n\n       // Add a first button control to the layout\n       this.btn1 = ui.addButton(this.main, \"Button 1\", \"Primary\")\n       this.btn1.setOnTouch( this.onTouch1 )\n\n       // Add a second button control to the layout\n       this.btn2 = ui.addButton(this.main, \"Button 2\", \"Secondary\")\n       this.btn2.setOnTouch( this.onTouch2 )\n\n       // Menu items to display the menu popup\n       var items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n       // Adds a menu without anchor component\n       this.menu = ui.addMenu(null, items)\n\n       // Add a callback handler when a menu is touched\n       this.menu.setOnTouch( this.menuTouch )\n   }\n\n   onTouch1()\n   {\n       // Show the menu on button 1\n       this.menu.show( this.btn1 )\n   }\n\n   onTouch2()\n   {\n       // Show the menu on button 2\n       this.menu.show( this.btn2 )\n   }\n\n   menuTouch( item )\n   {\n       ui.showPopup( item )\n   }\n}",
-        "sample": "Changing anchor component"
+        "sample": "Changing anchor component",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_124": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button control to the main layout\n       this.btn = ui.addButton(this.main, \"Show Menu\", \"Primary\")\n       this.btn.setOnTouch( this.onTouch )\n\n       // List items with icons\n       var items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n       // Add a menu passing the btn as anchor component\n       this.menu = ui.addMenu(this.btn, items, \"Icons,Primary,Dense\")\n\n       // Disable the second menu item\n       this.menu.setEnabled(1, false)\n\n       // Add a callback handler when a menu is touched\n       this.menu.setOnTouch( this.menuTouch )\n   }\n\n   onTouch()\n   {\n       // show the menu\n       this.menu.show()\n   }\n\n   menuTouch( item )\n   {\n       // display the selected item\n       ui.showPopup( item )\n   }\n}",
-        "sample": "With icons and disabled items"
+        "sample": "With icons and disabled items",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_125": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setOnContextMenu( this.onMenu )\n\n       // Add a text control to the layout\n       this.txt = ui.addText(this.main, \"Right click anywhere on the screen.\\n(Long press if your on mobile phone)\", \"Multiline\")\n\n       // List items with icons\n       var items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n       // Add menu passing the btn as anchor component\n       this.menu = ui.addMenu(null, items, \"Icons,Dense\")\n\n       // Add a callback handler when a menu is touched\n       this.menu.setOnTouch( this.menuTouch )\n   }\n\n   onMenu( pos )\n   {\n       // show the menu on the position of the mouse\n       this.menu.show(pos.x, pos.y)\n   }\n\n   menuTouch( item )\n   {\n       // display the selected item\n       ui.showPopup( item )\n   }\n}",
-        "sample": "Anchor position on mouse / touch"
+        "sample": "Anchor position on mouse / touch",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_126": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Adds a button control to the layout\n   btn = ui.addButton(main, \"Show Menu\", \"Primary\")\n   btn.setOnTouch(onTouch)\n\n   # Menu items to display in the popup\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Adds a menu passing the button control as anchor\n   menu = ui.addMenu(btn, items)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch(event):\n   # show the menu\n   menu.show()\n\ndef menuTouch(item, icon, index, event):\n   ui.showPopup(item)",
-        "sample": "Python Basic menu"
+        "sample": "Basic menu",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_127": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global btn1, menu, btn2\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildSpacing(\"Evenly\")\n\n   # Add a first button control to the layout\n   btn1 = ui.addButton(main, \"Button 1\", \"Primary\")\n   btn1.setOnTouch(onTouch1)\n\n   # Add a second button control to the layout\n   btn2 = ui.addButton(main, \"Button 2\", \"Secondary\")\n   btn2.setOnTouch(onTouch2)\n\n   # Menu items to display the menu popup\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Adds a menu without anchor component\n   menu = ui.addMenu(None, items)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch1(event):\n   # Show the menu on button 1\n   menu.show(btn1)\n\ndef onTouch2(event):\n   # Show the menu on button 2\n   menu.show(btn2)\n\ndef menuTouch(item, icon, index, event):\n   ui.showPopup(item)",
-        "sample": "Python Changing anchor component"
+        "sample": "Changing anchor component",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_128": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button control to the main layout\n   btn = ui.addButton(main, \"Show Menu\", \"Primary\")\n   btn.setOnTouch(onTouch)\n\n   # List items with icons\n   items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n   # Add a menu passing the btn as anchor component\n   menu = ui.addMenu(btn, items, \"Icons,Primary,Dense\")\n\n   # Disable the second menu item\n   menu.setEnabled(1, False)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch(event):\n   # show the menu\n   menu.show()\n\ndef menuTouch(item, icon, index, event):\n   # display the selected item\n   ui.showPopup(item)",
-        "sample": "Python With icons and disabled items"
+        "sample": "With icons and disabled items",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_129": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setOnContextMenu(onMenu)\n\n   # Add a text control to the layout\n   txt = ui.addText(main, \"Right click anywhere on the screen. Or long press anywhere on mobile.\", \"Multiline\", 0.8)\n\n   # List items with icons\n   items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n   # Add menu passing the btn as anchor component\n   menu = ui.addMenu(None, items, \"Icons,Dense\")\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onMenu(pos):\n   # show the menu on the position of the mouse\n   menu.show(pos.x, pos.y)\n\ndef menuTouch(item, icon, index, event):\n   # display the selected item\n   ui.showPopup(item)",
-        "sample": "Python Anchor position on mouse"
+        "sample": "Anchor position on mouse",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]

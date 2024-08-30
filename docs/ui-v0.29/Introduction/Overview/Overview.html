@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -57,8 +62,9 @@
       "code_5": {
         "txt": "class Main extends App\n{\n    onStart()\n    {\n        this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n        this.apb = ui.addAppBar(this.main, \"MyApp\", \"Menu,Fixed\")\n\n        this.btn = ui.addButton(this.main, \"Button\", \"Default\")\n\n        this.fab = ui.addFAB(this.main, \"add\", \"Secondary\")\n    }\n}",
         "css": "",
-        "sample": "Complex layout made simple",
-        "lang": "js"
+        "sample": "Complex layout made simple ",
+        "lang": "js",
+        "disabledActions": ",lang-toggle"
       },
       "heading_6": {
         "txt": "heading_6"
@@ -140,12 +146,12 @@
       "es": ""
     },
     "heading_12": {
-      "en": "Getting Started",
+      "en": "Writing your first layout",
       "de": "",
       "es": ""
     },
     "text_13": {
-      "en": "Before starting to write your own apps with user interfaces, it's a good idea to read the documentation explaining `Layout` as this is the fundamental control of every app that uses UI Components. Check it on `Controls > Layout`.",
+      "en": "Before starting to write your own apps with user interfaces, it's a good idea to read the documentation explaining `Layout` as this is the fundamental control of every app that uses UI Components. Check it on [Layout](../../Controls/Layout/Layout.html) section.",
       "de": "",
       "es": ""
     }

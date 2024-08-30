@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -353,7 +358,7 @@
         "css": ""
       },
       "code_49": {
-        "txt": "setOnContextMenu( callback )",
+        "txt": "div.animate(anim, duration)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_50": {
@@ -366,70 +371,37 @@
       },
       "table-row_50": {
         "content": [
-          "callback ",
-          "Function",
-          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
-        ]
-      },
-      "table-footer_50": {
-        "txt": ""
-      },
-      "hr_51": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_51": {
-        "txt": "subtitle_51"
-      },
-      "text_53": {
-        "txt": "text_53",
-        "css": ""
-      },
-      "code_54": {
-        "txt": "div.animate(anim, duration)",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_55": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_55": {
-        "content": [
           "anim ",
           "String",
           "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
         ]
       },
-      "table-row_56": {
+      "table-row_51": {
         "content": [
           "duration ",
           "Number",
           "The time in milliseconds. "
         ]
       },
-      "table-footer_56": {
+      "table-footer_51": {
         "txt": ""
       },
-      "hr_57": {
+      "hr_52": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_57": {
-        "txt": "subtitle_57"
+      "subtitle_52": {
+        "txt": "subtitle_52"
       },
-      "text_59": {
-        "txt": "text_59",
+      "text_54": {
+        "txt": "text_54",
         "css": ""
       },
-      "code_60": {
+      "code_55": {
         "txt": "div.setSize(width, height, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_61": {
+      "table-header_56": {
         "content": [
           "Parameters",
           "Type",
@@ -437,106 +409,106 @@
         ],
         "css": ""
       },
-      "table-row_61": {
+      "table-row_56": {
         "content": [
           "width ",
           "Number",
           "Fraction of the parent width. [0-1] "
         ]
       },
-      "table-row_62": {
+      "table-row_57": {
         "content": [
           "height ",
           "Number",
           "Fraction of the parent height. [0-1] "
         ]
       },
-      "table-row_63": {
+      "table-row_58": {
         "content": [
           "mode ",
           "String",
           "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
         ]
       },
-      "table-footer_63": {
+      "table-footer_58": {
         "txt": ""
       },
-      "hr_64": {
+      "hr_59": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_64": {
-        "txt": "subtitle_64"
+      "subtitle_59": {
+        "txt": "subtitle_59"
       },
-      "text_66": {
-        "txt": "text_66",
+      "text_61": {
+        "txt": "text_61",
         "css": ""
       },
-      "code_67": {
+      "code_62": {
         "txt": "div.show()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_68": {
+      "hr_63": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_68": {
-        "txt": "subtitle_68"
+      "subtitle_63": {
+        "txt": "subtitle_63"
       },
-      "text_70": {
-        "txt": "text_70",
+      "text_65": {
+        "txt": "text_65",
         "css": ""
       },
-      "code_71": {
+      "code_66": {
         "txt": "div.hide()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_72": {
+      "hr_67": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_72": {
-        "txt": "subtitle_72"
+      "subtitle_67": {
+        "txt": "subtitle_67"
       },
-      "text_74": {
-        "txt": "text_74",
+      "text_69": {
+        "txt": "text_69",
         "css": ""
       },
-      "code_75": {
+      "code_70": {
         "txt": "div.gone()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_76": {
+      "hr_71": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_76": {
-        "txt": "subtitle_76"
+      "subtitle_71": {
+        "txt": "subtitle_71"
       },
-      "text_78": {
-        "txt": "text_78",
+      "text_73": {
+        "txt": "text_73",
         "css": ""
       },
-      "code_79": {
+      "code_74": {
         "txt": "div.destroy()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_80": {
+      "hr_75": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_80": {
-        "txt": "subtitle_80"
+      "subtitle_75": {
+        "txt": "subtitle_75"
       },
-      "text_82": {
-        "txt": "text_82",
+      "text_77": {
+        "txt": "text_77",
         "css": ""
       },
-      "code_83": {
+      "code_78": {
         "txt": "div.setScale(x, y)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_84": {
+      "table-header_79": {
         "content": [
           "Parameters",
           "Type",
@@ -544,39 +516,39 @@
         ],
         "css": ""
       },
-      "table-row_84": {
+      "table-row_79": {
         "content": [
           "x ",
           "Number",
           "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
         ]
       },
-      "table-row_85": {
+      "table-row_80": {
         "content": [
           "y ",
           "Number",
           "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
         ]
       },
-      "table-footer_85": {
+      "table-footer_80": {
         "txt": ""
       },
-      "hr_86": {
+      "hr_81": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_86": {
-        "txt": "subtitle_86"
+      "subtitle_81": {
+        "txt": "subtitle_81"
       },
-      "text_88": {
-        "txt": "text_88",
+      "text_83": {
+        "txt": "text_83",
         "css": ""
       },
-      "code_89": {
+      "code_84": {
         "txt": "div.getPosition( options )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_90": {
+      "table-header_85": {
         "content": [
           "Parameters",
           "Type",
@@ -584,35 +556,35 @@
         ],
         "css": ""
       },
-      "table-row_90": {
+      "table-row_85": {
         "content": [
           "options ",
           "String",
           "The mode of the measurements. Values can be `px` or `%` "
         ]
       },
-      "table-footer_90": {
+      "table-footer_85": {
         "txt": ""
       },
-      "text_91": {
+      "text_86": {
         "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
       },
-      "hr_92": {
+      "hr_87": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_92": {
-        "txt": "subtitle_92"
+      "subtitle_87": {
+        "txt": "subtitle_87"
       },
-      "text_94": {
-        "txt": "text_94",
+      "text_89": {
+        "txt": "text_89",
         "css": ""
       },
-      "code_95": {
+      "code_90": {
         "txt": "div.setMargins( left, top, right, bottom, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_96": {
+      "table-header_91": {
         "content": [
           "Parameters",
           "Type",
@@ -620,60 +592,60 @@
         ],
         "css": ""
       },
-      "table-row_96": {
+      "table-row_91": {
         "content": [
           "[left] ",
           "Number",
           "Left margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_97": {
+      "table-row_92": {
         "content": [
           "[top] ",
           "Number",
           "Top margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_98": {
+      "table-row_93": {
         "content": [
           "[right] ",
           "Number",
           "Right margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_99": {
+      "table-row_94": {
         "content": [
           "[bottom] ",
           "Number",
           "Bottom margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_100": {
+      "table-row_95": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
         ]
       },
-      "table-footer_100": {
+      "table-footer_95": {
         "txt": ""
       },
-      "hr_101": {
+      "hr_96": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_101": {
-        "txt": "subtitle_101"
+      "subtitle_96": {
+        "txt": "subtitle_96"
       },
-      "text_103": {
-        "txt": "text_103",
+      "text_98": {
+        "txt": "text_98",
         "css": ""
       },
-      "code_104": {
+      "code_99": {
         "txt": "div.setPadding(left, top, right, bottom, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_105": {
+      "table-header_100": {
         "content": [
           "Parameters",
           "Type",
@@ -681,60 +653,60 @@
         ],
         "css": ""
       },
-      "table-row_105": {
+      "table-row_100": {
         "content": [
           "[left] ",
           "Number",
           "Fraction of the component width. "
         ]
       },
-      "table-row_106": {
+      "table-row_101": {
         "content": [
           "[top] ",
           "Number",
           "Fraction of the component height. [0-1] "
         ]
       },
-      "table-row_107": {
+      "table-row_102": {
         "content": [
           "[right] ",
           "Number",
           "Fraction of the component width. [0-1] "
         ]
       },
-      "table-row_108": {
+      "table-row_103": {
         "content": [
           "[bottom] ",
           "Number",
           "Fraction of the component height. [0-1] "
         ]
       },
-      "table-row_109": {
+      "table-row_104": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
         ]
       },
-      "table-footer_109": {
+      "table-footer_104": {
         "txt": ""
       },
-      "hr_110": {
+      "hr_105": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_110": {
-        "txt": "subtitle_110"
+      "subtitle_105": {
+        "txt": "subtitle_105"
       },
-      "text_112": {
-        "txt": "text_112",
+      "text_107": {
+        "txt": "text_107",
         "css": ""
       },
-      "code_113": {
+      "code_108": {
         "txt": "div.setPosition( left, top, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_114": {
+      "table-header_109": {
         "content": [
           "Parameters",
           "Type",
@@ -742,46 +714,46 @@
         ],
         "css": ""
       },
-      "table-row_114": {
+      "table-row_109": {
         "content": [
           "left ",
           "Number",
           "Fraction of the parent width. [0-1] "
         ]
       },
-      "table-row_115": {
+      "table-row_110": {
         "content": [
           "top ",
           "Number",
           "Fraction of the parent height. [0-1] "
         ]
       },
-      "table-row_116": {
+      "table-row_111": {
         "content": [
           "mode ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
         ]
       },
-      "table-footer_116": {
+      "table-footer_111": {
         "txt": ""
       },
-      "hr_117": {
+      "hr_112": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_117": {
-        "txt": "subtitle_117"
+      "subtitle_112": {
+        "txt": "subtitle_112"
       },
-      "text_119": {
-        "txt": "text_119",
+      "text_114": {
+        "txt": "text_114",
         "css": ""
       },
-      "code_120": {
+      "code_115": {
         "txt": "div.setBorder(left, top, right, bottom, clr, style)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_121": {
+      "table-header_116": {
         "content": [
           "Parameters",
           "Type",
@@ -789,67 +761,67 @@
         ],
         "css": ""
       },
-      "table-row_121": {
+      "table-row_116": {
         "content": [
           "[left] ",
           "Number",
           "Border-left thickness in pixels. "
         ]
       },
-      "table-row_122": {
+      "table-row_117": {
         "content": [
           "[top] ",
           "Number",
           "Border-top thickness in pixels. "
         ]
       },
-      "table-row_123": {
+      "table-row_118": {
         "content": [
           "[right] ",
           "Number",
           "Border-right thickness in pixels. "
         ]
       },
-      "table-row_124": {
+      "table-row_119": {
         "content": [
           "[bottom] ",
           "Number",
           "Border-bottom thickness in pixels. "
         ]
       },
-      "table-row_125": {
+      "table-row_120": {
         "content": [
           "[clr] ",
           "String",
           "Border color in hexadecimal format `#rrggbb`. "
         ]
       },
-      "table-row_126": {
+      "table-row_121": {
         "content": [
           "[style] ",
           "String",
           "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
         ]
       },
-      "table-footer_126": {
+      "table-footer_121": {
         "txt": ""
       },
-      "hr_127": {
+      "hr_122": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_127": {
-        "txt": "subtitle_127"
+      "subtitle_122": {
+        "txt": "subtitle_122"
       },
-      "text_129": {
-        "txt": "text_129",
+      "text_124": {
+        "txt": "text_124",
         "css": ""
       },
-      "code_130": {
+      "code_125": {
         "txt": "div.setCornerRadius(tl, tr, bl, br, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_131": {
+      "table-header_126": {
         "content": [
           "Parameters",
           "Type",
@@ -857,39 +829,72 @@
         ],
         "css": ""
       },
-      "table-row_131": {
+      "table-row_126": {
         "content": [
           "[tl] ",
           "Number",
           "Top-Left border radius. "
         ]
       },
-      "table-row_132": {
+      "table-row_127": {
         "content": [
           "[tr] ",
           "Number",
           "Top-Right border radius. "
         ]
       },
-      "table-row_133": {
+      "table-row_128": {
         "content": [
           "[br] ",
           "Number",
           "Bottom-Right border radius. "
         ]
       },
-      "table-row_134": {
+      "table-row_129": {
         "content": [
           "[bl] ",
           "Number",
           "Bottom-Left border radius. "
         ]
       },
-      "table-row_135": {
+      "table-row_130": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_130": {
+        "txt": ""
+      },
+      "hr_131": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_131": {
+        "txt": "subtitle_131"
+      },
+      "text_133": {
+        "txt": "text_133",
+        "css": ""
+      },
+      "code_134": {
+        "txt": "div.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_135": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_135": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
         ]
       },
       "table-footer_135": {
@@ -901,10 +906,6 @@
       },
       "subtitle_136": {
         "txt": "subtitle_136"
-      },
-      "text_137": {
-        "txt": "text_137",
-        "css": ""
       },
       "text_138": {
         "txt": "text_138",
@@ -926,7 +927,7 @@
         "content": [
           "zIndex ",
           "Number",
-          "The z-index. A negative value behaves like `sendBackward` method. "
+          "The z-index. A positve value behaves like \"bringForward\" method. "
         ]
       },
       "table-footer_140": {
@@ -944,7 +945,7 @@
         "css": ""
       },
       "code_144": {
-        "txt": "div.bringForward( zIndex )",
+        "txt": "div.addClass( \"my-button my-button-large\" )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_145": {
@@ -957,9 +958,9 @@
       },
       "table-row_145": {
         "content": [
-          "zIndex ",
-          "Number",
-          "The z-index. A positve value behaves like `bringForward` method. "
+          "cls ",
+          "String",
+          "Class name. For multiple classes just separate them with a space. "
         ]
       },
       "table-footer_145": {
@@ -969,20 +970,24 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_147": {
-        "txt": "heading_147"
+      "heading_146": {
+        "txt": "heading_146"
       },
-      "hr_148": {
+      "hr_147": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_148": {
+      "code_147": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add text control to the main layout\n       var text = \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus deleniti, eum nulla rerum dignissimos nihil, quidem facere repellendus necessitatibus incidunt non quasi doloremque delectus repellat pariatur dolorum. Omnis, vero.\"\n       ui.addText(this.main, text, \"Justify\", 0.8)\n\n       // Add divider control to the main layout\n       this.div = ui.addDivider(this.main, 0.8)\n\n       // Add more text control to the main layout\n       ui.addText(this.main, text, \"Justify\", 0.8)\n       \n       // Add an inset divider to the main layout\n       this.div = ui.addDivider(this.main, 0.8, \"inset\")\n\n       ui.addText(this.main, text, \"Justify\", 0.8)\n   }\n}",
-        "sample": "Basic"
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "js"
       },
-      "code_149": {
+      "code_148": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add text control to the main layout\n   text = \"Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatibus deleniti, eum nulla rerum dignissimos nihil, quidem facere repellendus necessitatibus incidunt non quasi doloremque delectus repellat pariatur dolorum. Omnis, vero.\"\n   ui.addText(main, text, \"Justify\", 0.8)\n\n   # Add divider control to the main layout\n   div = ui.addDivider(main, 0.8)\n\n   # Add more text control to the main layout\n   ui.addText(main, text, \"Justify\", 0.8)\n\n   # Add an inset divider to the main layout\n   div = ui.addDivider(main, 0.8, \"inset\")\n\n   ui.addText(main, text, \"Justify\", 0.8)",
-        "sample": "Python Basic"
+        "sample": "Basic",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]
@@ -1043,171 +1048,166 @@
       "es": ""
     },
     "subtitle_46": {
-      "en": "setOnContextMenu",
-      "de": "",
-      "es": ""
-    },
-    "text_48": {
-      "en": "Adds a callback function on right click.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_51": {
       "en": "animate",
       "de": "",
       "es": ""
     },
-    "text_53": {
+    "text_48": {
       "en": "Animate the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_57": {
+    "subtitle_52": {
       "en": "setSize",
       "de": "",
       "es": ""
     },
-    "text_59": {
+    "text_54": {
       "en": "Sets the size of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_64": {
+    "subtitle_59": {
       "en": "show",
       "de": "",
       "es": ""
     },
-    "text_66": {
+    "text_61": {
       "en": "Show the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_68": {
+    "subtitle_63": {
       "en": "hide",
       "de": "",
       "es": ""
     },
-    "text_70": {
+    "text_65": {
       "en": "Hide the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_72": {
+    "subtitle_67": {
       "en": "gone",
       "de": "",
       "es": ""
     },
-    "text_74": {
+    "text_69": {
       "en": "Destroy the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_76": {
+    "subtitle_71": {
       "en": "destroy",
       "de": "",
       "es": ""
     },
-    "text_78": {
+    "text_73": {
       "en": "Destroy the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_80": {
+    "subtitle_75": {
       "en": "setScale",
       "de": "",
       "es": ""
     },
-    "text_82": {
+    "text_77": {
       "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
       "de": "",
       "es": ""
     },
-    "subtitle_86": {
+    "subtitle_81": {
       "en": "getPosition",
       "de": "",
       "es": ""
     },
-    "text_88": {
+    "text_83": {
       "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
       "de": "",
       "es": ""
     },
-    "subtitle_92": {
+    "subtitle_87": {
       "en": "setMargins",
       "de": "",
       "es": ""
     },
-    "text_94": {
+    "text_89": {
       "en": "Sets the margin of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_101": {
+    "subtitle_96": {
       "en": "setPadding",
       "de": "",
       "es": ""
     },
-    "text_103": {
+    "text_98": {
       "en": "Sets the padding of the component's container.",
       "de": "",
       "es": ""
     },
-    "subtitle_110": {
+    "subtitle_105": {
       "en": "setPosition",
       "de": "",
       "es": ""
     },
-    "text_112": {
+    "text_107": {
       "en": "Sets the position of the component relative to its parent dimensions.",
       "de": "",
       "es": ""
     },
-    "subtitle_117": {
+    "subtitle_112": {
       "en": "setBorder",
       "de": "",
       "es": ""
     },
-    "text_119": {
+    "text_114": {
       "en": "Sets the border line for the component container.",
       "de": "",
       "es": ""
     },
-    "subtitle_127": {
+    "subtitle_122": {
       "en": "setCornerRadius",
       "de": "",
       "es": ""
     },
-    "text_129": {
+    "text_124": {
       "en": "Sets the corner radius of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_136": {
+    "subtitle_131": {
       "en": "bringForward",
       "de": "",
       "es": ""
     },
-    "text_137": {
-      "en": "@aname bringForward",
-      "de": "",
-      "es": ""
-    },
-    "text_138": {
+    "text_133": {
       "en": "Bring this component forward by a given z-index.",
       "de": "",
       "es": ""
     },
-    "subtitle_141": {
+    "subtitle_136": {
       "en": "sendBackward",
       "de": "",
       "es": ""
     },
-    "text_143": {
+    "text_138": {
       "en": "Bring this component backward by a given z-index.",
       "de": "",
       "es": ""
     },
-    "heading_147": {
+    "subtitle_141": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_143": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "heading_146": {
       "en": "Examples",
       "de": "",
       "es": ""

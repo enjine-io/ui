@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -46,6 +51,10 @@
       "title_0": {
         "txt": "title_0"
       },
+      "challenge_1": {
+        "txt": "challenge_1",
+        "css": "color:white;background-color:#2979ff;padding:10px 12px;font-size:90%;display:inline-block;"
+      },
       "text_2": {
         "txt": "text_2",
         "css": ""
@@ -53,8 +62,9 @@
       "code_4": {
         "txt": "class Main extends App\n{\n    onStart() {\n        //Create a main layout with objects vertically centered\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n        //Create some page passing the route path\n        this.page2 = ui.addLayout(\"my-page\", \"Linear\", \"VCenter,FillXY\")\n    }\n}",
         "css": "",
-        "sample": "Creating a new route",
-        "lang": "js"
+        "sample": "Creating a new route ",
+        "lang": "js",
+        "disabledActions": ",lang-toggle"
       },
       "text_6": {
         "txt": "text_6",
@@ -67,8 +77,9 @@
       "code_10": {
         "txt": "class Main extends App\n{\n    onStart() {\n        //Create a main layout with objects vertically centered\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0, 0, 2, \"rem\")\n\n        ui.addText(this.main, \"Main page\", \"h5\")\n\n        this.btn = ui.addButton(this.main, \"Show Login Page\", \"Link\")\n        this.btn.url = \"#my-page\"\n\n        //Create a new page route\n        this.page2 = ui.addLayout(\"my-page\", \"Linear\", \"VCenter,FillXY\")\n        this.page2.backColor = \"yellow\"\n        this.page2.setChildMargins(0, 0, 0, 2, \"rem\")\n\n        ui.addText(this.page2, \"Welcome to page 2\", \"h5\")\n\n        this.btn2 = ui.addButton(this.page2, \"Hide this page\")\n        this.btn2.setOnTouch( this.goBack )\n    }\n\n    goBack() {\n        ui.goBack()\n    }\n}",
         "css": "",
-        "sample": "Complete route example",
-        "lang": "js"
+        "sample": "Complete route example ",
+        "lang": "js",
+        "disabledActions": ",lang-toggle"
       },
       "text_12": {
         "txt": "text_12",
@@ -84,8 +95,9 @@
       "code_17": {
         "txt": "class Main extends App\n{\n    onStart() {\n        //Create a main layout with objects vertically centered\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0, 0, 2, \"rem\")\n\n        ui.addText(this.main, \"Main page\", \"h5\")\n\n        this.btn = ui.addButton(this.main, \"Show Login Page\", \"Link\")\n        this.btn.url = \"#my-page\"\n\n        //Create a new page route\n        this.page2 = ui.addLayout(\"my-page\", \"Linear\", \"VCenter,FillXY\")\n        this.page2.backColor = \"yellow\"\n        this.page2.setChildMargins(0, 0, 0, 2, \"rem\")\n        this.page2.animateIn = \"slideInUp\"\n        this.page2.animateOut = \"slideOutDown\"\n\n        ui.addText(this.page2, \"Welcome to page 2\", \"h5\")\n\n        this.btn2 = ui.addButton(this.page2, \"Hide this page\")\n        this.btn2.setOnTouch( this.goBack )\n    }\n\n    goBack() {\n        ui.goBack()\n    }\n}",
         "css": "",
-        "sample": "Adding entrance and exit animation",
-        "lang": "js"
+        "sample": "Adding entrance and exit animation ",
+        "lang": "js",
+        "disabledActions": ",lang-toggle"
       },
       "text_18": {
         "txt": "text_18",
@@ -102,7 +114,8 @@
         "txt": "ui.addRoute({\n    path: \"#my-page\",\n    config: {\n        restricted: true\n    }\n})",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
         "sample": "",
-        "lang": "js"
+        "lang": "js",
+        "disabledActions": ""
       },
       "text_24": {
         "txt": "text_24",
@@ -111,8 +124,9 @@
       "code_26": {
         "txt": "class Main extends App\n{\n    onStart() {\n\n        ui.addRoute({\n            path: \"#my-page\",\n            config: {\n                restricted: true\n            }\n        })\n\n        //Create a main layout with objects vertically centered\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0, 0, 2, \"rem\")\n\n        ui.addText(this.main, \"Main page\", \"h5\")\n\n        this.btn = ui.addButton(this.main, \"Show Login Page\", \"Link\")\n        this.btn.url = \"#my-page\"\n\n        //Create a new page route\n        this.page2 = ui.addLayout(\"my-page\", \"Linear\", \"VCenter,FillXY\")\n        this.page2.backColor = \"yellow\"\n        this.page2.setChildMargins(0, 0, 0, 2, \"rem\")\n        this.page2.animateIn = \"slideInUp\"\n        this.page2.animateOut = \"slideOutDown\"\n\n        ui.addText(this.page2, \"Welcome to page 2\", \"h5\")\n\n        this.btn2 = ui.addButton(this.page2, \"Hide this page\")\n        this.btn2.setOnTouch( this.goBack )\n    }\n\n    goBack() {\n        ui.goBack()\n    }\n}",
         "css": "",
-        "sample": "Creating restricted page route",
-        "lang": "js"
+        "sample": "Creating restricted page route ",
+        "lang": "js",
+        "disabledActions": ",lang-toggle"
       },
       "text_28": {
         "txt": "text_28",
@@ -132,11 +146,40 @@
       "code_35": {
         "txt": "class Main extends App\n{\n    onStart()\n    {\n        //Create a main layout with objects vertically centered\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0, 0, 2, \"rem\")\n\n        //Create a link button and sets its url to an unknown page route\n        this.btn = ui.addButton(this.main, \"Show Login Page\", \"Link\")\n        this.btn.url = \"#my-page\"\n\n        //Create a default route for Error 404 - Page not found\n        this.error404 = ui.addLayout(\"404\", \"Linear\", \"FillXY,VCenter\")\n\n        ui.addText(this.error404, \"Error 404 - Page not found\", \"h5\")\n\n        //Create a default route for Error 403 Forbidden: Access denied\n        this.error403 = ui.addLayout(\"403\", \"Linear\", \"FillXY,VCenter\")\n\n        ui.addText(this.error403, \"403 Forbidden: Access Denied\", \"h5\")\n    }\n}",
         "css": "",
-        "sample": "Default error routes",
-        "lang": "js"
+        "sample": "Default error routes ",
+        "lang": "js",
+        "disabledActions": ",lang-toggle"
       },
-      "text_37": {
-        "txt": "text_37",
+      "heading_37": {
+        "txt": "heading_37"
+      },
+      "text_38": {
+        "txt": "text_38",
+        "css": ""
+      },
+      "subtitle_40": {
+        "txt": "subtitle_40"
+      },
+      "code_41": {
+        "txt": "Call this to show a page route.\n ui.show(\"page2\")",
+        "css": "background-color: #212121; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "subtitle_43": {
+        "txt": "subtitle_43"
+      },
+      "code_44": {
+        "txt": "Call this to navigate to previous route.\n ui.goBack()",
+        "css": "background-color: #212121; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "subtitle_46": {
+        "txt": "subtitle_46"
+      },
+      "code_47": {
+        "txt": "Call this to navigate to next route if available in the pages stack tree.\n ui.goForward()",
+        "css": "background-color: #212121; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_49": {
+        "txt": "text_49",
         "css": ""
       }
     }
@@ -164,6 +207,11 @@
   "trans": {
     "title_0": {
       "en": "Routing",
+      "de": "",
+      "es": ""
+    },
+    "challenge_1": {
+      "en": "Routing was introduced starting from `Version 0.29`.\n",
       "de": "",
       "es": ""
     },
@@ -237,7 +285,32 @@
       "de": "",
       "es": ""
     },
-    "text_37": {
+    "heading_37": {
+      "en": "Routing methods",
+      "de": "",
+      "es": ""
+    },
+    "text_38": {
+      "en": "Here are some usefule `ui` methods for routing purposes.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_43": {
+      "en": "goBack",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_46": {
+      "en": "goForward",
+      "de": "",
+      "es": ""
+    },
+    "text_49": {
       "en": "Starting from version `0.29`, all dialogs, popups, pickers, and menus have their own routes, so they can now be closed when the browser's back button is clicked.",
       "de": "",
       "es": ""

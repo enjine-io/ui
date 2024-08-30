@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../sys/css/codemirror.min.css" />
+    <script src="../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../sys/js/javascript.min.js"></script>
+    <script src="../../../sys/js/xml.js"></script>
+    <script src="../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../sys/css/globals.css" rel="stylesheet">
@@ -96,6 +101,17 @@
     },
     {
       "card": {
+        "folder": "ui/Controls/TextField",
+        "text": "TextField",
+        "img": "textfield.png",
+        "alt": "TextField Card",
+        "isHome": false,
+        "desc": "A TextField in mobile UI design is an i...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
         "folder": "ui/Controls/List",
         "text": "List",
         "img": "list.png",
@@ -107,12 +123,34 @@
     },
     {
       "card": {
-        "folder": "ui/Controls/TextField",
-        "text": "TextField",
-        "img": "textfield.png",
-        "alt": "TextField Card",
+        "folder": "ui/Controls/CheckboxGroup",
+        "text": "CheckboxGroup",
+        "img": "checkboxgroup.png",
+        "alt": "CheckboxGroup Card",
         "isHome": false,
-        "desc": "A TextField in mobile UI design is an i...",
+        "desc": "A checkbox group in UI development is a...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/RadioGroup",
+        "text": "RadioGroup",
+        "img": "radiogroup.png",
+        "alt": "RadioGroup Card",
+        "isHome": false,
+        "desc": "Adds a radiogroup component into your app.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/SwitchGroup",
+        "text": "SwitchGroup",
+        "img": "switchgroup.png",
+        "alt": "SwitchGroup Card",
+        "isHome": false,
+        "desc": "In UI development, a SwitchGroup refers...",
         "cmp": true
       }
     },

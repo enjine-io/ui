@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -310,27 +315,39 @@
       },
       "code_41": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show Bottom Sheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n\n       this.bts = ui.addBottomSheet( \"My title\" );\n\n       // Create a button and add it to the bottomsheet layout.\n       var btn = ui.addButton(this.bts.layout, \"Button\", \"Secondary\");\n       btn.margins = [0, \"1rem\", 0, \"1rem\"];\n   }\n\n   btn_onTouch()\n   {\n       // show the bottomsheet\n       this.bts.show();\n   }\n}",
-        "sample": "Basic"
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_42": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show Bottom Sheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n\n       this.bts = ui.addBottomSheet(\"\", \"Notch\");\n\n       // Create a button and add it to the bottomsheet layout.\n       var btn = ui.addButton(this.bts.layout, \"Button\", \"Primary\");\n       btn.margins = [0, \"1rem\", 0, \"1rem\"];\n   }\n\n   btn_onTouch()\n   {\n       // show the bottomsheet\n       this.bts.show();\n   }\n}",
-        "sample": "Bottomsheet with notch"
+        "sample": "Bottomsheet with notch",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_43": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show Bottom Sheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n\n       // Create a bottom sheet with the given options.\n       // HideOnAction: Hide the bottomsheet on action click.\n       // CloseAction and MoreAction: Add a left close action and right more action.\n       // NoCancel: Prevent the bottomsheet from closing when the more action is click.\n       this.bts = ui.addBottomSheet(\"\", \"HideOnAction,CloseAction,MoreAction,NoCancel\");\n       this.bts.title = \"My details\"\n       this.bts.description = \"This is a long description.\"\n       this.bts.setOnAction( this.onAction );\n\n       // Create a button and add it to the bottomsheet layout.\n       var btn = ui.addButton(this.bts.layout, \"Button\", \"Primary\");\n       btn.margins = [0, \"1rem\", 0, \"1rem\"];\n   }\n\n   btn_onTouch()\n   {\n       // show the bottomsheet\n       this.bts.show();\n   }\n\n   onAction(name, icon) {\n       ui.showPopup( name );\n   }\n}",
-        "sample": "Complete example"
+        "sample": "Complete example",
+        "disabledActions": "",
+        "lang": "js"
       },
       "code_44": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n\n   global bts\n   \n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when clicked\n   btn = ui.addButton(main, \"Show Bottom Sheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\n   bts = ui.addBottomSheet(\"My title\")\n\n   # Create a button and add it to the bottomsheet layout.\n   btn = ui.addButton(bts.layout, \"Button\", \"Secondary\")\n   btn.margins = [0, \"1rem\", 0, \"1rem\"]\n\ndef btn_onTouch( ev ):\n   # Show the bottomsheet\n   bts.show()",
-        "sample": "Python Basic BottomSheet"
+        "sample": "Basic BottomSheet",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_45": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global bts\n   \n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when clicked\n   btn = ui.addButton(main, \"Show Bottom Sheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\n   bts = ui.addBottomSheet(\"\", \"Notch\")\n\n   # Create a button and add it to the bottomsheet layout.\n   btn = ui.addButton(bts.layout, \"Button\", \"Primary\")\n   btn.margins = [0, \"1rem\", 0, \"1rem\"]\n\ndef btn_onTouch( ev ):\n   # Show the bottomsheet\n   bts.show()",
-        "sample": "Python BottomSheet with notch"
+        "sample": "BottomSheet with notch",
+        "disabledActions": "run",
+        "lang": "py"
       },
       "code_46": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global bts\n   \n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when clicked\n   btn = ui.addButton(main, \"Show Bottom Sheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\n   # Create a bottom sheet with the given options:\n   # HideOnAction: Hide the bottomsheet on action click.\n   # CloseAction and MoreAction: Add a left close action and right more action.\n   # NoCancel: Prevent the bottomsheet from closing when the more action is clicked.\n   bts = ui.addBottomSheet(\"\", \"HideOnAction,CloseAction,MoreAction,NoCancel\")\n   bts.title = \"My details\"\n   bts.description = \"This is a long description.\"\n   bts.setOnAction(onAction)\n\n   # Create a button and add it to the bottomsheet layout.\n   btn = ui.addButton(bts.layout, \"Button\", \"Primary\")\n   btn.margins = [0, \"1rem\", 0, \"1rem\"]\n\ndef btn_onTouch( ev ):\n   # Show the bottomsheet\n   bts.show()\n\ndef onAction(name, icon):\n   ui.showPopup(name)",
-        "sample": "Python Complete example"
+        "sample": "Complete example",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]

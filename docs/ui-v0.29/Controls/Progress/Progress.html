@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -410,7 +415,7 @@
         "css": ""
       },
       "code_58": {
-        "txt": "setOnContextMenu( callback )",
+        "txt": "prg.animate(anim, duration)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_59": {
@@ -423,70 +428,37 @@
       },
       "table-row_59": {
         "content": [
-          "callback ",
-          "Function",
-          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
-        ]
-      },
-      "table-footer_59": {
-        "txt": ""
-      },
-      "hr_60": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
-      },
-      "subtitle_60": {
-        "txt": "subtitle_60"
-      },
-      "text_62": {
-        "txt": "text_62",
-        "css": ""
-      },
-      "code_63": {
-        "txt": "prg.animate(anim, duration)",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
-      },
-      "table-header_64": {
-        "content": [
-          "Parameters",
-          "Type",
-          "Description"
-        ],
-        "css": ""
-      },
-      "table-row_64": {
-        "content": [
           "anim ",
           "String",
           "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
         ]
       },
-      "table-row_65": {
+      "table-row_60": {
         "content": [
           "duration ",
           "Number",
           "The time in milliseconds. "
         ]
       },
-      "table-footer_65": {
+      "table-footer_60": {
         "txt": ""
       },
-      "hr_66": {
+      "hr_61": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_66": {
-        "txt": "subtitle_66"
+      "subtitle_61": {
+        "txt": "subtitle_61"
       },
-      "text_68": {
-        "txt": "text_68",
+      "text_63": {
+        "txt": "text_63",
         "css": ""
       },
-      "code_69": {
+      "code_64": {
         "txt": "prg.setSize(width, height, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_70": {
+      "table-header_65": {
         "content": [
           "Parameters",
           "Type",
@@ -494,106 +466,106 @@
         ],
         "css": ""
       },
-      "table-row_70": {
+      "table-row_65": {
         "content": [
           "width ",
           "Number",
           "Fraction of the parent width. [0-1] "
         ]
       },
-      "table-row_71": {
+      "table-row_66": {
         "content": [
           "height ",
           "Number",
           "Fraction of the parent height. [0-1] "
         ]
       },
-      "table-row_72": {
+      "table-row_67": {
         "content": [
           "mode ",
           "String",
           "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
         ]
       },
-      "table-footer_72": {
+      "table-footer_67": {
         "txt": ""
       },
-      "hr_73": {
+      "hr_68": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_73": {
-        "txt": "subtitle_73"
+      "subtitle_68": {
+        "txt": "subtitle_68"
       },
-      "text_75": {
-        "txt": "text_75",
+      "text_70": {
+        "txt": "text_70",
         "css": ""
       },
-      "code_76": {
+      "code_71": {
         "txt": "prg.show()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_77": {
+      "hr_72": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_77": {
-        "txt": "subtitle_77"
+      "subtitle_72": {
+        "txt": "subtitle_72"
       },
-      "text_79": {
-        "txt": "text_79",
+      "text_74": {
+        "txt": "text_74",
         "css": ""
       },
-      "code_80": {
+      "code_75": {
         "txt": "prg.hide()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_81": {
+      "hr_76": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_81": {
-        "txt": "subtitle_81"
+      "subtitle_76": {
+        "txt": "subtitle_76"
       },
-      "text_83": {
-        "txt": "text_83",
+      "text_78": {
+        "txt": "text_78",
         "css": ""
       },
-      "code_84": {
+      "code_79": {
         "txt": "prg.gone()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_85": {
+      "hr_80": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_85": {
-        "txt": "subtitle_85"
+      "subtitle_80": {
+        "txt": "subtitle_80"
       },
-      "text_87": {
-        "txt": "text_87",
+      "text_82": {
+        "txt": "text_82",
         "css": ""
       },
-      "code_88": {
+      "code_83": {
         "txt": "prg.destroy()",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "hr_89": {
+      "hr_84": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_89": {
-        "txt": "subtitle_89"
+      "subtitle_84": {
+        "txt": "subtitle_84"
       },
-      "text_91": {
-        "txt": "text_91",
+      "text_86": {
+        "txt": "text_86",
         "css": ""
       },
-      "code_92": {
+      "code_87": {
         "txt": "prg.setScale(x, y)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_93": {
+      "table-header_88": {
         "content": [
           "Parameters",
           "Type",
@@ -601,39 +573,39 @@
         ],
         "css": ""
       },
-      "table-row_93": {
+      "table-row_88": {
         "content": [
           "x ",
           "Number",
           "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
         ]
       },
-      "table-row_94": {
+      "table-row_89": {
         "content": [
           "y ",
           "Number",
           "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
         ]
       },
-      "table-footer_94": {
+      "table-footer_89": {
         "txt": ""
       },
-      "hr_95": {
+      "hr_90": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_95": {
-        "txt": "subtitle_95"
+      "subtitle_90": {
+        "txt": "subtitle_90"
       },
-      "text_97": {
-        "txt": "text_97",
+      "text_92": {
+        "txt": "text_92",
         "css": ""
       },
-      "code_98": {
+      "code_93": {
         "txt": "prg.getPosition( options )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_99": {
+      "table-header_94": {
         "content": [
           "Parameters",
           "Type",
@@ -641,35 +613,35 @@
         ],
         "css": ""
       },
-      "table-row_99": {
+      "table-row_94": {
         "content": [
           "options ",
           "String",
           "The mode of the measurements. Values can be `px` or `%` "
         ]
       },
-      "table-footer_99": {
+      "table-footer_94": {
         "txt": ""
       },
-      "text_100": {
+      "text_95": {
         "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
       },
-      "hr_101": {
+      "hr_96": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_101": {
-        "txt": "subtitle_101"
+      "subtitle_96": {
+        "txt": "subtitle_96"
       },
-      "text_103": {
-        "txt": "text_103",
+      "text_98": {
+        "txt": "text_98",
         "css": ""
       },
-      "code_104": {
+      "code_99": {
         "txt": "prg.setMargins( left, top, right, bottom, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_105": {
+      "table-header_100": {
         "content": [
           "Parameters",
           "Type",
@@ -677,60 +649,60 @@
         ],
         "css": ""
       },
-      "table-row_105": {
+      "table-row_100": {
         "content": [
           "[left] ",
           "Number",
           "Left margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_106": {
+      "table-row_101": {
         "content": [
           "[top] ",
           "Number",
           "Top margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_107": {
+      "table-row_102": {
         "content": [
           "[right] ",
           "Number",
           "Right margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_108": {
+      "table-row_103": {
         "content": [
           "[bottom] ",
           "Number",
           "Bottom margin. You can also pass string e.g. `12rem` "
         ]
       },
-      "table-row_109": {
+      "table-row_104": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
         ]
       },
-      "table-footer_109": {
+      "table-footer_104": {
         "txt": ""
       },
-      "hr_110": {
+      "hr_105": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_110": {
-        "txt": "subtitle_110"
+      "subtitle_105": {
+        "txt": "subtitle_105"
       },
-      "text_112": {
-        "txt": "text_112",
+      "text_107": {
+        "txt": "text_107",
         "css": ""
       },
-      "code_113": {
+      "code_108": {
         "txt": "prg.setPadding(left, top, right, bottom, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_114": {
+      "table-header_109": {
         "content": [
           "Parameters",
           "Type",
@@ -738,60 +710,60 @@
         ],
         "css": ""
       },
-      "table-row_114": {
+      "table-row_109": {
         "content": [
           "[left] ",
           "Number",
           "Fraction of the component width. "
         ]
       },
-      "table-row_115": {
+      "table-row_110": {
         "content": [
           "[top] ",
           "Number",
           "Fraction of the component height. [0-1] "
         ]
       },
-      "table-row_116": {
+      "table-row_111": {
         "content": [
           "[right] ",
           "Number",
           "Fraction of the component width. [0-1] "
         ]
       },
-      "table-row_117": {
+      "table-row_112": {
         "content": [
           "[bottom] ",
           "Number",
           "Fraction of the component height. [0-1] "
         ]
       },
-      "table-row_118": {
+      "table-row_113": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
         ]
       },
-      "table-footer_118": {
+      "table-footer_113": {
         "txt": ""
       },
-      "hr_119": {
+      "hr_114": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_119": {
-        "txt": "subtitle_119"
+      "subtitle_114": {
+        "txt": "subtitle_114"
       },
-      "text_121": {
-        "txt": "text_121",
+      "text_116": {
+        "txt": "text_116",
         "css": ""
       },
-      "code_122": {
+      "code_117": {
         "txt": "prg.setPosition( left, top, mode )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_123": {
+      "table-header_118": {
         "content": [
           "Parameters",
           "Type",
@@ -799,46 +771,46 @@
         ],
         "css": ""
       },
-      "table-row_123": {
+      "table-row_118": {
         "content": [
           "left ",
           "Number",
           "Fraction of the parent width. [0-1] "
         ]
       },
-      "table-row_124": {
+      "table-row_119": {
         "content": [
           "top ",
           "Number",
           "Fraction of the parent height. [0-1] "
         ]
       },
-      "table-row_125": {
+      "table-row_120": {
         "content": [
           "mode ",
           "String",
           "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
         ]
       },
-      "table-footer_125": {
+      "table-footer_120": {
         "txt": ""
       },
-      "hr_126": {
+      "hr_121": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_126": {
-        "txt": "subtitle_126"
+      "subtitle_121": {
+        "txt": "subtitle_121"
       },
-      "text_128": {
-        "txt": "text_128",
+      "text_123": {
+        "txt": "text_123",
         "css": ""
       },
-      "code_129": {
+      "code_124": {
         "txt": "prg.setBorder(left, top, right, bottom, clr, style)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_130": {
+      "table-header_125": {
         "content": [
           "Parameters",
           "Type",
@@ -846,67 +818,67 @@
         ],
         "css": ""
       },
-      "table-row_130": {
+      "table-row_125": {
         "content": [
           "[left] ",
           "Number",
           "Border-left thickness in pixels. "
         ]
       },
-      "table-row_131": {
+      "table-row_126": {
         "content": [
           "[top] ",
           "Number",
           "Border-top thickness in pixels. "
         ]
       },
-      "table-row_132": {
+      "table-row_127": {
         "content": [
           "[right] ",
           "Number",
           "Border-right thickness in pixels. "
         ]
       },
-      "table-row_133": {
+      "table-row_128": {
         "content": [
           "[bottom] ",
           "Number",
           "Border-bottom thickness in pixels. "
         ]
       },
-      "table-row_134": {
+      "table-row_129": {
         "content": [
           "[clr] ",
           "String",
           "Border color in hexadecimal format `#rrggbb`. "
         ]
       },
-      "table-row_135": {
+      "table-row_130": {
         "content": [
           "[style] ",
           "String",
           "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
         ]
       },
-      "table-footer_135": {
+      "table-footer_130": {
         "txt": ""
       },
-      "hr_136": {
+      "hr_131": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "subtitle_136": {
-        "txt": "subtitle_136"
+      "subtitle_131": {
+        "txt": "subtitle_131"
       },
-      "text_138": {
-        "txt": "text_138",
+      "text_133": {
+        "txt": "text_133",
         "css": ""
       },
-      "code_139": {
+      "code_134": {
         "txt": "prg.setCornerRadius(tl, tr, bl, br, mode)",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
-      "table-header_140": {
+      "table-header_135": {
         "content": [
           "Parameters",
           "Type",
@@ -914,39 +886,72 @@
         ],
         "css": ""
       },
-      "table-row_140": {
+      "table-row_135": {
         "content": [
           "[tl] ",
           "Number",
           "Top-Left border radius. "
         ]
       },
-      "table-row_141": {
+      "table-row_136": {
         "content": [
           "[tr] ",
           "Number",
           "Top-Right border radius. "
         ]
       },
-      "table-row_142": {
+      "table-row_137": {
         "content": [
           "[br] ",
           "Number",
           "Bottom-Right border radius. "
         ]
       },
-      "table-row_143": {
+      "table-row_138": {
         "content": [
           "[bl] ",
           "Number",
           "Bottom-Left border radius. "
         ]
       },
-      "table-row_144": {
+      "table-row_139": {
         "content": [
           "[mode] ",
           "String",
           "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_139": {
+        "txt": ""
+      },
+      "hr_140": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_140": {
+        "txt": "subtitle_140"
+      },
+      "text_142": {
+        "txt": "text_142",
+        "css": ""
+      },
+      "code_143": {
+        "txt": "prg.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_144": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_144": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
         ]
       },
       "table-footer_144": {
@@ -958,10 +963,6 @@
       },
       "subtitle_145": {
         "txt": "subtitle_145"
-      },
-      "text_146": {
-        "txt": "text_146",
-        "css": ""
       },
       "text_147": {
         "txt": "text_147",
@@ -983,7 +984,7 @@
         "content": [
           "zIndex ",
           "Number",
-          "The z-index. A negative value behaves like `sendBackward` method. "
+          "The z-index. A positve value behaves like \"bringForward\" method. "
         ]
       },
       "table-footer_149": {
@@ -1001,7 +1002,7 @@
         "css": ""
       },
       "code_153": {
-        "txt": "prg.bringForward( zIndex )",
+        "txt": "prg.addClass( \"my-button my-button-large\" )",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
       },
       "table-header_154": {
@@ -1014,9 +1015,9 @@
       },
       "table-row_154": {
         "content": [
-          "zIndex ",
-          "Number",
-          "The z-index. A positve value behaves like `bringForward` method. "
+          "cls ",
+          "String",
+          "Class name. For multiple classes just separate them with a space. "
         ]
       },
       "table-footer_154": {
@@ -1026,28 +1027,69 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_156": {
-        "txt": "heading_156"
+      "subtitle_155": {
+        "txt": "subtitle_155"
       },
-      "hr_157": {
+      "text_157": {
+        "txt": "text_157",
+        "css": ""
+      },
+      "code_158": {
+        "txt": "prg.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_159": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_159": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_159": {
+        "txt": ""
+      },
+      "hr_160": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_157": {
+      "heading_160": {
+        "txt": "heading_160"
+      },
+      "hr_161": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_161": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.childSpacing = \"Even\"\n\n       // Indeterminate Linear\n       this.prog1 = ui.addProgress(this.main, 40, \"linear\", 0.7)\n\n       // Determinate Linear\n       this.prog2 = ui.addProgress(this.main, null, \"Linear,Secondary,indeterminate\", 0.7)\n\n       // Determinate Circular\n       this.prog3 = ui.addProgress(this.main, 50, \"Circular\")\n\n       // Indeterminate Circular, enlarge and secondary\n       this.prog4 = ui.addProgress(this.main, null, \"Circular,Secondary,indeterminate\")\n       this.prog4.circleSize = 100\n   }\n}",
-        "sample": "Progress control implementation"
+        "sample": "Progress control implementation",
+        "disabledActions": "",
+        "lang": "js"
       },
-      "code_158": {
+      "code_162": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.childSpacing = \"Even\"\n\n       // Add an indeterminate linear progress control to the main layout\n       this.prog = ui.addProgress(this.main, 0, \"Linear\", 0.7)\n\n       // Add a button control to the main layout\n       this.btn = ui.addButton(this.main, \"Increment\")\n\n       // Add a callback handler when the button is touched\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Increment the value of the progress control by 10\n       if( this.prog.value < 100 )\n       {\n           this.prog.value += 10\n       }\n       else\n       {\n           ui.showPopup( \"Progress is complete!\" )\n       }\n   }\n}",
-        "sample": "Setting progress value"
+        "sample": "Setting progress value",
+        "disabledActions": "",
+        "lang": "js"
       },
-      "code_159": {
+      "code_163": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   #Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.childSpacing = \"Even\"\n\n   #Indeterminate Linear\n   prog1 = ui.addProgress(main, 40, \"linear\", 0.7)\n\n   #Determinate Linear\n   prog2 = ui.addProgress(main, None, \"Linear,Secondary,indeterminate\", 0.7)\n\n   #Determinate Circular\n   prog3 = ui.addProgress(main, 50, \"Circular\")\n\n   #Indeterminate Circular, enlarge and secondary\n   prog4 = ui.addProgress(main, None, \"Circular,Secondary,indeterminate\")\n   prog4.circleSize = 100",
-        "sample": "Python Progress control implementation"
+        "sample": "Progress control implementation",
+        "disabledActions": "run",
+        "lang": "py"
       },
-      "code_160": {
+      "code_164": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global prog\n   \n   #Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.childSpacing = \"Even\"\n\n   #Add an indeterminate linear progress control to the main layout\n   prog = ui.addProgress(main, 0, \"Linear\", 0.7)\n\n   #Add a button control to the main layout\n   btn = ui.addButton(main, \"Increment\")\n\n   #Add a callback handler when the button is touched\n   btn.setOnTouch( onTouch )\n\ndef onTouch( event ):\n   global prog\n\n   #Increment the value of the progress control by 10\n   if prog.value < 100:\n       prog.value += 10\n   else:\n       ui.showPopup( \"Progress is complete!\" )",
-        "sample": "Python Setting progress value"
+        "sample": "Setting progress value",
+        "disabledActions": "run",
+        "lang": "py"
       }
     }
   ]
@@ -1118,171 +1160,176 @@
       "es": ""
     },
     "subtitle_55": {
-      "en": "setOnContextMenu",
-      "de": "",
-      "es": ""
-    },
-    "text_57": {
-      "en": "Adds a callback function on right click.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_60": {
       "en": "animate",
       "de": "",
       "es": ""
     },
-    "text_62": {
+    "text_57": {
       "en": "Animate the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_66": {
+    "subtitle_61": {
       "en": "setSize",
       "de": "",
       "es": ""
     },
-    "text_68": {
+    "text_63": {
       "en": "Sets the size of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_73": {
+    "subtitle_68": {
       "en": "show",
       "de": "",
       "es": ""
     },
-    "text_75": {
+    "text_70": {
       "en": "Show the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_77": {
+    "subtitle_72": {
       "en": "hide",
       "de": "",
       "es": ""
     },
-    "text_79": {
+    "text_74": {
       "en": "Hide the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_81": {
+    "subtitle_76": {
       "en": "gone",
       "de": "",
       "es": ""
     },
-    "text_83": {
+    "text_78": {
       "en": "Destroy the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_85": {
+    "subtitle_80": {
       "en": "destroy",
       "de": "",
       "es": ""
     },
-    "text_87": {
+    "text_82": {
       "en": "Destroy the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_89": {
+    "subtitle_84": {
       "en": "setScale",
       "de": "",
       "es": ""
     },
-    "text_91": {
+    "text_86": {
       "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
       "de": "",
       "es": ""
     },
-    "subtitle_95": {
+    "subtitle_90": {
       "en": "getPosition",
       "de": "",
       "es": ""
     },
-    "text_97": {
+    "text_92": {
       "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
       "de": "",
       "es": ""
     },
-    "subtitle_101": {
+    "subtitle_96": {
       "en": "setMargins",
       "de": "",
       "es": ""
     },
-    "text_103": {
+    "text_98": {
       "en": "Sets the margin of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_110": {
+    "subtitle_105": {
       "en": "setPadding",
       "de": "",
       "es": ""
     },
-    "text_112": {
+    "text_107": {
       "en": "Sets the padding of the component's container.",
       "de": "",
       "es": ""
     },
-    "subtitle_119": {
+    "subtitle_114": {
       "en": "setPosition",
       "de": "",
       "es": ""
     },
-    "text_121": {
+    "text_116": {
       "en": "Sets the position of the component relative to its parent dimensions.",
       "de": "",
       "es": ""
     },
-    "subtitle_126": {
+    "subtitle_121": {
       "en": "setBorder",
       "de": "",
       "es": ""
     },
-    "text_128": {
+    "text_123": {
       "en": "Sets the border line for the component container.",
       "de": "",
       "es": ""
     },
-    "subtitle_136": {
+    "subtitle_131": {
       "en": "setCornerRadius",
       "de": "",
       "es": ""
     },
-    "text_138": {
+    "text_133": {
       "en": "Sets the corner radius of the component.",
       "de": "",
       "es": ""
     },
-    "subtitle_145": {
+    "subtitle_140": {
       "en": "bringForward",
       "de": "",
       "es": ""
     },
-    "text_146": {
-      "en": "@aname bringForward",
-      "de": "",
-      "es": ""
-    },
-    "text_147": {
+    "text_142": {
       "en": "Bring this component forward by a given z-index.",
       "de": "",
       "es": ""
     },
-    "subtitle_150": {
+    "subtitle_145": {
       "en": "sendBackward",
       "de": "",
       "es": ""
     },
-    "text_152": {
+    "text_147": {
       "en": "Bring this component backward by a given z-index.",
       "de": "",
       "es": ""
     },
-    "heading_156": {
+    "subtitle_150": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_152": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_155": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_157": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "heading_160": {
       "en": "Examples",
       "de": "",
       "es": ""

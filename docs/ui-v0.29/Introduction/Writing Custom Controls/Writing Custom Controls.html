@@ -12,18 +12,23 @@
     <!-- Bootstrap core CSS -->
     <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Code Mirror libs -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/lib/codemirror.min.js"></script>
-
-    <!-- Code mirror mode -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/javascript/javascript.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/css/css.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/mode/python/python.min.js"></script>
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
 
     <!-- Code Mirror close bracket addon -->
-    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.65.8/addon/edit/closebrackets.js"></script>
+    <script src="../../../../sys/js/closebrackets.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="../../../../sys/css/globals.css" rel="stylesheet">
@@ -57,25 +62,27 @@
         "txt": "text_4",
         "css": ""
       },
-      "code_6": {
-        "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create() {\n        // create your control here\n    }\n}",
-        "css": "",
-        "sample": "Class format",
-        "lang": "js"
-      },
-      "text_8": {
-        "txt": "text_8",
+      "text_6": {
+        "txt": "text_6",
         "css": ""
       },
-      "code_9": {
-        "txt": "super(parent, width, height, options, type)",
-        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
-        "sample": "",
-        "lang": ""
+      "code_8": {
+        "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create() {\n        // create your control here\n    }\n}",
+        "css": "",
+        "sample": "Video control class format ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
       "text_10": {
         "txt": "text_10",
         "css": ""
+      },
+      "code_11": {
+        "txt": "super(parent, width, height, options, type)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
+        "sample": "",
+        "lang": "",
+        "disabledActions": ""
       },
       "text_12": {
         "txt": "text_12",
@@ -85,116 +92,131 @@
         "txt": "text_14",
         "css": ""
       },
-      "heading_16": {
-        "txt": "heading_16"
-      },
-      "text_17": {
-        "txt": "text_17",
+      "text_16": {
+        "txt": "text_16",
         "css": ""
       },
-      "code_19": {
+      "heading_18": {
+        "txt": "heading_18"
+      },
+      "text_19": {
+        "txt": "text_19",
+        "css": ""
+      },
+      "code_21": {
         "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create() {\n        this._ctl = document.createElement( \"video\" )\n\n        //Make sure it will occupy the container's width and height\n        this._ctl.style.width = \"100%\"\n        this._ctl.style.height = \"100%\"\n\n        //Check if there is an \"autoplay\" option\n        if( this._options.includes(\"autoplay\") ) this._ctl.autoplay = true\n\n        //Check if video is loop\n        if( this._options.includes(\"loop\") ) this._ctl.loop = true\n\n        //Add the video element into the _div container\n        this._div.appendChild( this._ctl )\n    }\n}",
         "css": "",
-        "sample": "Creating actual control",
-        "lang": "js"
+        "sample": "Creating the video control ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
-      "text_21": {
-        "txt": "text_21",
+      "text_23": {
+        "txt": "text_23",
         "css": ""
       },
-      "subtitle_23": {
-        "txt": "subtitle_23"
+      "subtitle_25": {
+        "txt": "subtitle_25"
       },
-      "text_24": {
-        "txt": "text_24",
+      "text_26": {
+        "txt": "text_26",
         "css": ""
       },
-      "code_25": {
+      "code_27": {
         "txt": "set url( url ) {\n    this._ctl.src = url\n}\n\nget url() {\n    return this._ctl.src\n}\n\nset muted( muted ) {\n    this._ctl.muted = muted\n}\n\nget muted() {\n    return this._ctl.muted\n}",
         "css": "",
-        "sample": "Defining setter/getter properties",
-        "lang": "js"
+        "sample": "Defining setter/getter properties  ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
-      "subtitle_27": {
-        "txt": "subtitle_27"
+      "subtitle_29": {
+        "txt": "subtitle_29"
       },
-      "text_28": {
-        "txt": "text_28",
+      "text_30": {
+        "txt": "text_30",
         "css": ""
       },
-      "code_29": {
+      "code_31": {
         "txt": "play() {\n    this._ctl.play()\n}\n\nstop() {\n    this._ctl.pause()\n}\n\nsetBackColor( color ) {\n    this._ctl.style.backgroundColor = color\n}",
         "css": "",
-        "sample": "Adding methods",
-        "lang": "js"
+        "sample": "Adding methods  ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
-      "text_31": {
-        "txt": "text_31",
+      "text_33": {
+        "txt": "text_33",
         "css": ""
       },
-      "code_33": {
+      "code_35": {
         "txt": "const MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create()\n    {\n        this._ctl = document.createElement( \"video\" )\n\n        // Make sure it will occupy the container's width and height\n        this._ctl.style.width = \"100%\"\n        this._ctl.style.height = \"100%\"\n\n        // Check if there is an \"autoplay\" option\n        if( this._options.includes(\"autoplay\") ) this._ctl.autoplay = true\n\n        // Check if video is loop\n        if( this._options.includes(\"loop\") ) this._ctl.loop = true\n\n        // Add the video element into the _div container\n        this._div.appendChild( this._ctl )\n    }\n\n    // Properties\n    set url( url ) {\n        this._ctl.src = url\n    }\n\n    get url() {\n        return this._ctl.src\n    }\n\n    set muted( muted ) {\n        this._ctl.muted = muted\n    }\n\n    get muted() {\n        return this._ctl.muted\n    }\n\n    // Methods\n    play() {\n        this._ctl.play()\n    }\n\n    stop() {\n        this._ctl.pause()\n    }\n\n    setBackColor( color ) {\n        this._ctl.style.backgroundColor = color\n    }\n}",
         "css": "",
-        "sample": "Working code",
-        "lang": "js"
+        "sample": "Working code ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
-      "text_35": {
-        "txt": "text_35",
+      "text_37": {
+        "txt": "text_37",
         "css": ""
       },
-      "code_37": {
+      "code_39": {
         "txt": "ui.addMyVideo = function(parent, url, options, width, height)\n{\n    return new MyVideo(parent, url, options, width, height)\n}",
         "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:80%; margin: 6px 0px 24px 0px;",
         "sample": "",
-        "lang": ""
+        "lang": "js",
+        "disabledActions": ",copy,download,lang-toggle"
       },
-      "text_39": {
-        "txt": "text_39",
+      "text_41": {
+        "txt": "text_41",
         "css": ""
       },
-      "code_41": {
+      "code_43": {
         "txt": "ui.addMyVideo = function(parent, url, options, width, height)\n{\n    return new MyVideo(parent, url, options, width, height)\n}\n\nconst MyVideo = class extends ui.Control\n{\n    constructor(parent, url, options, width, height)\n    {\n        super(parent, width, height, options, \"MyVideo\")\n\n        this._create()\n    }\n\n    _create()\n    {\n        this._ctl = document.createElement( \"video\" )\n\n        // Make sure it will occupy the container's width and height\n        this._ctl.style.width = \"100%\"\n        this._ctl.style.height = \"100%\"\n\n        // Check if there is an \"autoplay\" option\n        if( this._options.includes(\"autoplay\") ) this._ctl.autoplay = true\n\n        // Check if video is loop\n        if( this._options.includes(\"loop\") ) this._ctl.loop = true\n\n        // Add the video element into the _div container\n        this._div.appendChild( this._ctl )\n    }\n\n    // Properties\n    set url( url ) {\n        this._ctl.src = url\n    }\n\n    get url() {\n        return this._ctl.src\n    }\n\n    set muted( muted ) {\n        this._ctl.muted = muted\n    }\n\n    get muted() {\n        return this._ctl.muted\n    }\n\n    // Methods\n    play() {\n        this._ctl.play()\n    }\n\n    stop() {\n        this._ctl.pause()\n    }\n\n    setBackColor( color ) {\n        this._ctl.style.backgroundColor = color\n    }\n}",
         "css": "",
-        "sample": "Complete code",
-        "lang": "js"
+        "sample": "Complete code  ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
-      "heading_43": {
-        "txt": "heading_43"
+      "heading_45": {
+        "txt": "heading_45"
       },
-      "text_44": {
-        "txt": "text_44",
+      "text_46": {
+        "txt": "text_46",
         "css": ""
       },
-      "code_46": {
-        "txt": "class Main extends App\n{\n    onStart() {\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0.01, 0, 0.01)\n\n        this.txt = ui.addText(this.main, \"Using custom control\", \"Center\", 0.9)\n\n        let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n        this.vid = ui.addMyVideo(this.main, src, \"autoplay\", 0.8, 0.5)\n\n        this.layBtm = ui.addLayout(this.main, \"Linear\", \"Horizontal,Center\", 1, 0.1)\n        this.layBtm.childSpacing = \"Even\"\n\n        this.play = ui.addButton(this.layBtm, \"Play\", \"\", 0.25)\n        this.play.setOnTouch( this.play )\n\n        this.stop = ui.addButton(this.layBtm, \"Pause\", \"\", 0.25)\n        this.stop.setOnTouch( this.stop )\n\n        this.muted = ui.addButton(this.layBtm, \"Mute\", \"Toggle\", 0.25)\n        this.muted.setOnTouch( this.mute )\n    }\n\n    play() { this.vid.play() }\n\n    stop() { this.vid.stop() }\n\n    mute( val ) { this.vid.muted = val }\n}",
+      "code_48": {
+        "txt": "// Load the custom ui control js file\nui.script(\"my-video.js\")\n\nclass Main extends App\n{\n    onStart() {\n        this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n        this.main.setChildMargins(0, 0.01, 0, 0.01)\n\n        this.txt = ui.addText(this.main, \"Using custom control\", \"Center\", 0.9)\n\n        let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n        this.vid = ui.addMyVideo(this.main, src, \"autoplay\", 0.8, 0.5)\n\n        this.layBtm = ui.addLayout(this.main, \"Linear\", \"Horizontal,Center\", 1, 0.1)\n        this.layBtm.childSpacing = \"Even\"\n\n        this.play = ui.addButton(this.layBtm, \"Play\", \"\", 0.25)\n        this.play.setOnTouch( this.play )\n\n        this.stop = ui.addButton(this.layBtm, \"Pause\", \"\", 0.25)\n        this.stop.setOnTouch( this.stop )\n\n        this.muted = ui.addButton(this.layBtm, \"Mute\", \"Toggle\", 0.25)\n        this.muted.setOnTouch( this.mute )\n    }\n\n    play() { this.vid.play() }\n\n    stop() { this.vid.stop() }\n\n    mute( val ) { this.vid.muted = val }\n}",
         "css": "",
-        "sample": "Using custom control",
-        "lang": "js"
+        "sample": "Using custom control  ",
+        "lang": "js",
+        "disabledActions": "run,copy,download,lang-toggle"
       },
-      "text_48": {
-        "txt": "text_48",
-        "css": ""
-      },
-      "subtitle_50": {
-        "txt": "subtitle_50"
+      "challenge_50": {
+        "txt": "challenge_50",
+        "css": "color:white;background-color:#2979ff;padding:10px 12px;font-size:90%;display:inline-block;"
       },
       "text_51": {
         "txt": "text_51",
         "css": ""
       },
-      "text_53": {
-        "txt": "text_53",
-        "css": ""
+      "subtitle_53": {
+        "txt": "subtitle_53"
       },
-      "subtitle_55": {
-        "txt": "subtitle_55"
+      "text_54": {
+        "txt": "text_54",
+        "css": ""
       },
       "text_56": {
         "txt": "text_56",
         "css": ""
       },
-      "text_58": {
-        "txt": "text_58",
+      "subtitle_58": {
+        "txt": "subtitle_58"
+      },
+      "text_59": {
+        "txt": "text_59",
+        "css": ""
+      },
+      "text_61": {
+        "txt": "text_61",
         "css": ""
       }
     }
@@ -240,117 +262,127 @@
       "de": "",
       "es": ""
     },
-    "text_8": {
-      "en": "The important line here is calling the `super()` method and pass the exact order of arguments as shown below:",
+    "text_6": {
+      "en": "Here's an example of creating a custom video control.",
       "de": "",
       "es": ""
     },
     "text_10": {
-      "en": "Where:\n`parent` : The parent layout where to add the control.\n`width` : Width of the control.\n`height` : Height of the control.\n`options` : Comma separated string options.\n`type` : Control type. Must be a string.",
+      "en": "The important line here is calling the `super()` method and pass the exact order of arguments as shown below:",
       "de": "",
       "es": ""
     },
     "text_12": {
-      "en": "This will create a `div` element which will be the container of your control that can be access through `_div` property. You can also access the `parent` in `_parent` property, `width` in `_width`, `height` in `_height` and `options` in `_options` which is now in lower case.",
+      "en": "Where:\n`parent` : The parent layout where to add the control.\n`width` : Width of the control.\n`height` : Height of the control.\n`options` : Comma separated string options.\n`type` : Control type. Must be a string.",
       "de": "",
       "es": ""
     },
     "text_14": {
+      "en": "This will create a `div` element which will be the container of your control that can be access through `_div` property. You can also access the `parent` in `_parent` property, `width` in `_width`, `height` in `_height` and `options` in `_options` which is now in lower case.",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
       "en": "The `_create` method is where you create and render your actual control. This method must be called once.",
       "de": "",
       "es": ""
     },
-    "heading_16": {
+    "heading_18": {
       "en": "Creating control",
       "de": "",
       "es": ""
     },
-    "text_17": {
+    "text_19": {
       "en": "Creating control is just creating elements through `document.createElement()` method. Let's take the example of creating a video control and make sure to assign it to `this._ctl`, which is a hidden property.",
       "de": "",
       "es": ""
     },
-    "text_21": {
+    "text_23": {
       "en": "Now you have a working video control.",
       "de": "",
       "es": ""
     },
-    "subtitle_23": {
+    "subtitle_25": {
       "en": "Adding properties",
       "de": "",
       "es": ""
     },
-    "text_24": {
+    "text_26": {
       "en": "To add properties use the `set` and `get` keywords in defining your method like this:",
       "de": "",
       "es": ""
     },
-    "subtitle_27": {
+    "subtitle_29": {
       "en": "Adding methods",
       "de": "",
       "es": ""
     },
-    "text_28": {
+    "text_30": {
       "en": "To add methods, simply define a function with name that conveys its purpose.",
       "de": "",
       "es": ""
     },
-    "text_31": {
+    "text_33": {
       "en": "Your code now looks like this",
       "de": "",
       "es": ""
     },
-    "text_35": {
+    "text_37": {
       "en": "Using `new MyVideo()` to call your control is fine, but it's much easier to remember `ui.addMyVideo()`. At the top of your class, paste the following:",
       "de": "",
       "es": ""
     },
-    "text_39": {
+    "text_41": {
       "en": "Complete code now looks like this",
       "de": "",
       "es": ""
     },
-    "heading_43": {
+    "heading_45": {
       "en": "Usage",
       "de": "",
       "es": ""
     },
-    "text_44": {
+    "text_46": {
       "en": "You can then use your custom control in your app like this",
       "de": "",
       "es": ""
     },
-    "text_48": {
-      "en": "Below are the properties and methods inherited from the `ui.Control` class. You can also override them.",
-      "de": "",
-      "es": ""
-    },
-    "subtitle_50": {
-      "en": "Properties",
+    "challenge_50": {
+      "en": "You can also publish your custom ui control as hybrid plugin if your in DroidScript.\n",
       "de": "",
       "es": ""
     },
     "text_51": {
+      "en": "Below are the properties and methods inherited from the `ui.Control` class. You can also override them.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_53": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_54": {
       "en": "Inherited setter/getter properties",
       "de": "",
       "es": ""
     },
-    "text_53": {
+    "text_56": {
       "en": "`width`, `height`, `opacity`, `textSize`, `textColor`, `rotation`, `fontFile`, `visibility`, `type`, `absWidth`, `absHeight`, `backColor`, `backImage`, `isVisible`, `top`, `left`, `absTop`, `absLeft`, `parent`, `position`, `margins`, `padding`, `options`, `disabled`, `border`, `borderColor`, `borderStyle`, `cornerRadius`, `el`, `elStyle`",
       "de": "",
       "es": ""
     },
-    "subtitle_55": {
+    "subtitle_58": {
       "en": "Methods",
       "de": "",
       "es": ""
     },
-    "text_56": {
+    "text_59": {
       "en": "Inherited methods",
       "de": "",
       "es": ""
     },
-    "text_58": {
+    "text_61": {
       "en": "`setOnContextMenu`, `animate`, `setSize`, `show`, `hide`, `gone`, `destroy`, `setScale`, `getPosition`, `setMargins`, `setPadding`, `setPosition`, `setBorder`, `setCornerRadius`, `bringForward`, `sendBackward`",
       "de": "",
       "es": ""
