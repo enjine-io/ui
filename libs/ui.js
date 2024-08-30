@@ -100,6 +100,7 @@ function UI()
     this._rgb = {primary: [33, 150, 243], secondary: [245, 0, 87], defaultBlack: [0,0,0], defaultWhite: [255,255,255]}
     this._routes = [] // {path: "#main", view: mainLay, config: {restricted: false}, detroyable: true}
     this._routesObj = []
+    this._layer = 0
 
     // local functions
     function router( event ) {
