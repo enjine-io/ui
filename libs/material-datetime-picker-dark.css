@@ -28,6 +28,7 @@
     will-change: opacity;
     transition: 200ms ease-in-out opacity, 200ms ease-in-out top; }
     .c-datepicker--open {
+        z-index: 1300;
       opacity: 1;
       top: 50%; }
   

@@ -100,7 +100,6 @@ function UI()
     this._rgb = {primary: [33, 150, 243], secondary: [245, 0, 87], defaultBlack: [0,0,0], defaultWhite: [255,255,255]}
     this._routes = [] // {path: "#main", view: mainLay, config: {restricted: false}, detroyable: true}
     this._routesObj = []
-    this._layer = 0
 
     // local functions
     function router( event ) {
@@ -128,14 +127,9 @@ function UI()
             }
         }
         else {
-            currRoute = self._routes[self._routes.length - 1]
+            if( self._routes.length ) currRoute = self._routes[self._routes.length - 1]
             
-            if(currRoute && currRoute.path == newHash) {
-                if(currRoute.view._route && currRoute.view.visibility == "hide") {
-                    currRoute.view.show()
-                }
-                return
-            }
+            if(currRoute && currRoute.path == newHash) return
 
             // push route
             newRoute = self._routesObj.find(m => m.path == newHash)
@@ -159,6 +153,9 @@ function UI()
         if(route && route.view) {
             if(route.view.type == "Layout") {
                 route.view.show()
+                if(path !== "#main") {
+                    route.view.el.style.zIndex = 1150
+                }
                 self._routes.push( route )
             }
         }
@@ -186,6 +183,9 @@ function UI()
     }
     this._getRoute = function() { return window.location.hash || "#main"; }
     this._appendRoute = function( path ) { window.location.hash = path; }
+    this._removeRoute = function( path ) {
+        self._routes = self._routes.filter(m => m.path !== path)
+    }
 
     this._onLoadMain = function() {
         var hash = self._getRoute()
@@ -290,7 +290,9 @@ function UI()
 
     this.show = function(route = "") {
         if( !route.startsWith("#") ) route = "#"+route
-        this._appendRoute( route )
+        setTimeout(() => {
+            this._appendRoute( route )
+        }, 50)
     }
 
     //--- INITIALISATION ---

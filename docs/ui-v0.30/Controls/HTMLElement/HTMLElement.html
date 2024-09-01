@@ -1013,13 +1013,13 @@
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
       "code_152": {
-        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       \n       // Add a button element into your layout\n       this.btn = ui.addHTMLElement(this.main, \"button\", \"\", 0.1, 0.1)\n       this.btn.innerText = \"My Button\"\n       this.btn.onclick = this.onTouch\n       \n       // this.btn.addEventListener(\"click\", this.onTouch)\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touched the button\" )\n   }\n}",
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       \n       // Add a button element into your layout\n       this.btn = ui.addHTMLElement(this.main, \"button\", \"\", 0.1, 0.1)\n       this.btn.innerText = \"My Button\"\n       this.btn.onclick = this.onTouch\n       \n       // this.btn.addEventListener(\"click\", this.onTouch)\n   }\n\n   onTouch( e )\n   {\n       e.stopPropagation()\n       ui.showPopup( \"You touched the button\" )\n   }\n}",
         "sample": "Button element",
         "disabledActions": "",
         "lang": "js"
       },
       "code_153": {
-        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   \n   #Add a button element into your layout\n   btn = ui.addHTMLElement(main, \"button\", \"\", 0.1, 0.1)\n   btn.innerText = \"My Button\"\n   btn.onclick = onTouch\n   \n   #this.btn.addEventListener(\"click\", this.onTouch)\ndef onTouch():\n   ui.showPopup( \"You touched the button\" )",
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   \n   #Add a button element into your layout\n   btn = ui.addHTMLElement(main, \"button\", \"\", 0.1, 0.1)\n   btn.innerText = \"My Button\"\n   btn.onclick = onTouch\n   \n   #this.btn.addEventListener(\"click\", this.onTouch)\ndef onTouch( e ):\n   e.stopPropagation()\n   ui.showPopup( \"You touched the button\" )",
         "sample": "Button element",
         "disabledActions": "run",
         "lang": "py"
