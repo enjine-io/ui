@@ -13,7 +13,7 @@ let _running = false,
     activeLink, activeNavLink, navList, navIsClick = false,
     // demoUrl = "http://localhost:3000";
     // demoUrl = "https://enjine-jdocs-3a9b16e42b4b.herokuapp.com";
-    demoUrl = "https://jumar.droidscript.cloud/api/",
+    demoUrl = "https://ide.droidscript.cloud/ui/",
     isLangJS = true
 
 function createComponent(key, val) {
