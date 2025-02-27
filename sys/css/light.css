@@ -87,7 +87,6 @@ table, tr, td { background-color: #fafafa; }
 
 /* 774px */
 @media (min-width: 775px) {
-    .tagline { color: #fff; }
     .theme-btn { color: #e0e0e0; }
     .theme-btn:active, .theme-btn:hover { color: #fff; }
     .btn-dropdown, .dropdown-item { background-color: #343a40; color: #e0e0e0; }

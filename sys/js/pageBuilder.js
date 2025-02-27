@@ -7,14 +7,21 @@ let _running = false,
     isSmallDevice = false,
     componentList = [],
     pageJson = {},
-    sampStr = "", methodsList = [],
-    leftPanelNavs = {}, samples = {},
-    docTitle = "", hasTitle = false, toggleLeftNav = false,
-    activeLink, activeNavLink, navList, navIsClick = false,
+    sampStr = "",
+    methodsList = [],
+    leftPanelNavs = {},
+    samples = {},
+    docTitle = "", 
+    hasTitle = false, 
+    toggleLeftNav = false,
+    activeLink,
+    activeNavLink,
+    navList, 
+    navIsClick = false,
     // demoUrl = "http://localhost:3000";
-    // demoUrl = "https://enjine-jdocs-3a9b16e42b4b.herokuapp.com";
-    demoUrl = "https://ide.droidscript.cloud/ui/",
-    isLangJS = true
+    demoUrl = "https://ide.droidscript.cloud/ui",
+    isLangJS = true,
+    isDSWiFiIDE = false
 
 function createComponent(key, val) {
     var str = "";
@@ -354,28 +361,22 @@ function buildMainPage(home, onLoad) {
 
             htmlStr +=`
                         <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}" style="${(layouts.tutorial.header.titleStyle || "")}">${T(layouts.tutorial.header.title)}</h1>
-            `;
-
-            htmlStr += `
-                        <p class="lead tagline" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "")}">${ T(layouts.tutorial.header.subtitle || "") }</p>
                     </div>
                 </section>
+                <h5 class="lead tagline" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "")}">${ T(layouts.tutorial.header.subtitle || "") }</h5>
             `;
 
             if(layouts.tutorial.search !== false) {
                 htmlStr += `
-                    <div class="container search-container">
-                        <div class="container-fluid">
-                            <div class="search-box-div">
-                                <h4 class="card-subtitle mb-3"><strong>Search</strong></h4>
-                                <input type="text" class="form-control" placeholder="Enter keyword" onkeyup="onComponentSearch(this, '${home}')">
-                                <small id="results-help" class="form-text text-muted mt-2" style="display:none;"></small>
-                            </div>
+                    <div class="search-container">
+                        <div class="search-box-div">
+                            <input type="text" class="form-control" placeholder="Search something..." onkeyup="onComponentSearch(this, '${home}')">
+                            <small id="results-help" class="form-text text-muted mt-2" style="display:none;"></small>
                         </div>
                     </div>
                 `;
             }
-            else htmlStr += `<hr class="hair-line">`;
+            // else htmlStr += `<hr class="hair-line">`;
 
             htmlStr += `<div class="container">`;
 
@@ -400,19 +401,18 @@ function buildMainPage(home, onLoad) {
             for (let i = 0; i < array.length; i++)
             {
                 element = array[i]
+                console.log( element )
                 _x = element.card.isHome
                 _cmp = element.card.cmp
 
                 links.push( './?id='+element.card.folder+'&page=0&home='+_x+'&cmp='+_cmp )
                 if( renderAsList === true ) {
                     htmlStr += `
-                                <a href="./${(element.card.folder.split("/").pop())}/${(element.card.folder.split("/").pop())}.html?id=${element.card.folder}&page=0&home=${element.card.isHome}&cmp=${element.card.cmp}&p=${ptf}" class="list-group-item list-group-item-action">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1 card-title">${ T(element.card.text) }</h5>
-                                    </div>
+                                <a href="./${(element.card.folder.split("/").pop())}/${(element.card.folder.split("/").pop())}.html?id=${element.card.folder}&page=0&home=${element.card.isHome}&cmp=${element.card.cmp}&p=${ptf}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-1 card-title">${ T(element.card.text) }</h5>
+                                    ${element.card.contentCount ? ("<span class=\"badge badge-secondary badge-pill\">"+element.card.contentCount+"</span>") : ""}
                                 </a>
                     `;
-                    // ${element.card.desc ? "<p class=\"mb-1\">"+T(element.card.desc)+"</p>" : ""}
                 } else {
                     htmlStr += `
                                 <div class="col-md-4 col-lg-3 col-sm-6">
@@ -1063,14 +1063,13 @@ function showMobileOutput( show ) {
 
 function runSampleCode(id, value) {
 
-    if(isDSExt === true) return runDSSample(id, value);
+    if(isDSWiFiIDE == true) return runDSSample(id, value)
 
     showMobileOutput( true );
     showDemoLoader( true );
 
     const jdocsId = getDeviceJDocsID();
-    // console.log( jdocsId );
-
+    
     const iframe = document.getElementById("demo-frame");
 
     const dataToSend = {
@@ -1096,9 +1095,12 @@ function runSampleCode(id, value) {
 }
 
 function runDSSample(id, value) {
-    if( ext ) {
-        ext.Execute("app", value || _CodeMirrorInstances[id].getValue());
-        ShowPopup( "App is running on your phone!" );
+    if( isDSWiFiIDE ) {
+        let code = value || _CodeMirrorInstances[id].getValue()
+        if( !isLangJS ) code = "python:"+code
+        const xmlHttp = new XMLHttpRequest()
+        xmlHttp.open("get", "/ide?cmd=execute&mode=app&code="+encodeURIComponent(btoa(code)), true)
+        xmlHttp.send()
     }
 }
 
@@ -1207,6 +1209,11 @@ function toggleLanguage( val ) {
         }
         else if(el.classList.contains("lang-py") && !isLangJS) {
             el.style.display = "block"
+            // disable all run buttons if not on DS wifi IDE
+            if( !isDSWiFiIDE ) {
+                const runBtns = el.querySelectorAll(".run-code-btn")
+                runBtns.forEach(m => m.setAttribute("disabled", true))
+            }
         }
         else el.style.display = "none"
     })

@@ -46,7 +46,19 @@ function _margins(el, obj, left, top, right, bottom, mode="") {
 }
 
 // Create a new ResizeObserver
-const _res_obs_ = new ResizeObserver( () => { glob._abs_lay.map( l => { if( l ) l._resize(); }); });
+// const _res_obs_ = new ResizeObserver( () => { glob._abs_lay.map( l => { if( l ) l._resize(); }); });
+const _res_obs_ = new ResizeObserver(() => {
+    try {
+      glob._abs_lay.forEach(l => {
+        if (l) {
+          // Ensure _resize doesn't cause layout changes in observed elements
+          requestAnimationFrame(() => l._resize())
+        }
+      })
+    } catch (error) {
+      console.error('Error in ResizeObserver callback:', error)
+    }
+})
 
 function _devType() {
     const userAgent = navigator.userAgent;
@@ -100,6 +112,8 @@ function UI()
     this._rgb = {primary: [33, 150, 243], secondary: [245, 0, 87], defaultBlack: [0,0,0], defaultWhite: [255,255,255]}
     this._routes = [] // {path: "#main", view: mainLay, config: {restricted: false}, detroyable: true}
     this._routesObj = []
+    this._observedEls = new Set() // <-- observe absolute elements to update dimensions
+    this._page_rendering = false
 
     // local functions
     function router( event ) {
@@ -118,6 +132,8 @@ function UI()
 
             if(currRoute.view.type == "Dropdown") currRoute.view._onClose()
             else currRoute.view.hide()
+
+            newRoute = self._routes[self._routes.length-1]
             
             // destroyable routes. examples are controls that starts with "show"
             // such as "showActionSheet", "showColorPicker"
@@ -131,20 +147,34 @@ function UI()
             
             if(currRoute && currRoute.path == newHash) return
 
-            // push route
             newRoute = self._routesObj.find(m => m.path == newHash)
 
             if( !newRoute ) return
 
             self._routes.push( newRoute )
 
-            newRoute.view.show()
+            if(newRoute.path == "#main") {
+                if(currRoute && currRoute.path) newRoute.view.show()
+            }
+            else newRoute.view.show()
+            
+            if(newRoute.view.type == "Layout") {
+                newRoute.view._div.style.zIndex = 1150 + self._routes.length
+            }
             
             // remove same route previously added
             o = self._routes.findIndex(m => m.path == newHash)
             if(o >= 0 && o != (self._routes.length-1)) {
                 self._routes.splice(o, 1)
             }
+        }
+
+        if(newRoute.view.type == "Layout") {
+            self._routes.forEach((m, i) => {
+                if(m.view.type == "Layout" && i < self._routes.length-1) {
+                    m.view._div.style.zIndex = 1150 + i
+                }
+            })
         }
     }
     
@@ -197,11 +227,25 @@ function UI()
             }
             else console.log("403 Forbidden: Access Denied")
         }
-        else showRoute( hash )
+        else if(hash !== "#main") showRoute( hash )
+
+        // handle absolute layout resize observer
+        // self._observeAbsLay()
+    }
+
+    this._observeAbsLay = function() {
+        if( self._page_rendering ) return
+        glob._abs_lay.forEach(m => {
+            if (!self._observedEls.has(m._div)) {
+                _res_obs_.observe(m._div)
+                self._observedEls.add(m._div)
+            }
+        })
     }
 
     //--- VISIBLE PROPERTIES ---
-    this.version = 0.28
+    this.version = 0.30
+    this.pages = [] // <--- use in Layout Extension
     this.theme = {dark:false, primary: "", secondary: ""}
     // this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
     this.libs = window._hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : window._cdn ? "https://cdn.jsdelivr.net/gh/enjine-io/ui@main/libs" : "libs"
@@ -251,11 +295,13 @@ function UI()
         document.getElementById("root").oncontextmenu = this._onctx.bind(this)
     }
 
-    this.script = function( file )
+    this.script = function(file, callback)
     {
-        var scr = document.createElement("script")
-        scr.setAttribute("src", file)
-        document.getElementsByTagName("head")[0].append(scr)
+        var script = document.createElement("script")
+        script.type = 'text/javascript'
+        script.setAttribute("src", file)
+        script.onload = callback
+        document.head.appendChild(script)
     }
 
     this.css = function( file ) {
@@ -295,6 +341,27 @@ function UI()
         }, 50)
     }
 
+    this.setOptions = function(options = "")
+    {
+        options = options.toLowerCase()
+        if( options.includes("nozoom") ) {
+            let meta = document.querySelector('meta[name="viewport"]')
+            let content = meta.getAttribute("content")
+            if( !content.includes("user-scalable") )
+                meta.setAttribute("content", content+", user-scalable=no")
+        }
+    }
+
+    this.removeOptions = function(options = "")
+    {
+        options = options.toLowerCase()
+        if( options.includes("nozoom") ) {
+            let meta = document.querySelector('meta[name="viewport"]')
+            let content = meta.getAttribute("content").split(",").filter(m => !m.includes("user-scalable=no"))
+            meta.setAttribute("content", content.join(", "))
+        }
+    }
+
     //--- INITIALISATION ---
 
     if( platform.ios )
@@ -309,8 +376,17 @@ function UI()
         }
     }
 
+    // default settings
+    if( _hybrid ) this.setOptions("nozoom")
+
     window.addEventListener('hashchange', router)
 }
+
+Object.defineProperty(UI.prototype, 'eventSource', {
+    get: function() {
+        return event?.target?.closest('.ui-control')?._parent;
+    }
+})
 
 //Single instance of UI object.
 ui = new UI()

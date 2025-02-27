@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Pickers",
+  "homeLink": "ui/Pickers",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "ui.showColorPicker(onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "code_7": {
+        "txt": "ui.showColorPicker(value, onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_8": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_8": {
+        "content": [
+          "[value] ",
+          "String",
+          "A hexadecimal default value for the color picker. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "onSelect ",
+          "Function",
+          "The callback function to be called when onselect event is fired. This will pass  `value <i class=\"arg-def\">String</i>` Color in hexadecimal format `#rrggbb` or `#aarrggbb` if `Alpha` option is passed."
+        ]
+      },
+      "table-footer_9": {
+        "txt": ""
+      },
+      "text_10": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : ColorPicker</span>"
+      },
+      "hr_11": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_11": {
+        "txt": "heading_11"
+      },
+      "text_12": {
+        "txt": "text_12",
+        "css": ""
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "hr_15": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_15": {
+        "txt": "heading_15"
+      },
+      "hr_16": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_16": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Popup\", \"Primary\")\n\n       // Add callback handler for `onTouch` event\n       this.btn.setOnTouch( this.showColorPicker )\n   }\n\n   showColorPicker()\n   {\n       // Show color picker dialog\n       ui.showColorPicker( this.onSelect )\n   }\n\n   onSelect( clr )\n   {\n       ui.showPopup( clr )\n   }\n}",
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_17": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Popup\", \"Primary\")\n\n       // Add callback handler for `onTouch` event\n       this.btn.setOnTouch( this.showColorPicker )\n   }\n\n   showColorPicker()\n   {\n       // Show color picker dialog with default color\n       ui.showColorPicker(\"#009688\", this.onSelect)\n   }\n\n   onSelect( clr )\n   {\n       ui.showPopup( clr )\n   }\n}",
+        "sample": "Default value",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_18": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Add a button to the main layout\n   btn = ui.addButton(main, \"Show Popup\", \"Primary\")\n\n   #Add callback handler for onTouch event\n   btn.setOnTouch( showColorPicker )\n\ndef showColorPicker( ev ):\n   #Show color picker dialog\n   ui.showColorPicker( onSelect )\n\ndef onSelect( clr ):\n   ui.showPopup( clr )",
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_19": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Add a button to the main layout\n   btn = ui.addButton(main, \"Show Popup\", \"Primary\")\n\n   #Add callback handler for onTouch event\n   btn.setOnTouch( showColorPicker )\n\ndef showColorPicker( ev ):\n   #Show color picker dialog\n   ui.showColorPicker(\"#009688\", onSelect)\n\ndef onSelect( clr ):\n   ui.showPopup( clr )",
+        "sample": "Default value",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " ColorPicker",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Shows a color picker.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "Customize a color or choose from the presets of color carefully selected from Material Design Color Pallette. Show a color picker using the `showColorPicker` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_11": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_12": {
+      "en": "Here are the setter and getter properties available for ColorPicker Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available methods of the ColorPicker dialog.",
+      "de": "",
+      "es": ""
+    },
+    "heading_15": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Pickers/ColorPicker';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

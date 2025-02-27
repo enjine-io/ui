@@ -1,0 +1,1675 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "txt = ui.addText(parent, text, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The layout control where to add the text control "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "text ",
+          "String",
+          "The text to be displayed on the text control "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nVariants: `H1`, `H2`, `H3`, `H4`, `H5`, `H6`, `body1`, `body2`, `overline`, `subtitle1`, `subtitle2`, `button`, `caption`\\nLines: `Singleline`, `Multiline`\\nAlignment: `Left`, `Center`, `Right`, `Justify`\\nTheme Color: `Primary`, `Secondary`, `TextPrimary`, `TextSecondary`, `Error`\\nFormat: `Html`, `Icon`, `Italize`, `Monospace`, `Bold`, `Underline`\\nUtils: `Touchable`, `Link`, `NewTab` "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Text</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "table-header_15": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_16": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the text."
+        ]
+      },
+      "table-row_17": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the text variants. See `options` param above for available values."
+        ]
+      },
+      "table-row_18": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the text `Primary` or `Secondary`. You can also pass hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_19": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the text color in hexadecimal format."
+        ]
+      },
+      "table-row_20": {
+        "content": [
+          "ellipsize ",
+          "String",
+          "Sets or returns the ellipsis use when the text is truncated. Values can be `Ellipsis` `End` or `Start`"
+        ]
+      },
+      "table-row_21": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the fontsize for the text. You can also pass values such as `1.2em`."
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "textStyle ",
+          "String",
+          "Sets or returns the style of the text. Values can be `italic` or `normal`."
+        ]
+      },
+      "table-row_23": {
+        "content": [
+          "alignment ",
+          "String",
+          "Sets or returns the horizontal alignment of the text. Values can be `Left` `Center` `Right` or `Justify`."
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "verticalAlignment ",
+          "String",
+          "Sets or returns the vertical alignment of the text. Values can be `Top` `Center` or `Bottom`."
+        ]
+      },
+      "table-row_25": {
+        "content": [
+          "italic ",
+          "Boolean",
+          "Sets or returns whether the text is `italized` or not."
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "bold ",
+          "Boolean",
+          "Sets or returns whether the text is `bold` or not."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "underline ",
+          "Boolean",
+          "Sets or returns whether the text is `underlined` or not."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "url ",
+          "String",
+          "Sets or returns the url if the text is a link."
+        ]
+      },
+      "hr_29": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_29": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_30": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_35": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_36": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_38": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_39": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_41": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_45": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_46": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_47": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_48": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_49": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_50": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_51": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_52": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_53": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_54": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_55": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_56": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_57": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ]
+      },
+      "table-footer_58": {
+        "txt": ""
+      },
+      "heading_59": {
+        "txt": "heading_59"
+      },
+      "text_60": {
+        "txt": "text_60",
+        "css": ""
+      },
+      "hr_61": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_61": {
+        "txt": "subtitle_61"
+      },
+      "text_63": {
+        "txt": "text_63",
+        "css": ""
+      },
+      "code_64": {
+        "txt": "txt.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_65": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_65": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_66": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_66": {
+        "txt": ""
+      },
+      "hr_67": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_67": {
+        "txt": "subtitle_67"
+      },
+      "text_69": {
+        "txt": "text_69",
+        "css": ""
+      },
+      "code_70": {
+        "txt": "txt.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_71": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_71": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_72": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_73": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_73": {
+        "txt": ""
+      },
+      "hr_74": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_74": {
+        "txt": "subtitle_74"
+      },
+      "text_76": {
+        "txt": "text_76",
+        "css": ""
+      },
+      "code_77": {
+        "txt": "txt.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_78": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_78": {
+        "txt": "subtitle_78"
+      },
+      "text_80": {
+        "txt": "text_80",
+        "css": ""
+      },
+      "code_81": {
+        "txt": "txt.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_82": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_82": {
+        "txt": "subtitle_82"
+      },
+      "text_84": {
+        "txt": "text_84",
+        "css": ""
+      },
+      "code_85": {
+        "txt": "txt.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_86": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_86": {
+        "txt": "subtitle_86"
+      },
+      "text_88": {
+        "txt": "text_88",
+        "css": ""
+      },
+      "code_89": {
+        "txt": "txt.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_90": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_90": {
+        "txt": "subtitle_90"
+      },
+      "text_92": {
+        "txt": "text_92",
+        "css": ""
+      },
+      "code_93": {
+        "txt": "txt.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_94": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_94": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_95": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_95": {
+        "txt": ""
+      },
+      "hr_96": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_96": {
+        "txt": "subtitle_96"
+      },
+      "text_98": {
+        "txt": "text_98",
+        "css": ""
+      },
+      "code_99": {
+        "txt": "txt.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_100": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_100": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_100": {
+        "txt": ""
+      },
+      "text_101": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_102": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_102": {
+        "txt": "subtitle_102"
+      },
+      "text_104": {
+        "txt": "text_104",
+        "css": ""
+      },
+      "code_105": {
+        "txt": "txt.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_106": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_106": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_107": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_108": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_109": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_110": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_110": {
+        "txt": ""
+      },
+      "hr_111": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_111": {
+        "txt": "subtitle_111"
+      },
+      "text_113": {
+        "txt": "text_113",
+        "css": ""
+      },
+      "code_114": {
+        "txt": "txt.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_115": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_115": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_116": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_117": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_118": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_119": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_119": {
+        "txt": ""
+      },
+      "hr_120": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_120": {
+        "txt": "subtitle_120"
+      },
+      "text_122": {
+        "txt": "text_122",
+        "css": ""
+      },
+      "code_123": {
+        "txt": "txt.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_124": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_124": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_125": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_126": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_126": {
+        "txt": ""
+      },
+      "hr_127": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_127": {
+        "txt": "subtitle_127"
+      },
+      "text_129": {
+        "txt": "text_129",
+        "css": ""
+      },
+      "code_130": {
+        "txt": "txt.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_136": {
+        "txt": ""
+      },
+      "hr_137": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_137": {
+        "txt": "subtitle_137"
+      },
+      "text_139": {
+        "txt": "text_139",
+        "css": ""
+      },
+      "code_140": {
+        "txt": "txt.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_141": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_141": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_142": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_143": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_144": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_145": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_145": {
+        "txt": ""
+      },
+      "hr_146": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_146": {
+        "txt": "subtitle_146"
+      },
+      "text_148": {
+        "txt": "text_148",
+        "css": ""
+      },
+      "code_149": {
+        "txt": "txt.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_150": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_150": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_150": {
+        "txt": ""
+      },
+      "hr_151": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_151": {
+        "txt": "subtitle_151"
+      },
+      "text_153": {
+        "txt": "text_153",
+        "css": ""
+      },
+      "code_154": {
+        "txt": "txt.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_155": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_155": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_155": {
+        "txt": ""
+      },
+      "hr_156": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_156": {
+        "txt": "subtitle_156"
+      },
+      "text_158": {
+        "txt": "text_158",
+        "css": ""
+      },
+      "code_159": {
+        "txt": "txt.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_160": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_160": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_160": {
+        "txt": ""
+      },
+      "hr_161": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_161": {
+        "txt": "subtitle_161"
+      },
+      "text_163": {
+        "txt": "text_163",
+        "css": ""
+      },
+      "code_164": {
+        "txt": "txt.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_165": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_165": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_165": {
+        "txt": ""
+      },
+      "hr_166": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_166": {
+        "txt": "subtitle_166"
+      },
+      "text_167": {
+        "txt": "text_167",
+        "css": ""
+      },
+      "code_168": {
+        "txt": "txt.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_169": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_169": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_169": {
+        "txt": ""
+      },
+      "hr_170": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_170": {
+        "txt": "subtitle_170"
+      },
+      "text_171": {
+        "txt": "text_171",
+        "css": ""
+      },
+      "code_172": {
+        "txt": "txt.setOnLongTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_173": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_173": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_173": {
+        "txt": ""
+      },
+      "hr_174": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_174": {
+        "txt": "subtitle_174"
+      },
+      "text_175": {
+        "txt": "text_175",
+        "css": ""
+      },
+      "code_176": {
+        "txt": "txt.setHtml( html )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_177": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_177": {
+        "content": [
+          "html ",
+          "String",
+          "An html string "
+        ]
+      },
+      "table-footer_177": {
+        "txt": ""
+      },
+      "tip_178": {
+        "txt": "tip_178",
+        "css": ""
+      },
+      "hr_179": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_179": {
+        "txt": "subtitle_179"
+      },
+      "text_180": {
+        "txt": "text_180",
+        "css": ""
+      },
+      "code_181": {
+        "txt": "txt.getHtml()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_182": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_183": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_183": {
+        "txt": "subtitle_183"
+      },
+      "text_184": {
+        "txt": "text_184",
+        "css": ""
+      },
+      "code_185": {
+        "txt": "txt.setTextShadow( radius, dx, dy, color )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_186": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_186": {
+        "content": [
+          "radius ",
+          "Number",
+          "The radius in pixels "
+        ]
+      },
+      "table-row_187": {
+        "content": [
+          "dx ",
+          "Number",
+          "X-offset of the shadow "
+        ]
+      },
+      "table-row_188": {
+        "content": [
+          "dy ",
+          "Number",
+          "Y-offset of the shadow "
+        ]
+      },
+      "table-row_189": {
+        "content": [
+          "color ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb` "
+        ]
+      },
+      "table-footer_189": {
+        "txt": ""
+      },
+      "hr_190": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_190": {
+        "txt": "heading_190"
+      },
+      "hr_191": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_191": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var t = \"This is the sample text to be displayed.\"\n\n       // Add a text control to the main layout\n       this.txt = ui.addText(this.main, t)\n\n       // You can also add a callback handler when the text control is touch\n       this.txt.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touched the text!\" )\n   }\n}",
+        "sample": "Basic text control",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_192": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n       // Heading ranges from H1 to H6\n\n       this.h1 = ui.addText( this.main, \"Heading 1\", \"H1\" )\n\n       this.h2 = ui.addText( this.main, \"Heading 2\", \"H2\" )\n\n       this.h3 = ui.addText( this.main, \"Heading 3\", \"H3\" )\n\n       this.h4 = ui.addText( this.main, \"Heading 4\", \"H4\" )\n\n       this.h5 = ui.addText( this.main, \"Heading 5\", \"H5\" )\n\n       this.h6 = ui.addText( this.main, \"Heading 6\", \"H6\" )\n   }\n}",
+        "sample": "Heading variants",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_193": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n       this.text = ui.addText( this.main, t, \"body1\" )\n\n       this.text = ui.addText( this.main, t, \"body2\" )\n\n       this.text = ui.addText( this.main, t, \"subtitle1\" )\n\n       this.text = ui.addText( this.main, t, \"subtitle2\" )\n\n       this.text = ui.addText( this.main, t, \"overline\" )\n\n       this.text = ui.addText( this.main, t, \"button\" )\n\n       this.text = ui.addText( this.main, t, \"caption\" )\n   }\n}",
+        "sample": "Other variants",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_194": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.05)\n\n       var t = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"\n           \n       // Default is left\n       this.txt1 = ui.addText( this.main, t, \"body1,Left\", 0.9 )\n       this.txt1.backColor = \"#e0e0e0\"\n\n       // Center and color primary\n       this.txt2 = ui.addText( this.main, t, \"body1,Center,Primary\", 0.9 )\n       this.txt2.backColor = \"#e0e0e0\"\n\n       // Right and color secondary\n       this.txt3 = ui.addText( this.main, t, \"body1,Right,Secondary\", 0.9)\n       this.txt3.backColor = \"#e0e0e0\"\n\n       // Bottom, Center with a textSecondary color\n       this.txt4 = ui.addText( this.main, t, \"body1,Center,Bottom,TextSecondary\", 0.9, 0.1)\n       this.txt4.backColor = \"#e0e0e0\"\n   }\n}",
+        "sample": "Alignments and colors",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_195": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0.05)\n       \n       // Add a settings icon\n       this.txt1 = ui.addText(this.main, \"settings\", \"Icon\")\n       this.txt1.setOnTouch( this.onTouch )\n\n       // Add a camera icon\n       ui.addText(this.main, \"add_a_photo\", \"Icon,TextSecondary\")\n\n       // Add a heart icon\n       ui.addText(this.main, \"favorite\", \"Icon,Secondary\")\n\n       // Add an android icon\n       ui.addText(this.main, \"android\", \"Icon,Primary\")\n   }\n\n   onTouch()\n   {\n       ui.showPopup( \"You touch the icon!\" )\n   }\n}",
+        "sample": "Icons",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_196": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a full screen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       \n       // Html formatted string\n       var t = 'This text is formatted as html. <h3 style=\"color:green;\">This is a heading with color.</h3>'\n       t += 'You can also add <i>italize text</i> as well as <span style=\"background-color:yellow;\">text with styles</span>.'\n\n       // Add text control to the main layout by passing `Html` option\n       this.txt = ui.addText(this.main, t, \"html\")\n   }\n}",
+        "sample": "Html formatted text",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_197": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   t = \"This is the sample text to be displayed.\"\n\n   #  Add a text control to the main layout\n   txt = ui.addText(main, t)\n\n   #  You can also add a callback handler when the text control is touch\n   txt.setOnTouch( onTouch )\n\ndef onTouch():\n   ui.showPopup( \"You touched the text!\" )",
+        "sample": "Basic text control",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_198": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Heading ranges from H1 to H6\n   h1 = ui.addText(main, \"Heading\", \"H1\")\n   h2 = ui.addText(main, \"Heading 2\", \"H2\")\n   h3 = ui.addText(main, \"Heading 3\", \"H3\")\n   h4 = ui.addText(main, \"Heading 4\", \"H4\")\n   h5 = ui.addText(main, \"Heading 5\", \"H5\")\n   h6 = ui.addText(main, \"Heading 6\", \"H6\")",
+        "sample": "Heading variants",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_199": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout.\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n\n   t = \"Lorem ipsum dolor sit amet, consectetur\"\n\n   ui.addText(main, t, \"body1\")\n   ui.addText(main, t, \"body2\")\n   ui.addText(main, t, \"subtitle1\")\n   ui.addText(main, t, \"subtitle2\")\n   ui.addText(main, t, \"overline\")\n   ui.addText(main, t, \"button\")\n   ui.addText(main, t, \"caption\")",
+        "sample": "Other variants",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_200": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   ui.setTheme(\"light\")\n   #  Create a full screen layout.\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n   t = \"Lorem ipsum dolor sit amet, consectetur adipiscing elit\"\n       \n   #  Default is left\n   txt1 = ui.addText(main, t, \"body1,Left\", 0.9)\n\n   #  Center and color primary\n   txt2 = ui.addText(main, t, \"body1,Center,Primary\", 0.9)\n\n   #  Right and color secondary\n   txt3 = ui.addText(main, t, \"body1,Right,Secondary\", 0.9)\n\n   #  Bottom, Center with a textSecondary color\n   txt4 = ui.addText(main, t, \"body1,Center,Bottom,TextSecondary\", 0.9, 0.1)",
+        "sample": "Alignments and colors",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_201": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0, 0.05)\n   \n   #  Add a settings icon\n   txt1 = ui.addText(main, \"settings\", \"Icon\")\n   txt1.setOnTouch( onTouch )\n\n   #  Add a camera icon\n   ui.addText(main, \"add_a_photo\", \"Icon,TextSecondary\")\n\n   #  Add a heart icon\n   ui.addText(main, \"favorite\", \"Icon,Secondary\")\n\n   #  Add an android icon\n   ui.addText(main, \"android\", \"Icon,Primary\")\n\ndef onTouch( event ):\n   ui.showPopup( \"You touch the icon!\" )",
+        "sample": "Icons",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_202": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   #  Create a full screen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   \n   #  Html formatted string\n   t = 'This text is formatted as html. <h3 style=\"color:green;\">This is a heading with color.</h3>'\n   t += 'You can also add <i>italize text</i> as well as <span style=\"background-color:yellow;\">text with styles</span>.'\n\n   #  Add text control to the main layout by passing `Html` option\n   txt = ui.addText(main, t, \"html\")",
+        "sample": "Html formatted text",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Text",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "In mobile UI design, it refers to the style, arrangement, and appearance of text.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "It emphasizes clear and legible fonts, consistent hierarchy, and appropriate spacing. Following these guidelines enhances readability and visual appeal. Add a text control into your app using the `addText` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available setter and getter properties for the Text Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_59": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_60": {
+      "en": "Here are the methods available for Text Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_61": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_69": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_74": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_78": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_80": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_82": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_86": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_88": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_90": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_92": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_96": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_98": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_102": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_104": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_111": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_113": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_120": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_122": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_127": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_137": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_146": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_148": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_151": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_153": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_156": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_158": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_161": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_166": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_167": {
+      "en": "Adds an event handler when the text component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_170": {
+      "en": "setOnLongTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_171": {
+      "en": "Adds a callback handler for a long touch event. The touch timer is about 500 milliseconds.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_174": {
+      "en": "setHtml",
+      "de": "",
+      "es": ""
+    },
+    "text_175": {
+      "en": "Sets an html on the text control.",
+      "de": "",
+      "es": ""
+    },
+    "tip_178": {
+      "en": " Options should include an `html` option.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_179": {
+      "en": "getHtml",
+      "de": "",
+      "es": ""
+    },
+    "text_180": {
+      "en": "Returns the html text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_183": {
+      "en": "setTextShadow",
+      "de": "",
+      "es": ""
+    },
+    "text_184": {
+      "en": "Sets a shadow on the text in a text control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_190": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/Text';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

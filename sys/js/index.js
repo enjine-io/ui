@@ -1,9 +1,8 @@
 /****************************************
 * Written for SoftCogs Ltd
 * Copyright (C) SoftCogs Ltd. 2018
-* Update 2023 (By hamacjumar)
+* Updated 2023 (By hamacjumar)
 */
-
 
 function initializeCodes() {
     let codes = document.getElementsByTagName("CODE"),
@@ -76,19 +75,6 @@ var isHome = params.get("home");
 var cmp = params.get("cmp");
 const ptf = params.get("p") || "web";
 
-// detect if page is loaded in the WIFI IDE
-let isDSExt = false;
-
-// check for the platform
-if(ptf == "ide") isDSExt = true;
-
-// add the extension file if viewed in ds wifi ide
-if( isDSExt ) {
-    const src = document.createElement("script");
-    src.setAttribute("src", "/.edit/extension.js");
-    document.getElementsByTagName("head")[0].append(src);
-}
-
 if(typeof LAYOUTDATA.index == "object") {
     if( !cmp ) cmp = "false";
     if( !isHome ) isHome = "true";
@@ -102,14 +88,10 @@ if ( tutorial && isHome == "false" ) buildTutorial(tutorial, onTutorialLoaded, p
 else buildMainPage(tutorial, onPageLoaded), document.getElementById("body").style.display = "block";
 
 function onTutorialLoaded() {
-
-    console.log( "Tutorial is loaded! ");
-
     const runBtns = document.querySelectorAll(".run-code-btn");
     for(let i=0; i<runBtns.length; i++) {
         let type = runBtns[i].getAttribute("code-type")
         type = "hybrid"
-        // if(isDSExt && (type == "ds" || type == "hybrid")) runBtns[i].classList.remove("display-none");
         if(ptf == "web" && type == "hybrid") runBtns[i].classList.remove("display-none");
     }
 }

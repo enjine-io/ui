@@ -89,9 +89,12 @@ a, a:active {
     font-size: 3rem;
 }
 
-.jumbotron .lead {
+.tagline.lead {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 4rem;
     font-size: 1.5rem;
-    margin-top: 1.4rem;
 }
 
 
@@ -427,12 +430,22 @@ pre {
 }
 
 .search-container {
-    margin: 2rem 0rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Take up full width */
+    padding: 50px 0; /* Add some padding for spacing */
 }
 
-.search-container .search-box-div {
-    margin-left: 2rem;
+.search-container input {
     width: 20rem;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none; 
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hair-line {
@@ -477,7 +490,7 @@ pre {
         flex-direction: column;
     }
     .main-page-header .jumbotron-heading { display: none; }
-    .main-page-header .lead { margin-top: 0rem; font-size: 1.1rem; }
+    .tagline.lead { font-size: 1.1rem; }
     .hair-line { display: block; }
     .goback-btn { display: none !important; }
     .right-controls:not(.navbar .right-controls), #main-page .theme-btn { display: none; }

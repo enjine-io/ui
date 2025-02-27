@@ -1,0 +1,1661 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "sld = ui.addSlider(parent, value, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The layout where to add the Slider Component. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "value ",
+          "Number",
+          "The initial value of the Slider. Value must be between `0-100`, the default min and max values. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nTheme Color: `Primary`, `Secondary`\\nOrientation: `Horizontal`, `Vertical`\\nTrack: `Normal`, `Inverted`, `False` "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Slider</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "table-header_15": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_16": {
+        "content": [
+          "minValue ",
+          "Number",
+          "Sets or returns the minimum value."
+        ]
+      },
+      "table-row_17": {
+        "content": [
+          "maxValue ",
+          "Number",
+          "Sets or returns the maximum value."
+        ]
+      },
+      "table-row_18": {
+        "content": [
+          "track ",
+          "String",
+          "Sets or returns the track properties of the Slider Component. Values can be `Normal` `False` or `Inverted`"
+        ]
+      },
+      "table-row_19": {
+        "content": [
+          "step ",
+          "Number",
+          "Sets or returns the Sider Component steps."
+        ]
+      },
+      "table-row_20": {
+        "content": [
+          "orientation ",
+          "String",
+          "Sets or returns the orientation of the Slider Component. Values can be `Vertical` or `Horizontal`"
+        ]
+      },
+      "table-row_21": {
+        "content": [
+          "value ",
+          "Number",
+          "Sets or returns the value of the Slider Component."
+        ]
+      },
+      "table-row_22": {
+        "content": [
+          "marks ",
+          "Boolean",
+          "Sets or returns the marks on the Slider Component. The marks will be base on the `step` property. To add a custom labels in each mark, pass an array with an object element with properties `label<String>` and `value<Number>`. See marks array example below."
+        ]
+      },
+      "table-row_23": {
+        "content": [
+          "valueLabelDisplay ",
+          "String",
+          "Sets or returns the value label display type. Values can be `on` `auto` `off`. If `on`, value label will always be shown. If `auto`, value label will be shown when sliding is active. If `false`, value label display will not be shown."
+        ]
+      },
+      "table-row_24": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the Slider. Values can be `Primary` or `Secondary`"
+        ]
+      },
+      "hr_25": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_25": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_26": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ]
+      },
+      "table-row_27": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ]
+      },
+      "table-row_28": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ]
+      },
+      "table-row_29": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ]
+      },
+      "table-row_30": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ]
+      },
+      "table-row_31": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ]
+      },
+      "table-row_32": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ]
+      },
+      "table-row_33": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ]
+      },
+      "table-row_34": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ]
+      },
+      "table-row_35": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ]
+      },
+      "table-row_36": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ]
+      },
+      "table-row_37": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ]
+      },
+      "table-row_38": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ]
+      },
+      "table-row_39": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ]
+      },
+      "table-row_40": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ]
+      },
+      "table-row_41": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ]
+      },
+      "table-row_42": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ]
+      },
+      "table-row_43": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ]
+      },
+      "table-row_45": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ]
+      },
+      "table-row_46": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ]
+      },
+      "table-row_47": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ]
+      },
+      "table-row_48": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ]
+      },
+      "table-row_49": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ]
+      },
+      "table-row_50": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ]
+      },
+      "table-row_51": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ]
+      },
+      "table-row_52": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ]
+      },
+      "table-row_53": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ]
+      },
+      "table-footer_54": {
+        "txt": ""
+      },
+      "heading_55": {
+        "txt": "heading_55"
+      },
+      "text_56": {
+        "txt": "text_56",
+        "css": ""
+      },
+      "hr_57": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_57": {
+        "txt": "subtitle_57"
+      },
+      "text_59": {
+        "txt": "text_59",
+        "css": ""
+      },
+      "code_60": {
+        "txt": "sld.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_61": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_61": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_62": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_62": {
+        "txt": ""
+      },
+      "hr_63": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_63": {
+        "txt": "subtitle_63"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "sld.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_67": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_67": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_68": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_69": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_69": {
+        "txt": ""
+      },
+      "hr_70": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_70": {
+        "txt": "subtitle_70"
+      },
+      "text_72": {
+        "txt": "text_72",
+        "css": ""
+      },
+      "code_73": {
+        "txt": "sld.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_74": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_74": {
+        "txt": "subtitle_74"
+      },
+      "text_76": {
+        "txt": "text_76",
+        "css": ""
+      },
+      "code_77": {
+        "txt": "sld.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_78": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_78": {
+        "txt": "subtitle_78"
+      },
+      "text_80": {
+        "txt": "text_80",
+        "css": ""
+      },
+      "code_81": {
+        "txt": "sld.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_82": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_82": {
+        "txt": "subtitle_82"
+      },
+      "text_84": {
+        "txt": "text_84",
+        "css": ""
+      },
+      "code_85": {
+        "txt": "sld.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_86": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_86": {
+        "txt": "subtitle_86"
+      },
+      "text_88": {
+        "txt": "text_88",
+        "css": ""
+      },
+      "code_89": {
+        "txt": "sld.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_90": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_90": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_91": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_91": {
+        "txt": ""
+      },
+      "hr_92": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_92": {
+        "txt": "subtitle_92"
+      },
+      "text_94": {
+        "txt": "text_94",
+        "css": ""
+      },
+      "code_95": {
+        "txt": "sld.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_96": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_96": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_96": {
+        "txt": ""
+      },
+      "text_97": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_98": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_98": {
+        "txt": "subtitle_98"
+      },
+      "text_100": {
+        "txt": "text_100",
+        "css": ""
+      },
+      "code_101": {
+        "txt": "sld.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_102": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_102": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_103": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_104": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_105": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_106": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_106": {
+        "txt": ""
+      },
+      "hr_107": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_107": {
+        "txt": "subtitle_107"
+      },
+      "text_109": {
+        "txt": "text_109",
+        "css": ""
+      },
+      "code_110": {
+        "txt": "sld.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_111": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_111": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_112": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_113": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_114": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_115": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_115": {
+        "txt": ""
+      },
+      "hr_116": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_116": {
+        "txt": "subtitle_116"
+      },
+      "text_118": {
+        "txt": "text_118",
+        "css": ""
+      },
+      "code_119": {
+        "txt": "sld.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_120": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_120": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_121": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_122": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_122": {
+        "txt": ""
+      },
+      "hr_123": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_123": {
+        "txt": "subtitle_123"
+      },
+      "text_125": {
+        "txt": "text_125",
+        "css": ""
+      },
+      "code_126": {
+        "txt": "sld.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_127": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_127": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_128": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_129": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_130": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_131": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_132": {
+        "txt": ""
+      },
+      "hr_133": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_133": {
+        "txt": "subtitle_133"
+      },
+      "text_135": {
+        "txt": "text_135",
+        "css": ""
+      },
+      "code_136": {
+        "txt": "sld.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_137": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_137": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_138": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_139": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_140": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_141": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_141": {
+        "txt": ""
+      },
+      "hr_142": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_142": {
+        "txt": "subtitle_142"
+      },
+      "text_144": {
+        "txt": "text_144",
+        "css": ""
+      },
+      "code_145": {
+        "txt": "sld.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_146": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_146": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_146": {
+        "txt": ""
+      },
+      "hr_147": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_147": {
+        "txt": "subtitle_147"
+      },
+      "text_149": {
+        "txt": "text_149",
+        "css": ""
+      },
+      "code_150": {
+        "txt": "sld.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_151": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_151": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_151": {
+        "txt": ""
+      },
+      "hr_152": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_152": {
+        "txt": "subtitle_152"
+      },
+      "text_154": {
+        "txt": "text_154",
+        "css": ""
+      },
+      "code_155": {
+        "txt": "sld.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_156": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_156": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_156": {
+        "txt": ""
+      },
+      "hr_157": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_157": {
+        "txt": "subtitle_157"
+      },
+      "text_159": {
+        "txt": "text_159",
+        "css": ""
+      },
+      "code_160": {
+        "txt": "sld.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_161": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_161": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_161": {
+        "txt": ""
+      },
+      "hr_162": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_162": {
+        "txt": "subtitle_162"
+      },
+      "text_163": {
+        "txt": "text_163",
+        "css": ""
+      },
+      "code_164": {
+        "txt": "sld.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_165": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_165": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_165": {
+        "txt": ""
+      },
+      "hr_166": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_166": {
+        "txt": "subtitle_166"
+      },
+      "text_167": {
+        "txt": "text_167",
+        "css": ""
+      },
+      "code_168": {
+        "txt": "sld.setOnChange( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_169": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_169": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback to be called. This will pass  `value <i class=\"arg-def\">Number</i>` The value of the Slider component."
+        ]
+      },
+      "table-footer_169": {
+        "txt": ""
+      },
+      "hr_170": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_170": {
+        "txt": "subtitle_170"
+      },
+      "text_171": {
+        "txt": "text_171",
+        "css": ""
+      },
+      "code_172": {
+        "txt": "sld.setOnSelect( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_173": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_173": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. This will pass  `value <i class=\"arg-def\">Number</i>` The value of the Slider component."
+        ]
+      },
+      "table-footer_173": {
+        "txt": ""
+      },
+      "hr_174": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_174": {
+        "txt": "subtitle_174"
+      },
+      "text_175": {
+        "txt": "text_175",
+        "css": ""
+      },
+      "code_176": {
+        "txt": "sld.setRange( min, max )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_177": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_177": {
+        "content": [
+          "[min] ",
+          "Number",
+          "Minimum value of the slider. "
+        ]
+      },
+      "table-row_178": {
+        "content": [
+          "[max] ",
+          "Number",
+          "Maximum value of the slider. "
+        ]
+      },
+      "table-footer_178": {
+        "txt": ""
+      },
+      "hr_179": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_179": {
+        "txt": "subtitle_179"
+      },
+      "text_180": {
+        "txt": "text_180",
+        "css": ""
+      },
+      "code_181": {
+        "txt": "sld.setMarks( val )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_182": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_182": {
+        "content": [
+          "val ",
+          "Boolean",
+          "The marks on the Slider Component. "
+        ]
+      },
+      "table-footer_182": {
+        "txt": ""
+      },
+      "text_183": {
+        "txt": "text_183",
+        "css": ""
+      },
+      "text_184": {
+        "txt": "text_184",
+        "css": ""
+      },
+      "hr_185": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_185": {
+        "txt": "subtitle_185"
+      },
+      "text_186": {
+        "txt": "text_186",
+        "css": ""
+      },
+      "code_187": {
+        "txt": "sld.getMarks()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_188": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean or Object</span>"
+      },
+      "hr_189": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_189": {
+        "txt": "heading_189"
+      },
+      "hr_190": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_190": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add text to display slider value\n       this.txt = ui.addText(this.main, \"Value: 10\")\n\n       // Add a slider control to the main layout with an initial value of 10\n       this.sld = ui.addSlider(this.main, 10, \"\", 0.7)\n\n       // Add a callback handler when the value of the slider changes\n       this.sld.setOnChange( this.onChange )\n\n   }\n\n   onChange( value )\n   {\n       this.txt.text = \"Value : \" + value\n   }\n}",
+        "sample": "Basic slider",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_191": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a text control to show the selected value\n       this.txt = ui.addText(this.main, \"Value is 10\")\n\n       // Add a slider control to the main layout with an initial value of 10\n       this.sld = ui.addSlider(this.main, 10, \"\", 0.7)\n\n       // Set the step to 10\n       this.sld.step = 10\n\n       // Add marks for every step\n       this.sld.marks = true\n\n       // Add a callback handler when the value of the slider changes\n       this.sld.setOnSelect( this.onSelect )\n   }\n\n   onSelect( value )\n   {\n       this.txt.text = \"Value is \" + value\n   }\n}",
+        "sample": "Slider steps and marks",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_192": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a text control to show the selected value\n       this.txt = ui.addText(this.main, \"Value is 10\")\n       this.txt.margins = 0.02\n\n       // Add a slider control to the main layout with an initial value of 10\n       this.sld = ui.addSlider(this.main, 10, \"Primary\", 0.7)\n\n       // Set the step to 10\n       this.sld.step = 10\n\n       // Add custom marks for values at 10, 40 and 60\n       this.sld.marks = [\n           { label: \"First\", value: 10 },\n           { label: \"Second\", value: 40 },\n           { label: \"Third\", value: 60 }\n       ]\n\n       // Add a callback handler when the value of the slider changes\n       this.sld.setOnSelect( this.onSelect )\n   }\n\n   onSelect( value )\n   {\n       this.txt.text = \"Value is \" + value\n   }\n}",
+        "sample": "Slider with custom step marks",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_193": {
+        "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add text to display slider value\n       this.txt = ui.addText(this.main, \"Value: 10\")\n\n       // Add a vertical slider control to the main layout\n       this.sld = ui.addSlider(this.main, 10, \"Vertical,Primary\", 0.2, 0.7)\n\n       // Add a callback handler when the value of the slider changes\n       this.sld.setOnChange( this.onChange )\n   }\n\n   onChange( value )\n   {\n       this.txt.text = \"Value : \" + value\n   }\n}",
+        "sample": "Vertical slider",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_194": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global txt\n\n   #Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Add text to display slider value\n   txt = ui.addText(main, \"Value: 10\")\n\n   #Add a slider control to the main layout with an initial value of 10\n   sld = ui.addSlider(main, 10, \"\", 0.7)\n\n   #Add a callback handler when the value of the slider changes\n   sld.setOnChange( onChange )\n\ndef onChange(value):\n   global txt\n   txt.text = \"Value : \" + str(value)",
+        "sample": "Basic slider",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_195": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global txt\n\n   #Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Add a text control to show the selected value\n   txt = ui.addText(main, \"Value is 10\")\n\n   #Add a slider control to the main layout with an initial value of 10\n   sld = ui.addSlider(main, 10, \"\", 0.7)\n\n   #Set the step to 10\n   sld.step = 10\n\n   #Add marks for every step\n   sld.marks = True\n\n   #Add a callback handler when the value of the slider changes\n   sld.setOnSelect( onSelect )\n\ndef onSelect( value ):\n   global txt\n   txt.text = \"Value is \" + str(value)",
+        "sample": "Slider steps and marks",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_196": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global txt\n\n   #Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Add a text control to show the selected value\n   txt = ui.addText(main, \"Value is 10\")\n   txt.margins = 0.02\n\n   #Add a slider control to the main layout with an initial value of 10\n   sld = ui.addSlider(main, 10, \"Primary\", 0.7)\n\n   #Set the step to 10\n   sld.step = 10\n\n   #Add custom marks for values at 10, 40 and 60\n   sld.marks = [\n       { \"label\": \"First\", \"value\": 10 },\n       { \"label\": \"Second\", \"value\": 40 },\n       { \"label\": \"Third\", \"value\": 60 }\n   ]\n\n   #Add a callback handler when the value of the slider changes\n   sld.setOnSelect( onSelect )\n\ndef onSelect( value ):\n   global txt\n   txt.text = \"Value is \" + str(value)",
+        "sample": "Slider with custom step marks",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_197": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global txt\n   \n   #Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   #Add text to display slider value\n   txt = ui.addText(main, \"Value: 10\")\n\n   #Add a vertical slider control to the main layout\n   sld = ui.addSlider(main, 10, \"Vertical,Primary\", 0.2, 0.7)\n\n   #Add a callback handler when the value of the slider changes\n   sld.setOnChange( onChange )\n\ndef onChange( value ):\n   global txt\n   txt.text = \"Value : \" + str(value)",
+        "sample": "Vertical slider",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Slider",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A Slider in mobile UI design is a user interface element that allows users to select a value from a range by dragging a thumb along a track.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "In Material Design, sliders have a consistent appearance with a thumb and track, offering a visually intuitive way to input and adjust numerical values within a specified range. The default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, steps and even marks. Add a slider into your app using the `addSlider` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available setters and getter of the Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_55": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_56": {
+      "en": "Here are the methods available for Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_59": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_63": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_70": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_72": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_74": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_78": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_80": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_82": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_86": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_88": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_92": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_94": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_100": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_107": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_109": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_116": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_118": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_123": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_125": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_133": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_135": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_142": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_144": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_147": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_149": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_152": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_154": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_157": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_162": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_163": {
+      "en": "Adds an event handler when the Slider component is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_166": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_167": {
+      "en": "Sets a callback function when the value of the Slider Component changes.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_170": {
+      "en": "setOnSelect",
+      "de": "",
+      "es": ""
+    },
+    "text_171": {
+      "en": "Sets a callback function when a final value is selected. This is equal to submit value event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_174": {
+      "en": "setRange",
+      "de": "",
+      "es": ""
+    },
+    "text_175": {
+      "en": "Sets a range value for the Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_179": {
+      "en": "setMarks",
+      "de": "",
+      "es": ""
+    },
+    "text_180": {
+      "en": "Sets the marks of the Slider Component.",
+      "de": "",
+      "es": ""
+    },
+    "text_183": {
+      "en": "If value is `Boolean` the marks is base on the step.",
+      "de": "",
+      "es": ""
+    },
+    "text_184": {
+      "en": "If the value is `Array`, the elements must be an object of the form `{ label, value }` where `label` is a string and `value` is a number within the range.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_185": {
+      "en": "getMarks",
+      "de": "",
+      "es": ""
+    },
+    "text_186": {
+      "en": "Returns the step marks of the Slider Component. See `setMarks` methods for possible values.",
+      "de": "",
+      "es": ""
+    },
+    "heading_189": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/Slider';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

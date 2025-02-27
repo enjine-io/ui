@@ -13,8 +13,8 @@ body { background-color: #121212; }
 
 .card-subtitle { color: rgba(255, 255, 255, 0.54); }
 
-.search-box-div .form-control { background-color: #343a40; }
-.tagline { color: #cfd8dc; }
+.search-box-div .form-control { background-color: #343a40; color: #ccc;}
+.tagline { color: rgba(255, 255, 255, 0.7); }
 .main-page-header { background-color: #343a40; }
 .navbar { background-color: #343a40; }
 .navbar-btn-back, .navbar-btn-back:hover, .btn-link, .btn-link:hover { color: #fff; }

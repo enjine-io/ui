@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../sys/css/codemirror.min.css" />
+    <script src="../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../sys/js/javascript.min.js"></script>
+    <script src="../../../sys/js/xml.js"></script>
+    <script src="../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "homeLink": "ui",
+  "home": "UI",
+  "card": true,
+  "header": {
+    "title": "mainTitle",
+    "version": "",
+    "versions": [],
+    "version_urls": [],
+    "subtitle": "mainSubtitle",
+    "img": "header-cover.png"
+  },
+  "index": [
+    {
+      "card": {
+        "folder": "ui/Controls/Layout",
+        "text": "Layout",
+        "img": "layout.png",
+        "alt": "Layout Card",
+        "isHome": false,
+        "desc": "Adds a layout into your app.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Text",
+        "text": "Text",
+        "img": "text.png",
+        "alt": "Text Card",
+        "isHome": false,
+        "desc": "In mobile UI design, it refers to the s...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Button",
+        "text": "Button",
+        "img": "button.png",
+        "alt": "Button Card",
+        "isHome": false,
+        "desc": "A button component in mobile UI develop...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Image",
+        "text": "Image",
+        "img": "image.png",
+        "alt": "Image Card",
+        "isHome": false,
+        "desc": "Adds an image into your layout.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/TextField",
+        "text": "TextField",
+        "img": "textfield.png",
+        "alt": "TextField Card",
+        "isHome": false,
+        "desc": "A TextField in mobile UI design is an i...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/List",
+        "text": "List",
+        "img": "list.png",
+        "alt": "List Card",
+        "isHome": false,
+        "desc": "Lists are continuous, vertical indexes ...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/CheckboxGroup",
+        "text": "CheckboxGroup",
+        "img": "checkboxgroup.png",
+        "alt": "CheckboxGroup Card",
+        "isHome": false,
+        "desc": "A checkbox group in UI development is a...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/RadioGroup",
+        "text": "RadioGroup",
+        "img": "radiogroup.png",
+        "alt": "RadioGroup Card",
+        "isHome": false,
+        "desc": "Adds a radiogroup component into your app.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Accordion",
+        "text": "Accordion",
+        "img": "accordion.png",
+        "alt": "Accordion Card",
+        "isHome": false,
+        "desc": "Adds an accordion or expansion panel into your app.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/AppBar",
+        "text": "AppBar",
+        "img": "appbar.png",
+        "alt": "AppBar Card",
+        "isHome": false,
+        "desc": "Adds an appbar to your app.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/BottomNavbar",
+        "text": "BottomNavbar",
+        "img": "bottomnavbar.png",
+        "alt": "BottomNavbar Card",
+        "isHome": false,
+        "desc": "The Bottom Navigation Bar (BottomNavBar...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/ButtonGroup",
+        "text": "ButtonGroup",
+        "img": "buttongroup.png",
+        "alt": "ButtonGroup Card",
+        "isHome": false,
+        "desc": "In mobile UI development, a button grou...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/CameraView",
+        "text": "CameraView",
+        "img": "cameraview.png",
+        "alt": "CameraView Card",
+        "isHome": false,
+        "desc": "Adds a camera view into your app to tak...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Card",
+        "text": "Card",
+        "img": "card.png",
+        "alt": "Card Card",
+        "isHome": false,
+        "desc": "They are surfaces in material design th...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Checkbox",
+        "text": "Checkbox",
+        "img": "checkbox.png",
+        "alt": "Checkbox Card",
+        "isHome": false,
+        "desc": "A checkbox in UI development is a graph...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Chip",
+        "text": "Chip",
+        "img": "chip.png",
+        "alt": "Chip Card",
+        "isHome": false,
+        "desc": "In mobile UI design, a Chip is a compac...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Divider",
+        "text": "Divider",
+        "img": "divider.png",
+        "alt": "Divider Card",
+        "isHome": false,
+        "desc": "A divider is a visual element used to s...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Drawer",
+        "text": "Drawer",
+        "img": "drawer.png",
+        "alt": "Drawer Card",
+        "isHome": false,
+        "desc": "A drawer is a navigation panel that sli...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Dropdown",
+        "text": "Dropdown",
+        "img": "dropdown.png",
+        "alt": "Dropdown Card",
+        "isHome": false,
+        "desc": "A dropdown, also known as a spinner or ...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/FloatingActionButton",
+        "text": "FloatingActionButton",
+        "img": "floatingactionbutton.png",
+        "alt": "FloatingActionButton Card",
+        "isHome": false,
+        "desc": "A Floating Action Button (FAB) is a pro...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/HTMLElement",
+        "text": "HTMLElement",
+        "img": "htmlelement.png",
+        "alt": "HTMLElement Card",
+        "isHome": false,
+        "desc": "Add an html element into your layout.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Page",
+        "text": "Page",
+        "img": "page.png",
+        "alt": "Page Card",
+        "isHome": false,
+        "desc": "Load the pages created by the Layout Ex...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Progress",
+        "text": "Progress",
+        "img": "progress.png",
+        "alt": "Progress Card",
+        "isHome": false,
+        "desc": "A progress refers to the visual indicat...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Select",
+        "text": "Select",
+        "img": "select.png",
+        "alt": "Select Card",
+        "isHome": false,
+        "desc": "Adds a Select Component to a given layout.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Slider",
+        "text": "Slider",
+        "img": "slider.png",
+        "alt": "Slider Card",
+        "isHome": false,
+        "desc": "A Slider in mobile UI design is a user ...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Stepper",
+        "text": "Stepper",
+        "img": "stepper.png",
+        "alt": "Stepper Card",
+        "isHome": false,
+        "desc": "A Stepper in mobile UI design is a navi...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Switch",
+        "text": "Switch",
+        "img": "switch.png",
+        "alt": "Switch Card",
+        "isHome": false,
+        "desc": "A Switch in mobile UI design is a toggl...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/SwitchGroup",
+        "text": "SwitchGroup",
+        "img": "switchgroup.png",
+        "alt": "SwitchGroup Card",
+        "isHome": false,
+        "desc": "In UI development, a SwitchGroup refers...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/Tabs",
+        "text": "Tabs",
+        "img": "tabs.png",
+        "alt": "Tabs Card",
+        "isHome": false,
+        "desc": "Tabs in user interfaces facilitate seam...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/TreeView",
+        "text": "TreeView",
+        "img": "treeview.png",
+        "alt": "TreeView Card",
+        "isHome": false,
+        "desc": "A TreeView is a hierarchical representa...",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/VideoView",
+        "text": "VideoView",
+        "img": "videoview.png",
+        "alt": "VideoView Card",
+        "isHome": false,
+        "desc": "Adds a video view into your app layout.",
+        "cmp": true
+      }
+    },
+    {
+      "card": {
+        "folder": "ui/Controls/WebView",
+        "text": "WebView",
+        "img": "webview.png",
+        "alt": "WebView Card",
+        "isHome": false,
+        "desc": "A WebView in mobile development is a co...",
+        "cmp": true
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "mainTitle": {
+      "en": "UI Controls",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    },
+    "mainSubtitle": {
+      "en": "Explore a diverse range of UI controls - from sleek buttons to versatile textfields - designed for seamless integration and customization.",
+      "de": "",
+      "es": "",
+      "fr": "",
+      "pt": "",
+      "ru": "",
+      "it": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls';
+        const SYSPATH = '../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../sys/js/codecolour.js"></script>
+    <script src="../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../sys/js/popper.min.js"></script>
+    <script src="../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../sys/js/index.js"></script>
+</body>
+</html>

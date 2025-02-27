@@ -2,23 +2,22 @@ class Main extends App
 {
     onStart()
     {
-        // Create a fullscreen layout with objects vertically centered
-        this.main = ui.addLayout("main", "Linear", "VCenter,FillXY")
+        this.main = ui.addLayout("main", "Linear", "FillXY")
 
-        // Add a button to the main layout to show the actionsheet when click
-        this.btn = ui.addButton(this.main, "Show Bottom Sheet", "Primary")
-        this.btn.setOnTouch( this.btn_onTouch )
+        // Adds an appbar with menu options to show the drawer when click
+        this.apb = ui.addAppBar(this.main, "My app", "", 1)
 
-        this.bts = ui.addBottomSheet( "My title" );
+        // Adds a text control
+        this.txt = ui.addText(this.main, "Hello world!")
+        this.txt.setMargins(0, 5, 0, 2, "rem")
 
-        // Create a button and add it to the bottomsheet layout.
-        var btn = ui.addButton(this.bts.layout, "Button", "Secondary");
-        btn.margins = [0, "1rem", 0, "1rem"];
+        // Adds a button control
+        this.btn = ui.addButton(this.main, "Click me", "Primary")
+        this.btn.setOnTouch( this.btn_OnTouch )
     }
 
-    btn_onTouch()
+    btn_OnTouch()
     {
-        // show the bottomsheet
-        this.bts.show();
+        ui.showPopup("You clicked me!")
     }
 }
