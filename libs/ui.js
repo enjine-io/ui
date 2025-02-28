@@ -244,7 +244,7 @@ function UI()
     }
 
     //--- VISIBLE PROPERTIES ---
-    this.version = 0.30
+    this.version = 0.31
     this.pages = [] // <--- use in Layout Extension
     this.theme = {dark:false, primary: "", secondary: ""}
     // this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
