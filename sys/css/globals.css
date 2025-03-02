@@ -183,8 +183,7 @@ pre {
     padding: 1rem;
 }
 
-p,
-li {
+p, li {
     font-size: 1.2rem;
 }
 
@@ -510,7 +509,7 @@ pre {
 @media (max-width: 540px) {
     .main-content, #main-content { padding: 0px 1rem; }
     .copy-button { right: 24px; }
-    .search-container .search-box-div { margin-left: 1rem; }
+    .search-container input { width: 100%; }
     .main-page-header { min-height: fit-content; }
 }
 
@@ -570,6 +569,10 @@ table, tr, td {
     box-sizing: border-box;
     background-color: black;
     margin-bottom: 2rem;
+}
+
+.sample-code.lang-html .run-code-btn {
+    display: none !important;
 }
 
 .CodeMirror {

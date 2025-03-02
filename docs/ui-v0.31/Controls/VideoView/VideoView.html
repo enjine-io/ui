@@ -1523,6 +1523,10 @@
       "heading_221": {
         "txt": "heading_221"
       },
+      "hr_222": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
       "text_222": {
         "txt": "text_222",
         "css": ""
@@ -1530,10 +1534,6 @@
       "text_223": {
         "txt": "text_223",
         "css": ""
-      },
-      "hr_224": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
       "code_224": {
         "txt": "class Main extends App\n{\n  onStart()\n  {\n       //Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       //Create a video view and pass the video url\n       let src = \"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4\"\n       this.vid = ui.addVideoView(this.main, src, \"AutoPlay\", 0.8, 0.8)\n\n       //Create a horizontal layout where to add video controls\n       this.lay = ui.addLayout(this.main, \"Linear\", \"Horizontal,VCenter\", 0.8, 0.15)\n       this.lay.setChildMargins(0.01, 0, 0.01, 0)\n\n       //Create the play button\n       this.playBtn = ui.addButton(this.lay, \"Play\", \"\", 0.2)\n       this.playBtn.setOnTouch( this.play )\n\n       //Create the pause/stop button\n       this.pauseBtn = ui.addButton(this.lay, \"Pause\", \"\", 0.2)\n       this.pauseBtn.setOnTouch( this.pause )\n\n       //Create the mute toggle button\n       this.muteBtn = ui.addButton(this.lay, \"Mute\", \"Toggle\", 0.2)\n       this.muteBtn.setOnTouch( this.toggleMute )\n   }\n\n   //Handle play button\n   play() { this.vid.play() }\n\n   //Handle pause/stop button\n   pause() { this.vid.stop() }\n\n   //Handle mute toggle button\n   toggleMute( val ) { this.vid.muted = val }\n}",

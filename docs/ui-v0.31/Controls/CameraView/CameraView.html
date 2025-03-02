@@ -1381,6 +1381,10 @@
       "heading_202": {
         "txt": "heading_202"
       },
+      "hr_203": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
       "text_203": {
         "txt": "text_203",
         "css": ""
@@ -1388,10 +1392,6 @@
       "text_204": {
         "txt": "text_204",
         "css": ""
-      },
-      "hr_205": {
-        "txt": "",
-        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
       "code_205": {
         "txt": "//Force this app to portrait mode\ncfg.Portrait\n\n//Make sure to add Camera permission\n_AddPermissions(\"Camera\")\n\n//Main class for the app\nclass Main extends App\n{\n   //Called when app starts\n   onStart()\n   {\n       //Create a main layout of type Frame\n       this.main = ui.addLayout(\"main\", \"Frame\", \"FillXY\")\n\n\t//Add a camera view that fills the parent width and height\n\t//The Fill option makes the image preview fills the entire camera view, otherwise the actual resolution will be viewed.\n       this.cam = ui.addCameraView(this.main, \"Fill\", 1, 1)\n\n\t//Create a horizontal layout that will be displayed in the bottom of the screen\n       this.layBtm = ui.addLayout(this.main, \"Linear\", \"Horizontal,Vcenter\", 1, 0.1)\n       this.layBtm.childSpacing = \"Between\"\n       this.layBtm.setPosition(0, 0.9)\n       this.layBtm.padding = [1, null, 1, null, \"rem\"]\n\n\t//Create a camera switch toggle icon at the left\n       this.toggleCam = ui.addButton(this.layBtm, \"flip_camera_android\", \"icon\")\n       this.toggleCam.textColor = \"#fff\"\n       this.toggleCam.setOnTouch( this.onSwitchCam )\n       \n       //Create a snap button which is a bit larger\n       this.snapBtn = ui.addButton(this.layBtm, \"camera\", \"icon\")\n       this.snapBtn.textColor = \"#fff\"\n       this.snapBtn.iconSize = \"2.5rem\"\n       this.snapBtn.setOnTouch( this.captureImg )\n       \n       //Create a preview image and pass it to the previewImage prop of the camera view\n       this.prevImg = ui.addImage(this.layBtm, \"\", \"avatar,initial\", null)\n       this.cam.previewImage = this.prevImg\n       this.prevImg.setSize(2.5, 2.5, \"rem\")\n       this.prevImg.cornerRadius = \"50%\"\n       this.prevImg.backColor = \"black\"\n\n\t//Start the camera preview\n       this.cam.startPreview()\n   }\n   \n   //Handle switching of camera source\n   onSwitchCam() {\n       let src = this.cam.source == \"front\" ? \"back\" : \"front\"\n       this.cam.source = src\n       this.cam.updatePreview()\n   }\n   \n   //Handle capture and save the image\n   captureImg() {\n       const img = this.cam.capture(\"jpg\", \"base64\")\n       \n       //Create unique filename\n       const name = \"img-\" + new Date().getTime() + \".jpg\"\n       const path = \"/Internal/DCIM/\" + name\n       \n       //Save the image data\n       app.WriteFile(path, img, \"base64\")\n       \n       ui.showPopup( \"Image has been saved!\" )\n   }\n}",
