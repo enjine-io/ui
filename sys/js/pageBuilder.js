@@ -414,7 +414,6 @@ function buildMainPage(home, onLoad) {
             for (let i = 0; i < array.length; i++)
             {
                 element = array[i]
-                console.log( element )
                 _x = element.card.isHome
                 _cmp = element.card.cmp
 
