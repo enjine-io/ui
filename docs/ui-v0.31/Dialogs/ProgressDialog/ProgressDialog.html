@@ -203,32 +203,47 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_26": {
-        "txt": "heading_26"
+      "subtitle_26": {
+        "txt": "subtitle_26"
       },
-      "hr_27": {
+      "text_27": {
+        "txt": "text_27",
+        "css": ""
+      },
+      "code_28": {
+        "txt": "prd.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_29": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_27": {
+      "heading_29": {
+        "txt": "heading_29"
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_30": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Progress Dialog\", \"Outlined\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Show a progress dialog with `AutoCancel` the dismisses on backdrop click\n       ui.showProgressDialog(\"Loading...\", \"AutoCancel\")\n   }\n}",
         "sample": "Progress Dialog",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_28": {
+      "code_31": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout\n       this.btn = ui.addButton(this.main, \"Show Progress Dialog\", \"Outlined\")\n\n       // Add a callback handler when the button is click\n       this.btn.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Show a progress dialog with `AutoCancel` the dismisses on backdrop click\n       this.pdlg = ui.showProgressDialog(\"Loading...\", \"NoCancel\")\n\n       // hide the progress dialog after 2 seconds\n       setTimeout( () => {\n           this.pdlg.hide()\n           ui.showPopup( \"Progress dialog is close!\" )\n       }, 2000)\n   }\n}",
         "sample": "Nocancel progress dialog",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_29": {
+      "code_32": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(main, \"Show Progress Dialog\", \"Outlined\")\n   btn.setOnTouch(onTouch)\n\ndef onTouch(event):\n   ui.showProgressDialog(\"Loading...\", \"AutoCancel\")",
         "sample": "Progress Dialog",
         "disabledActions": "",
         "lang": "py"
       },
-      "code_30": {
+      "code_33": {
         "txt": "from hybrid import ui\nfrom browser import timer\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(main, \"Show Progress Dialog\", \"Outlined\")\n   btn.setOnTouch(onTouch)\n\ndef onTouch(event):\n   global pdlg\n   pdlg = ui.showProgressDialog(\"Loading...\", \"NoCancel\")\n   timer.set_timeout(hideProgressDialog, 2000)\n\ndef hideProgressDialog():\n   global pdlg\n   pdlg.hide()\n   ui.showPopup(\"Progress dialog is close!\")",
         "sample": "Nocancel progress dialog",
         "disabledActions": "",
@@ -322,7 +337,17 @@
       "de": "",
       "es": ""
     },
-    "heading_26": {
+    "subtitle_26": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_27": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_29": {
       "en": "Examples",
       "de": "",
       "es": ""

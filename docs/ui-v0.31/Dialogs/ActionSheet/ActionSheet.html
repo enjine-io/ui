@@ -555,20 +555,35 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_77": {
-        "txt": "heading_77"
+      "subtitle_77": {
+        "txt": "subtitle_77"
       },
-      "hr_78": {
+      "text_78": {
+        "txt": "text_78",
+        "css": ""
+      },
+      "code_79": {
+        "txt": "acs.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_80": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_78": {
+      "heading_80": {
+        "txt": "heading_80"
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_81": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show actionsheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n   }\n\n   btn_onTouch()\n   {\n       var choices = [\n           [\"person\", \"Account\"],\n           [\"share\", \"Send to email\"],\n           [\"delete\", \"Remove\"],\n       ];\n       this.act = ui.showActionSheet(\"\", choices, \"Icon\", this.onSelect);\n       this.act.description = \"This is the text\";\n       this.act.setColor(\"Remove\", \"orange\");\n   }\n\n   onSelect( name, icon ) {\n       ui.showPopup( icon );\n   }\n}",
         "sample": "Complete example of actionsheet",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_79": {
+      "code_82": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when click\n   btn = ui.addButton(main, \"Show actionsheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\ndef btn_onTouch( ev ):\n   choices = [\n       [\"person\", \"Account\"],\n       [\"share\", \"Send to email\"],\n       [\"delete\", \"Remove\"],\n   ]\n   act = ui.showActionSheet(\"\", choices, \"Icon\", onSelect)\n   act.description = \"This is the text\"\n   act.setColor(\"Remove\", \"orange\")\n\ndef onSelect(name, icon):\n   ui.showPopup(icon)",
         "sample": "Complete example of actionsheet",
         "disabledActions": "",
@@ -603,7 +618,7 @@
       "es": ""
     },
     "text_2": {
-      "en": "An Action Sheet is a list dialog implementation of bottom sheet displaying contextual actions or options, used to streamline user interactions in mobile apps.",
+      "en": "An Action Sheet is a one time list dialog implementation of bottom sheet displaying contextual actions or options, used to streamline user interactions in mobile apps.",
       "de": "",
       "es": ""
     },
@@ -762,7 +777,17 @@
       "de": "",
       "es": ""
     },
-    "heading_77": {
+    "subtitle_77": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_78": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_80": {
       "en": "Examples",
       "de": "",
       "es": ""

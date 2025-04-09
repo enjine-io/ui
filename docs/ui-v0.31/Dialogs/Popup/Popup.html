@@ -319,44 +319,59 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_43": {
-        "txt": "heading_43"
+      "subtitle_43": {
+        "txt": "subtitle_43"
       },
-      "hr_44": {
+      "text_44": {
+        "txt": "text_44",
+        "css": ""
+      },
+      "code_45": {
+        "txt": "popup.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_46": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_44": {
+      "heading_46": {
+        "txt": "heading_46"
+      },
+      "hr_47": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_47": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add button control to the main layout\n       this.btn1 = ui.addButton(this.main, \"Show Popup\")\n\n       // Add a callback handler when the button is touched\n       this.btn1.setOnTouch( this.onTouch )\n   }\n\n   onTouch()\n   {\n       // Display popup on the Top with transition Grow\n       ui.showPopup(\"Hello from popup!\")\n   }\n}",
         "sample": "Basic",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_45": {
+      "code_48": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n       this.main.setChildMargins(0, 0, 0, 0.02)\n\n       // Adds first button to the main layout\n       this.btn1 = ui.addButton(this.main, \"Top & Grow\", \"Primary\")\n       this.btn1.setOnTouch( this.onTouch1 )\n\n       // Adds second button to the main layout\n       this.btn2 = ui.addButton(this.main, \"Bottom and Slide\", \"Secondary\")\n       this.btn2.setOnTouch( this.onTouch2 )\n   }\n\n   onTouch1()\n   {\n       // Display popup on the Top with transition Grow\n       ui.showPopup(\"Hello world.\", \"Top,Grow\")\n   }\n\n   onTouch2()\n   {\n       // Display popup on the Bottom with transition Slide in 1.5 seconds.\n       ui.showPopup(\"Hello world.\", \"Bottom,Slide\", 1500)\n   }\n}",
         "sample": "Popup with transition",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_46": {
+      "code_49": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.layMain = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button control to the main layout\n       this.btn = ui.addButton(this.layMain, \"Show Popup\")\n\n       // Add a callback handler when the button is touched\n       this.btn.setOnTouch( this.showMessage )\n   }\n\n   showMessage()\n   {\n       // Show a popup with additional action\n       this.snackbar = ui.showPopup(\"Please login to continue\", \"Bottom,Center\", \"\", \"Login\")\n       \n       // Add a callback handler when the action is touched\n       this.snackbar.setOnAction( this.onAction )\n   }\n\n   onAction()\n   {\n       // Hide the popup when the action button is click\n       this.snackbar.hide()\n       ui.showPopup(\"Login is click. Show login Page.\")\n   }\n}",
         "sample": "With action",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_47": {
+      "code_50": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn1 = ui.addButton(main, \"Show Popup\")\n   btn1.setOnTouch(onTouch)\n\ndef onTouch(event):\n   ui.showPopup(\"Hello from popup!\")",
         "sample": "Basic",
         "disabledActions": "",
         "lang": "py"
       },
-      "code_48": {
+      "code_51": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0, 0, 0, 0.02)\n   btn1 = ui.addButton(main, \"Top & Grow\", \"Primary\")\n   btn1.setOnTouch(onTouch1)\n   btn2 = ui.addButton(main, \"Bottom and Slide\", \"Secondary\")\n   btn2.setOnTouch(onTouch2)\n\ndef onTouch1(event):\n   ui.showPopup(\"Hello world.\", \"Top,Grow\")\n\ndef onTouch2(event):\n   ui.showPopup(\"Hello world.\", \"Bottom,Slide\", 1500)",
         "sample": "Popups with transitions",
         "disabledActions": "",
         "lang": "py"
       },
-      "code_49": {
+      "code_52": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   layMain = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(layMain, \"Show Popup\")\n   btn.setOnTouch(showMessage)\n\ndef showMessage(event):\n   global snackbar\n   snackbar = ui.showPopup(\"Please login to continue\", \"Bottom,Center\", \"\", \"Login\")\n   snackbar.setOnAction(onAction)\n\ndef onAction():\n   snackbar.hide()\n   ui.showPopup(\"Login is click. Show login Page.\")",
         "sample": "With Transition",
         "disabledActions": "",
@@ -485,7 +500,17 @@
       "de": "",
       "es": ""
     },
-    "heading_43": {
+    "subtitle_43": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_44": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_46": {
       "en": "Examples",
       "de": "",
       "es": ""

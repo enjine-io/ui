@@ -306,44 +306,59 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_40": {
-        "txt": "heading_40"
+      "subtitle_40": {
+        "txt": "subtitle_40"
       },
-      "hr_41": {
+      "text_41": {
+        "txt": "text_41",
+        "css": ""
+      },
+      "code_42": {
+        "txt": "bts.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_43": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_41": {
+      "heading_43": {
+        "txt": "heading_43"
+      },
+      "hr_44": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_44": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show Bottom Sheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n\n       this.bts = ui.addBottomSheet( \"My title\" );\n\n       // Create a button and add it to the bottomsheet layout.\n       var btn = ui.addButton(this.bts.layout, \"Button\", \"Secondary\");\n       btn.margins = [0, \"1rem\", 0, \"1rem\"];\n   }\n\n   btn_onTouch()\n   {\n       // show the bottomsheet\n       this.bts.show();\n   }\n}",
         "sample": "Basic",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_42": {
+      "code_45": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show Bottom Sheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n\n       this.bts = ui.addBottomSheet(\"\", \"Notch\");\n\n       // Create a button and add it to the bottomsheet layout.\n       var btn = ui.addButton(this.bts.layout, \"Button\", \"Primary\");\n       btn.margins = [0, \"1rem\", 0, \"1rem\"];\n   }\n\n   btn_onTouch()\n   {\n       // show the bottomsheet\n       this.bts.show();\n   }\n}",
         "sample": "Bottomsheet with notch",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_43": {
+      "code_46": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Create a fullscreen layout with objects vertically centered\n       this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a button to the main layout to show the actionsheet when click\n       this.btn = ui.addButton(this.main, \"Show Bottom Sheet\", \"Primary\")\n       this.btn.setOnTouch( this.btn_onTouch )\n\n       // Create a bottom sheet with the given options.\n       // HideOnAction: Hide the bottomsheet on action click.\n       // CloseAction and MoreAction: Add a left close action and right more action.\n       // NoCancel: Prevent the bottomsheet from closing when the more action is click.\n       this.bts = ui.addBottomSheet(\"\", \"HideOnAction,CloseAction,MoreAction,NoCancel\");\n       this.bts.title = \"My details\"\n       this.bts.description = \"This is a long description.\"\n       this.bts.setOnAction( this.onAction );\n\n       // Create a button and add it to the bottomsheet layout.\n       var btn = ui.addButton(this.bts.layout, \"Button\", \"Primary\");\n       btn.margins = [0, \"1rem\", 0, \"1rem\"];\n   }\n\n   btn_onTouch()\n   {\n       // show the bottomsheet\n       this.bts.show();\n   }\n\n   onAction(name, icon) {\n       ui.showPopup( name );\n   }\n}",
         "sample": "Complete example",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_44": {
+      "code_47": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n\n   global bts\n   \n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when clicked\n   btn = ui.addButton(main, \"Show Bottom Sheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\n   bts = ui.addBottomSheet(\"My title\")\n\n   # Create a button and add it to the bottomsheet layout.\n   btn = ui.addButton(bts.layout, \"Button\", \"Secondary\")\n   btn.margins = [0, \"1rem\", 0, \"1rem\"]\n\ndef btn_onTouch( ev ):\n   # Show the bottomsheet\n   bts.show()",
         "sample": "Basic BottomSheet",
         "disabledActions": "",
         "lang": "py"
       },
-      "code_45": {
+      "code_48": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global bts\n   \n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when clicked\n   btn = ui.addButton(main, \"Show Bottom Sheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\n   bts = ui.addBottomSheet(\"\", \"Notch\")\n\n   # Create a button and add it to the bottomsheet layout.\n   btn = ui.addButton(bts.layout, \"Button\", \"Primary\")\n   btn.margins = [0, \"1rem\", 0, \"1rem\"]\n\ndef btn_onTouch( ev ):\n   # Show the bottomsheet\n   bts.show()",
         "sample": "BottomSheet with notch",
         "disabledActions": "",
         "lang": "py"
       },
-      "code_46": {
+      "code_49": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global bts\n   \n   # Create a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button to the main layout to show the actionsheet when clicked\n   btn = ui.addButton(main, \"Show Bottom Sheet\", \"Primary\")\n   btn.setOnTouch(btn_onTouch)\n\n   # Create a bottom sheet with the given options:\n   # HideOnAction: Hide the bottomsheet on action click.\n   # CloseAction and MoreAction: Add a left close action and right more action.\n   # NoCancel: Prevent the bottomsheet from closing when the more action is clicked.\n   bts = ui.addBottomSheet(\"\", \"HideOnAction,CloseAction,MoreAction,NoCancel\")\n   bts.title = \"My details\"\n   bts.description = \"This is a long description.\"\n   bts.setOnAction(onAction)\n\n   # Create a button and add it to the bottomsheet layout.\n   btn = ui.addButton(bts.layout, \"Button\", \"Primary\")\n   btn.margins = [0, \"1rem\", 0, \"1rem\"]\n\ndef btn_onTouch( ev ):\n   # Show the bottomsheet\n   bts.show()\n\ndef onAction(name, icon):\n   ui.showPopup(name)",
         "sample": "Complete example",
         "disabledActions": "",
@@ -462,7 +477,17 @@
       "de": "",
       "es": ""
     },
-    "heading_40": {
+    "subtitle_40": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_43": {
       "en": "Examples",
       "de": "",
       "es": ""

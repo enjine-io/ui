@@ -12,16 +12,20 @@ let _running = false,
     leftPanelNavs = {},
     samples = {},
     docTitle = "", 
-    hasTitle = false, 
+    hasTitle = false,
     toggleLeftNav = false,
     activeLink,
     activeNavLink,
-    navList, 
+    navList,
     navIsClick = false,
     // demoUrl = "http://localhost:3000";
     demoUrl = "https://ide.droidscript.cloud/ui",
     isLangJS = true,
     isDSWiFiIDE = false
+
+window.__enj = {
+    product: ""
+}
 
 function createComponent(key, val) {
     var str = "";
@@ -44,10 +48,16 @@ function createHeader(tutorial, header) {
 function createPage( tutorial, step ) {
     var str = "", curHeading = "";
 
-    //for (var z = 0; z < step.stepContent.length; z++) {
-    //    let stepContent = step.stepContent[z];
-
     for (var z in step) {
+        
+        if( step[z].product &&
+            window.__enj.product &&
+            step[z].product.split(",").every(m => {
+                if( m.startsWith("!") ) return m === "!"+window.__enj.product
+                return m !== window.__enj.product
+            })
+        ) continue;
+        
         var zz = z.split("_");
         var anim = step[z].animation || "";
         var css = step[z].css || "";
@@ -139,8 +149,7 @@ function createPage( tutorial, step ) {
             case "overline":
                 let id = T(step[z].txt).replace(/ /g,"-");
                 str += '<div class="method-name overline" id="'+id+'">' + T( step[z].txt ) + '</div>';
-                if( (T( step[z].txt )).toLowerCase().includes( "example" ) );
-                {
+                if( T(step[z].txt).toLowerCase().includes("example") ) {
                     var l = T(step[z].txt).split(" ");
                     var r = T(step[z].txt).replace( l[0]+" ", "" ).replace(/[^a-zA-Z0-9]/g, ' ').toLowerCase()
                     samples[z] = r;
@@ -360,10 +369,14 @@ function buildMainPage(home, onLoad) {
             }
 
             htmlStr +=`
-                        <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}" style="${(layouts.tutorial.header.titleStyle || "")}">${T(layouts.tutorial.header.title)}</h1>
+                        <h1 class="jumbotron-heading text-light bold ${home=="home" ? "":"sm-none"}" style="${(layouts.tutorial.header.titleStyle || "")}">
+                            ${T(layouts.tutorial.header[window.__enj.product+"_title"] || layouts.tutorial.header.title)}
+                        </h1>
                     </div>
                 </section>
-                <h5 class="lead tagline" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "")}">${ T(layouts.tutorial.header.subtitle || "") }</h5>
+                <h5 class="lead tagline" lbl="introtext" style="${(layouts.tutorial.header.subStyle || "")}">
+                    ${ T(layouts.tutorial.header[window.__enj.product+"_subtitle"] || layouts.tutorial.header.subtitle || "") }
+                </h5>
             `;
 
             if(layouts.tutorial.search !== false) {

@@ -415,32 +415,47 @@
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "heading_51": {
-        "txt": "heading_51"
+      "subtitle_51": {
+        "txt": "subtitle_51"
       },
-      "hr_52": {
+      "text_52": {
+        "txt": "text_52",
+        "css": ""
+      },
+      "code_53": {
+        "txt": "drw.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_54": {
         "txt": "",
         "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
       },
-      "code_52": {
+      "heading_54": {
+        "txt": "heading_54"
+      },
+      "hr_55": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_55": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Add a fixed appbar with menu icon to the main layout.\n       this.apb = ui.addAppBar(this.main, \"My App\", \"Menu,Fixed\")\n\n       // Add a callback handler for `onMenu` event of the AppBar control.\n       this.apb.setOnMenu( this.openDrawer )\n\n       // Add a text control to the main layout.\n       ui.addText(this.main, \"<---- Swipe left ----->\", \"Center\");\n\n       // Create a linear layout for the drawer.\n       this.drawerLay = ui.addLayout(null, \"Linear\")\n\n       // Initialize the drawer by passing the drawer layout above.\n       this.drawer = ui.addDrawer(this.drawerLay, \"left\", 0.7)\n\n       // Add a callback handler for `onClose` event on the Drawer component.\n       this.drawer.setOnClose( this.onClose )\n\n       var lst1 = [\n           [ \"music_note\", \"Audio\" ],\n           [ \"movie\", \"Videos\" ],\n           [ \"insert_drive_file\", \"Documents\" ]\n       ]\n\n       // Adds a list to the drawer layout. See List control for customization.\n       this.lstMenu1 = ui.addList( this.drawerLay, lst1, \"Icon\", 1 )\n       this.lstMenu1.label = \"Main navigation\"\n\n       // Add a callback handler for `onSelect` event on the list.\n       this.lstMenu1.setOnTouch( this.onSelect )\n\n       // Adds a divider into the drawer layout.\n       ui.addDivider( this.drawerLay, 1 )\n\n       var lst2 = [\n           [ \"mail\", \"All Mail\" ],\n           [ \"inbox\", \"Inbox\" ],\n           [ \"drafts\", \"Outbox\" ],\n           [ \"send\", \"Sent\" ]\n       ]\n\n       // Adds another list to the drawer layout. See List control for customization.\n       this.lstMenu2 = ui.addList( this.drawerLay, lst2, \"Icon\", 1 )\n       this.lstMenu2.label = \"Secondary navigation\"\n       this.lstMenu2.setOnTouch( this.onSelect )\n   }\n\n   openDrawer()\n   {\n       this.drawer.show()\n   }\n\n   onSelect(title)\n   {\n       this.apb.text = title\n       ui.showPopup( title )\n       this.drawer.hide()\n   }\n\n   onClose()\n   {\n       ui.showPopup('Drawer is close', \"bottom\")\n   }\n}",
         "sample": "Drawer Implementation",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_53": {
+      "code_56": {
         "txt": "class Main extends App\n{\n   onStart()\n   {\n       // Creates a fullscreen layout with objects vertically centered.\n       this.main = ui.addLayout( \"main\", \"Linear\", \"VCenter,FillXY\")\n\n       // Adds a select control to the main layout.\n       this.sel = ui.addSelect(this.main, [\"Left\", \"Top\", \"Right\", \"Bottom\"], \"Radio,Outlined\", 0.7)\n       this.sel.label = \"Select anchor position\"\n\n       // Add a callback handler for `onChange` event of the select control.\n       this.sel.setOnChange(this.onSelect)\n\n       // Creates a linear layout for the drawer.\n       this.drawerLay = ui.addLayout( null, \"Linear\" )\n\n       // Initialize the drawer by passing the drawer layout.\n       this.drawer = ui.addDrawer( this.drawerLay, \"left\" )\n\n       var lst1 = [\n           [ \"music_note\", \"Audio\" ],\n           [ \"movie\", \"Videos\" ],\n           [ \"insert_drive_file\", \"Documents\" ]\n       ]\n\n       // Adds a list to the drawer layout.\n       this.lstMenu1 = ui.addList( this.drawerLay, lst1, \"Icon\", 1 )\n       this.lstMenu1.setOnTouch( this.closeDrawer )\n       this.lstMenu1.label = \"Main navigation\"\n\n       // Adds a divider into the drawer layout.\n       ui.addDivider( this.drawerLay, 1 )\n\n       var lst2 = [\n           [ \"mail\", \"All Mail\" ],\n           [ \"inbox\", \"Inbox\" ],\n           [ \"drafts\", \"Outbox\" ],\n           [ \"send\", \"Sent\" ]\n       ]\n\n       // Adds another list to the drawer layout.\n       this.lstMenu2 = ui.addList( this.drawerLay, lst2, \"Icon\", 1 )\n       this.lstMenu2.label = \"Secondary navigation\"\n       this.lstMenu2.setOnTouch( this.closeDrawer )\n   }\n\n   openDrawer()\n   {\n       this.drawer.show()\n   }\n\n   closeDrawer( title )\n   {\n       ui.showPopup( title )\n       this.drawer.hide()\n   }\n\n   onSelect( value )\n   {\n       // Set the drawer anchor first\n       this.drawer.anchor = value\n\n       // Set the drawer width depending on anchor position\n       if(value == \"Top\" || value == \"Bottom\") {\n           this.drawer.width = 0.5\n       } else {\n           this.drawer.width = 0.7\n       }\n       \n       // Open the drawer\n       this.drawer.show()\n   }\n}",
         "sample": "Drawer Anchor Positions",
         "disabledActions": "",
         "lang": "js"
       },
-      "code_54": {
+      "code_57": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global drawer\n   \n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   apb = ui.addAppBar(main, \"My App\", \"Menu,Fixed\")\n   apb.setOnMenu(openDrawer)\n\n   ui.addText(main, \"<---- Swipe left ----->\", \"Center\")\n\n   drawerLay = ui.addLayout(None, \"Linear\")\n   drawer = ui.addDrawer(drawerLay, \"left\", 0.7)\n\n   lst1 = [\n       [\"music_note\", \"Audio\"],\n       [\"movie\", \"Videos\"],\n       [\"insert_drive_file\", \"Documents\"]\n   ]\n   lstMenu1 = ui.addList(drawerLay, lst1, \"Icon\", 1)\n   lstMenu1.label = \"Main navigation\"\n   lstMenu1.setOnTouch(onSelect)\n\n   ui.addDivider(drawerLay, 1)\n\n   lst2 = [\n       [\"mail\", \"All Mail\"],\n       [\"inbox\", \"Inbox\"],\n       [\"drafts\", \"Outbox\"],\n       [\"send\", \"Sent\"]\n   ]\n   lstMenu2 = ui.addList(drawerLay, lst2, \"Icon\", 1)\n   lstMenu2.label = \"Secondary navigation\"\n   lstMenu2.setOnTouch(onSelect)\n\ndef openDrawer( ev ):\n   global drawer\n   drawer.show()\n\ndef onSelect(title, body, icon, action, index, ev):\n   global drawer\n   ui.showPopup( title )\n   drawer.hide()",
         "sample": "Drawer Implementation",
         "disabledActions": "",
         "lang": "py"
       },
-      "code_55": {
+      "code_58": {
         "txt": "from hybrid import ui\n\ndef OnStart():\n   global drawer\n\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Adds a select control to the main layout.\n   sel = ui.addSelect(main, [\"Left\", \"Top\", \"Right\", \"Bottom\"], \"Radio,Outlined\", 0.7)\n   sel.label = \"Select anchor position\"\n\n   # Add a callback handler for `onChange` event of the select control.\n   sel.setOnChange(onSelect)\n\n   # Creates a linear layout for the drawer.\n   drawerLay = ui.addLayout(None, \"Linear\")\n\n   # Initialize the drawer by passing the drawer layout.\n   drawer = ui.addDrawer(drawerLay, \"left\")\n\n   lst1 = [\n       [\"music_note\", \"Audio\"],\n       [\"movie\", \"Videos\"],\n       [\"insert_drive_file\", \"Documents\"]\n   ]\n\n   # Adds a list to the drawer layout.\n   lstMenu1 = ui.addList(drawerLay, lst1, \"Icon\", 1)\n   lstMenu1.setOnTouch(closeDrawer)\n   lstMenu1.label = \"Main navigation\"\n\n   # Adds a divider into the drawer layout.\n   ui.addDivider(drawerLay, 1)\n\n   lst2 = [\n       [\"mail\", \"All Mail\"],\n       [\"inbox\", \"Inbox\"],\n       [\"drafts\", \"Outbox\"],\n       [\"send\", \"Sent\"]\n   ]\n\n   # Adds another list to the drawer layout.\n   lstMenu2 = ui.addList(drawerLay, lst2, \"Icon\", 1)\n   lstMenu2.label = \"Secondary navigation\"\n   lstMenu2.setOnTouch(closeDrawer)\n\ndef closeDrawer(title, body, icon, action, index, ev):\n   global drawer\n   ui.showPopup(title)\n   drawer.hide()\n\ndef onSelect(value, index):\n   global drawer\n   # Set the drawer anchor first\n   drawer.anchor = value\n\n   # Set the drawer width depending on anchor position\n   if value == \"Top\" or value == \"Bottom\":\n       drawer.width = 0.5\n   else:\n       drawer.width = 0.7\n\n   # Open the drawer\n   drawer.show()",
         "sample": "Drawer Anchor Positions",
         "disabledActions": "",
@@ -584,7 +599,17 @@
       "de": "",
       "es": ""
     },
-    "heading_51": {
+    "subtitle_51": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_52": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_54": {
       "en": "Examples",
       "de": "",
       "es": ""
