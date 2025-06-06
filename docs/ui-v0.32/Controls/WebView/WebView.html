@@ -1,0 +1,1571 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "text_4": {
+        "txt": "text_4",
+        "css": ""
+      },
+      "code_5": {
+        "txt": "web = ui.addWebView(parent, url, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_6": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_6": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The parent layout where to add the WebView component. "
+        ]
+      },
+      "table-row_7": {
+        "content": [
+          "[url] ",
+          "String",
+          "The url of the website. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options for WebView. Values can be `NoScrollBar`, "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_10": {
+        "txt": ""
+      },
+      "text_11": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : WebView</span>"
+      },
+      "hr_12": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_12": {
+        "txt": "heading_12"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "table-header_14": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_15": {
+        "content": [
+          "url ",
+          "String",
+          "Sets or returns the url of the webview."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_16": {
+        "content": [
+          "html ",
+          "String",
+          "Setst or returns the html loaded in the iframe."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_17": {
+        "content": [
+          "errorPage ",
+          "String",
+          "Sets or returns the redirect url when an error occur."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_18": {
+        "content": [
+          "textZoom ",
+          "Number",
+          "Sets or returns the text zoom of the page loaded in the web view."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_19": {
+        "content": [
+          "window ",
+          "Object",
+          "A reference to the webview's window object."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_20": {
+        "content": [
+          "document ",
+          "Object",
+          "A reference to the webview's window document object."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "blockUrls ",
+          "Array",
+          "Sets or returns the list of blocked urls."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_22": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_22": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_23": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_26": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_27": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_28": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_29": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_30": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_31": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_32": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_33": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_34": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_35": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_36": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_37": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_38": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_39": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_40": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_41": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_42": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_43": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_44": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_45": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_46": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_47": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_48": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_49": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_50": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-footer_51": {
+        "txt": ""
+      },
+      "heading_52": {
+        "txt": "heading_52"
+      },
+      "text_53": {
+        "txt": "text_53",
+        "css": ""
+      },
+      "hr_54": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_54": {
+        "txt": "subtitle_54"
+      },
+      "text_56": {
+        "txt": "text_56",
+        "css": ""
+      },
+      "code_57": {
+        "txt": "web.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_58": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_58": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_59": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_59": {
+        "txt": ""
+      },
+      "hr_60": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_60": {
+        "txt": "subtitle_60"
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "code_63": {
+        "txt": "web.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_64": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_64": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_65": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_66": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_66": {
+        "txt": ""
+      },
+      "hr_67": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_67": {
+        "txt": "subtitle_67"
+      },
+      "text_69": {
+        "txt": "text_69",
+        "css": ""
+      },
+      "code_70": {
+        "txt": "web.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_71": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_71": {
+        "txt": "subtitle_71"
+      },
+      "text_73": {
+        "txt": "text_73",
+        "css": ""
+      },
+      "code_74": {
+        "txt": "web.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_75": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_75": {
+        "txt": "subtitle_75"
+      },
+      "text_77": {
+        "txt": "text_77",
+        "css": ""
+      },
+      "code_78": {
+        "txt": "web.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_79": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_79": {
+        "txt": "subtitle_79"
+      },
+      "text_81": {
+        "txt": "text_81",
+        "css": ""
+      },
+      "code_82": {
+        "txt": "web.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_83": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_83": {
+        "txt": "subtitle_83"
+      },
+      "text_85": {
+        "txt": "text_85",
+        "css": ""
+      },
+      "code_86": {
+        "txt": "web.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_87": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_87": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_88": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_88": {
+        "txt": ""
+      },
+      "hr_89": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_89": {
+        "txt": "subtitle_89"
+      },
+      "text_91": {
+        "txt": "text_91",
+        "css": ""
+      },
+      "code_92": {
+        "txt": "web.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_93": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_93": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_93": {
+        "txt": ""
+      },
+      "text_94": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_95": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_95": {
+        "txt": "subtitle_95"
+      },
+      "text_97": {
+        "txt": "text_97",
+        "css": ""
+      },
+      "code_98": {
+        "txt": "web.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_99": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_99": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_100": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_101": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_102": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_103": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_103": {
+        "txt": ""
+      },
+      "hr_104": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_104": {
+        "txt": "subtitle_104"
+      },
+      "text_106": {
+        "txt": "text_106",
+        "css": ""
+      },
+      "code_107": {
+        "txt": "web.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_108": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_108": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_109": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_110": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_111": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_112": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_112": {
+        "txt": ""
+      },
+      "hr_113": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_113": {
+        "txt": "subtitle_113"
+      },
+      "text_115": {
+        "txt": "text_115",
+        "css": ""
+      },
+      "code_116": {
+        "txt": "web.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_117": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_117": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_118": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_119": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_119": {
+        "txt": ""
+      },
+      "hr_120": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_120": {
+        "txt": "subtitle_120"
+      },
+      "text_122": {
+        "txt": "text_122",
+        "css": ""
+      },
+      "code_123": {
+        "txt": "web.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_124": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_124": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_125": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_126": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_127": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_128": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_129": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_129": {
+        "txt": ""
+      },
+      "hr_130": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_130": {
+        "txt": "subtitle_130"
+      },
+      "text_132": {
+        "txt": "text_132",
+        "css": ""
+      },
+      "code_133": {
+        "txt": "web.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_134": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_134": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_138": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_138": {
+        "txt": ""
+      },
+      "hr_139": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_139": {
+        "txt": "subtitle_139"
+      },
+      "text_141": {
+        "txt": "text_141",
+        "css": ""
+      },
+      "code_142": {
+        "txt": "web.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_143": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_143": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_143": {
+        "txt": ""
+      },
+      "hr_144": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_144": {
+        "txt": "subtitle_144"
+      },
+      "text_146": {
+        "txt": "text_146",
+        "css": ""
+      },
+      "code_147": {
+        "txt": "web.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_148": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_148": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_148": {
+        "txt": ""
+      },
+      "hr_149": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_149": {
+        "txt": "subtitle_149"
+      },
+      "text_151": {
+        "txt": "text_151",
+        "css": ""
+      },
+      "code_152": {
+        "txt": "web.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_153": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_153": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_153": {
+        "txt": ""
+      },
+      "hr_154": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_154": {
+        "txt": "subtitle_154"
+      },
+      "text_156": {
+        "txt": "text_156",
+        "css": ""
+      },
+      "code_157": {
+        "txt": "web.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_158": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_158": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_158": {
+        "txt": ""
+      },
+      "hr_159": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_159": {
+        "txt": "subtitle_159"
+      },
+      "text_160": {
+        "txt": "text_160",
+        "css": ""
+      },
+      "code_161": {
+        "txt": "web.setOnLoad( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_162": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_162": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. "
+        ]
+      },
+      "table-footer_162": {
+        "txt": ""
+      },
+      "hr_163": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_163": {
+        "txt": "subtitle_163"
+      },
+      "text_164": {
+        "txt": "text_164",
+        "css": ""
+      },
+      "code_165": {
+        "txt": "web.setOnUrl( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_166": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_166": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `url <i class=\"arg-def\">String</i>` The new url to navigate."
+        ]
+      },
+      "table-footer_166": {
+        "txt": ""
+      },
+      "hr_167": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_167": {
+        "txt": "subtitle_167"
+      },
+      "text_168": {
+        "txt": "text_168",
+        "css": ""
+      },
+      "code_169": {
+        "txt": "web.stop()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_170": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_170": {
+        "txt": "subtitle_170"
+      },
+      "text_171": {
+        "txt": "text_171",
+        "css": ""
+      },
+      "code_172": {
+        "txt": "web.reload()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_173": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_173": {
+        "txt": "subtitle_173"
+      },
+      "text_174": {
+        "txt": "text_174",
+        "css": ""
+      },
+      "code_175": {
+        "txt": "web.print()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_176": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_176": {
+        "txt": "heading_176"
+      },
+      "hr_177": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_177": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Create a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Create a webview and load the EnjineIO homepage\n    this.web = ui.addWebView(this.main, \"https://enjine.io/\", \"\", 0.9, 0.9)\n\n    // Add a callback handler when the website is loaded\n    this.web.setOnLoad(this.onLoad)\n  }\n\n  onLoad() {\n    ui.showPopup(\"Website is loaded!\")\n  }\n}",
+        "sample": "EnjineIO homepage",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_178": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Create a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Create a webview and pass \n    this.web = ui.addWebView(this.main, \"\", \"\", 0.9, 0.7)\n\n    // Add a callback handler when the page is loaded\n    this.web.setOnLoad(this.onLoad)\n\n    // Load a webpage from a string\n    this.web.html = '<html>' +\n      '<head>' +\n      '<script>' +\n      'function callFunc( name ) {' +\n      'alert(\"Hi \" + name + \" webview!\")' +\n      '}' +\n      '<\\/script>' +\n      '<\\/head>' +\n      '<body>' +\n      '<h2>This is an html.<\\/h2>' +\n      '<\\/body>' +\n      '<\\/html>';\n  }\n\n  onLoad() {\n    // Call the function `callFunc` inside the webpage\n    // when the page is loaded\n    var x = this.web.window.callFunc(\"John Doe\")\n  }\n}",
+        "sample": "Call a function inside the webview",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_179": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Create a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Create a webview and pass \n    this.web = ui.addWebView(this.main, \"\", \"\", 0.9, 0.7)\n\n    // Add a callback handler when the page is loaded\n    this.web.setOnLoad(this.onLoad)\n\n    // Load a webpage from a string\n    this.web.html = '<html>' +\n      '<head>' +\n      '<script>' +\n      'function getProduct(num1, num2)' +\n      '{' +\n      'return num1 * num2' +\n      '}' +\n      '<\\/script>' +\n      '<\\/head>' +\n      '<body>' +\n      '<h2>Get some product here!<\\/h2>' +\n      '<\\/body>' +\n      '<\\/html>';\n  }\n\n  onLoad() {\n    // Call the function `getProduct` inside the webview\n    // when the page is loaded and display the answer\n    var prod = this.web.window.getProduct(2, 3)\n\n    ui.showPopup(\"The product is \" + prod)\n  }\n}",
+        "sample": "Getting returned values from a function in a webview",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_180": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.loaded = false;\n    // Create a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Create a webview and pass \n    this.web = ui.addWebView(this.main, \"\", \"\", 0.7, 0.5)\n\n    // Add a callback handler when the page is loaded\n    this.web.setOnLoad(this.onLoad)\n\n    // Load a webpage from a string\n    this.web.html = '<html>' +\n      '<head>' +\n      '</head>' +\n      '<body>' +\n      '<h2 id=\"my-text\">Hi from webview!</h2>' +\n      '</body>' +\n      '</html>';\n\n    // Add a button control to the main layout\n    this.btn = ui.addButton(this.main, \"Change background color\")\n    this.btn.setOnTouch(this.onTouch)\n  }\n\n  onLoad() {\n    this.loaded = true;\n  }\n\n  onTouch() {\n    // Check first if webview is loaded\n    if (this.loaded) {\n      // Get a reference to the document object of the webview\n      const dom = this.web.document\n\n      // or `const dom = this.web.window.document`\n\n      // Set the background-color of the body to green\n      dom.body.style.backgroundColor = \"green\"\n\n      // Get a reference to the h2 element by its id\n      let h2 = dom.getElementById(\"my-text\")\n\n      // Set the text\n      h2.innerText = \"New text from parent!\"\n\n      // Set the text color to white\n      h2.style.color = \"white\"\n    } else\n      ui.showPopup(\"Webview is not yet loaded!\")\n  }\n}",
+        "sample": "Manipulate dom inside the webview",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_181": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   web = ui.addWebView(main, \"https://droidscript.org/\", \"\", 0.9, 0.9)\n   web.setOnLoad(onLoad)\n   web.backColor = \"yellow\"\n\ndef onLoad():\n   ui.showPopup(\"Website is loaded!\")",
+        "sample": "DroidScript.org homepage",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_182": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global web\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   web = ui.addWebView(main, \"\", \"\", 0.9, 0.7)\n   web.setOnLoad(onLoad)\n   web.html = '''\n       <html>\n       <head>\n\t\t<script>\n               function callFunc(name) {\n                   alert(\"Hi \" + name + \" from webview!\")\n               }\n\t\t</script>\n       </head>\n       <body>\n           <h2>This is an html.</h2>\n       </body>\n       </html>\n   '''\n\ndef onLoad( e ):\n   global web\n   x = web.window.callFunc(\"John Doe\")",
+        "sample": "Call a function inside the webview",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_183": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global web\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   web = ui.addWebView(main, \"\", \"\", 0.9, 0.7)\n   web.setOnLoad(onLoad)\n   web.html = '''\n       <html>\n       <head>\n           <script>\n               function getProduct(num1, num2) {\n                   return num1 * num2\n               }\n           </script>\n       </head>\n       <body>\n           <h2>Get some product here!</h2>\n       </body>\n       </html>\n   '''\n\ndef onLoad(e):\n   prod = web.window.getProduct(2, 3)\n   ui.showPopup(\"The product is \" + str(prod))",
+        "sample": "Getting returned values from a function in a webview",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_184": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global loaded, web\n   loaded = False\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   web = ui.addWebView(main, \"\", \"\", 0.7, 0.5)\n   web.setOnLoad(onLoad)\n   web.html = '''\n       <html>\n       <head></head>\n       <body>\n           <h2 id=\"my-text\">Hi from webview!</h2>\n       </body>\n       </html>\n   '''\n   btn = ui.addButton(main, \"Change background color\")\n   btn.setOnTouch(onTouch)\n\ndef onLoad(event):\n   global loaded\n   loaded = True\n\ndef onTouch(event):\n   if loaded:\n       dom = web.document\n       dom.body.style.backgroundColor = \"green\"\n       h2 = dom.getElementById(\"my-text\")\n       h2.innerText = \"New text from parent!\"\n       h2.style.color = \"white\"\n   else:\n       ui.showPopup(\"Webview is not yet loaded!\")",
+        "sample": "Manipulate dom inside the webview",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " WebView",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A WebView in mobile development is a component that allows embedding web content within an application.",
+      "de": "",
+      "es": ""
+    },
+    "text_4": {
+      "en": "It enables the display of web pages or web-based features, providing seamless integration of online content into mobile apps. Add a webview into your app using the `addWebView` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_12": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "Here are the setter and getter properties of the WebView Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_52": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_53": {
+      "en": "Here are the available methods for the WebView Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_56": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_60": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_62": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_67": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_69": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_71": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_73": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_77": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_79": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_81": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_85": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_91": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_95": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_97": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_106": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_113": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_115": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_120": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_122": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_130": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_132": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_139": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_141": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_144": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_149": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_151": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_154": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_156": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_159": {
+      "en": "setOnLoad",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "Adds a callback handler for onload event.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_163": {
+      "en": "setOnUrl",
+      "de": "",
+      "es": ""
+    },
+    "text_164": {
+      "en": "Define a callback function which is called when the user clicked a link.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_167": {
+      "en": "stop",
+      "de": "",
+      "es": ""
+    },
+    "text_168": {
+      "en": "Stops any web loading.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_170": {
+      "en": "reload",
+      "de": "",
+      "es": ""
+    },
+    "text_171": {
+      "en": "Reloads the current page.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_173": {
+      "en": "print",
+      "de": "",
+      "es": ""
+    },
+    "text_174": {
+      "en": "Print current page via the builtin android printer dialog.",
+      "de": "",
+      "es": ""
+    },
+    "heading_176": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/WebView';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

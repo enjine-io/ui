@@ -1,3 +1,10 @@
+/* Roboto Variable Font */
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 100 900;
+	src: url(fonts/Roboto-VariableFont.ttf) format('truetype');
+}
 /* cyrillic-ext */
 @font-face {
 	font-family: 'Roboto';

@@ -132,9 +132,6 @@ body, .backColor { background-color: var(--back); }
 .uiTabs .MuiAppBar-colorPrimary .MuiTabs-indicator { background-color: #fff; }
 .uiTabs .MuiAppBar-colorSecondary .MuiTabs-indicator { background-color: #fff; }
 .uiTabs .tab-panels { background-color: #fff; }
-.uiTabs .tab-title-horizontal { display: flex; flex-direction: row; align-items: center; }
-.uiTabs .tab-title-vertical { display: flex; flex-direction: column; align-items: center; }
-/* .uiTabs .tab-title-horizontal > :first-child { margin-right: 8px; } */
 
 /* Badge */
 /* .MuiBadge-badge {} */
@@ -200,11 +197,11 @@ body, .backColor { background-color: var(--back); }
 /*BottomNavigation*/
 /* .MuiBottomNavigation-root { background-color: var(--front); } */
 /* .MuiBottomNavigationAction-root { color: rgba(0, 0, 0, 0.54); } */
-.MuiBottomNavigationAction-root.Mui-selected { color: var(--primary); }
+/* .MuiBottomNavigationAction-root.Mui-selected { color: var(--primary); } */
 .MuiBottomNavigationAction-root.Mui-selected.MuiIconButton { color: var(--primary); }
 
 /*Dialogs*/
-.MuiDialogTitle-root { color: var(--primary); }
+/* .MuiDialogTitle-root { color: var(--primary); } */
 .MuiDialogContentText-root, .DialogContent-root { color: rgba(0, 0, 0, 0.54); }
 
 /*Chips*/
@@ -321,8 +318,18 @@ body, .backColor { background-color: var(--back); }
 
 .MuiStepIcon-root.MuiStepIcon-completed { color: var(--primary); }
 
+/*
+--------------------
+    FormControl
+--------------------
+*/
+
 /* Form helper text */
 .MuiFormHelperText-root {}
+
+.MuiFormLabel-root.Mui-focused {
+    color: var(--primary);
+}
 
 
 /* Button Toggle */
@@ -432,4 +439,84 @@ body, .backColor { background-color: var(--back); }
     width: 100%;
 }
 
-/* TreeView */
+/*
+--------------------
+    TreeView Control
+--------------------
+*/
+
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content /*.MuiTreeItem-label*/ {
+    /* background-color: rgba(63, 81, 181, 0.08); */
+}
+
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .uiTreeItem-label,
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .uiTreeItem-label:hover {
+    background-color: rgba(63, 81, 181, 0.08);
+}
+
+.uiTreeItem-label:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+
+/*
+--------------------
+    Table Control
+--------------------
+*/
+.uiTable .MuiCheckbox-colorSecondary.Mui-checked {
+    color: var(--secondary);
+}
+.uiTable .MuiTableRow-root.Mui-selected, .MuiTableRow-root.Mui-selected:hover {
+    background-color: var(--secondary-b);
+}
+
+.uiTable.uiTable-primary .MuiCheckbox-colorPrimary.Mui-checked {
+    color: var(--primary);
+}
+.uiTable.uiTable-primary .MuiTableRow-root.Mui-selected, .MuiTableRow-root.Mui-selected:hover {
+    background-color: var(--primary-b);
+}
+
+.uiTable .uiTable-Toolbar-selected {
+    background-color: var(--secondary-b);
+}
+.uiTable .uiTable-Toolbar-selected .uiTable-Toolbar-title {
+    color: var(--secondary);
+}
+.uiTable.uiTable-primary .uiTable-Toolbar-selected {
+    background-color: var(--primary-b);
+}
+.uiTable.uiTable-primary .uiTable-Toolbar-selected .uiTable-Toolbar-title {
+    color: var(--primary);
+}
+
+/*
+--------------------
+    Timeline Control
+--------------------
+*/
+.MuiTimelineDot-defaultPrimary {
+    background-color: var(--primary);
+}
+.MuiTimelineDot-defaultSecondary {
+    background-color: var(--secondary);
+}
+.MuiTimelineDot-outlinedPrimary {
+    border-color: var(--primary);
+}
+.MuiTimelineDot-outlinedSecondary {
+    border-color: var(--secondary);
+}
+.MuiTimelineDot-root.MuiTimelineDot-outlinedGrey {
+    /* border-color: rgba(0, 0, 0, 0.54); */
+}
+.MuiTimelineDot-root.MuiTimelineDot-outlinedGrey .MuiIcon-root {
+    color: rgba(0, 0, 0, 0.54);
+}
+.MuiTimelineDot-outlinedPrimary .MuiIcon-root {
+    color: var(--primary);
+}
+.MuiTimelineDot-outlinedSecondary .MuiIcon-root {
+    color: var(--secondary);
+}

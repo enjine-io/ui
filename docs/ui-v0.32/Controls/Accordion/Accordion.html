@@ -1,0 +1,3650 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_3": {
+        "txt": "text_3",
+        "css": ""
+      },
+      "img_4": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "img_5": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_5"
+      },
+      "text_6": {
+        "txt": "text_6",
+        "css": ""
+      },
+      "code_7": {
+        "txt": "acc = ui.addAccordion(parent, titles, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_8": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_8": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The parent layout where to add the text. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "titles ",
+          "Array",
+          "An array of accordion titles. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options. Style: Square Layout type: Linear|Absolute "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width [0-1]. "
+        ]
+      },
+      "table-row_12": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height [0-1]. "
+        ]
+      },
+      "table-footer_12": {
+        "txt": ""
+      },
+      "text_13": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Accordion</span>"
+      },
+      "hr_14": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_14": {
+        "txt": "heading_14"
+      },
+      "text_15": {
+        "txt": "text_15",
+        "css": ""
+      },
+      "table-header_16": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_17": {
+        "content": [
+          "titles ",
+          "Array",
+          "Sets or returns the list of titles for the accordion panels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_18": {
+        "content": [
+          "titleTextColor ",
+          "String",
+          "Sets or returns the color of the accordion item titles. Can be theme colors e.g. \"inherit,primary,secondary,textprimary,textsecondary\" or css formatted colors."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_19": {
+        "content": [
+          "titleTextSize ",
+          "Number",
+          "Sets or returns the size of the accordion panel title text. You can also pass a string like \"1.5rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_20": {
+        "content": [
+          "titleTextWeight ",
+          "String",
+          "Sets or returns the strength of the accordion panel title text. Values can be thin|extralight|light|regular|medium|semibold|bold|extrabold|black"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "titleWidth ",
+          "Number",
+          "Sets and returns the width of the title as fraction. Useful when you have a long title."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_22": {
+        "content": [
+          "secondaryTexts ",
+          "Array",
+          "Sets or returns the secondary texts as an array."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_23": {
+        "content": [
+          "secondaryTextColor ",
+          "String",
+          "Sets or returns the color of the accordion panel secondary text. Can be theme colors e.g. \"inherit,primary,secondary,textprimary,textsecondary\" or css formatted colors."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "secondaryTextSize ",
+          "Number",
+          "Sets or returns the size of the accordion panel secondary text. You can also pass a string like \"1.5rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "secondaryTextWeight ",
+          "String",
+          "Sets or returns the strength of the accordion panel secondary text. Values can be thin|extralight|light|regular|medium|semibold|bold|extrabold|black"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_26": {
+        "content": [
+          "textWeight ",
+          "String",
+          "Sets or returns the strength of the accordion panel title text and secondary text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_27": {
+        "content": [
+          "expandIcon ",
+          "String",
+          "Sets or returns the material icon font for the expand icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_28": {
+        "content": [
+          "expandIconColor ",
+          "String",
+          "Sets or returns the color of the accordion panel expand icon. You can pass theme colors e.g. \"inherit,primar,secondary,action\" or css formatted colors."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_29": {
+        "content": [
+          "expandIconSize ",
+          "Number",
+          "Sets or returns the size of the accordion panel expand icon. You can also pass theme size e.g. inherit,default,small,large or css sizes like \"1.5rem\""
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_30": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the disabled state of the accordion panels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_31": {
+        "content": [
+          "expanded ",
+          "Number",
+          "Sets or returns the expanded accordion panel."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_32": {
+        "content": [
+          "toggle ",
+          "Number",
+          "Expands or collapse a corresponding accordion by its index."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_33": {
+        "content": [
+          "rounded ",
+          "Boolean",
+          "Sets or returns whether the accordion is rounded or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_34": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius of the accordion panel. See also \"setCornerRadius\" method."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_35": {
+        "content": [
+          "itemPadding ",
+          "Array",
+          "Sets or returns the padding of each accordion item. See also \"setItemPadding\" method."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_36": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_36": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_37": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_38": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_39": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_40": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_41": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_42": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_43": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_44": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_45": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_46": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_47": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_48": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_49": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_50": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_51": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_52": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_53": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_54": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_55": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_56": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_57": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_58": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_59": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_60": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_61": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_62": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_63": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_64": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-footer_65": {
+        "txt": ""
+      },
+      "heading_66": {
+        "txt": "heading_66"
+      },
+      "text_67": {
+        "txt": "text_67",
+        "css": ""
+      },
+      "hr_68": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_68": {
+        "txt": "subtitle_68"
+      },
+      "text_70": {
+        "txt": "text_70",
+        "css": ""
+      },
+      "code_71": {
+        "txt": "acc.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_72": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_72": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_73": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_73": {
+        "txt": ""
+      },
+      "hr_74": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_74": {
+        "txt": "subtitle_74"
+      },
+      "text_76": {
+        "txt": "text_76",
+        "css": ""
+      },
+      "code_77": {
+        "txt": "acc.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_78": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_78": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_79": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_80": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_80": {
+        "txt": ""
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_83": {
+        "txt": "text_83",
+        "css": ""
+      },
+      "code_84": {
+        "txt": "acc.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_85": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_85": {
+        "txt": "subtitle_85"
+      },
+      "text_87": {
+        "txt": "text_87",
+        "css": ""
+      },
+      "code_88": {
+        "txt": "acc.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_89": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_89": {
+        "txt": "subtitle_89"
+      },
+      "text_91": {
+        "txt": "text_91",
+        "css": ""
+      },
+      "code_92": {
+        "txt": "acc.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_93": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_93": {
+        "txt": "subtitle_93"
+      },
+      "text_95": {
+        "txt": "text_95",
+        "css": ""
+      },
+      "code_96": {
+        "txt": "acc.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_97": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_97": {
+        "txt": "subtitle_97"
+      },
+      "text_99": {
+        "txt": "text_99",
+        "css": ""
+      },
+      "code_100": {
+        "txt": "acc.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_101": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_101": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_102": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_102": {
+        "txt": ""
+      },
+      "hr_103": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_103": {
+        "txt": "subtitle_103"
+      },
+      "text_105": {
+        "txt": "text_105",
+        "css": ""
+      },
+      "code_106": {
+        "txt": "acc.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_107": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_107": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_107": {
+        "txt": ""
+      },
+      "text_108": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_109": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_109": {
+        "txt": "subtitle_109"
+      },
+      "text_111": {
+        "txt": "text_111",
+        "css": ""
+      },
+      "code_112": {
+        "txt": "acc.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_113": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_113": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_114": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_115": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_116": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_117": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_117": {
+        "txt": ""
+      },
+      "hr_118": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_118": {
+        "txt": "subtitle_118"
+      },
+      "text_120": {
+        "txt": "text_120",
+        "css": ""
+      },
+      "code_121": {
+        "txt": "acc.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_122": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_122": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_123": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_124": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_125": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_126": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_126": {
+        "txt": ""
+      },
+      "hr_127": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_127": {
+        "txt": "subtitle_127"
+      },
+      "text_129": {
+        "txt": "text_129",
+        "css": ""
+      },
+      "code_130": {
+        "txt": "acc.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_133": {
+        "txt": ""
+      },
+      "hr_134": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_134": {
+        "txt": "subtitle_134"
+      },
+      "text_136": {
+        "txt": "text_136",
+        "css": ""
+      },
+      "code_137": {
+        "txt": "acc.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_138": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_138": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_139": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_140": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_141": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_142": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_143": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_143": {
+        "txt": ""
+      },
+      "hr_144": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_144": {
+        "txt": "subtitle_144"
+      },
+      "text_146": {
+        "txt": "text_146",
+        "css": ""
+      },
+      "code_147": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_148": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_148": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_149": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_150": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_151": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_152": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_152": {
+        "txt": ""
+      },
+      "hr_153": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_153": {
+        "txt": "subtitle_153"
+      },
+      "text_155": {
+        "txt": "text_155",
+        "css": ""
+      },
+      "code_156": {
+        "txt": "acc.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_157": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_157": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_157": {
+        "txt": ""
+      },
+      "hr_158": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_158": {
+        "txt": "subtitle_158"
+      },
+      "text_160": {
+        "txt": "text_160",
+        "css": ""
+      },
+      "code_161": {
+        "txt": "acc.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_162": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_162": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_162": {
+        "txt": ""
+      },
+      "hr_163": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_163": {
+        "txt": "subtitle_163"
+      },
+      "text_165": {
+        "txt": "text_165",
+        "css": ""
+      },
+      "code_166": {
+        "txt": "acc.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_167": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_167": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_167": {
+        "txt": ""
+      },
+      "hr_168": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_168": {
+        "txt": "subtitle_168"
+      },
+      "text_170": {
+        "txt": "text_170",
+        "css": ""
+      },
+      "code_171": {
+        "txt": "acc.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_172": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_172": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_172": {
+        "txt": ""
+      },
+      "hr_173": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_173": {
+        "txt": "subtitle_173"
+      },
+      "text_174": {
+        "txt": "text_174",
+        "css": ""
+      },
+      "code_175": {
+        "txt": "acc.getLayout( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_176": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_176": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index or title. "
+        ]
+      },
+      "table-footer_176": {
+        "txt": ""
+      },
+      "text_177": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_178": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_178": {
+        "txt": "subtitle_178"
+      },
+      "text_179": {
+        "txt": "text_179",
+        "css": ""
+      },
+      "code_180": {
+        "txt": "acc.setTitleText(title, newTitle)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_181": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_181": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion item title or index. "
+        ]
+      },
+      "table-row_182": {
+        "content": [
+          "newTitle ",
+          "String",
+          "The new title text. "
+        ]
+      },
+      "table-footer_182": {
+        "txt": ""
+      },
+      "hr_183": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_183": {
+        "txt": "subtitle_183"
+      },
+      "text_184": {
+        "txt": "text_184",
+        "css": ""
+      },
+      "code_185": {
+        "txt": "acc.setTitleByIndex(index, title)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_186": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_186": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion item index. "
+        ]
+      },
+      "table-row_187": {
+        "content": [
+          "title ",
+          "String",
+          "The new title text. "
+        ]
+      },
+      "table-footer_187": {
+        "txt": ""
+      },
+      "hr_188": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_188": {
+        "txt": "subtitle_188"
+      },
+      "text_189": {
+        "txt": "text_189",
+        "css": ""
+      },
+      "code_190": {
+        "txt": "acc.setTitleTextColor(title, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_191": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_191": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_192": {
+        "content": [
+          "color ",
+          "String",
+          "inherit|primary|secondary|textprimary|textsecondary|css colors "
+        ]
+      },
+      "table-footer_192": {
+        "txt": ""
+      },
+      "hr_193": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_193": {
+        "txt": "subtitle_193"
+      },
+      "text_194": {
+        "txt": "text_194",
+        "css": ""
+      },
+      "code_195": {
+        "txt": "acc.setTitleTextColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_196": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_196": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_197": {
+        "content": [
+          "color ",
+          "String",
+          "inherit|primary|secondary|textprimary|textsecondary|css colors "
+        ]
+      },
+      "table-footer_197": {
+        "txt": ""
+      },
+      "hr_198": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_198": {
+        "txt": "subtitle_198"
+      },
+      "text_199": {
+        "txt": "text_199",
+        "css": ""
+      },
+      "code_200": {
+        "txt": "acc.setTitleTextSize(title, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_201": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_201": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title. "
+        ]
+      },
+      "table-row_202": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_202": {
+        "txt": ""
+      },
+      "hr_203": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_203": {
+        "txt": "subtitle_203"
+      },
+      "text_204": {
+        "txt": "text_204",
+        "css": ""
+      },
+      "code_205": {
+        "txt": "acc.setTitleTextSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_206": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_206": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_207": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_207": {
+        "txt": ""
+      },
+      "hr_208": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_208": {
+        "txt": "subtitle_208"
+      },
+      "text_209": {
+        "txt": "text_209",
+        "css": ""
+      },
+      "code_210": {
+        "txt": "acc.setTitleTextWeight(title, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_211": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_211": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title text or index. "
+        ]
+      },
+      "table-row_212": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_212": {
+        "txt": ""
+      },
+      "hr_213": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_213": {
+        "txt": "subtitle_213"
+      },
+      "text_214": {
+        "txt": "text_214",
+        "css": ""
+      },
+      "code_215": {
+        "txt": "acc.setTitleTextWeightByIndex(index, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_216": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_216": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_217": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_217": {
+        "txt": ""
+      },
+      "hr_218": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_218": {
+        "txt": "subtitle_218"
+      },
+      "text_219": {
+        "txt": "text_219",
+        "css": ""
+      },
+      "code_220": {
+        "txt": "acc.setSecondaryText(title, secondaryText)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_221": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_221": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_222": {
+        "content": [
+          "secondaryText ",
+          "String",
+          "The accordion panel secondary text. "
+        ]
+      },
+      "table-footer_222": {
+        "txt": ""
+      },
+      "hr_223": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_223": {
+        "txt": "subtitle_223"
+      },
+      "text_224": {
+        "txt": "text_224",
+        "css": ""
+      },
+      "code_225": {
+        "txt": "acc.setSecondaryTextByIndex(index, secondaryText)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_226": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_226": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_227": {
+        "content": [
+          "secondaryText ",
+          "String",
+          "The accordion panel secondary text. "
+        ]
+      },
+      "table-footer_227": {
+        "txt": ""
+      },
+      "hr_228": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_228": {
+        "txt": "subtitle_228"
+      },
+      "text_229": {
+        "txt": "text_229",
+        "css": ""
+      },
+      "code_230": {
+        "txt": "acc.setSecondaryTextColor(title, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_231": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_231": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_232": {
+        "content": [
+          "color ",
+          "String",
+          "inherit|primary|secondary|textprimary|textsecondary|css formatted colors "
+        ]
+      },
+      "table-footer_232": {
+        "txt": ""
+      },
+      "hr_233": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_233": {
+        "txt": "subtitle_233"
+      },
+      "text_234": {
+        "txt": "text_234",
+        "css": ""
+      },
+      "code_235": {
+        "txt": "acc.setSecondaryTextColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_236": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_236": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_237": {
+        "content": [
+          "color ",
+          "String",
+          "inherit|primary|secondary|textprimary|textsecondary|css formatted colors "
+        ]
+      },
+      "table-footer_237": {
+        "txt": ""
+      },
+      "hr_238": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_238": {
+        "txt": "subtitle_238"
+      },
+      "text_239": {
+        "txt": "text_239",
+        "css": ""
+      },
+      "code_240": {
+        "txt": "acc.setSecondaryTextSize(title, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_241": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_241": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title. "
+        ]
+      },
+      "table-row_242": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_242": {
+        "txt": ""
+      },
+      "hr_243": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_243": {
+        "txt": "subtitle_243"
+      },
+      "text_244": {
+        "txt": "text_244",
+        "css": ""
+      },
+      "code_245": {
+        "txt": "acc.setSecondaryTextSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_246": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_246": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_247": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_247": {
+        "txt": ""
+      },
+      "hr_248": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_248": {
+        "txt": "subtitle_248"
+      },
+      "text_249": {
+        "txt": "text_249",
+        "css": ""
+      },
+      "code_250": {
+        "txt": "acc.setSecondaryTextWeight(title, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_251": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_251": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_252": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_252": {
+        "txt": ""
+      },
+      "hr_253": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_253": {
+        "txt": "subtitle_253"
+      },
+      "text_254": {
+        "txt": "text_254",
+        "css": ""
+      },
+      "code_255": {
+        "txt": "acc.setSecondaryTextWeightByIndex(index, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_256": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_256": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_257": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_257": {
+        "txt": ""
+      },
+      "hr_258": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_258": {
+        "txt": "subtitle_258"
+      },
+      "text_259": {
+        "txt": "text_259",
+        "css": ""
+      },
+      "code_260": {
+        "txt": "acc.setTextColor(titleTextColor, secondaryTextColor)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_261": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_261": {
+        "content": [
+          "titleTextColor ",
+          "String",
+          "inherit|primary|secondary|textprimary|textsecondary|css formatted colors. "
+        ]
+      },
+      "table-row_262": {
+        "content": [
+          "secondaryTextColor ",
+          "String",
+          "inherit|primary|secondary|textprimary|textsecondary|css formatted colors. "
+        ]
+      },
+      "table-footer_262": {
+        "txt": ""
+      },
+      "hr_263": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_263": {
+        "txt": "subtitle_263"
+      },
+      "text_264": {
+        "txt": "text_264",
+        "css": ""
+      },
+      "code_265": {
+        "txt": "acc.setTextSize(titleTextSize, secondaryTextSize)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_266": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_266": {
+        "content": [
+          "titleTextSize ",
+          "Number",
+          "Font size for the title. "
+        ]
+      },
+      "table-row_267": {
+        "content": [
+          "secondaryTextSize ",
+          "Number",
+          "Font size for the secondary text. "
+        ]
+      },
+      "table-footer_267": {
+        "txt": ""
+      },
+      "hr_268": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_268": {
+        "txt": "subtitle_268"
+      },
+      "text_269": {
+        "txt": "text_269",
+        "css": ""
+      },
+      "code_270": {
+        "txt": "acc.setTextWeight(titleTextWeight, secondaryTextWeight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_271": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_271": {
+        "content": [
+          "titleTextWeight ",
+          "String",
+          "Title text strength. "
+        ]
+      },
+      "table-row_272": {
+        "content": [
+          "secondaryTextWeight ",
+          "String",
+          "Secondary text strength. "
+        ]
+      },
+      "table-footer_272": {
+        "txt": ""
+      },
+      "hr_273": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_273": {
+        "txt": "subtitle_273"
+      },
+      "text_274": {
+        "txt": "text_274",
+        "css": ""
+      },
+      "code_275": {
+        "txt": "acc.setExpandIcon(title, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_276": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_276": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_277": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon font. "
+        ]
+      },
+      "table-footer_277": {
+        "txt": ""
+      },
+      "hr_278": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_278": {
+        "txt": "subtitle_278"
+      },
+      "text_279": {
+        "txt": "text_279",
+        "css": ""
+      },
+      "code_280": {
+        "txt": "acc.setExpandIconByIndex(index, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_281": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_281": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_282": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon font. "
+        ]
+      },
+      "table-footer_282": {
+        "txt": ""
+      },
+      "hr_283": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_283": {
+        "txt": "subtitle_283"
+      },
+      "text_284": {
+        "txt": "text_284",
+        "css": ""
+      },
+      "code_285": {
+        "txt": "acc.setExpandIconColor(title, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_286": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_286": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_287": {
+        "content": [
+          "color ",
+          "String",
+          "Inherit|Primary|Secondary|Action|Css formatted colors "
+        ]
+      },
+      "table-footer_287": {
+        "txt": ""
+      },
+      "hr_288": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_288": {
+        "txt": "subtitle_288"
+      },
+      "text_289": {
+        "txt": "text_289",
+        "css": ""
+      },
+      "code_290": {
+        "txt": "acc.setExpandIconColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_291": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_291": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_292": {
+        "content": [
+          "color ",
+          "String",
+          "Inherit|Primary|Secondary|Action|Css formatted colors "
+        ]
+      },
+      "table-footer_292": {
+        "txt": ""
+      },
+      "hr_293": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_293": {
+        "txt": "subtitle_293"
+      },
+      "text_294": {
+        "txt": "text_294",
+        "css": ""
+      },
+      "code_295": {
+        "txt": "acc.setExpandIconSize(title, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_296": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_296": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or inde. "
+        ]
+      },
+      "table-row_297": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass theme size e.g. inherit,default,small,large or css sizes like \"1.5rem\". "
+        ]
+      },
+      "table-footer_297": {
+        "txt": ""
+      },
+      "hr_298": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_298": {
+        "txt": "subtitle_298"
+      },
+      "text_299": {
+        "txt": "text_299",
+        "css": ""
+      },
+      "code_300": {
+        "txt": "acc.setExpandIconSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_301": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_301": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_302": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass theme size e.g. inherit,default,small,large or css sizes like \"1.5rem\". "
+        ]
+      },
+      "table-footer_302": {
+        "txt": ""
+      },
+      "hr_303": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_303": {
+        "txt": "subtitle_303"
+      },
+      "text_304": {
+        "txt": "text_304",
+        "css": ""
+      },
+      "code_305": {
+        "txt": "acc.addItem( title, secondaryText, index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_306": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_306": {
+        "content": [
+          "title ",
+          "String",
+          "Accordion title "
+        ]
+      },
+      "table-row_307": {
+        "content": [
+          "secondaryText ",
+          "String",
+          "Accordion secondary text "
+        ]
+      },
+      "table-row_308": {
+        "content": [
+          "index ",
+          "Number",
+          "The index at which the accordion item will be added. If `null`, the item will be added at the bottom of the accordion. "
+        ]
+      },
+      "table-footer_308": {
+        "txt": ""
+      },
+      "hr_309": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_309": {
+        "txt": "subtitle_309"
+      },
+      "text_310": {
+        "txt": "text_310",
+        "css": ""
+      },
+      "code_311": {
+        "txt": "acc.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_312": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_312": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-footer_312": {
+        "txt": ""
+      },
+      "hr_313": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_313": {
+        "txt": "subtitle_313"
+      },
+      "text_314": {
+        "txt": "text_314",
+        "css": ""
+      },
+      "code_315": {
+        "txt": "acc.removeItem( title )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_316": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_316": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-footer_316": {
+        "txt": ""
+      },
+      "hr_317": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_317": {
+        "txt": "subtitle_317"
+      },
+      "text_318": {
+        "txt": "text_318",
+        "css": ""
+      },
+      "code_319": {
+        "txt": "acc.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_320": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_320": {
+        "txt": "subtitle_320"
+      },
+      "text_321": {
+        "txt": "text_321",
+        "css": ""
+      },
+      "code_322": {
+        "txt": "acc.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_323": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_323": {
+        "txt": "subtitle_323"
+      },
+      "text_324": {
+        "txt": "text_324",
+        "css": ""
+      },
+      "code_325": {
+        "txt": "btg.setEnabled(title, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_326": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_326": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. Passing a Boolean will apply the config to the control. "
+        ]
+      },
+      "table-row_327": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "The enabled state. "
+        ]
+      },
+      "table-footer_327": {
+        "txt": ""
+      },
+      "hr_328": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_328": {
+        "txt": "subtitle_328"
+      },
+      "text_329": {
+        "txt": "text_329",
+        "css": ""
+      },
+      "code_330": {
+        "txt": "acc.setEnabledByIndex(index, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_331": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_331": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_332": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "The enabled state. "
+        ]
+      },
+      "table-footer_332": {
+        "txt": ""
+      },
+      "hr_333": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_333": {
+        "txt": "subtitle_333"
+      },
+      "text_334": {
+        "txt": "text_334",
+        "css": ""
+      },
+      "code_335": {
+        "txt": "acc.getEnabled( title )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_336": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_336": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-footer_336": {
+        "txt": ""
+      },
+      "text_337": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_338": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_338": {
+        "txt": "subtitle_338"
+      },
+      "text_339": {
+        "txt": "text_339",
+        "css": ""
+      },
+      "code_340": {
+        "txt": "acc.getEnabledByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_341": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_341": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-footer_341": {
+        "txt": ""
+      },
+      "text_342": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_343": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_343": {
+        "txt": "subtitle_343"
+      },
+      "text_344": {
+        "txt": "text_344",
+        "css": ""
+      },
+      "code_345": {
+        "txt": "acc.setExpanded(title, expanded)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_346": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_346": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion panel title or index. "
+        ]
+      },
+      "table-row_347": {
+        "content": [
+          "expanded ",
+          "Boolean",
+          "The expanded state of the accordion panel. "
+        ]
+      },
+      "table-footer_347": {
+        "txt": ""
+      },
+      "hr_348": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_348": {
+        "txt": "subtitle_348"
+      },
+      "text_349": {
+        "txt": "text_349",
+        "css": ""
+      },
+      "code_350": {
+        "txt": "acc.setExpandedByIndex(index, expanded)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_351": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_351": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion panel index. "
+        ]
+      },
+      "table-row_352": {
+        "content": [
+          "expanded ",
+          "Boolean",
+          "The expanded state of the accordion panel. "
+        ]
+      },
+      "table-footer_352": {
+        "txt": ""
+      },
+      "hr_353": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_353": {
+        "txt": "subtitle_353"
+      },
+      "text_354": {
+        "txt": "text_354",
+        "css": ""
+      },
+      "table-header_355": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_355": {
+        "content": [
+          "layout ",
+          "Object",
+          "The layout to check. "
+        ]
+      },
+      "table-footer_355": {
+        "txt": ""
+      },
+      "text_356": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Number</span>"
+      },
+      "hr_357": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_357": {
+        "txt": "subtitle_357"
+      },
+      "text_358": {
+        "txt": "text_358",
+        "css": ""
+      },
+      "code_359": {
+        "txt": "acc.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_360": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_360": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `index <i class=\"arg-def\">Number</i>` The index of the corresponding accordion item. `expand <i class=\"arg-def\">Boolean</i>` The expanded state of the accordion."
+        ]
+      },
+      "table-footer_360": {
+        "txt": ""
+      },
+      "hr_361": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_361": {
+        "txt": "subtitle_361"
+      },
+      "text_362": {
+        "txt": "text_362",
+        "css": ""
+      },
+      "code_363": {
+        "txt": "acc.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_364": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_364": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `title <i class=\"arg-def\">String</i>` The accordion title text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding accordion item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_364": {
+        "txt": ""
+      },
+      "hr_365": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_365": {
+        "txt": "subtitle_365"
+      },
+      "text_366": {
+        "txt": "text_366",
+        "css": ""
+      },
+      "code_367": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_368": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_368": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_369": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_370": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_371": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_372": {
+        "content": [
+          "[mode='px'] ",
+          "String",
+          "Unit of measurement. Values are \"px,rem,%\" "
+        ]
+      },
+      "table-footer_372": {
+        "txt": ""
+      },
+      "hr_373": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_373": {
+        "txt": "subtitle_373"
+      },
+      "text_374": {
+        "txt": "text_374",
+        "css": ""
+      },
+      "code_375": {
+        "txt": "acc.setItemPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_376": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_376": {
+        "content": [
+          "left ",
+          "Number",
+          "Left padding of the accordion item. "
+        ]
+      },
+      "table-row_377": {
+        "content": [
+          "top ",
+          "Number",
+          "Top padding of the accordion item. "
+        ]
+      },
+      "table-row_378": {
+        "content": [
+          "right ",
+          "Number",
+          "Right padding of the accordion item. "
+        ]
+      },
+      "table-row_379": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom padding of the accordion item. "
+        ]
+      },
+      "table-row_380": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement. Can be \"rem,px,v,%\". "
+        ]
+      },
+      "table-footer_380": {
+        "txt": ""
+      },
+      "hr_381": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_381": {
+        "txt": "subtitle_381"
+      },
+      "text_382": {
+        "txt": "text_382",
+        "css": ""
+      },
+      "code_383": {
+        "txt": "acc.setItemColor(title, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_384": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_384": {
+        "content": [
+          "title ",
+          "String",
+          "The accordion item title or index. "
+        ]
+      },
+      "table-row_385": {
+        "content": [
+          "color ",
+          "String",
+          "Theme colors or css formatted colors. "
+        ]
+      },
+      "table-footer_385": {
+        "txt": ""
+      },
+      "hr_386": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_386": {
+        "txt": "subtitle_386"
+      },
+      "text_387": {
+        "txt": "text_387",
+        "css": ""
+      },
+      "code_388": {
+        "txt": "acc.setItemColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_389": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_389": {
+        "content": [
+          "index ",
+          "Number",
+          "The accordion item index. "
+        ]
+      },
+      "table-row_390": {
+        "content": [
+          "color ",
+          "String",
+          "Theme colors or css formatted colors. "
+        ]
+      },
+      "table-footer_390": {
+        "txt": ""
+      },
+      "hr_391": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_391": {
+        "txt": "heading_391"
+      },
+      "hr_392": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_392": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen main layout.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n    this.accords = [\"Accordion 1\", \"Accordion 2\", \"Accordion 3\"]\n\n    // Adds an accordion to the main layout\n    this.acc = ui.addAccordion(this.main, this.accords, \"\", 0.9)\n\n    // Secondary text to display\n    var secTxt = [\n      \"This is the secondary text 1\",\n      \"This is the secondary text 2\",\n      \"This is the secondary text 3\"\n    ]\n\n    // sets the secondary text\n    this.acc.setSecondaryText(secTxt)\n\n    // Add ontouch event handler to the accordion\n    this.acc.setOnTouch(this.onTouch)\n\n    // Add controls to the first accordion layout\n    this.lay1 = this.acc.getLayout(0)\n    this.txt = ui.addText(this.lay1, \"This is a text in the first layout.\")\n\n    // Add controls to the second layout\n    this.lay2 = this.acc.getLayout(1)\n    this.btn = ui.addButton(this.lay2, \"Button\", \"Primary\")\n\n    // Add controls to the third layout\n    this.lay3 = this.acc.getLayout(2)\n    this.tfd = ui.addTextField(this.lay3, \"\", \"Outlined\", 0.3)\n    this.tfd.label = \"Enter some text\"\n  }\n\n  onTouch(index, expand) {\n    var msg = `${this.accords[index]} is ${expand ? \"open\" : \"close\"}`\n    ui.showPopup(msg)\n  }\n}",
+        "sample": "Complete accordion implementation",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_393": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.count = 1;\n\n    // Creates a fullscreen main layout.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0, 0.01, 0, 0.01)\n\n    var accords = [\"Accordion 1\", \"Accordion 2\", \"Accordion 3\"]\n\n    // Adds an accordion to the main layout\n    this.acc = ui.addAccordion(this.main, accords, \"\", 0.9)\n\n    this.lay = ui.addLayout(this.main, \"Linear\", \"Horizontal\", 0.9)\n    this.lay.childSpacing = \"evenly\"\n\n    // add a button controls to add or remove accordion item\n    this.btn1 = ui.addButton(this.lay, \"Append Item\")\n    this.btn1.setOnTouch(this.btn1_onTouch)\n\n    this.btn2 = ui.addButton(this.lay, \"Add Item in index 1\")\n    this.btn2.setOnTouch(this.btn2_onTouch)\n\n    this.btn3 = ui.addButton(this.lay, \"Remove Item\")\n    this.btn3.setOnTouch(this.btn3_onTouch)\n  }\n\n  btn1_onTouch() {\n    // add an item at the bottom of the accordion\n    this.acc.addItem(\"New Bottom Title\", \"New secondary text\")\n  }\n\n  btn2_onTouch() {\n    var title = \"New Title \" + this.count++\n    // insert item in the second index\n    this.acc.addItem(title, \"New secondary text\", 1)\n  }\n\n  btn3_onTouch() {\n    this.acc.removeItemByIndex(2)\n    ui.showPopup(\"Second item is removed\")\n  }\n}",
+        "sample": "Items manipulation",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_394": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen main layout.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\")\n\n    var items = [\"Accordion 1\", \"Accordion 2\", \"Accordion 3\"]\n    var texts = [\"Description for item 1\", \"Description for item 2\", \"Description for item 3\"];\n\n    // Adds an accordion to the main layout\n    this.acc = ui.addAccordion(this.main, items, \"\", 0.9)\n    this.acc.setSecondaryText(texts)\n\n    // Sets the background color\n    this.acc.backColor = \"#b2dfdb\"\n\n    // Sets the text-sizes\n    this.acc.textSize1 = 18\n    this.acc.textSize2 = 14\n\n    // Sets the text colors\n    this.acc.textColor1 = \"#00695c\"\n    this.acc.textColor2 = \"#009688\"\n\n    // Sets the corner radius\n    this.acc.cornerRadius = 14\n\n    // Sets the expand icon\n    this.acc.expandIcon = \"favorite\"\n  }\n}",
+        "sample": "Custom styles",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_395": {
+        "txt": "from hybrid import ui\n\nitems = []\n\ndef OnStart():\n   \n   global items\n\n   # Creates a fullscreen main layout.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n   items = [\"Accordion 1\", \"Accordion 2\", \"Accordion 3\"]\n\n   acc = ui.addAccordion(main, items, \"\", 0.9)\n\n   # Secondary text to display\n   secTxt = [\n       \"This is the secondary text 1\",\n       \"This is the secondary text 2\",\n       \"This is the secondary text 3\"\n   ]\n\n   # sets the secondary text\n   acc.setSecondaryText( secTxt )\n\n   # Add ontouch event handler to the accordion\n   acc.setOnTouch( onTouch )\n\n\n   # Add controls to the first accordion layout\n   lay1 = acc.getLayout( 0 )\n   txt = ui.addText(lay1, \"This is a text in the first layout.\")\n\n   # Add controls to the second layout\n   lay2 = acc.getLayout( 1 )\n   btn = ui.addButton(lay2, \"Button\", \"Primary\")\n\n   # Add controls to the third layout\n   lay3 = acc.getLayout( 2 )\n   tfd = ui.addTextField(lay3, \"\", \"Outlined\")\n   tfd.label = \"Enter some text\"\n\ndef onTouch(index, expand):\n   global items\n   msg = f\"{items[index]} is {'open' if expand else 'close'}\"\n   ui.showPopup( msg )",
+        "sample": "Complete accordion implementation",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_396": {
+        "txt": "from hybrid import ui\n\nacc = None\ncount = 1\n\ndef OnStart():\n   global acc, count\n   count = 1\n\n   # Creates a fullscreen main layout.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.01, 0, 0.01)\n\n   accords = [\"Accordion 1\", \"Accordion 2\", \"Accordion 3\"]\n\n   # Adds an accordion to the main layout\n   acc = ui.addAccordion(main, accords, \"\", 0.9)\n\n   lay = ui.addLayout(main, \"Linear\", \"Horizontal\", 0.9)\n   lay.childSpacing = \"evenly\"\n\n   # add a button controls to add or remove accordion item\n   btn1 = ui.addButton(lay, \"Append Item\")\n   btn1.setOnTouch(btn1_onTouch)\n\n   btn2 = ui.addButton(lay, \"Add Item in index 1\")\n   btn2.setOnTouch(btn2_onTouch)\n\n   btn3 = ui.addButton(lay, \"Remove Item\")\n   btn3.setOnTouch(btn3_onTouch)\n\ndef btn1_onTouch(event):\n   global acc\n   # add an item at the bottom of the accordion\n   acc.addItem(\"New Bottom Title\", \"New secondary text\")\n\ndef btn2_onTouch(event):\n   global acc, count\n   title = \"New Title \" + str(count)\n   # insert item in the second index\n   acc.addItem(title, \"New secondary text\", 1)\n   count += 1\n\ndef btn3_onTouch(event):\n   global acc\n   acc.removeItemByIndex(1)\n   ui.showPopup(\"Second item is removed\")",
+        "sample": "Items manipulation",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_397": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen main layout.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\")\n\n   items = [\"Accordion 1\", \"Accordion 2\", \"Accordion 3\"]\n   texts = [\"Description for item 1\", \"Description for item 2\", \"Description for item 3\"]\n\n   # Adds an accordion to the main layout\n   acc = ui.addAccordion(main, items, \"\", 0.9)\n   acc.setSecondaryText(texts)\n\n   # Sets the background color\n   acc.backColor = \"#b2dfdb\"\n\n   # Sets the text-sizes\n   acc.textSize1 = 18\n   acc.textSize2 = 14\n\n   # Sets the text colors\n   acc.textColor1 = \"#00695c\"\n   acc.textColor2 = \"#009688\"\n\n   # Sets the corner radius\n   acc.cornerRadius = 14\n\n   # Sets the expand icon\n   acc.expandIcon = \"favorite\"",
+        "sample": "Custom styles",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Accordion",
+      "de": "",
+      "es": ""
+    },
+    "text_3": {
+      "en": "Adds an accordion or expansion panel into your app.",
+      "de": "",
+      "es": ""
+    },
+    "text_6": {
+      "en": "This is very useful to display controls that are grouped together. Add an accordion using the \"addAccordion\" method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_14": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_15": {
+      "en": "Here are the properties you can set or get from the Accordion Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_66": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_67": {
+      "en": "Here are the methods available for Accordion Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_68": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_70": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_74": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_76": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_83": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_85": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_87": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_91": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_93": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_95": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_97": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_103": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_109": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_111": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_118": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_120": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_127": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_134": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_136": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_144": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_146": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_153": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_155": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_158": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_163": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_165": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_168": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_170": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_173": {
+      "en": "getLayout",
+      "de": "",
+      "es": ""
+    },
+    "text_174": {
+      "en": "Get the layout of the corresponding accordion panel where to add your content.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_178": {
+      "en": "setTitleText",
+      "de": "",
+      "es": ""
+    },
+    "text_179": {
+      "en": "Sets the accordion item title text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_183": {
+      "en": "setTitleByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_184": {
+      "en": "Sets the accordion item title text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_188": {
+      "en": "setTitleTextColor",
+      "de": "",
+      "es": ""
+    },
+    "text_189": {
+      "en": "Sets the color of the accordion panel title text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_193": {
+      "en": "setTitleTextColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "Sets the color of the accordion panel title text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_198": {
+      "en": "setTitleTextSize",
+      "de": "",
+      "es": ""
+    },
+    "text_199": {
+      "en": "Sets the size of the accordion panel title text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_203": {
+      "en": "setTitleTextSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_204": {
+      "en": "Sets the size of the accordion panel title text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_208": {
+      "en": "setTitleTextWeight",
+      "de": "",
+      "es": ""
+    },
+    "text_209": {
+      "en": "Sets the strength of the accordion panel title text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_213": {
+      "en": "setTitleTextWeightByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_214": {
+      "en": "Sets the strength of the accordion panel title text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_218": {
+      "en": "setSecondaryText",
+      "de": "",
+      "es": ""
+    },
+    "text_219": {
+      "en": "Sets the accordion panel secondary text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_223": {
+      "en": "setSecondaryTextByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_224": {
+      "en": "Sets the accordion panel secondary text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_228": {
+      "en": "setSecondaryTextColor",
+      "de": "",
+      "es": ""
+    },
+    "text_229": {
+      "en": "Sets the color of the accordion panel secondary text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_233": {
+      "en": "setSecondaryTextColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_234": {
+      "en": "Sets the color of the accordion panel secondary text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_238": {
+      "en": "setSecondaryTextSize",
+      "de": "",
+      "es": ""
+    },
+    "text_239": {
+      "en": "Sets the size of the accordion panel secondary text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_243": {
+      "en": "setSecondaryTextSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_244": {
+      "en": "Sets the size of the accordion panel secondary text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_248": {
+      "en": "setSecondaryTextWeight",
+      "de": "",
+      "es": ""
+    },
+    "text_249": {
+      "en": "Sets the strength of the accordion panel secondary text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_253": {
+      "en": "setSecondaryTextWeightByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_254": {
+      "en": "Sets the strength of the accordion panel secondary text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_258": {
+      "en": "setTextColor",
+      "de": "",
+      "es": ""
+    },
+    "text_259": {
+      "en": "Sets the color of the accordion panel title and secondary text respectively.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_263": {
+      "en": "setTextSize",
+      "de": "",
+      "es": ""
+    },
+    "text_264": {
+      "en": "Sets the size of the accordion panel title text and secondary text respectively.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_268": {
+      "en": "setTextWeight",
+      "de": "",
+      "es": ""
+    },
+    "text_269": {
+      "en": "Sets the strength of the accordion title text and secondary text respectively.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_273": {
+      "en": "setExpandIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_274": {
+      "en": "Sets the accordion panel expand icon.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_278": {
+      "en": "setExpandIconByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_279": {
+      "en": "Sets the accordion panel expand icon by index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_283": {
+      "en": "setExpandIconColor",
+      "de": "",
+      "es": ""
+    },
+    "text_284": {
+      "en": "Sets the color of the accordion panel expand icon.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_288": {
+      "en": "setExpandIconColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_289": {
+      "en": "Sets the color of the accordion panel expand icon by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_293": {
+      "en": "setExpandIconSize",
+      "de": "",
+      "es": ""
+    },
+    "text_294": {
+      "en": "Sets the size of the accordion panel expand icon.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_298": {
+      "en": "setExpandIconSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_299": {
+      "en": "Sets the size of the accordion panel expand icon by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_303": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_304": {
+      "en": "Adds an item to the accordion.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_309": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_310": {
+      "en": "Removes accordion pabel by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_313": {
+      "en": "removeItem",
+      "de": "",
+      "es": ""
+    },
+    "text_314": {
+      "en": "Removes accordion item by its title name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_317": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_318": {
+      "en": "Removes the first accordion item. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_320": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_321": {
+      "en": "Removes the last accordion item. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_323": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_324": {
+      "en": "Enable or disable the accordion component or the accordion panel.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_328": {
+      "en": "setEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_329": {
+      "en": "Sets the enabled state of the accordion panel by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_333": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_334": {
+      "en": "Get the enabled state of an accordion panel.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_338": {
+      "en": "getEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_339": {
+      "en": "Returns the enabled state of the accordion panel by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_343": {
+      "en": "setExpanded",
+      "de": "",
+      "es": ""
+    },
+    "text_344": {
+      "en": "Expand or collapsed an accordion panel.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_348": {
+      "en": "setExpandedByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_349": {
+      "en": "Expand or collapse an accordion panel by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_353": {
+      "en": "getLayoutIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_354": {
+      "en": "Get the index of the corresponding layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_357": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_358": {
+      "en": "Sets a callback function when the accordion is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_361": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_362": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_365": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_366": {
+      "en": "Sets the corner radius of the top and bottom accordion panels.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_373": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_374": {
+      "en": "Sets the padding of the accordion item. See \"itemPadding\" property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_381": {
+      "en": "setItemColor",
+      "de": "",
+      "es": ""
+    },
+    "text_382": {
+      "en": "Sets the color of the accordion item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_386": {
+      "en": "setItemColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_387": {
+      "en": "Sets the color of the accordion item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "heading_391": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/Accordion';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

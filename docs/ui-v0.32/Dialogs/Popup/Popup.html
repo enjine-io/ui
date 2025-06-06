@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Dialogs",
+  "homeLink": "ui/Dialogs",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "text_4": {
+        "txt": "text_4",
+        "css": ""
+      },
+      "code_5": {
+        "txt": "pop = ui.showPopup( msg, options, duration )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_6": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_6": {
+        "content": [
+          "msg ",
+          "String",
+          "The message to display on the pop-up. "
+        ]
+      },
+      "table-row_7": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nDuration: `Short`, `Long`\\nVertical Alignment: `Top`, `Bottom`\\nHorizontal Alignment: `Left`, `Center`, `Right`\\nAction options: `Icon`, `HideOnAction`\\nTransition: `Grow`, `Fade`, `Slide`, `Collapse`, `Zoom` "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "[duration] ",
+          "Number",
+          "Time in milliseconds. Pass this if you don't want the default auto hide duration. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[action] ",
+          "String",
+          "Action button text "
+        ]
+      },
+      "table-footer_9": {
+        "txt": ""
+      },
+      "text_10": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Popup</span>"
+      },
+      "hr_11": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_11": {
+        "txt": "heading_11"
+      },
+      "text_12": {
+        "txt": "text_12",
+        "css": ""
+      },
+      "table-header_13": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_14": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the text of the popup."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_15": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the popup text color."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_16": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the popup text size."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_17": {
+        "content": [
+          "textWeight ",
+          "String",
+          "Sets or returns the popup text strength."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_18": {
+        "content": [
+          "actionColor ",
+          "String",
+          "Sets or returns the popup action text color."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_19": {
+        "content": [
+          "actionSize ",
+          "Number",
+          "Sets or returns the popup action text color."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_20": {
+        "content": [
+          "actionWeight ",
+          "String",
+          "Sets or returns the popup action text strength."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "duration ",
+          "Number",
+          "Sets or returns the duration of the popup in milliseconds."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_22": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-footer_22": {
+        "txt": ""
+      },
+      "heading_23": {
+        "txt": "heading_23"
+      },
+      "text_24": {
+        "txt": "text_24",
+        "css": ""
+      },
+      "hr_25": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_25": {
+        "txt": "subtitle_25"
+      },
+      "text_26": {
+        "txt": "text_26",
+        "css": ""
+      },
+      "code_27": {
+        "txt": "popup.setOnClose( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_28": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_28": {
+        "content": [
+          "callback ",
+          "Function",
+          "The onclose callback. "
+        ]
+      },
+      "table-footer_28": {
+        "txt": ""
+      },
+      "hr_29": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_29": {
+        "txt": "subtitle_29"
+      },
+      "text_30": {
+        "txt": "text_30",
+        "css": ""
+      },
+      "text_31": {
+        "txt": "text_31",
+        "css": ""
+      },
+      "code_32": {
+        "txt": "popup.setOnAction( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_33": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_33": {
+        "content": [
+          "callback ",
+          "Function",
+          "The on action callback. "
+        ]
+      },
+      "table-footer_33": {
+        "txt": ""
+      },
+      "hr_34": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_34": {
+        "txt": "subtitle_34"
+      },
+      "text_35": {
+        "txt": "text_35",
+        "css": ""
+      },
+      "code_36": {
+        "txt": "popup.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_37": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_37": {
+        "txt": "subtitle_37"
+      },
+      "text_38": {
+        "txt": "text_38",
+        "css": ""
+      },
+      "code_39": {
+        "txt": "popup.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_40": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_40": {
+        "txt": "subtitle_40"
+      },
+      "text_41": {
+        "txt": "text_41",
+        "css": ""
+      },
+      "code_42": {
+        "txt": "popup.setPosition( vertical, horizontal )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_43": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_43": {
+        "content": [
+          "[vertical] ",
+          "String",
+          "Vertical alignment. Values can be `Top` `Bottom` "
+        ]
+      },
+      "table-row_44": {
+        "content": [
+          "[horizontal] ",
+          "String",
+          "Horizontal alignment. Values can be `Left` `Center` and `Right` "
+        ]
+      },
+      "table-footer_44": {
+        "txt": ""
+      },
+      "hr_45": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_45": {
+        "txt": "subtitle_45"
+      },
+      "text_46": {
+        "txt": "text_46",
+        "css": ""
+      },
+      "code_47": {
+        "txt": "popup.getPosition()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_48": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_49": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_49": {
+        "txt": "subtitle_49"
+      },
+      "text_50": {
+        "txt": "text_50",
+        "css": ""
+      },
+      "code_51": {
+        "txt": "popup.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_52": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_52": {
+        "txt": "subtitle_52"
+      },
+      "text_53": {
+        "txt": "text_53",
+        "css": ""
+      },
+      "code_54": {
+        "txt": "popup.setAction( text, type )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_55": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_55": {
+        "content": [
+          "text ",
+          "String",
+          "The popup action text or icon name. "
+        ]
+      },
+      "table-row_56": {
+        "content": [
+          "type ",
+          "String",
+          "Can be \"text\" or \"icon\". "
+        ]
+      },
+      "table-footer_56": {
+        "txt": ""
+      },
+      "hr_57": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_57": {
+        "txt": "heading_57"
+      },
+      "hr_58": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_58": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Create a fullscreen layout with objects vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Add button control to the main layout\n    this.btn1 = ui.addButton(this.main, \"Show Popup\")\n\n    // Add a callback handler when the button is touched\n    this.btn1.setOnTouch(this.onTouch)\n  }\n\n  onTouch() {\n    // Display popup on the Top with transition Grow\n    ui.showPopup(\"Hello from popup!\")\n  }\n}",
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_59": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n    this.main.setChildMargins(0, 0, 0, 0.02)\n\n    // Adds first button to the main layout\n    this.btn1 = ui.addButton(this.main, \"Top & Grow\", \"Primary\")\n    this.btn1.setOnTouch(this.onTouch1)\n\n    // Adds second button to the main layout\n    this.btn2 = ui.addButton(this.main, \"Bottom and Slide\", \"Secondary\")\n    this.btn2.setOnTouch(this.onTouch2)\n  }\n\n  onTouch1() {\n    // Display popup on the Top with transition Grow\n    ui.showPopup(\"Hello world.\", \"Top,Grow\")\n  }\n\n  onTouch2() {\n    // Display popup on the Bottom with transition Slide in 1.5 seconds.\n    ui.showPopup(\"Hello world.\", \"Bottom,Slide\", 1500)\n  }\n}",
+        "sample": "Popup with transition",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_60": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Create a fullscreen layout with objects vertically centered\n    this.layMain = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Add a button control to the main layout\n    this.btn = ui.addButton(this.layMain, \"Show Popup\")\n\n    // Add a callback handler when the button is touched\n    this.btn.setOnTouch(this.showMessage)\n  }\n\n  showMessage() {\n    // Show a popup with additional action\n    this.snackbar = ui.showPopup(\"Please login to continue\", \"Bottom,Center\", \"\", \"Login\")\n\n    // Add a callback handler when the action is touched\n    this.snackbar.setOnAction(this.onAction)\n  }\n\n  onAction() {\n    // Hide the popup when the action button is click\n    this.snackbar.hide()\n    ui.showPopup(\"Login is click. Show login Page.\")\n  }\n}",
+        "sample": "With action",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_61": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn1 = ui.addButton(main, \"Show Popup\")\n   btn1.setOnTouch(onTouch)\n\ndef onTouch(event):\n   ui.showPopup(\"Hello from popup!\")",
+        "sample": "Basic",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_62": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildMargins(0, 0, 0, 0.02)\n   btn1 = ui.addButton(main, \"Top & Grow\", \"Primary\")\n   btn1.setOnTouch(onTouch1)\n   btn2 = ui.addButton(main, \"Bottom and Slide\", \"Secondary\")\n   btn2.setOnTouch(onTouch2)\n\ndef onTouch1(event):\n   ui.showPopup(\"Hello world.\", \"Top,Grow\")\n\ndef onTouch2(event):\n   ui.showPopup(\"Hello world.\", \"Bottom,Slide\", 1500)",
+        "sample": "Popups with transitions",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_63": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   layMain = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   btn = ui.addButton(layMain, \"Show Popup\")\n   btn.setOnTouch(showMessage)\n\ndef showMessage(event):\n   global snackbar\n   snackbar = ui.showPopup(\"Please login to continue\", \"Bottom,Center\", \"\", \"Login\")\n   snackbar.setOnAction(onAction)\n\ndef onAction():\n   snackbar.hide()\n   ui.showPopup(\"Login is click. Show login Page.\")",
+        "sample": "With Transition",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Popup",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "\"Popup\" is like a short notification that quickly appears on the screen, providing extra options or information in a concise and unobtrusive manner.",
+      "de": "",
+      "es": ""
+    },
+    "text_4": {
+      "en": "It's similar to a toast notification. Show a popup like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_11": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_12": {
+      "en": "Here are the available setters and/or getters for the Popup Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_23": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_24": {
+      "en": "Here are the available methods for the Popup Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_25": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_26": {
+      "en": "Adds an onClose callback to your popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_29": {
+      "en": "setOnAction",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Adds an action callback when the user touches the action button. The `btnText` param must",
+      "de": "",
+      "es": ""
+    },
+    "text_31": {
+      "en": "be provided in order to create an action button.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_34": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_35": {
+      "en": "Show the popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_37": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_38": {
+      "en": "Hide the popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_40": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_41": {
+      "en": "Updates the position of the popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Returns the position of the popup. The returned object is of the form `{ vertical, horizontal }`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_49": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_50": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_52": {
+      "en": "setAction",
+      "de": "",
+      "es": ""
+    },
+    "text_53": {
+      "en": "Adds an action button to the popup.",
+      "de": "",
+      "es": ""
+    },
+    "heading_57": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Dialogs/Popup';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

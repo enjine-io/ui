@@ -1,0 +1,1280 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Dialogs",
+  "homeLink": "ui/Dialogs",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "men = ui.addMenu(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio",
+          "The component where to anchor the Menu. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "[list] ",
+          "Array",
+          "A list of items to be shown in the pop-up menu. You can also pass a comma separated string. For menu with icon the format is `icon:title` \\n Add a `colon` before an item to display it as the label text. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nTheme Color: `Primary`, `Secondary`, `Error`\\nUtils: `Dense`, `Icon` "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Menu</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "code_15": {
+        "txt": "var lst = ['Item 1', 'Item 2', 'Item 3'];",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_16": {
+        "txt": "text_16",
+        "css": ""
+      },
+      "code_17": {
+        "txt": "var lst = ['favorite:Favorites', 'person:Account', 'delete:Trash Bin'];",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_18": {
+        "txt": "text_18",
+        "css": ""
+      },
+      "code_19": {
+        "txt": "var lst = [':This is a label', 'Item 1', 'Item 2', 'Item 3'];",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "heading_20": {
+        "txt": "heading_20"
+      },
+      "text_21": {
+        "txt": "text_21",
+        "css": ""
+      },
+      "table-header_22": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_23": {
+        "content": [
+          "list ",
+          "Array",
+          "Sets or returns the items in the menu. You can also pass a comma separated string."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "itemPadding ",
+          "Array",
+          "Sets or returns the padding of each menu item. See also `setItemPadding` method."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "urls ",
+          "Array",
+          "Returns an array of urls for each menu item."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_26": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-footer_26": {
+        "txt": ""
+      },
+      "heading_27": {
+        "txt": "heading_27"
+      },
+      "text_28": {
+        "txt": "text_28",
+        "css": ""
+      },
+      "hr_29": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_29": {
+        "txt": "subtitle_29"
+      },
+      "text_30": {
+        "txt": "text_30",
+        "css": ""
+      },
+      "code_31": {
+        "txt": "men.setOnTouch(callback)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_32": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_32": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `item <i class=\"arg-def\">String</i>` The menu item text. `icon <i class=\"arg-def\">String</i>` The menu item icon. `index <i class=\"arg-def\">Number</i>` The menu item index."
+        ]
+      },
+      "table-footer_32": {
+        "txt": ""
+      },
+      "hr_33": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_33": {
+        "txt": "subtitle_33"
+      },
+      "text_34": {
+        "txt": "text_34",
+        "css": ""
+      },
+      "code_35": {
+        "txt": "men.show( parent )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_36": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_36": {
+        "content": [
+          "parent ",
+          "uio",
+          "The component where to anchor the menu. It can be a `Button` or an `Image`. "
+        ]
+      },
+      "table-footer_36": {
+        "txt": ""
+      },
+      "text_37": {
+        "txt": "text_37",
+        "css": ""
+      },
+      "hr_38": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_38": {
+        "txt": "subtitle_38"
+      },
+      "text_39": {
+        "txt": "text_39",
+        "css": ""
+      },
+      "code_40": {
+        "txt": "men.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_41": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_41": {
+        "txt": "subtitle_41"
+      },
+      "text_42": {
+        "txt": "text_42",
+        "css": ""
+      },
+      "code_43": {
+        "txt": "men.setList( list )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_44": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_44": {
+        "content": [
+          "list ",
+          "Array",
+          "The list items to show. "
+        ]
+      },
+      "table-footer_44": {
+        "txt": ""
+      },
+      "hr_45": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_45": {
+        "txt": "subtitle_45"
+      },
+      "text_46": {
+        "txt": "text_46",
+        "css": ""
+      },
+      "code_47": {
+        "txt": "men.addItem( name, index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_48": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_48": {
+        "content": [
+          "name ",
+          "String",
+          "The new item to be added. "
+        ]
+      },
+      "table-row_49": {
+        "content": [
+          "index ",
+          "Number",
+          "The index at which to add the item. "
+        ]
+      },
+      "table-footer_49": {
+        "txt": ""
+      },
+      "hr_50": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_50": {
+        "txt": "subtitle_50"
+      },
+      "text_51": {
+        "txt": "text_51",
+        "css": ""
+      },
+      "code_52": {
+        "txt": "men.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_53": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_53": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item to remove. "
+        ]
+      },
+      "table-footer_53": {
+        "txt": ""
+      },
+      "hr_54": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_54": {
+        "txt": "subtitle_54"
+      },
+      "text_55": {
+        "txt": "text_55",
+        "css": ""
+      },
+      "code_56": {
+        "txt": "men.removeItem( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_57": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_57": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the item to remove. "
+        ]
+      },
+      "table-footer_57": {
+        "txt": ""
+      },
+      "hr_58": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_58": {
+        "txt": "subtitle_58"
+      },
+      "text_59": {
+        "txt": "text_59",
+        "css": ""
+      },
+      "code_60": {
+        "txt": "men.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_61": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_61": {
+        "txt": "subtitle_61"
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "code_63": {
+        "txt": "men.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_64": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_64": {
+        "txt": "subtitle_64"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "men.setPosition( left, top )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_67": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_67": {
+        "content": [
+          "left ",
+          "Number",
+          "The position of the menu from the left of the parent or anchor component. The unit is in pixels. "
+        ]
+      },
+      "table-row_68": {
+        "content": [
+          "top ",
+          "Number",
+          "The position of the menu from the top of the parent or anchor component. The unit is in pixels. "
+        ]
+      },
+      "table-footer_68": {
+        "txt": ""
+      },
+      "hr_69": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_69": {
+        "txt": "subtitle_69"
+      },
+      "text_70": {
+        "txt": "text_70",
+        "css": ""
+      },
+      "code_71": {
+        "txt": "men.setAutoFocus( bool )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_72": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_72": {
+        "content": [
+          "bool ",
+          "Boolean",
+          "Value can be `true` or `false` "
+        ]
+      },
+      "table-footer_72": {
+        "txt": ""
+      },
+      "hr_73": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_73": {
+        "txt": "subtitle_73"
+      },
+      "text_74": {
+        "txt": "text_74",
+        "css": ""
+      },
+      "code_75": {
+        "txt": "men.setEnabled( index, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_76": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_76": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item. "
+        ]
+      },
+      "table-row_77": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` or `false`. `false` to disable. "
+        ]
+      },
+      "table-footer_77": {
+        "txt": ""
+      },
+      "hr_78": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_78": {
+        "txt": "subtitle_78"
+      },
+      "text_79": {
+        "txt": "text_79",
+        "css": ""
+      },
+      "code_80": {
+        "txt": "men.getEnabled(index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_81": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_81": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item. "
+        ]
+      },
+      "table-footer_81": {
+        "txt": ""
+      },
+      "text_82": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_83": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_83": {
+        "txt": "subtitle_83"
+      },
+      "text_84": {
+        "txt": "text_84",
+        "css": ""
+      },
+      "code_85": {
+        "txt": "men.setEnabledByName(name, value)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_86": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_86": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the corresping item the menu. "
+        ]
+      },
+      "table-row_87": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` or `false`. `false` to disable an item. "
+        ]
+      },
+      "table-footer_87": {
+        "txt": ""
+      },
+      "hr_88": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_88": {
+        "txt": "subtitle_88"
+      },
+      "text_89": {
+        "txt": "text_89",
+        "css": ""
+      },
+      "code_90": {
+        "txt": "men.getEnabledByName( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_91": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_91": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the item. "
+        ]
+      },
+      "table-footer_91": {
+        "txt": ""
+      },
+      "text_92": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_93": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_93": {
+        "txt": "subtitle_93"
+      },
+      "text_94": {
+        "txt": "text_94",
+        "css": ""
+      },
+      "code_95": {
+        "txt": "men.setItemPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_96": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_96": {
+        "content": [
+          "left ",
+          "Number",
+          "Left padding of the menu item. "
+        ]
+      },
+      "table-row_97": {
+        "content": [
+          "top ",
+          "Number",
+          "Top padding of the menu item. "
+        ]
+      },
+      "table-row_98": {
+        "content": [
+          "right ",
+          "Number",
+          "Right padding of the menu item. "
+        ]
+      },
+      "table-row_99": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom padding of the menu item. "
+        ]
+      },
+      "table-row_100": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement. Can be `rem`, `px`, `%`, or `v` for viewport. "
+        ]
+      },
+      "table-footer_100": {
+        "txt": ""
+      },
+      "hr_101": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_101": {
+        "txt": "subtitle_101"
+      },
+      "text_102": {
+        "txt": "text_102",
+        "css": ""
+      },
+      "code_103": {
+        "txt": "men.setUrls( urls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_104": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_104": {
+        "content": [
+          "urls ",
+          "Array",
+          "The url for each menu item. "
+        ]
+      },
+      "table-footer_104": {
+        "txt": ""
+      },
+      "hr_105": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_105": {
+        "txt": "subtitle_105"
+      },
+      "text_106": {
+        "txt": "text_106",
+        "css": ""
+      },
+      "code_107": {
+        "txt": "men.getUrls()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_108": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Array</span>"
+      },
+      "hr_109": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_109": {
+        "txt": "subtitle_109"
+      },
+      "text_110": {
+        "txt": "text_110",
+        "css": ""
+      },
+      "code_111": {
+        "txt": "men.setUrlByIndex(index, url, newTab)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_112": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_112": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the menu item. "
+        ]
+      },
+      "table-row_113": {
+        "content": [
+          "url ",
+          "String",
+          "Link or route. "
+        ]
+      },
+      "table-row_114": {
+        "content": [
+          "newTab ",
+          "Boolean",
+          "Open the url in the new tab. "
+        ]
+      },
+      "table-footer_114": {
+        "txt": ""
+      },
+      "hr_115": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_115": {
+        "txt": "subtitle_115"
+      },
+      "text_116": {
+        "txt": "text_116",
+        "css": ""
+      },
+      "code_117": {
+        "txt": "men.geturlByIndex()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_118": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_118": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the menu item. "
+        ]
+      },
+      "table-footer_118": {
+        "txt": ""
+      },
+      "text_119": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_120": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_120": {
+        "txt": "subtitle_120"
+      },
+      "text_121": {
+        "txt": "text_121",
+        "css": ""
+      },
+      "code_122": {
+        "txt": "men.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_123": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_123": {
+        "txt": "heading_123"
+      },
+      "hr_124": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_124": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Adds a button control to the layout\n    this.btn = ui.addButton(this.main, \"Show Menu\", \"Primary\")\n    this.btn.setOnTouch(this.onTouch)\n\n    // Menu items to display in the popup\n    var items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n    // Adds a menu passing the button control as anchor\n    this.menu = ui.addMenu(this.btn, items)\n\n    // Add a callback handler when a menu is touched\n    this.menu.setOnTouch(this.menuTouch)\n  }\n\n  onTouch() {\n    // show the menu\n    this.menu.show()\n  }\n\n  menuTouch(item) {\n    ui.showPopup(item)\n  }\n}",
+        "sample": "Basic menu",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_125": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n    this.main.childSpacing = \"Even\";\n\n    // Add a first button control to the layout\n    this.btn1 = ui.addButton(this.main, \"Button 1\", \"Primary\")\n    this.btn1.setOnTouch(this.onTouch1)\n\n    // Add a second button control to the layout\n    this.btn2 = ui.addButton(this.main, \"Button 2\", \"Secondary\")\n    this.btn2.setOnTouch(this.onTouch2)\n\n    // Menu items to display the menu popup\n    var items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n    // Adds a menu without anchor component\n    this.menu = ui.addMenu(null, items)\n\n    // Add a callback handler when a menu is touched\n    this.menu.setOnTouch(this.menuTouch)\n  }\n\n  onTouch1() {\n    // Show the menu on button 1\n    this.menu.show(this.btn1)\n  }\n\n  onTouch2() {\n    // Show the menu on button 2\n    this.menu.show(this.btn2)\n  }\n\n  menuTouch(item) {\n    ui.showPopup(item)\n  }\n}",
+        "sample": "Changing anchor component",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_126": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Add a button control to the main layout\n    this.btn = ui.addButton(this.main, \"Show Menu\", \"Primary\")\n    this.btn.setOnTouch(this.onTouch)\n\n    // List items with icons\n    var items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n    // Add a menu passing the btn as anchor component\n    this.menu = ui.addMenu(this.btn, items, \"Icons,Primary,Dense\")\n\n    // Disable the second menu item\n    this.menu.setEnabled(1, false)\n\n    // Add a callback handler when a menu is touched\n    this.menu.setOnTouch(this.menuTouch)\n  }\n\n  onTouch() {\n    // show the menu\n    this.menu.show()\n  }\n\n  menuTouch(item) {\n    // display the selected item\n    ui.showPopup(item)\n  }\n}",
+        "sample": "With icons and disabled items",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_127": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n    this.main.setOnContextMenu(this.onMenu)\n\n    // Add a text control to the layout\n    this.txt = ui.addText(this.main, \"Right click anywhere on the screen.\\n(Long press if your on mobile phone)\", \"Multiline\")\n\n    // List items with icons\n    var items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n    // Add menu passing the btn as anchor component\n    this.menu = ui.addMenu(null, items, \"Icons,Dense\")\n\n    // Add a callback handler when a menu is touched\n    this.menu.setOnTouch(this.menuTouch)\n  }\n\n  onMenu(pos) {\n    // show the menu on the position of the mouse\n    this.menu.show(pos.x, pos.y)\n  }\n\n  menuTouch(item) {\n    // display the selected item\n    ui.showPopup(item)\n  }\n}",
+        "sample": "Anchor position on mouse / touch",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_128": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Adds a button control to the layout\n   btn = ui.addButton(main, \"Show Menu\", \"Primary\")\n   btn.setOnTouch(onTouch)\n\n   # Menu items to display in the popup\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Adds a menu passing the button control as anchor\n   menu = ui.addMenu(btn, items)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch(event):\n   # show the menu\n   menu.show()\n\ndef menuTouch(item, icon, index, event):\n   ui.showPopup(item)",
+        "sample": "Basic menu",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_129": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global btn1, menu, btn2\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setChildSpacing(\"Evenly\")\n\n   # Add a first button control to the layout\n   btn1 = ui.addButton(main, \"Button 1\", \"Primary\")\n   btn1.setOnTouch(onTouch1)\n\n   # Add a second button control to the layout\n   btn2 = ui.addButton(main, \"Button 2\", \"Secondary\")\n   btn2.setOnTouch(onTouch2)\n\n   # Menu items to display the menu popup\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Adds a menu without anchor component\n   menu = ui.addMenu(None, items)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch1(event):\n   # Show the menu on button 1\n   menu.show(btn1)\n\ndef onTouch2(event):\n   # Show the menu on button 2\n   menu.show(btn2)\n\ndef menuTouch(item, icon, index, event):\n   ui.showPopup(item)",
+        "sample": "Changing anchor component",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_130": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Add a button control to the main layout\n   btn = ui.addButton(main, \"Show Menu\", \"Primary\")\n   btn.setOnTouch(onTouch)\n\n   # List items with icons\n   items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n   # Add a menu passing the btn as anchor component\n   menu = ui.addMenu(btn, items, \"Icons,Primary,Dense\")\n\n   # Disable the second menu item\n   menu.setEnabled(1, False)\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onTouch(event):\n   # show the menu\n   menu.show()\n\ndef menuTouch(item, icon, index, event):\n   # display the selected item\n   ui.showPopup(item)",
+        "sample": "With icons and disabled items",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_131": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   global menu\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n   main.setOnContextMenu(onMenu)\n\n   # Add a text control to the layout\n   txt = ui.addText(main, \"Right click anywhere on the screen. Or long press anywhere on mobile.\", \"Multiline\", 0.8)\n\n   # List items with icons\n   items = [\"person:Item 1\", \"delete:Item 2\", \"favorite:Item 3\"]\n\n   # Add menu passing the btn as anchor component\n   menu = ui.addMenu(None, items, \"Icons,Dense\")\n\n   # Add a callback handler when a menu is touched\n   menu.setOnTouch(menuTouch)\n\ndef onMenu(pos):\n   # show the menu on the position of the mouse\n   menu.show(pos.x, pos.y)\n\ndef menuTouch(item, icon, index, event):\n   # display the selected item\n   ui.showPopup(item)",
+        "sample": "Anchor position on mouse",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Menu",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A menu is a list of options or actions presented to the user as a popup.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "In Material Design, menus can be contextual, appearing in response to user interactions. They provide a consistent way to access additional functionality or navigate within an application. Show a menu by calling the `addMenu` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "These are examples on how you can format your list.",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Basic list",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
+      "en": "List with icons",
+      "de": "",
+      "es": ""
+    },
+    "text_18": {
+      "en": "List with group title",
+      "de": "",
+      "es": ""
+    },
+    "heading_20": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_21": {
+      "en": "Here are the available setters and/or getters for the Menu Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_27": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_28": {
+      "en": "Here are the available methods for Menu Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_29": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_30": {
+      "en": "Adds a callback handler when the menu is touch.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_33": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_34": {
+      "en": "Show the menu pop-up.",
+      "de": "",
+      "es": ""
+    },
+    "text_37": {
+      "en": "If you passed a parent on initialization, then the menu si anchored on that component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_38": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_39": {
+      "en": "Hide the pop-up menu.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_41": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_42": {
+      "en": "Updates the list items on the menu.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_45": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_46": {
+      "en": "Adds an item in the menu list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_50": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_51": {
+      "en": "Removes an item in the menu items list by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_54": {
+      "en": "removeItem",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Removes an item in the menu items list by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_58": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_59": {
+      "en": "Removes the last item. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_61": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_62": {
+      "en": "Removes the first item. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_64": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "Set the position of the menu from the left and top of the anchor component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_69": {
+      "en": "setAutoFocus",
+      "de": "",
+      "es": ""
+    },
+    "text_70": {
+      "en": "Sets the autofocus value of the menu items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_73": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_74": {
+      "en": "Enable or disable an item in the menu popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_78": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_79": {
+      "en": "Get the enabled state of an item the menu popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "setEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_84": {
+      "en": "Enable or disable an item in the menu popup by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_88": {
+      "en": "getEnabledByName",
+      "de": "",
+      "es": ""
+    },
+    "text_89": {
+      "en": "Get the enabled state of an item in the menu popup.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_93": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_94": {
+      "en": "Sets the padding of the menu item. See `itemPadding` property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_101": {
+      "en": "setUrls",
+      "de": "",
+      "es": ""
+    },
+    "text_102": {
+      "en": "Sets the urls for each menu item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_105": {
+      "en": "getUrls",
+      "de": "",
+      "es": ""
+    },
+    "text_106": {
+      "en": "Returns an array of urls for each menu item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_109": {
+      "en": "setUrlByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_110": {
+      "en": "Sets the url of a menu item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_115": {
+      "en": "geturlByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_116": {
+      "en": "Returns the url of a given menu item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_120": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_121": {
+      "en": "Destroy the control.",
+      "de": "",
+      "es": ""
+    },
+    "heading_123": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Dialogs/Menu';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

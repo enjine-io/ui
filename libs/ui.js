@@ -1,6 +1,11 @@
 //control/element id counter
 _ids = 0
 
+// global react utils
+_R = React.createElement;
+_M = window["MaterialUI"];
+_L = window["MaterialUILab"];
+
 //Width/height conversion funcs
 function _W(w, m) {
     if(isFinite(w) && typeof w == "number") {
@@ -24,9 +29,12 @@ function _root() { return document.getElementById("root") }
 function _popups() { return document.getElementById("popups") }
 function _drawer() { return document.getElementById("drawer") }
 function _el(id) { return document.getElementById(id) }
-function _color(ops="") { if( ops.includes("primary")) return "primary"; else if( ops.includes("secondary")) return "secondary"; else return "default" }
-function _variant(ops="") { if( ops.includes("outline")) return "outlined"; else if( ops.includes("text")) return "text"; else return "contained" }
-function _size(ops="") { if( ops.includes("small")) return "small"; else if( ops.includes("large")) return "large"; else return "medium" }
+function _newEl(el) { return document.createElement(el||"div") }
+function _color(ops="", def) { if( ops.includes("primary")) return "primary"; else if( ops.includes("secondary")) return "secondary"; else if(ops.includes("transparent")) return "transparent"; else return def || "default"; }
+function _variant(ops="", def) { if( ops.includes("outline")) return "outlined"; else if( ops.includes("text")) return "text"; else return def || "contained" }
+function _size(ops="", def) { if( ops.includes("small")) return "small"; else if( ops.includes("large")) return "large"; else return def || "medium" }
+function _cssColor(ops="", def) { if(ops.includes("primary")) return "var(--primary)"; if(ops.includes("secondary")) return "var(--secondary)"; if(ops.includes("default")) return "var(--default)"; return def || null; }
+function _position(ops="", def) { if( ops.includes("left") ) return "left"; if( ops.includes("top") ) return "top"; if( ops.includes("right") ) return "right"; if( ops.includes("bottom") ) return "bottom"; return def || ""; }
 function _padding(el, obj, left, top, right, bottom, mode="") {
     mode = mode.toLowerCase();
     obj._padding.left=left, obj._padding.top=top, obj._padding.right=right, obj._padding.bottom=bottom, obj._padding.mode = mode;
@@ -44,6 +52,8 @@ function _padding(el, obj, left, top, right, bottom, mode="") {
 function _margins(el, obj, left, top, right, bottom, mode="") {
     // todo
 }
+function _weight(val) { return ({"thin": 100,"extralight": 200,"light": 300,"regular": 400,"medium": 500,"semibold": 600,"bold": 700,"extrabold": 800,"black": 900})[val]; }
+function _isImg(str) { return ".png,.jpeg,.jpg,.webp".includes(str.substring(str.lastIndexOf("."))); }
 
 // Create a new ResizeObserver
 // const _res_obs_ = new ResizeObserver( () => { glob._abs_lay.map( l => { if( l ) l._resize(); }); });
@@ -102,9 +112,14 @@ glob = {}
 //Holds all absolute layouts
 glob._abs_lay = []
 
+window.__enj = {
+    scripts: [],
+    pluginUrl: "",
+    product: ""
+}
+
 //Main UI object
-function UI()
-{
+function UI() {
     //--- HIDDEN PROPERTIES ----
     var self = this
     this._fontFile = ""
@@ -115,26 +130,38 @@ function UI()
     this._observedEls = new Set() // <-- observe absolute elements to update dimensions
     this._page_rendering = false
 
+    // theming
+    this._fontFormats = {
+        "woff2": "woff2",
+        "woff": "woff",
+        "ttf": "truetype",
+        "eot": "embedded-opentype",
+        "otf": "opentype"
+    };
+
     // local functions
     function router( event ) {
         // var oldHash = event.oldURL.split("#")[1]
-        var newHash = self._getRoute()
-        var prevRoute, currRoute, newRoute, n, o
+        var newHash = self._getRoute();
+        var prevRoute, currRoute, newRoute, n, o;
+        
+        currRoute = self._routes[self._routes.length-1];
+        if(newHash == currRoute.path) return;
 
         if(self._routes.length >= 2) {
-            n = self._routes.length - 2
-            prevRoute = self._routes[n]
+            n = self._routes.length - 2;
+            prevRoute = self._routes[n];
         }
 
         if(prevRoute && newHash == prevRoute.path) {
             // go back
-            currRoute = self._routes.pop()
+            currRoute = self._routes.pop();
 
-            if(currRoute.view.type == "Dropdown") currRoute.view._onClose()
-            else currRoute.view.hide()
+            if(currRoute.view.type == "Dropdown") currRoute.view._onClose();
+            else currRoute.view.hide();
 
-            newRoute = self._routes[self._routes.length-1]
-            
+            newRoute = self._routes[self._routes.length-1];
+
             // destroyable routes. examples are controls that starts with "show"
             // such as "showActionSheet", "showColorPicker"
             if( currRoute.destroyable ) {
@@ -143,23 +170,35 @@ function UI()
             }
         }
         else {
+
             if( self._routes.length ) currRoute = self._routes[self._routes.length - 1]
             
-            if(currRoute && currRoute.path == newHash) return
+            if(currRoute && currRoute.path == newHash) return;
 
-            newRoute = self._routesObj.find(m => m.path == newHash)
+            newRoute = self._routesObj.find(m => m.path == newHash);
 
-            if( !newRoute ) return
+            if( !newRoute ) return;
 
-            self._routes.push( newRoute )
+            self._routes.push( newRoute );
 
             if(newRoute.path == "#main") {
-                if(currRoute && currRoute.path) newRoute.view.show()
+                if(currRoute && currRoute.path) {
+                    newRoute.view.show();
+                }
             }
-            else newRoute.view.show()
+            else {
+                if(newRoute.view._visibility == "hide") {
+                    newRoute.view.show();
+                }
+                else if(newRoute.dialog === true) {
+                    // dialogs cannot be open when navigation forward
+                    return;
+                }
+            }
             
             if(newRoute.view.type == "Layout") {
                 newRoute.view._div.style.zIndex = 1150 + self._routes.length
+                newRoute.view._div.classList.add("ui-route-active-layout")
             }
             
             // remove same route previously added
@@ -171,6 +210,7 @@ function UI()
 
         if(newRoute.view.type == "Layout") {
             self._routes.forEach((m, i) => {
+                if(newRoute == m) return;
                 if(m.view.type == "Layout" && i < self._routes.length-1) {
                     m.view._div.style.zIndex = 1150 + i
                 }
@@ -211,11 +251,11 @@ function UI()
             return false
         }
     }
+    this._initCtlProps = function( lst ) { return lst===false ? {gprops: {}, gstyles: {}} : {gprops: {}, props: [], gstyles: {}, styles: []}; }
     this._getRoute = function() { return window.location.hash || "#main"; }
+    this._initToolTip = function() { return {title: "", arrow: false, placement: "top"}; }
     this._appendRoute = function( path ) { window.location.hash = path; }
-    this._removeRoute = function( path ) {
-        self._routes = self._routes.filter(m => m.path !== path)
-    }
+    this._removeRoute = function( path ) { self._routes = self._routes.filter(m => m.path !== path); }
 
     this._onLoadMain = function() {
         var hash = self._getRoute()
@@ -244,7 +284,7 @@ function UI()
     }
 
     //--- VISIBLE PROPERTIES ---
-    this.version = 0.31
+    this.version = 0.32
     this.pages = [] // <--- use in Layout Extension
     this.theme = {dark:false, primary: "", secondary: ""}
     // this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
@@ -267,8 +307,7 @@ function UI()
      * @param {String} primary A hexadecimal color of the form `#rrggbb`
      * @param {String} secondary A hexadecima color of the form `#rrggbb`
      */
-    this.setThemeColor = function( primary, secondary )
-    {
+    this.setThemeColor = function(primary, secondary) {
         if( primary ) {
             self.theme.primary = primary
             document.documentElement.style.setProperty( "--primary", primary )
@@ -289,19 +328,51 @@ function UI()
         }
     }
 
-    this.setOnContextMenu = function( callback )
-    {
+    this.setOnContextMenu = function( callback ) {
         this._ctxCb = callback
         document.getElementById("root").oncontextmenu = this._onctx.bind(this)
     }
 
-    this.script = function(file, callback)
-    {
-        var script = document.createElement("script")
-        script.type = 'text/javascript'
-        script.setAttribute("src", file)
-        script.onload = callback
-        document.head.appendChild(script)
+    this.script = async function(file, callback) {
+        if (!window.__enj.scripts ) {
+            window.__enj.scripts = {}
+        }
+        
+        // if already loaded, just call callback (if exists) and return
+        if (window.__enj.scripts[file]) {
+            if (typeof callback === 'function') {
+                callback()
+            }
+            return
+        }
+        
+        // handle "plugins:" prefix if needed
+        if (file.startsWith("plugins:")) {
+            const remoteUrl = window.__enj.pluginUrl
+            const defaultUrl = window._hybrid ? "plugins://" : "/.edit/docs/plugins/"
+            file = file.replace("plugins://", remoteUrl ? remoteUrl : defaultUrl)
+        }
+        
+        // create the script and return a promise
+        return new Promise((resolve, reject) => {
+            const script = document.createElement("script")
+            script.type = "text/javascript"
+            script.src = file
+        
+            // once script is loaded, mark it as loaded, fire callback, resolve
+            script.onload = () => {
+                window.__enj.scripts[file] = true
+                if (typeof callback === 'function') {
+                    callback()
+                }
+                resolve()
+            }
+        
+            // if there's an error, reject the promise
+            script.onerror = (err) => reject(err)
+        
+            document.head.appendChild(script)
+        })
     }
 
     this.css = function( file ) {
@@ -313,6 +384,23 @@ function UI()
     }
 
     this.setFontFile = function( file ) {
+        const sheets = document.styleSheets;
+        const fontExt = file.split(".").pop();
+        if( !self._fontFormats[fontExt] ) return;
+        for (let sheet of sheets) {
+            try {
+                let rules = sheet.cssRules || sheet.rules;
+                for (let rule of rules) {
+                    if(rule instanceof CSSFontFaceRule && rule.style.getPropertyValue('font-family') == "Roboto") {
+                        rule.style.setProperty('src', `url(${file}) format(${self._fontFormats[fontExt]})`);
+                    }
+                }
+            } catch (e) {
+                console.warn('Cannot access stylesheet:', e)
+            }
+        }
+
+        /*
         if(typeof file != "string" || !file.includes(".")) return
         self._fontFile = file
         const n = file.split('/')[file.split('/').length-1]
@@ -325,6 +413,7 @@ function UI()
         style.innerText = css
         document.head.appendChild(style)
         self._fontName = name
+        */
     }
 
     // {path: "#main", view: mainLay, config: {restricted: false}, destroyable: bin}
@@ -341,8 +430,7 @@ function UI()
         }, 50)
     }
 
-    this.setOptions = function(options = "")
-    {
+    this.setOptions = function(options = "") {
         options = options.toLowerCase()
         if( options.includes("nozoom") ) {
             let meta = document.querySelector('meta[name="viewport"]')
@@ -350,36 +438,62 @@ function UI()
             if( !content.includes("user-scalable") )
                 meta.setAttribute("content", content+", user-scalable=no")
         }
+        if( options.includes("materialicon") ) {
+            // default material icon
+            this.setIconFontFile("fonts/material-icons.woff2")
+        }
     }
 
-    this.removeOptions = function(options = "")
-    {
+    this.removeOptions = function(options = "") {
         options = options.toLowerCase()
+
         if( options.includes("nozoom") ) {
             let meta = document.querySelector('meta[name="viewport"]')
             let content = meta.getAttribute("content").split(",").filter(m => !m.includes("user-scalable=no"))
             meta.setAttribute("content", content.join(", "))
         }
+        // set to default
+        if( options.includes("materialicon") ) {
+            this.setIconFontFile("fonts/material-symbols.woff2")
+        }
+    }
+
+    this.setIconFontFile = function( file ) {
+        const sheets = document.styleSheets;
+        const fontExt = file.split(".").pop();
+        if( !self._fontFormats[fontExt] ) return;
+        for (let sheet of sheets) {
+            try {
+                let rules = sheet.cssRules || sheet.rules;
+                for (let rule of rules) {
+                    if (rule instanceof CSSFontFaceRule && rule.style.getPropertyValue('font-family') === '"Material Icons"') {
+                        rule.style.setProperty('src', `url(${file}) format(${self._fontFormats[fontExt]})`);
+                        return;
+                    }
+                }
+            } catch (e) {
+                console.warn('Cannot access stylesheet:', e);
+            }
+        }
     }
 
     //--- INITIALISATION ---
 
-    if( platform.ios )
-    {
+    if( platform.ios ) {
         window.alert = function( msg ) {
             console.log( msg )
         }
         window.onerror = function (msg, url, line) {
             var file = url.substring(url.lastIndexOf('/')+1)
             // platform.show("JS: ERROR:" + msg + " "+ file + " line:" + line );
-            console.log("JS: ERROR:" + msg + " "+ file + " line:" + line)
+            console.log("JS: ERROR:" + msg + " "+ file + " line:" + line);
         }
     }
 
     // default settings
-    if( _hybrid ) this.setOptions("nozoom")
+    if( _hybrid ) this.setOptions("nozoom");
 
-    window.addEventListener('hashchange', router)
+    window.addEventListener('hashchange', router);
 }
 
 Object.defineProperty(UI.prototype, 'eventSource', {

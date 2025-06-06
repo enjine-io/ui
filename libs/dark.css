@@ -269,9 +269,20 @@ body, .backColor { background-color: var(--back); }
 
 .MuiMobileStepper-root.MuiMobileStepper-positionStatic { color: #fff; }
 
+
+/*
+--------------------
+    FormControl
+--------------------
+*/
+
 /* Form helper text */
 .MuiFormHelperText-root {
     color: rgba(255, 255, 255, 0.54);
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: var(--primary);
 }
 
 /* Button Toggle */
@@ -364,8 +375,140 @@ body, .backColor { background-color: var(--back); }
     color: rgba(255, 255, 255, 0.54);
 }
 
-/* TreeView */
+.MuiIcon-colorAction {
+    color: rgba(255, 255, 255, 0.54);
+}
+
+
+/*
+--------------------
+    TreeView Control
+--------------------
+*/
+
 .uiTreeView .material-icons.MuiIcon-root { color: #fff; }
-.MuiTreeItem-root:focus > .MuiTreeItem-content {
+/* .MuiTreeItem-root:focus > .MuiTreeItem-content {
     background-color: rgba(255, 255, 255, 0.1) !important;
+} */
+
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content /*.MuiTreeItem-label*/ {
+    /* background-color: rgba(63, 81, 181, 0.08); */
+}
+
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .uiTreeItem-label,
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .uiTreeItem-label:hover {
+    background-color: rgba(187, 200, 255, 0.2); /* rgba(144, 160, 255, 0.16); */
+    
+}
+
+.uiTreeItem-label:hover {
+    background-color: rgba(144, 160, 255, 0.12);
+}
+
+
+/*
+--------------------
+    Alert Control
+--------------------
+*/
+.MuiPaper-root.MuiAlert-outlinedSuccess {
+    color: #fff;
+}
+.MuiPaper-root.MuiAlert-outlinedInfo {
+    color: #fff;
+}
+.MuiPaper-root.MuiAlert-outlinedWarning {
+    color: #fff;
+}
+.MuiPaper-root.MuiAlert-outlinedError {
+    color: #fff;
+}
+
+
+/*
+--------------------
+    Breadcrumbs Control
+--------------------
+*/
+.MuiBreadcrumbs-root .MuiTypography-root {
+    color: rgba(255, 255, 255, 0.54);
+}
+.MuiBreadcrumbs-root .MuiTypography-root.MuiTypography-colorPrimary,
+.MuiBreadcrumbs-root .MuiTypography-root.MuiTypography-colorTextPrimary {
+    color: var(--primary);
+}
+
+
+
+
+/*
+--------------------
+    Table Control
+--------------------
+*/
+.uiTable .MuiTableRow-root.MuiTableRow-head {
+    background-color: rgba(255,255,255,0.025);
+}
+.uiTable .MuiCheckbox-colorSecondary.Mui-checked {
+    color: #fff;
+}
+.uiTable .MuiTableRow-root.Mui-selected, .MuiTableRow-root.Mui-selected:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.uiTable .uiTable-Toolbar-selected {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+.uiTable .MuiTableCell-root {
+    color: #fff;
+}
+.uiTable .MuiTableCell-stickyHeader {
+    background-color: #484c50;
+}
+.uiTable .MuiTableCell-root {
+    border-bottom: 1px solid rgba(81, 81, 81, 1);
+}
+.MuiTableSortLabel-root:hover, .MuiTableSortLabel-root:focus {
+    color: rgba(255, 255, 255, 0.54);
+}
+.MuiTableSortLabel-root.MuiTableSortLabel-active {
+    color: #fff;
+}
+.MuiTableSortLabel-root.MuiTableSortLabel-active.MuiTableSortLabel-root.MuiTableSortLabel-active .MuiTableSortLabel-icon {
+    color: rgba(255, 255, 255, 0.54);
+}
+
+/*
+--------------------
+    Timeline Control
+--------------------
+*/
+/* .MuiTimelineItem-content {
+    color: var(--default_i);
+} */
+.MuiTimelineDot-root .MuiIcon-root.MuiIcon-colorPrimary {
+    color: #fff;
+}
+.MuiTimelineDot-root.MuiTimelineDot-outlinedGrey .MuiIcon-root {
+    color: rgba(255, 255, 255, 0.7);
+}
+.MuiTimelineDot-defaultPrimary, .MuiTimelineDot-defaultSecondary {
+    background-color: var(--front_i);
+}
+.MuiTimelineDot-outlinedPrimary, .MuiTimelineDot-outlinedSecondary {
+    border-color: #fff;
+}
+.MuiTimelineDot-defaultPrimary .MuiIcon-root, .MuiTimelineDot-defaultSecondary .MuiIcon-root {
+    color: rgba(0, 0, 0, 0.7) !important;
+}
+.MuiTimelineDot-outlinedPrimary .MuiIcon-root, .MuiTimelineDot-outlinedSecondary .MuiIcon-root {
+    color: #fff;
+}
+
+/*
+--------------------
+    Rating Control
+--------------------
+*/
+.MuiRating-icon.MuiRating-iconEmpty {
+    color: rgba(255, 255, 255, 0.26);
 }

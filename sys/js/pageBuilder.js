@@ -119,7 +119,7 @@ function createPage( tutorial, step ) {
                 break;
             case "table-row":
                 str += `
-                                    <tr class="jdocs-table-row" style="${css}">`;
+                                    <tr id="${(step[z].cls?step[z].content[0]:"")}" class="jdocs-table-row ${(step[z].cls?step[z].cls:"")}" style="${css}">`;
                 var ss = step[z].content//.split("|")
                 for ( var x = 0; x < ss.length; x++ ) {
                     var txt = ss[x].replace(/\n/g,"<br>")
@@ -990,8 +990,7 @@ function onComponentSearch( e, home )
     }
 }
 
-function onMethodSearch( e )
-{
+function onMethodSearch( e ) {
     document.getElementById( "result-links" ).innerHTML = ""
     document.getElementById( "result-links" ).style.height = 0 + "px"
 
@@ -1004,7 +1003,17 @@ function onMethodSearch( e )
     }
 
     var nl = document.getElementsByClassName( "nav-list-items" ),
-        txt = "", l = 0, str = ""
+        txt = "", l = 0, str = "";
+
+    // let props = document.querySelectorAll(".jdocs-table-row.ui-control-properties");
+    // for(let i=0; i < props.length; i++) {
+    //     let c = props[i].querySelector("td.jdocs-table-row-item");
+    //     if( c.textContent.toLowerCase().includes(val) ) {
+    //         str += `<a href="#${c.textContent}" class="nav-list-items">${c.textContent} <i>[prop]</i></a>`
+    //         l++
+    //     }
+    // }
+
     for( var i=0; i < nl.length; i++ ) {
         txt = nl[i].innerText.toLowerCase()
         if( txt.includes(val) ) {

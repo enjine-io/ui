@@ -19,7 +19,7 @@ html, body, #root {
 	-webkit-touch-callout: none !important;
     -webkit-user-select: none !important;
     touch-action: manipulation;
-	font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     position: relative;
     box-sizing: border-box;
 }
@@ -61,6 +61,7 @@ html, body, #root {
 }
 
 .ui-control {
+    position: relative;
     box-sizing: border-box;
     flex: 0 0 auto;
     width: fit-content;
@@ -78,8 +79,15 @@ html, body, #root {
     left: 0;
 }
 
+.uiControlTouchable {
+    cursor: pointer;
+}
+
 .ui-route {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .frame-child-wrapper {
@@ -105,11 +113,129 @@ html, body, #root {
     background-color: #000;
 }
 
+/*
+--------------------
+    Button Control
+--------------------
+*/
+
+.uiButton .uiButton-icon-right .MuiButton-label {
+    flex-direction: row-reverse;
+}
+
+.uiButton .uiButton-icon-left .MuiButton-label .material-icons {
+    margin-right: 8px !important;
+}
+
+.uiButton .uiButton-icon-right .MuiButton-label .material-icons {
+    margin-left: 8px !important;
+}
+
+/*
+--------------------
+    ButtonGroup Control
+--------------------
+*/
+
+.MuiButtonGroup-root button {
+    flex: 1;
+}
+
+.uiButtonGroup .uiButton-icon-right .MuiButton-label {
+    flex-direction: row-reverse;
+}
+
+.uiButtonGroup .uiButton-icon-left .MuiButton-label .material-icons {
+    margin-right: 8px !important;
+}
+
+.uiButtonGroup .uiButton-icon-right .MuiButton-label .material-icons {
+    margin-left: 8px !important;
+}
+
+
+/*
+--------------------
+    Dropdown Control
+--------------------
+*/
+
+.uiDropdown-container, .uiDropdown-container > .MuiButtonGroup-root {
+    width: 100%;
+    height: 100%;
+}
+
+.uiDropdown-menu {
+    padding: 0 !important;
+}
+
+.uiDropdown-menu .MuiMenuItem-root > .MuiIcon-root {
+    font-size: 1.25rem;
+    margin-right: 12px;
+}
+
+.uiDropdown-menu .MuiMenuItem-root {
+    padding: 8px 16px;
+    min-height: 24px;
+}
+
+/*
+--------------------
+    FormControl
+--------------------
+*/
+
+.uiFormControl-Paper {
+    overflow: hidden;
+}
+
+.uiFormControl {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.uiFormControl-legend {
+    box-sizing: border-box;
+    text-align: left;
+    padding: 1rem 1rem !important;
+}
+.uiFormGroup-formLabels {
+    box-sizing: border-box; 
+    display: flex;
+    /* padding: 0rem 0.5rem; */
+}
+.uiFormControl .MuiFormControlLabel-root {
+    margin-left: 0;
+    margin-right: 0;
+}
+.uiFormControl .MuiFormControlLabel-root .MuiIconButton-edgeStart,
+.uiFormControl .MuiFormControlLabel-root  .MuiIconButton-edgeEnd {
+    margin: 0;
+}
+
+.uiFromGroup-formLabels.MuiFormControlLabel-labelPlacementStart > .MuiFormControlLabel-label {
+    padding-left: 1rem;
+}
+/*
+--------------------
+    RadioGroup Control
+--------------------
+*/
+.uiRadioGroup .MuiPaper-root {
+    overflow: hidden;
+}
+
 .uiRadioGroup .uiRadioGroupHorizontal .MuiFormGroup-root,
 .uiCheckboxGroup .uiCheckboxGroupHorizontal .MuiFormGroup-root {
     flex-direction: row;
     flex-wrap: nowrap;
 }
+
+/*
+--------------------
+    Tabs Control
+--------------------
+*/
 
 .uiTabPanel {
     width: 100%;
@@ -119,6 +245,10 @@ html, body, #root {
     padding: 0;
     margin: 0;
 }
+
+.uiTabs .tab-title-horizontal { display: flex; flex-direction: row; align-items: center; }
+.uiTabs .tab-title-vertical { display: flex; flex-direction: column; align-items: center; }
+/* .uiTabs .tab-title-horizontal > :first-child { margin-right: 8px; } */
 
 .ui-control .uiTextField form {
     width: 100%;
@@ -132,4 +262,560 @@ html, body, #root {
     color: rgba(0, 0, 0, 0.38);
     cursor: not-allowed;
     opacity: 0.6;
+}
+
+/*
+--------------------
+    TreeView Control
+--------------------
+*/
+
+.uiTreeItem-label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.uiTreeView .MuiTreeItem-label {
+    padding-left: 0px;
+}
+
+.uiTreeView .uiTreeItem-label {
+    padding-left: 4px;
+}
+
+.uiTreeItem-label .MuiTypography-root {
+    /* margin-left: 4px; */
+}
+
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .MuiTreeItem-label,
+.uiTreeView .MuiTreeItem-root.Mui-selected > .MuiTreeItem-content .MuiTreeItem-label:hover, .MuiTreeItem-label {
+    background-color: transparent !important;
+}
+
+/*
+--------------------
+    Breadcrumbs Control
+--------------------
+*/
+
+.ui-control.uiBreadcrumbs { overflow-x: auto; }
+
+.ui-control.uiBreadcrumbs.breadcrumbs-align-center { justify-content: center; }
+
+.ui-control.uiBreadcrumbs.breadcrumbs-align-right { justify-content: end; }
+
+.ui-control.uiBreadcrumbs ol {
+    width: max-content;
+}
+
+.ui-breadcrumb-item {
+    display: flex;
+    align-items: center;
+}
+
+.ui-breadcrumb-item .material-icons {
+    font-size: 1.3rem;
+    margin-right: 0.25rem;
+}
+
+.ui-breadcrumb-item img {
+    width: 1.25rem;
+    margin-right: 0.3rem;
+}
+
+.MuiLink-root.ui-breadcrumb-item {
+    cursor: pointer;
+}
+
+
+/*
+--------------------
+    SpeedDial Control
+--------------------
+*/
+
+.uiSpeedDial-container {
+    display: flex;
+}
+
+.uiSpeedDial-container[direction='up'], .uiSpeedDial-container[direction='down'] {
+    justify-content: center;
+}
+
+.uiSpeedDial-container[direction='left'], .uiSpeedDial-container[direction='right'] {
+    align-items: center;
+}
+
+.uiSpeedDial-container[backdrop='true'] {
+    justify-content: flex-end;
+}
+
+.uiSpeedDial-container[open] > button span.MuiFab-label {
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: transform 0.1s linear;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.uiSpeedDial-container > button span.MuiFab-label {
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: transform 0.1s linear;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+
+.uiSpeedDial-container .uiSpeedDial-actions-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.uiSpeedDial-container[direction='up'] .uiSpeedDial-actions-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+}
+.uiSpeedDial-container[direction='down'] .uiSpeedDial-actions-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.uiSpeedDial-container[direction='left'] .uiSpeedDial-actions-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.uiSpeedDial-container[direction='right'] .uiSpeedDial-actions-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+}
+
+.uiSpeedDial-container[direction='up'] .uiSpeedDial-actions-container button {
+    margin-bottom: 1rem;
+}
+.uiSpeedDial-container[direction='down'] .uiSpeedDial-actions-container button {
+    margin-top: 1rem;
+}
+.uiSpeedDial-container[direction='left'] .uiSpeedDial-actions-container button {
+    margin-right: 1rem;
+}
+.uiSpeedDial-container[direction='right'] .uiSpeedDial-actions-container button {
+    margin-left: 1rem;
+}
+
+.uiSpeedDial-container .uiSpeedDial-actions-container button:nth-of-type(1) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+.uiSpeedDial-container .uiSpeedDial-actions-container button:nth-of-type(2) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+.uiSpeedDial-container .uiSpeedDial-actions-container button:nth-of-type(3) {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.uiSpeedDial-container .uiSpeedDial-actions-container button:nth-of-type(4) {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+.uiSpeedDial-container .uiSpeedDial-actions-container button:nth-of-type(5) {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.uiSpeedDial-container .uiSpeedDial-actions-container button:nth-of-type(6) {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.uiSpeedDial-container[direction='up'] .uiSpeedDial-actions-container {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+.uiSpeedDial-container[direction='down'] .uiSpeedDial-actions-container {
+    position: absolute;
+    top: 100%;
+    margin-top: 0.25rem;
+    text-align: center;
+}
+.uiSpeedDial-container[direction='left'] .uiSpeedDial-actions-container {
+    position: absolute;
+    right: 100%;
+    margin-right: 0.25rem;
+}
+.uiSpeedDial-container[direction='right'] .uiSpeedDial-actions-container {
+    position: absolute;
+    left: 100%;
+    margin-left: 0.25rem;
+}
+
+.uiSpeedDial-container[backdrop='true'] .uiSpeedDial-action-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-right: 8px;
+}
+
+.uiSpeedDial-container[backdrop='true'] .uiSpeedDial-action-container .MuiFab-root {
+    margin-left: 1rem;
+}
+
+
+/*
+--------------------
+    Alert Control
+--------------------
+*/
+.ui-control.uiAlert .MuiAlert-root {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    box-sizing: border-box;
+}
+.ui-control.uiAlert.uiAlert-center .MuiAlert-root {
+    justify-content: center;
+}
+.ui-control.uiAlert .MuiAlert-root .MuiAlert-action button {
+    color: inherit !important;
+}
+.MuiAlert-message .MuiAlertTitle-root {
+    font-weight: 500;
+    color: currentColor;
+}
+.MuiPaper-root.MuiAlert-standardSuccess {
+    color: rgb(30, 70, 32);
+    background-color: rgb(237, 247, 237);
+}
+.MuiPaper-root.MuiAlert-standardInfo {
+    color: rgb(13, 60, 97);
+    background-color: rgb(232, 244, 253);
+}
+.MuiPaper-root.MuiAlert-standardWarning {
+    color: rgb(102, 60, 0);
+    background-color: rgb(255, 244, 229);
+}
+.MuiPaper-root.MuiAlert-standardError {
+    color: rgb(97, 26, 21);
+    background-color: rgb(253, 236, 234);
+}
+.MuiPaper-root.MuiAlert-filledSuccess {
+    color: #fff;
+    background-color: #4caf50;
+}
+.MuiPaper-root.MuiAlert-filledInfo {
+    color: #fff;
+    background-color: #2196f3;
+}
+.MuiPaper-root.MuiAlert-filledWarning {
+    color: #fff;
+    background-color: #ff9800;
+}
+.MuiPaper-root.MuiAlert-filledError {
+    color: #fff;
+    background-color: #f44336;
+}
+.MuiPaper-root.MuiAlert-outlinedSuccess {
+    color: rgb(30, 70, 32);
+}
+.MuiPaper-root.MuiAlert-outlinedInfo {
+    color: rgb(13, 60, 97);
+}
+.MuiPaper-root.MuiAlert-outlinedWarning {
+    color: rgb(102, 60, 0);
+}
+.MuiPaper-root.MuiAlert-outlinedError {
+    color: rgb(97, 26, 21);
+}
+
+
+
+/*
+--------------------
+    Table Control
+--------------------
+*/
+.ui-control.uiTable .MuiPaper-root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.uiTable-Toolbar-title {
+    flex: 1 1 100%;
+}
+.uiTable-Toolbar-info {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.uiTable .uiTable-Toolbar-header {
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+}
+.uiTable-Toolbar-active-description {
+    padding-top: 0.5rem;
+    align-items: flex-start !important;
+}
+.uiTable-active-selection .MuiTableRow-hover {
+    cursor: pointer;
+}
+.uiTable-header-sortable {
+    border: 0;
+    height: 1;
+    margin: -1;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 20;
+    width: 1;
+    clip: rect(0 0 0 0);
+}
+.uiTable-container {
+    box-sizing: border-box;
+    flex: 1;
+}
+.MuiTablePagination-root {
+    overflow: none;
+    box-sizing: border-box;
+}
+.uiTable-touchable .MuiTableBody-root .MuiTableRow-root {
+    cursor: pointer;
+}
+
+/*
+--------------------
+    Timeline Control
+--------------------
+*/
+.uiTimeline {
+    overflow-y: auto;
+}
+.uiTimelimeItem-name.uiTimelineItem-text, .uiTimelineItem-secondaryText {
+    line-height: 1;
+}
+
+/*
+--------------------
+    Elevation
+--------------------
+*/
+.MuiPaper-elevation0 {
+    box-shadow: none !important;
+}
+.MuiPaper-elevation1 {
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation2 {
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation3 {
+    box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation4 {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation5 {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation6 {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation7 {
+    box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation8 {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation9 {
+    box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation10 {
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation11 {
+    box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation12 {
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation13 {
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation14 {
+    box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation15 {
+    box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation16 {
+    box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation17 {
+    box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation18 {
+    box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation19 {
+    box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation20 {
+    box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation21 {
+    box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation22 {
+    box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation23 {
+    box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12) !important;
+}
+.MuiPaper-elevation24 {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/*
+--------------------
+    MuiBadge
+--------------------
+*/
+.MuiBadge-root {
+    display: inline-flex;
+    position: relative;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.MuiBadge-badge {
+    height: 20px;
+    display: flex;
+    padding: 0 6px;
+    z-index: 1;
+    position: absolute;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    min-width: 20px;
+    box-sizing: border-box;
+    transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 500;
+    line-height: 1;
+    align-content: center;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+}
+.MuiBadge-colorPrimary {
+    color: #fff;
+    background-color: #3f51b5;
+}
+.MuiBadge-colorSecondary {
+    color: #fff;
+    background-color: #f50057;
+}
+.MuiBadge-colorError {
+    color: #fff;
+    background-color: #f44336;
+}
+.MuiBadge-dot {
+    height: 8px;
+    padding: 0;
+    min-width: 8px;
+    border-radius: 4px;
+}
+.MuiBadge-anchorOriginTopRightRectangle {
+    top: 0;
+    right: 0;
+    transform: scale(1) translate(50%, -50%);
+    transform-origin: 100% 0%;
+}
+.MuiBadge-anchorOriginTopRightRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, -50%);
+}
+.MuiBadge-anchorOriginBottomRightRectangle {
+    right: 0;
+    bottom: 0;
+    transform: scale(1) translate(50%, 50%);
+    transform-origin: 100% 100%;
+}
+.MuiBadge-anchorOriginBottomRightRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, 50%);
+}
+.MuiBadge-anchorOriginTopLeftRectangle {
+    top: 0;
+    left: 0;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+}
+.MuiBadge-anchorOriginTopLeftRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, -50%);
+}
+.MuiBadge-anchorOriginBottomLeftRectangle {
+    left: 0;
+    bottom: 0;
+    transform: scale(1) translate(-50%, 50%);
+    transform-origin: 0% 100%;
+}
+.MuiBadge-anchorOriginBottomLeftRectangle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, 50%);
+}
+.MuiBadge-anchorOriginTopRightCircle {
+    top: 14%;
+    right: 14%;
+    transform: scale(1) translate(50%, -50%);
+    transform-origin: 100% 0%;
+}
+.MuiBadge-anchorOriginTopRightCircle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, -50%);
+}
+.MuiBadge-anchorOriginBottomRightCircle {
+    right: 14%;
+    bottom: 14%;
+    transform: scale(1) translate(50%, 50%);
+    transform-origin: 100% 100%;
+}
+.MuiBadge-anchorOriginBottomRightCircle.MuiBadge-invisible {
+    transform: scale(0) translate(50%, 50%);
+}
+.MuiBadge-anchorOriginTopLeftCircle {
+    top: 14%;
+    left: 14%;
+    transform: scale(1) translate(-50%, -50%);
+    transform-origin: 0% 0%;
+}
+.MuiBadge-anchorOriginTopLeftCircle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, -50%);
+}
+.MuiBadge-anchorOriginBottomLeftCircle {
+    left: 14%;
+    bottom: 14%;
+    transform: scale(1) translate(-50%, 50%);
+    transform-origin: 0% 100%;
+}
+.MuiBadge-anchorOriginBottomLeftCircle.MuiBadge-invisible {
+    transform: scale(0) translate(-50%, 50%);
+}
+.MuiBadge-invisible {
+    transition: transform 195ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
