@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/devices.min.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Pickers",
+  "homeLink": "ui/Pickers",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "text_4": {
+        "txt": "text_4",
+        "css": ""
+      },
+      "code_5": {
+        "txt": "ui.showDateTimePicker(date, time, format, onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "code_6": {
+        "txt": "ui.showDateTimePicker(date, time, onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "code_7": {
+        "txt": "ui.showDateTimePicker(date, onSelect)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "code_8": {
+        "txt": "ui.showDateTimePicker( onSelect )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_9": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_9": {
+        "content": [
+          "[date] ",
+          "String",
+          "Default value for date of the form \"YYYY-MM-DD\" "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[time] ",
+          "String",
+          "Default value for time of the form \"HH:MM:SS\" "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[format] ",
+          "String",
+          "The format of the value that will be pass to the `onSelect` callback. Default is `\"YYYY-MM-DD HH:MM:SS\"`. You can refer to <a href=\"https://momentjs.com/\" target=\"_blank\">https://momentjs.com/</a> for more date time formats. Sample formats: `\"MMMM Do YYYY, h:mm:ss a\"`, `\"dddd\"`, `\"MMM Do YY\"`, `\"LLL\"` "
+        ]
+      },
+      "table-row_12": {
+        "content": [
+          "onSelect ",
+          "Function",
+          "The callback function to be called on submit. "
+        ]
+      },
+      "table-footer_12": {
+        "txt": ""
+      },
+      "text_13": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : DateTimePicker</span>"
+      },
+      "hr_14": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "heading_15": {
+        "txt": "heading_15"
+      },
+      "hr_16": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_16": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    this.btn = ui.addButton(this.main, \"Show Date Time Picker\", \"Primary\")\n    this.btn.setOnTouch(this.btn_onTouch)\n  }\n\n  btn_onTouch() {\n    ui.showDateTimePicker(this.onDateTime)\n  }\n\n  onDateTime(val) {\n    ui.showPopup(val)\n  }\n}",
+        "sample": "Default",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_17": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Set the primary theme color\n    ui.setThemeColor(\"#673ab7\");\n\n    // Create a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Add a button to the main layout to show the datetime picker when click\n    this.btn = ui.addButton(this.main, \"Show Date Time Picker\", \"Primary\")\n    this.btn.setOnTouch(this.btn_onTouch)\n  }\n\n  btn_onTouch() {\n    // Show the datetime picker dialog and passing initial date and time\n    // date format : \"YYYY-MM-DD\"\n    // time format : \"HH:MM:SS\"\n    // value format: LLL\n    ui.showDateTimePicker(\"2023-10-10\", \"17:00:00\", \"LLL\", this.onDateTime)\n  }\n\n  onDateTime(val) {\n    ui.showPopup(val)\n  }\n}",
+        "sample": "With initial values, format and custom theme",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_18": {
+        "txt": "class Main extends App {\n  onStart() {\n    ui.setTheme(\"dark\");\n\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    this.btn = ui.addButton(this.main, \"Show Date Time Picker\", \"Primary\")\n    this.btn.setOnTouch(this.btn_onTouch)\n  }\n\n  btn_onTouch() {\n    ui.showDateTimePicker(this.onDateTime)\n  }\n\n  onDateTime(val) {\n    ui.showPopup(val)\n  }\n}",
+        "sample": "Dark mode",
+        "disabledActions": "",
+        "lang": "js"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " DateTimePicker",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A DateTimePicker in mobile UI design combines date and time selection in one interface.",
+      "de": "",
+      "es": ""
+    },
+    "text_4": {
+      "en": "Following Material Design, it provides a unified, user-friendly experience for choosing both date and time, ensuring consistency and ease in applications and forms with date and time-sensitive inputs. Show a date-time picker using the `showDateTimePicker` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "If you want a date picker only see `DatePicker` or if you want time picker only see `TimePicker`",
+      "de": "",
+      "es": ""
+    },
+    "heading_15": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Pickers/DateTimePicker';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

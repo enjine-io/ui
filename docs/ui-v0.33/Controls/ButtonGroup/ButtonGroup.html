@@ -1,0 +1,3258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/devices.min.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "btg = ui.addButtonGroup(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_7": {
+        "txt": "text_7",
+        "css": ""
+      },
+      "table-header_8": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_8": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The parent layout where to add the ButtonGroup "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[list] ",
+          "Array",
+          "The item to be displayed on the buttn group. "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nVariant: `Contained`, `Outlined`, `Text`, `Default`\\nTheme Color: `Primary`, `Secondary`, `Default`\\nSizes: `Small`, `Medium`, `Large`\\nOrientation: `Horizontal`, `Vertical`\\nToggleable: `Toggle`, `Radio`\\nUtils: `Icon`, `NoElevation`, `Link`, NewTab, KeepCase "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]` "
+        ]
+      },
+      "table-row_12": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]` "
+        ]
+      },
+      "table-footer_12": {
+        "txt": ""
+      },
+      "text_13": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : ButtonGroup</span>"
+      },
+      "hr_14": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "text_16": {
+        "txt": "text_16",
+        "css": ""
+      },
+      "heading_17": {
+        "txt": "heading_17"
+      },
+      "text_18": {
+        "txt": "text_18",
+        "css": ""
+      },
+      "table-header_19": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_20": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the variant. Values can be `Contained` `Outlined` or `Text`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "toolTipPosition ",
+          "String",
+          "Sets or returns the position of the tooltip. Values can be `left` `top` `right` or `bottom`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_22": {
+        "content": [
+          "size ",
+          "String",
+          "Sets or returns the size variant. Values can be `small` `medium` or `large`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_23": {
+        "content": [
+          "orientation ",
+          "String",
+          "Sets or returns the orientation of the button group. Can be `horizontal` or `vertical`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the disabled state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "textWeight ",
+          "String",
+          "Sets or returns the strength of the button item text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_26": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the button. Values can be `Default` `Primary` or `Secondary`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_27": {
+        "content": [
+          "activeItems ",
+          "Array",
+          "Sets or returns the indexes of the active button items."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_28": {
+        "content": [
+          "iconColor ",
+          "String",
+          "Sets or returns the color of the button item icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_29": {
+        "content": [
+          "iconSize ",
+          "Number",
+          "Sets or returns the size of the button item icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_30": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_31": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_32": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_33": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_34": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_35": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_36": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_37": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_38": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_39": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_40": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_41": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_42": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_43": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_44": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_45": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_46": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_47": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_48": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_49": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_50": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_51": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_52": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_53": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_54": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_55": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_56": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_57": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_58": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-footer_59": {
+        "txt": ""
+      },
+      "heading_60": {
+        "txt": "heading_60"
+      },
+      "text_61": {
+        "txt": "text_61",
+        "css": ""
+      },
+      "hr_62": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_62": {
+        "txt": "subtitle_62"
+      },
+      "text_64": {
+        "txt": "text_64",
+        "css": ""
+      },
+      "code_65": {
+        "txt": "btg.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_66": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_66": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_67": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_67": {
+        "txt": ""
+      },
+      "hr_68": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_68": {
+        "txt": "subtitle_68"
+      },
+      "text_70": {
+        "txt": "text_70",
+        "css": ""
+      },
+      "code_71": {
+        "txt": "btg.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_72": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_72": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_73": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_74": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_74": {
+        "txt": ""
+      },
+      "hr_75": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_75": {
+        "txt": "subtitle_75"
+      },
+      "text_77": {
+        "txt": "text_77",
+        "css": ""
+      },
+      "code_78": {
+        "txt": "btg.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_79": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_79": {
+        "txt": "subtitle_79"
+      },
+      "text_81": {
+        "txt": "text_81",
+        "css": ""
+      },
+      "code_82": {
+        "txt": "btg.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_83": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_83": {
+        "txt": "subtitle_83"
+      },
+      "text_85": {
+        "txt": "text_85",
+        "css": ""
+      },
+      "code_86": {
+        "txt": "btg.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_87": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_87": {
+        "txt": "subtitle_87"
+      },
+      "text_89": {
+        "txt": "text_89",
+        "css": ""
+      },
+      "code_90": {
+        "txt": "btg.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_91": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_91": {
+        "txt": "subtitle_91"
+      },
+      "text_93": {
+        "txt": "text_93",
+        "css": ""
+      },
+      "code_94": {
+        "txt": "btg.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_95": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_95": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_96": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_96": {
+        "txt": ""
+      },
+      "hr_97": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_97": {
+        "txt": "subtitle_97"
+      },
+      "text_99": {
+        "txt": "text_99",
+        "css": ""
+      },
+      "code_100": {
+        "txt": "btg.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_101": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_101": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_101": {
+        "txt": ""
+      },
+      "text_102": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_103": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_103": {
+        "txt": "subtitle_103"
+      },
+      "text_105": {
+        "txt": "text_105",
+        "css": ""
+      },
+      "code_106": {
+        "txt": "btg.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_107": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_107": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_108": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_109": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_110": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_111": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_111": {
+        "txt": ""
+      },
+      "hr_112": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_112": {
+        "txt": "subtitle_112"
+      },
+      "text_114": {
+        "txt": "text_114",
+        "css": ""
+      },
+      "code_115": {
+        "txt": "btg.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_116": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_116": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_117": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_118": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_119": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_120": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_120": {
+        "txt": ""
+      },
+      "hr_121": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_121": {
+        "txt": "subtitle_121"
+      },
+      "text_123": {
+        "txt": "text_123",
+        "css": ""
+      },
+      "code_124": {
+        "txt": "btg.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_125": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_125": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_126": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_127": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_127": {
+        "txt": ""
+      },
+      "hr_128": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_128": {
+        "txt": "subtitle_128"
+      },
+      "text_130": {
+        "txt": "text_130",
+        "css": ""
+      },
+      "code_131": {
+        "txt": "btg.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_132": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_132": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_133": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_137": {
+        "txt": ""
+      },
+      "hr_138": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_138": {
+        "txt": "subtitle_138"
+      },
+      "text_140": {
+        "txt": "text_140",
+        "css": ""
+      },
+      "code_141": {
+        "txt": "btg.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_142": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_142": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_143": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_144": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_145": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_146": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_146": {
+        "txt": ""
+      },
+      "hr_147": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_147": {
+        "txt": "subtitle_147"
+      },
+      "text_149": {
+        "txt": "text_149",
+        "css": ""
+      },
+      "code_150": {
+        "txt": "btg.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_151": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_151": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_151": {
+        "txt": ""
+      },
+      "hr_152": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_152": {
+        "txt": "subtitle_152"
+      },
+      "text_154": {
+        "txt": "text_154",
+        "css": ""
+      },
+      "code_155": {
+        "txt": "btg.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_156": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_156": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_156": {
+        "txt": ""
+      },
+      "hr_157": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_157": {
+        "txt": "subtitle_157"
+      },
+      "text_159": {
+        "txt": "text_159",
+        "css": ""
+      },
+      "code_160": {
+        "txt": "btg.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_161": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_161": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_161": {
+        "txt": ""
+      },
+      "hr_162": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_162": {
+        "txt": "subtitle_162"
+      },
+      "text_164": {
+        "txt": "text_164",
+        "css": ""
+      },
+      "code_165": {
+        "txt": "btg.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_166": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_166": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_166": {
+        "txt": ""
+      },
+      "hr_167": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_167": {
+        "txt": "subtitle_167"
+      },
+      "text_168": {
+        "txt": "text_168",
+        "css": ""
+      },
+      "code_169": {
+        "txt": "btg.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_170": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_170": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `text <i class=\"arg-def\">String</i>` The button text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding button item. `active <i class=\"arg-def\">Boolean</i>` The active state of the button item if button is `toggleable`. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_170": {
+        "txt": ""
+      },
+      "hr_171": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_171": {
+        "txt": "subtitle_171"
+      },
+      "text_172": {
+        "txt": "text_172",
+        "css": ""
+      },
+      "code_173": {
+        "txt": "btg.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_174": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_174": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `text <i class=\"arg-def\">String</i>` Button text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding button. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_174": {
+        "txt": ""
+      },
+      "hr_175": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_175": {
+        "txt": "subtitle_175"
+      },
+      "text_176": {
+        "txt": "text_176",
+        "css": ""
+      },
+      "code_177": {
+        "txt": "btg.setList( items )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_178": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_178": {
+        "content": [
+          "items ",
+          "Array",
+          "Button items. "
+        ]
+      },
+      "table-footer_178": {
+        "txt": ""
+      },
+      "hr_179": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_179": {
+        "txt": "subtitle_179"
+      },
+      "text_180": {
+        "txt": "text_180",
+        "css": ""
+      },
+      "code_181": {
+        "txt": "btg.getList()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_182": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Array</span>"
+      },
+      "hr_183": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_183": {
+        "txt": "subtitle_183"
+      },
+      "text_184": {
+        "txt": "text_184",
+        "css": ""
+      },
+      "code_185": {
+        "txt": "btg.addItem(name, icon, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_186": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_186": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name. "
+        ]
+      },
+      "table-row_187": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-row_188": {
+        "content": [
+          "index ",
+          "Number",
+          "The index where to insert the button item if provided. "
+        ]
+      },
+      "table-footer_188": {
+        "txt": ""
+      },
+      "hr_189": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_189": {
+        "txt": "subtitle_189"
+      },
+      "text_190": {
+        "txt": "text_190",
+        "css": ""
+      },
+      "code_191": {
+        "txt": "btg.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_192": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_192": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-footer_192": {
+        "txt": ""
+      },
+      "hr_193": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_193": {
+        "txt": "subtitle_193"
+      },
+      "text_194": {
+        "txt": "text_194",
+        "css": ""
+      },
+      "code_195": {
+        "txt": "btg.setItem(name, newName)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_196": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_196": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_197": {
+        "content": [
+          "newName ",
+          "String",
+          "The new button item name. "
+        ]
+      },
+      "table-row_198": {
+        "content": [
+          "newIcon ",
+          "String",
+          "The new button item icon. "
+        ]
+      },
+      "table-footer_198": {
+        "txt": ""
+      },
+      "hr_199": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_199": {
+        "txt": "subtitle_199"
+      },
+      "text_200": {
+        "txt": "text_200",
+        "css": ""
+      },
+      "code_201": {
+        "txt": "btg.setItemByIndex(item, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_202": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_202": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_203": {
+        "content": [
+          "name ",
+          "String",
+          "The new button item name. "
+        ]
+      },
+      "table-row_204": {
+        "content": [
+          "icon ",
+          "String",
+          "The new button item icon. "
+        ]
+      },
+      "table-footer_204": {
+        "txt": ""
+      },
+      "hr_205": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_205": {
+        "txt": "subtitle_205"
+      },
+      "text_206": {
+        "txt": "text_206",
+        "css": ""
+      },
+      "code_207": {
+        "txt": "btg.removeItemByName( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_208": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_208": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the item to be remove. "
+        ]
+      },
+      "table-footer_208": {
+        "txt": ""
+      },
+      "hr_209": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_209": {
+        "txt": "subtitle_209"
+      },
+      "text_210": {
+        "txt": "text_210",
+        "css": ""
+      },
+      "code_211": {
+        "txt": "btg.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_212": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_212": {
+        "txt": "subtitle_212"
+      },
+      "text_213": {
+        "txt": "text_213",
+        "css": ""
+      },
+      "code_214": {
+        "txt": "btg.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_215": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_215": {
+        "txt": "subtitle_215"
+      },
+      "text_216": {
+        "txt": "text_216",
+        "css": ""
+      },
+      "code_217": {
+        "txt": "btg.setToolTips(titles, pos)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_218": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_218": {
+        "content": [
+          "titles ",
+          "Array",
+          "The titles for each item in the ButtonGroup. "
+        ]
+      },
+      "table-row_219": {
+        "content": [
+          "[pos='top'] ",
+          "String",
+          "The positio of the tooltip. \\n Can be `top` `left` `right` `bottom` `bottom-end` `bottom-start` `left-end` `left-start` `right-end` `right-start` `top-end` `top-start` "
+        ]
+      },
+      "table-footer_219": {
+        "txt": ""
+      },
+      "hr_220": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_220": {
+        "txt": "subtitle_220"
+      },
+      "text_221": {
+        "txt": "text_221",
+        "css": ""
+      },
+      "code_222": {
+        "txt": "btg.setToolTip(name, title, pos)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_223": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_223": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_224": {
+        "content": [
+          "title ",
+          "String",
+          "The tooltip title. "
+        ]
+      },
+      "table-row_225": {
+        "content": [
+          "pos ",
+          "String",
+          "The tooltip position. "
+        ]
+      },
+      "table-footer_225": {
+        "txt": ""
+      },
+      "hr_226": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_226": {
+        "txt": "subtitle_226"
+      },
+      "text_227": {
+        "txt": "text_227",
+        "css": ""
+      },
+      "code_228": {
+        "txt": "btg.setToolTipByIndex(index, title, pos)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_229": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_229": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_230": {
+        "content": [
+          "title ",
+          "String",
+          "The tooltip title. "
+        ]
+      },
+      "table-row_231": {
+        "content": [
+          "pos ",
+          "String",
+          "The tooltip position. "
+        ]
+      },
+      "table-footer_231": {
+        "txt": ""
+      },
+      "hr_232": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_232": {
+        "txt": "subtitle_232"
+      },
+      "text_233": {
+        "txt": "text_233",
+        "css": ""
+      },
+      "code_234": {
+        "txt": "btg.enableElevation( enable )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_235": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_235": {
+        "content": [
+          "enable ",
+          "Boolean",
+          "Can be `true` or `false` "
+        ]
+      },
+      "table-footer_235": {
+        "txt": ""
+      },
+      "hr_236": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_236": {
+        "txt": "subtitle_236"
+      },
+      "text_237": {
+        "txt": "text_237",
+        "css": ""
+      },
+      "code_238": {
+        "txt": "btg.setEnabled( index, value )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_239": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_239": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the button item. "
+        ]
+      },
+      "table-row_240": {
+        "content": [
+          "value ",
+          "Boolean",
+          "Values can be `true` or `false`. "
+        ]
+      },
+      "table-footer_240": {
+        "txt": ""
+      },
+      "hr_241": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_241": {
+        "txt": "subtitle_241"
+      },
+      "text_242": {
+        "txt": "text_242",
+        "css": ""
+      },
+      "code_243": {
+        "txt": "btg.getEnabled( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_244": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_244": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-footer_244": {
+        "txt": ""
+      },
+      "text_245": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_246": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_246": {
+        "txt": "subtitle_246"
+      },
+      "text_247": {
+        "txt": "text_247",
+        "css": ""
+      },
+      "code_248": {
+        "txt": "btg.setEnabledByIndex(index, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_249": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_249": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_250": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "The enabled state of the button item. "
+        ]
+      },
+      "table-footer_250": {
+        "txt": ""
+      },
+      "hr_251": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_251": {
+        "txt": "subtitle_251"
+      },
+      "text_252": {
+        "txt": "text_252",
+        "css": ""
+      },
+      "code_253": {
+        "txt": "btg.getEnabledByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_254": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_254": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-footer_254": {
+        "txt": ""
+      },
+      "text_255": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_256": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_256": {
+        "txt": "subtitle_256"
+      },
+      "text_257": {
+        "txt": "text_257",
+        "css": ""
+      },
+      "code_258": {
+        "txt": "btg.setTextColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_259": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_259": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_260": {
+        "content": [
+          "color ",
+          "String",
+          "Css formatted colors. "
+        ]
+      },
+      "table-footer_260": {
+        "txt": ""
+      },
+      "hr_261": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_261": {
+        "txt": "subtitle_261"
+      },
+      "text_262": {
+        "txt": "text_262",
+        "css": ""
+      },
+      "code_263": {
+        "txt": "btg.setTextColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_264": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_264": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_265": {
+        "content": [
+          "color ",
+          "String",
+          "Css formatted colors. "
+        ]
+      },
+      "table-footer_265": {
+        "txt": ""
+      },
+      "hr_266": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_266": {
+        "txt": "subtitle_266"
+      },
+      "text_267": {
+        "txt": "text_267",
+        "css": ""
+      },
+      "code_268": {
+        "txt": "btg.setTextSize(name, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_269": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_269": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_270": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. "
+        ]
+      },
+      "table-footer_270": {
+        "txt": ""
+      },
+      "hr_271": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_271": {
+        "txt": "subtitle_271"
+      },
+      "text_272": {
+        "txt": "text_272",
+        "css": ""
+      },
+      "code_273": {
+        "txt": "btg.setTextSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_274": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_274": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_275": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. "
+        ]
+      },
+      "table-footer_275": {
+        "txt": ""
+      },
+      "hr_276": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_276": {
+        "txt": "subtitle_276"
+      },
+      "text_277": {
+        "txt": "text_277",
+        "css": ""
+      },
+      "code_278": {
+        "txt": "btg.setTextWeight(name, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_279": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_279": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_280": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_280": {
+        "txt": ""
+      },
+      "hr_281": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_281": {
+        "txt": "subtitle_281"
+      },
+      "text_282": {
+        "txt": "text_282",
+        "css": ""
+      },
+      "code_283": {
+        "txt": "btg.setTextWeightByIndex(index, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_284": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_284": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_285": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_285": {
+        "txt": ""
+      },
+      "hr_286": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_286": {
+        "txt": "subtitle_286"
+      },
+      "text_287": {
+        "txt": "text_287",
+        "css": ""
+      },
+      "code_288": {
+        "txt": "btg.setColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_289": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_289": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_290": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or css formatted colors. "
+        ]
+      },
+      "table-footer_290": {
+        "txt": ""
+      },
+      "hr_291": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_291": {
+        "txt": "subtitle_291"
+      },
+      "text_292": {
+        "txt": "text_292",
+        "css": ""
+      },
+      "code_293": {
+        "txt": "btg.setColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_294": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_294": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_295": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or css formatted colors. "
+        ]
+      },
+      "table-footer_295": {
+        "txt": ""
+      },
+      "hr_296": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_296": {
+        "txt": "subtitle_296"
+      },
+      "text_297": {
+        "txt": "text_297",
+        "css": ""
+      },
+      "code_298": {
+        "txt": "btg.setUrl(name, url, newTab)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_299": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_299": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_300": {
+        "content": [
+          "url ",
+          "String",
+          "Link "
+        ]
+      },
+      "table-row_301": {
+        "content": [
+          "newTab ",
+          "Boolean",
+          "Open link in a new tab. "
+        ]
+      },
+      "table-footer_301": {
+        "txt": ""
+      },
+      "hr_302": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_302": {
+        "txt": "subtitle_302"
+      },
+      "text_303": {
+        "txt": "text_303",
+        "css": ""
+      },
+      "code_304": {
+        "txt": "btg.getUrl()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_305": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_305": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-footer_305": {
+        "txt": ""
+      },
+      "text_306": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">String</span>"
+      },
+      "hr_307": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_307": {
+        "txt": "subtitle_307"
+      },
+      "text_308": {
+        "txt": "text_308",
+        "css": ""
+      },
+      "code_309": {
+        "txt": "btg.setUrlByIndex(index, url)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_310": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_310": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the link button. "
+        ]
+      },
+      "table-row_311": {
+        "content": [
+          "url ",
+          "String",
+          "Link or page route. "
+        ]
+      },
+      "table-row_312": {
+        "content": [
+          "newTab ",
+          "Boolean",
+          "Open this url in a new tab. "
+        ]
+      },
+      "table-footer_312": {
+        "txt": ""
+      },
+      "hr_313": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_313": {
+        "txt": "subtitle_313"
+      },
+      "text_314": {
+        "txt": "text_314",
+        "css": ""
+      },
+      "code_315": {
+        "txt": "btg.getUrlByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_316": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_316": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the button. "
+        ]
+      },
+      "table-footer_316": {
+        "txt": ""
+      },
+      "hr_317": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_317": {
+        "txt": "subtitle_317"
+      },
+      "text_318": {
+        "txt": "text_318",
+        "css": ""
+      },
+      "code_319": {
+        "txt": "btg.setIcon(name, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_320": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_320": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_321": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon font. "
+        ]
+      },
+      "table-footer_321": {
+        "txt": ""
+      },
+      "hr_322": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_322": {
+        "txt": "subtitle_322"
+      },
+      "text_323": {
+        "txt": "text_323",
+        "css": ""
+      },
+      "code_324": {
+        "txt": "btg.setIconByIndex(index, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_325": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_325": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_326": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon font. "
+        ]
+      },
+      "table-footer_326": {
+        "txt": ""
+      },
+      "hr_327": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_327": {
+        "txt": "subtitle_327"
+      },
+      "text_328": {
+        "txt": "text_328",
+        "css": ""
+      },
+      "code_329": {
+        "txt": "btg.setIconColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_330": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_330": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_331": {
+        "content": [
+          "color ",
+          "String",
+          "Theme colors or css formatted colors. "
+        ]
+      },
+      "table-footer_331": {
+        "txt": ""
+      },
+      "hr_332": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_332": {
+        "txt": "subtitle_332"
+      },
+      "text_333": {
+        "txt": "text_333",
+        "css": ""
+      },
+      "code_334": {
+        "txt": "btg.setIconColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_335": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_335": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_336": {
+        "content": [
+          "color ",
+          "String",
+          "Theme colors or css formatted colors. "
+        ]
+      },
+      "table-footer_336": {
+        "txt": ""
+      },
+      "hr_337": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_337": {
+        "txt": "subtitle_337"
+      },
+      "text_338": {
+        "txt": "text_338",
+        "css": ""
+      },
+      "code_339": {
+        "txt": "btg.setIconSize(name, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_340": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_340": {
+        "content": [
+          "name ",
+          "String",
+          "The button item name or index. "
+        ]
+      },
+      "table-row_341": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. "
+        ]
+      },
+      "table-footer_341": {
+        "txt": ""
+      },
+      "hr_342": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_342": {
+        "txt": "subtitle_342"
+      },
+      "text_343": {
+        "txt": "text_343",
+        "css": ""
+      },
+      "code_344": {
+        "txt": "btg.setIconSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_345": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_345": {
+        "content": [
+          "index ",
+          "Number",
+          "The button item index. "
+        ]
+      },
+      "table-row_346": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. "
+        ]
+      },
+      "table-footer_346": {
+        "txt": ""
+      },
+      "hr_347": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_347": {
+        "txt": "heading_347"
+      },
+      "hr_348": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_348": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with object vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n    // Initialize button items\n    var buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n    // Add a ButtonGroup control to the main layout\n    this.btg = ui.addButtonGroup(this.main, buttons, \"\", 0.9)\n\n    // Add a callback handler for `onTouch` event\n    this.btg.setOnTouch(this.onTouch)\n  }\n\n  onTouch(text, index) {\n    // Display the touched button text\n    ui.showPopup(text)\n  }\n}",
+        "sample": "Basic ButtonGroup",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_349": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with object vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0, 0.05, 0, 0.05)\n\n    var buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n    // Add a contained ButtonGroup to the main layout\n    this.btg1 = ui.addButtonGroup(this.main, buttons, \"Contained,Primary\", 0.9)\n    this.btg1.setOnTouch(this.onTouch)\n\n    // Add an outlined ButtonGroup to the main layout\n    this.btg2 = ui.addButtonGroup(this.main, buttons, \"Outlined,Primary\", 0.9)\n    this.btg2.setOnTouch(this.onTouch)\n\n    // Add a text ButtonGroup to the main layout\n    this.btg3 = ui.addButtonGroup(this.main, buttons, \"Text,Primary\", 0.9)\n    this.btg3.setOnTouch(this.onTouch)\n  }\n\n  onTouch(text, index) {\n    // Display the touched button text\n    ui.showPopup(text)\n  }\n}",
+        "sample": "ButtonGroup variants",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_350": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with object vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0, 0.05, 0, 0.05)\n\n    // Initialize button items\n    var buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n    // Add defualt ButtonGroup to the main layout\n    this.btg1 = ui.addButtonGroup(this.main, buttons, \"Default\", 0.9)\n    this.btg1.setOnTouch(this.onTouch)\n\n    // Add primary ButtonGroup to the main layout\n    this.btg2 = ui.addButtonGroup(this.main, buttons, \"Primary\", 0.9)\n    this.btg2.setOnTouch(this.onTouch)\n\n    // Add secondary ButtonGroup to the main layout\n    this.btg3 = ui.addButtonGroup(this.main, buttons, \"Secondary\", 0.9)\n    this.btg3.setOnTouch(this.onTouch)\n  }\n\n  onTouch(text, index) {\n    // Display the touched button text\n    ui.showPopup(text)\n  }\n}",
+        "sample": "ButtonGroup colors",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_351": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with object vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0, 0.05, 0, 0.05)\n\n    // Initialize button items\n    var buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n    // Add small size ButtonGroup to the main layout\n    this.btg1 = ui.addButtonGroup(this.main, buttons, \"Contained,Primary,Small\", 0.9)\n    this.btg1.setOnTouch(this.onTouch)\n\n    // Add medium/default size ButtonGroup to the main layout\n    this.btg2 = ui.addButtonGroup(this.main, buttons, \"Contained,Primary,Medium\", 0.9)\n    this.btg2.setOnTouch(this.onTouch)\n\n    // Add large size ButtonGroup to the main layout\n    this.btg3 = ui.addButtonGroup(this.main, buttons, \"Contained,Primary,Large\", 0.9)\n    this.btg3.setOnTouch(this.onTouch)\n  }\n\n  onTouch(text, index) {\n    // Display the touched button text\n    ui.showPopup(text)\n  }\n}",
+        "sample": "ButtonGroup sizes",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_352": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with object vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0, 0.05, 0, 0.05)\n\n    // Initialize button items\n    var buttons = [\"delete\", \"shopping_cart\", \"dashboard\"]\n\n    // Add small and primary contained ButtonGroup icons to the main layout\n    this.btg1 = ui.addButtonGroup(this.main, buttons, \"Contained,Primary,Small,Icon\")\n    this.btg1.setOnTouch(this.onTouch)\n\n    // Add a medium and secondary outlined ButtonGroup icons to the main layout\n    this.btg2 = ui.addButtonGroup(this.main, buttons, \"Outlined,Secondary,Medium,Icon\")\n    this.btg2.setOnTouch(this.onTouch)\n\n    // Add a large and default text ButtonGroup icons to the main layout\n    this.btg3 = ui.addButtonGroup(this.main, buttons, \"Text,Large,Icon\")\n    this.btg3.setOnTouch(this.onTouch)\n  }\n\n  onTouch(text, index) {\n    // Display the touched button text\n    ui.showPopup(text)\n  }\n}",
+        "sample": "ButtonGroup icons",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_353": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with object vertically centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n    // Initialize button items\n    var buttons = [\"Photos\", \"Music\", \"Downloads\"]\n\n    // Add a ButtonGroup control to the main layout\n    this.btg = ui.addButtonGroup(this.main, buttons, \"keepcase\", 0.9);\n    this.btg.setIcon(0, \"photo\");\n    this.btg.setIcon(\"Music\", \"music_note\");\n    this.btg.setIcon(2, \"folder\");\n\n    this.btg.setOnTouch(this.onTouch);\n  }\n\n  onTouch(text, index) {\n    // Display the touched button text\n    ui.showPopup(text)\n  }\n}",
+        "sample": "With leading icons",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_354": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with object vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n   # Initialize button items\n   buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n   # Add a ButtonGroup control to the main layout\n   btg = ui.addButtonGroup(main, buttons, \"\", 0.9)\n\n   # Add a callback handler for `onTouch` event\n   btg.setOnTouch(onTouch)\n\ndef onTouch(text, index, event):\n   # Display the touched button text\n   ui.showPopup(text)",
+        "sample": "Basic ButtonGroup",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_355": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with object vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.05, 0, 0.05)\n\n   buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n   # Add a contained ButtonGroup to the main layout\n   btg1 = ui.addButtonGroup(main, buttons, \"Contained,Primary\", 0.9)\n   btg1.setOnTouch(onTouch)\n\n   # Add an outlined ButtonGroup to the main layout\n   btg2 = ui.addButtonGroup(main, buttons, \"Outlined,Primary\", 0.9)\n   btg2.setOnTouch(onTouch)\n\n   # Add a text ButtonGroup to the main layout\n   btg3 = ui.addButtonGroup(main, buttons, \"Text,Primary\", 0.9)\n   btg3.setOnTouch(onTouch)\n\ndef onTouch(text, index, event):\n   # Display the touched button text\n   ui.showPopup(text)",
+        "sample": "ButtonGroup variants",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_356": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with object vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.05, 0, 0.05)\n\n   # Initialize button items\n   buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n   # Add defualt ButtonGroup to the main layout\n   btg1 = ui.addButtonGroup(main, buttons, \"Default\", 0.9)\n   btg1.setOnTouch(onTouch)\n\n   # Add primary ButtonGroup to the main layout\n   btg2 = ui.addButtonGroup(main, buttons, \"Primary\", 0.9)\n   btg2.setOnTouch(onTouch)\n\n   # Add secondary ButtonGroup to the main layout\n   btg3 = ui.addButtonGroup(main, buttons, \"Secondary\", 0.9)\n   btg3.setOnTouch(onTouch)\n\ndef onTouch(text, index, event):\n   # Display the touched button text\n   ui.showPopup(text)",
+        "sample": "ButtonGroup colors",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_357": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with object vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.05, 0, 0.05)\n\n   # Initialize button items\n   buttons = [\"Button 1\", \"Button 2\", \"Button 3\"]\n\n   # Add small size ButtonGroup to the main layout\n   btg1 = ui.addButtonGroup(main, buttons, \"Contained,Primary,Small\", 0.9)\n   btg1.setOnTouch(onTouch)\n\n   # Add medium/default size ButtonGroup to the main layout\n   btg2 = ui.addButtonGroup(main, buttons, \"Contained,Primary,Medium\", 0.9)\n   btg2.setOnTouch(onTouch)\n\n   # Add large size ButtonGroup to the main layout\n   btg3 = ui.addButtonGroup(main, buttons, \"Contained,Primary,Large\", 0.9)\n   btg3.setOnTouch(onTouch)\n\ndef onTouch(text, index, event):\n   # Display the touched button text\n   ui.showPopup(text)",
+        "sample": "ButtonGroup sizes",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_358": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with object vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.05, 0, 0.05)\n\n   # Initialize button items\n   buttons = [\"delete\", \"shopping_cart\", \"dashboard\"]\n\n   # Add small and primary contained ButtonGroup icons to the main layout\n   btg1 = ui.addButtonGroup(main, buttons, \"Contained,Primary,Small,Icon\")\n   btg1.setOnTouch(onTouch)\n\n   # Add a medium and secondary outlined ButtonGroup icons to the main layout\n   btg2 = ui.addButtonGroup(main, buttons, \"Outlined,Secondary,Medium,Icon\")\n   btg2.setOnTouch(onTouch)\n\n   # Add a large and default text ButtonGroup icons to the main layout\n   btg3 = ui.addButtonGroup(main, buttons, \"Text,Large,Icon\")\n   btg3.setOnTouch(onTouch)\n\ndef onTouch(text, index, event):\n   # Display the touched button text\n   ui.showPopup(text)",
+        "sample": "ButtonGroup icons",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_359": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with object vertically centered.\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Initialize button items\n   buttons = [\"Photos\", \"Music\", \"Downloads\"]\n\n   # Add a button group control to the main layout\n   btg = ui.addButtonGroup(main, buttons, \"KeepCase\")\n   btg.setIcon(0, \"photo\")\n   btg.setIcon(\"Music\", \"music_note\")\n   btg.setIcon(2, \"folder\")\n\n   btg.setOnTouch( onTouch )\n\ndef onTouch(text, index, event):\n   # Display the touched button text\n   ui.showPopup(text)",
+        "sample": "With leading icons",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " ButtonGroup",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "In mobile UI development, a button group refers to a collection of buttons presented together, often used for related actions.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "The grouping helps organize and visually connect buttons with similar functions. Design principles may include consistent styling, alignment, and spacing for a unified appearance, promoting a cohesive user experience when interacting with multiple buttons in a single context.",
+      "de": "",
+      "es": ""
+    },
+    "text_7": {
+      "en": "Add a button group into your app using the `addButtonGroup` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "A toggleable buttongroup can accept additional `Radio` option to have atmost one toggled button item. If buttongroup is toggleable, please refer to the `setOnTouch` callback for the correct order of arguments.",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
+      "en": "The \"Link\" option renders the buttons as anchor tag that will open a link provided in `urls` setter property. The \"NewTab\" option will allow the link to be open in a new tab window.",
+      "de": "",
+      "es": ""
+    },
+    "heading_17": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_18": {
+      "en": "Here are the setter and/or getter properties of the ButtonGroup Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_60": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_61": {
+      "en": "Here are the methods available for ButtonGroup Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_62": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_64": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_68": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_70": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_75": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_77": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_79": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_81": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_83": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_85": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_87": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_89": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_91": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_93": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_97": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_99": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_103": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_112": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_114": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_121": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_123": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_128": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_130": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_138": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_140": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_147": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_149": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_152": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_154": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_157": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_162": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_164": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_167": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_168": {
+      "en": "Adds a callback handler when a button item is touch. If the button is `toggleable` the arguments pass into the callback function is `text, index, active, pos` respectively, where `active` is the active state of the button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_171": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_172": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_175": {
+      "en": "setList",
+      "de": "",
+      "es": ""
+    },
+    "text_176": {
+      "en": "Sets the list of button items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_179": {
+      "en": "getList",
+      "de": "",
+      "es": ""
+    },
+    "text_180": {
+      "en": "Returns the button item names and icons if provided.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_183": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_184": {
+      "en": "Adds a new button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_189": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_190": {
+      "en": "Removes a button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_193": {
+      "en": "setItem",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "Sets a new text for a button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_199": {
+      "en": "setItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_200": {
+      "en": "Sets a new text for a button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_205": {
+      "en": "removeItemByName",
+      "de": "",
+      "es": ""
+    },
+    "text_206": {
+      "en": "Removes an item in the button group by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_209": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_210": {
+      "en": "Removes the last item of the button group. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_212": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_213": {
+      "en": "Removes the first item in the button group. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_215": {
+      "en": "setToolTips",
+      "de": "",
+      "es": ""
+    },
+    "text_216": {
+      "en": "Adds a tooltips to the ButtonGroup items.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_220": {
+      "en": "setToolTip",
+      "de": "",
+      "es": ""
+    },
+    "text_221": {
+      "en": "Sets a tooltip for a button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_226": {
+      "en": "setToolTipByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_227": {
+      "en": "Sets a tooltip for a button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_232": {
+      "en": "enableElevation",
+      "de": "",
+      "es": ""
+    },
+    "text_233": {
+      "en": "Enable of disable the elevation of the button group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_236": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_237": {
+      "en": "Enable or disable a button item in the button group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_241": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_242": {
+      "en": "Get the enabled state of the button item in the button group.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_246": {
+      "en": "setEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_247": {
+      "en": "Enable or disable a button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_251": {
+      "en": "getEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_252": {
+      "en": "Returns the enabled state of the button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_256": {
+      "en": "setTextColor",
+      "de": "",
+      "es": ""
+    },
+    "text_257": {
+      "en": "Sets the color of the button item text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_261": {
+      "en": "setTextColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_262": {
+      "en": "Sets the color of the button item text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_266": {
+      "en": "setTextSize",
+      "de": "",
+      "es": ""
+    },
+    "text_267": {
+      "en": "Sets the size of the button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_271": {
+      "en": "setTextSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_272": {
+      "en": "Sets the size of the button item text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_276": {
+      "en": "setTextWeight",
+      "de": "",
+      "es": ""
+    },
+    "text_277": {
+      "en": "Sets the strength of the button item text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_281": {
+      "en": "setTextWeightByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_282": {
+      "en": "Sets the strength of the button item text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_286": {
+      "en": "setColor",
+      "de": "",
+      "es": ""
+    },
+    "text_287": {
+      "en": "Sets the color of the button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_291": {
+      "en": "setColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_292": {
+      "en": "Sets the color of the button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_296": {
+      "en": "setUrl",
+      "de": "",
+      "es": ""
+    },
+    "text_297": {
+      "en": "Add a link to a button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_302": {
+      "en": "getUrl",
+      "de": "",
+      "es": ""
+    },
+    "text_303": {
+      "en": "Returns the button item url.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_307": {
+      "en": "setUrlByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_308": {
+      "en": "Add a link to a button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_313": {
+      "en": "getUrlByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_314": {
+      "en": "Returns the url of a button link by specifying its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_317": {
+      "en": "setIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_318": {
+      "en": "Sets an icon for a button item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_322": {
+      "en": "setIconByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_323": {
+      "en": "Sets an icon for a button item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_327": {
+      "en": "setIconColor",
+      "de": "",
+      "es": ""
+    },
+    "text_328": {
+      "en": "Sets the color of the button item icon.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_332": {
+      "en": "setIconColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_333": {
+      "en": "Sets the color of the button item icon by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_337": {
+      "en": "setIconSize",
+      "de": "",
+      "es": ""
+    },
+    "text_338": {
+      "en": "Sets the size of the button item icon.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_342": {
+      "en": "setIconSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_343": {
+      "en": "Sets the size of the button item icon by its index.",
+      "de": "",
+      "es": ""
+    },
+    "heading_347": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/ButtonGroup';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

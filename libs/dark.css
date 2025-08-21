@@ -136,7 +136,7 @@ body, .backColor { background-color: var(--back); }
 }
 .MuiSlider-thumbColorPrimary.MuiSlider-active { box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.1); }
 .MuiSlider-thumbColorSecondary.MuiSlider-active { box-shadow: 0px 0px 0px 14px rgba(255, 255, 255, 0.1); }
-
+.uiSlider .PrivateValueLabel-label-5 { color: rgba(0, 0, 0, 0.87); }
 
 /* Forms */
 
@@ -437,8 +437,6 @@ body, .backColor { background-color: var(--back); }
 .MuiBreadcrumbs-root .MuiTypography-root.MuiTypography-colorTextPrimary {
     color: var(--primary);
 }
-
-
 
 
 /*

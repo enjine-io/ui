@@ -1,0 +1,3042 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/devices.min.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "rdg = ui.addRadioGroup(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The parent where to add the RadioGroup component. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "[list] ",
+          "Array",
+          "The list items array. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options. Values can be \"Small,Medium\"|\"Primary,Secondary,Default\"|\"Horizontal,Vertical\"|\"Left,Right\"|\"Elevated,Outlined\"|\"Square\"|\"Required\" "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width \"[0-1]\". "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height \"[0-1]\". "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : RadioGroup</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "table-header_15": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_16": {
+        "content": [
+          "value ",
+          "Number",
+          "Sets or returns the value of the RadioGroup Component as an index of the selected item."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_17": {
+        "content": [
+          "label ",
+          "String",
+          "Sets or returns the list label text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_18": {
+        "content": [
+          "list ",
+          "Array",
+          "Sets or returns the list array. You can also pass a comma separated string of items."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_19": {
+        "content": [
+          "elevation ",
+          "Number",
+          "Sets or returns the depth of the RadioGroup container. Value ranges from 0 to 24."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_20": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the radio item text size. You can also pass a string like \"2rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "textWeight ",
+          "String",
+          "Sets or returns the strength of the radio item text. Values can be thin|extralight|light|regular|medium|semibold|bold|extrabold|black"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_22": {
+        "content": [
+          "textPosition ",
+          "String",
+          "Sets or returns the position of the label text. Values can be \"left\" or \"right\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_23": {
+        "content": [
+          "textOffset ",
+          "Number",
+          "Sets or returns the text offset from the radio."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color for the radio button. Values can be \"Default,Primary,Secondary\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "radioSize ",
+          "String",
+          "Sets or returns the size of the radio button. Values can be \"Small\" or \"Medium\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_26": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the radio icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_27": {
+        "content": [
+          "checkedIcon ",
+          "String",
+          "Sets or returns the active radio icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_28": {
+        "content": [
+          "radioPosition ",
+          "String",
+          "Sets or returns the position of the icon. Values can be \"left\" or \"right\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_29": {
+        "content": [
+          "outlined ",
+          "Boolean",
+          "Sets or returns whether the container is outlined or elevated."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_30": {
+        "content": [
+          "itemPadding ",
+          "Number",
+          "Sets or returns the padding of each radio item. See also \"setItemPadding\" method."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_31": {
+        "content": [
+          "orientation ",
+          "String",
+          "Sets or returns the orientation of the list. Can be \"vertical\" or \"horizontal\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_32": {
+        "content": [
+          "itemColor ",
+          "String",
+          "Sets or returns the back color of the radio item. Values can be theme colors e.g. \"Primary|Secondary\" or css formatted colors."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_33": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_33": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_34": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_35": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_36": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_37": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_38": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_39": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_40": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_41": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_42": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_43": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_44": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_45": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_46": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_47": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_48": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_49": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_50": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_51": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_52": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_53": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_54": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_55": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_56": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_57": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_58": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_59": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-footer_60": {
+        "txt": ""
+      },
+      "heading_61": {
+        "txt": "heading_61"
+      },
+      "text_62": {
+        "txt": "text_62",
+        "css": ""
+      },
+      "hr_63": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_63": {
+        "txt": "subtitle_63"
+      },
+      "text_65": {
+        "txt": "text_65",
+        "css": ""
+      },
+      "code_66": {
+        "txt": "rdg.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_67": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_67": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_68": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_68": {
+        "txt": ""
+      },
+      "hr_69": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_69": {
+        "txt": "subtitle_69"
+      },
+      "text_71": {
+        "txt": "text_71",
+        "css": ""
+      },
+      "code_72": {
+        "txt": "rdg.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_73": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_73": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_74": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_75": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_75": {
+        "txt": ""
+      },
+      "hr_76": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_76": {
+        "txt": "subtitle_76"
+      },
+      "text_78": {
+        "txt": "text_78",
+        "css": ""
+      },
+      "code_79": {
+        "txt": "rdg.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_80": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_80": {
+        "txt": "subtitle_80"
+      },
+      "text_82": {
+        "txt": "text_82",
+        "css": ""
+      },
+      "code_83": {
+        "txt": "rdg.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_84": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_84": {
+        "txt": "subtitle_84"
+      },
+      "text_86": {
+        "txt": "text_86",
+        "css": ""
+      },
+      "code_87": {
+        "txt": "rdg.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_88": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_88": {
+        "txt": "subtitle_88"
+      },
+      "text_90": {
+        "txt": "text_90",
+        "css": ""
+      },
+      "code_91": {
+        "txt": "rdg.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_92": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_92": {
+        "txt": "subtitle_92"
+      },
+      "text_94": {
+        "txt": "text_94",
+        "css": ""
+      },
+      "code_95": {
+        "txt": "rdg.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_96": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_96": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_97": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_97": {
+        "txt": ""
+      },
+      "hr_98": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_98": {
+        "txt": "subtitle_98"
+      },
+      "text_100": {
+        "txt": "text_100",
+        "css": ""
+      },
+      "code_101": {
+        "txt": "rdg.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_102": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_102": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_102": {
+        "txt": ""
+      },
+      "text_103": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_104": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_104": {
+        "txt": "subtitle_104"
+      },
+      "text_106": {
+        "txt": "text_106",
+        "css": ""
+      },
+      "code_107": {
+        "txt": "rdg.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_108": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_108": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_109": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_110": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_111": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_112": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_112": {
+        "txt": ""
+      },
+      "hr_113": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_113": {
+        "txt": "subtitle_113"
+      },
+      "text_115": {
+        "txt": "text_115",
+        "css": ""
+      },
+      "code_116": {
+        "txt": "rdg.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_117": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_117": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_118": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_119": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_120": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_121": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_121": {
+        "txt": ""
+      },
+      "hr_122": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_122": {
+        "txt": "subtitle_122"
+      },
+      "text_124": {
+        "txt": "text_124",
+        "css": ""
+      },
+      "code_125": {
+        "txt": "rdg.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_126": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_126": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_127": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_128": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_128": {
+        "txt": ""
+      },
+      "hr_129": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_129": {
+        "txt": "subtitle_129"
+      },
+      "text_131": {
+        "txt": "text_131",
+        "css": ""
+      },
+      "code_132": {
+        "txt": "rdg.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_133": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_133": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_134": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_138": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_138": {
+        "txt": ""
+      },
+      "hr_139": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_139": {
+        "txt": "subtitle_139"
+      },
+      "text_141": {
+        "txt": "text_141",
+        "css": ""
+      },
+      "code_142": {
+        "txt": "rdg.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_143": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_143": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_144": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_145": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_146": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_147": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_147": {
+        "txt": ""
+      },
+      "hr_148": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_148": {
+        "txt": "subtitle_148"
+      },
+      "text_150": {
+        "txt": "text_150",
+        "css": ""
+      },
+      "code_151": {
+        "txt": "rdg.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_152": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_152": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_152": {
+        "txt": ""
+      },
+      "hr_153": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_153": {
+        "txt": "subtitle_153"
+      },
+      "text_155": {
+        "txt": "text_155",
+        "css": ""
+      },
+      "code_156": {
+        "txt": "rdg.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_157": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_157": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_157": {
+        "txt": ""
+      },
+      "hr_158": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_158": {
+        "txt": "subtitle_158"
+      },
+      "text_160": {
+        "txt": "text_160",
+        "css": ""
+      },
+      "code_161": {
+        "txt": "rdg.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_162": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_162": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_162": {
+        "txt": ""
+      },
+      "hr_163": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_163": {
+        "txt": "subtitle_163"
+      },
+      "text_165": {
+        "txt": "text_165",
+        "css": ""
+      },
+      "code_166": {
+        "txt": "rdg.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_167": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_167": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_167": {
+        "txt": ""
+      },
+      "hr_168": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_168": {
+        "txt": "subtitle_168"
+      },
+      "text_169": {
+        "txt": "text_169",
+        "css": ""
+      },
+      "code_170": {
+        "txt": "rdg.setOnChange( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_171": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_171": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. This will pass  `text <i class=\"arg-def\">String</i>` The radio item label text. `index <i class=\"arg-def\">Number</i>` The index of the selected item."
+        ]
+      },
+      "table-footer_171": {
+        "txt": ""
+      },
+      "hr_172": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_172": {
+        "txt": "subtitle_172"
+      },
+      "text_173": {
+        "txt": "text_173",
+        "css": ""
+      },
+      "code_174": {
+        "txt": "rdg.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_175": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_175": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `checked <i class=\"arg-def\">Boolean</i>` The checked state of the radio item. `label <i class=\"arg-def\">String</i>` The radio item label text. `index <i class=\"arg-def\">Number</i>`  The index of the radio item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_175": {
+        "txt": ""
+      },
+      "hr_176": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_176": {
+        "txt": "subtitle_176"
+      },
+      "text_177": {
+        "txt": "text_177",
+        "css": ""
+      },
+      "code_178": {
+        "txt": "rdg.setItem(name, newName)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_179": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_179": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_180": {
+        "content": [
+          "newName ",
+          "String",
+          "The new radio item name. "
+        ]
+      },
+      "table-footer_180": {
+        "txt": ""
+      },
+      "hr_181": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_181": {
+        "txt": "subtitle_181"
+      },
+      "text_182": {
+        "txt": "text_182",
+        "css": ""
+      },
+      "code_183": {
+        "txt": "rdg.setItemByIndex(index, name)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_184": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_184": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_185": {
+        "content": [
+          "name ",
+          "String",
+          "The new radio item name text. "
+        ]
+      },
+      "table-footer_185": {
+        "txt": ""
+      },
+      "hr_186": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_186": {
+        "txt": "subtitle_186"
+      },
+      "text_187": {
+        "txt": "text_187",
+        "css": ""
+      },
+      "code_188": {
+        "txt": "rdg.addItem(name, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_189": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_189": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name. "
+        ]
+      },
+      "table-row_190": {
+        "content": [
+          "index ",
+          "Number",
+          "The index in which to insert the item. "
+        ]
+      },
+      "table-footer_190": {
+        "txt": ""
+      },
+      "hr_191": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_191": {
+        "txt": "subtitle_191"
+      },
+      "text_192": {
+        "txt": "text_192",
+        "css": ""
+      },
+      "code_193": {
+        "txt": "rdg.removeItemByName( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_194": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_194": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name. "
+        ]
+      },
+      "table-footer_194": {
+        "txt": ""
+      },
+      "hr_195": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_195": {
+        "txt": "subtitle_195"
+      },
+      "text_196": {
+        "txt": "text_196",
+        "css": ""
+      },
+      "code_197": {
+        "txt": "rdg.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_198": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_198": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the item to remove. "
+        ]
+      },
+      "table-footer_198": {
+        "txt": ""
+      },
+      "hr_199": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_199": {
+        "txt": "subtitle_199"
+      },
+      "text_200": {
+        "txt": "text_200",
+        "css": ""
+      },
+      "code_201": {
+        "txt": "rdg.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_202": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_202": {
+        "txt": "subtitle_202"
+      },
+      "text_203": {
+        "txt": "text_203",
+        "css": ""
+      },
+      "code_204": {
+        "txt": "rdg.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_205": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_205": {
+        "txt": "subtitle_205"
+      },
+      "text_206": {
+        "txt": "text_206",
+        "css": ""
+      },
+      "code_207": {
+        "txt": "rdg.setEnabled(name, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_208": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_208": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_209": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "The enabled state of the radio item. "
+        ]
+      },
+      "table-footer_209": {
+        "txt": ""
+      },
+      "hr_210": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_210": {
+        "txt": "subtitle_210"
+      },
+      "text_211": {
+        "txt": "text_211",
+        "css": ""
+      },
+      "code_212": {
+        "txt": "rdg.getEnabled( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_213": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_213": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-footer_213": {
+        "txt": ""
+      },
+      "text_214": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_215": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_215": {
+        "txt": "subtitle_215"
+      },
+      "text_216": {
+        "txt": "text_216",
+        "css": ""
+      },
+      "code_217": {
+        "txt": "rdg.setEnabledByIndex(index, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_218": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_218": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_219": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "The enabled state of the radio item. "
+        ]
+      },
+      "table-footer_219": {
+        "txt": ""
+      },
+      "hr_220": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_220": {
+        "txt": "subtitle_220"
+      },
+      "text_221": {
+        "txt": "text_221",
+        "css": ""
+      },
+      "code_222": {
+        "txt": "rdg.getEnabledByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_223": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_223": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-footer_223": {
+        "txt": ""
+      },
+      "text_224": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_225": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_225": {
+        "txt": "subtitle_225"
+      },
+      "text_226": {
+        "txt": "text_226",
+        "css": ""
+      },
+      "code_227": {
+        "txt": "rdg.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_228": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_228": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `label <i class=\"arg-def\">String</i>` The list item label text. `index <i class=\"arg-def\">Number</i>` The index of the corresponding radio item. `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_228": {
+        "txt": ""
+      },
+      "hr_229": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_229": {
+        "txt": "subtitle_229"
+      },
+      "text_230": {
+        "txt": "text_230",
+        "css": ""
+      },
+      "code_231": {
+        "txt": "rdg.setTextSize(name, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_232": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_232": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_233": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"3rem\". "
+        ]
+      },
+      "table-footer_233": {
+        "txt": ""
+      },
+      "hr_234": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_234": {
+        "txt": "subtitle_234"
+      },
+      "text_235": {
+        "txt": "text_235",
+        "css": ""
+      },
+      "code_236": {
+        "txt": "rdg.setTextSizeIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_237": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_237": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_238": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"3rem.\" "
+        ]
+      },
+      "table-footer_238": {
+        "txt": ""
+      },
+      "hr_239": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_239": {
+        "txt": "subtitle_239"
+      },
+      "text_240": {
+        "txt": "text_240",
+        "css": ""
+      },
+      "code_241": {
+        "txt": "rdg.setTextColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_242": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_242": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_243": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or css formatted colors. "
+        ]
+      },
+      "table-footer_243": {
+        "txt": ""
+      },
+      "hr_244": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_244": {
+        "txt": "subtitle_244"
+      },
+      "text_245": {
+        "txt": "text_245",
+        "css": ""
+      },
+      "code_246": {
+        "txt": "rdg.setTextColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_247": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_247": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_248": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or css formatted colors. "
+        ]
+      },
+      "table-footer_248": {
+        "txt": ""
+      },
+      "hr_249": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_249": {
+        "txt": "subtitle_249"
+      },
+      "text_250": {
+        "txt": "text_250",
+        "css": ""
+      },
+      "code_251": {
+        "txt": "rdg.setTextWeight(name, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_252": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_252": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_253": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_253": {
+        "txt": ""
+      },
+      "hr_254": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_254": {
+        "txt": "subtitle_254"
+      },
+      "text_255": {
+        "txt": "text_255",
+        "css": ""
+      },
+      "code_256": {
+        "txt": "rdg.setTextWeightByIndex(index, weight)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_257": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_257": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_258": {
+        "content": [
+          "weight ",
+          "String",
+          "thin|extralight|light|regular|medium|semibold|bold|extrabold|black "
+        ]
+      },
+      "table-footer_258": {
+        "txt": ""
+      },
+      "hr_259": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_259": {
+        "txt": "subtitle_259"
+      },
+      "text_260": {
+        "txt": "text_260",
+        "css": ""
+      },
+      "code_261": {
+        "txt": "rdg.setColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_262": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_262": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name. "
+        ]
+      },
+      "table-row_263": {
+        "content": [
+          "color ",
+          "String",
+          "Theme colors e.g. \"default,primary,secondary\" or css formatted color. "
+        ]
+      },
+      "table-footer_263": {
+        "txt": ""
+      },
+      "hr_264": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_264": {
+        "txt": "subtitle_264"
+      },
+      "text_265": {
+        "txt": "text_265",
+        "css": ""
+      },
+      "code_266": {
+        "txt": "rdg.setColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_267": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_267": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_268": {
+        "content": [
+          "color ",
+          "String",
+          "Theme colors e.g. \"default,primary,secondary\" or css formatted color. "
+        ]
+      },
+      "table-footer_268": {
+        "txt": ""
+      },
+      "hr_269": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_269": {
+        "txt": "subtitle_269"
+      },
+      "text_270": {
+        "txt": "text_270",
+        "css": ""
+      },
+      "code_271": {
+        "txt": "rdg.setRadioSize(name, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_272": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_272": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_273": {
+        "content": [
+          "size ",
+          "String",
+          "Small|Medium "
+        ]
+      },
+      "table-footer_273": {
+        "txt": ""
+      },
+      "hr_274": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_274": {
+        "txt": "subtitle_274"
+      },
+      "text_275": {
+        "txt": "text_275",
+        "css": ""
+      },
+      "code_276": {
+        "txt": "rdg.setRadioSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_277": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_277": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_278": {
+        "content": [
+          "size ",
+          "String",
+          "Small|Medium "
+        ]
+      },
+      "table-footer_278": {
+        "txt": ""
+      },
+      "hr_279": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_279": {
+        "txt": "subtitle_279"
+      },
+      "text_280": {
+        "txt": "text_280",
+        "css": ""
+      },
+      "code_281": {
+        "txt": "rdg.setIcon(name, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_282": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_282": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_283": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-footer_283": {
+        "txt": ""
+      },
+      "hr_284": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_284": {
+        "txt": "subtitle_284"
+      },
+      "text_285": {
+        "txt": "text_285",
+        "css": ""
+      },
+      "code_286": {
+        "txt": "rdg.setIconByIndex(index, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_287": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_287": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_288": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-footer_288": {
+        "txt": ""
+      },
+      "hr_289": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_289": {
+        "txt": "subtitle_289"
+      },
+      "text_290": {
+        "txt": "text_290",
+        "css": ""
+      },
+      "code_291": {
+        "txt": "rdg.setCheckedIcon(name, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_292": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_292": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_293": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-footer_293": {
+        "txt": ""
+      },
+      "hr_294": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_294": {
+        "txt": "subtitle_294"
+      },
+      "text_295": {
+        "txt": "text_295",
+        "css": ""
+      },
+      "code_296": {
+        "txt": "rdg.setCheckedIconByIndex(index, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_297": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_297": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_298": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-footer_298": {
+        "txt": ""
+      },
+      "hr_299": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_299": {
+        "txt": "subtitle_299"
+      },
+      "text_300": {
+        "txt": "text_300",
+        "css": ""
+      },
+      "code_301": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_302": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_302": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_303": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_304": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_305": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_306": {
+        "content": [
+          "[mode='px'] ",
+          "String",
+          "Unit. Values are \"px,rem,%\"\". "
+        ]
+      },
+      "table-footer_306": {
+        "txt": ""
+      },
+      "hr_307": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_307": {
+        "txt": "subtitle_307"
+      },
+      "text_308": {
+        "txt": "text_308",
+        "css": ""
+      },
+      "code_309": {
+        "txt": "rdg.setItemPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_310": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_310": {
+        "content": [
+          "left ",
+          "Number",
+          "Left padding of the radio item. "
+        ]
+      },
+      "table-row_311": {
+        "content": [
+          "top ",
+          "Number",
+          "Top padding of the radio item. "
+        ]
+      },
+      "table-row_312": {
+        "content": [
+          "right ",
+          "Number",
+          "Right padding of the radio item. "
+        ]
+      },
+      "table-row_313": {
+        "content": [
+          "bottom ",
+          "Number",
+          "Bottom padding of the radio item. "
+        ]
+      },
+      "table-row_314": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement. Can be \"rem,px,%,v\" for viewport. "
+        ]
+      },
+      "table-footer_314": {
+        "txt": ""
+      },
+      "hr_315": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_315": {
+        "txt": "subtitle_315"
+      },
+      "text_316": {
+        "txt": "text_316",
+        "css": ""
+      },
+      "code_317": {
+        "txt": "rdg.setItemColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_318": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_318": {
+        "content": [
+          "name ",
+          "String",
+          "The radio item name or index. "
+        ]
+      },
+      "table-row_319": {
+        "content": [
+          "color ",
+          "String",
+          "Primary|Secondary|css formatted colors "
+        ]
+      },
+      "table-footer_319": {
+        "txt": ""
+      },
+      "hr_320": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_320": {
+        "txt": "subtitle_320"
+      },
+      "text_321": {
+        "txt": "text_321",
+        "css": ""
+      },
+      "code_322": {
+        "txt": "rdg.setItemColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_323": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_323": {
+        "content": [
+          "index ",
+          "Number",
+          "The radio item index. "
+        ]
+      },
+      "table-row_324": {
+        "content": [
+          "color ",
+          "String",
+          "Primary|Secondary|css formatted colors "
+        ]
+      },
+      "table-footer_324": {
+        "txt": ""
+      },
+      "hr_325": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_325": {
+        "txt": "heading_325"
+      },
+      "hr_326": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_326": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n    // Initialize list items to show\n    const items = [\"Item 1\", \"Item 2\", \"Item 3\"];\n\n    // Add a radiogroup control to the main layout\n    this.rdg = ui.addRadioGroup(this.main, items);\n\n    // Add a callback handler when the value changes\n    this.rdg.setOnChange(this.onChange);\n  }\n\n  onChange(text, index) {\n    ui.showPopup(\"You chose \" + text);\n  }\n}",
+        "sample": "Basic radiogroup",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_327": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n    // Initialize list items to show\n    const items = [\"Item 1\", \"Item 2\", \"Item 3\"];\n\n    // Add an elevated radiogroup control to the main layout\n    this.rdg = ui.addRadioGroup(this.main, items, \"Elevated,Secondary\", 0.6);\n\n    // Set the label text of the radiogroup\n    this.rdg.label = \"Select one\";\n\n    // Set the elevation depth\n    this.rdg.elevation = 4;\n\n    // Add a callback handler when the value changes\n    this.rdg.setOnChange(this.onChange);\n  }\n\n  onChange(text, index) {\n    ui.showPopup(\"You chose \" + text);\n  }\n}",
+        "sample": "Elevated secondary radiogroup",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_328": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n    // Initialize list items to show\n    const items = [\"Item 1\", \"Item 2\", \"Item 3\"];\n\n    // Add an outlined radiogroup control to the main layout\n    // Passing `Right` will display the radios to the right\n    this.rdg = ui.addRadioGroup(this.main, items, \"Outlined,Primary,Right\", 0.6);\n\n    // Set the label text of the radiogroup\n    this.rdg.label = \"Select one\";\n\n    // Set the corner radius to 12\n    this.rdg.cornerRadius = 12;\n\n    // Add a callback handler when the value changes\n    this.rdg.setOnChange(this.onChange);\n  }\n\n  onChange(text, index) {\n    ui.showPopup(\"You chose \" + text);\n  }\n}",
+        "sample": "Outlined and radios to the right",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_329": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n    // Initialize list items to show\n    const items = [\"Option A\", \"Option B\", \"Option C\", \"Option D\"];\n\n    // Add a customized radiogroup control to the main layout\n    this.rdg = ui.addRadioGroup(this.main, items, \"Outlined,Primary\", 0.8);\n\n    // Set the label text of the radiogroup\n    this.rdg.label = \"Choose an option\";\n\n    // Set the corner radius\n    this.rdg.setCornerRadius(10, 10, 10, 10, \"px\");\n\n    // Set padding for each radio item\n    this.rdg.setItemPadding(10, 5, 10, 5, \"px\");\n\n    // Customize the text size and color\n    this.rdg.textSize = \"1.2rem\";\n    this.rdg.textColor = \"blue\";\n\n    // Customize the radio button size and color\n    this.rdg.radioSize = \"Small\";\n    this.rdg.color = \"Secondary\";\n\n    // Add a callback handler when the value changes\n    this.rdg.setOnChange(this.onChange);\n\n    // Dynamically add an item\n    this.rdg.addItem(\"Option E\");\n\n    // Disable a specific item\n    this.rdg.setEnabled(\"Option C\", false);\n  }\n\n  onChange(text, index) {\n    ui.showPopup(`You selected: ${text} (Index: ${index})`);\n  }\n}",
+        "sample": "Adavanced radiogroup styles",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_330": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n    // Initialize list items to show\n    const items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n    // Add a radiogroup control to the main layout\n    this.rdg = ui.addRadioGroup(this.main, items, \"Required,Elevated\", 0.4)\n    this.rdg.label = \"This is hello\"\n\n    // Set the second radio icon to \"person\"\n    this.rdg.setIcon(\"Item 2\", \"person\");\n\n    // Sets the first item icon to \"favorite\"\n    this.rdg.setCheckedIcon(\"Item 1\", \"favorite\");\n  }\n}",
+        "sample": "Custom radio button icon",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_331": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Initialize list items to show\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Add a radiogroup control to the main layout\n   rdg = ui.addRadioGroup(main, items)\n\n   # Add a callback handler when the value changes\n   rdg.setOnChange( onChange )\n\ndef onChange(text, index):\n   ui.showPopup(\"You choose \" + text)",
+        "sample": "Basic radiogroup",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_332": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Initialize list items to show\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Add an elevated radiogroup control to the main layout\n   rdg = ui.addRadioGroup(main, items, \"Elevated,Secondary\", 0.6)\n\n   # Set the label text of the radiogroup\n   rdg.label = \"Select one\"\n\n   # Set the elevation depth\n   rdg.elevation = 4\n\n   # Add a callback handler when the value changes\n   rdg.setOnChange( onChange )\n\ndef onChange(text):\n   ui.showPopup(\"You choose \" + text)",
+        "sample": "Elevated secondary radiogroup",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_333": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Initialize list items to show\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Add an outlined radiogroup control to the main layout\n   # Passing `Right` will display the radios to the right\n   rdg = ui.addRadioGroup( main, items, \"Outlined,Primary,Right\", 0.6)\n\n   # Set the label text of the radiogroup\n   rdg.label = \"Select one\"\n\n   # Set the corner radius to 12\n   rdg.cornerRadius = 12\n\n   # Add a callback handler when the value changes\n   rdg.setOnChange( onChange )\n\ndef onChange(text, index):\n   ui.showPopup(\"You choose \" + text)",
+        "sample": "Outlined and radios to the right",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_334": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Initialize list items to show\n   items = [\"Option A\", \"Option B\", \"Option C\", \"Option D\"]\n\n   # Add a customized radiogroup control to the main layout\n   rdg = ui.addRadioGroup(main, items, \"Outlined,Primary,Horizontal\", 0.8)\n\n   # Set the label text of the radiogroup\n   rdg.label = \"Choose an option\"\n\n   # Set the corner radius\n   rdg.setCornerRadius(10, 10, 10, 10, \"px\")\n\n   # Set padding for each radio item\n   rdg.setItemPadding(10, 5, 10, 5, \"px\")\n\n   # Customize the text size and color\n   rdg.textSize = \"1.2rem\"\n   rdg.textColor = \"blue\"\n\n   # Customize the radio button size and color\n   rdg.radioSize = \"Small\"\n   rdg.color = \"Secondary\"\n\n   # Add a callback handler when the value changes\n   rdg.setOnChange(onChange)\n\n   # Dynamically add an item\n   rdg.addItem(\"Option E\")\n\n   # Disable a specific item\n   rdg.setEnabled(\"Option C\", False)\n\ndef onChange(text, index):\n   ui.showPopup(f\"You selected: {text} (Index: {index})\")",
+        "sample": "Adavanced radiogroup styles",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_335": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   # Creates a fullscreen layout with objects vertically centered\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\")\n\n   # Initialize list items to show\n   items = [\"Item 1\", \"Item 2\", \"Item 3\"]\n\n   # Add a radiogroup control to the main layout\n   rdg = ui.addRadioGroup(main, items, \"Required,Elevated\", 0.4)\n   rdg.label = \"This is hello\"\n\n   # Set the second radio icon to \"person\"\n   rdg.setIcon(\"Item 2\", \"person\")\n\n   # Sets the first item icon to \"favorite\"\n   rdg.setCheckedIcon(\"Item 1\", \"favorite\")",
+        "sample": "Custom radio button icon",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " RadioGroup",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "Adds a radiogroup component into your app.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "A RadioGroup in mobile UI design is a grouping of radio buttons that allows users to select a single option from a set. In Material Design, RadioGroups help organize and present related choices with a consistent appearance, providing an intuitive and visually cohesive way for users to make selections within a mobile application. Add a radigroup into your app using the `addRadioGroup` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available setters and getter of the RadioGroup Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_61": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_62": {
+      "en": "Here are the available methods available to RadioGroup Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_63": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_65": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_69": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_71": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_76": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_78": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_80": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_82": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_84": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_86": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_88": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_90": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_92": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_94": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_100": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_104": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_106": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_113": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_115": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_122": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_124": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_129": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_131": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_139": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_141": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_148": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_150": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_153": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_155": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_158": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_160": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_163": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_165": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_168": {
+      "en": "setOnChange",
+      "de": "",
+      "es": ""
+    },
+    "text_169": {
+      "en": "Call a function when the value of the radio group has changed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_172": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_173": {
+      "en": "Adds a callback function when an item is click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_176": {
+      "en": "setItem",
+      "de": "",
+      "es": ""
+    },
+    "text_177": {
+      "en": "Sets the radio item name text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_181": {
+      "en": "setItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "Sets the radio item name text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_186": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_187": {
+      "en": "Adds an item in the radio group list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_191": {
+      "en": "removeItem",
+      "de": "",
+      "es": ""
+    },
+    "text_192": {
+      "en": "Removes an item in the radiogroup items list.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_195": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_196": {
+      "en": "Removes an item in the radiogroup items list by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_199": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_200": {
+      "en": "Removes the last item in the radiogroup. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_202": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_203": {
+      "en": "Removes the first item in the radiogroup. This will return the item being removed.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_205": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_206": {
+      "en": "Enable or disable an item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_210": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_211": {
+      "en": "Get the enabled state of a radio item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_215": {
+      "en": "setEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_216": {
+      "en": "Enable or disable a radio item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_220": {
+      "en": "getEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_221": {
+      "en": "Returns the enabled state of a radio item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_225": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_226": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_229": {
+      "en": "setTextSize",
+      "de": "",
+      "es": ""
+    },
+    "text_230": {
+      "en": "Sets the radio item text size.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_234": {
+      "en": "setTextSizeIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_235": {
+      "en": "Sets the size of the radio item text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_239": {
+      "en": "setTextColor",
+      "de": "",
+      "es": ""
+    },
+    "text_240": {
+      "en": "Sets the color of the radio item text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_244": {
+      "en": "setTextColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_245": {
+      "en": "Sets the color of the radio item text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_249": {
+      "en": "setTextWeight",
+      "de": "",
+      "es": ""
+    },
+    "text_250": {
+      "en": "Sets the strength of the radio item text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_254": {
+      "en": "setTextWeightByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_255": {
+      "en": "Sets the strength of the radio item text by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_259": {
+      "en": "setColor",
+      "de": "",
+      "es": ""
+    },
+    "text_260": {
+      "en": "Sets the color of the item radio.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_264": {
+      "en": "setColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_265": {
+      "en": "Sets the color of the item radio by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_269": {
+      "en": "setRadioSize",
+      "de": "",
+      "es": ""
+    },
+    "text_270": {
+      "en": "Sets the size of the radio item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_274": {
+      "en": "setRadioSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_275": {
+      "en": "Sets the size of the radio item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_279": {
+      "en": "setIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_280": {
+      "en": "Sets the icon for the radio item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_284": {
+      "en": "setIconByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_285": {
+      "en": "Sets the icon for the radio item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_289": {
+      "en": "setCheckedIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_290": {
+      "en": "Sets the checked icon for the radio item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_294": {
+      "en": "setCheckedIconByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_295": {
+      "en": "Sets the icon for the radio item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_299": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_300": {
+      "en": "Sets the corner radius of the radiogroup container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_307": {
+      "en": "setItemPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_308": {
+      "en": "Sets the padding of the radio item. See \"itemPadding\" property for equivalent setter/getter property.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_315": {
+      "en": "setItemColor",
+      "de": "",
+      "es": ""
+    },
+    "text_316": {
+      "en": "Sets the back color of the radio item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_320": {
+      "en": "setItemColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_321": {
+      "en": "Sets the back color of the radio item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "heading_325": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/RadioGroup';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

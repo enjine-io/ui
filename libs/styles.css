@@ -101,10 +101,29 @@ html, body, #root {
     align-items: center;
 }
 
+
+/*
+--------------------
+    ActionSheet Control
+--------------------
+*/
+
 .uiActionSheet-root, .uiBottomSheet-root {
     border-top-left-radius: 24px !important;
     border-top-right-radius: 24px !important;
 }
+.actionsheet-main-content {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+}
+
+/*
+--------------------
+    CameraView Control
+--------------------
+*/
+
 
 .ui-video-view, .ui-camera-view {
     width: 100%;
@@ -337,6 +356,7 @@ html, body, #root {
 
 .uiSpeedDial-container {
     display: flex;
+    z-index: 101;
 }
 
 .uiSpeedDial-container[direction='up'], .uiSpeedDial-container[direction='down'] {
@@ -494,57 +514,13 @@ html, body, #root {
     justify-content: center;
 }
 .ui-control.uiAlert .MuiAlert-root .MuiAlert-action button {
-    color: inherit !important;
+    /* color: inherit !important; */
+    color: inherit;
 }
 .MuiAlert-message .MuiAlertTitle-root {
     font-weight: 500;
     color: currentColor;
 }
-.MuiPaper-root.MuiAlert-standardSuccess {
-    color: rgb(30, 70, 32);
-    background-color: rgb(237, 247, 237);
-}
-.MuiPaper-root.MuiAlert-standardInfo {
-    color: rgb(13, 60, 97);
-    background-color: rgb(232, 244, 253);
-}
-.MuiPaper-root.MuiAlert-standardWarning {
-    color: rgb(102, 60, 0);
-    background-color: rgb(255, 244, 229);
-}
-.MuiPaper-root.MuiAlert-standardError {
-    color: rgb(97, 26, 21);
-    background-color: rgb(253, 236, 234);
-}
-.MuiPaper-root.MuiAlert-filledSuccess {
-    color: #fff;
-    background-color: #4caf50;
-}
-.MuiPaper-root.MuiAlert-filledInfo {
-    color: #fff;
-    background-color: #2196f3;
-}
-.MuiPaper-root.MuiAlert-filledWarning {
-    color: #fff;
-    background-color: #ff9800;
-}
-.MuiPaper-root.MuiAlert-filledError {
-    color: #fff;
-    background-color: #f44336;
-}
-.MuiPaper-root.MuiAlert-outlinedSuccess {
-    color: rgb(30, 70, 32);
-}
-.MuiPaper-root.MuiAlert-outlinedInfo {
-    color: rgb(13, 60, 97);
-}
-.MuiPaper-root.MuiAlert-outlinedWarning {
-    color: rgb(102, 60, 0);
-}
-.MuiPaper-root.MuiAlert-outlinedError {
-    color: rgb(97, 26, 21);
-}
-
 
 
 /*

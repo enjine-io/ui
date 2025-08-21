@@ -1,0 +1,2246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/devices.min.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_3": {
+        "txt": "text_3",
+        "css": ""
+      },
+      "img_4": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "img_5": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_5"
+      },
+      "code_6": {
+        "txt": "spd = ui.addSpeedDial(parent, list, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The parent layout where to add the SpeedDial. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "list ",
+          "Array",
+          "An array of actions with title and icon elements. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "options ",
+          "String",
+          "Comma separated options. Can be \"Fixed,Primary,Secondary,Default,Backdrop,Left,Right,Up,Bottom\". "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width [0-1]. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height [0-1]. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : SpeedDial</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_13": {
+        "txt": "heading_13"
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "table-header_15": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_16": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the icon for the SpeedDial FAB."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_17": {
+        "content": [
+          "openIcon ",
+          "String",
+          "Sets or returns the icon when the SpeedDial is open."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_18": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the color of the main Fab button. Can be theme color or hexadecimal color."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_19": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius of the SpeedDial fab icon. You can also pass a string like \"2rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_20": {
+        "content": [
+          "toolTipPosition ",
+          "String",
+          "Sets or returns the tooltip placement. Can be \"left\", \"top\", \"right\", \"bottom\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "tooltipArrow ",
+          "Boolean",
+          "Sets or returns the enabled state of the tooltip arrow."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_22": {
+        "content": [
+          "actionColor ",
+          "String",
+          "Sets the color of the action Fab. Can be theme color or hexadecimal color."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_23": {
+        "content": [
+          "actionSize ",
+          "Number",
+          "Sets the size of the fab action button. You can also pass a string like theme variant (e.g. small) or \"1.5rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "actionCornerRadius ",
+          "Number",
+          "Sets the action corner radius. You can also pass a string like \"1.5rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "iconColor ",
+          "String",
+          "Sets the color of the icon text. Can be theme color or hexadecimal color."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_26": {
+        "content": [
+          "iconSize ",
+          "Number",
+          "Sets the size of the action icon. You can also pass a string like \"1.5rem\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_27": {
+        "content": [
+          "list ",
+          "Array",
+          "Sets or returns the list of actions."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_28": {
+        "content": [
+          "direction ",
+          "String",
+          "Sets or returns the direction of the expanded action buttons."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_29": {
+        "content": [
+          "backdrop ",
+          "Boolean",
+          "Sets or returns the enabled state of the backdrop."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_30": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_30": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_31": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_32": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_33": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_34": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_35": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_36": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_37": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_38": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_39": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_40": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_41": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_42": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_43": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_44": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_45": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-footer_46": {
+        "txt": ""
+      },
+      "heading_47": {
+        "txt": "heading_47"
+      },
+      "text_48": {
+        "txt": "text_48",
+        "css": ""
+      },
+      "hr_49": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_49": {
+        "txt": "subtitle_49"
+      },
+      "text_51": {
+        "txt": "text_51",
+        "css": ""
+      },
+      "code_52": {
+        "txt": "spd.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_53": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_53": {
+        "txt": "subtitle_53"
+      },
+      "text_55": {
+        "txt": "text_55",
+        "css": ""
+      },
+      "code_56": {
+        "txt": "spd.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_57": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_57": {
+        "txt": "subtitle_57"
+      },
+      "text_59": {
+        "txt": "text_59",
+        "css": ""
+      },
+      "code_60": {
+        "txt": "spd.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_61": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_61": {
+        "txt": "subtitle_61"
+      },
+      "text_63": {
+        "txt": "text_63",
+        "css": ""
+      },
+      "code_64": {
+        "txt": "spd.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_65": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_65": {
+        "txt": "subtitle_65"
+      },
+      "text_67": {
+        "txt": "text_67",
+        "css": ""
+      },
+      "code_68": {
+        "txt": "spd.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_69": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_69": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_70": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_70": {
+        "txt": ""
+      },
+      "hr_71": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_71": {
+        "txt": "subtitle_71"
+      },
+      "text_73": {
+        "txt": "text_73",
+        "css": ""
+      },
+      "code_74": {
+        "txt": "spd.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_75": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_75": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_75": {
+        "txt": ""
+      },
+      "text_76": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_77": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_77": {
+        "txt": "subtitle_77"
+      },
+      "text_79": {
+        "txt": "text_79",
+        "css": ""
+      },
+      "code_80": {
+        "txt": "spd.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_81": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_81": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_82": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_83": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_84": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_85": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_85": {
+        "txt": ""
+      },
+      "hr_86": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_86": {
+        "txt": "subtitle_86"
+      },
+      "text_88": {
+        "txt": "text_88",
+        "css": ""
+      },
+      "code_89": {
+        "txt": "spd.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_90": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_90": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_91": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_92": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_92": {
+        "txt": ""
+      },
+      "hr_93": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_93": {
+        "txt": "subtitle_93"
+      },
+      "text_95": {
+        "txt": "text_95",
+        "css": ""
+      },
+      "code_96": {
+        "txt": "spd.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_97": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_97": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_97": {
+        "txt": ""
+      },
+      "hr_98": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_98": {
+        "txt": "subtitle_98"
+      },
+      "text_100": {
+        "txt": "text_100",
+        "css": ""
+      },
+      "code_101": {
+        "txt": "spd.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_102": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_102": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_102": {
+        "txt": ""
+      },
+      "hr_103": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_103": {
+        "txt": "subtitle_103"
+      },
+      "text_105": {
+        "txt": "text_105",
+        "css": ""
+      },
+      "code_106": {
+        "txt": "spd.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_107": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_107": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_107": {
+        "txt": ""
+      },
+      "hr_108": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_108": {
+        "txt": "subtitle_108"
+      },
+      "text_109": {
+        "txt": "text_109",
+        "css": ""
+      },
+      "code_110": {
+        "txt": "spd.setActionColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_111": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_111": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_112": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or hexadecimal color format. "
+        ]
+      },
+      "table-footer_112": {
+        "txt": ""
+      },
+      "hr_113": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_113": {
+        "txt": "subtitle_113"
+      },
+      "text_114": {
+        "txt": "text_114",
+        "css": ""
+      },
+      "code_115": {
+        "txt": "spd.setActionColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_116": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_116": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the corresponding action. "
+        ]
+      },
+      "table-row_117": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color of hexadecimal color format. "
+        ]
+      },
+      "table-footer_117": {
+        "txt": ""
+      },
+      "hr_118": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_118": {
+        "txt": "subtitle_118"
+      },
+      "text_119": {
+        "txt": "text_119",
+        "css": ""
+      },
+      "code_120": {
+        "txt": "spd.setActionSize(name, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_121": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_121": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_122": {
+        "content": [
+          "size ",
+          "Number",
+          "Action size. You can also pass a string like them variant (e.g. small) or \"1.5rem\". "
+        ]
+      },
+      "table-footer_122": {
+        "txt": ""
+      },
+      "hr_123": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_123": {
+        "txt": "subtitle_123"
+      },
+      "text_124": {
+        "txt": "text_124",
+        "css": ""
+      },
+      "code_125": {
+        "txt": "spd.setActionSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_126": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_126": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_127": {
+        "content": [
+          "size ",
+          "Number",
+          "Action size. You can also pass a string like theme variant (e.g. small) or \"1.5rem\". "
+        ]
+      },
+      "table-footer_127": {
+        "txt": ""
+      },
+      "hr_128": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_128": {
+        "txt": "subtitle_128"
+      },
+      "text_129": {
+        "txt": "text_129",
+        "css": ""
+      },
+      "code_130": {
+        "txt": "spd.setActionCornerRadius(name, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_131": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_131": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_132": {
+        "content": [
+          "radius ",
+          "Number",
+          "Action corner radius. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_132": {
+        "txt": ""
+      },
+      "hr_133": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_133": {
+        "txt": "subtitle_133"
+      },
+      "text_134": {
+        "txt": "text_134",
+        "css": ""
+      },
+      "code_135": {
+        "txt": "spd.setActionCornerRadiusByIndex(index, radius)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_136": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_136": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "radius ",
+          "Number",
+          "Action corner radius. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_137": {
+        "txt": ""
+      },
+      "hr_138": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_138": {
+        "txt": "subtitle_138"
+      },
+      "text_139": {
+        "txt": "text_139",
+        "css": ""
+      },
+      "code_140": {
+        "txt": "spd.setName(name, newName)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_141": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_141": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_142": {
+        "content": [
+          "newName ",
+          "String",
+          "The new name of the action. "
+        ]
+      },
+      "table-footer_142": {
+        "txt": ""
+      },
+      "hr_143": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_143": {
+        "txt": "subtitle_143"
+      },
+      "text_144": {
+        "txt": "text_144",
+        "css": ""
+      },
+      "code_145": {
+        "txt": "spd.setNameByIndex(index, newName)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_146": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_146": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_147": {
+        "content": [
+          "newName ",
+          "String",
+          "The new name of the action. "
+        ]
+      },
+      "table-footer_147": {
+        "txt": ""
+      },
+      "hr_148": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_148": {
+        "txt": "subtitle_148"
+      },
+      "text_149": {
+        "txt": "text_149",
+        "css": ""
+      },
+      "code_150": {
+        "txt": "spd.setIcon(name, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_151": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_151": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_152": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-footer_152": {
+        "txt": ""
+      },
+      "hr_153": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_153": {
+        "txt": "subtitle_153"
+      },
+      "text_154": {
+        "txt": "text_154",
+        "css": ""
+      },
+      "code_155": {
+        "txt": "spd.setIconByIndex(index, icon)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_156": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_156": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_157": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-footer_157": {
+        "txt": ""
+      },
+      "hr_158": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_158": {
+        "txt": "subtitle_158"
+      },
+      "text_159": {
+        "txt": "text_159",
+        "css": ""
+      },
+      "code_160": {
+        "txt": "spd.setIconColor(name, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_161": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_161": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_162": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or hexadecimal color. "
+        ]
+      },
+      "table-footer_162": {
+        "txt": ""
+      },
+      "hr_163": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_163": {
+        "txt": "subtitle_163"
+      },
+      "text_164": {
+        "txt": "text_164",
+        "css": ""
+      },
+      "code_165": {
+        "txt": "spd.setIconColorByIndex(index, color)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_166": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_166": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_167": {
+        "content": [
+          "color ",
+          "String",
+          "Theme color or hexadecimal color. "
+        ]
+      },
+      "table-footer_167": {
+        "txt": ""
+      },
+      "hr_168": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_168": {
+        "txt": "subtitle_168"
+      },
+      "text_169": {
+        "txt": "text_169",
+        "css": ""
+      },
+      "code_170": {
+        "txt": "spd.setIconSize(name, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_171": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_171": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_172": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_172": {
+        "txt": ""
+      },
+      "hr_173": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_173": {
+        "txt": "subtitle_173"
+      },
+      "text_174": {
+        "txt": "text_174",
+        "css": ""
+      },
+      "code_175": {
+        "txt": "spd.setIconSizeByIndex(index, size)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_176": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_176": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_177": {
+        "content": [
+          "size ",
+          "Number",
+          "Font size. You can also pass a string like \"1.5rem\". "
+        ]
+      },
+      "table-footer_177": {
+        "txt": ""
+      },
+      "hr_178": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_178": {
+        "txt": "subtitle_178"
+      },
+      "text_179": {
+        "txt": "text_179",
+        "css": ""
+      },
+      "code_180": {
+        "txt": "spd.addItem(name, icon, index)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_181": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_181": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_182": {
+        "content": [
+          "icon ",
+          "String",
+          "Material icon. "
+        ]
+      },
+      "table-row_183": {
+        "content": [
+          "index ",
+          "Number",
+          "If provided, the action will be inserted into the given index. "
+        ]
+      },
+      "table-footer_183": {
+        "txt": ""
+      },
+      "hr_184": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_184": {
+        "txt": "subtitle_184"
+      },
+      "text_185": {
+        "txt": "text_185",
+        "css": ""
+      },
+      "code_186": {
+        "txt": "spd.popItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_187": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Array</span>"
+      },
+      "hr_188": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_188": {
+        "txt": "subtitle_188"
+      },
+      "text_189": {
+        "txt": "text_189",
+        "css": ""
+      },
+      "code_190": {
+        "txt": "spd.shiftItem()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "text_191": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Array</span>"
+      },
+      "hr_192": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_192": {
+        "txt": "subtitle_192"
+      },
+      "text_193": {
+        "txt": "text_193",
+        "css": ""
+      },
+      "code_194": {
+        "txt": "spd.removeItem( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_195": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_195": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-footer_195": {
+        "txt": ""
+      },
+      "hr_196": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_196": {
+        "txt": "subtitle_196"
+      },
+      "text_197": {
+        "txt": "text_197",
+        "css": ""
+      },
+      "code_198": {
+        "txt": "spd.removeItemByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_199": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_199": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-footer_199": {
+        "txt": ""
+      },
+      "hr_200": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_200": {
+        "txt": "subtitle_200"
+      },
+      "text_201": {
+        "txt": "text_201",
+        "css": ""
+      },
+      "code_202": {
+        "txt": "spd.setOnOpen( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_203": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_203": {
+        "content": [
+          "cb ",
+          "Function",
+          "Callback function. "
+        ]
+      },
+      "table-footer_203": {
+        "txt": ""
+      },
+      "hr_204": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_204": {
+        "txt": "subtitle_204"
+      },
+      "text_205": {
+        "txt": "text_205",
+        "css": ""
+      },
+      "code_206": {
+        "txt": "spd.setOnClose( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_207": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_207": {
+        "content": [
+          "cb ",
+          "Function",
+          "Callback function. "
+        ]
+      },
+      "table-footer_207": {
+        "txt": ""
+      },
+      "hr_208": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_208": {
+        "txt": "subtitle_208"
+      },
+      "text_209": {
+        "txt": "text_209",
+        "css": ""
+      },
+      "code_210": {
+        "txt": "spd.setOnAction( cb )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_211": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_211": {
+        "content": [
+          "cb ",
+          "Function",
+          "Callback function. --> @arg {String "
+        ]
+      },
+      "table-footer_211": {
+        "txt": ""
+      },
+      "hr_212": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_212": {
+        "txt": "subtitle_212"
+      },
+      "text_213": {
+        "txt": "text_213",
+        "css": ""
+      },
+      "code_214": {
+        "txt": "spd.setEnabled(name, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_215": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_215": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-row_216": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "Enabled state of the action. "
+        ]
+      },
+      "table-footer_216": {
+        "txt": ""
+      },
+      "hr_217": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_217": {
+        "txt": "subtitle_217"
+      },
+      "text_218": {
+        "txt": "text_218",
+        "css": ""
+      },
+      "code_219": {
+        "txt": "spd.setEnabledByIndex(index, enabled)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_220": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_220": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-row_221": {
+        "content": [
+          "enabled ",
+          "Boolean",
+          "Enabled state of the action. "
+        ]
+      },
+      "table-footer_221": {
+        "txt": ""
+      },
+      "hr_222": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_222": {
+        "txt": "subtitle_222"
+      },
+      "text_223": {
+        "txt": "text_223",
+        "css": ""
+      },
+      "code_224": {
+        "txt": "spd.getEnabled( name )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_225": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_225": {
+        "content": [
+          "name ",
+          "String",
+          "The name of the action. "
+        ]
+      },
+      "table-footer_225": {
+        "txt": ""
+      },
+      "text_226": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_227": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_227": {
+        "txt": "subtitle_227"
+      },
+      "text_228": {
+        "txt": "text_228",
+        "css": ""
+      },
+      "code_229": {
+        "txt": "spd.getEnabledByIndex( index )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_230": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_230": {
+        "content": [
+          "index ",
+          "Number",
+          "The index of the action. "
+        ]
+      },
+      "table-footer_230": {
+        "txt": ""
+      },
+      "text_231": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Boolean</span>"
+      },
+      "hr_232": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_232": {
+        "txt": "heading_232"
+      },
+      "hr_233": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_233": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items)\n\n    this.spd.setOnAction(this.onAction)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n}",
+        "sample": "Simple speed dial",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_234": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items, \"Fixed,Secondary\")\n    this.spd.bottom = \"2rem\"\n    this.spd.right = \"2rem\"\n\n    this.spd.setOnAction(this.onAction)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n}",
+        "sample": "Positioning",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_235": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items, \"Fixed,Secondary\")\n    this.spd.bottom = \"2rem\"\n    this.spd.right = \"2rem\"\n\n    this.spd.openIcon = \"edit\"\n\n    this.spd.setOnAction(this.onAction)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n}",
+        "sample": "Custom open icon",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_236": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items, \"Fixed,Right\")\n    this.spd.top = \"2rem\"\n    this.spd.left = \"2rem\"\n\n    this.spd.setOnAction(this.onAction)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n}",
+        "sample": "Direction",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_237": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items, \"Fixed\")\n    this.spd.bottom = \"2rem\"\n    this.spd.right = \"2rem\"\n\n    this.spd.setEnabled(\"Save\", false)\n\n    this.spd.setOnAction(this.onAction)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n}",
+        "sample": "Disabled action",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_238": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items, \"Fixed,Secondary\")\n    this.spd.bottom = \"2rem\"\n    this.spd.right = \"2rem\"\n\n    this.spd.setActionColor(\"Save\", \"Primary\")\n    this.spd.setActionColor(\"Print\", \"#009688\")\n    this.spd.setIconColor(\"Print\", \"white\")\n\n    this.spd.tooltipArrow = true\n\n    this.spd.setOnAction(this.onAction)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n}",
+        "sample": "Advanced speed dial",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_239": {
+        "txt": "class Main extends App {\n  onStart() {\n    this.main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n    const items = [\n      [\"Copy\", \"file_copy\"],\n      [\"Save\", \"save\"],\n      [\"Print\", \"print\"],\n      [\"Share\", \"share\"]\n    ]\n\n    this.spd = ui.addSpeedDial(this.main, items, \"Fixed,Secondary\")\n    this.spd.bottom = \"2rem\"\n    this.spd.right = \"2rem\"\n\n    this.spd.setOnAction(this.onAction)\n    this.spd.setOnOpen(this.onOpen)\n    this.spd.setOnClose(this.onClose)\n  }\n\n  onAction(name, icon, index) {\n    ui.showPopup(name)\n  }\n\n  onOpen() {\n    ui.showPopup(\"Open\", \"Bottom\")\n  }\n\n  onClose() {\n    ui.showPopup(\"Close\", \"Bottom\")\n  }\n}",
+        "sample": "Events",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_240": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items)\n\n   spd.setOnAction( onAction )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )",
+        "sample": "Simple speed dial",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_241": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items, \"Fixed,Secondary\")\n   spd.bottom = \"2rem\"\n   spd.right = \"2rem\"\n\n   spd.setOnAction( onAction )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )",
+        "sample": "Positioning",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_242": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items, \"Fixed,Secondary\")\n   spd.bottom = \"2rem\"\n   spd.right = \"2rem\"\n   \n   spd.openIcon = \"edit\"\n\n   spd.setOnAction( onAction )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )",
+        "sample": "Custom open icon",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_243": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items, \"Fixed,Right\")\n   spd.top = \"2rem\"\n   spd.left = \"2rem\"\n\n   spd.setOnAction( onAction )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )",
+        "sample": "Direction",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_244": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items, \"Fixed\")\n   spd.right = \"2rem\"\n   spd.bottom = \"2rem\"\n\n   spd.setEnabled(\"Save\", False)\n\n   spd.setOnAction( onAction )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )",
+        "sample": "Disabled action",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_245": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items, \"Fixed,Secondary\")\n   spd.bottom = \"2rem\"\n   spd.right = \"2rem\"\n\n   spd.setActionColor(\"Save\", \"Primary\")\n   spd.setActionColor(\"Print\", \"#009688\")\n   spd.setIconColor(\"Print\", \"white\")\n\n   spd.tooltipArrow = true\n\n   spd.setOnAction( onAction )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )",
+        "sample": "Advanced speed dial",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_246": {
+        "txt": "from hybrid import ui\n\ndef onStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"FillXY,VCenter\")\n\n   items = [\n       [\"Copy\", \"file_copy\"],\n       [\"Save\", \"save\"],\n       [\"Print\", \"print\"],\n       [\"Share\", \"share\"]\n   ]\n\n   spd = ui.addSpeedDial(main, items, \"Fixed,Secondary\")\n   spd.bottom = \"2rem\"\n   spd.right = \"2rem\"\n\n   spd.setOnAction( onAction )\n   spd.setOnOpen( onOpen )\n   spd.setOnClose( onClose )\n\ndef onAction(name, icon, index):\n   ui.showPopup( name )\n\ndef onOpen():\n   ui.showPopup(\"Open\", \"Bottom\")\n\ndef onClose():\n   ui.showPopup(\"Close\", \"Bottom\")",
+        "sample": "Events",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " SpeedDial",
+      "de": "",
+      "es": ""
+    },
+    "text_3": {
+      "en": "Add a speed dial into your app.",
+      "de": "",
+      "es": ""
+    },
+    "heading_13": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "Here are the available setters and getters for the SpeedDial Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_47": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_48": {
+      "en": "Here are the available methods for the SpeedDial Component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_49": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_51": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_53": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_55": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_57": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_59": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_61": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_65": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_67": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_71": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_73": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_77": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_79": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_86": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_88": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_93": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_95": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_98": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_100": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_103": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_105": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_108": {
+      "en": "setActionColor",
+      "de": "",
+      "es": ""
+    },
+    "text_109": {
+      "en": "Sets the color of the action Fabs by its name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_113": {
+      "en": "setActionColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_114": {
+      "en": "Sets the color of the action Fab by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_118": {
+      "en": "setActionSize",
+      "de": "",
+      "es": ""
+    },
+    "text_119": {
+      "en": "Sets the size of the fab action button.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_123": {
+      "en": "setActionSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_124": {
+      "en": "Sets the size of the fab action button by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_128": {
+      "en": "setActionCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_129": {
+      "en": "Sets the corner radius of the fab action button.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_133": {
+      "en": "setActionCornerRadiusByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_134": {
+      "en": "Sets the corner radius of the fab action button by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_138": {
+      "en": "setName",
+      "de": "",
+      "es": ""
+    },
+    "text_139": {
+      "en": "Sets a new name for an action by its current name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_143": {
+      "en": "setNameByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_144": {
+      "en": "Sets a new name for an action by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_148": {
+      "en": "setIcon",
+      "de": "",
+      "es": ""
+    },
+    "text_149": {
+      "en": "Sets a new icon for an action by its corresponding name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_153": {
+      "en": "setIconByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_154": {
+      "en": "Sets a new icon for an action by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_158": {
+      "en": "setIconColor",
+      "de": "",
+      "es": ""
+    },
+    "text_159": {
+      "en": "Sets the icon text color of the action by its corresponding name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_163": {
+      "en": "setIconColorByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_164": {
+      "en": "Sets the icon text color of the action by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_168": {
+      "en": "setIconSize",
+      "de": "",
+      "es": ""
+    },
+    "text_169": {
+      "en": "Sets the action icon size.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_173": {
+      "en": "setIconSizeByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_174": {
+      "en": "Sets the action icon size by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_178": {
+      "en": "addItem",
+      "de": "",
+      "es": ""
+    },
+    "text_179": {
+      "en": "Append or insert an action into the list of actions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_184": {
+      "en": "popItem",
+      "de": "",
+      "es": ""
+    },
+    "text_185": {
+      "en": "Removes and returns the last item in the list of actions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_188": {
+      "en": "shiftItem",
+      "de": "",
+      "es": ""
+    },
+    "text_189": {
+      "en": "Removes and returns the first action in the list of actions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_192": {
+      "en": "removeItem",
+      "de": "",
+      "es": ""
+    },
+    "text_193": {
+      "en": "Removes an action by its corresponding name.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_196": {
+      "en": "removeItemByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_197": {
+      "en": "Removes an action by its corresponding index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_200": {
+      "en": "setOnOpen",
+      "de": "",
+      "es": ""
+    },
+    "text_201": {
+      "en": "Add a callback function to be called when the SpeedDial opens.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_204": {
+      "en": "setOnClose",
+      "de": "",
+      "es": ""
+    },
+    "text_205": {
+      "en": "Add a callback function to be called when the SpeedDial closes.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_208": {
+      "en": "setOnAction",
+      "de": "",
+      "es": ""
+    },
+    "text_209": {
+      "en": "Add a callback function when an action is selected.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_212": {
+      "en": "setEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_213": {
+      "en": "Sets the enabled state of the action item.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_217": {
+      "en": "setEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_218": {
+      "en": "Sets the enabled state of the action item by its index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_222": {
+      "en": "getEnabled",
+      "de": "",
+      "es": ""
+    },
+    "text_223": {
+      "en": "Returns the enabled state of the action.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_227": {
+      "en": "getEnabledByIndex",
+      "de": "",
+      "es": ""
+    },
+    "text_228": {
+      "en": "Returns the enabled state of the action by its index.",
+      "de": "",
+      "es": ""
+    },
+    "heading_232": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/SpeedDial';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

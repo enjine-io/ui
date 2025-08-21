@@ -284,7 +284,7 @@ function UI() {
     }
 
     //--- VISIBLE PROPERTIES ---
-    this.version = 0.32
+    this.version = 0.33
     this.pages = [] // <--- use in Layout Extension
     this.theme = {dark:false, primary: "", secondary: ""}
     // this.libs = _hybrid ? app.GetPrivateFolder("Plugins")+"/ui/libs" : "libs"
@@ -381,6 +381,21 @@ function UI() {
         fileref.type = "text/css"
         fileref.href = file
         document.getElementsByTagName("head")[0].appendChild(fileref)
+    }
+
+    this.include = function(url, id) {
+        if( !window._scripts ) window._scripts = []
+        else if( window._scripts[url] ) return
+        
+        var head = document.getElementsByTagName("head")[0]
+        var script = document.createElement('script')
+        script.type = url.endsWith(".py") ? "text/python" : window._nodestudio ? "module" : "text/javascript"
+        if( id ) script.id = id
+        script.defer = true
+        script.src = url
+        head.appendChild(script)
+        
+        window._scripts[url] = true
     }
 
     this.setFontFile = function( file ) {
@@ -491,7 +506,7 @@ function UI() {
     }
 
     // default settings
-    if( _hybrid ) this.setOptions("nozoom");
+    if( window._hybrid ) this.setOptions("nozoom");
 
     window.addEventListener('hashchange', router);
 }

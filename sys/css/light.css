@@ -106,3 +106,7 @@ table, tr, td { background-color: #fafafa; }
 .mobile-actions button:hover, .mobile-actions button:active {
     color: #000;
 }
+
+.mobile-actions button svg:hover {
+    color: #fff;
+}

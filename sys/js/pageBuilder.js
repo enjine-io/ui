@@ -21,7 +21,8 @@ let _running = false,
     // demoUrl = "http://localhost:3000";
     demoUrl = "https://ide.droidscript.cloud/ui",
     isLangJS = true,
-    isDSWiFiIDE = false
+    isDSWiFiIDE = false,
+    defaultDemoCode = "", defaultDemoCodeId
 
 window.__enj = {
     product: ""
@@ -187,7 +188,11 @@ function createPage( tutorial, step ) {
                     </button>
                 </div>
             </div>
-            `;
+            `;      
+                    if(json.txt.includes("extends App") && json.txt.includes("onStart") && !defaultDemoCode && (!json.lang || json.lang == "js")) {
+                        defaultDemoCode = json.txt
+                        defaultDemoCodeId = z
+                    }
                 }
                 else
                     str += `\n<pre class="jdocs-sample-code"><code>${ unescape(T(step[z].txt)) }</code></pre>\n`;
@@ -547,26 +552,40 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
             pageJson = layouts.tutorial.pages[z]
         }
 
+        // smartphone
         htmlStr+= `
                 </div>
             </div>
         </div>
         <div id="mobile-view" class="right-panel">
-            <div class="right-panel-content smartphone">
-                <iframe src="${demoUrl}/index" id="demo-frame" onload="onIframeLoaded()"></iframe>
-                <div id="demo-loader" class="smartphone-loading"><div class="loader"></div></div>
-            </div>
             <div class="mobile-actions">
-                <button class="btn btn-dark btn-icon" onclick="showMobileOutput(false)">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
-                    </svg>
-                </button>
                 <button class="btn btn-dark" onclick="toggleTheme()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                         <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
                     </svg>
                 </button>
+                <button class="btn btn-dark btn-icon" onclick="showMobileOutput(false)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="right-panel-content">
+                <div class="marvel-device iphone8plus black">
+                    <div class="top-bar"></div>
+                    <div class="sleep"></div>
+                    <div class="volume"></div>
+                    <div class="camera"></div>
+                    <div class="sensor"></div>
+                    <div class="speaker"></div>
+                    <div class="screen">
+                        <!-- Content goes here -->
+                        <iframe src="${demoUrl}/index" id="demo-frame" onload="onIframeLoaded()"></iframe>
+                        <div id="demo-loader" class="smartphone-loading"><div class="loader"></div></div>
+                    </div>
+                    <div class="home"></div>
+                    <div class="bottom-bar"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -582,7 +601,6 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
         document.getElementById("doc-title").innerText = docTitle;
 
         // highlight code
-        // highlightCode()
         initSampleCodes();
 
         // add the left navigation panel here
@@ -591,7 +609,24 @@ function buildTutorial(tutorial, onLoad, page, cmp) {
         initLeftNavigation();
 
         //Display first page.
-        setTimeout(function() { TransPage(1) }, 10);
+        setTimeout(function() {
+            TransPage(1)
+
+            //Render first sample code
+            setTimeout(() => {
+                
+                if( isDSWiFiIDE ) return
+
+                if( defaultDemoCode ) {
+                    runSampleCode(defaultDemoCodeId, defaultDemoCode, document.documentElement.clientWidth > 1024)
+                }
+                else {
+                    showMobileOutput(false)
+                }
+            }, 1000)
+        }, 10);
+
+
         if(typeof onLoad == "function") onLoad();
     })})
 }
@@ -1069,24 +1104,26 @@ function getDeviceJDocsID() {
 function showMobileOutput( show ) {
     const mobileEl = document.getElementById("mobile-view");
     const mainEl = document.getElementById("main-page");
-    const hidden = (!mobileEl.style.width || mobileEl.style.width == "0px");
-
-    if(show && hidden) {
-        mobileEl.style.width = "25rem";
-        mainEl.style.width = "calc(100vw - 25rem)";
+    
+    if(show && mobileEl.offsetWidth) {
+        mobileEl.style.width = "27rem";
+        mainEl.style.width = "calc(100vw - 27rem)";
     }
 
-    if(!show && !hidden) {
+    if(!show && mobileEl.offsetWidth) {
         mobileEl.style.width = "0px";
         mainEl.style.width = "100vw";
     }
 }
 
-function runSampleCode(id, value) {
+function runSampleCode(id, value, show) {
 
     if(isDSWiFiIDE == true) return runDSSample(id, value)
 
-    showMobileOutput( true );
+    if(typeof show != "boolean" || show == true) {
+        showMobileOutput( true )
+    }
+    
     showDemoLoader( true );
 
     const jdocsId = getDeviceJDocsID();
@@ -1107,7 +1144,7 @@ function runSampleCode(id, value) {
     }).then( response => {
         if( response.ok ) {
             iframe.src = `${demoUrl}/index?id=${jdocsId}`
-            // showDemoLoader( false );
+            showDemoLoader( false );
         }
     }).catch( error => {
         console.error('Error:', error);

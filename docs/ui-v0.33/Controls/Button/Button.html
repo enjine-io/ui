@@ -1,0 +1,1918 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../sys/img/favicon.ico" />
+    <link rel="icon" href="../../../../sys/img/favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../sys/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- code mirror core files -->
+    <link rel="stylesheet" href="../../../../sys/css/codemirror.min.css" />
+    <script src="../../../../sys/js/codemirror.min.js"></script>
+    
+    <!-- codemirror modes -->
+    <script src="../../../../sys/js/javascript.min.js"></script>
+    <script src="../../../../sys/js/xml.js"></script>
+    <script src="../../../../sys/js/htmlmixed.js"></script>
+    <script src="../../../../sys/js/python.js"></script>
+    
+    <!-- codemirror custom themes for droidscript -->
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-javascript.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-html.css" />
+    <link rel="stylesheet" href="../../../../sys/css/ds-md-py.css" />
+
+    <!-- Code Mirror close bracket addon -->
+    <script src="../../../../sys/js/closebrackets.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../sys/css/devices.min.css" rel="stylesheet">
+    <link href="../../../../sys/css/animations.css" rel="stylesheet">
+
+    <link href="../../../../sys/css/globals.css" rel="stylesheet">
+</head>
+
+<body id="body">
+
+    <link rel="stylesheet" id="theme_css" href="../../../../sys/css/dark.css">
+
+    <main role="main" id="main" class="full-height"></main>
+
+    <script>
+        const LAYOUTDATA = {
+  "style": "",
+  "homeName": "UI Controls",
+  "homeLink": "ui/Controls",
+  "pages": [
+    {
+      "title_0": {
+        "txt": "title_0"
+      },
+      "text_2": {
+        "txt": "text_2",
+        "css": ""
+      },
+      "img_3": {
+        "src": "img1.png",
+        "style": "",
+        "alt": "img_3"
+      },
+      "img_4": {
+        "src": "img2.png",
+        "style": "",
+        "alt": "img_4"
+      },
+      "text_5": {
+        "txt": "text_5",
+        "css": ""
+      },
+      "code_6": {
+        "txt": "btn = ui.addButton(parent, text, options, width, height)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_7": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_7": {
+        "content": [
+          "parent ",
+          "uio-Layout",
+          "The layout where to add the button. "
+        ]
+      },
+      "table-row_8": {
+        "content": [
+          "text ",
+          "String",
+          "The button text or the material icon text. "
+        ]
+      },
+      "table-row_9": {
+        "content": [
+          "[options] ",
+          "String",
+          "A comma separated options.\\nVariant: `Contained`, `Outlined`, `Text`, `Default`\\nTheme Color: `Primary`, `Secondary`, `Default`\\nSizes: `Small`, `Medium`, `Large`\\nToggleable: `Toggle`, `Active`\\nUtils: `Icon`, `NoRipple`, `Upload`, `Multiple`, `Link`, `NewTab`, KeepCase "
+        ]
+      },
+      "table-row_10": {
+        "content": [
+          "[width] ",
+          "Number",
+          "Fraction of the parent width `[0-1]`. "
+        ]
+      },
+      "table-row_11": {
+        "content": [
+          "[height] ",
+          "Number",
+          "Fraction of the parent height `[0-1]`. "
+        ]
+      },
+      "table-footer_11": {
+        "txt": ""
+      },
+      "text_12": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">ui object : Button</span>"
+      },
+      "hr_13": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "text_13": {
+        "txt": "text_13",
+        "css": ""
+      },
+      "text_14": {
+        "txt": "text_14",
+        "css": ""
+      },
+      "heading_15": {
+        "txt": "heading_15"
+      },
+      "text_16": {
+        "txt": "text_16",
+        "css": ""
+      },
+      "table-header_17": {
+        "content": [
+          "Properties",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_18": {
+        "content": [
+          "text ",
+          "String",
+          "Sets or returns the button text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_19": {
+        "content": [
+          "toolTip ",
+          "String",
+          "Sets or returns the tooltip text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_20": {
+        "content": [
+          "toolTipPosition ",
+          "String",
+          "Sets or returns the placement of the tooltip."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_21": {
+        "content": [
+          "variant ",
+          "String",
+          "Sets or returns the variant of the button. Values can be `Contained` `Outlined` or `Text`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_22": {
+        "content": [
+          "color ",
+          "String",
+          "Sets or returns the theme color of the button. Values can be `Default` `Primary` `Secondary` `Inherit`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_23": {
+        "content": [
+          "textWeight ",
+          "String",
+          "Sets or returns the strength of the button text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_24": {
+        "content": [
+          "icon ",
+          "String",
+          "Sets or returns the button icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_25": {
+        "content": [
+          "iconColor ",
+          "String",
+          "Sets or returns the color of the icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_26": {
+        "content": [
+          "acceptedFiles ",
+          "String",
+          "Sets or returns the accepted files for an upload button."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_27": {
+        "content": [
+          "iconSize ",
+          "Number",
+          "Sets or returns the size of the icon."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_28": {
+        "content": [
+          "active ",
+          "Boolean",
+          "Sets or returns the active state if button is `toggleable`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_29": {
+        "content": [
+          "size ",
+          "String",
+          "Sets or returns the size variant of the button. Values can be `small` `medium` or `large`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_30": {
+        "content": [
+          "iconPosition ",
+          "String",
+          "Sets or returns the position of the icon. Can be \"Left\" or \"Right\"."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_31": {
+        "content": [
+          "url ",
+          "String",
+          "Sets or returns the link url, if the button is of type link."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "hr_32": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "table-row_32": {
+        "content": [
+          "width ",
+          "Number",
+          "Sets or returns the width of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_33": {
+        "content": [
+          "height ",
+          "Number",
+          "Sets or returns the height of the control as a fraction of the parent control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_34": {
+        "content": [
+          "opacity ",
+          "Number",
+          "Sets or returns the opacity of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_35": {
+        "content": [
+          "textSize ",
+          "Number",
+          "Sets or returns the size of the text within the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_36": {
+        "content": [
+          "textColor ",
+          "String",
+          "Sets or returns the color of the text."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_37": {
+        "content": [
+          "rotation ",
+          "Number",
+          "Sets or returns the angle of rotation in degrees."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_38": {
+        "content": [
+          "fontFile ",
+          "String",
+          "Sets or returns the `relative` path to the font-family use."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_39": {
+        "content": [
+          "visibility ",
+          "String",
+          "Sets or returns the visibility of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_40": {
+        "content": [
+          "type ",
+          "String",
+          "Returns the type of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_41": {
+        "content": [
+          "absWidth ",
+          "Number",
+          "Returns the absolute width of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_42": {
+        "content": [
+          "absHeight ",
+          "Number",
+          "Returns the absolute height of the control in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_43": {
+        "content": [
+          "backColor ",
+          "String",
+          "A hexadecimal color of the form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_44": {
+        "content": [
+          "backImage ",
+          "String",
+          "The path to your image file."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_45": {
+        "content": [
+          "isVisible ",
+          "Boolean",
+          "Returns whether the control is visible or not."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_46": {
+        "content": [
+          "top ",
+          "Number",
+          "Returns the distance of the control from the top."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_47": {
+        "content": [
+          "left ",
+          "Number",
+          "Returns the distance of the control from the left."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_48": {
+        "content": [
+          "absTop ",
+          "Number",
+          "Returns the absolute distance of the control from the top in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_49": {
+        "content": [
+          "absLeft ",
+          "Number",
+          "Returns the absolute distance of the control from the left in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_50": {
+        "content": [
+          "parent ",
+          "Object",
+          "Returns the parent layout control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_51": {
+        "content": [
+          "position ",
+          "Object",
+          "Returns the position of the control. The returned object has `left` `top` `right` and `bottom` props."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_52": {
+        "content": [
+          "margins ",
+          "Array",
+          "Sets or returns the margin of the control. Works on controls with `Linear` parent only. You can also pass a number to set equal margins for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_53": {
+        "content": [
+          "padding ",
+          "Array",
+          "Sets or returns the padding of the control. You can also pass a number to set equal padding for all sides."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_54": {
+        "content": [
+          "options ",
+          "String",
+          "Sets or returns the `options` of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_55": {
+        "content": [
+          "disabled ",
+          "Boolean",
+          "Sets or returns the `disabled` state of the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_56": {
+        "content": [
+          "border ",
+          "Number",
+          "Sets or returns the border thickness in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_57": {
+        "content": [
+          "borderColor ",
+          "String",
+          "Sets or returns the border color. Color is in hexadecimal form `#rrggbb`"
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_58": {
+        "content": [
+          "borderStyle ",
+          "String",
+          "Sets or returns the border style. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid`."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_59": {
+        "content": [
+          "cornerRadius ",
+          "Number",
+          "Sets or returns the corner radius in pixels."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-row_60": {
+        "content": [
+          "el ",
+          "Object",
+          "Returns the html container element for the control."
+        ],
+        "cls": "ui-control-properties"
+      },
+      "table-footer_61": {
+        "txt": ""
+      },
+      "heading_62": {
+        "txt": "heading_62"
+      },
+      "text_63": {
+        "txt": "text_63",
+        "css": ""
+      },
+      "hr_64": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_64": {
+        "txt": "subtitle_64"
+      },
+      "text_66": {
+        "txt": "text_66",
+        "css": ""
+      },
+      "code_67": {
+        "txt": "btn.animate(anim, duration)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_68": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_68": {
+        "content": [
+          "anim ",
+          "String",
+          "The type of animation. Here are the available values\\n`bounce`, `flash`, `pulse`, `rubberBand`, `shakeX`, `shakeY`, `headShake`, `swing`, `tada`, `wobble`, `jello`, `heartBeat`,\\nBack Entrances: `backInDown`, `backInLeft`, `backInRight`, `backInUp`\\nBack Exits: `backOutDown`, `backOutLeft`, `backOutRight`, `backOutUp`\\nBouncing Entrances: `bounceIn`, `bounceInDown`, `bounceInLeft`, `bounceInRight`, `bounceInUp`\\nBouncing exits: `bounceOut`, `bounceOutDown`, `bounceOutLeft`, `bounceOutRight`, `bounceOutUp`\\nFading entrances: `fadeIn`, `fadeInDown`, `fadeInDownBig`, `fadeInLeft`, `fadeInLeftBig`, `fadeInRight`, `fadeInRightBig`, `fadeInUp`, `fadeInUpBig`, `fadeInTopLeft`, `fadeInTopRight`, `fadeInBottomLeft`, `fadeInBottomRight`\\nFading exits: `fadeOut`, `fadeOutDown`, `fadeOutDownBig`, `fadeOutLeft`, `fadeOutLeftBig`, `fadeOutRight`, `fadeOutRightBig`, `fadeOutUp`, `fadeOutUpBig`, `fadeOutTopLeft`, `fadeOutTopRight`, `fadeOutBottomRight`, `fadeOutBottomLeft`\\nFlippers: `flip`, `flipInX`, `flipInY`, `flipOutX`, `flipOutY`\\nLightspeed: `lightSpeedInRight`, `lightSpeedInLeft`, `lightSpeedOutRight`, `lightSpeedOutLeft`\\nRotating Entrances: `rotateIn`, `rotateInDownLeft`, `rotateInDownRight`, `rotateInUpLeft`, `rotateInUpRight`\\nRotating Exits: `rotateOut`, `rotateOutDownLeft`, `rotateOutDownRight`, `rotateOutUpLeft`, `rotateOutUpRight`\\nSpecials: `hinge`, `jackInTheBox`, `rollIn`, `rollOut`\\nZooming Entrances: `zoomIn`, `zoomInDown`, `zoomInLeft`, `zoomInRight`, `zoomInUp`\\nZooming Exits: `zoomOut`, `zoomOutDown`, `zoomOutLeft`, `zoomOutRight`, `zoomOutUp`\\nSliding Entrances: `slideInDown`, `slideInLeft`, `slideInRight`, `slideInUp`\\nSliding Exits: `slideOutDown`, `slideOutLeft`, `slideOutRight`, `slideOutUp` "
+        ]
+      },
+      "table-row_69": {
+        "content": [
+          "duration ",
+          "Number",
+          "The time in milliseconds. "
+        ]
+      },
+      "table-footer_69": {
+        "txt": ""
+      },
+      "hr_70": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_70": {
+        "txt": "subtitle_70"
+      },
+      "text_72": {
+        "txt": "text_72",
+        "css": ""
+      },
+      "code_73": {
+        "txt": "btn.setSize(width, height, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_74": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_74": {
+        "content": [
+          "width ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_75": {
+        "content": [
+          "height ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_76": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurment. Can be \"px\", \"rem\", \"%\", \"v\" for viewport width/height or any css supported unit. "
+        ]
+      },
+      "table-footer_76": {
+        "txt": ""
+      },
+      "hr_77": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_77": {
+        "txt": "subtitle_77"
+      },
+      "text_79": {
+        "txt": "text_79",
+        "css": ""
+      },
+      "code_80": {
+        "txt": "btn.show()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_81": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_81": {
+        "txt": "subtitle_81"
+      },
+      "text_83": {
+        "txt": "text_83",
+        "css": ""
+      },
+      "code_84": {
+        "txt": "btn.hide()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_85": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_85": {
+        "txt": "subtitle_85"
+      },
+      "text_87": {
+        "txt": "text_87",
+        "css": ""
+      },
+      "code_88": {
+        "txt": "btn.gone()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_89": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_89": {
+        "txt": "subtitle_89"
+      },
+      "text_91": {
+        "txt": "text_91",
+        "css": ""
+      },
+      "code_92": {
+        "txt": "btn.destroy()",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "hr_93": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_93": {
+        "txt": "subtitle_93"
+      },
+      "text_95": {
+        "txt": "text_95",
+        "css": ""
+      },
+      "code_96": {
+        "txt": "btn.setScale(x, y)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_97": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_97": {
+        "content": [
+          "x ",
+          "Number",
+          "The x-scale of the component.Values less than `0` is smaller than the normal. While values greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-row_98": {
+        "content": [
+          "y ",
+          "Number",
+          "The y-scale of the component. Values less than `1` is smaller than the normal. While vaues greater than `1` is greater than the normal. "
+        ]
+      },
+      "table-footer_98": {
+        "txt": ""
+      },
+      "hr_99": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_99": {
+        "txt": "subtitle_99"
+      },
+      "text_101": {
+        "txt": "text_101",
+        "css": ""
+      },
+      "code_102": {
+        "txt": "btn.getPosition( options )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_103": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_103": {
+        "content": [
+          "options ",
+          "String",
+          "The mode of the measurements. Values can be `px` or `%` "
+        ]
+      },
+      "table-footer_103": {
+        "txt": ""
+      },
+      "text_104": {
+        "txt": "Returns <span class=\"bold jdocs-return-type\">Object</span>"
+      },
+      "hr_105": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_105": {
+        "txt": "subtitle_105"
+      },
+      "text_107": {
+        "txt": "text_107",
+        "css": ""
+      },
+      "code_108": {
+        "txt": "btn.setMargins( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_109": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_109": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Left margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_110": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Top margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_111": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Right margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_112": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Bottom margin. You can also pass string e.g. `12rem` "
+        ]
+      },
+      "table-row_113": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimension.\\n`v` relative to viewport dimension. "
+        ]
+      },
+      "table-footer_113": {
+        "txt": ""
+      },
+      "hr_114": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_114": {
+        "txt": "subtitle_114"
+      },
+      "text_116": {
+        "txt": "text_116",
+        "css": ""
+      },
+      "code_117": {
+        "txt": "btn.setPadding(left, top, right, bottom, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_118": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_118": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Fraction of the component width. "
+        ]
+      },
+      "table-row_119": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_120": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Fraction of the component width. [0-1] "
+        ]
+      },
+      "table-row_121": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Fraction of the component height. [0-1] "
+        ]
+      },
+      "table-row_122": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_122": {
+        "txt": ""
+      },
+      "hr_123": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_123": {
+        "txt": "subtitle_123"
+      },
+      "text_125": {
+        "txt": "text_125",
+        "css": ""
+      },
+      "code_126": {
+        "txt": "btn.setPosition( left, top, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_127": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_127": {
+        "content": [
+          "left ",
+          "Number",
+          "Fraction of the parent width. [0-1] "
+        ]
+      },
+      "table-row_128": {
+        "content": [
+          "top ",
+          "Number",
+          "Fraction of the parent height. [0-1] "
+        ]
+      },
+      "table-row_129": {
+        "content": [
+          "mode ",
+          "String",
+          "Unit of measurement.\\n`rem` for root em.\\n`px` for pixels\\n`%` relative to its parent dimensions\\n`v` relative to viewport dimensions. "
+        ]
+      },
+      "table-footer_129": {
+        "txt": ""
+      },
+      "hr_130": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_130": {
+        "txt": "subtitle_130"
+      },
+      "text_132": {
+        "txt": "text_132",
+        "css": ""
+      },
+      "code_133": {
+        "txt": "btn.setBorder(left, top, right, bottom, clr, style)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_134": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_134": {
+        "content": [
+          "[left] ",
+          "Number",
+          "Border-left thickness in pixels. "
+        ]
+      },
+      "table-row_135": {
+        "content": [
+          "[top] ",
+          "Number",
+          "Border-top thickness in pixels. "
+        ]
+      },
+      "table-row_136": {
+        "content": [
+          "[right] ",
+          "Number",
+          "Border-right thickness in pixels. "
+        ]
+      },
+      "table-row_137": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "Border-bottom thickness in pixels. "
+        ]
+      },
+      "table-row_138": {
+        "content": [
+          "[clr] ",
+          "String",
+          "Border color in hexadecimal format `#rrggbb`. "
+        ]
+      },
+      "table-row_139": {
+        "content": [
+          "[style] ",
+          "String",
+          "Border-styles. Values can be `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset` and `outset`. Default is `solid` "
+        ]
+      },
+      "table-footer_139": {
+        "txt": ""
+      },
+      "hr_140": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_140": {
+        "txt": "subtitle_140"
+      },
+      "text_142": {
+        "txt": "text_142",
+        "css": ""
+      },
+      "code_143": {
+        "txt": "btn.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_144": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_144": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-Left border radius. "
+        ]
+      },
+      "table-row_145": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-Right border radius. "
+        ]
+      },
+      "table-row_146": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-Right border radius. "
+        ]
+      },
+      "table-row_147": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-Left border radius. "
+        ]
+      },
+      "table-row_148": {
+        "content": [
+          "[mode] ",
+          "String",
+          "Unit of measurement. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_148": {
+        "txt": ""
+      },
+      "hr_149": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_149": {
+        "txt": "subtitle_149"
+      },
+      "text_151": {
+        "txt": "text_151",
+        "css": ""
+      },
+      "code_152": {
+        "txt": "btn.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_153": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_153": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A negative value behaves like \"sendBackward\" method. "
+        ]
+      },
+      "table-footer_153": {
+        "txt": ""
+      },
+      "hr_154": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_154": {
+        "txt": "subtitle_154"
+      },
+      "text_156": {
+        "txt": "text_156",
+        "css": ""
+      },
+      "code_157": {
+        "txt": "btn.bringForward( zIndex )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_158": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_158": {
+        "content": [
+          "zIndex ",
+          "Number",
+          "The z-index. A positve value behaves like \"bringForward\" method. "
+        ]
+      },
+      "table-footer_158": {
+        "txt": ""
+      },
+      "hr_159": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_159": {
+        "txt": "subtitle_159"
+      },
+      "text_161": {
+        "txt": "text_161",
+        "css": ""
+      },
+      "code_162": {
+        "txt": "btn.addClass( cls )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_163": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_163": {
+        "content": [
+          "cls ",
+          "String",
+          "Class name or names. For multiple classes just separate them with a space e.g. \"my-button my-button-large\" "
+        ]
+      },
+      "table-footer_163": {
+        "txt": ""
+      },
+      "hr_164": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_164": {
+        "txt": "subtitle_164"
+      },
+      "text_166": {
+        "txt": "text_166",
+        "css": ""
+      },
+      "code_167": {
+        "txt": "btn.setOnContextMenu( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_168": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_168": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called on context menu event or right click event. This will pass  `event <i class=\"arg-def\">Object</i>` The pointer event object."
+        ]
+      },
+      "table-footer_168": {
+        "txt": ""
+      },
+      "hr_169": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_169": {
+        "txt": "subtitle_169"
+      },
+      "text_170": {
+        "txt": "text_170",
+        "css": ""
+      },
+      "code_171": {
+        "txt": "btn.setOnTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_172": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_172": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event. If the button is `toggleable` the first argument pass into the callback function is a `Boolean` value which is the active state of the button toggle."
+        ]
+      },
+      "table-footer_172": {
+        "txt": ""
+      },
+      "hr_173": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_173": {
+        "txt": "subtitle_173"
+      },
+      "text_174": {
+        "txt": "text_174",
+        "css": ""
+      },
+      "code_175": {
+        "txt": "btn.setOnLongTouch( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_176": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_176": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function to be called. This will pass  `pos <i class=\"arg-def\">Object</i>` The position of the touch event."
+        ]
+      },
+      "table-footer_176": {
+        "txt": ""
+      },
+      "hr_177": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_177": {
+        "txt": "subtitle_177"
+      },
+      "text_178": {
+        "txt": "text_178",
+        "css": ""
+      },
+      "code_179": {
+        "txt": "btn.setOnFileSelect( callback )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_180": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_180": {
+        "content": [
+          "callback ",
+          "Function",
+          "The callback function. This will pass  `files <i class=\"arg-def\">Array</i>` An array of file objects selected."
+        ]
+      },
+      "table-footer_180": {
+        "txt": ""
+      },
+      "hr_181": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_181": {
+        "txt": "subtitle_181"
+      },
+      "text_182": {
+        "txt": "text_182",
+        "css": ""
+      },
+      "code_183": {
+        "txt": "ckb.setToolTip(title, options)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_184": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_184": {
+        "content": [
+          "title ",
+          "String",
+          "The tooltip title text. "
+        ]
+      },
+      "table-row_185": {
+        "content": [
+          "options ",
+          "String",
+          "\"Arrow\"|\"Left,Top,Right,Bottom-Start,End\" "
+        ]
+      },
+      "table-footer_185": {
+        "txt": ""
+      },
+      "hr_186": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_186": {
+        "txt": "subtitle_186"
+      },
+      "text_187": {
+        "txt": "text_187",
+        "css": ""
+      },
+      "code_188": {
+        "txt": "btn.setTextShadow( radius, dx, dy, color )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_189": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_189": {
+        "content": [
+          "radius ",
+          "Number",
+          "The radius in pixels "
+        ]
+      },
+      "table-row_190": {
+        "content": [
+          "dx ",
+          "Number",
+          "The x-offset in pixels "
+        ]
+      },
+      "table-row_191": {
+        "content": [
+          "dy ",
+          "Number",
+          "The y-offset in pixels "
+        ]
+      },
+      "table-row_192": {
+        "content": [
+          "color ",
+          "String",
+          "The color in hexadecimal `#rrggbb` "
+        ]
+      },
+      "table-footer_192": {
+        "txt": ""
+      },
+      "hr_193": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_193": {
+        "txt": "subtitle_193"
+      },
+      "text_194": {
+        "txt": "text_194",
+        "css": ""
+      },
+      "code_195": {
+        "txt": "btn.setPadding( left, top, right, bottom, mode )",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_196": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_196": {
+        "content": [
+          "[left] ",
+          "Number",
+          "The left padding in pixel. "
+        ]
+      },
+      "table-row_197": {
+        "content": [
+          "[top] ",
+          "Number",
+          "The top padding in pixels, "
+        ]
+      },
+      "table-row_198": {
+        "content": [
+          "[right] ",
+          "Number",
+          "The right padding in pixels. "
+        ]
+      },
+      "table-row_199": {
+        "content": [
+          "[bottom] ",
+          "Number",
+          "The bottom padding in pixels. "
+        ]
+      },
+      "table-row_200": {
+        "content": [
+          "[mode='px'] ",
+          "String",
+          "Can be `px` `%` "
+        ]
+      },
+      "table-footer_200": {
+        "txt": ""
+      },
+      "hr_201": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "subtitle_201": {
+        "txt": "subtitle_201"
+      },
+      "text_202": {
+        "txt": "text_202",
+        "css": ""
+      },
+      "code_203": {
+        "txt": "acc.setCornerRadius(tl, tr, bl, br, mode)",
+        "css": "background-color: black; padding: 16px 24px; font-weight:300;font-size:90%; margin: 6px 0px 24px 0px;"
+      },
+      "table-header_204": {
+        "content": [
+          "Parameters",
+          "Type",
+          "Description"
+        ],
+        "css": ""
+      },
+      "table-row_204": {
+        "content": [
+          "[tl] ",
+          "Number",
+          "Top-left corner radius. "
+        ]
+      },
+      "table-row_205": {
+        "content": [
+          "[tr] ",
+          "Number",
+          "Top-right corner radius. "
+        ]
+      },
+      "table-row_206": {
+        "content": [
+          "[bl] ",
+          "Number",
+          "Bottom-left corner radius. "
+        ]
+      },
+      "table-row_207": {
+        "content": [
+          "[br] ",
+          "Number",
+          "Bottom-right corner radius. "
+        ]
+      },
+      "table-row_208": {
+        "content": [
+          "[mode='px'] ",
+          "String",
+          "Unit. Values are `px` `rem` or `%`. "
+        ]
+      },
+      "table-footer_208": {
+        "txt": ""
+      },
+      "hr_209": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "heading_209": {
+        "txt": "heading_209"
+      },
+      "hr_210": {
+        "txt": "",
+        "css": "margin: 45px 0px;border-bottom:1px solid #212121;"
+      },
+      "code_210": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n    // Contained\n    this.btn1 = ui.addButton(this.main, \"Button\", \"Contained\")\n\n    // Add a callback handler for onTouch event\n    this.btn1.setOnTouch(this.onTouch)\n\n    // Outlined\n    this.btn2 = ui.addButton(this.main, \"Button\", \"Outlined\")\n    this.btn2.setOnTouch(this.onTouch)\n\n    // Text\n    this.btn3 = ui.addButton(this.main, \"Button\", \"Text\")\n    this.btn3.setOnTouch(this.onTouch)\n  }\n\n  onTouch() {\n    ui.showPopup(\"Button is touch!\")\n  }\n}",
+        "sample": "Button variants",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_211": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n    // Add primary button to the main layout\n    this.btn1 = ui.addButton(this.main, \"Primary\", \"Contained,Primary\")\n\n    // Add a callback handler for onTouch event\n    this.btn1.setOnTouch(this.onTouch)\n\n    // Add secondary button to the main layout\n    this.btn2 = ui.addButton(this.main, \"Secondary\", \"Outlined,Secondary\")\n    this.btn2.setOnTouch(this.onTouch)\n\n    // Add default button to the main layout\n    this.btn3 = ui.addButton(this.main, \"Default\", \"Text,Default\")\n    this.btn3.setOnTouch(this.onTouch)\n  }\n\n  onTouch() {\n    ui.showPopup(\"Button is touch!\")\n  }\n}",
+        "sample": "Button theme colors",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_212": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n    // Add a small size button to the main layout\n    this.btn1 = ui.addButton(this.main, \"Small\", \"Contained,Primary,Small\")\n\n    // Add a callback handler for onTouch event\n    this.btn1.setOnTouch(this.onTouch)\n\n    // Add a medium/default size button to the main layout\n    this.btn2 = ui.addButton(this.main, \"Medium\", \"Contained,Primary,Medium\")\n\n    // Add a large size button to the main layout\n    this.btn3 = ui.addButton(this.main, \"Large\", \"Contained,Primary,Large\")\n  }\n\n  onTouch() {\n    ui.showPopup(\"Button is touch!\")\n  }\n}",
+        "sample": "Button sizes",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_213": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0, 0.05, 0, 0.05)\n\n    // Add a button to the main layout\n    // and add a tooltip to the left of the button\n    this.btn1 = ui.addButton(this.main, \"Left\", \"Contained,Primary\")\n    this.btn1.setToolTip(\"Tooltip on the left\", \"left\")\n\n    // Add a button to the main layout\n    // and add a tooltip to the top of the button\n    this.btn2 = ui.addButton(this.main, \"Top\", \"Contained,Primary\")\n    this.btn2.setToolTip(\"Tooltip on the top\", \"top\")\n\n    // // Add a button to the main layout\n    // and add a tooltip to the right of the button\n    this.btn3 = ui.addButton(this.main, \"Right\", \"Contained,Primary\")\n    this.btn3.setToolTip(\"Tooltip on the right\", \"right\")\n\n    // // Add a button to the main layout\n    // and add a tooltip to the bottom of the button\n    this.btn4 = ui.addButton(this.main, \"Bottom\", \"Contained,Primary\")\n    this.btn4.setToolTip(\"Tooltip on the bottom\", \"bottom\")\n  }\n}",
+        "sample": "Button tooltips",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_214": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a layout with objects verticaly centered.\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(\"12px\", \"12px\", \"12px\", \"12px\")\n\n    // Add a primary contained button and\n    // set its leading icon to \"send\"\n    this.btn1 = ui.addButton(this.main, \"Send\", \"Primary\")\n    this.btn1.icon = \"send\"\n\n    // Add a secondary contained button and\n    // set its leading icon to \"shopping_cart\"\n    this.btn2 = ui.addButton(this.main, \"Add to cart\", \"Secondary\")\n    this.btn2.icon = \"shopping_cart\"\n\n    // Add an \"android\" primary icon button to the main layout\n    this.btn3 = ui.addButton(this.main, \"android\", \"Primary,Icon\")\n\n    // Add a \"settings\" secondary icon button to the main layout\n    this.btn4 = ui.addButton(this.main, \"settings\", \"Secondary,Icon\")\n  }\n}",
+        "sample": "Button with icons",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_215": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n    this.main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n    // Add an android icon button to the main layout\n    this.btn1 = ui.addButton(this.main, \"android\", \"Primary,Icon\")\n\n    // Add a setting icon button to the main layout and\n    // set the badge to 5\n    this.btn2 = ui.addButton(this.main, \"settings\", \"Primary,Icon\")\n    this.btn2.badge = 5\n\n    // Add a contained button to the main layout and\n    // set the badge to \"New\" with a \"Primary\" background color\n    this.btn3 = ui.addButton(this.main, \"With Badge\", \"Secondary,Outlined\")\n    this.btn3.setBadge(\"New\", \"Primary\")\n  }\n}",
+        "sample": "Buttons with badges",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_216": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n    // Add a primary upload button with upload icon\n    this.btn = ui.addButton(this.main, \"Upload File\", \"Primary,Upload\")\n    this.btn.icon = \"backup\"\n\n    // Add a callback handler for \"onFileSelect\" event\n    this.btn.setOnFileSelect(this.onFileSelect)\n  }\n\n  onFileSelect(files) {\n    // Get the first file and display its file name\n    const file = files[0]\n    ui.showPopup(`${file.name} is selected.`)\n  }\n}",
+        "sample": "Upload button",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_217": {
+        "txt": "class Main extends App {\n  onStart() {\n    // Creates a fullscreen layout with objects vertically centered\n    this.main = ui.addLayout(\"main\", \"Linear\", \"VCenter,FillXY\");\n\n    // Add margins to children\n    this.main.childMargins = \"0.5rem\";\n\n    // Add contained buttons with theme color and  \"Toggle\" option\n    this.btn = ui.addButton(this.main, \"Button\", \"Toggle,Active\");\n    this.btn = ui.addButton(this.main, \"Button\", \"Primary,Toggle,Active\");\n    this.btn = ui.addButton(this.main, \"Button\", \"Secondary,Toggle,Active\");\n\n    // Add outlined buttons with theme color and  \"Toggle\" option\n    this.btn = ui.addButton(this.main, \"Button\", \"Outlined,Toggle,Active\");\n    this.btn = ui.addButton(this.main, \"Button\", \"Outlined,Primary,Toggle,Active\");\n    this.btn = ui.addButton(this.main, \"Button\", \"Outlined,Secondary,Toggle,Active\");\n\n    // Add text buttons with theme color and  \"Toggle\" option\n    this.btn = ui.addButton(this.main, \"Button\", \"Text,Toggle,Active\");\n    this.btn = ui.addButton(this.main, \"Button\", \"Text,Primary,Toggle,Active\");\n    this.btn = ui.addButton(this.main, \"Button\", \"Text,Secondary,Toggle,Active\");\n\n    // Add a callback handler when all the buttons are click\n    this.main.children.map(m => m.setOnTouch(this.onTouch));\n  }\n\n  onTouch(value) {\n    ui.showPopup(\"\" + value);\n  }\n}",
+        "sample": "Toggleable Buttons",
+        "disabledActions": "",
+        "lang": "js"
+      },
+      "code_218": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n   main.setChildMargins( 0.01, 0.01, 0.01, 0.01 )\n\n   btn1 = ui.addButton( main, \"Button\", \"Contained\" )\n   btn1.setOnTouch( onTouch )\n\n   btn2 = ui.addButton( main, \"Button\", \"Outlined\" )\n   btn2.setOnTouch( onTouch )\n\n   btn3 = ui.addButton( main, \"Button\", \"Text\" )\n   btn3.setOnTouch( onTouch )\n\ndef onTouch(event):\n   ui.showPopup( \"Button is touch!\" )",
+        "sample": "Button variants",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_219": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   btn1 = ui.addButton(main, \"Primary\", \"Contained,Primary\")\n   btn1.setOnTouch( onTouch )\n\n   btn2 = ui.addButton(main, \"Secondary\", \"Outlined,Secondary\")\n   btn2.setOnTouch( onTouch )\n\n   btn3 = ui.addButton(main, \"Default\", \"Text,Default\")\n   btn3.setOnTouch( onTouch )\n\ndef onTouch(event):\n   ui.showPopup( \"Button is touch!\" )",
+        "sample": "Button theme colors",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_220": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   btn1 = ui.addButton(main, \"Small\", \"Contained,Primary,Small\")\n   btn1.setOnTouch( onTouch )\n\n   btn2 = ui.addButton(main, \"Medium\", \"Contained,Primary,Medium\")\n\n   btn3 = ui.addButton(main, \"Large\", \"Contained,Primary,Large\")\n\ndef onTouch(event):\n   ui.showPopup( \"Button is touch!\" )",
+        "sample": "Button sizes",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_221": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0, 0.05, 0, 0.05)\n\n   btn1 = ui.addButton(main, \"Left\", \"Contained,Primary\")\n   btn1.setToolTip(\"Tooltip on the left\", \"left\")\n\n   btn2 = ui.addButton(main, \"Top\", \"Contained,Primary\")\n   btn2.setToolTip(\"Tooltip on the top\", \"top\")\n\n   btn3 = ui.addButton(main, \"Right\", \"Contained,Primary\")\n   btn3.setToolTip(\"Tooltip on the right\", \"right\")\n\n   btn4 = ui.addButton(main, \"Bottom\", \"Contained,Primary\")\n   btn4.setToolTip(\"Tooltip on the bottom\", \"bottom\")",
+        "sample": "Button tooltips",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_222": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout( \"main\", \"Linear\", \"VCenter\", 1, 1 )\n   main.setChildMargins(\"12px\", \"12px\", \"12px\", \"12px\")\n\n   btn1 = ui.addButton(main, \"Send\", \"Primary\")\n   btn1.icon = \"send\"\n\n   btn2 = ui.addButton(main, \"Add to cart\", \"Secondary\")\n   btn2.icon = \"shopping_cart\"\n\n   btn3 = ui.addButton(main, \"android\", \"Primary,Icon\")\n\n   btn4 = ui.addButton(main, \"settings\", \"Secondary,Icon\")",
+        "sample": "Button with icons",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_223": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n   main.setChildMargins(0.01, 0.01, 0.01, 0.01)\n\n   btn1 = ui.addButton(main, \"android\", \"Primary,Icon\")\n\n   btn2 = ui.addButton(main, \"settings\", \"Primary,Icon\")\n   btn2.setBadge( 5 )\n\n   btn3 = ui.addButton(main, \"With Badge\", \"Secondary,Outlined\")\n   btn3.setBadge(\"New\", \"Primary\")",
+        "sample": "Buttons with badges",
+        "disabledActions": "",
+        "lang": "py"
+      },
+      "code_224": {
+        "txt": "from hybrid import ui\n\ndef OnStart():\n   main = ui.addLayout(\"main\", \"Linear\", \"VCenter\", 1, 1)\n\n   btn = ui.addButton(main, \"Upload File\", \"Primary,Upload\")\n   btn.icon = \"backup\"\n   \n   # Add a callback handler for `onFileSelect` event\n   btn.setOnFileSelect( onFileSelect )\n\ndef onFileSelect(files):\n   file = files[0]\n   ui.showPopup( f\"{file.name} is selected.\" )",
+        "sample": "Upload button",
+        "disabledActions": "",
+        "lang": "py"
+      }
+    }
+  ]
+};
+        const LANGDATA = {
+  "langs": [
+    "English",
+    "Deutsch",
+    "Español",
+    "Français",
+    "Português",
+    "Русский",
+    "Italiano"
+  ],
+  "codes": {
+    "english": "en",
+    "deutsch": "de",
+    "español": "es",
+    "français": "fr",
+    "português": "pt",
+    "русский": "ru",
+    "italiano": "it"
+  },
+  "trans": {
+    "title_0": {
+      "en": " Button",
+      "de": "",
+      "es": ""
+    },
+    "text_2": {
+      "en": "A button component is an element that triggers an action when pressed.",
+      "de": "",
+      "es": ""
+    },
+    "text_5": {
+      "en": "A button typically adheres to guidelines such as elevation, shape, and color to convey interactivity. It serves as a touchable surface with discernible feedback, promoting a consistent and intuitive user experience across mobile applications. Add a button using the `addButton` method like this:",
+      "de": "",
+      "es": ""
+    },
+    "text_13": {
+      "en": "In case of `Upload`, you can specify `Multiple` to accept multiple files.",
+      "de": "",
+      "es": ""
+    },
+    "text_14": {
+      "en": "The \"Link\" option renders the button as anchor tag that will open a link provided in `url` setter property. The \"NewTab\" option will allow the link to be open in a new tab window.",
+      "de": "",
+      "es": ""
+    },
+    "heading_15": {
+      "en": "Properties",
+      "de": "",
+      "es": ""
+    },
+    "text_16": {
+      "en": "Here are the available setter and/or getter properties of the Button Component.",
+      "de": "",
+      "es": ""
+    },
+    "heading_62": {
+      "en": "Methods",
+      "de": "",
+      "es": ""
+    },
+    "text_63": {
+      "en": "Here are the methods available for Button Component",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_64": {
+      "en": "animate",
+      "de": "",
+      "es": ""
+    },
+    "text_66": {
+      "en": "Animate the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_70": {
+      "en": "setSize",
+      "de": "",
+      "es": ""
+    },
+    "text_72": {
+      "en": "Sets the size of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_77": {
+      "en": "show",
+      "de": "",
+      "es": ""
+    },
+    "text_79": {
+      "en": "Show the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_81": {
+      "en": "hide",
+      "de": "",
+      "es": ""
+    },
+    "text_83": {
+      "en": "Hide the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_85": {
+      "en": "gone",
+      "de": "",
+      "es": ""
+    },
+    "text_87": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_89": {
+      "en": "destroy",
+      "de": "",
+      "es": ""
+    },
+    "text_91": {
+      "en": "Destroy the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_93": {
+      "en": "setScale",
+      "de": "",
+      "es": ""
+    },
+    "text_95": {
+      "en": "Sets the x and y scaling of the component. This will ignore the positioning and flow of controls in the layout.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_99": {
+      "en": "getPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_101": {
+      "en": "Returns the position of the component. The return object is of the form `{left, top, right, bottom}`",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_105": {
+      "en": "setMargins",
+      "de": "",
+      "es": ""
+    },
+    "text_107": {
+      "en": "Sets the margin of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_114": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_116": {
+      "en": "Sets the padding of the component's container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_123": {
+      "en": "setPosition",
+      "de": "",
+      "es": ""
+    },
+    "text_125": {
+      "en": "Sets the position of the component relative to its parent dimensions.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_130": {
+      "en": "setBorder",
+      "de": "",
+      "es": ""
+    },
+    "text_132": {
+      "en": "Sets the border line for the component container.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_140": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_142": {
+      "en": "Sets the corner radius of the component.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_149": {
+      "en": "bringForward",
+      "de": "",
+      "es": ""
+    },
+    "text_151": {
+      "en": "Bring this component forward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_154": {
+      "en": "sendBackward",
+      "de": "",
+      "es": ""
+    },
+    "text_156": {
+      "en": "Bring this component backward by a given z-index.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_159": {
+      "en": "addClass",
+      "de": "",
+      "es": ""
+    },
+    "text_161": {
+      "en": "Add new class or classes to the control's container element.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_164": {
+      "en": "setOnContextMenu",
+      "de": "",
+      "es": ""
+    },
+    "text_166": {
+      "en": "Adds a callback function on right click.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_169": {
+      "en": "setOnTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_170": {
+      "en": "Adds a callback handler when the button is touch. If the button is `toggleable` the first argument pass into the callback function is a `Boolean` value which is the active state of the button toggle.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_173": {
+      "en": "setOnLongTouch",
+      "de": "",
+      "es": ""
+    },
+    "text_174": {
+      "en": "Adds a callback handler when the button is long touch. The touch timer is about 500 milliseconds.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_177": {
+      "en": "setOnFileSelect",
+      "de": "",
+      "es": ""
+    },
+    "text_178": {
+      "en": "Sets a callback on file select.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_181": {
+      "en": "setToolTip",
+      "de": "",
+      "es": ""
+    },
+    "text_182": {
+      "en": "Add a tooltip to the control.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_186": {
+      "en": "setTextShadow",
+      "de": "",
+      "es": ""
+    },
+    "text_187": {
+      "en": "Sets a text-shadow to the button text.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_193": {
+      "en": "setPadding",
+      "de": "",
+      "es": ""
+    },
+    "text_194": {
+      "en": "Sets the padding of the button.",
+      "de": "",
+      "es": ""
+    },
+    "subtitle_201": {
+      "en": "setCornerRadius",
+      "de": "",
+      "es": ""
+    },
+    "text_202": {
+      "en": "Sets the corner radius of the button.",
+      "de": "",
+      "es": ""
+    },
+    "heading_209": {
+      "en": "Examples",
+      "de": "",
+      "es": ""
+    }
+  }
+};
+        const ASSETPATH = 'ui/Controls/Button';
+        const SYSPATH = '../../../..';
+    </script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../../../sys/js/codecolour.js"></script>
+    <script src="../../../../sys/js/globalTranslations.js"></script>
+    <script src="../../../../sys/js/pageBuilder.js"></script>
+
+    <!-- <script src="../sys/js/main.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src=""><\/script>')
+    </script> -->
+    <script src="../../../../sys/js/jquery-slim.min.js"></script>
+    <script src="../../../../sys/js/popper.min.js"></script>
+    <script src="../../../../sys/js/bootstrap.min.js"></script>
+    <script src="../../../../sys/js/holder.min.js"></script>
+
+    <script src="../../../../sys/js/index.js"></script>
+</body>
+</html>

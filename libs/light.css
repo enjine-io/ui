@@ -198,7 +198,7 @@ body, .backColor { background-color: var(--back); }
 /* .MuiBottomNavigation-root { background-color: var(--front); } */
 /* .MuiBottomNavigationAction-root { color: rgba(0, 0, 0, 0.54); } */
 /* .MuiBottomNavigationAction-root.Mui-selected { color: var(--primary); } */
-.MuiBottomNavigationAction-root.Mui-selected.MuiIconButton { color: var(--primary); }
+.MuiBottomNavigationAction-root.Mui-selected { color: var(--primary); }
 
 /*Dialogs*/
 /* .MuiDialogTitle-root { color: var(--primary); } */
@@ -458,6 +458,56 @@ body, .backColor { background-color: var(--back); }
     background-color: rgba(0, 0, 0, 0.04);
 }
 
+
+/*
+--------------------
+    Alert Control
+--------------------
+*/
+.MuiPaper-root.MuiAlert-standardSuccess {
+    color: rgb(30, 70, 32);
+    background-color: rgb(237, 247, 237);
+}
+.MuiPaper-root.MuiAlert-standardInfo {
+    color: rgb(13, 60, 97);
+    background-color: rgb(232, 244, 253);
+}
+.MuiPaper-root.MuiAlert-standardWarning {
+    color: rgb(102, 60, 0);
+    background-color: rgb(255, 244, 229);
+}
+.MuiPaper-root.MuiAlert-standardError {
+    color: rgb(97, 26, 21);
+    background-color: rgb(253, 236, 234);
+}
+.MuiPaper-root.MuiAlert-filledSuccess {
+    color: #fff;
+    background-color: #4caf50;
+}
+.MuiPaper-root.MuiAlert-filledInfo {
+    color: #fff;
+    background-color: #2196f3;
+}
+.MuiPaper-root.MuiAlert-filledWarning {
+    color: #fff;
+    background-color: #ff9800;
+}
+.MuiPaper-root.MuiAlert-filledError {
+    color: #fff;
+    background-color: #f44336;
+}
+.MuiPaper-root.MuiAlert-outlinedSuccess {
+    color: rgb(30, 70, 32);
+}
+.MuiPaper-root.MuiAlert-outlinedInfo {
+    color: rgb(13, 60, 97);
+}
+.MuiPaper-root.MuiAlert-outlinedWarning {
+    color: rgb(102, 60, 0);
+}
+.MuiPaper-root.MuiAlert-outlinedError {
+    color: rgb(97, 26, 21);
+}
 
 /*
 --------------------
